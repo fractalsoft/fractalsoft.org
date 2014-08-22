@@ -117,4 +117,34 @@ body.home {
       padding: 0;
     }
   }
+
+  .technology {
+    background-color: $light-background-color;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+
+    .text-left {
+      text-align: left;
+      padding-left: 75px;
+    }
+
+    .text-right {
+      text-align: right;
+      padding-right: 75px;
+    }
+
+    .media-list {
+      margin-top: 100px;
+
+      .media-body {
+        h4 {
+          font-size: 25pt;
+          font-weight: 700;
+          padding-bottom: 30px;
+          padding-top: 30px;
+        }
+      }
+    }
+  }
 }
