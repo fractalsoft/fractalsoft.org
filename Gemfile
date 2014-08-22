@@ -17,6 +17,7 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_best_practices'
   gem 'rubocop'
+  gem 'sandi_meter'
 end
 
 group :development, :test do
