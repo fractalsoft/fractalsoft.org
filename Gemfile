@@ -18,6 +18,7 @@ group :development do
   gem 'rails_best_practices'
   gem 'rubocop'
   gem 'sandi_meter'
+  gem 'brakeman'
 end
 
 group :development, :test do
