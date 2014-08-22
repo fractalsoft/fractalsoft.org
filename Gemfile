@@ -16,6 +16,7 @@ group :development do
   gem 'spring'
   gem 'quiet_assets'
   gem 'rails_best_practices'
+  gem 'rubocop'
 end
 
 # Use ActiveModel has_secure_password
