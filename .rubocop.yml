@@ -1,0 +1,23 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - db/**/*
+
+ClassLength:
+  CountComments: false
+  Max: 100
+
+LineLength:
+  Enabled: true
+  Max: 79
+
+MethodLength:
+  CountComments: false
+  Max: 5
+
+ParameterLists:
+  Max: 4
+  CountKeywordArgs: true
+
+TrailingWhitespace:
+  Enabled: true
