@@ -10,6 +10,10 @@ body.home {
 
   .container-fluid {
     padding: 0;
+
+    .row {
+      margin: 0;
+    }
   }
 
   .btn {
@@ -97,6 +101,20 @@ body.home {
 
     .screen {
       width: 80px;
+    }
+  }
+
+  .images {
+    max-height: 360px;
+    overflow: hidden;
+
+    .thumbnail {
+      padding: 0;
+      border: none;
+    }
+
+    .col-xs-3 {
+      padding: 0;
     }
   }
 }
