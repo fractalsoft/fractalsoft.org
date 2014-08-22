@@ -19,6 +19,10 @@ group :development do
   gem 'rubocop'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.2'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
