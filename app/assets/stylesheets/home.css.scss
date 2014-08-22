@@ -1,3 +1,68 @@
-// Place all the styles related to the Homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+
+body.home {
+  background-color: $white-background-color;
+  color: $grey-text-color;
+
+  .header {
+    margin-bottom: 0;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .btn {
+    padding: 15px 50px 15px 50px;
+    text-transform: uppercase;
+
+    &.btn-default {
+      background-color: transparent;
+      color: $grey-text-color;
+      border-width: 3px;
+    }
+
+    &.btn-info {
+      background-color: $dark-background-color;
+      color: $white-text-color;
+      border-width: 0px;
+    }
+
+    &.btn-primary {
+      background-color: $red-background-color;
+      color: $white-text-color
+    }
+  }
+
+  .jumbotron {
+    background-color: $red-background-color;
+    height: 540px;
+    padding-top: 0;
+    margin-bottom: 0;
+
+    .carousel {
+      height: 510px;
+
+      .carousel-control {
+        background-image: none;
+      }
+
+      .carousel-caption {
+        text-shadow: none;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        h3 {
+          margin-top: 140px;
+          font-size: 40pt;
+        }
+
+        .btn {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
