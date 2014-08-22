@@ -65,4 +65,38 @@ body.home {
       }
     }
   }
+
+  .description {
+    background-color: $light-background-color;
+    margin-top: -30px;
+    padding-bottom: 120px;
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    h4 {
+      font-weight: 700;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .thumb {
+      width: 40px;
+      margin: 0 auto;
+    }
+
+    .screen {
+      width: 80px;
+    }
+  }
 }
