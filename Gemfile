@@ -19,6 +19,7 @@ group :development do
   gem 'rubocop'
   gem 'sandi_meter'
   gem 'brakeman'
+  gem 'better_errors'
 end
 
 group :development, :test do
