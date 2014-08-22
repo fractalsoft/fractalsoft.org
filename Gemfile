@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development do
   gem 'spring'
   gem 'quiet_assets'
+  gem 'rails_best_practices'
 end
 
 # Use ActiveModel has_secure_password
