@@ -20,6 +20,7 @@ group :development do
   gem 'sandi_meter'
   gem 'brakeman'
   gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
