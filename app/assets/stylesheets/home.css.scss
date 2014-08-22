@@ -34,7 +34,8 @@ body.home {
 
     &.btn-primary {
       background-color: $red-background-color;
-      color: $white-text-color
+      color: $white-text-color;
+      border-width: 0px;
     }
   }
 
@@ -145,6 +146,41 @@ body.home {
           padding-top: 30px;
         }
       }
+    }
+  }
+
+  .team {
+    text-align: center;
+    padding-bottom: 100px;
+
+    h2 {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .thumbnail {
+      padding: 30px;
+      padding-bottom: 0;
+      color: $grey-text-color;
+
+      &:hover {
+        text-decoration: none;
+        color: $red-background-color;
+        border-color: $red-background-color;
+      }
+
+      h3 {
+        font-size: 12pt;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin: 0;
+      }
+    }
+
+    .btn {
+      margin-top: 50px;
     }
   }
 }
