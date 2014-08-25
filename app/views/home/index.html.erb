@@ -3,13 +3,13 @@
 <div class='container-fluid'>
   <div class='jumbotron'>
     <div class='container'>
-      <div id='carousel-example-generic' class='carousel slide' data-ride='carousel'>
+      <div id='carousel-main' class='carousel slide' data-ride='carousel'>
         <!-- Indicators -->
         <ol class='carousel-indicators'>
-          <li data-target='#carousel-example-generic' data-slide-to='0' class='active'></li>
-          <li data-target='#carousel-example-generic' data-slide-to='1'></li>
-          <li data-target='#carousel-example-generic' data-slide-to='2'></li>
-          <li data-target='#carousel-example-generic' data-slide-to='3'></li>
+          <li data-target='#carousel-main' data-slide-to='0' class='active'></li>
+          <li data-target='#carousel-main' data-slide-to='1'></li>
+          <li data-target='#carousel-main' data-slide-to='2'></li>
+          <li data-target='#carousel-main' data-slide-to='3'></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -57,10 +57,10 @@
         </div>
 
         <!-- Controls -->
-        <a class='left carousel-control' href='#carousel-example-generic' role='button' data-slide='prev'>
+        <a class='left carousel-control' href='#carousel-main' role='button' data-slide='prev'>
           <span class='glyphicon glyphicon-chevron-left'></span>
         </a>
-        <a class='right carousel-control' href='#carousel-example-generic' role='button' data-slide='next'>
+        <a class='right carousel-control' href='#carousel-main' role='button' data-slide='next'>
           <span class='glyphicon glyphicon-chevron-right'></span>
         </a>
       </div>
@@ -177,5 +177,74 @@
       </div>
     </div>
     <a href='#' title='see more' class='btn btn-primary'>Show more</a>
+  </div>
+
+  <div class='opinions'>
+    <!-- <div class='cover'></div> -->
+    <div id='carousel-opinion' class='carousel slide cover' data-ride='carousel'>
+        <!-- Indicators -->
+        <ol class='carousel-indicators'>
+          <li data-target='#carousel-opinion' data-slide-to='0' class='active'></li>
+          <li data-target='#carousel-opinion' data-slide-to='1'></li>
+          <li data-target='#carousel-opinion' data-slide-to='2'></li>
+          <li data-target='#carousel-opinion' data-slide-to='3'></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class='carousel-inner'>
+          <div class='item active'>
+            <div class='carousel-caption'>
+              <%= image_tag 'home/test.jpg', class: 'img-circle' %>
+              <div class='row'>
+                <div class='col-sm-4 col-sm-offset-4'>
+                  <p><strong>"</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>"</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='item'>
+            <div class='carousel-caption'>
+              <%= image_tag 'home/test.jpg', class: 'img-circle' %>
+              <div class='row'>
+                <div class='col-sm-4 col-sm-offset-4'>
+                  <p><strong>"</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>"</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='item'>
+            <div class='carousel-caption'>
+              <%= image_tag 'home/test.jpg', class: 'img-circle' %>
+              <div class='row'>
+                <div class='col-sm-4 col-sm-offset-4'>
+                  <p><strong>"</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>"</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='item'>
+            <div class='carousel-caption'>
+              <%= image_tag 'home/test.jpg', class: 'img-circle' %>
+              <div class='row'>
+                <div class='col-sm-4 col-sm-offset-4'>
+                  <p><strong>"</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>"</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class='left carousel-control' href='#carousel-opinion' role='button' data-slide='prev'>
+          <span class='glyphicon glyphicon-chevron-left'></span>
+        </a>
+        <a class='right carousel-control' href='#carousel-opinion' role='button' data-slide='next'>
+          <span class='glyphicon glyphicon-chevron-right'></span>
+        </a>
+      </div>
+    <!-- <div class=''>
+      <%= image_tag 'home/test.jpg', class: 'img-circle' %>
+
+    </div> -->
   </div>
 </div>
