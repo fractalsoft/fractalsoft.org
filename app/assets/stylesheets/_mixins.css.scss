@@ -15,3 +15,27 @@
   padding-top: $size;
   padding-bottom: $size;
 }
+
+@mixin navbar($background-color, $text-color, $hover-color) {
+  background-color: $background-color;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $asap-fonts;
+  height: 85px;
+
+  .navbar-nav>li>a {
+    color: $text-color;
+  }
+
+ .navbar-nav>li>a:hover {
+    color: $hover-color;
+  }
+
+  .collapse {
+    padding-top: 15px;
+  }
+
+  .navbar-brand {
+    padding-top: 25px;
+  }
+}

@@ -1,25 +1,6 @@
 @import 'variables';
+@import 'mixins';
 
 .header {
-  background-color: $header-background-color;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-family: $asap-fonts;
-  height: 85px;
-
-  .navbar-nav>li>a {
-    color: $header-text-color;
-  }
-
- .navbar-nav>li>a:hover {
-    color: $hover-header-text-color;
-  }
-
-  .collapse {
-    padding-top: 15px;
-  }
-
-  .navbar-brand {
-    padding-top: 25px;
-  }
+  @include navbar($header-background-color, $header-text-color, $hover-header-text-color);
 }
