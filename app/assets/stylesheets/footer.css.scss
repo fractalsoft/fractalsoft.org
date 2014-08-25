@@ -1,0 +1,30 @@
+@import 'variables';
+
+.footer {
+  background-color: $dark-background-color;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 85px;
+  margin-top: 110px;
+  margin-bottom: 0;
+
+  .navbar-nav>li>a {
+    color: $white-text-color;
+  }
+
+ .navbar-nav>li>a:hover {
+    color: $hover-header-text-color;
+  }
+
+  .collapse {
+    padding-top: 15px;
+  }
+
+  .navbar-brand {
+    padding-top: 25px;
+  }
+
+  .navbar-collapse img {
+    margin-top: -15px;
+  }
+}
