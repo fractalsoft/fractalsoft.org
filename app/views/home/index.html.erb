@@ -295,7 +295,7 @@
         </div>
       </div>
       <div class='col-sm-8'>
-        <%= form_for 'contact', html: { id: 'contact_form', class: 'form-horizontal' } do |f| %>
+        <%= form_for @contact, html: { id: 'contact_form', class: 'form-horizontal' } do |f| %>
         <div class='form-group'>
           <%= f.text_field :name, class: 'form-control', placeholder: 'your name' %>
         </div>
