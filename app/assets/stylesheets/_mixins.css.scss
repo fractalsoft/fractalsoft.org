@@ -1,0 +1,17 @@
+@mixin cover-image($path, $params: no-repeat center center fixed) {
+  background: url($path) $params;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin vertical-margin($size) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
+
+@mixin vertical-padding($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
