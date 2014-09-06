@@ -21,6 +21,27 @@ body.home {
     .row { margin: 0; }
   }
 
+  @media(min-width: 768px) {
+    .contact {
+      h2 { padding-top: 60px; }
+    }
+  }
+
+  @media(max-width: 768px) {
+    .description {
+      h4 { font-size: 18pt; }
+    }
+
+    .images {
+      .col-xs-12 { padding: 0; }
+    }
+
+    .contact {
+      h2 { padding-top: 0; }
+      .section { text-align: center; }
+    }
+  }
+
   .jumbotron {
     background-color: $red-background-color;
     height: 540px;
@@ -185,7 +206,7 @@ body.home {
       text-transform: uppercase;
     }
 
-    h2 { padding-top: 60px; }
+    // h2 { padding-top: 60px; }
     h4 { font-size: 12pt; }
     p { margin-bottom: 70px; }
     h2, p { text-align: center; }
@@ -199,7 +220,10 @@ body.home {
     #contact_form {
       margin-top: 60px;
 
-      .form-group .col-xs-5 { padding-left: 0; }
+      .form-group .col-sm-5 {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 }
