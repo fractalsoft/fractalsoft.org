@@ -1,2 +1,10 @@
 en:
-  hello: Hello world
+  home:
+    index:
+      slider:
+        slogan:
+          one: We love simple solutions
+          two: Simple solution
+        description:
+          one: so we use Ruby on Rails framework
+          two: for difficult problems
