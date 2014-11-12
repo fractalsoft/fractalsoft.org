@@ -1,0 +1,9 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+  @include navbar($dark-background-color, $white-text-color, $hover-header-text-color);
+
+  margin-top: 110px;
+  margin-bottom: 0;
+}
