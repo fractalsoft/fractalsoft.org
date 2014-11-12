@@ -49,3 +49,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# For sending mail form form
+gem 'mail_form'
