@@ -1,0 +1,50 @@
+@mixin cover-image($path, $params: no-repeat center center fixed) {
+  background: url($path) $params;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin vertical-margin($size) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
+
+@mixin vertical-padding($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+@mixin navbar($background-color, $text-color, $hover-color) {
+  background-color: $background-color;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $asap-fonts;
+  height: 85px;
+
+  .navbar-nav {
+    margin-top: 15px;
+  }
+
+  .navbar-nav>li>a {
+    color: $text-color;
+  }
+
+  .navbar-nav>li>a:hover {
+    color: $hover-color;
+  }
+
+  .navbar-brand {
+    padding-top: 25px;
+  }
+
+  .navbar-header button {
+    margin-top: 20px;
+  }
+
+  .navbar-collapse.collapse, .navbar-collapse.collapsing {
+    border: none;
+    background-color: $background-color;
+  }
+}
