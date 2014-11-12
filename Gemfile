@@ -21,6 +21,7 @@ group :development do
   gem 'brakeman'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'metric_fu'
 end
 
 group :development, :test do
