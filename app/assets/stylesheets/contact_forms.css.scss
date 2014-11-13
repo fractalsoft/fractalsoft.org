@@ -1,5 +1,18 @@
-body.home, body.contact-forms {
+@import 'variables';
 
+body.contact-forms {
+  .container.contact {
+    margin-top: -20px;
+    background-color: $light-background-color;
+    min-height: 1200px;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+}
+
+body.home, body.contact-forms {
   .contact {
     h2, h4 {
       font-weight: 700;
@@ -10,6 +23,11 @@ body.home, body.contact-forms {
     h4 { font-size: 12pt; }
     p { margin-bottom: 70px; }
     h2, p { text-align: center; }
+
+    .btn.btn-default {
+      border-width: 1px;
+      width: 212px;
+    }
 
     .row { margin: 0; }
 
