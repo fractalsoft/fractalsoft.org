@@ -1,0 +1,41 @@
+@import 'variables';
+
+body.projects {
+  .container.projects {
+    margin-top: -20px;
+    background-color: $light-background-color;
+    min-height: 1200px;
+
+    .row {
+      margin: 65px 10%;
+    }
+
+    .thumbnail {
+      border: none;
+      background-color: transparent;
+
+      img {
+        height: 150px;
+      }
+
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 14pt;
+
+        small {
+          text-transform: none;
+          font-size: 13pt;
+        }
+      }
+
+      p {
+        font-size: 9pt;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+}
