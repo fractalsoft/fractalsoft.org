@@ -1,6 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe ContactFormsController, type: :controller do
+RSpec.describe ContactFormsController, :focus, type: :controller do
+  describe 'GET #new' do
+    it 'has ContactForm object' do
+      get :new
+      expect(assigns(:contact)).to be_a(ContactForm)
+    end
+  end
+
   describe 'POST #create' do
     let(:params) do
       { name: rand_text, email: 'test@example.com', message: rand_text }

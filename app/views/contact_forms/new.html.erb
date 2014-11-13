@@ -1,0 +1,14 @@
+<% content_for :body_class, 'contact-forms' %>
+
+<div class='container contact'>
+  <h2>Want to get in touch with us?</h2>
+  <p class='hidden-xs'>No matter if you have a question or just want to  say hello, we would love to hear from you.</p>
+  <div class='row'>
+    <div class='col-sm-8 col-sm-push-4 col-xs-12'>
+      <%= render 'form', contact: @contact %>
+    </div>
+    <div class='col-sm-4 col-sm-pull-8 col-xs-12'>
+      <%= render 'contact' %>
+    </div>
+  </div>
+</div>
