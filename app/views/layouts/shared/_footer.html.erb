@@ -2,10 +2,10 @@
   <div class='container'>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class='navbar-header'>
-      <a class='navbar-brand' href='#'>
+      <%= link_to root_path, class: 'navbar-brand' do %>
         <%= image_tag 'home/logo.png', class: 'hidden-xs' %>
-        <%= image_tag 'home/logo_big.png', class: 'visible-xs' %>
-      </a>
+        <%= image_tag 'home/logo_big_white.png', class: 'visible-xs' %>
+      <% end %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

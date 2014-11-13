@@ -117,6 +117,10 @@ body.home {
     @include vertical-padding(100px);
     text-align: center;
 
+    .btn.btn-default {
+      background-color: transparent;
+    }
+
     .text-left {
       padding-left: 75px;
       text-align: left;
@@ -199,33 +203,6 @@ body.home {
             font-weight: 700;
           }
         }
-      }
-    }
-  }
-
-  .contact {
-    h2, h4 {
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    // h2 { padding-top: 60px; }
-    h4 { font-size: 12pt; }
-    p { margin-bottom: 70px; }
-    h2, p { text-align: center; }
-
-    .section {
-      margin-bottom: 65px;
-
-      &.address h4 { margin-bottom: 40px; }
-    }
-
-    #contact_form {
-      margin-top: 60px;
-
-      .form-group .col-sm-5 {
-        padding-left: 0;
-        padding-right: 0;
       }
     }
   }
