@@ -12,10 +12,10 @@
     <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
       <%= image_tag 'home/footer.png', class: 'pull-right' %>
       <ul class='nav navbar-nav navbar-right'>
-        <li><a href='#'>Projects</a></li>
+        <li><%= link_to t('.projects'), projects_path %></li>
         <li><a href='#'>Team</a></li>
         <li><a href='#'>Offset</a></li>
-        <li><a href='#'>Contact</a></li>
+        <li><%= link_to t('.contact'), new_contact_form_path %></li>
         <li><a href='#'>Sites</a></li>
 
       </ul>
