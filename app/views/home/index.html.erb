@@ -95,32 +95,32 @@
   <div class='row images hidden-xs'>
     <div class='col-xs-2'>
       <a href='#' class='thumbnail'>
-        <%= image_tag 'home/test.jpg' %>
+        <%= image_tag 'home/projects/hitdea.jpg' %>
       </a>
     </div>
     <div class='col-xs-2'>
       <a href='#' class='thumbnail'>
-        <%= image_tag 'home/test.jpg' %>
+        <%= image_tag 'home/projects/ballerina.jpg' %>
       </a>
     </div>
     <div class='col-xs-2'>
       <a href='#' class='thumbnail'>
-        <%= image_tag 'home/test.jpg' %>
+        <%= image_tag 'home/projects/luktech.jpg' %>
       </a>
     </div>
     <div class='col-xs-2'>
       <a href='#' class='thumbnail'>
-        <%= image_tag 'home/test.jpg' %>
+        <%= image_tag 'home/projects/metalowiec.jpg' %>
       </a>
     </div>
     <div class='col-xs-2'>
       <a href='#' class='thumbnail'>
-        <%= image_tag 'home/test.jpg' %>
+        <%= image_tag 'home/projects/ntlogistic.jpg' %>
       </a>
     </div>
     <div class='col-xs-2'>
       <a href='#' class='thumbnail'>
-        <%= image_tag 'home/test.jpg' %>
+        <%= image_tag 'home/projects/fractalshop.jpg' %>
       </a>
     </div>
   </div>
@@ -128,7 +128,7 @@
   <div class='row images visible-xs'>
     <div class='col-xs-12'>
       <a href='#' class='thumbnail'>
-        <%= image_tag 'home/test.jpg' %>
+        <%= image_tag 'home/projects/hitdea.jpg' %>
       </a>
     </div>
   </div>
@@ -265,70 +265,10 @@
     <p class='hidden-xs'>No matter if you have a question or just want to  say hello, we would love to hear from you.</p>
     <div class='row'>
       <div class='col-sm-8 col-sm-push-4 col-xs-12'>
-        <%= form_for @contact, html: { id: 'contact_form', class: 'form-horizontal' } do |f| %>
-          <div class='form-group'>
-            <%= f.text_field :name, class: 'form-control', placeholder: 'your name' %>
-          </div>
-          <div class='form-group'>
-            <%= f.text_field :email, class: 'form-control', placeholder: 'your email address' %>
-          </div>
-          <div class='form-group'>
-            <%=  f.text_area :message, class: 'form-control', rows: 10, placeholder: 'what we can do for you?' %>
-          </div>
-          <div class='form-group'>
-            <div class='row'>
-              <div class='col-sm-5 col-xs-12'>
-                <%= f.submit 'send', class: 'btn btn-primary btn-block submit' %>
-              </div>
-            </div>
-          </div>
-        <% end %>
+        <%= render 'contact_forms/form', contact: @contact %>
       </div>
       <div class='col-sm-4 col-sm-pull-8 col-xs-12'>
-        <div class='section address'>
-          <h4>Contact with us</h4>
-          <address>
-            Fractal Soft <strong>Poland</strong><br>
-            Akademicka 5<br>
-            Gliwice 44-100
-          </address>
-          <address>
-            Fractal Soft <strong>London</strong><br>
-            Akademicka 5<br>
-            Gliwice 44-100
-          </address>
-        </div>
-
-        <div class='section'>
-          <h4>Phone</h4>
-          <address>
-            +48 293 901 203<br>
-            +48 293 901 203
-          </address>
-        </div>
-
-        <div class='section'>
-          <h4>Email address</h4>
-          <address>
-            <%= mail_to 'kontakt@fractalsoft.org' %>
-          </address>
-        </div>
-
-        <div class='section'>
-          <h4>You can also find us here</h4>
-          <ul class='list-inline'>
-            <li>
-              <%= link_to 'https://www.facebook.com/fractalsoft' do %>
-                <%= image_tag 'home/facebook_icon.png' %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to 'https://twitter.com/fractal_soft' do %>
-                <%= image_tag 'home/twitter_icon.png' %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
+        <%= render 'contact_forms/contact' %>
       </div>
     </div>
   </div>
