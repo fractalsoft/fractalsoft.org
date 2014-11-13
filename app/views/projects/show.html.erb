@@ -11,8 +11,8 @@
 </p>
 
 <p>
-  <strong>Descritpion:</strong>
-  <%= @project.descritpion %>
+  <strong>Description:</strong>
+  <%= @project.description %>
 </p>
 
 <p>
@@ -22,8 +22,6 @@
 
 <p>
   <strong>Thumbnail:</strong>
-  <%= @project.thumbnail %>
+  <%= image_tag @project.thumbnail_url(:thumb) %>
 </p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
