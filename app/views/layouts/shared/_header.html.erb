@@ -8,10 +8,10 @@
         <span class='icon-bar'></span>
         <span class='icon-bar'></span>
       </button>
-      <a class='navbar-brand' href='#'>
+      <%= link_to root_path, class: 'navbar-brand' do %>
         <%= image_tag 'home/logo.png', class: 'visible-xs' %>
         <%= image_tag 'home/logo_big.png', class: 'hidden-xs' %>
-      </a>
+      <% end %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

@@ -6,10 +6,15 @@
   font-family: $asap-fonts;
 
   &.btn-default {
-    background-color: transparent;
+    background-color: $white-background-color;
     color: $light-grey-text-color;
     border-width: 3px;
     font-weight: 700;
+
+    &.active {
+      background-color: $grey-background-color;
+      box-shadow: none;
+    }
   }
 
   &.btn-info {
