@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ContactFormsController, :focus, type: :controller do
+RSpec.describe ContactFormsController, type: :controller do
   describe 'GET #new' do
     it 'has ContactForm object' do
       get :new
