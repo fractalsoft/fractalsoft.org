@@ -53,3 +53,10 @@ end
 
 # For sending mail form form
 gem 'mail_form'
+
+# Images
+gem 'carrierwave'
+
+platform :ruby do
+  gem 'rmagick'
+end
