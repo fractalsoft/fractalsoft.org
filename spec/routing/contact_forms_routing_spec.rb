@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ContactFormsController, :focus, type: :routing do
+describe ContactFormsController, type: :routing do
   it 'POST #new' do
     expect(get('/contact-forms/new')).to route_to(
       controller: 'contact_forms',
