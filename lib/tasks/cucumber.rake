@@ -2,8 +2,10 @@ unless ARGV.any? { |a| a =~ /^gems/ }
 
 cucumber_path = "#{Rails.root}/vendor/{gems,plugins}/cucumber*/bin/cucumber"
 vendored_cucumber_bin = Dir[cucumber_path].first
-cucumber_dir = File.dirname(vendored_cucumber_bin)
-$LOAD_PATH.unshift(cucumber_dir + '/../lib') unless vendored_cucumber_bin.nil?
+unless vendored_cucumber_bin.nil?
+  cucumber_dir = File.dirname(vendored_cucumber_bin)
+  $LOAD_PATH.unshift(cucumber_dir + '/../lib')
+end
 
 begin
   require 'cucumber/rake/task'
