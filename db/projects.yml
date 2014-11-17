@@ -1,0 +1,90 @@
+projects:
+  - title: hitdea
+    subtitle: lorem ipsum
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
+    url: 'hitea.com'
+    thumbnail: 'projects/hitdea.jpg'
+    year: 2014
+    images:
+      - image: 'projects/metalowiec2/top.jpg'
+        kind: 'top'
+      - image: 'projects/metalowiec2/logo.png'
+        kind: 'logo'
+      - image: 'projects/metalowiec2/mackbook.png'
+        kind: 'pc'
+      - image: 'projects/metalowiec2/ss1.jpg'
+        kind: 'page'
+      - image: 'projects/metalowiec2/ss2.jpg'
+        kind: 'page'
+
+  - title: ballerina
+    subtitle: lorem ipsum
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
+    url: 'ballerina.com'
+    thumbnail: 'projects/ballerina.jpg'
+    year: 2002
+    images:
+      - image: 'projects/metalowiec2/top.jpg'
+        kind: 'top'
+      - image: 'projects/metalowiec2/logo.png'
+        kind: 'logo'
+      - image: 'projects/metalowiec2/mackbook.png'
+        kind: 'pc'
+      - image: 'projects/metalowiec2/ss1.jpg'
+        kind: 'page'
+      - image: 'projects/metalowiec2/ss2.jpg'
+        kind: 'page'
+
+  - title: fractalshop
+    subtitle: lorem ipsum
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
+    url: 'fractalshop.com'
+    thumbnail: 'projects/fractalshop.jpg'
+    year: 2002
+    images:
+      - image: 'projects/metalowiec2/top.jpg'
+        kind: 'top'
+      - image: 'projects/metalowiec2/logo.png'
+        kind: 'logo'
+      - image: 'projects/metalowiec2/mackbook.png'
+        kind: 'pc'
+      - image: 'projects/metalowiec2/ss1.jpg'
+        kind: 'page'
+      - image: 'projects/metalowiec2/ss2.jpg'
+        kind: 'page'
+
+  - title: luktech
+    subtitle: lorem ipsum
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
+    url: 'luktech.com'
+    thumbnail: 'projects/luk_tech.jpg'
+    year: 1998
+    images:
+      - image: 'projects/metalowiec2/top.jpg'
+        kind: 'top'
+      - image: 'projects/metalowiec2/logo.png'
+        kind: 'logo'
+      - image: 'projects/metalowiec2/mackbook.png'
+        kind: 'pc'
+      - image: 'projects/metalowiec2/ss1.jpg'
+        kind: 'page'
+      - image: 'projects/metalowiec2/ss2.jpg'
+        kind: 'page'
+
+  - title: metalowiec2
+    subtitle: lorem ipsum
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
+    url: 'hitea.com'
+    thumbnail: 'projects/metalowiec2.jpg'
+    year: 2002
+    images:
+      - image: 'projects/metalowiec2/top.jpg'
+        kind: 'top'
+      - image: 'projects/metalowiec2/logo.png'
+        kind: 'logo'
+      - image: 'projects/metalowiec2/mackbook.png'
+        kind: 'pc'
+      - image: 'projects/metalowiec2/ss1.jpg'
+        kind: 'page'
+      - image: 'projects/metalowiec2/ss2.jpg'
+        kind: 'page'

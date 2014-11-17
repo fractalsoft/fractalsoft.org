@@ -61,6 +61,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     chronic (0.10.2)
     churn (0.0.35)
       chronic (>= 0.2.3)
@@ -220,6 +225,7 @@ GEM
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rmagick (2.13.3)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -302,6 +308,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   brakeman
+  carrierwave
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner
@@ -315,6 +322,7 @@ DEPENDENCIES
   rails-i18n
   rails_12factor
   rails_best_practices
+  rmagick
   rspec-rails (~> 3.0.2)
   rubocop
   sandi_meter
