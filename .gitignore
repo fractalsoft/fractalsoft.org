@@ -17,3 +17,6 @@
 
 # Ignore metric files
 /sandi_meter
+
+# Igrone uplaods
+/public/uploads
