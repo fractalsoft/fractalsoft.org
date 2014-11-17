@@ -1,9 +1,9 @@
 <% content_for :body_class, 'project' %>
 
 <div class='container project'>
-  <div class='header-img' style='background-image: url(<%= asset_path('projects/top.jpg') %>)'>
+  <div class='header-img' style='background-image: url(<%= asset_path(@project.images.top.image_url) %>)'>
     <div class='logo'>
-      <%= image_tag 'projects/logo.png' %>
+      <%= image_tag @project.images.logo.image_url %>
     </div>
   </div>
   <div class='row'>
@@ -14,21 +14,18 @@
   </div>
   <div class='images'>
     <div class='row'>
-      <%= image_tag 'projects/mackbook.png', class: 'pull-right' %>
+      <%= image_tag @project.images.pc.image_url, class: 'pull-right' %>
     </div>
-    <div class='row'>
-      <div class='col-sm-offset-2 col-sm-8'>
-        <%= image_tag 'projects/ss1.jpg' %>
+    <% @project.images.pages.each do |image| %>
+      <div class='row'>
+        <div class='col-sm-offset-2 col-sm-8'>
+          <%= image_tag image.image_url %>
+        </div>
       </div>
-    </div>
-    <div class='row'>
-      <div class='col-sm-offset-2 col-sm-8'>
-        <%= image_tag 'projects/ss2.jpg' %>
-      </div>
-    </div>
+    <% end %>
   </div>
   <div class='logo'>
-    <%= image_tag 'projects/logo.png' %>
+    <%= image_tag @project.images.logo.image_url %>
     <span><%= @project.year %></span>
   </div>
 </div>
