@@ -4,27 +4,32 @@ projects:
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
     url: 'hitea.com'
     thumbnail: 'projects/hitdea.jpg'
+    year: 2014
 
   - title: ballerina
     subtitle: lorem ipsum
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
     url: 'ballerina.com'
     thumbnail: 'projects/ballerina.jpg'
+    year: 2002
 
   - title: fractalshop
     subtitle: lorem ipsum
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
     url: 'fractalshop.com'
     thumbnail: 'projects/fractalshop.jpg'
+    year: 2002
 
   - title: luktech
     subtitle: lorem ipsum
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
     url: 'luktech.com'
     thumbnail: 'projects/luk_tech.jpg'
+    year: 1998
 
   - title: metalowiec2
     subtitle: lorem ipsum
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
     url: 'hitea.com'
     thumbnail: 'projects/metalowiec2.jpg'
+    year: 2002

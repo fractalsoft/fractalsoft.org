@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141113114941) do
     t.text     "description"
     t.string   "url"
     t.string   "thumbnail"
+    t.integer  "year"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -5,6 +5,7 @@ YAML.load_file('db/projects.yml')['projects'].each do |array|
     subtitle: array['subtitle'],
     description: array['description'],
     url: array['url'],
-    thumbnail: image
+    thumbnail: image,
+    year: array['year']
   )
 end
