@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 body.projects {
   .container.projects {
@@ -37,5 +38,76 @@ body.projects {
 
   .footer {
     margin-top: 0;
+  }
+}
+
+@media(min-width: 768px) {
+  body.project {
+    .logo img {
+      width: 450px;
+    }
+
+    .images {
+      margin-top: 150px;
+
+      img {
+        width: 600px;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  body.project {
+    .logo img {
+      width: 150px;
+    }
+
+    .images {
+      margin-top: 50px;
+
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+body.project {
+  .header-img {
+    height: 700px;
+    margin-top: -20px;
+    @include cover-image('', no-repeat center top);
+
+    .logo {
+      top: 500px;
+    }
+  }
+
+  a {
+    color: $red-background-color;
+  }
+
+  .images {
+    img {
+      margin: 30px auto;
+      display: block;
+
+      &:first-child {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  .logo {
+    position: relative;
+    text-align: center;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
   }
 }
