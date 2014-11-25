@@ -6,15 +6,15 @@ projects:
     thumbnail: 'projects/hitdea.jpg'
     year: 2014
     images:
-      - image: 'projects/metalowiec2/top.jpg'
+      - image: 'projects/hitdea/top.jpg'
         kind: 'top'
-      - image: 'projects/metalowiec2/logo.png'
+      - image: 'projects/hitdea/logo.png'
         kind: 'logo'
-      - image: 'projects/metalowiec2/mackbook.png'
+      - image: 'projects/hitdea/mackbook.png'
         kind: 'pc'
-      - image: 'projects/metalowiec2/ss1.jpg'
+      - image: 'projects/hitdea/ss1.jpg'
         kind: 'page'
-      - image: 'projects/metalowiec2/ss2.jpg'
+      - image: 'projects/hitdea/ss2.jpg'
         kind: 'page'
 
   - title: ballerina
@@ -24,15 +24,15 @@ projects:
     thumbnail: 'projects/ballerina.jpg'
     year: 2002
     images:
-      - image: 'projects/metalowiec2/top.jpg'
+      - image: 'projects/ballerina/top.jpg'
         kind: 'top'
-      - image: 'projects/metalowiec2/logo.png'
+      - image: 'projects/ballerina/logo.png'
         kind: 'logo'
-      - image: 'projects/metalowiec2/mackbook.png'
+      - image: 'projects/ballerina/mackbook.png'
         kind: 'pc'
-      - image: 'projects/metalowiec2/ss1.jpg'
+      - image: 'projects/ballerina/ss1.jpg'
         kind: 'page'
-      - image: 'projects/metalowiec2/ss2.jpg'
+      - image: 'projects/ballerina/ss2.jpg'
         kind: 'page'
 
   - title: fractalshop
@@ -42,15 +42,15 @@ projects:
     thumbnail: 'projects/fractalshop.jpg'
     year: 2002
     images:
-      - image: 'projects/metalowiec2/top.jpg'
+      - image: 'projects/fractalshop/top.jpg'
         kind: 'top'
-      - image: 'projects/metalowiec2/logo.png'
+      - image: 'projects/fractalshop/logo.png'
         kind: 'logo'
-      - image: 'projects/metalowiec2/mackbook.png'
+      - image: 'projects/fractalshop/mackbook.png'
         kind: 'pc'
-      - image: 'projects/metalowiec2/ss1.jpg'
+      - image: 'projects/fractalshop/ss1.jpg'
         kind: 'page'
-      - image: 'projects/metalowiec2/ss2.jpg'
+      - image: 'projects/fractalshop/ss2.jpg'
         kind: 'page'
 
   - title: luktech
@@ -74,7 +74,7 @@ projects:
   - title: metalowiec2
     subtitle: lorem ipsum
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
-    url: 'hitea.com'
+    url: 'metalowiec2.pl'
     thumbnail: 'projects/metalowiec2.jpg'
     year: 2002
     images:
@@ -87,4 +87,22 @@ projects:
       - image: 'projects/metalowiec2/ss1.jpg'
         kind: 'page'
       - image: 'projects/metalowiec2/ss2.jpg'
+        kind: 'page'
+
+  - title: ntlogistic
+    subtitle: lorem ipsum
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
+    url: 'ntlogistic.com'
+    thumbnail: 'projects/nt_logistic.jpg'
+    year: 2002
+    images:
+      - image: 'projects/nt_logistic/top.jpg'
+        kind: 'top'
+      - image: 'projects/nt_logistic/logo.png'
+        kind: 'logo'
+      - image: 'projects/nt_logistic/mackbook.png'
+        kind: 'pc'
+      - image: 'projects/nt_logistic/ss1.jpg'
+        kind: 'page'
+      - image: 'projects/nt_logistic/ss2.jpg'
         kind: 'page'
