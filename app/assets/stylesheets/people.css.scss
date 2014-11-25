@@ -1,3 +1,57 @@
-// Place all the styles related to the People controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+
+body.team {
+  color: $grey-text-color;
+
+  h2 {
+    margin-top: 70px;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .container.team {
+    margin-top: -20px;
+    background-color: $light-background-color;
+  }
+
+  .media {
+    margin-bottom: 70px;
+
+    .media-heading {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-weight: 700;
+
+      span {
+        color: $red-text-color;
+        font-weight: 700;
+      }
+    }
+
+    .media-body {
+      padding-left: 30px;
+      padding-right: 30px;
+      line-height: 24px;
+    }
+
+    .media-text-right {
+      text-align: right;
+    }
+
+    .media-footer {
+      margin-top: 40px;
+
+      .website a {
+        color: $grey-text-color;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+}

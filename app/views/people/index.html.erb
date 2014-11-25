@@ -1,33 +1,57 @@
-<h1>Listing people</h1>
+<% content_for :body_class, 'team' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Fullname</th>
-      <th>Description</th>
-      <th>Position</th>
-      <th>Image</th>
-      <th>Website</th>
-      <th>Facebook</th>
-      <th>Twitter</th>
-      <th>Github</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        <td><%= person.fullname %></td>
-        <td><%= person.description %></td>
-        <td><%= person.position %></td>
-        <td><%= person.image %></td>
-        <td><%= person.website %></td>
-        <td><%= person.facebook %></td>
-        <td><%= person.twitter %></td>
-        <td><%= person.github %></td>
-        <td><%= person.email %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class='container team'>
+  <h2>Meet our team!</h2>
+  <div class='row'>
+    <div class='col-md-10 col-md-offset-1'>
+      <div class='media'>
+        <a class='media-left' href='#'>
+          <%= image_tag 'home/test-small.jpg' %>
+        </a>
+        <div class='media-body'>
+          <h4 class='media-heading'>Agnieszka Matysek - <span>developer</span></h4>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <div class='media-footer'>
+            <span class='website pull-left'><%= link_to 'my web page', root_path %></span>
+            <ul class='list-inline pull-right'>
+              <li>
+                <%= link_to 'https://www.facebook.com/fractalsoft' do %>
+                  <%= image_tag 'home/facebook_icon.png' %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to 'https://twitter.com/fractal_soft' do %>
+                  <%= image_tag 'home/twitter_icon.png' %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class='media'>
+        <div class='media-body media-text-right'>
+          <h4 class='media-heading'>Agnieszka Matysek - <span>developer</span></h4>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <div class='media-footer'>
+            <span class='website pull-right'><%= link_to 'my web page', root_path %></span>
+            <ul class='list-inline pull-left'>
+              <li>
+                <%= link_to 'https://www.facebook.com/fractalsoft' do %>
+                  <%= image_tag 'home/facebook_icon.png' %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to 'https://twitter.com/fractal_soft' do %>
+                  <%= image_tag 'home/twitter_icon.png' %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a class='media-right' href='#'>
+          <%= image_tag 'home/test-small.jpg' %>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
