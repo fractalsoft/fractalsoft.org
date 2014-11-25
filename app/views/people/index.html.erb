@@ -1,0 +1,33 @@
+<h1>Listing people</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Description</th>
+      <th>Position</th>
+      <th>Image</th>
+      <th>Website</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th>Github</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.fullname %></td>
+        <td><%= person.description %></td>
+        <td><%= person.position %></td>
+        <td><%= person.image %></td>
+        <td><%= person.website %></td>
+        <td><%= person.facebook %></td>
+        <td><%= person.twitter %></td>
+        <td><%= person.github %></td>
+        <td><%= person.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
