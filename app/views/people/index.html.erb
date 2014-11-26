@@ -17,19 +17,11 @@
               <%= person.description %>
               <div class='media-footer'>
                 <span class='website pull-left'>
-                  <%= link_to person.website, person.website %>
+                  <%= raw person.website %>
                 </span>
                 <ul class='list-inline pull-right'>
-                  <li>
-                    <%= link_to person.facebook do %>
-                      <%= image_tag 'home/facebook_icon.png' %>
-                    <% end %>
-                  </li>
-                  <li>
-                    <%= link_to person.twitter do %>
-                      <%= image_tag 'home/twitter_icon.png' %>
-                    <% end %>
-                  </li>
+                  <li><%= person.facebook %></li>
+                  <li><%= person.twitter %></li>
                 </ul>
               </div>
             </div>
@@ -43,19 +35,11 @@
               <%= person.description %>
               <div class='media-footer'>
                 <span class='website pull-right'>
-                  <%= link_to person.website, person.website %>
+                  <%= person.website %>
                 </span>
                 <ul class='list-inline pull-left'>
-                  <li>
-                    <%= link_to person.facebook do %>
-                      <%= image_tag 'home/facebook_icon.png' %>
-                    <% end %>
-                  </li>
-                  <li>
-                    <%= link_to person.twitter do %>
-                      <%= image_tag 'home/twitter_icon.png' %>
-                    <% end %>
-                  </li>
+                  <li><%= person.facebook %></li>
+                  <li><%= person.twitter %></li>
                 </ul>
               </div>
             </div>

@@ -60,3 +60,11 @@ gem 'carrierwave'
 platform :ruby do
   gem 'rmagick'
 end
+
+# dekorators
+gem 'draper'
+
+# pry
+group :development, :test do
+  gem 'pry-rails'
+end
