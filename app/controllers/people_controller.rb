@@ -3,6 +3,6 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all.shuffle
+    @people = Person.all.decorate.shuffle
   end
 end
