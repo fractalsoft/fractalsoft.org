@@ -4,54 +4,67 @@
   <h2>Meet our team!</h2>
   <div class='row'>
     <div class='col-md-10 col-md-offset-1'>
-      <div class='media'>
-        <a class='media-left' href='#'>
-          <%= image_tag 'home/test-small.jpg' %>
-        </a>
-        <div class='media-body'>
-          <h4 class='media-heading'>Agnieszka Matysek - <span>developer</span></h4>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          <div class='media-footer'>
-            <span class='website pull-left'><%= link_to 'my web page', root_path %></span>
-            <ul class='list-inline pull-right'>
-              <li>
-                <%= link_to 'https://www.facebook.com/fractalsoft' do %>
-                  <%= image_tag 'home/facebook_icon.png' %>
-                <% end %>
-              </li>
-              <li>
-                <%= link_to 'https://twitter.com/fractal_soft' do %>
-                  <%= image_tag 'home/twitter_icon.png' %>
-                <% end %>
-              </li>
-            </ul>
+      <% @people.each_with_index do |person, index| %>
+        <% if index % 2 == 0 %>
+          <div class='media'>
+            <a class='media-left' href='#'>
+              <%= image_tag person.image_url %>
+            </a>
+            <div class='media-body'>
+              <h4 class='media-heading'>
+                <%= person.fullname %> - <span><%= person.position %></span>
+              </h4>
+              <%= person.description %>
+              <div class='media-footer'>
+                <span class='website pull-left'>
+                  <%= link_to person.website, person.website %>
+                </span>
+                <ul class='list-inline pull-right'>
+                  <li>
+                    <%= link_to person.facebook do %>
+                      <%= image_tag 'home/facebook_icon.png' %>
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to person.twitter do %>
+                      <%= image_tag 'home/twitter_icon.png' %>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class='media'>
-        <div class='media-body media-text-right'>
-          <h4 class='media-heading'>Agnieszka Matysek - <span>developer</span></h4>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          <div class='media-footer'>
-            <span class='website pull-right'><%= link_to 'my web page', root_path %></span>
-            <ul class='list-inline pull-left'>
-              <li>
-                <%= link_to 'https://www.facebook.com/fractalsoft' do %>
-                  <%= image_tag 'home/facebook_icon.png' %>
-                <% end %>
-              </li>
-              <li>
-                <%= link_to 'https://twitter.com/fractal_soft' do %>
-                  <%= image_tag 'home/twitter_icon.png' %>
-                <% end %>
-              </li>
-            </ul>
+        <% else %>
+          <div class='media'>
+            <div class='media-body media-text-right'>
+              <h4 class='media-heading'>
+                <%= person.fullname %> - <span><%= person.position %></span>
+              </h4>
+              <%= person.description %>
+              <div class='media-footer'>
+                <span class='website pull-right'>
+                  <%= link_to person.website, person.website %>
+                </span>
+                <ul class='list-inline pull-left'>
+                  <li>
+                    <%= link_to person.facebook do %>
+                      <%= image_tag 'home/facebook_icon.png' %>
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to person.twitter do %>
+                      <%= image_tag 'home/twitter_icon.png' %>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a class='media-right' href='#'>
+              <%= image_tag person.image_url %>
+            </a>
           </div>
-        </div>
-        <a class='media-right' href='#'>
-          <%= image_tag 'home/test-small.jpg' %>
-        </a>
-      </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
