@@ -2,19 +2,22 @@
 
 <div class='container team'>
   <h2>Meet our team!</h2>
-  <div class='row'>
+  <div class='row team-members'>
     <div class='col-md-10 col-md-offset-1'>
       <% @people.each_with_index do |person, index| %>
         <% if index % 2 == 0 %>
-          <div class='media'>
-            <a class='media-left' href='#'>
-              <%= image_tag person.image_url %>
-            </a>
-            <div class='media-body'>
-              <h4 class='media-heading'>
+          <div class='row'>
+            <div class='col-sm-5 col-xs-12'>
+              <h4 class='media-heading visible-xs'>
                 <%= person.fullname %> - <span><%= person.position %></span>
               </h4>
-              <%= person.description %>
+              <%= image_tag person.image_url %>
+            </div>
+            <div class='col-sm-7 col-xs-12'>
+              <h4 class='media-heading hidden-xs'>
+                <%= person.fullname %> - <span><%= person.position %></span>
+              </h4>
+              <p><%= person.description %></p>
               <div class='media-footer'>
                 <span class='website pull-left'>
                   <%= raw person.website %>
@@ -29,12 +32,12 @@
             </div>
           </div>
         <% else %>
-          <div class='media'>
-            <div class='media-body media-text-right'>
-              <h4 class='media-heading'>
+          <div class='row'>
+            <div class='col-sm-7 col-xs-12 hidden-xs'>
+              <h4 class='media-heading media-text-right'>
                 <%= person.fullname %> - <span><%= person.position %></span>
               </h4>
-              <%= person.description %>
+              <p class='media-text-right'><%= person.description %></p>
               <div class='media-footer'>
                 <span class='website pull-right'>
                   <%= person.website %>
@@ -47,9 +50,26 @@
                 </ul>
               </div>
             </div>
-            <a class='media-right' href='#'>
+            <div class='col-lg-offset-2 col-md-offset-1 col-sm-3 col-xs-12'>
+              <h4 class='media-heading visible-xs'>
+                <%= person.fullname %> - <span><%= person.position %></span>
+              </h4>
               <%= image_tag person.image_url %>
-            </a>
+            </div>
+            <div class='col-sm-7 col-xs-12 visible-xs'>
+              <p><%= person.description %></p>
+              <div class='media-footer'>
+                <span class='website pull-left'>
+                  <%= raw person.website %>
+                </span>
+                <ul class='list-inline pull-right'>
+                  <%= person.facebook %>
+                  <%= person.twitter %>
+                  <%= person.github %>
+                  <%= person.email %>
+                </ul>
+              </div>
+            </div>
           </div>
         <% end %>
       <% end %>

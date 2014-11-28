@@ -2,8 +2,8 @@ team:
   - fullname: Agnieszka Matysek
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     position: developer
-    image: team/test-small.jpg
-    website: http://www.google.com
+    image: team/amatysek.jpg
+    website: http://womanonrails.com
     facebook: https://www.facebook.com/agnieszka.matysek.3
     twitter: https://twitter.com/womanonrails
     github: https://github.com/womanonrails
@@ -12,7 +12,7 @@ team:
   - fullname: Urszula Hołodniak
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     position: developer
-    image: team/test-small.jpg
+    image: team/uholodniak.jpg
     website:
     facebook: https://www.facebook.com/agnieszka.matysek.3
     twitter: https://twitter.com/womanonrails
@@ -22,7 +22,7 @@ team:
   - fullname: Michał Skóra
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     position: developer
-    image: team/test-small.jpg
+    image: team/mskora.jpg
     website: http://www.google.com
     facebook:
     twitter: https://twitter.com/womanonrails
@@ -32,7 +32,7 @@ team:
   - fullname: Grzegorz Lisowski
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     position: developer
-    image: team/test-small.jpg
+    image: team/glisowski.jpg
     website: http://www.google.com
     facebook: https://www.facebook.com/agnieszka.matysek.3
     twitter:
