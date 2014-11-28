@@ -4,11 +4,8 @@ class PersonDecorator < Draper::Decorator
   delegate_all
 
   def email
-    given :email do
-      mail_to object.email do
-        image_tag 'home/email_icon.png'
-      end
-    end
+    content = method(:given_li)
+    given :email, :mail_to, &content
   end
 
   def facebook
@@ -31,13 +28,18 @@ class PersonDecorator < Draper::Decorator
 
   private
 
-  def given(method, &block)
-    block.call if object.send(method)
+  def given(method, link = :link_to, &block)
+    block.call(method, link) if object.send(method)
   end
 
   def given_icon(name)
-    given name do
-      link_to object.send(name) do
+    content = method(:given_li)
+    given name, &content
+  end
+
+  def given_li(name, link)
+    content_tag :li do
+      send link, object.send(name) do
         image_tag "home/#{name}_icon.png"
       end
     end
