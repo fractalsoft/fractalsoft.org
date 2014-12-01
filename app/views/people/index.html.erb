@@ -9,7 +9,7 @@
           <div class='row'>
             <div class='col-sm-5 col-xs-12'>
               <h4 class='media-heading visible-xs'>
-                <%= person.fullname %> - <span><%= person.position %></span>
+                <%= person.fullname %> <br> <span><%= person.position %></span>
               </h4>
               <%= image_tag person.image_url %>
             </div>
@@ -18,11 +18,22 @@
                 <%= person.fullname %> - <span><%= person.position %></span>
               </h4>
               <p><%= person.description %></p>
-              <div class='media-footer'>
+              <div class='media-footer hidden-xs'>
                 <span class='website pull-left'>
                   <%= raw person.website %>
                 </span>
                 <ul class='list-inline pull-right'>
+                  <%= person.facebook %>
+                  <%= person.twitter %>
+                  <%= person.github %>
+                  <%= person.email %>
+                </ul>
+              </div>
+              <div class='media-footer visible-xs'>
+                <span class='website'>
+                  <%= raw person.website %>
+                </span>
+                <ul class='list-inline'>
                   <%= person.facebook %>
                   <%= person.twitter %>
                   <%= person.github %>
@@ -52,17 +63,18 @@
             </div>
             <div class='col-lg-offset-2 col-md-offset-1 col-sm-3 col-xs-12'>
               <h4 class='media-heading visible-xs'>
-                <%= person.fullname %> - <span><%= person.position %></span>
+                <%= person.fullname %> <br> <span><%= person.position %></span>
               </h4>
               <%= image_tag person.image_url %>
             </div>
             <div class='col-sm-7 col-xs-12 visible-xs'>
               <p><%= person.description %></p>
               <div class='media-footer'>
-                <span class='website pull-left'>
+                <span class='website'>
                   <%= raw person.website %>
                 </span>
-                <ul class='list-inline pull-right'>
+                <br>
+                <ul class='list-inline'>
                   <%= person.facebook %>
                   <%= person.twitter %>
                   <%= person.github %>
