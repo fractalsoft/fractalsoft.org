@@ -61,7 +61,7 @@ platform :ruby do
   gem 'rmagick'
 end
 
-# dekorators
+# decorators
 gem 'draper'
 
 # pry
