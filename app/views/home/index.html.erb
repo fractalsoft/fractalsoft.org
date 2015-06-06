@@ -173,24 +173,14 @@
   <div class='container team'>
     <h2>Meet our team!</h2>
     <div class='row'>
-      <div class='col-sm-4'>
-        <a href='#' class='thumbnail'>
-          <%= image_tag 'home/test.jpg' %>
-          <h3>Imie Nazwisko</h3>
-        </a>
-      </div>
-      <div class='col-sm-4 hidden-xs'>
-        <a href='#' class='thumbnail'>
-          <%= image_tag 'home/test.jpg' %>
-          <h3>Imie Nazwisko</h3>
-        </a>
-      </div>
-      <div class='col-sm-4 hidden-xs'>
-        <a href='#' class='thumbnail'>
-          <%= image_tag 'home/test.jpg' %>
-          <h3>Imie Nazwisko</h3>
-        </a>
-      </div>
+      <% @people.each do |person| %>
+        <div class='col-sm-4'>
+          <%= link_to people_path, class: 'thumbnail' do %>
+            <%= image_tag person.image_url %>
+            <h3><%= person.fullname %></h3>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <a href='#' title='see more' class='btn btn-primary'>Show more</a>
   </div>
