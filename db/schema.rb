@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141125113017) do
 
-  create_table "images", force: true do |t|
+  create_table "images", force: :cascade do |t|
     t.string   "image"
     t.string   "kind"
     t.integer  "project_id"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20141125113017) do
 
   add_index "images", ["project_id"], name: "index_images_on_project_id"
 
-  create_table "people", force: true do |t|
+  create_table "people", force: :cascade do |t|
     t.string   "fullname"
     t.text     "description"
     t.string   "position"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20141125113017) do
     t.datetime "updated_at"
   end
 
-  create_table "projects", force: true do |t|
+  create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "subtitle"
     t.text     "description"
