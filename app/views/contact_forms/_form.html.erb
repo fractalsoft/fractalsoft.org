@@ -1,17 +1,17 @@
 <%= form_for contact, html: { id: 'contact_form', class: 'form-horizontal' } do |f| %>
   <div class='form-group'>
-    <%= f.text_field :name, class: 'form-control', placeholder: 'your name' %>
+    <%= f.text_field :name, class: 'form-control', placeholder: t('.name') %>
   </div>
   <div class='form-group'>
-    <%= f.text_field :email, class: 'form-control', placeholder: 'your email address' %>
+    <%= f.text_field :email, class: 'form-control', placeholder: t('.email') %>
   </div>
   <div class='form-group'>
-    <%=  f.text_area :message, class: 'form-control', rows: 10, placeholder: 'what we can do for you?' %>
+    <%=  f.text_area :message, class: 'form-control', rows: 10, placeholder: t('.message') %>
   </div>
   <div class='form-group'>
     <div class='row'>
       <div class='col-sm-5 col-xs-12'>
-        <%= f.submit 'send', class: 'btn btn-primary btn-block submit' %>
+        <%= f.submit t('.send'), class: 'btn btn-primary btn-block submit' %>
       </div>
     </div>
   </div>
