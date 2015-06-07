@@ -1,33 +1,33 @@
 en:
   contact_forms:
     contact:
-      cieszyn_office: Cieszyn Office
-      contact_with_us: Contact with us
-      find_us: You can also find us here
-      gliwice_office: Gliwice Office
+      cieszyn_office: Biuro Cieszyn
+      contact_with_us: Napisz do nas
+      find_us: Możesz nas znaleźć też tu
+      gliwice_office: Biuro Gliwice
     form:
-      email: your email address
-      message: what we can do for you?
-      name: your name
-      send: send
+      email: Twój adres email
+      message: Jak możemy Ci pomóc?
+      name: Twoje imię
+      send: wyślij
   layouts:
     shared:
       header: &header
-        contact: Contact
-        projects: Projects
-        team: Team
-        toggle_navigation: Toggle navigation
+        contact: Kontakt
+        projects: Projekty
+        team: Zaspół
+        toggle_navigation: Nawigacja
       footer:
         <<: *header
   home:
     index:
       slider:
         slogan:
-          one: We love simple solutions
+          one: Kochamy proste rozwiązania
         description:
-          one: so we use Ruby on Rails framework
+          one: używamy Ruby on Rails
       button:
-        contact_us: Contact us
+        contact_us: Napisz do nas
       how_we_work:
         slogan: 'We are red, we are fractal soft'
         header:
@@ -48,7 +48,7 @@ en:
           two: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
           three: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
       team:
-        meet_us: Meet our team!
+        meet_us: Poznaj nasz zespół!
       contact:
-        header: Want to get in touch with us?
-        description: No matter if you have a question or just want to  say hello, we would love to hear from you.
+        header: Chcesz się z nami zkontaktować?
+        description: Nie zależnie czy masz do nas pytanie czy chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.

@@ -4,137 +4,67 @@
   <div class='jumbotron'>
     <div class='container'>
       <div id='carousel-main' class='carousel slide' data-ride='carousel'>
-        <!-- Indicators -->
-        <ol class='carousel-indicators'>
-          <li data-target='#carousel-main' data-slide-to='0' class='active'></li>
-          <li data-target='#carousel-main' data-slide-to='1'></li>
-          <li data-target='#carousel-main' data-slide-to='2'></li>
-          <li data-target='#carousel-main' data-slide-to='3'></li>
-        </ol>
-
         <!-- Wrapper for slides -->
         <div class='carousel-inner'>
           <div class='item active'>
             <div class='carousel-caption'>
-              <h3 class='normal'><%= t '.slider.slogan.one' %></h3>
+              <h3 class='normal'><%= t('.slider.slogan.one') %></h3>
               <p>
-                <%= t '.slider.description.one' %><br>
-                <a href='#' title='show more' class='btn btn-info'>Show more</a>
-              </p>
-            </div>
-          </div>
-          <div class='item'>
-            <div class='carousel-caption'>
-              <h3 class='normal'><%= t '.slider.slogan.two' %></h3>
-              <p>
-                <%= t '.slider.description.two' %><br>
-                <a href='#' title='show more' class='btn btn-info'>Show more</a>
-              </p>
-            </div>
-          </div>
-          <div class='item'>
-            <div class='carousel-caption'>
-              <h3 class='normal'>Ala ma kota</h3>
-              <p>
-                Potwierdzone przez NASA
-                <br>
-                <a href='#' title='show more' class='btn btn-info'>Show more</a>
-              </p>
-            </div>
-          </div>
-          <div class='item'>
-            <div class='carousel-caption'>
-              <h3 class='normal'>Ala ma kota</h3>
-              <p>
-                Potwierdzone przez NASA
-                <br>
-                <a href='#' title='show more' class='btn btn-info'>Show more</a>
+                <%= t('.slider.description.one') %><br>
+                <a href='#contact' title='show more' class='btn btn-info'>
+                  <%= t('.button.contact_us') %>
+                </a>
               </p>
             </div>
           </div>
         </div>
-
-        <!-- Controls -->
-        <a class='left carousel-control' href='#carousel-main' role='button' data-slide='prev'>
-          <span class='glyphicon glyphicon-chevron-left'></span>
-        </a>
-        <a class='right carousel-control' href='#carousel-main' role='button' data-slide='next'>
-          <span class='glyphicon glyphicon-chevron-right'></span>
-        </a>
       </div>
     </div>
   </div>
 
   <div class='container description'>
-    <h1>We are red, we are fractal soft</h1>
+    <h1><%= t('.how_we_work.slogan') %></h1>
     <div class='row'>
       <div class='col-sm-4'>
         <div class='thumb'>
           <%= image_tag 'home/cup_of_art.png' %>
         </div>
-        <h4>Na początku design</h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h4><%= t('.how_we_work.header.one') %></h4>
+        <p><%= t('.how_we_work.description.one') %></p>
       </div>
       <div class='col-sm-4'>
         <div class='thumb pen'>
           <%= image_tag 'home/code_pen.png' %>
         </div>
-        <h4>Wdrażanie kodu do projektu</h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h4><%= t('.how_we_work.header.two') %></h4>
+        <p><%= t('.how_we_work.description.two') %></p>
       </div>
       <div class='col-sm-4'>
         <div class='thumb screen'>
           <%= image_tag 'home/display_view.png' %>
         </div>
-        <h4>Optymalizacja</h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h4><%= t('.how_we_work.header.three') %></h4>
+        <p><%= t('.how_we_work.description.three') %></p>
       </div>
     </div>
   </div>
 
-  <div class='row images hidden-xs'>
-    <div class='col-xs-2'>
-      <a href='#' class='thumbnail'>
-        <%= image_tag 'home/projects/hitdea.jpg' %>
-      </a>
-    </div>
-    <div class='col-xs-2'>
-      <a href='#' class='thumbnail'>
-        <%= image_tag 'home/projects/ballerina.jpg' %>
-      </a>
-    </div>
-    <div class='col-xs-2'>
-      <a href='#' class='thumbnail'>
-        <%= image_tag 'home/projects/luktech.jpg' %>
-      </a>
-    </div>
-    <div class='col-xs-2'>
-      <a href='#' class='thumbnail'>
-        <%= image_tag 'home/projects/metalowiec.jpg' %>
-      </a>
-    </div>
-    <div class='col-xs-2'>
-      <a href='#' class='thumbnail'>
-        <%= image_tag 'home/projects/ntlogistic.jpg' %>
-      </a>
-    </div>
-    <div class='col-xs-2'>
-      <a href='#' class='thumbnail'>
-        <%= image_tag 'home/projects/fractalshop.jpg' %>
-      </a>
-    </div>
-  </div>
-
-  <div class='row images visible-xs'>
-    <div class='col-xs-12'>
-      <a href='#' class='thumbnail'>
-        <%= image_tag 'home/projects/hitdea.jpg' %>
-      </a>
+  <div class='container team'>
+    <h2><%= t('.team.meet_us') %></h2>
+    <div class='row'>
+      <% @people.each do |person| %>
+        <div class='col-sm-3'>
+          <div class='thumbnail'>
+            <%= image_tag person.image_url %>
+            <h3><%= person.fullname %></h3>
+            <p><strong><%= person.position %></strong></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 
   <div class='container technology hidden-xs'>
-    <a href='#' title='see more' class='btn btn-default'>Show more</a>
     <div class='row'>
       <div class='col-sm-10 col-sm-offset-1'>
         <ul class='media-list'>
@@ -143,8 +73,8 @@
               <%= image_tag 'home/html5.png', class: 'media-object' %>
             </a>
             <div class='media-body text-left'>
-              <h4 class='media-heading'>HTML 5</h4>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <h4 class='media-heading'><%= t('.technology.header.one') %></h4>
+              <p><%= t('.technology.description.one') %></p>
             </div>
           </li>
           <li class='media'>
@@ -152,8 +82,8 @@
               <%= image_tag 'home/rails.png', class: 'media-object' %>
             </a>
             <div class='media-body text-right'>
-              <h4 class='media-heading'>Ruby on Rails</h4>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <h4 class='media-heading'><%= t('.technology.header.two') %></h4>
+              <p><%= t('.technology.description.two') %></p>
             </div>
           </li>
           <li class='media'>
@@ -161,8 +91,8 @@
               <%= image_tag 'home/open_source.png', class: 'media-object' %>
             </a>
             <div class='media-body text-left'>
-              <h4 class='media-heading'>Open Source</h4>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <h4 class='media-heading'><%= t('.technology.header.three') %></h4>
+              <p><%= t('.technology.description.three') %></p>
             </div>
           </li>
         </ul>
@@ -170,89 +100,9 @@
     </div>
   </div>
 
-  <div class='container team'>
-    <h2>Meet our team!</h2>
-    <div class='row'>
-      <% @people.each do |person| %>
-        <div class='col-sm-4'>
-          <%= link_to people_path, class: 'thumbnail' do %>
-            <%= image_tag person.image_url %>
-            <h3><%= person.fullname %></h3>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-    <a href='#' title='see more' class='btn btn-primary'>Show more</a>
-  </div>
-
-  <div class='opinions hidden-xs'>
-    <!-- <div class='cover'></div> -->
-    <div id='carousel-opinion' class='carousel slide cover' data-ride='carousel'>
-      <!-- Indicators -->
-      <ol class='carousel-indicators'>
-        <li data-target='#carousel-opinion' data-slide-to='0' class='active'></li>
-        <li data-target='#carousel-opinion' data-slide-to='1'></li>
-        <li data-target='#carousel-opinion' data-slide-to='2'></li>
-        <li data-target='#carousel-opinion' data-slide-to='3'></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class='carousel-inner'>
-        <div class='item active'>
-          <div class='carousel-caption'>
-            <%= image_tag 'home/test.jpg', class: 'img-circle' %>
-            <div class='row'>
-              <div class='col-sm-4 col-sm-offset-4'>
-                <p><strong>&ldquo;</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>&bdquo;</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='item'>
-          <div class='carousel-caption'>
-            <%= image_tag 'home/test.jpg', class: 'img-circle' %>
-            <div class='row'>
-              <div class='col-sm-4 col-sm-offset-4'>
-                <p><strong>&ldquo;</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>&bdquo;</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='item'>
-          <div class='carousel-caption'>
-            <%= image_tag 'home/test.jpg', class: 'img-circle' %>
-            <div class='row'>
-              <div class='col-sm-4 col-sm-offset-4'>
-                <p><strong>&ldquo;</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>&bdquo;</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='item'>
-          <div class='carousel-caption'>
-            <%= image_tag 'home/test.jpg', class: 'img-circle' %>
-            <div class='row'>
-              <div class='col-sm-4 col-sm-offset-4'>
-                <p><strong>&ldquo;</strong>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<strong>&bdquo;</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <a class='left carousel-control' href='#carousel-opinion' role='button' data-slide='prev'>
-        <span class='glyphicon glyphicon-chevron-left'></span>
-      </a>
-      <a class='right carousel-control' href='#carousel-opinion' role='button' data-slide='next'>
-        <span class='glyphicon glyphicon-chevron-right'></span>
-      </a>
-    </div>
-  </div>
-
-  <div class='container contact'>
-    <h2>Want to get in touch with us?</h2>
-    <p class='hidden-xs'>No matter if you have a question or just want to  say hello, we would love to hear from you.</p>
+  <div id='contact' class='container contact'>
+    <h2><%= t('.contact.header') %></h2>
+    <p class='hidden-xs'><%= t('.contact.description') %></p>
     <div class='row'>
       <div class='col-sm-8 col-sm-push-4 col-xs-12'>
         <%= render 'contact_forms/form', contact: @contact %>
