@@ -1,18 +1,18 @@
 <div class='section address'>
-  <h4>Contact with us</h4>
+  <h4><%= t('.contact_with_us') %></h4>
   <address>
-    Fractal Soft <strong>Poland</strong><br>
+    <strong><%= t('.gliwice_office') %></strong><br>
     Akademicka 5<br>
     Gliwice 44-100
   </address>
   <address>
-    Fractal Soft <strong>London</strong><br>
-    Akademicka 5<br>
-    Gliwice 44-100
+    <strong><%= t('.cieszyn_office') %></strong><br>
+    Trzech Braci 3<br>
+    Cieszyn 43-400
   </address>
 </div>
 
-<div class='section'>
+<!-- <div class='section'>
   <h4>Phone</h4>
   <address>
     +48 293 901 203<br>
@@ -23,12 +23,12 @@
 <div class='section'>
   <h4>Email address</h4>
   <address>
-    <%= mail_to 'kontakt@fractalsoft.org' %>
+    <%#= mail_to 'kontakt@fractalsoft.org' %>
   </address>
 </div>
-
+ -->
 <div class='section'>
-  <h4>You can also find us here</h4>
+  <h4><%= t('.find_us') %></h4>
   <ul class='list-inline'>
     <li>
       <%= link_to 'https://www.facebook.com/fractalsoft' do %>
