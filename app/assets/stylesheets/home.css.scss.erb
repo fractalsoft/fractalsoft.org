@@ -22,12 +22,22 @@ body.home {
   }
 
   @media(min-width: 768px) {
+    .jumbotron h3 {
+      margin-top: 140px;
+      font-size: 40pt;
+    }
+
     .contact {
       h2 { padding-top: 60px; }
     }
   }
 
   @media(max-width: 768px) {
+    .jumbotron h3 {
+      margin-top: 80px;
+      font-size: 30pt;
+    }
+
     .description {
       h4 { font-size: 18pt; }
     }
@@ -47,6 +57,7 @@ body.home {
     height: 540px;
     margin-bottom: 0;
     padding-top: 0;
+    border-radius: 0;
 
     .carousel {
       height: 510px;
@@ -56,11 +67,6 @@ body.home {
       .carousel-caption {
         text-shadow: none;
 
-        h3 {
-          margin-top: 140px;
-          font-size: 40pt;
-        }
-
         .btn { margin-top: 30px; }
       }
     }
@@ -68,7 +74,7 @@ body.home {
 
   .description {
     background-color: $light-background-color;
-    margin-top: -30px;
+    margin-top: -60px;
     padding-bottom: 120px;
 
     h1, h4 {
