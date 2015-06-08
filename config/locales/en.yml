@@ -21,17 +21,13 @@ en:
         <<: *header
   home:
     index:
-      slider:
-        slogan:
-          one: We love simple solutions
-        description:
-          one: so we use Ruby on Rails framework
+      header_html: Create <strong>web</strong> and <strong>mobile</strong> applications is our <strong>passion</strong>
       button:
         contact_us: Contact us
       how_we_work:
-        slogan: 'We are red, we are fractal soft'
+        slogan: How we work?
         header:
-          one: Na początku design
+          one: UX and design
           two: Wdrażanie kodu do projektu
           three: Optymalizacja
         description:
