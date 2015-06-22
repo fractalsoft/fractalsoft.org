@@ -28,12 +28,12 @@ en:
         slogan: Jak pracujemy?
         header:
           one: UX i projekt graficzny
-          two: Wdrażanie kodu do projektu
-          three: Optymalizacja
+          two: Rozwijanie projektu
+          three: Wdrożenie aplikacji
         description:
-          one: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          two: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          three: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          one: "Porozmawiajmy o Twoich potrzebach, zanim rozpoczniemy. Chcemy dobrze zrozumieć Twój problem i zaprojektować rozwiązanie specjalnie dla Ciebie."
+          two: "Krok po kroku budujemy produkt dla Ciebie. W każdej chwili możesz dać nam sugestie. Zależy nam na wysokiej jakości kodu, dlatego tworzymy testy i dbamy o użyteczność aplikacji."
+          three: "Wszystko w jednym miejscu: projekt, wykonanie i wdrożenie. Nie musisz się o nic martwić. Zadbamy o Twój produkt do samego końca."
       technology:
         header:
           one: HTML 5

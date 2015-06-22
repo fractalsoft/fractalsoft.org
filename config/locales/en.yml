@@ -27,13 +27,13 @@ en:
       how_we_work:
         slogan: How we work?
         header:
-          one: UX and design
-          two: Wdrażanie kodu do projektu
-          three: Optymalizacja
+          one: "UX & design"
+          two: Development
+          three: Deployment
         description:
-          one: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          two: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          three: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          one: "Let's talk about your needs, before we start. We want to understand your problem and design a solution for you."
+          two: "Step by step we build the product for you. At any time you can give us feedback. We take care about code quality, so we do tests and increase usability."
+          three: "All-in-one: design, development & deployment. Don't worry about anything. We keep an eye on your product."
       technology:
         header:
           one: HTML 5
