@@ -36,13 +36,13 @@ en:
           three: "Wszystko w jednym miejscu: projekt, wykonanie i wdrożenie. Nie musisz się o nic martwić. Zadbamy o Twój produkt do samego końca."
       technology:
         header:
-          one: HTML 5
+          one: HTML5
           two: Ruby on Rails
           three: Open Source
         description:
-          one: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          two: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          three: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          one: "Standard HTML, który ułatwia programistom pracę nad tworzeniem stron internetowych. Dodatkowo zapewnia on takie funkcjonalności jak obsługę audio i video, rysowanie grafiki w canvas oraz geolokalizację. Sprawia, że nasze projekty stają się jeszcze ciekawsze."
+          two: "Nowoczesny framework do budowania w pełni funkcjonalnych aplikacji internetowych. Jego ogromną zaletą jest możliwość szybkiego i przyjemnego tworzenia oprogramowania. Pozwala to na błyskawiczne dostosowywanie się do zmiennych wymagań rynku. Zapewniając klientowi większą satysfakcję z efektów pracy programistów."
+          three_html: "Otwarte oprogramowanie, czyli takie do którego istnieje swobodny i&nbsp;wolny dostęp dla wszystkich jego użytkowników. Dzięki wglądowi w kod źródłowy aplikacji mogą one być nieustannie zmieniane, udoskonalane i rozpowszechniane. Powodując w ten sposób szybszy rozwój programów oraz efektywne eliminowanie błędów."
       team:
         meet_us: Poznaj nasz zespół!
       contact:
