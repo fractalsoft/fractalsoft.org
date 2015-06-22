@@ -58,7 +58,7 @@ gem 'mail_form'
 gem 'carrierwave'
 
 platform :ruby do
-  gem 'rmagick'
+  gem 'rmagick', require: false
 end
 
 # decorators
