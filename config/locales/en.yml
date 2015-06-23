@@ -6,9 +6,9 @@ en:
       find_us: You can also find us here
       gliwice_office: Gliwice Office
     form:
-      email: your email address
-      message: what we can do for you?
-      name: your name
+      email: Your email address
+      message: What we can do for you?
+      name: Your name
       send: send
   layouts:
     shared:

@@ -8,8 +8,8 @@ class ContactForm < MailForm::Base
 
   def headers
     {
-      subject: 'Hitdea - contact form',
-      to: Rails.application.secrets.owner_email,
+      subject: 'Fractal Soft - contact form',
+      to: Rails.application.secrets.contact_email,
       from: %("#{name}" <#{email}>)
     }
   end
