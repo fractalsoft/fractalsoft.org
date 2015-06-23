@@ -1,16 +1,20 @@
 source 'https://rubygems.org'
-
 ruby '2.2.1'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-i18n'
+gem 'puma'
+gem 'foreman'
+gem 'mail_form'
+gem 'carrierwave'
+gem 'draper'
 
 group :development do
   gem 'spring'
@@ -25,6 +29,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.0.2'
   gem 'sqlite3'
 end
@@ -51,20 +56,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# For sending mail form form
-gem 'mail_form'
-
-# Images
-gem 'carrierwave'
-
 platform :ruby do
   gem 'mini_magick'
-end
-
-# decorators
-gem 'draper'
-
-# pry
-group :development, :test do
-  gem 'pry-rails'
 end

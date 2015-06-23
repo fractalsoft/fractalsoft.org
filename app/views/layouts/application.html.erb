@@ -17,6 +17,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'></script>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shared/analytics' %>
 </head>
 <body class=<%= yield(:body_class) %>>
 <%= render 'layouts/shared/header' %>
