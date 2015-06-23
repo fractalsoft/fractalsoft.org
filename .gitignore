@@ -19,5 +19,5 @@
 /sandi_meter
 
 # Igrone uplaods
-/public/uploads
-/public/uploads/.keep
+/public/uploads/*
+!/public/uploads/.keep
