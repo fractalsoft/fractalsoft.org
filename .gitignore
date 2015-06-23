@@ -20,4 +20,4 @@
 
 # Igrone uplaods
 /public/uploads
-/public/uploads/.keep
+!/public/uploads/.keep
