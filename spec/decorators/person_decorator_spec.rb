@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe PersonDecorator, type: :decorator do
+RSpec.describe PersonDecorator, type: :decorator do
   describe '#email' do
     let(:email) { 'xyz@example.com' }
 

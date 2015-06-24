@@ -1,10 +1,10 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
+<%= form_for(project) do |f| %>
+  <% if project.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
       <ul>
-      <% @project.errors.full_messages.each do |message| %>
+      <% project.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :thumbnail %><br>
-    <%= f.text_field :thumbnail %>
+    <%= f.file_field :thumbnail %>
   </div>
   <div class="actions">
     <%= f.submit %>
