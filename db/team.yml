@@ -1,0 +1,40 @@
+team:
+  - fullname: Agnieszka Matysek
+    description: Ruby on Rails developer
+    position: developer
+    image: team/amatysek.jpg
+    website: http://womanonrails.com
+    facebook: https://www.facebook.com/agnieszka.matysek.3
+    twitter: https://twitter.com/womanonrails
+    github: https://github.com/womanonrails
+    email: do-not-spam@fractalsoft.org
+
+  - fullname: Urszula Hołodniak
+    description: Ruby on Rails developer
+    position: developer
+    image: team/uholodniak.jpg
+    website:
+    facebook:
+    twitter: https://twitter.com/8shad8
+    github: https://github.com/shad8
+    email: do-not-spam@fractalsoft.org
+
+  - fullname: Grzegorz Lisowski
+    description: Ruby on Rails developer
+    position: developer
+    image: team/glisowski.jpg
+    website:
+    facebook: https://www.facebook.com/lisux
+    twitter: https://twitter.com/noplisu
+    github: https://github.com/noplisu
+    email: do-not-spam@fractalsoft.org
+
+  - fullname: Aleksander Małaszkiewicz
+    description: Ruby on Rails developer
+    position: developer
+    image: team/amalaszkiewicz.jpg
+    website:
+    facebook: https://www.facebook.com/torrocus
+    twitter: https://twitter.com/torrocus
+    github: https://github.com/torrocus
+    email: do-not-spam@fractalsoft.org

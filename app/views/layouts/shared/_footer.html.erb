@@ -1,0 +1,21 @@
+<nav class='footer navbar navbar-default' role='navigation'>
+  <div class='container'>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class='navbar-header'>
+      <%= link_to root_path, class: 'navbar-brand' do %>
+        <%= image_tag 'home/logo.png', class: 'hidden-xs' %>
+        <%= image_tag 'home/logo_big_white.png', class: 'visible-xs' %>
+      <% end %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+      <%= image_tag 'home/footer.png', class: 'pull-right' %>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><%#= link_to t('.projects'), projects_path %></li>
+        <li><%#= link_to t('.team'), people_path %></li>
+        <li><%#= link_to t('.contact'), new_contact_form_path %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

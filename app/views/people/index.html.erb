@@ -1,0 +1,90 @@
+<% content_for :body_class, 'team' %>
+
+<div class='container team'>
+  <h2>Meet our team!</h2>
+  <div class='row team-members'>
+    <div class='col-md-10 col-md-offset-1'>
+      <% @people.each_with_index do |person, index| %>
+        <% if index % 2 == 0 %>
+          <div class='row'>
+            <div class='col-sm-5 col-xs-12'>
+              <h4 class='media-heading visible-xs'>
+                <%= person.fullname %> <br> <span><%= person.position %></span>
+              </h4>
+              <%= image_tag person.image_url %>
+            </div>
+            <div class='col-sm-7 col-xs-12'>
+              <h4 class='media-heading hidden-xs'>
+                <%= person.fullname %> - <span><%= person.position %></span>
+              </h4>
+              <p><%= person.description %></p>
+              <div class='media-footer hidden-xs'>
+                <span class='website pull-left'>
+                  <%= raw person.website %>
+                </span>
+                <ul class='list-inline pull-right'>
+                  <%= person.facebook %>
+                  <%= person.twitter %>
+                  <%= person.github %>
+                  <%= person.email %>
+                </ul>
+              </div>
+              <div class='media-footer visible-xs'>
+                <span class='website'>
+                  <%= raw person.website %>
+                </span>
+                <ul class='list-inline'>
+                  <%= person.facebook %>
+                  <%= person.twitter %>
+                  <%= person.github %>
+                  <%= person.email %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div class='row'>
+            <div class='col-sm-7 col-xs-12 hidden-xs'>
+              <h4 class='media-heading media-text-right'>
+                <%= person.fullname %> - <span><%= person.position %></span>
+              </h4>
+              <p class='media-text-right'><%= person.description %></p>
+              <div class='media-footer'>
+                <span class='website pull-right'>
+                  <%= person.website %>
+                </span>
+                <ul class='list-inline pull-left'>
+                  <%= person.facebook %>
+                  <%= person.twitter %>
+                  <%= person.github %>
+                  <%= person.email %>
+                </ul>
+              </div>
+            </div>
+            <div class='col-lg-offset-2 col-md-offset-1 col-sm-3 col-xs-12'>
+              <h4 class='media-heading visible-xs'>
+                <%= person.fullname %> <br> <span><%= person.position %></span>
+              </h4>
+              <%= image_tag person.image_url %>
+            </div>
+            <div class='col-sm-7 col-xs-12 visible-xs'>
+              <p><%= person.description %></p>
+              <div class='media-footer'>
+                <span class='website'>
+                  <%= raw person.website %>
+                </span>
+                <br>
+                <ul class='list-inline'>
+                  <%= person.facebook %>
+                  <%= person.twitter %>
+                  <%= person.github %>
+                  <%= person.email %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

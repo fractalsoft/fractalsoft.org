@@ -1,0 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
+.header {
+  @include navbar($header-background-color, $header-text-color, $hover-header-text-color);
+}

@@ -1,0 +1,39 @@
+<div class='section address'>
+  <h4><%= t('.contact_with_us') %></h4>
+  <address>
+    <strong><%= t('.gliwice_office') %></strong><br>
+    Akademicka 5<br>
+    44-100 Gliwice
+  </address>
+  <address>
+    <strong><%= t('.cieszyn_office') %></strong><br>
+    Trzech Braci 3<br>
+    43-400 Cieszyn
+  </address>
+</div>
+
+<div class='section'>
+  <h4><%= t('.find_us') %></h4>
+  <ul class='list-inline'>
+    <li>
+      <%= link_to 'https://www.facebook.com/fractalsoft' do %>
+        <%= image_tag 'icons/facebook.png', alt: 'Facebook', title: 'Like us' %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to 'https://twitter.com/fractal_soft' do %>
+        <%= image_tag 'icons/twitter.png', alt: 'Twitter', title: 'Follow us' %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to 'https://plus.google.com/106386969948370069442' do %>
+        <%= image_tag 'icons/google.svg', alt: 'Google+', title: 'Follow us' %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to 'https://github.com/fractalsoft' do %>
+        <%= image_tag 'icons/github.png', alt: 'Github', title: 'Star us' %>
+      <% end %>
+    </li>
+  </ul>
+</div>
