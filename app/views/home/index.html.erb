@@ -54,7 +54,7 @@
       <% @people.each do |person| %>
         <div class='col-sm-3'>
           <div class='thumbnail'>
-            <%= image_tag person.image_url(:thumb) %>
+            <%= image_tag person.image %>
             <h3><%= person.fullname %></h3>
             <p><strong><%= person.position %></strong></p>
           </div>
