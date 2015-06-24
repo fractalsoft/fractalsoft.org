@@ -1,0 +1,43 @@
+@import 'variables';
+
+.btn {
+  padding: 15px 50px 15px 50px;
+  text-transform: uppercase;
+  font-family: $asap-fonts;
+
+  &.btn-default {
+    background-color: $white-background-color;
+    color: $light-grey-text-color;
+    border-width: 3px;
+    font-weight: 700;
+
+    &.active {
+      background-color: $grey-background-color;
+      box-shadow: none;
+    }
+  }
+
+  &.btn-info {
+    background-color: $dark-background-color;
+    color: $white-text-color;
+    border-width: 0px;
+  }
+
+  &.btn-primary {
+    background-color: $red-background-color;
+    color: $white-text-color;
+    border-width: 0px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $asap-fonts;
+
+  &.normal {
+    font-family: $opensans-fonts;
+  }
+}
+
+p {
+  font-family: $opensans-fonts;
+}

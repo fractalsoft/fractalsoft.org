@@ -1,0 +1,50 @@
+pl:
+  contact_forms:
+    contact:
+      cieszyn_office: Biuro Cieszyn
+      contact_with_us: Napisz do nas
+      find_us: Możesz nas znaleźć też tu
+      gliwice_office: Biuro Gliwice
+    form:
+      email: Twój adres email
+      message: Jak możemy Ci pomóc?
+      name: Twoje imię
+      send: wyślij
+  layouts:
+    shared:
+      header: &header
+        contact: Kontakt
+        projects: Projekty
+        team: Zaspół
+        toggle_navigation: Nawigacja
+      footer:
+        <<: *header
+  home:
+    index:
+      header_html: Aplikacje <strong>internetowe</strong> i <strong>mobilne</strong> to nasza pasja
+      button:
+        contact_us: Napisz do nas
+      how_we_work:
+        slogan: Jak pracujemy?
+        header:
+          one: UX i projekt graficzny
+          two: Rozwijanie projektu
+          three: Wdrożenie aplikacji
+        description:
+          one: "Porozmawiajmy o Twoich potrzebach, zanim rozpoczniemy. Chcemy dobrze zrozumieć Twój problem i zaprojektować rozwiązanie specjalnie dla Ciebie."
+          two: "Krok po kroku budujemy produkt dla Ciebie. W każdej chwili możesz dać nam sugestie. Zależy nam na wysokiej jakości kodu, dlatego tworzymy testy i dbamy o użyteczność aplikacji."
+          three: "Wszystko w jednym miejscu: projekt, wykonanie i wdrożenie. Nie musisz się o nic martwić. Zadbamy o Twój produkt do samego końca."
+      technology:
+        header:
+          one: HTML5
+          two: Ruby on Rails
+          three: Open Source
+        description:
+          one: "Standard HTML, który ułatwia programistom pracę nad tworzeniem stron internetowych. Dodatkowo zapewnia on takie funkcjonalności jak obsługę audio i video, rysowanie grafiki w canvas oraz geolokalizację. Sprawia, że nasze projekty stają się jeszcze ciekawsze."
+          two: "Nowoczesny framework do budowania w pełni funkcjonalnych aplikacji internetowych. Jego ogromną zaletą jest możliwość szybkiego i przyjemnego tworzenia oprogramowania. Pozwala to na błyskawiczne dostosowywanie się do zmiennych wymagań rynku. Zapewniając klientowi większą satysfakcję z efektów pracy programistów."
+          three_html: "Otwarte oprogramowanie, czyli takie do którego istnieje swobodny i&nbsp;wolny dostęp dla wszystkich jego użytkowników. Dzięki wglądowi w kod źródłowy aplikacji mogą one być nieustannie zmieniane, udoskonalane i rozpowszechniane. Powodując w ten sposób szybszy rozwój programów oraz efektywne eliminowanie błędów."
+      team:
+        meet_us: Poznaj nasz zespół!
+      contact:
+        header: Chcesz się z nami zkontaktować?
+        description: Nie zależnie czy masz do nas pytanie czy chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.

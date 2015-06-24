@@ -12,5 +12,13 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
+/log/*
+!/log/.keep
 /tmp
+
+# Ignore metric files
+/sandi_meter
+
+# Igrone uplaods
+/public/uploads/*
+!/public/uploads/.keep
