@@ -17,7 +17,6 @@ gem 'carrierwave'
 gem 'draper'
 
 group :development do
-  gem 'spring'
   gem 'quiet_assets'
   gem 'rails_best_practices'
   gem 'rubocop'
@@ -29,9 +28,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.0.2'
+  gem 'byebug'
+  gem 'spring'
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0.2'
+  gem 'web-console', '~> 2.0'
 end
 
 group :test do
