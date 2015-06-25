@@ -10,7 +10,7 @@
             <div class='carousel-caption'>
               <h3 class='normal'><%= t('.header_html') %></h3>
               <p>
-                <a href='#contact' title='show more' class='btn btn-info btn-lg'>
+                <a href='#contact' title='<%= t('.title.in_touch') %>' class='btn btn-info btn-lg'>
                   <%= t('.button.contact_us') %>
                 </a>
               </p>
@@ -54,7 +54,7 @@
       <% @people.each do |person| %>
         <div class='col-sm-3'>
           <div class='thumbnail'>
-            <%= image_tag person.image_url %>
+            <%= image_tag person.image %>
             <h3><%= person.fullname %></h3>
             <p><strong><%= person.position %></strong></p>
           </div>

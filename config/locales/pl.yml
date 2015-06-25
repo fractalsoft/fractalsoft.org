@@ -1,10 +1,11 @@
 pl:
   contact_forms:
     contact:
-      cieszyn_office: Biuro Cieszyn
       contact_with_us: Napisz do nas
       find_us: Możesz nas znaleźć też tu
-      gliwice_office: Biuro Gliwice
+      office:
+        cieszyn: Biuro Cieszyn
+        gliwice: Biuro Gliwice
     form:
       email: Twój adres email
       message: Jak możemy Ci pomóc?
@@ -22,6 +23,8 @@ pl:
   home:
     index:
       header_html: Aplikacje <strong>internetowe</strong> i <strong>mobilne</strong> to nasza pasja
+      title:
+        in_touch: Bądźmy w kontakcie
       button:
         contact_us: Napisz do nas
       how_we_work:
