@@ -1,10 +1,11 @@
 en:
   contact_forms:
     contact:
-      cieszyn_office: Cieszyn Office
       contact_with_us: Contact with us
       find_us: You can also find us here
-      gliwice_office: Gliwice Office
+      office:
+        cieszyn: Cieszyn Office
+        gliwice: Gliwice Office
     form:
       email: Your email address
       message: What we can do for you?
@@ -22,6 +23,8 @@ en:
   home:
     index:
       header_html: Creating <strong>web</strong> and <strong>mobile</strong> applications is our <strong>passion</strong>
+      title:
+        in_touch: Let's be in touch
       button:
         contact_us: Contact us
       how_we_work:
