@@ -1,12 +1,13 @@
 # Contact Forms Controller
 class ContactFormsController < ApplicationController
   def new
-    @contact = ContactForm.new
+    @contact_form = ContactForm.new
   end
 
   def create
-    @contact = ContactForm.new(params[:contact_form])
-    @contact.deliver
+    @contact_form = ContactForm.new(params[:contact_form])
+    @contact_form.request = request
+    @contact_form.deliver
     redirect_to root_path
   end
 end

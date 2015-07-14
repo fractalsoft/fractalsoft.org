@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.2.2'
 
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -15,23 +15,29 @@ gem 'foreman'
 gem 'mail_form'
 gem 'carrierwave'
 gem 'draper'
+gem 'mini_magick', platform: :ruby
+gem 'mandrill-api'
+gem 'mandrill_mailer'
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'brakeman', require: false
+  gem 'letter_opener'
   gem 'quiet_assets'
   gem 'rails_best_practices'
   gem 'rubocop'
+  gem 'rubycritic', require: false
   gem 'sandi_meter'
-  gem 'brakeman'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'metric_fu'
 end
 
 group :development, :test do
   gem 'byebug'
+  gem 'dotenv-rails'
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.3'
   gem 'spring'
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 3.0.2'
   gem 'web-console', '~> 2.0'
 end
 
@@ -56,7 +62,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-platform :ruby do
-  gem 'mini_magick'
-end

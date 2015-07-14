@@ -11,6 +11,10 @@ en:
       message: What we can do for you?
       name: Your name
       send: send
+    new:
+      contact: &contact
+        header: Want to get in touch with us?
+        description: 'No matter if you have a question or just want to  say hello, we would love to hear from you.'
   layouts:
     shared:
       header: &header
@@ -49,5 +53,16 @@ en:
       team:
         meet_us: Meet our team!
       contact:
-        header: Want to get in touch with us?
-        description: No matter if you have a question or just want to  say hello, we would love to hear from you.
+        <<: *contact
+  mail_form:
+    models:
+      contact_form: Fractal Soft - Your site contact form
+    attributes:
+      contact_form:
+        email: E-mail
+        name: Name
+        message: Sent message
+    request:
+      title: Technical information about the user
+      remote_ip: IP Address
+      user_agent: Browser
