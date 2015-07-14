@@ -22,3 +22,6 @@
 # Igrone uplaods
 /public/uploads/*
 !/public/uploads/.keep
+
+# Ignore environments
+/.env
