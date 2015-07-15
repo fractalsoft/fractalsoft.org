@@ -26,6 +26,10 @@ en:
         <<: *header
   home:
     index:
+      head:
+        title: 'Fractal Soft - Ruby on Rails & JavaScript developers for hire'
+        description: 'Fractal Soft is a team of professional web & mobile developers. We will help you build an application using Ruby on Rails & JavaScript. Hire us!'
+        keywords: 'Ruby on Rails, EmberJS, web applications, mobile applications'
       header_html: Creating <strong>web</strong> and <strong>mobile</strong> applications is our <strong>passion</strong>
       title:
         in_touch: Let's be in touch

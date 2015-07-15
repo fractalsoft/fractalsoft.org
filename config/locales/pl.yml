@@ -1,4 +1,5 @@
 pl:
+  company: Fractal Soft
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
@@ -26,6 +27,10 @@ pl:
         <<: *header
   home:
     index:
+      head:
+        title: 'Fractal Soft - Programiści Ruby on Rails & JavaScript do wynajęcia'
+        description: 'Fractal Soft to zespoł programistów webowych i mobilnych. Pomożemy Ci zbudować aplikację w Ruby on Rails & JavaScript. Sprawdź nas!'
+        keywords: 'Ruby on Rails, EmberJS, aplikacje internetowe i mobilne'
       header_html: Aplikacje <strong>internetowe</strong> i <strong>mobilne</strong> to nasza pasja
       title:
         in_touch: Bądźmy w kontakcie
