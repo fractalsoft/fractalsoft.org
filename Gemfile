@@ -18,6 +18,7 @@ gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
+gem 'normalize-rails'
 gem 'puma'
 gem 'rails-i18n'
 gem 'twitter-bootstrap-rails'
