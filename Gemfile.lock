@@ -145,6 +145,7 @@ GEM
     highline (1.6.21)
     html5shiv-js-rails (3.7.2.1)
       railties (~> 4.0, < 5.0)
+    http_accept_language (2.0.5)
     i18n (0.7.0)
     ice_nine (0.11.1)
     jbuilder (2.3.1)
@@ -375,6 +376,7 @@ DEPENDENCIES
   draper
   foreman
   html5shiv-js-rails
+  http_accept_language
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener

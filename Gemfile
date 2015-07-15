@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'draper'
 gem 'foreman'
 gem 'html5shiv-js-rails'
+gem 'http_accept_language'
 gem 'mail_form'
 gem 'mandrill-api'
 gem 'mandrill_mailer'
@@ -29,6 +30,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
+  # gem 'capistrano-rails'
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'quiet_safari'
@@ -67,9 +69,6 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
