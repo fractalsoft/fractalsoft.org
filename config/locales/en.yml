@@ -1,4 +1,13 @@
 en:
+  meta:
+    site: Fractal Soft
+    title: 'Ruby on Rails & JavaScript developers for hire'
+    description: 'Fractal Soft is a team of professional web & mobile developers. We will help you build an application using Ruby on Rails & JavaScript. Hire us!'
+    keywords: 'Ruby on Rails, EmberJS, JavaScript, web applications, mobile applications'
+    publisher: https://plus.google.com/u/0/b/106386969948370069442/106386969948370069442
+    twitter:
+      card: summary
+      site: '@fractal_soft'
   contact_forms:
     contact:
       contact_with_us: Contact with us
@@ -11,6 +20,10 @@ en:
       message: What we can do for you?
       name: Your name
       send: send
+    new:
+      contact: &contact
+        header: Want to get in touch with us?
+        description: 'No matter if you have a question or just want to  say hello, we would love to hear from you.'
   layouts:
     shared:
       header: &header
@@ -49,5 +62,16 @@ en:
       team:
         meet_us: Meet our team!
       contact:
-        header: Want to get in touch with us?
-        description: No matter if you have a question or just want to  say hello, we would love to hear from you.
+        <<: *contact
+  mail_form:
+    models:
+      contact_form: Fractal Soft - Your site contact form
+    attributes:
+      contact_form:
+        email: E-mail
+        name: Name
+        message: Sent message
+    request:
+      title: Technical information about the user
+      remote_ip: IP Address
+      user_agent: Browser
