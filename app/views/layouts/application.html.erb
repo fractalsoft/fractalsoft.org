@@ -3,23 +3,22 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <%= display_meta_tags(default_meta_tags) %>
+  <meta name='robots' content='index,follow' />
+  <meta name='revisit-after' content='1 days' />
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-  <link rel='apple-touch-icon-precomposed' sizes='144x144' href='touch-icon-ipad-hi-res.png'>
-  <link rel='apple-touch-icon-precomposed' sizes='114x114' href='touch-icon-iphone4.png'>
-  <link rel='apple-touch-icon-precomposed' sizes='72x72' href='touch-icon-ipad.png'>
-  <link rel='apple-touch-icon-precomposed' href='touch-icon-iphone.png'>
+  <!-- <base href='http://fractalsoft.org/' /> -->
   <%= favicon_link_tag 'favicon.ico' %>
-  <title>Fractal Soft</title>
-  <link rel='stylesheet' type='text/css' href='http://fractalsoft.org/reset.css' />
-  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'></script>
-  <%= csrf_meta_tags %>
   <%= render 'layouts/shared/analytics' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'html5shiv' %>
+    <%= javascript_include_tag 'respond' %>
+  <![endif]-->
+  <%= csrf_meta_tags %>
 </head>
-<body class=<%= yield(:body_class) %>>
+<body class='<%= yield(:body_class) %>'>
 <%= render 'layouts/shared/header' %>
 <%= yield %>
 <%= render 'layouts/shared/footer' %>

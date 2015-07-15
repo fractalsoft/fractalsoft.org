@@ -1,4 +1,13 @@
 pl:
+  meta:
+    site: Fractal Soft
+    title: 'Programiści Ruby on Rails & JavaScript do wynajęcia'
+    description: 'Fractal Soft to zespoł programistów webowych i mobilnych. Pomożemy Ci zbudować aplikację w Ruby on Rails & JavaScript. Sprawdź nas!'
+    keywords: 'Ruby on Rails, EmberJS, JavaScript, aplikacje internetowe i mobilne'
+    publisher: https://plus.google.com/u/0/b/106386969948370069442/106386969948370069442
+    twitter:
+      card: summary
+      site: '@fractal_soft'
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
@@ -11,6 +20,10 @@ pl:
       message: Jak możemy Ci pomóc?
       name: Twoje imię
       send: wyślij
+    new:
+      contact: &contact
+        header: Chcesz się z nami skontaktować?
+        description: 'Nie zależnie czy masz do nas pytanie czy chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.'
   layouts:
     shared:
       header: &header
@@ -49,5 +62,16 @@ pl:
       team:
         meet_us: Poznaj nasz zespół!
       contact:
-        header: Chcesz się z nami zkontaktować?
-        description: Nie zależnie czy masz do nas pytanie czy chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
+        <<: *contact
+  mail_form:
+    models:
+      contact_form: Fractal Soft - Formularz kontaktowy z Twojej strony
+    attributes:
+      contact_form:
+        email: E-mail
+        name: Imię
+        message: Wysłana wiadomość
+    request:
+      title: Informacje techniczne o użytkowniku
+      remote_ip: Adres IP
+      user_agent: Przeglądarka
