@@ -9,15 +9,17 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'rails-i18n'
-gem 'puma'
-gem 'foreman'
-gem 'mail_form'
+
 gem 'carrierwave'
 gem 'draper'
-gem 'mini_magick', platform: :ruby
+gem 'foreman'
+gem 'mail_form'
 gem 'mandrill-api'
 gem 'mandrill_mailer'
+gem 'meta-tags'
+gem 'mini_magick', platform: :ruby
+gem 'puma'
+gem 'rails-i18n'
 
 group :development do
   gem 'better_errors'
@@ -47,8 +49,8 @@ group :test do
 end
 
 group :production do
-  gem 'rails_12factor'
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password

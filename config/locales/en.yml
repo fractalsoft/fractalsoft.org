@@ -1,4 +1,13 @@
 en:
+  meta:
+    site: Fractal Soft
+    title: 'Ruby on Rails & JavaScript developers for hire'
+    description: 'Fractal Soft is a team of professional web & mobile developers. We will help you build an application using Ruby on Rails & JavaScript. Hire us!'
+    keywords: 'Ruby on Rails, EmberJS, JavaScript, web applications, mobile applications'
+    publisher: https://plus.google.com/u/0/b/106386969948370069442/106386969948370069442
+    twitter:
+      card: summary
+      site: '@fractal_soft'
   contact_forms:
     contact:
       contact_with_us: Contact with us
@@ -26,10 +35,6 @@ en:
         <<: *header
   home:
     index:
-      head:
-        title: 'Fractal Soft - Ruby on Rails & JavaScript developers for hire'
-        description: 'Fractal Soft is a team of professional web & mobile developers. We will help you build an application using Ruby on Rails & JavaScript. Hire us!'
-        keywords: 'Ruby on Rails, EmberJS, web applications, mobile applications'
       header_html: Creating <strong>web</strong> and <strong>mobile</strong> applications is our <strong>passion</strong>
       title:
         in_touch: Let's be in touch
