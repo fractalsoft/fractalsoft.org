@@ -20,6 +20,7 @@ gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
 gem 'puma'
 gem 'rails-i18n'
+gem 'twitter-bootstrap-rails'
 
 group :development do
   gem 'better_errors'
@@ -27,6 +28,7 @@ group :development do
   gem 'brakeman', require: false
   gem 'letter_opener'
   gem 'quiet_assets'
+  gem 'quiet_safari'
   gem 'rails_best_practices'
   gem 'rubocop'
   gem 'rubycritic', require: false
@@ -51,6 +53,10 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
 end
 
 # Use ActiveModel has_secure_password
