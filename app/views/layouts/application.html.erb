@@ -2,15 +2,16 @@
 <html>
 <head>
   <meta charset='utf-8'>
+  <title><%= yield(:title) %></title>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='description' content='<%= yield(:description) %>'>
+  <meta name='keywords' content='<%= yield(:keywords) %>'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-
   <link rel='apple-touch-icon-precomposed' sizes='144x144' href='touch-icon-ipad-hi-res.png'>
   <link rel='apple-touch-icon-precomposed' sizes='114x114' href='touch-icon-iphone4.png'>
   <link rel='apple-touch-icon-precomposed' sizes='72x72' href='touch-icon-ipad.png'>
   <link rel='apple-touch-icon-precomposed' href='touch-icon-iphone.png'>
   <%= favicon_link_tag 'favicon.ico' %>
-  <title>Fractal Soft</title>
   <link rel='stylesheet' type='text/css' href='http://fractalsoft.org/reset.css' />
   <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
