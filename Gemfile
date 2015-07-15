@@ -22,6 +22,7 @@ gem 'mini_magick', platform: :ruby
 gem 'normalize-rails'
 gem 'puma'
 gem 'rails-i18n'
+gem 'respond-js-rails'
 gem 'twitter-bootstrap-rails'
 
 group :development do
