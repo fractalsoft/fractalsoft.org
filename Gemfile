@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.2.2'
 
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -9,29 +9,44 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'rails-i18n'
-gem 'puma'
-gem 'foreman'
-gem 'mail_form'
+
 gem 'carrierwave'
 gem 'draper'
+gem 'foreman'
+gem 'html5shiv-js-rails'
+gem 'http_accept_language'
+gem 'mail_form'
+gem 'mandrill-api'
+gem 'mandrill_mailer'
+gem 'meta-tags'
+gem 'mini_magick', platform: :ruby
+gem 'normalize-rails'
+gem 'puma'
+gem 'rails-i18n'
+gem 'respond-js-rails'
+gem 'twitter-bootstrap-rails'
 
 group :development do
-  gem 'quiet_assets'
-  gem 'rails_best_practices'
-  gem 'rubocop'
-  gem 'sandi_meter'
-  gem 'brakeman'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'metric_fu'
+  gem 'brakeman', require: false
+  # gem 'capistrano-rails'
+  gem 'letter_opener'
+  gem 'quiet_assets'
+  gem 'quiet_safari'
+  gem 'rails_best_practices'
+  gem 'rubocop'
+  gem 'rubycritic', require: false
+  gem 'sandi_meter'
 end
 
 group :development, :test do
   gem 'byebug'
+  gem 'dotenv-rails'
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.3'
   gem 'spring'
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 3.0.2'
   gem 'web-console', '~> 2.0'
 end
 
@@ -41,8 +56,12 @@ group :test do
 end
 
 group :production do
-  gem 'rails_12factor'
   gem 'pg'
+  gem 'rails_12factor'
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
 end
 
 # Use ActiveModel has_secure_password
@@ -51,12 +70,5 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-platform :ruby do
-  gem 'mini_magick'
-end
