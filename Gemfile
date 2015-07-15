@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'draper'
 gem 'foreman'
+gem 'html5shiv-js-rails'
 gem 'mail_form'
 gem 'mandrill-api'
 gem 'mandrill_mailer'
