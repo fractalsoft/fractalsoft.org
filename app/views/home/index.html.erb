@@ -1,5 +1,9 @@
-<% content_for :body_class, 'home' %>
-
+<%
+content_for :title, t('.head.title')
+content_for :description, t('.head.description')
+content_for :keywords, t('.head.keywords')
+content_for :body_class, 'home'
+%>
 <div class='container-fluid'>
   <div class='jumbotron'>
     <div class='container'>
