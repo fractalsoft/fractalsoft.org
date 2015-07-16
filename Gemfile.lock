@@ -209,6 +209,8 @@ GEM
     quiet_safari (1.0.0)
       railties (>= 3.1.0)
     rack (1.6.4)
+    rack-attack (4.3.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.3)
@@ -394,6 +396,7 @@ DEPENDENCIES
   puma
   quiet_assets
   quiet_safari
+  rack-attack
   rails (= 4.2.3)
   rails-assets-bootstrap!
   rails-i18n
