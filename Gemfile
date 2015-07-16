@@ -26,6 +26,7 @@ gem 'puma'
 gem 'rails-i18n'
 gem 'respond-js-rails'
 gem 'twitter-bootstrap-rails'
+gem 'rack-attack'
 
 group :development do
   gem 'better_errors'
