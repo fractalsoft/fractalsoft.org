@@ -1,0 +1,3 @@
+/admin
+/translate_c
+/wp-login
