@@ -16,6 +16,8 @@ GEM
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionpack-page_caching (1.0.2)
+      actionpack (>= 4.0.0, < 5)
     actionview (4.2.3)
       activesupport (= 4.2.3)
       builder (~> 3.1)
@@ -207,6 +209,8 @@ GEM
     quiet_safari (1.0.0)
       railties (>= 3.1.0)
     rack (1.6.4)
+    rack-attack (4.3.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.3)
@@ -364,6 +368,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-page_caching
   better_errors
   binding_of_caller
   brakeman
@@ -391,6 +396,7 @@ DEPENDENCIES
   puma
   quiet_assets
   quiet_safari
+  rack-attack
   rails (= 4.2.3)
   rails-assets-bootstrap!
   rails-i18n

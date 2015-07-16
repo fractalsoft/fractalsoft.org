@@ -20,8 +20,8 @@
         <li><%#= link_to t('.projects'), projects_path %></li>
         <li><%#= link_to t('.team'), people_path %></li>
         <li><%#= link_to t('.contact'), new_contact_form_path %></li>
-        <li><%= link_to 'EN', sessions_path(locale: :en), method: :put %></li>
-        <li><%= link_to 'PL', sessions_path(locale: :pl), method: :put %></li>
+        <li><%= link_to 'EN', locale_path(:en), method: :put %></li>
+        <li><%= link_to 'PL', locale_path(:pl), method: :put %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
