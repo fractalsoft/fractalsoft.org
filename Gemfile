@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'actionpack-page_caching'
 gem 'carrierwave'
 gem 'draper'
 gem 'foreman'
@@ -25,6 +26,7 @@ gem 'puma'
 gem 'rails-i18n'
 gem 'respond-js-rails'
 gem 'twitter-bootstrap-rails'
+gem 'rack-attack'
 
 group :development do
   gem 'better_errors'
