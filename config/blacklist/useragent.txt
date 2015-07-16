@@ -1,6 +1,7 @@
 -
 Baidu
 Naver
+NerdyBot
 Sogou
 Yandex
 Youdao
