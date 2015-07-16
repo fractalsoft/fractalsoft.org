@@ -1,0 +1,7 @@
+<% I18n.available_locales.each do |language| %>
+<li>
+  <%= link_to_unless_current(locale_names[language.to_s], locale: language) do |text| %>
+    <%= content_tag(:span, text) %>
+  <% end %>
+</li>
+<% end %>
