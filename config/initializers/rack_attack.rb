@@ -18,4 +18,8 @@ class Rack::Attack
   blacklist('block bad User Agents') do |request|
     request.user_agent =~ user_agents_regexp
   end
+
+  blacklist('block unknown User Agents') do |request|
+    request.user_agent == '-'
+  end
 end
