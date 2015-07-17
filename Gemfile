@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'actionpack-page_caching'
 gem 'carrierwave'
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
 gem 'draper'
 gem 'foreman'
 gem 'html5shiv-js-rails'
@@ -23,10 +24,10 @@ gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
 gem 'normalize-rails'
 gem 'puma'
+gem 'rack-attack'
 gem 'rails-i18n'
 gem 'respond-js-rails'
 gem 'twitter-bootstrap-rails'
-gem 'rack-attack'
 
 group :development do
   gem 'better_errors'
