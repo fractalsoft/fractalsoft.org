@@ -40,7 +40,7 @@ class PersonDecorator < Draper::Decorator
   def given_li(name, link)
     content_tag :li do
       send link, object.send(name) do
-        image_tag "home/#{name}_icon.png"
+        image_tag "icons/#{name}.png"
       end
     end
   end
