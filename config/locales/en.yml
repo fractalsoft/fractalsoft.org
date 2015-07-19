@@ -1,4 +1,5 @@
 en:
+  lang: en-US
   language: english
   meta:
     site: Fractal Soft
@@ -24,7 +25,7 @@ en:
     new:
       contact: &contact
         header: Want to get in touch with us?
-        description: 'No matter if you have a question or just want to  say hello, we would love to hear from you.'
+        description: 'No matter if you have a question or just want to say hello, we would love to hear from you.'
   layouts:
     shared:
       header: &header
