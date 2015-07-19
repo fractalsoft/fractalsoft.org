@@ -1,0 +1,22 @@
+/* TEAM */
+
+  Name: Agnieszka Matysek
+  Site: http://github.com/womanonrails
+  Twitter: @womanonrails
+  Location: Gliwice, PL
+
+  Name: Alek Malaszkiewicz
+  Site: http://github.com/torrocus
+  Twitter: @torrocus
+  Location: Cieszyn, PL
+
+/* THANKS */
+
+  Name: <name>
+
+/* SITE */
+
+  Last update: 2015/07/17
+  Language: English / Polish
+  Standards: HTML5, CSS3
+  Source: https://github.com/fractalsoft/fractalsoft.org
