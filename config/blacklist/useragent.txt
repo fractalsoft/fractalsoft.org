@@ -1,7 +1,10 @@
--
+360Spider
 Baidu
+Go 1.1 package http
+Haosou
 Naver
 NerdyBot
 Sogou
+YaBrowser
 Yandex
 Youdao

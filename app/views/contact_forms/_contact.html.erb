@@ -16,23 +16,23 @@
   <h4><%= t('.find_us') %></h4>
   <ul class='list-inline'>
     <li>
-      <%= link_to 'https://www.facebook.com/fractalsoft' do %>
-        <%= image_tag 'icons/facebook.png', alt: 'Facebook', title: 'Like us' %>
+      <%= link_to 'https://www.facebook.com/fractalsoft', rel: 'nofollow', title: 'Like us' do %>
+        <button class='icons-facebook'></button>
       <% end %>
     </li>
     <li>
-      <%= link_to 'https://twitter.com/fractal_soft' do %>
-        <%= image_tag 'icons/twitter.png', alt: 'Twitter', title: 'Follow us' %>
+      <%= link_to 'https://twitter.com/fractal_soft', rel: 'nofollow', title: 'Follow us' do %>
+        <button class='icons-twitter'></button>
       <% end %>
     </li>
     <li>
-      <%= link_to 'https://plus.google.com/106386969948370069442' do %>
-        <%= image_tag 'icons/google.png', alt: 'Google+', title: 'Follow us' %>
+      <%= link_to 'https://plus.google.com/106386969948370069442', rel: 'nofollow', title: 'Follow us' do %>
+        <button class='icons-google'></button>
       <% end %>
     </li>
     <li>
-      <%= link_to 'https://github.com/fractalsoft' do %>
-        <%= image_tag 'icons/github.png', alt: 'Github', title: 'Star us' %>
+      <%= link_to 'https://github.com/fractalsoft', rel: 'nofollow', title: 'Star us' do %>
+        <button class='icons-github'></button>
       <% end %>
     </li>
   </ul>
