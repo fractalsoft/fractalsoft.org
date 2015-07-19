@@ -6,5 +6,6 @@ class HomeController < ApplicationController
   def index
     @contact_form = ContactForm.new
     @people = Person.all
+    expires_in 30.minutes, public: true
   end
 end
