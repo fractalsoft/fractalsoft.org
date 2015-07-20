@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /assets/icons/*
+Disallow: /assets/team/*
 
 User-Agent: AhrefsBot
 Crawl-Delay: 86400
