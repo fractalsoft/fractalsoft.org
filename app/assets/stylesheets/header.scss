@@ -3,6 +3,11 @@
 
 .header {
   @include navbar($header-background-color, $header-text-color, $hover-header-text-color);
+
+  .container {
+    margin-bottom: 15px;
+  }
+
   .navbar-nav>li>span {
     display: block;
     padding: 15px;
