@@ -19,5 +19,4 @@ User-agent: Yeti
 User-agent: YoudaoBot
 User-agent: moget
 User-agent: ichiro
-User-agent:
 Disallow: /
