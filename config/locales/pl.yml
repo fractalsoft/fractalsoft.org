@@ -30,6 +30,7 @@ pl:
     shared:
       header: &header
         contact: Kontakt
+        language: Język
         projects: Projekty
         team: Zaspół
         toggle_navigation: Nawigacja

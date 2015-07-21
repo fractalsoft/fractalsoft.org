@@ -2,11 +2,8 @@
 @import 'icons/*.png';
 @include all-icons-sprites;
 
-button {
-  background: transparent;
-  border: none !important;
+span.icon {
   display: block;
-  font-size: 0;
   height: 32px;
   width: 32px;
 }

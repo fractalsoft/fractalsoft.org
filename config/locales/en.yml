@@ -30,6 +30,7 @@ en:
     shared:
       header: &header
         contact: Contact
+        language: Language
         projects: Projects
         team: Team
         toggle_navigation: Toggle navigation
