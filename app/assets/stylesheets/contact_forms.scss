@@ -23,6 +23,12 @@ body.home, body.contact-forms {
     p { margin-bottom: 70px; }
     h2, p { text-align: center; }
 
+    .map-display-none {
+      visibility: hidden;
+      position: absolute;
+      left: 15px;
+    }
+
     .btn.btn-default {
       border-width: 1px;
       width: 212px;
