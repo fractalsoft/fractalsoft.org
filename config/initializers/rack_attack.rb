@@ -22,4 +22,14 @@ class Rack::Attack
   blacklist('block unknown User Agents') do |request|
     request.user_agent == '-'
   end
+
+  throttle('req/ip', limit: 300, period: 5.minutes) do |req|
+    req.ip # unless req.path.starts_with?('/assets')
+  end
+end
+
+Rack::Attack.blacklisted_response = lambda do |env|
+  # Using 503 because it may make attacker think that they have successfully
+  # DOSed the site. Rack::Attack returns 403 for blacklists by default
+  [503, {}, ['Blocked']]
 end
