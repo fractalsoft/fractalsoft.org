@@ -1,9 +1,11 @@
 User-agent: *
 Allow: /
 Disallow: /assets/icons/*
+Disallow: /assets/home/*
 Disallow: /assets/team/*
 
 User-Agent: AhrefsBot
+User-Agent: MJ12bot
 Crawl-Delay: 86400
 
 User-agent: 360Spider
