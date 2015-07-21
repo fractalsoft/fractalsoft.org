@@ -8,8 +8,14 @@
     margin-bottom: 15px;
   }
 
-  .navbar-nav>li>span {
+  .dropdown-menu>li>span {
     display: block;
-    padding: 15px;
+    padding: 3px 20px;
+  }
+
+  @media (max-width: 767px) {
+    .dropdown-menu>li>span {
+      padding: 5px 15px 5px 25px;
+    }
   }
 }
