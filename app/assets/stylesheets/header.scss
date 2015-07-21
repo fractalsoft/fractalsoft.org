@@ -3,8 +3,19 @@
 
 .header {
   @include navbar($header-background-color, $header-text-color, $hover-header-text-color);
-  .navbar-nav>li>span {
+
+  .container {
+    margin-bottom: 15px;
+  }
+
+  .dropdown-menu>li>span {
     display: block;
-    padding: 15px;
+    padding: 3px 20px;
+  }
+
+  @media (max-width: 767px) {
+    .dropdown-menu>li>span {
+      padding: 5px 15px 5px 25px;
+    }
   }
 }
