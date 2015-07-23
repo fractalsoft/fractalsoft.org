@@ -9,7 +9,9 @@
         <span class='icon-bar'></span>
       </button>
       <%= link_to root_path, class: 'navbar-brand' do %>
-        <%= image_tag 'home/logo.png', class: 'visible-xs' %>
+        <div class='visible-xs'>
+          <%= render 'layouts/shared/logo' %>
+        </div>
         <%= image_tag 'home/logo_big.png', class: 'hidden-xs' %>
       <% end %>
     </div>
