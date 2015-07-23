@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
   private
 
   def default_url_options(options = {})
-    language = I18n.locale
-    options.merge(locale: language) unless I18n.default_locale == language
+    locale = I18n.locale
+    options.merge(locale: locale) unless I18n.default_locale == locale
     options
   end
 

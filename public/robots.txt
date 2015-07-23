@@ -8,6 +8,10 @@ User-Agent: AhrefsBot
 User-Agent: MJ12bot
 Crawl-Delay: 86400
 
+# Please do not archive us
+User-agent: Archive.org
+Disallow: /
+
 User-agent: 360Spider
 User-agent: Baiduspider
 User-agent: baiduspider
