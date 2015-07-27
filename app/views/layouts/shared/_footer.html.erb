@@ -1,10 +1,9 @@
-<nav class='footer navbar navbar-default' role='navigation'>
+<nav class='footer navbar navbar-default'>
   <div class='container'>
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class='navbar-header'>
       <%= link_to root_path, class: 'navbar-brand' do %>
         <div class='hidden-xs'>
-          <%= render 'layouts/shared/logo' %>
+          <%= render 'layouts/shared/logo', id: 'fractalsoft-logo-footer' %>
         </div>
         <%= image_tag 'home/logo_big_white.png', class: 'visible-xs' %>
       <% end %>
