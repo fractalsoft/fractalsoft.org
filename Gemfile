@@ -27,6 +27,7 @@ gem 'puma'
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'respond-js-rails'
+gem 'simple_form'
 gem 'twitter-bootstrap-rails'
 
 group :development do
