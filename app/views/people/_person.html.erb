@@ -1,0 +1,16 @@
+<div class='col-md-3 col-sm-6 col-xs-12'>
+  <div class='thumbnail'>
+    <%= image_tag person.image %>
+    <div class='caption text-center'>
+      <h3><%= person.fullname %></h3>
+      <h4><%= person.position %></h4>
+      <ul class='list-inline'>
+        <%= person.github %>
+        <%= person.blog %>
+        <%= person.twitter %>
+        <%= person.facebook %>
+      </ul>
+      <p><%= raw person.website %></p>
+    </div>
+  </div>
+</div>
