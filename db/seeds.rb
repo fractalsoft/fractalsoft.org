@@ -4,10 +4,10 @@ YAML.load_file('db/team.yml')['team'].each do |array|
     description: array['description'],
     position: array['position'],
     image: array['image'],
-    website: array['website'],
-    facebook: array['facebook'],
-    twitter: array['twitter'],
     github: array['github'],
+    blog: array['blog'],
+    twitter: array['twitter'],
+    facebook: array['facebook'],
     email: array['email']
   )
 end

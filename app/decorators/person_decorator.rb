@@ -20,6 +20,10 @@ class PersonDecorator < Draper::Decorator
     given_icon :twitter
   end
 
+  def blog
+    given_icon :blog
+  end
+
   def website
     given :website do
       link_to object.website, object.website
@@ -40,7 +44,7 @@ class PersonDecorator < Draper::Decorator
   def given_li(name, link)
     content_tag :li do
       send link, object.send(name) do
-        image_tag "icons/#{name}.png"
+        content_tag(:span, nil, class: "icon icons-#{name}")
       end
     end
   end
