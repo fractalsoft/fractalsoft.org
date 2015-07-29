@@ -1,5 +1,4 @@
 pl:
-  lang: pl-PL
   language: polski
   meta:
     site: Fractal Soft
@@ -32,7 +31,7 @@ pl:
         contact: Kontakt
         language: Język
         projects: Projekty
-        team: Zaspół
+        team: Zespół
         toggle_navigation: Nawigacja
       footer:
         <<: *header
