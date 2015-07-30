@@ -3,9 +3,38 @@
 
 body.people {
   .team {
+    margin-top: -250px;
     background-color: $light-background-color;
-    margin-top: -20px;
   }
+}
+
+body.person {
+  .business-card {
+    margin-top: -250px;
+    padding: 50px;
+    background-color: $light-background-color;
+
+    .position {
+      font-size: 18pt;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .descritpion {
+      h4 {
+        margin-top: 30px;
+      }
+      p {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.background {
+  background-color: $red-background-color;
+  margin-top: -20px;
+  height: 350px;
 }
 
 .team {
@@ -18,16 +47,18 @@ body.people {
     text-transform: uppercase;
   }
 
-  .thumbnail {
+  a {
+    text-decoration: none;
     color: $grey-text-color;
+
+    &:hover { color: $red-background-color; }
+  }
+
+  .thumbnail {
     padding-bottom: 0;
     padding: 30px;
 
-    &:hover {
-      border-color: $red-background-color;
-      color: $red-background-color;
-      text-decoration: none;
-    }
+    &:hover { border-color: $red-background-color; }
 
     h3 {
       font-size: 12pt;

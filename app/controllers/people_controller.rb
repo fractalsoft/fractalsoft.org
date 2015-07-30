@@ -1,8 +1,10 @@
 # People controller
 class PeopleController < ApplicationController
-  # GET /people
-  # GET /people.json
   def index
     @people = Person.all.decorate.shuffle
+  end
+
+  def show
+    @person = Person.find(params[:id]).decorate
   end
 end

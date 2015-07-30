@@ -1,14 +1,16 @@
 <div class='col-md-3 col-sm-6 col-xs-12'>
-  <div class='thumbnail'>
-    <%= image_tag person.image %>
-    <h3><%= person.fullname %></h3>
-    <p><strong><%= person.position %></strong></p>
-    <p class='text-justify'><%= person.introduction %></p>
-    <ul class='social list-inline'>
-      <%= person.github %>
-      <%= person.blog %>
-      <%= person.twitter %>
-      <%= person.facebook %>
-    </ul>
-  </div>
+  <%= link_to person_path(id: person) do %>
+    <div class='thumbnail'>
+      <%= image_tag person.image %>
+      <h3><%= person.fullname %></h3>
+      <p><strong><%= person.position %></strong></p>
+      <p class='text-justify'><%= person.introduction %></p>
+      <ul class='social list-inline'>
+        <%= person.github %>
+        <%= person.blog %>
+        <%= person.twitter %>
+        <%= person.facebook %>
+      </ul>
+    </div>
+  <% end %>
 </div>
