@@ -8,6 +8,9 @@ team:
     twitter: https://twitter.com/womanonrails
     facebook: https://www.facebook.com/agnieszka.matysek.3
     email: do-not-spam@fractalsoft.org
+    introduction:
+      en: 'English'
+      pl: 'Polish'
 
   - fullname: Urszula Hołodniak
     description: Ruby on Rails developer
