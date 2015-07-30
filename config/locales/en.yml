@@ -61,8 +61,6 @@ en:
           one: "HTML standard, which simplifies developers work and provides many new features. Such as audio, video, canvas drawing or geolocalization. It makes our projects much more interesting."
           two: "Modern framework to build fully functional web applications. Fast and flexible software creation is Ruby on Rails advantage. It allows to adjust to market changes in a simple way. And in the same time provides more satisfaction to our clients."
           three_html: "Software where we have open and free access to source for all users. It provides constant improvement and spread of software. This has a huge impact on application development and fixing bugs."
-      team:
-        meet_us: Meet our team!
       contact:
         <<: *contact
   mail_form:
@@ -77,3 +75,7 @@ en:
       title: Technical information about the user
       remote_ip: IP Address
       user_agent: Browser
+  people:
+    team:
+      team:
+        meet_us: Meet our team!

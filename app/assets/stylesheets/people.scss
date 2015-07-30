@@ -1,74 +1,34 @@
 @import 'variables';
+@import 'mixins';
 
-@media(max-width: 768px) {
-  body.team {
-    .team-members {
-      .row p {
-        margin-top: 40px;
-      }
-
-      .list-inline {
-        margin-top: 20px;
-      }
-
-      .media-heading {
-        font-size: 18pt;
-      }
-    }
-  }
-}
-
-body.team {
-  color: $grey-text-color;
+.team {
+  padding-bottom: 100px;
+  text-align: center;
 
   h2 {
-    margin-top: 70px;
-    margin-bottom: 100px;
-    text-transform: uppercase;
     font-weight: 700;
-    text-align: center;
+    @include vertical-padding(60px);
+    text-transform: uppercase;
   }
 
-  .container.team {
-    margin-top: -20px;
-    background-color: $light-background-color;
-  }
+  .thumbnail {
+    color: $grey-text-color;
+    padding-bottom: 0;
+    padding: 30px;
 
-  .team-members {
-    margin-bottom: 70px;
-
-    .media-heading {
-      margin-top: 10px;
-      margin-bottom: 30px;
-      font-weight: 700;
-
-      span {
-        color: $red-text-color;
-        font-weight: 700;
-      }
+    &:hover {
+      border-color: $red-background-color;
+      color: $red-background-color;
+      text-decoration: none;
     }
 
-    .row {
-      line-height: 24px;
-      margin-bottom: 30px;
-    }
-
-    .media-text-right {
-      text-align: right;
-    }
-
-    .media-footer {
-      margin-top: 40px;
-
-      .website a {
-        color: $grey-text-color;
-        font-weight: 700;
-        text-decoration: underline;
-      }
+    h3 {
+      font-size: 12pt;
+      margin: 0;
+      @include vertical-padding(25px);
     }
   }
 
-  .footer {
-    margin-top: 0;
-  }
+  .btn { margin-top: 50px; }
+  .social { margin-top: 40px; }
 }
