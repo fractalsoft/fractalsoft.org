@@ -1,12 +1,2 @@
-<% content_for :body_class, 'team' %>
-
-<div class='container team'>
-  <h2>Meet our team!</h2>
-  <div class='row team-members'>
-    <div class='col-md-10 col-md-offset-1'>
-    <div class='row'>
-      <%= render @people %>
-    </div>
-    </div>
-  </div>
-</div>
+<% content_for :body_class, 'people' %>
+<%= render 'team', people: @people %>
