@@ -1,0 +1,47 @@
+<% content_for :body_class, 'person' %>
+
+<div class='background container-fluid'></div>
+<div class='business-card container'>
+  <div class='row'>
+    <div class='col-md-3 col-sm-6 col-xs-12'>
+      <div class='thumbnail'>
+        <%= image_tag @person.image %>
+      </div>
+    </div>
+    <div class='col-md-6 col-sm-6 col-xs-12'>
+      <h1><%= @person.fullname %></h1>
+      <p class='position'><strang><%= @person.position %></strang></p>
+      <p><%= @person.introduction %></p>
+    </div>
+    <div class='col-md-3 col-sm-6 col-xs-12'>
+      <ul class='social list-inline'>
+        <%= @person.github %>
+        <%= @person.blog %>
+        <%= @person.twitter %>
+        <%= @person.facebook %>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class='descritpion row'>
+    <div class="col-md-3">
+      <h2>hitdea <br><small>based on microservices</small></h2>
+    </div>
+    <div class='col-md-9'>
+      <h4>Collaborative web-based system to idea management. Support for individual and team
+creativity. Based on methodology CPS 6.1 (Creative Problem Solving).</h4>
+      <p>
+        <strong>Major contributions</strong>
+        <ul>
+          <li>Backend architecture design based on microservices</li>
+          <li>Database design</li>
+          <li>Build API based on JSON API</li>
+          <li>Backend development in Rails 4.2</li>
+          <li>Frontend development in Ember.js</li>
+          <li>API integration</li>
+        </ul>
+      </p>
+      <hr>
+    </div>
+  </div>
+</div>
