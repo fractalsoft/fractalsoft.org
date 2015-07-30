@@ -3,11 +3,10 @@ team:
     description: Ruby on Rails developer
     position: developer
     image: team/amatysek.jpg
-    github: https://github.com/womanonrails
     blog: http://womanonrails.com
-    twitter: https://twitter.com/womanonrails
-    facebook: https://www.facebook.com/agnieszka.matysek.3
-    email: do-not-spam@fractalsoft.org
+    facebook: agnieszka.matysek.3
+    github: womanonrails
+    twitter: womanonrails
     introduction:
       en: 'English'
       pl: 'Polish'
@@ -16,25 +15,21 @@ team:
     description: Ruby on Rails developer
     position: developer
     image: team/uholodniak.jpg
-    github: https://github.com/shad8
-    twitter: https://twitter.com/8shad8
-    facebook:
-    email: do-not-spam@fractalsoft.org
+    github: shad8
+    twitter: 8shad8
 
   - fullname: Grzegorz Lisowski
     description: Ruby on Rails developer
     position: developer
     image: team/glisowski.jpg
-    github: https://github.com/noplisu
-    twitter: https://twitter.com/noplisu
-    facebook: https://www.facebook.com/lisux
-    email: do-not-spam@fractalsoft.org
+    facebook: lisux
+    github: noplisu
+    twitter: noplisu
 
   - fullname: Aleksander Małaszkiewicz
     description: Ruby on Rails developer
     position: developer
     image: team/amalaszkiewicz.jpg
-    github: https://github.com/torrocus
-    twitter: https://twitter.com/torrocus
-    facebook: https://www.facebook.com/torrocus
-    email: do-not-spam@fractalsoft.org
+    facebook: torrocus
+    github: torrocus
+    twitter: torrocus
