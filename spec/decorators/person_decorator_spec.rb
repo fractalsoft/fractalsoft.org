@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PersonDecorator, type: :decorator do
   describe '#email' do
-    let(:email) { 'fractalsoft@example.com' }
+    let(:email) { 'do-not-spam@fractalsoft.org' }
 
     it 'shows email if exist' do
       person = Person.create(email: email)
@@ -17,7 +17,7 @@ RSpec.describe PersonDecorator, type: :decorator do
   end
 
   describe '#facebook' do
-    let(:facebook) { 'https://www.facebook.com/fractalsoft' }
+    let(:facebook) { 'fractalsoft' }
 
     it 'shows facebook if exist' do
       person = Person.create(facebook: facebook)
@@ -32,7 +32,7 @@ RSpec.describe PersonDecorator, type: :decorator do
   end
 
   describe '#github' do
-    let(:github) { 'https://www.github.com/fractalsoft' }
+    let(:github) { 'fractalsoft' }
 
     it 'shows github if exist' do
       person = Person.create(github: github)
@@ -47,7 +47,7 @@ RSpec.describe PersonDecorator, type: :decorator do
   end
 
   describe '#twitter' do
-    let(:twitter) { 'https://twitter.com/fractal_soft' }
+    let(:twitter) { 'fractal_soft' }
 
     it 'shows twitter if exist' do
       person = Person.create(twitter: twitter)
