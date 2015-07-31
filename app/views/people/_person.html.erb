@@ -3,8 +3,7 @@
     <div class='thumbnail'>
       <%= image_tag person.image %>
       <h3><%= person.fullname %></h3>
-      <p><strong><%= person.position %></strong></p>
-      <p class='text-justify'><%= person.introduction %></p>
+      <p class='text-center'><%= raw person.introduction %></p>
       <ul class='social list-inline'>
         <%= person.github %>
         <%= person.blog %>
