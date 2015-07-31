@@ -13,8 +13,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'actionpack-page_caching'
 gem 'carrierwave'
 gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+gem 'diacritics'
 gem 'draper'
 gem 'foreman'
+gem 'friendly_id'
+gem 'globalize'
 gem 'html5shiv-js-rails'
 gem 'http_accept_language'
 gem 'mail_form'
@@ -76,5 +79,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'globalize'
