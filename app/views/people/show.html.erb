@@ -11,7 +11,7 @@
     <div class='col-md-6 col-sm-6 col-xs-12'>
       <h1><%= @person.fullname %></h1>
       <p class='position'><strang><%= @person.position %></strang></p>
-      <p class='text-justify'><%= @person.introduction %></p>
+      <p class='text-justify'><%= raw @person.introduction %></p>
     </div>
     <div class='col-md-3 col-sm-6 col-xs-12'>
       <ul class='social list-inline'>
