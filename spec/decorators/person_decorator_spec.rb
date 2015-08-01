@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe PersonDecorator, type: :decorator do
   describe '#email' do
-    let(:email) { 'fractalsoft@example.com' }
+    let(:email) { 'do-not-spam@fractalsoft.org' }
 
     it 'shows email if exist' do
       person = Person.create(email: email)
       decorator = PersonDecorator.decorate(person).email
-      expect(decorator).to include email, 'icons/email.png'
+      expect(decorator).to include email, 'icons-email'
     end
 
     it 'shows nothing when email not exist' do
@@ -17,12 +17,12 @@ RSpec.describe PersonDecorator, type: :decorator do
   end
 
   describe '#facebook' do
-    let(:facebook) { 'https://www.facebook.com/fractalsoft' }
+    let(:facebook) { 'fractalsoft' }
 
     it 'shows facebook if exist' do
       person = Person.create(facebook: facebook)
       decorator = PersonDecorator.decorate(person).facebook
-      expect(decorator).to include facebook, 'icons/facebook.png'
+      expect(decorator).to include facebook, 'icons-facebook'
     end
 
     it 'shows nothing when facebook not exist' do
@@ -32,12 +32,12 @@ RSpec.describe PersonDecorator, type: :decorator do
   end
 
   describe '#github' do
-    let(:github) { 'https://www.github.com/fractalsoft' }
+    let(:github) { 'fractalsoft' }
 
     it 'shows github if exist' do
       person = Person.create(github: github)
       decorator = PersonDecorator.decorate(person).github
-      expect(decorator).to include github, 'icons/github.png'
+      expect(decorator).to include github, 'icons-github'
     end
 
     it 'shows nothing when github not exist' do
@@ -47,12 +47,12 @@ RSpec.describe PersonDecorator, type: :decorator do
   end
 
   describe '#twitter' do
-    let(:twitter) { 'https://twitter.com/fractal_soft' }
+    let(:twitter) { 'fractal_soft' }
 
     it 'shows twitter if exist' do
       person = Person.create(twitter: twitter)
       decorator = PersonDecorator.decorate(person).twitter
-      expect(decorator).to include twitter, 'icons/twitter.png'
+      expect(decorator).to include twitter, 'icons-twitter'
     end
 
     it 'shows nothing when twitter not exist' do
@@ -62,7 +62,7 @@ RSpec.describe PersonDecorator, type: :decorator do
   end
 
   describe '#website' do
-    let(:website) { 'http://google.com' }
+    let(:website) { 'http://fractalsoft.org' }
 
     it 'shows website if exist' do
       person = Person.create(website: website)
