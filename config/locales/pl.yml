@@ -1,5 +1,4 @@
 pl:
-  lang: pl-PL
   language: polski
   meta:
     site: Fractal Soft
@@ -32,7 +31,7 @@ pl:
         contact: Kontakt
         language: Język
         projects: Projekty
-        team: Zaspół
+        team: Zespół
         toggle_navigation: Nawigacja
       footer:
         <<: *header
@@ -62,8 +61,6 @@ pl:
           one: "Standard HTML, który ułatwia programistom pracę nad tworzeniem stron internetowych. Dodatkowo zapewnia on takie funkcjonalności jak obsługę audio i video, rysowanie grafiki w canvas oraz geolokalizację. Sprawia, że nasze projekty stają się jeszcze ciekawsze."
           two: "Nowoczesny framework do budowania w pełni funkcjonalnych aplikacji internetowych. Jego ogromną zaletą jest możliwość szybkiego i przyjemnego tworzenia oprogramowania. Pozwala to na błyskawiczne dostosowywanie się do zmiennych wymagań rynku. Zapewniając klientowi większą satysfakcję z efektów pracy programistów."
           three_html: "Otwarte oprogramowanie, czyli takie do którego istnieje swobodny i&nbsp;wolny dostęp dla wszystkich jego użytkowników. Dzięki wglądowi w kod źródłowy aplikacji mogą one być nieustannie zmieniane, udoskonalane i rozpowszechniane. Powodując w ten sposób szybszy rozwój programów oraz efektywne eliminowanie błędów."
-      team:
-        meet_us: Poznaj nasz zespół!
       contact:
         <<: *contact
   mail_form:
@@ -78,3 +75,7 @@ pl:
       title: Informacje techniczne o użytkowniku
       remote_ip: Adres IP
       user_agent: Przeglądarka
+  people:
+    team:
+      team:
+        meet_us: Poznaj nasz zespół!
