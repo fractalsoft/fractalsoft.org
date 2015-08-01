@@ -10,9 +10,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'actionpack-page_caching'
 gem 'carrierwave'
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+gem 'diacritics'
 gem 'draper'
 gem 'foreman'
+gem 'friendly_id'
+gem 'globalize'
 gem 'html5shiv-js-rails'
 gem 'http_accept_language'
 gem 'mail_form'
@@ -22,8 +27,10 @@ gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
 gem 'normalize-rails'
 gem 'puma'
+gem 'rack-attack'
 gem 'rails-i18n'
 gem 'respond-js-rails'
+gem 'simple_form'
 gem 'twitter-bootstrap-rails'
 
 group :development do

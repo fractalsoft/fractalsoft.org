@@ -1,4 +1,5 @@
 en:
+  language: english
   meta:
     site: Fractal Soft
     title: 'Ruby on Rails & JavaScript developers for hire'
@@ -23,11 +24,12 @@ en:
     new:
       contact: &contact
         header: Want to get in touch with us?
-        description: 'No matter if you have a question or just want to  say hello, we would love to hear from you.'
+        description: 'No matter if you have a question or just want to say hello, we would love to hear from you.'
   layouts:
     shared:
       header: &header
         contact: Contact
+        language: Language
         projects: Projects
         team: Team
         toggle_navigation: Toggle navigation
@@ -59,8 +61,6 @@ en:
           one: "HTML standard, which simplifies developers work and provides many new features. Such as audio, video, canvas drawing or geolocalization. It makes our projects much more interesting."
           two: "Modern framework to build fully functional web applications. Fast and flexible software creation is Ruby on Rails advantage. It allows to adjust to market changes in a simple way. And in the same time provides more satisfaction to our clients."
           three_html: "Software where we have open and free access to source for all users. It provides constant improvement and spread of software. This has a huge impact on application development and fixing bugs."
-      team:
-        meet_us: Meet our team!
       contact:
         <<: *contact
   mail_form:
@@ -75,3 +75,7 @@ en:
       title: Technical information about the user
       remote_ip: IP Address
       user_agent: Browser
+  people:
+    team:
+      team:
+        meet_us: Meet our team!

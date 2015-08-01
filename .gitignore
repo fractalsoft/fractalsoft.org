@@ -19,9 +19,14 @@
 # Ignore metric files
 /sandi_meter
 
-# Igrone uplaods
+# Igrone uplaods & cache
+/public/cache/*
 /public/uploads/*
+!/public/cache/.keep
 !/public/uploads/.keep
 
 # Ignore environments
 /.env
+
+# Ignore generated sprites
+/app/assets/images/icons-*
