@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   def index
     @contact_form = ContactForm.new
-    @people = Person.all
+    @people = Person.all.decorate.shuffle
     expires_in 30.minutes, public: true
   end
 end
