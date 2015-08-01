@@ -40,11 +40,11 @@ class PersonDecorator < Draper::Decorator
   end
 
   def email_url
-    "#{object.email}"
+    object.email
   end
 
   def blog_url
-    "#{object.blog}"
+    object.blog
   end
 
   def facebook_url
