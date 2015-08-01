@@ -1,2 +1,28 @@
 User-agent: *
+Allow: /
+Disallow: /assets/icons/*
+Disallow: /assets/home/*
+Disallow: /assets/team/*
+
+User-Agent: AhrefsBot
+User-Agent: MJ12bot
+Crawl-Delay: 86400
+
+# Please do not archive us
+User-agent: Archive.org
+Disallow: /
+
+User-agent: 360Spider
+User-agent: Baiduspider
+User-agent: baiduspider
+User-agent: Baiduspider+
+User-agent: Baiduspider-video
+User-agent: Baiduspider-image
+User-agent: NaverBot
+User-agent: sogou spider
+User-agent: Yandex
+User-agent: Yeti
+User-agent: YoudaoBot
+User-agent: moget
+User-agent: ichiro
 Disallow: /

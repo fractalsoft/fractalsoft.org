@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang='<%= I18n.locale %>'>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <%= display_meta_tags(default_meta_tags) %>
-  <meta name='robots' content='index,follow' />
   <meta name='revisit-after' content='1 days' />
+  <meta name='robots' content='index,follow' />
+  <meta name='robots' content='noarchive' />
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <!-- <base href='http://fractalsoft.org/' /> -->
   <%= favicon_link_tag 'favicon.ico' %>
@@ -16,7 +17,7 @@
     <%= javascript_include_tag 'html5shiv' %>
     <%= javascript_include_tag 'respond' %>
   <![endif]-->
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags unless @page_caching %>
 </head>
 <body class='<%= yield(:body_class) %>'>
 <%= render 'layouts/shared/header' %>
