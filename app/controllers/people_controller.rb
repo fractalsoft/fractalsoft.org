@@ -5,6 +5,6 @@ class PeopleController < ApplicationController
   end
 
   def show
-    @person = Person.find(params[:id]).decorate
+    @person = Person.friendly.find(params[:id]).decorate
   end
 end
