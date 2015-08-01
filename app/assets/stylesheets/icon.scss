@@ -1,0 +1,9 @@
+@import 'compass';
+@import 'icons/*.png';
+@include all-icons-sprites;
+
+span.icon {
+  display: block;
+  height: 32px;
+  width: 32px;
+}

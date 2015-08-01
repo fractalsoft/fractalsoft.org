@@ -7,8 +7,14 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def default_url_options(options = {})
+    locale = I18n.locale
+    options.merge(locale: locale) unless I18n.default_locale == locale
+    options
+  end
+
   def set_locale
-    I18n.locale = session[:locale] || detect_locale
+    I18n.locale = params[:locale] || detect_locale
   end
 
   def detect_locale
