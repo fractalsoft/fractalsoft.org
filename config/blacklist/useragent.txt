@@ -3,9 +3,12 @@
 Baidu
 Go 1.1 package http
 Haosou
+LinksCrawler
 Naver
 NerdyBot
+Nutch
 Sogou
+TrueBot
 YaBrowser
 Yandex
 Youdao
