@@ -4,8 +4,10 @@ Disallow: /assets/icons/*
 Disallow: /assets/home/*
 Disallow: /assets/team/*
 
+# SEO Crawlers
 User-Agent: AhrefsBot
 User-Agent: MJ12bot
+User-Agent: XoviBot
 Crawl-Delay: 86400
 
 # Please do not archive us
@@ -18,8 +20,11 @@ User-agent: baiduspider
 User-agent: Baiduspider+
 User-agent: Baiduspider-video
 User-agent: Baiduspider-image
+User-agent: LinksCrawler 0.1beta
 User-agent: NaverBot
+User-agent: Nutch
 User-agent: sogou spider
+User-agent: TrueBot/1.0
 User-agent: Yandex
 User-agent: Yeti
 User-agent: YoudaoBot
