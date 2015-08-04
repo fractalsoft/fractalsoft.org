@@ -26,7 +26,8 @@ class Rack::Attack
   end
 
   user_agents = File.read("#{blacklist_folder}/useragent.txt").split("\n")
-  user_agents_regexp = Regexp.union(user_agents)
+  regexp = Regexp.union(user_agents)
+  user_agents_regexp = Regexp.new(regexp.source, Regexp::IGNORECASE)
   blacklist('Block bad User Agents') do |request|
     request.user_agent =~ user_agents_regexp
   end
