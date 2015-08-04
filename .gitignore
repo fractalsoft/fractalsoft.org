@@ -19,7 +19,8 @@
 # Ignore metric files
 /sandi_meter
 
-# Igrone uplaods & cache
+# Igrone assets, uploads & cache
+/public/assets
 /public/cache/*
 /public/uploads/*
 !/public/cache/.keep
