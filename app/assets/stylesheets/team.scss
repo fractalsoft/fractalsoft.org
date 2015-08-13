@@ -1,0 +1,6 @@
+@import 'compass';
+$team-sort-by: 'name';
+$team-layout: horizontal;
+$team-sprite-dimensions: true;
+@import 'team/*.png';
+@include all-team-sprites;

@@ -1,12 +1,26 @@
 User-agent: *
 Allow: /
-Disallow: /assets/icons/*
-Disallow: /assets/home/*
-Disallow: /assets/team/*
+Disallow: /assets
 
+# SEO Crawlers
 User-Agent: AhrefsBot
 User-Agent: MJ12bot
-Crawl-Delay: 86400
+User-Agent: XoviBot
+Crawl-Delay: 3600
+
+# API bot
+# http://www.meanpath.com/meanpathbot.html
+User-Agent: meanpathbot/1.0
+Crawl-Delay: 14400
+
+# http://OpenLinkProfiler.org/bot
+User-agent: spbot
+Crawl-delay: 9000
+
+# Anti-plagiarism
+# https://turnitin.com/robot/crawlerinfo.html
+User-Agent: TurnitinBot
+Crawl-Delay: 7200
 
 # Please do not archive us
 User-agent: Archive.org
@@ -18,8 +32,13 @@ User-agent: baiduspider
 User-agent: Baiduspider+
 User-agent: Baiduspider-video
 User-agent: Baiduspider-image
+User-agent: DialogSearch.com
+User-agent: LinksCrawler 0.1beta
 User-agent: NaverBot
+User-agent: Nutch
 User-agent: sogou spider
+User-agent: Telesphoreo
+User-agent: TrueBot/1.0
 User-agent: Yandex
 User-agent: Yeti
 User-agent: YoudaoBot
