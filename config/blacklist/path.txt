@@ -1,3 +1,6 @@
+.asp
+.php
 /admin
+/phpmyadmin
 /translate_c
 /wp-login
