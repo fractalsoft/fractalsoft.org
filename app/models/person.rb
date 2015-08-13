@@ -5,6 +5,6 @@ class Person < ActiveRecord::Base
   translates :introduction, :text
 
   def name
-    fullname.try(:permanent)
+    nickname || fullname.try(:permanent)
   end
 end

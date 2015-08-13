@@ -1,5 +1,6 @@
 team:
   - fullname: Agnieszka Matysek
+    nickname: womanonrails
     description: Ruby on Rails developer
     position: developer
     image: team/amatysek.jpg
@@ -33,6 +34,7 @@ team:
       pl: '<strong>Programista Rails otwarty na różne technologie.</strong> Ekspert od problemów. Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.'
 
   - fullname: Aleksander Małaszkiewicz
+    nickname: torrocus
     description: Ruby on Rails developer
     position: developer
     image: team/amalaszkiewicz.jpg

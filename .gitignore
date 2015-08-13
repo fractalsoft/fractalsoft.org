@@ -19,7 +19,8 @@
 # Ignore metric files
 /sandi_meter
 
-# Igrone uplaods & cache
+# Igrone assets, uploads & cache
+/public/assets
 /public/cache/*
 /public/uploads/*
 !/public/cache/.keep
@@ -29,4 +30,7 @@
 /.env
 
 # Ignore generated sprites
+/app/assets/images/arts-*
 /app/assets/images/icons-*
+/app/assets/images/logotypes-*
+/app/assets/images/team-*
