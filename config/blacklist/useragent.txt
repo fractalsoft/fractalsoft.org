@@ -9,6 +9,7 @@ Naver
 NerdyBot
 Nutch
 Sogou
+Telesphoreo
 TrueBot
 YaBrowser
 Yandex
