@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'actionpack-page_caching'
 gem 'carrierwave'
-gem 'compass-rails', github: 'Compass/compass-rails'
+gem 'compass-rails'
 gem 'diacritics'
 gem 'draper'
 gem 'foreman'
@@ -26,11 +26,13 @@ gem 'mandrill_mailer'
 gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
 gem 'normalize-rails'
+gem 'oj'
 gem 'puma'
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'respond-js-rails'
 gem 'simple_form'
+gem 'sqlite3'
 gem 'twitter-bootstrap-rails'
 
 group :development do
@@ -53,7 +55,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.3'
   gem 'spring'
-  gem 'sqlite3'
   gem 'web-console', '~> 2.0'
 end
 

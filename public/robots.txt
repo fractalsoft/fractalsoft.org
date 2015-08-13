@@ -8,6 +8,15 @@ User-Agent: MJ12bot
 User-Agent: XoviBot
 Crawl-Delay: 3600
 
+# API bot
+# http://www.meanpath.com/meanpathbot.html
+User-Agent: meanpathbot/1.0
+Crawl-Delay: 14400
+
+# http://OpenLinkProfiler.org/bot
+User-agent: spbot
+Crawl-delay: 9000
+
 # Anti-plagiarism
 # https://turnitin.com/robot/crawlerinfo.html
 User-Agent: TurnitinBot
@@ -28,6 +37,7 @@ User-agent: LinksCrawler 0.1beta
 User-agent: NaverBot
 User-agent: Nutch
 User-agent: sogou spider
+User-agent: Telesphoreo
 User-agent: TrueBot/1.0
 User-agent: Yandex
 User-agent: Yeti

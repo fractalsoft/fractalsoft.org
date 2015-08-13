@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'fractalsoft.org'
+set :repo_url, 'git@github.com:fractalsoft/fractalsoft.org.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -35,7 +35,6 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # set :keep_releases, 5
 
 namespace :deploy do
-
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -44,5 +43,4 @@ namespace :deploy do
       # end
     end
   end
-
 end
