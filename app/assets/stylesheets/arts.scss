@@ -1,0 +1,10 @@
+@import 'compass';
+@import 'arts/*.png';
+@include all-arts-sprites;
+
+.arts {
+  display: block;
+  height: 66px;
+  margin: 0 auto;
+  width: 77px;
+}
