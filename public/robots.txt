@@ -22,6 +22,13 @@ Crawl-delay: 9000
 User-Agent: TurnitinBot
 Crawl-Delay: 7200
 
+# SEO Crawler
+# https://moz.com/researchtools/ose/dotbot
+# https://moz.com/help/guides/search-overview/crawl-diagnostics
+User-agent: dotbot
+User-agent: rogerbot
+Crawl-Delay: 4200
+
 # Please do not archive us
 User-agent: Archive.org
 Disallow: /
