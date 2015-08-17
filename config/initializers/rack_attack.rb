@@ -25,6 +25,12 @@ class Rack::Attack
     request.path =~ paths_regexp
   end
 
+  referers = File.read("#{blacklist_folder}/referer.txt").split("\n")
+  referers_regexp = Regexp.union(referers)
+  blacklist('Block bad referers') do |request|
+    request.referer =~ referers_regexp
+  end
+
   user_agents = File.read("#{blacklist_folder}/useragent.txt").split("\n")
   regexp = Regexp.union(user_agents)
   user_agents_regexp = Regexp.new(regexp.source, Regexp::IGNORECASE)
