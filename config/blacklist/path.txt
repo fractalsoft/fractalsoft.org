@@ -1,4 +1,5 @@
 .asp
+.cgi
 .php
 /admin
 /phpmyadmin
