@@ -10,8 +10,8 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <!-- <base href='http://fractalsoft.org/' /> -->
   <%= favicon_link_tag 'favicon.ico' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', async: true, media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', async: true, 'data-turbolinks-track' => true %>
   <%= render 'layouts/shared/analytics' %>
   <!--[if lt IE 9]>
     <%= javascript_include_tag 'html5shiv' %>
