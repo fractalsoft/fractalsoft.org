@@ -5,6 +5,8 @@ class Project < ActiveRecord::Base
   translates :subtitle, :string
 
   has_many :images
+  has_many :contributions
+  has_many :people, through: :contributions
 
   def logo_image
     images.logo

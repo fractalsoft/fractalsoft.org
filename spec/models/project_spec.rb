@@ -9,6 +9,21 @@ RSpec.describe Project, type: :model do
     expect(project.images).to eq [image]
   end
 
+  it 'has many contributions' do
+    contribution = create(:contribution)
+    project.contributions << contribution
+    expect(project).to have_many(:contributions)
+    expect(project.contributions).to eq [contribution]
+  end
+
+  it 'has many people through contibutions' do
+    person = create(:person)
+    create(:contribution, person: person)
+    project.people << person
+    expect(project).to have_many(:people)
+    expect(project.people).to eq [person]
+  end
+
   describe '#logo_image' do
     it 'show logo image' do
       image = Image.create(kind: 'logo', project: project)
