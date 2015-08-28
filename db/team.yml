@@ -8,6 +8,8 @@ team:
     facebook: agnieszka.matysek.3
     github: womanonrails
     twitter: womanonrails
+    skills: 'Backend Developer,Frontend Developer,Refactoring,TDD,Agile,Git,Teamwork,SOA'
+    technologies: 'Ruby,Ruby on Rails,PostgreSQL,MySQL,JavaScript,CoffeeScript,jQuery,Ember.js,HTML5,CSS3,RSpec'
     introduction:
       en: '<strong>Ruby on Rails developer since 2011.</strong> Focused on good code quality, refactoring and TDD. Well-organized and responsible. Mentor at CoderDojo and Rails Girls workshops.'
       pl: '<strong>Programista Ruby on Rails od 2011 roku.</strong> Specjalizuje się w dobrej jakości kodu, refaktoringu i TDD. Odpowiedzialna i dobrze zorganizowana. Mentor na CoderDojo i Rails Girls.'
@@ -18,6 +20,8 @@ team:
     image: team/uholodniak.jpg
     github: shad8
     twitter: 8shad8
+    skills: 'Backend Developer,Frontend Developer,Refactoring,TDD,Agile,Git,Teamwork,SOA'
+    technologies: 'Ruby,Ruby on Rails,PostgreSQL,MySQL,JavaScript,CoffeeScript,jQuery,Ember.js,HTML5,CSS3,RSpec'
     introduction:
       en: '<strong>Ruby geek in 150%.</strong> Conscientious and involved developer with the soul of an artist photographer. Participant and then mentor and organizer of Rails Girls workshops.'
       pl: '<strong>Ruby geek na 150%.</strong> Sumienny i zaangażowany programista z duszą fotografa artysty. Uczestniczka a następnie mentor i organizator warsztatów Rails Girls.'
@@ -29,6 +33,8 @@ team:
     facebook: lisux
     github: noplisu
     twitter: noplisu
+    skills: 'Backend Developer,Frontend Developer,Refactoring,TDD,Agile,Git,Teamwork,SOA'
+    technologies: 'Ruby,Ruby on Rails,PostgreSQL,MySQL,JavaScript,CoffeeScript,jQuery,Ember.js,HTML5,CSS3,RSpec'
     introduction:
       en: '<strong>Rails programmer open to different technologies.</strong> Expert in unsolvable challenges. Passionate gamer, game creator and regular participant of Global Game Jam.'
       pl: '<strong>Programista Rails otwarty na różne technologie.</strong> Ekspert od problemów. Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.'
@@ -41,6 +47,8 @@ team:
     facebook: torrocus
     github: torrocus
     twitter: torrocus
+    skills: 'Backend Developer,Frontend Developer,Refactoring,TDD,Agile,Git,Teamwork,SOA'
+    technologies: 'Ruby,Ruby on Rails,PostgreSQL,MySQL,JavaScript,CoffeeScript,jQuery,Ember.js,HTML5,CSS3,RSpec'
     introduction:
       en: '<strong>Web developer since 1998.</strong> He had met Ruby 12 years later while using Sinatra and Ruby on Rails. Madcap for algorithms. Linux administrator and Open Source ideology evangelist.'
       pl: '<strong>Web developer od roku 1998.</strong> Ruby poznał 12 lat później używając Sinatra i Ruby on Rails. Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.'

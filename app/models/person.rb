@@ -14,4 +14,12 @@ class Person < ActiveRecord::Base
   def project_with_contributions(project)
     contributions.includes(:translations).where(project: project)
   end
+
+  def skill_list
+    skills.split(',')
+  end
+
+  def technology_list
+    technologies.split(',')
+  end
 end
