@@ -33,7 +33,7 @@
         <p>
           <strong><%= t('.major_contributions') %></strong>
           <ul>
-            <% project.contributions.where(person: @person).each do |contribution| %>
+            <% @person.project_with_contributions(project).each do |contribution| %>
               <li><%= contribution.name %></li>
             <% end %>
           </ul>

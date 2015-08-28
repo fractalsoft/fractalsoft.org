@@ -10,4 +10,8 @@ class Person < ActiveRecord::Base
   def name
     nickname || fullname.try(:permanent)
   end
+
+  def project_with_contributions(project)
+    contributions.where(project: project)
+  end
 end
