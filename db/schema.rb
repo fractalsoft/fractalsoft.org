@@ -11,11 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817142517) do
+ActiveRecord::Schema.define(version: 20150828074704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
+
+  create_table "contribution_translations", force: :cascade do |t|
+    t.integer  "contribution_id", null: false
+    t.string   "locale",          null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "name"
+  end
+
+  add_index "contribution_translations", ["contribution_id"], name: "index_contribution_translations_on_contribution_id", using: :btree
+  add_index "contribution_translations", ["locale"], name: "index_contribution_translations_on_locale", using: :btree
+
+  create_table "contributions", force: :cascade do |t|
+    t.integer  "project_id"
+    t.uuid     "person"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "contributions", ["person"], name: "index_contributions_on_person", using: :btree
+  add_index "contributions", ["project_id"], name: "index_contributions_on_project_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -71,6 +93,18 @@ ActiveRecord::Schema.define(version: 20150817142517) do
   add_index "person_translations", ["locale"], name: "index_person_translations_on_locale", using: :btree
   add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id", using: :btree
 
+  create_table "project_translations", force: :cascade do |t|
+    t.integer  "project_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
+    t.string   "subtitle"
+  end
+
+  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale", using: :btree
+  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id", using: :btree
+
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "subtitle"
@@ -82,4 +116,5 @@ ActiveRecord::Schema.define(version: 20150817142517) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "contributions", "projects"
 end

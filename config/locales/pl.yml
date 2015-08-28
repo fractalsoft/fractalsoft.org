@@ -76,6 +76,8 @@ pl:
       remote_ip: Adres IP
       user_agent: Przeglądarka
   people:
+    show:
+      major_contributions: Główny wkład
     team:
       team:
         meet_us: Poznaj nasz zespół!

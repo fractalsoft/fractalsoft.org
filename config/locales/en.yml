@@ -76,6 +76,8 @@ en:
       remote_ip: IP Address
       user_agent: Browser
   people:
+    show:
+      major_contributions: Major contributions
     team:
       team:
         meet_us: Meet our team!
