@@ -18,4 +18,8 @@ class Person < ActiveRecord::Base
   def skill_list
     skills.split(',')
   end
+
+  def technology_list
+    technologies.split(',')
+  end
 end
