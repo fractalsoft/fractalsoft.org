@@ -12,6 +12,6 @@ class Person < ActiveRecord::Base
   end
 
   def project_with_contributions(project)
-    contributions.where(project: project)
+    contributions.includes(:translations).where(project: project)
   end
 end
