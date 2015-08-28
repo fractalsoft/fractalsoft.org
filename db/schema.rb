@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(version: 20150828105918) do
     t.text     "introduction"
     t.string   "slug"
     t.string   "nickname"
-    t.string   "skills"
-    t.string   "technologies"
+    t.string   "skills",       default: ""
+    t.string   "technologies", default: ""
   end
 
   add_index "people", ["slug"], name: "index_people_on_slug", using: :btree
