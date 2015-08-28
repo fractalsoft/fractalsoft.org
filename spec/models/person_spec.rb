@@ -18,4 +18,18 @@ RSpec.describe Person, type: :model do
       expect(subject.contributions).to eq [contribution]
     end
   end
+
+  context '#project_with_contributions' do
+    let(:project) { create(:project) }
+    let(:contribution) { create(:contribution, project: project) }
+
+    subject do
+      create(:contribution, project: project, person: create(:person))
+      Person.create(fullname: 'John Smith', contributions: [contribution])
+    end
+
+    it 'show only contribution for specific person' do
+      expect(subject.project_with_contributions(project)).to eq [contribution]
+    end
+  end
 end
