@@ -23,25 +23,23 @@
     </div>
   </div>
   <hr>
-  <div class='descritpion row'>
-    <div class="col-md-3">
-      <h2>hitdea <br><small>based on microservices</small></h2>
+  <% @projects.each do |project| %>
+    <div class='descritpion row'>
+      <div class="col-md-3">
+        <h2><%= project.title %> <br><small><%= project.subtitle %></small></h2>
+      </div>
+      <div class='col-md-9'>
+        <h4><%= project.description %></h4>
+        <p>
+          <strong><%= t('.major_contributions') %></strong>
+          <ul>
+            <% @person.project_with_contributions(project).each do |contribution| %>
+              <li><%= contribution.name %></li>
+            <% end %>
+          </ul>
+        </p>
+        <hr>
+      </div>
     </div>
-    <div class='col-md-9'>
-      <h4>Collaborative web-based system to idea management. Support for individual and team
-creativity. Based on methodology CPS 6.1 (Creative Problem Solving).</h4>
-      <p>
-        <strong>Major contributions</strong>
-        <ul>
-          <li>Backend architecture design based on microservices</li>
-          <li>Database design</li>
-          <li>Build API based on JSON API</li>
-          <li>Backend development in Rails 4.2</li>
-          <li>Frontend development in Ember.js</li>
-          <li>API integration</li>
-        </ul>
-      </p>
-      <hr>
-    </div>
-  </div>
+  <% end %>
 </div>

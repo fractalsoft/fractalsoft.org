@@ -1,10 +1,11 @@
 # People controller
 class PeopleController < ApplicationController
   def index
-    @people = Person.all.decorate.shuffle
+    @people = Person.includes(:translations).all.decorate.shuffle
   end
 
   def show
     @person = Person.friendly.find(params[:id]).decorate
+    @projects = @person.projects.includes(:translations)
   end
 end

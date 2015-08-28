@@ -1,8 +1,12 @@
 # Project class
 class Project < ActiveRecord::Base
   mount_uploader :thumbnail, ThumbnailUploader
+  translates :description, :text
+  translates :subtitle, :string
 
   has_many :images
+  has_many :contributions
+  has_many :people, -> { distinct }, through: :contributions
 
   def logo_image
     images.logo
