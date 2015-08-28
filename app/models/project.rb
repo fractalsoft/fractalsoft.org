@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
 
   has_many :images
   has_many :contributions
-  has_many :people, through: :contributions
+  has_many :people, -> { distinct }, through: :contributions
 
   def logo_image
     images.logo
