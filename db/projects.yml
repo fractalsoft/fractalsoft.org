@@ -1,0 +1,14 @@
+projects:
+  - title: hitdea
+    subtitle:
+      en: based on microservices
+      pl: oparta o mikroserwisy
+    description:
+      en: Collaborative web-based system to idea management. Support for individual and team creativity. Based on methodology CPS 6.1 (Creative Problem Solving).
+      pl: Oparty o współpracę system do zarządzania pomysłami. Wspiera kreatywną pracę indywidualna i zespołową. Bazuje na metodologii CPS 6.1 (Creative Problem Solving).
+
+  - title: advertising
+    description:
+      en: Contextual advertising management.
+      pl: System do zarządzania reklamą kontekstową.
+

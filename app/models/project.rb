@@ -1,6 +1,8 @@
 # Project class
 class Project < ActiveRecord::Base
   mount_uploader :thumbnail, ThumbnailUploader
+  translates :description, :text
+  translates :subtitle, :string
 
   has_many :images
 
