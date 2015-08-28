@@ -156,6 +156,11 @@ GEM
     erubis (2.7.0)
     excon (0.45.4)
     execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     fastercsv (1.5.5)
     ffi (1.9.10)
     flay (2.4.0)
@@ -361,6 +366,8 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     sexp_processor (4.6.0)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -439,6 +446,7 @@ DEPENDENCIES
   diacritics
   dotenv-rails
   draper
+  factory_girl_rails
   foreman
   friendly_id
   globalize
@@ -473,6 +481,7 @@ DEPENDENCIES
   sandi_meter
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  shoulda-matchers
   simple_form
   spring
   sqlite3
