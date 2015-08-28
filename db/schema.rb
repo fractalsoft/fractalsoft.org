@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828105918) do
+ActiveRecord::Schema.define(version: 20150828131513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,13 +30,13 @@ ActiveRecord::Schema.define(version: 20150828105918) do
 
   create_table "contributions", force: :cascade do |t|
     t.integer  "project_id"
-    t.uuid     "person"
+    t.uuid     "person_id"
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "contributions", ["person"], name: "index_contributions_on_person", using: :btree
+  add_index "contributions", ["person_id"], name: "index_contributions_on_person_id", using: :btree
   add_index "contributions", ["project_id"], name: "index_contributions_on_project_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -85,15 +85,14 @@ ActiveRecord::Schema.define(version: 20150828105918) do
   add_index "people", ["slug"], name: "index_people_on_slug", using: :btree
 
   create_table "person_translations", force: :cascade do |t|
-    t.integer  "person_id",    null: false
-    t.string   "locale",       null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "locale",                                      null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
     t.text     "introduction"
+    t.uuid     "person_id",    default: "uuid_generate_v4()"
   end
 
   add_index "person_translations", ["locale"], name: "index_person_translations_on_locale", using: :btree
-  add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id", using: :btree
 
   create_table "project_translations", force: :cascade do |t|
     t.integer  "project_id",  null: false
@@ -119,4 +118,5 @@ ActiveRecord::Schema.define(version: 20150828105918) do
   end
 
   add_foreign_key "contributions", "projects"
+  add_foreign_key "person_translations", "people", name: "person_translations_person_id_fkey"
 end
