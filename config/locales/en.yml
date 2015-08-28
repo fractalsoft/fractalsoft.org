@@ -78,6 +78,8 @@ en:
   people:
     show:
       major_contributions: Major contributions
+      skills: Skills
+      technologies: Technologies
     team:
       team:
         meet_us: Meet our team!

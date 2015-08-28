@@ -78,6 +78,8 @@ pl:
   people:
     show:
       major_contributions: Główny wkład
+      skills: Umiejętności
+      technologies: Technologie
     team:
       team:
         meet_us: Poznaj nasz zespół!
