@@ -12,6 +12,12 @@
       <h1><%= @person.fullname %></h1>
       <p class='position'><strang><%= @person.position %></strang></p>
       <p class='text-justify'><%= raw @person.introduction %></p>
+      <p>
+        <h3><%= t('.skills') %></h3>
+        <% @person.skill_list.each do |skill| %>
+          <span class="label label-danger"><%= skill %></span>
+        <% end %>
+      </p>
     </div>
     <div class='col-md-3 col-sm-6 col-xs-12'>
       <ul class='social list-inline'>
@@ -20,6 +26,11 @@
         <%= @person.twitter %>
         <%= @person.facebook %>
       </ul>
+      <h4><%= t('.technologies') %></h4>
+      <hr>
+      <% @person.technology_list.each do |technology| %>
+        <span class="label label-default"><%= technology %></span>
+      <% end %>
     </div>
   </div>
   <hr>

@@ -28,6 +28,20 @@ body.person {
         margin-top: 20px;
       }
     }
+
+    @media (max-width: 767px) {
+      .social {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 767px) {
+      .social { margin-bottom: 70px; }
+    }
+
+    .label-default { background-color: $light-grey-background-color; }
+    .label-danger { background-color: $red-background-color; }
   }
 }
 
