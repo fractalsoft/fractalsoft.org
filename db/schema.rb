@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150802211806) do
+ActiveRecord::Schema.define(version: 20150817142517) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -21,10 +25,10 @@ ActiveRecord::Schema.define(version: 20150802211806) do
     t.datetime "created_at"
   end
 
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "images", force: :cascade do |t|
     t.string   "image"
@@ -34,9 +38,9 @@ ActiveRecord::Schema.define(version: 20150802211806) do
     t.datetime "updated_at"
   end
 
-  add_index "images", ["project_id"], name: "index_images_on_project_id"
+  add_index "images", ["project_id"], name: "index_images_on_project_id", using: :btree
 
-  create_table "people", force: :cascade do |t|
+  create_table "people", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string   "fullname"
     t.text     "description"
     t.string   "position"
@@ -54,7 +58,7 @@ ActiveRecord::Schema.define(version: 20150802211806) do
     t.string   "nickname"
   end
 
-  add_index "people", ["slug"], name: "index_people_on_slug"
+  add_index "people", ["slug"], name: "index_people_on_slug", using: :btree
 
   create_table "person_translations", force: :cascade do |t|
     t.integer  "person_id",    null: false
@@ -64,8 +68,8 @@ ActiveRecord::Schema.define(version: 20150802211806) do
     t.text     "introduction"
   end
 
-  add_index "person_translations", ["locale"], name: "index_person_translations_on_locale"
-  add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id"
+  add_index "person_translations", ["locale"], name: "index_person_translations_on_locale", using: :btree
+  add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"

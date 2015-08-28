@@ -1,15 +1,15 @@
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: fractalsoft_development
 
 test: &test
   <<: *default
-  database: db/test.sqlite3
+  database: fractalsoft_test
 
 cucumber:
   <<: *test
