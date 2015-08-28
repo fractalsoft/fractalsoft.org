@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828072100) do
+ActiveRecord::Schema.define(version: 20150828074704) do
+
+  create_table "contribution_translations", force: :cascade do |t|
+    t.integer  "contribution_id", null: false
+    t.string   "locale",          null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "name"
+  end
+
+  add_index "contribution_translations", ["contribution_id"], name: "index_contribution_translations_on_contribution_id"
+  add_index "contribution_translations", ["locale"], name: "index_contribution_translations_on_locale"
+
+  create_table "contributions", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "person_id"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "contributions", ["person_id"], name: "index_contributions_on_person_id"
+  add_index "contributions", ["project_id"], name: "index_contributions_on_project_id"
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
