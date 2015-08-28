@@ -27,6 +27,7 @@ gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
 gem 'normalize-rails'
 gem 'oj'
+gem 'pg'
 gem 'puma'
 gem 'rack-attack'
 gem 'rails-i18n'
@@ -64,7 +65,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
 end
