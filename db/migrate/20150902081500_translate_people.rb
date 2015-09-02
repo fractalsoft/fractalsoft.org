@@ -1,4 +1,4 @@
-class CreatePeopleTranslation < ActiveRecord::Migration
+class TranslatePeople < ActiveRecord::Migration
   def up
     Person.create_translation_table! introduction: :text
   end

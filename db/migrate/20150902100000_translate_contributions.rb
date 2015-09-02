@@ -1,4 +1,4 @@
-class CreateContributionTranslation < ActiveRecord::Migration
+class TranslateContributions < ActiveRecord::Migration
   def up
     Contribution.create_translation_table! name: :string
   end
