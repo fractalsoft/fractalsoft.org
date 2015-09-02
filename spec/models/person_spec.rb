@@ -35,24 +35,24 @@ RSpec.describe Person, type: :model do
 
   context '#skill_list' do
     it 'show array of skills' do
-      person = Person.create(skills: 'Ruby,Ruby on Rails')
+      person = create(:person, skills: 'Ruby,Ruby on Rails')
       expect(person.skill_list).to eq ['Ruby', 'Ruby on Rails']
     end
 
     it 'show empty array of skills when person do not have skills' do
-      person = Person.create
+      person = create(:person)
       expect(person.skill_list).to be_empty
     end
   end
 
   context '#technology_list' do
     it 'show array of technologies' do
-      person = Person.create(technologies: 'Ruby,Ruby on Rails')
+      person = create(:person, technologies: 'Ruby,Ruby on Rails')
       expect(person.technology_list).to eq ['Ruby', 'Ruby on Rails']
     end
 
     it 'show empty array of technologies when person do not have one' do
-      person = Person.create
+      person = create(:person)
       expect(person.technology_list).to be_empty
     end
   end

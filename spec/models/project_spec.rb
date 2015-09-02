@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Project, type: :model do
-  subject(:project) { Project.new }
+  subject(:project) { build(:project) }
 
   it 'has many images' do
     image = Image.new

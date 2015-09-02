@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :contribution do
-    name 'My first contribution'
+    name 'Deployment'
   end
 end
