@@ -1,7 +1,7 @@
 contributions:
   - project_title: hitdea
     person_fullname: Agnieszka Matysek
-    list_name:
+    names:
       - en: Backend architecture
         pl: Backend
 
@@ -10,12 +10,12 @@ contributions:
 
   - project_title: advertising
     person_fullname: Agnieszka Matysek
-    list_name:
+    names:
       - en: Upgrade Rails and Ruby version
         pl: Aktualizacja wersji Ruby on Rails
 
   - project_title: advertising
     person_fullname: Urszula Hołodniak
-    list_name:
+    names:
       - en: Backend architecture
         pl: Backend

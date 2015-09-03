@@ -184,6 +184,8 @@ GEM
     globalize (5.0.1)
       activemodel (>= 4.2.0, < 4.3)
       activerecord (>= 4.2.0, < 4.3)
+    globalize-accessors (0.2.1)
+      globalize (~> 5.0, >= 5.0.0)
     haml (4.0.7)
       tilt
     highline (1.7.3)
@@ -460,6 +462,7 @@ DEPENDENCIES
   foreman
   friendly_id
   globalize
+  globalize-accessors
   html5shiv-js-rails
   http_accept_language
   jbuilder (~> 2.0)

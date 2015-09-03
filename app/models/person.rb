@@ -3,6 +3,8 @@ class Person < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
   translates :introduction, :text
+  globalize_accessors locales: I18n.available_locales,
+                      attributes: translated_attribute_names
 
   has_many :contributions
   has_many :projects, -> { distinct }, through: :contributions
