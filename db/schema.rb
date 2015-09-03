@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20150902110000) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "contribution_translations", force: :cascade do |t|
-    t.integer  "contribution_id", null: false
+  create_table "contribution_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid     "contribution_id", null: false
     t.string   "locale",          null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150902110000) do
   add_index "contribution_translations", ["contribution_id"], name: "index_contribution_translations_on_contribution_id", using: :btree
   add_index "contribution_translations", ["locale"], name: "index_contribution_translations_on_locale", using: :btree
 
-  create_table "contributions", force: :cascade do |t|
+  create_table "contributions", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.uuid     "person_id"
     t.uuid     "project_id"
     t.string   "name"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20150902110000) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "images", force: :cascade do |t|
+  create_table "images", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string   "image"
     t.string   "kind"
     t.uuid     "project_id"
