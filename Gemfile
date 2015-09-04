@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.3'
 
 gem 'rails', '4.2.4'
 gem 'sass-rails', '~> 5.0'
@@ -18,6 +18,7 @@ gem 'draper'
 gem 'foreman'
 gem 'friendly_id'
 gem 'globalize'
+gem 'globalize-accessors'
 gem 'html5shiv-js-rails'
 gem 'http_accept_language'
 gem 'mail_form'
@@ -25,6 +26,7 @@ gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
+gem 'newrelic_rpm'
 gem 'normalize-rails'
 gem 'oj'
 gem 'pg'
@@ -81,5 +83,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'newrelic_rpm'

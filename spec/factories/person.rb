@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :person do
-    fullname 'John Doe'
+    fullname 'Linus Torvalds'
   end
 end

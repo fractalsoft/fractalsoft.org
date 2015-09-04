@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :project do
-    title 'Lorem ipsum project'
+    title 'Lorem ipsum'
   end
 end
