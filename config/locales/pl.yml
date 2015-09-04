@@ -77,7 +77,7 @@ pl:
       user_agent: Przeglądarka
   people:
     show:
-      major_contributions: Główny wkład
+      major_contributions: Znaczący wkład
       skills: Umiejętności
       technologies: Technologie
     team:
