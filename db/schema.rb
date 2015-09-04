@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20150902110000) do
     t.string   "email"
     t.string   "skills",       default: ""
     t.string   "technologies", default: ""
+    t.string   "saying"
     t.text     "introduction"
     t.text     "description"
     t.string   "slug"
@@ -89,6 +90,7 @@ ActiveRecord::Schema.define(version: 20150902110000) do
     t.string   "locale",       null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "saying"
     t.text     "introduction"
   end
 
@@ -96,11 +98,12 @@ ActiveRecord::Schema.define(version: 20150902110000) do
   add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id", using: :btree
 
   create_table "project_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.uuid     "project_id",  null: false
-    t.string   "locale",      null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.uuid     "project_id",   null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "subtitle"
+    t.text     "introduction"
     t.text     "description"
   end
 
@@ -108,12 +111,13 @@ ActiveRecord::Schema.define(version: 20150902110000) do
   add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id", using: :btree
 
   create_table "projects", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.string   "title",       null: false
+    t.string   "title",        null: false
     t.string   "subtitle"
     t.string   "url"
-    t.integer  "year"
+    t.text     "introduction"
     t.text     "description"
     t.string   "thumbnail"
+    t.integer  "year"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
