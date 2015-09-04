@@ -1,33 +1,21 @@
-YAML.load_file('db/team.yml')['team'].each do |params|
-  params.symbolize_keys!
-  introduction = params.delete(:introduction)
-  params.merge! Hash[
-    introduction.map { |key, value| ["introduction_#{key}", value] }
-  ]
-  Person.create!(params)
+require 'oj'
+
+hash = Oj.load(File.read('db/data.json'), symbol_keys: true)
+
+hash[:projects].each do |params|
+  Project.where(title: params[:title]).first_or_create(params)
 end
 
-YAML.load_file('db/projects.yml')['projects'].each do |hash|
-  hash.symbolize_keys!
-  project = Project.create(title: hash.delete(:title))
-
-  hash.each do |key, value|
-    value.symbolize_keys.each do |locale, text|
-      I18n.locale = locale
-      project.send("#{key}=", text)
-      project.save
+hash[:team].each do |params|
+  contributions = params.delete(:contributions) || []
+  person = Person.where(fullname: params[:fullname]).first_or_create(params)
+  contributions.each do |project_params|
+    title = project_params.delete(:title)
+    project = Project.find_by(title: title)
+    project_params[:names].each do |name|
+      item = name[:name] || name[:name_en]
+      options = { person_id: person.id, project_id: project.id, name: item }
+      Contribution.where(options).first_or_create(name)
     end
-  end
-end
-
-YAML.load_file('db/contributions.yml')['contributions'].each do |hash|
-  hash.symbolize_keys!
-  project = Project.find_by(title: hash.delete(:project_title))
-  person = Person.find_by(fullname: hash.delete(:person_fullname))
-
-  hash[:names].each do |translations|
-    params = { project: project, person: person }
-    params.merge! Hash[translations.map { |key, name| ["name_#{key}", name] }]
-    Contribution.create!(params)
   end
 end

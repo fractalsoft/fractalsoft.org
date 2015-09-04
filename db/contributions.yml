@@ -8,13 +8,13 @@ contributions:
       - en: Database design
         pl: Architektura bazy danych
 
-  - project_title: advertising
+  - project_title: advertising app
     person_fullname: Agnieszka Matysek
     names:
       - en: Upgrade Rails and Ruby version
         pl: Aktualizacja wersji Ruby on Rails
 
-  - project_title: advertising
+  - project_title: advertising app
     person_fullname: Urszula Hołodniak
     names:
       - en: Backend architecture
