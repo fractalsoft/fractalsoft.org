@@ -42,7 +42,7 @@
           ]
         },
         {
-          "title": "Linguistic analysis",
+          "title": "linguistic analysis",
           "names": [
             { "name": "Backend development in Rails 4.1" },
             { "name": "Upgrade Rails and Ruby version" },
@@ -51,7 +51,7 @@
           ]
         },
         {
-          "title": "Wordmaker",
+          "title": "wordmaker",
           "names": [
             { "name": "Backend architecture" },
             { "name": "Database design" },
@@ -81,7 +81,7 @@
           ]
         },
         {
-          "title": "Linguistic analysis",
+          "title": "linguistic analysis",
           "names": [
             { "name": "Backend development" },
             { "name": "Frontend development" }
@@ -91,7 +91,6 @@
     },
     {
       "fullname": "Grzegorz Lisowski",
-      "nickname": "womanonrails",
       "position": "developer",
       "image": "team/glisowski.jpg",
       "github": "noplisu",
@@ -153,7 +152,7 @@
           ]
         },
         {
-          "title": "Linguistic analysis",
+          "title": "linguistic analysis",
           "names": [
             { "name": "Backend development in Ruby on Rails" },
             { "name": "Database design architecture" },
@@ -164,7 +163,7 @@
           ]
         },
         {
-          "title": "Wordmaker",
+          "title": "wordmaker",
           "names": [
             { "name": "Architecture and implementation of most of application the functionality" },
             { "name": "Ruby on Rails development and deployment" },
@@ -181,7 +180,7 @@
       "subtitle_pl": "aplikacja oparta o&nbsp;mikroserwisy",
       "url": "hitdea.com",
       "introduction": "Collaborative web-based platform to idea management. It allows to empower people to gather ideas but also process them in creative, productive and simple way. Based on the methodology CPS&nbsp;6.1 (Creative Problem Solving).",
-      "introduction_pl": "Oparty o współpracę system do zarządzania pomysłami. Wspiera kreatywną pracę indywidualna i&nbsp;zespołową. Bazuje na metodologii CPS 6.1&nbsp;(Creative Problem Solving).",
+      "introduction_pl": "Platforma internetowa do zarządzania pomysłami. Umożliwia użytkownikom zbierać pomysły oraz przetwarzać je w kreatywny, wydajny i prosty sposób. Bazuje na metodologii CPS 6.1&nbsp;(Creative Problem Solving).",
       "description_en": "",
       "description_pl": "",
       "thumbnail": "",
@@ -195,14 +194,14 @@
       "year": 2014
     },
     {
-      "title": "Linguistic analysis",
+      "title": "linguistic analysis",
       "url": "analysis.hitdea.com",
       "introduction": "Linguistic analysis system is used for word processing and automatic detection category. The application can also detect the language of text. The database contains over 6 million words in Polish and English. System enables learning mode with a teacher and categorization is based on statistical methods. Application provides external API.",
       "introduction_pl": "System analizy językowej służy do przetwarzania tekstów i automatycznego wykrycia kategorii. Aplikacja umożliwia również wykrywanie języka tekstu. Baza zawiera ponad 6 milionów słów w&nbsp;języku polskim i angielskim. System umożliwia włączenie trybu nauki z nauczycielem, a&nbsp;kategoryzacja oparta jest o metody statystyczne. Aplikacja udostępnia API zewnętrzne.",
       "year": 2014
     },
     {
-      "title": "Wordmaker",
+      "title": "wordmaker",
       "url": "game-hitdea.herokuapp.com",
       "introduction": "Game of words based on English and Polish languages. Creation as many different words as possible from randomly selected letters. Word verification uses an external API linguistic analysis.",
       "introduction_pl": "Gra w słowa oparta o język angielski i polski. Stworzenie jak najwięcej różnych słów z losowo wybranych liter. Weryfikacja słowa wykorzytuje zewnętrzne API systemu analizy językowej.",
