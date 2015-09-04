@@ -13,6 +13,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :email
       t.string :skills, default: ''
       t.string :technologies, default: ''
+      t.string :saying
       t.text :introduction
       t.text :description
       t.string :slug, index: true

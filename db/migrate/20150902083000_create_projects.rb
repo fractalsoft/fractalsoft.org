@@ -4,9 +4,10 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title, null: false
       t.string :subtitle
       t.string :url
-      t.integer :year
+      t.text :introduction
       t.text :description
       t.string :thumbnail
+      t.integer :year
       t.timestamps
     end
   end

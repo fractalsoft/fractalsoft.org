@@ -1,6 +1,6 @@
 class TranslatePeople < ActiveRecord::Migration
   def up
-    Person.create_translation_table! introduction: :text
+    Person.create_translation_table!(saying: :string, introduction: :text)
   end
 
   def down
