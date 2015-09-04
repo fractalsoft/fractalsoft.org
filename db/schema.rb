@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150802211806) do
+ActiveRecord::Schema.define(version: 20150902110000) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
+
+  create_table "contribution_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid     "contribution_id", null: false
+    t.string   "locale",          null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "name"
+  end
+
+  add_index "contribution_translations", ["contribution_id"], name: "index_contribution_translations_on_contribution_id", using: :btree
+  add_index "contribution_translations", ["locale"], name: "index_contribution_translations_on_locale", using: :btree
+
+  create_table "contributions", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid     "person_id"
+    t.uuid     "project_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "contributions", ["person_id"], name: "index_contributions_on_person_id", using: :btree
+  add_index "contributions", ["project_id"], name: "index_contributions_on_project_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -21,57 +47,75 @@ ActiveRecord::Schema.define(version: 20150802211806) do
     t.datetime "created_at"
   end
 
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "images", force: :cascade do |t|
+  create_table "images", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string   "image"
     t.string   "kind"
-    t.integer  "project_id"
+    t.uuid     "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "images", ["project_id"], name: "index_images_on_project_id"
+  add_index "images", ["project_id"], name: "index_images_on_project_id", using: :btree
 
-  create_table "people", force: :cascade do |t|
-    t.string   "fullname"
-    t.text     "description"
+  create_table "people", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.string   "nickname"
+    t.string   "fullname",                  null: false
     t.string   "position"
     t.string   "image"
-    t.string   "website"
-    t.string   "facebook"
-    t.string   "twitter"
     t.string   "github"
+    t.string   "blog"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "website"
     t.string   "email"
+    t.string   "skills",       default: ""
+    t.string   "technologies", default: ""
+    t.string   "saying"
+    t.text     "introduction"
+    t.text     "description"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "blog"
-    t.text     "introduction"
-    t.string   "slug"
-    t.string   "nickname"
   end
 
-  add_index "people", ["slug"], name: "index_people_on_slug"
+  add_index "people", ["slug"], name: "index_people_on_slug", using: :btree
 
-  create_table "person_translations", force: :cascade do |t|
-    t.integer  "person_id",    null: false
+  create_table "person_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid     "person_id",    null: false
     t.string   "locale",       null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "saying"
     t.text     "introduction"
   end
 
-  add_index "person_translations", ["locale"], name: "index_person_translations_on_locale"
-  add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id"
+  add_index "person_translations", ["locale"], name: "index_person_translations_on_locale", using: :btree
+  add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id", using: :btree
 
-  create_table "projects", force: :cascade do |t|
-    t.string   "title"
+  create_table "project_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid     "project_id",   null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "subtitle"
+    t.text     "introduction"
     t.text     "description"
+  end
+
+  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale", using: :btree
+  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id", using: :btree
+
+  create_table "projects", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.string   "title",        null: false
+    t.string   "subtitle"
     t.string   "url"
+    t.text     "introduction"
+    t.text     "description"
     t.string   "thumbnail"
     t.integer  "year"
     t.datetime "created_at"

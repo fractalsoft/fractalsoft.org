@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.3'
 
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.4'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -18,6 +18,7 @@ gem 'draper'
 gem 'foreman'
 gem 'friendly_id'
 gem 'globalize'
+gem 'globalize-accessors'
 gem 'html5shiv-js-rails'
 gem 'http_accept_language'
 gem 'mail_form'
@@ -25,8 +26,10 @@ gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
+gem 'newrelic_rpm'
 gem 'normalize-rails'
 gem 'oj'
+gem 'pg'
 gem 'puma'
 gem 'rack-attack'
 gem 'rails-i18n'
@@ -39,6 +42,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
+  gem 'bullet'
   gem 'capistrano-rails'
   gem 'letter_opener'
   gem 'quiet_assets'
@@ -61,10 +65,11 @@ end
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
   gem 'unicorn'
 end
