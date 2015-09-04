@@ -1,15 +1,14 @@
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: fractalsoft_development
 
 test: &test
   <<: *default
-  database: db/test.sqlite3
+  database: fractalsoft_test
 
 cucumber:
   <<: *test
@@ -17,7 +16,6 @@ cucumber:
 production:
   adapter: postgresql
   encoding: unicode
-  host: localhost
   database: <%= ENV['DATABASE_NAME'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
