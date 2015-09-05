@@ -2,6 +2,14 @@
 .cgi
 .php
 /admin
+/blog
+/cgi-bin/test-cgi
+/manager/html
+/muieblackcat
 /phpmyadmin
+/rom-0
 /translate_c
+/wordpress
 /wp-login
+/xmlrpc.php
+editor/
