@@ -1,3 +1,4 @@
+# Contribution class
 class Contribution < ActiveRecord::Base
   translates :name, :string
   globalize_accessors locales: I18n.available_locales,
