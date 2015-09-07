@@ -1,11 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe PersonDecorator, type: :decorator do
+  let(:person) { create(:person, params) }
+  let(:decorator) { PersonDecorator.decorate(person) }
+
   describe '#email' do
     let(:email) { 'do-not-spam@fractalsoft.org' }
     let(:css_class) { 'icons-email' }
-    let(:person) { create(:person, params) }
-    let(:decorator) { PersonDecorator.decorate(person) }
 
     context 'exist' do
       let(:params) { { email: email } }
@@ -27,67 +28,83 @@ RSpec.describe PersonDecorator, type: :decorator do
   describe '#facebook' do
     let(:facebook) { 'fractalsoft' }
     let(:css_class) { 'icons-facebook' }
-    let(:params) { { facebook: facebook } }
 
-    it 'shows facebook if exist' do
-      person = create(:person, params)
-      decorator = PersonDecorator.decorate(person)
-      expect(decorator.facebook).to include facebook, css_class
+    context 'exist' do
+      let(:params) { { facebook: facebook } }
+
+      it 'shows facebook' do
+        expect(decorator.facebook).to include facebook, css_class
+      end
     end
 
-    it 'shows nothing when facebook not exist' do
-      person = create(:person)
-      decorator = PersonDecorator.decorate(person)
-      expect(decorator.facebook).to be_nil
+    context 'not exist' do
+      let(:params) { {} }
+
+      it 'shows nothing when facebook' do
+        expect(decorator.facebook).to be_nil
+      end
     end
   end
 
   describe '#github' do
     let(:github) { 'fractalsoft' }
     let(:css_class) { 'icons-github' }
-    let(:params) { { github: github } }
 
-    it 'shows github if exist' do
-      person = create(:person, params)
-      decorator = PersonDecorator.decorate(person).github
-      expect(decorator).to include github, css_class
+    context 'exist' do
+      let(:params) { { github: github } }
+
+      it 'shows github' do
+        expect(decorator.github).to include github, css_class
+      end
     end
 
-    it 'shows nothing when github not exist' do
-      person = create(:person)
-      expect(PersonDecorator.decorate(person).github).to be_nil
+    context 'not exist' do
+      let(:params) { {} }
+
+      it 'shows nothing when github' do
+        expect(decorator.github).to be_nil
+      end
     end
   end
 
   describe '#twitter' do
     let(:twitter) { 'fractal_soft' }
     let(:css_class) { 'icons-twitter' }
-    let(:params) { { twitter: twitter } }
 
-    it 'shows twitter if exist' do
-      person = create(:person, params)
-      decorator = PersonDecorator.decorate(person).twitter
-      expect(decorator).to include twitter, css_class
+    context 'exist' do
+      let(:params) { { twitter: twitter } }
+
+      it 'shows twitter if exist' do
+        expect(decorator.twitter).to include twitter, css_class
+      end
     end
 
-    it 'shows nothing when twitter not exist' do
-      person = create(:person)
-      expect(PersonDecorator.decorate(person).twitter).to be_nil
+    context 'not exist' do
+      let(:params) { {} }
+
+      it 'shows nothing when twitter' do
+        expect(decorator.twitter).to be_nil
+      end
     end
   end
 
   describe '#website' do
     let(:website) { 'http://fractalsoft.org' }
 
-    it 'shows website if exist' do
-      person = create(:person, website: website)
-      decorator = PersonDecorator.decorate(person).website
-      expect(decorator).to include website, 'href'
+    context 'exist' do
+      let(:params) { { website: website } }
+
+      it 'shows website' do
+        expect(decorator.website).to include website, 'href'
+      end
     end
 
-    it 'shows nothing when website not exist' do
-      person = create(:person)
-      expect(PersonDecorator.decorate(person).website).to be_nil
+    context 'not exist' do
+      let(:params) { {} }
+
+      it 'shows nothing when website' do
+        expect(decorator.website).to be_nil
+      end
     end
   end
 end
