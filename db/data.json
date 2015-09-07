@@ -128,46 +128,46 @@
         {
           "title": "hitdea",
           "names": [
-            { "name": "Backend development in Ruby on Rails 4.2" },
-            { "name": "Project management" },
+            { "name": "Backend development in Ruby on Rails 4.2", "name_pl": "Rozwój aplikacji w Ruby on Rails 4.2 po stronie serwerowej" },
+            { "name": "Project management", "name_pl": "Zarządzanie projektem" },
             { "name": "SOA design & development" },
-            { "name": "Database design" },
-            { "name": "UX development" },
-            { "name": "Deployment to production" },
-            { "name": "Bash scripts to automate workflow" },
-            { "name": "Code refactoring" },
-            { "name": "Bug resolving" },
-            { "name": "Taking care of software update (Ruby, Rails, gems)" },
+            { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
+            { "name": "UX development", "name_pl": "Rozwój UX" },
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" },
+            { "name": "Bash scripts to automate workflow", "name_pl": "Skrypty bash do automatyzacji procesów" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" },
+            { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
+            { "name": "Taking care of software update (Ruby, Rails, gems)", "name_pl": "Dbanie o aktualizacje oprogramowania (Ruby, Rails, gems)" },
             { "name": "Assistance to choosing of technology" },
-            { "name": "Data migration from MySQL to PostgreSQL" }
+            { "name": "Data migration from MySQL to PostgreSQL", "name_pl": "Migracja danych z bazy MySQL do PostgreSQL" }
           ]
         },
         {
           "title": "advertising app",
           "names": [
-            { "name": "Ruby on Rails development" },
-            { "name": "Architecture design" },
-            { "name": "Code refactoring" },
-            { "name": "Production deployment" }
+            { "name": "Ruby on Rails development", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Architecture design", "name_pl": "Projektowanie architektury" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" },
+            { "name": "Production deployment", "name_pl": "Wdrożenie na produkcję" }
           ]
         },
         {
           "title": "linguistic analysis",
           "names": [
-            { "name": "Backend development in Ruby on Rails" },
-            { "name": "Database design architecture" },
-            { "name": "Code refactoring" },
-            { "name": "Upgrade Ruby and Rails" },
-            { "name": "Testing and production deployment" },
-            { "name": "Development & production environment setup (MySQL, Solr)" }
+            { "name": "Backend development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails po stronie serwerowej" },
+            { "name": "Database design architecture", "name_pl": "Projektowanie architektury bazy danych" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" },
+            { "name": "Upgrade Ruby and Rails", "name_pl": "Aktualizacje języka Ruby i frameworku Rails" },
+            { "name": "Testing and production deployment", "name_pl": "Testowanie i wdrożenie na produkcję" },
+            { "name": "Development & production environment setup (MySQL, Solr)", "name_pl": "Ustawienie środowiska programistycznego i produkcyjnego (MySQL, Solr)" }
           ]
         },
         {
           "title": "wordmaker",
           "names": [
-            { "name": "Architecture and implementation of most of application the functionality" },
-            { "name": "Ruby on Rails development and deployment" },
-            { "name": "Extraction of generic functionality to gems" }
+            { "name": "Architecture and implementation of most of application the functionality", "name_pl": "Architektura i implementacja większości funkcjonalności" },
+            { "name": "Ruby on Rails development and deployment", "name_pl": "Rozwój i wdrożenie aplikacji w Ruby on Rails" },
+            { "name": "Extraction of generic functionality to gems", "name_pl": "Wydzielenie ogólnych funkcjonalności do gemów" }
           ]
         }
       ]
