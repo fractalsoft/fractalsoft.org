@@ -1,9 +1,9 @@
 <div class='col-md-3 col-sm-6 col-xs-12'>
   <%= link_to person_path(id: person) do %>
     <div class='thumbnail'>
-      <%= image_tag person.image %>
+      <%= person.image %>
       <h3><%= person.fullname %></h3>
-      <p class='text-center'><%= raw person.introduction %></p>
+      <p class='text-center'><%= person.introduction %></p>
       <ul class='social list-inline'>
         <%= person.github %>
         <%= person.blog %>
