@@ -19,6 +19,10 @@ class Rack::Attack
     request.ip =~ ips_regexp
   end
 
+  Rack::Attack.blacklist('Block naughty bots <ip>') do |request|
+    Rails.cache.fetch("block #{request.ip}").blank?
+  end
+
   paths = File.read("#{blacklist_folder}/path.txt").split("\n")
   paths_regexp = Regexp.union(paths)
   blacklist('Block bad paths') do |request|
