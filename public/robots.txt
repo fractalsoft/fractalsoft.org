@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /trap
 Disallow: /assets
 
 # SEO Crawlers
