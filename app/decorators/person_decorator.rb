@@ -14,6 +14,28 @@ class PersonDecorator < Draper::Decorator
     given :email, :mail_to, &content
   end
 
+  def image
+    image_tag object.image
+  end
+
+  def introduction
+    raw person.introduction
+  end
+
+  def project_with_contributions(project)
+    person.project_with_contributions(project).map(&:name)
+  end
+
+  def skills
+    array = person.skill_list
+    render 'people/skills', skills: array unless array.empty?
+  end
+
+  def technologies
+    array = person.technology_list
+    render 'people/technologies', technologies: array unless array.empty?
+  end
+
   def website
     given :website do
       link_to object.website, object.website
