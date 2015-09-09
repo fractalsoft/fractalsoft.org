@@ -14,4 +14,8 @@ module ApplicationHelper
   def locale_names
     @locale_names ||= Hash[locale_name_pairs]
   end
+
+  def trap_link
+    link_to '', trap_path
+  end
 end

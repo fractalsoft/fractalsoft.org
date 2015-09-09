@@ -20,6 +20,7 @@
   <%= csrf_meta_tags unless @page_caching %>
 </head>
 <body class='<%= yield(:body_class) %>'>
+<%= trap_link %>
 <a href="http://english-1441460220.spampoison.com" class='hidden'>Fight Spam! Click Here!</a>
 <%= render 'layouts/shared/header' %>
 <%= yield %>
