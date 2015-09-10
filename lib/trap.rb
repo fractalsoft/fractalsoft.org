@@ -20,8 +20,8 @@ class Trap
   end
 
   def reset
-    traps = CSV.read(filename, col_sep: ';')
-    traps = traps.transpose[0].try(:uniq) || []
+    FileUtils.touch(filename) unless File.exist?(filename)
+    traps = CSV.read(filename, col_sep: ';').transpose[0].try(:uniq) || []
     traps.each do |ip|
       Rails.cache.write("block #{ip}", true, expires_in: 1.year)
     end
