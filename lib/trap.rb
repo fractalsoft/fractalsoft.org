@@ -28,6 +28,6 @@ class Trap
   end
 
   def filename
-    @filename ||= Rails.root.join('tmp', 'antibot', 'bots.csv')
+    @filename ||= Rails.root.join('tmp', 'antibot', "bots_#{Rails.env}.csv")
   end
 end
