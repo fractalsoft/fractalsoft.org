@@ -20,7 +20,7 @@ class Rack::Attack
   end
 
   Rack::Attack.blacklist('Block naughty bots <ip>') do |request|
-    Rails.cache.fetch("block #{request.ip}").blank?
+    Rails.cache.fetch("block #{request.ip}").present?
   end
 
   paths = File.read("#{blacklist_folder}/path.txt").split("\n")
