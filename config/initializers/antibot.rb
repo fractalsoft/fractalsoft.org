@@ -1,3 +1,3 @@
-require "#{__dir__}/../../lib/trap"
+require "#{__dir__}/../../lib/antibot"
 
-Trap.new.reset if defined? Trap
+Antibot::Trap.new.load if defined? Antibot::Trap
