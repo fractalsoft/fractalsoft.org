@@ -1,3 +1,3 @@
-require "#{__dir__}/../../lib/antibot"
+require "#{Rails.root}/lib/antibot"
 
-Antibot::Trap.new.load if defined? Antibot::Trap
+Antibot::Trap.instance.load if defined? Antibot::Trap
