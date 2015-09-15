@@ -5,10 +5,11 @@
       "nickname": "womanonrails",
       "position": "developer",
       "image": "team/amatysek.jpg",
-      "github": "womanonrails",
       "blog": "http://womanonrails.com",
+      "github": "womanonrails",
       "twitter": "womanonrails",
       "facebook": "agnieszka.matysek.3",
+      "instagram": "womanonrails",
       "skills": "Backend Developer, Frontend Developer, Refactoring, TDD, Agile, Git, Teamwork, SOA",
       "technologies": "Ruby, Ruby on Rails, PostgreSQL, MySQL, JavaScript, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, RSpec",
       "saying": "<q>Premature optimization is the root of all evil.</q> <cite>Donald Knuth</cite>",
@@ -91,7 +92,7 @@
           "names": [
             { "name": "Database design architecture" },
             { "name": "Backend development in Ruby on Rails" },
-            { "name": "Frontend development (jQuery, Bootstrap)" }
+            { "name": "Frontend development (jQuery, Bootstrap)" },
             { "name": "Code refactoring" },
             { "name": "Testing" },
             { "name": "Needs analysis" },
@@ -154,6 +155,7 @@
       "github": "torrocus",
       "twitter": "torrocus",
       "facebook": "torrocus",
+      "instagram": "torrocus",
       "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration",
       "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, MySQL, RSpec, HTML5, CSS3, CoffeeScript, JavaScript, EmberJS",
       "saying_en": "<q>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</q> <cite>Antoine de Saint Exupéry</cite>",
@@ -205,6 +207,13 @@
             { "name": "Architecture and implementation of most of application the functionality", "name_pl": "Architektura i implementacja większości funkcjonalności" },
             { "name": "Ruby on Rails development and deployment", "name_pl": "Rozwój i wdrożenie aplikacji w Ruby on Rails" },
             { "name": "Extraction of generic functionality to gems", "name_pl": "Wydzielenie ogólnych funkcjonalności do gemów" }
+          ]
+        },
+        {
+          "title": "20 questions game",
+          "names": [
+            { "name": "Project management", "name_pl": "Zarządzanie projektem" },
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
           ]
         }
       ]
