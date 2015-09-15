@@ -16,6 +16,6 @@ module ApplicationHelper
   end
 
   def trap_link
-    link_to '', Antibot::Config.trap_path
+    link_to '', Antibot::Trap.instance.path, class: 'hidden'
   end
 end
