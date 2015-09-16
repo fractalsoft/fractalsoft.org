@@ -5,10 +5,11 @@
       "nickname": "womanonrails",
       "position": "developer",
       "image": "team/amatysek.jpg",
-      "github": "womanonrails",
       "blog": "http://womanonrails.com",
+      "github": "womanonrails",
       "twitter": "womanonrails",
       "facebook": "agnieszka.matysek.3",
+      "instagram": "womanonrails",
       "skills": "Backend Developer, Frontend Developer, Refactoring, TDD, Agile, Git, Teamwork, SOA",
       "technologies": "Ruby, Ruby on Rails, PostgreSQL, MySQL, JavaScript, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, RSpec",
       "saying": "<q>Premature optimization is the root of all evil.</q> <cite>Donald Knuth</cite>",
@@ -20,45 +21,45 @@
         {
           "title": "hitdea",
           "names": [
-            { "name": "Backend architecture" },
+            { "name": "Backend architecture", "name_pl": "Architektura części serwerowej" },
             { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
-            { "name": "Build API based on JSON API" },
-            { "name": "Backend development in Rails 4.x" },
-            { "name": "Frontend development (Ember.js, jQuery, Bootstrap)" },
-            { "name": "API integration" },
-            { "name": "Upgrade Rails and Ruby version" },
-            { "name": "Browsers data synchronization using faye" }
+            { "name": "Build API based on JSON API", "name_pl": "Tworzenie API opartego na JSON API" },
+            { "name": "Backend development in Rails 4.x", "name_pl": "Rozwój Backendu w Ruby on Rails 4.1" },
+            { "name": "Frontend development (Ember.js, jQuery, Bootstrap)", "name_pl": "Rozwój Frontendu (Ember.js, jQuery, Boostrap)" },
+            { "name": "API integration", "name_pl": "Integracja z API" },
+            { "name": "Upgrade Rails and Ruby version", "name_pl": "Aktualizacje wersji Rails i Ruby" },
+            { "name": "Browsers data synchronization using faye", "name_pl": "Synchronizacja danych przeglądarki przy użyciu faye" }
           ]
         },
         {
           "title": "advertising app",
           "names": [
-            { "name": "Backend architecture" },
-            { "name": "Database design" },
-            { "name": "Upgrade Rails and Ruby version" },
-            { "name": "Backend development in Rails 4.1" },
-            { "name": "Frontend development (jQuery, Bootstrap)" },
-            { "name": "API integration" }
+            { "name": "Backend architecture", "name_pl": "Architektura części serwerowej" },
+            { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
+            { "name": "Upgrade Rails and Ruby version", "name_pl": "Aktualizacje wersji Rails i Ruby" },
+            { "name": "Backend development in Rails 4.1", "name_pl": "Rozwój Backendu w Ruby on Rails 4.1" },
+            { "name": "Frontend development (jQuery, Bootstrap)", "name_pl": "Rozwój Frontendu (jQuery, Boostrap)" },
+            { "name": "API integration", "name_pl": "Integracja z API" }
           ]
         },
         {
           "title": "linguistic analysis",
           "names": [
-            { "name": "Backend development in Rails 4.1" },
-            { "name": "Upgrade Rails and Ruby version" },
-            { "name": "Solr optimization" },
-            { "name": "Code refactoring and optimization" }
+            { "name": "Backend development in Rails 4.1", "name_pl": "Rozwój Backendu w Ruby on Rails 4.1" },
+            { "name": "Upgrade Rails and Ruby version", "name_pl": "Aktualizacje wersji Rails i Ruby" },
+            { "name": "Solr optimization", "name_pl": "Optymalizacja działania Solr" },
+            { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" }
           ]
         },
         {
           "title": "wordmaker",
           "names": [
-            { "name": "Backend architecture" },
-            { "name": "Database design" },
-            { "name": "API integration" },
-            { "name": "Frontend development (jQuery, Bootstrap)" },
-            { "name": "Backend development in Rails 4.1" },
-            { "name": "Upgrade Rails and Ruby version" }
+            { "name": "Backend architecture", "name_pl": "Architektura części serwerowej" },
+            { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
+            { "name": "API integration", "name_pl": "Integracja z API" },
+            { "name": "Frontend development (jQuery, Bootstrap)", "name_pl": "Rozwój Frontendu (jQuery, Boostrap)" },
+            { "name": "Backend development in Rails 4.1", "name_pl": "Rozwój Backendu w Ruby on Rails 4.1" },
+            { "name": "Upgrade Rails and Ruby version", "name_pl": "Aktualizacje wersji Rails i Ruby" }
           ]
         }
       ]
@@ -69,6 +70,8 @@
       "image": "team/uholodniak.jpg",
       "github": "shad8",
       "twitter": "8shad8",
+      "skills": "Backend Development, Frontend Development, API Design, Refactoring, Testing, Git, Photography",
+      "technologies": "Ruby, Ruby on Rails, Java Script, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, MySQL, PostgreSQL, Cordova",
       "introduction_en": "<strong>Ruby geek in 150%.</strong> Conscientious and involved developer with the soul of an artist photographer. Participant and then mentor and organizer of Rails Girls workshops.",
       "introduction_pl": "<strong>Ruby geek na 150%.</strong> Sumienny i zaangażowany programista z duszą fotografa artysty. Uczestniczka a następnie mentor i organizator warsztatów Rails Girls.",
       "description": "Ruby on Rails developer",
@@ -76,26 +79,38 @@
         {
           "title": "hitdea",
           "names": [
-            { "name": "Backend development" },
-            { "name": "Frontend development" }
+            { "name": "Backend development in Ruby on Rails 4.2" },
+            { "name": "Frontend development" },
+            { "name": "API building" },
+            { "name": "User authorization" },
+            { "name": "Code refactoring" },
+            { "name": "Testing" }
           ]
         },
         {
           "title": "linguistic analysis",
           "names": [
-            { "name": "Backend development" },
-            { "name": "Frontend development" }
+            { "name": "Database design architecture" },
+            { "name": "Backend development in Ruby on Rails" },
+            { "name": "Frontend development (jQuery, Bootstrap)" },
+            { "name": "Code refactoring" },
+            { "name": "Testing" },
+            { "name": "Needs analysis" },
+            { "name": "Solr implementing and configuration" }
           ]
         }
       ]
     },
     {
       "fullname": "Grzegorz Lisowski",
+      "nickname": "lisu",
       "position": "developer",
       "image": "team/glisowski.jpg",
       "github": "noplisu",
       "twitter": "noplisu",
       "facebook": "lisux",
+      "skills": "Backend Development, Frondend Development, Application Architecture, API Design, Refactoring, Visualization",
+      "technologies": "Ruby, Ruby on Rails, JavaScript, EmberJS, C#, Unity3D, Cordova",
       "introduction_en": "<strong>Rails programmer open to different technologies.</strong> Expert in unsolvable challenges. Passionate gamer, game creator and regular participant of Global Game Jam.",
       "introduction_pl": "<strong>Programista Rails otwarty na różne technologie.</strong> Ekspert od problemów. Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.",
       "description": "Ruby on Rails developer",
@@ -103,8 +118,31 @@
         {
           "title": "hitdea",
           "names": [
-            { "name": "Backend development" },
-            { "name": "Frontend development" }
+            { "name": "Backend development (Ruby on Rails, Cordova)" },
+            { "name": "Developing Cordova application" },
+            { "name": "Frontend development (Ember.js)" },
+            { "name": "Developing microservice architecture" },
+            { "name": "Developing API" }
+          ]
+        },
+        {
+          "title": "linguistic analysis",
+          "names": [
+            { "name": "Backend development in Ruby on Rails" }
+          ]
+        },
+        {
+          "title": "20 questions game",
+          "names": [
+            { "name": "Backend development in Ruby on Rails" },
+            { "name": "Frontend development" },
+            { "name": "Designing and implementation of the game logic" },
+            { "name": "Implementation of an administration panel" },
+            { "name": "Database design" },
+            { "name": "Writing unit and acceptance tests" },
+            { "name": "Creating translations" },
+            { "name": "Taking care of framework updates" },
+            { "name": "Designing zero state application" }
           ]
         }
       ]
@@ -117,6 +155,7 @@
       "github": "torrocus",
       "twitter": "torrocus",
       "facebook": "torrocus",
+      "instagram": "torrocus",
       "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration",
       "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, MySQL, RSpec, HTML5, CSS3, CoffeeScript, JavaScript, EmberJS",
       "saying_en": "<q>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</q> <cite>Antoine de Saint Exupéry</cite>",
@@ -128,46 +167,53 @@
         {
           "title": "hitdea",
           "names": [
-            { "name": "Backend development in Ruby on Rails 4.2" },
-            { "name": "Project management" },
-            { "name": "SOA design & development" },
-            { "name": "Database design" },
-            { "name": "UX development" },
-            { "name": "Deployment to production" },
-            { "name": "Bash scripts to automate workflow" },
-            { "name": "Code refactoring" },
-            { "name": "Bug resolving" },
-            { "name": "Taking care of software update (Ruby, Rails, gems)" },
-            { "name": "Assistance to choosing of technology" },
-            { "name": "Data migration from MySQL to PostgreSQL" }
+            { "name": "Backend development in Ruby on Rails 4.2", "name_pl": "Rozwój aplikacji w Ruby on Rails 4.2 po stronie serwerowej" },
+            { "name": "Project management", "name_pl": "Zarządzanie projektem" },
+            { "name": "SOA design & development", "name_pl": "Projektowanie i wdrożenie SOA" },
+            { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
+            { "name": "UX development", "name_pl": "Rozwój UX" },
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" },
+            { "name": "Bash scripts to automate workflow", "name_pl": "Skrypty bash do automatyzacji procesów" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" },
+            { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
+            { "name": "Taking care of software update (Ruby, Rails, gems)", "name_pl": "Dbanie o aktualizacje oprogramowania (Ruby, Rails, gems)" },
+            { "name": "Assistance to choosing of technology", "name_pl": "Pomoc w wyborze technologii" },
+            { "name": "Data migration from MySQL to PostgreSQL", "name_pl": "Migracja danych z bazy MySQL do PostgreSQL" }
           ]
         },
         {
           "title": "advertising app",
           "names": [
-            { "name": "Ruby on Rails development" },
-            { "name": "Architecture design" },
-            { "name": "Code refactoring" },
-            { "name": "Production deployment" }
+            { "name": "Ruby on Rails development", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Architecture design", "name_pl": "Projektowanie architektury" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" },
+            { "name": "Production deployment", "name_pl": "Wdrożenie na produkcję" }
           ]
         },
         {
           "title": "linguistic analysis",
           "names": [
-            { "name": "Backend development in Ruby on Rails" },
-            { "name": "Database design architecture" },
-            { "name": "Code refactoring" },
-            { "name": "Upgrade Ruby and Rails" },
-            { "name": "Testing and production deployment" },
-            { "name": "Development & production environment setup (MySQL, Solr)" }
+            { "name": "Backend development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails po stronie serwerowej" },
+            { "name": "Database design architecture", "name_pl": "Projektowanie architektury bazy danych" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" },
+            { "name": "Upgrade Ruby and Rails", "name_pl": "Aktualizacje języka Ruby i frameworku Rails" },
+            { "name": "Testing and production deployment", "name_pl": "Testowanie i wdrożenie na produkcję" },
+            { "name": "Development & production environment setup (MySQL, Solr)", "name_pl": "Ustawienie środowiska programistycznego i produkcyjnego (MySQL, Solr)" }
           ]
         },
         {
           "title": "wordmaker",
           "names": [
-            { "name": "Architecture and implementation of most of application the functionality" },
-            { "name": "Ruby on Rails development and deployment" },
-            { "name": "Extraction of generic functionality to gems" }
+            { "name": "Architecture and implementation of most of application the functionality", "name_pl": "Architektura i implementacja większości funkcjonalności" },
+            { "name": "Ruby on Rails development and deployment", "name_pl": "Rozwój i wdrożenie aplikacji w Ruby on Rails" },
+            { "name": "Extraction of generic functionality to gems", "name_pl": "Wydzielenie ogólnych funkcjonalności do gemów" }
+          ]
+        },
+        {
+          "title": "20 questions game",
+          "names": [
+            { "name": "Project management", "name_pl": "Zarządzanie projektem" },
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
           ]
         }
       ]
@@ -179,7 +225,7 @@
       "subtitle_en": "based on microservices",
       "subtitle_pl": "aplikacja oparta o&nbsp;mikroserwisy",
       "url": "hitdea.com",
-      "introduction": "Collaborative web-based platform to idea management. It allows to empower people to gather ideas but also process them in creative, productive and simple way. Based on the methodology CPS&nbsp;6.1 (Creative Problem Solving).",
+      "introduction": "Collaborative web-based platform for idea management. It allows to empower people to gather ideas but also process them in a creative, productive and simple way. Based on the methodology CPS&nbsp;6.1 (Creative Problem Solving).",
       "introduction_pl": "Platforma internetowa do zarządzania pomysłami. Umożliwia użytkownikom zbierać pomysły oraz przetwarzać je w kreatywny, wydajny i prosty sposób. Bazuje na metodologii CPS 6.1&nbsp;(Creative Problem Solving).",
       "description_en": "",
       "description_pl": "",
@@ -189,22 +235,28 @@
     {
       "title": "advertising app",
       "url": "marketing-hitdea.herokuapp.com",
-      "introduction": "Contextual advertising management. It uses API of linguistic analysis application and allows define target group.",
+      "introduction": "Contextual advertising management. It uses API of linguistic analysis application and allows to define target group.",
       "introduction_pl": "Aplikacja do zarządzania reklamą kontekstową. Wykorzystuje API aplikacji do analizy językowej oraz umożliwia określić grupę docelową.",
       "year": 2014
     },
     {
       "title": "linguistic analysis",
       "url": "analysis.hitdea.com",
-      "introduction": "Linguistic analysis system is used for word processing and automatic detection category. The application can also detect the language of text. The database contains over 6 million words in Polish and English. System enables learning mode with a teacher and categorization is based on statistical methods. Application provides external API.",
+      "introduction": "Linguistic analysis system is used for word processing and automatic category detection. The application can also detect the language of the text. The database contains over 6 million words in Polish and English. The system has a learning mode with a teacher and the categorization is based on statistical methods. Application provides an external API.",
       "introduction_pl": "System analizy językowej służy do przetwarzania tekstów i automatycznego wykrycia kategorii. Aplikacja umożliwia również wykrywanie języka tekstu. Baza zawiera ponad 6 milionów słów w&nbsp;języku polskim i angielskim. System umożliwia włączenie trybu nauki z nauczycielem, a&nbsp;kategoryzacja oparta jest o metody statystyczne. Aplikacja udostępnia API zewnętrzne.",
       "year": 2014
     },
     {
       "title": "wordmaker",
       "url": "game-hitdea.herokuapp.com",
-      "introduction": "Game of words based on English and Polish languages. Creation as many different words as possible from randomly selected letters. Word verification uses an external API linguistic analysis.",
+      "introduction": "Game of words based on English and Polish languages. Create as many different words as possible from randomly selected letters. Word verification is based on the external API linguistic analysis.",
       "introduction_pl": "Gra w słowa oparta o język angielski i polski. Stworzenie jak najwięcej różnych słów z losowo wybranych liter. Weryfikacja słowa wykorzytuje zewnętrzne API systemu analizy językowej.",
+      "year": 2014
+    },
+    {
+      "title": "20 questions game",
+      "introduction": "Logic game which learns with every play. In the game you have to answer questions asked by the AI and it will try to guess what were you thinking about.",
+      "introduction_pl": "Gra logiczna ucząca się z każdą grą. Należy w niej odpowiadać na pytania zadawane przez SI a ono spróbuje odganąć o czym myślałeś.",
       "year": 2014
     }
   ]

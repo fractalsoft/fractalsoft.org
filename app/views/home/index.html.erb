@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <%= render 'people/team', people: @people %>
+  <%= render 'people/team', people: @home.people %>
 
   <div class='container technology hidden-xs'>
     <div class='row'>
@@ -84,7 +84,7 @@
     <p class='hidden-xs'><%= t('.contact.description') %></p>
     <div class='row'>
       <div class='col-sm-8 col-sm-push-4 col-xs-12'>
-        <%= render 'contact_forms/form', contact_form: @contact_form %>
+        <%= render 'contact_forms/form', contact_form: @home.contact %>
       </div>
       <div class='col-sm-4 col-sm-pull-8 col-xs-12'>
         <%= render 'contact_forms/contact' %>

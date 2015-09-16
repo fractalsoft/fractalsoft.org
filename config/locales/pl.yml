@@ -9,6 +9,16 @@ pl:
     twitter:
       card: summary
       site: '@fractal_soft'
+  social:
+    title:
+      blog: Czytaj mnie
+      facebook: Polub mnie
+      github: Śledź mnie
+      google: Śledź mnie
+      instagram: Śledź mnie
+      linkedin: Połączmy się
+      twitter: Śledź mnie
+      youtube: Daj suba
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
@@ -24,7 +34,7 @@ pl:
     new:
       contact: &contact
         header: Chcesz się z nami skontaktować?
-        description: 'Nie zależnie czy masz do nas pytanie czy chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.'
+        description: 'Nie zależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.'
   layouts:
     shared:
       header: &header
