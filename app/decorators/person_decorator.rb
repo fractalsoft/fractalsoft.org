@@ -81,6 +81,10 @@ class PersonDecorator < Draper::Decorator
     "https://instagram.com/#{object.instagram}"
   end
 
+  def linkedin_url
+    "https://www.linkedin.com/in/#{object.linkedin}"
+  end
+
   def twitter_url
     "https://twitter.com/#{object.twitter}"
   end
