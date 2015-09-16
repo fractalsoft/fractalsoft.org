@@ -4,8 +4,7 @@ class HomeController < ApplicationController
   before_filter(only: [:index]) { @page_caching = true }
 
   def index
-    @contact_form = ContactForm.new
-    @people = Person.includes(:translations).all.decorate.shuffle
+    @home = HomeFacade.new
     expires_in 30.minutes, public: true
   end
 end
