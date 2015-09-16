@@ -5,7 +5,6 @@ class PeopleController < ApplicationController
   end
 
   def show
-    @person = Person.friendly.find(params[:id]).decorate
-    @projects = @person.projects.includes(:translations).decorate
+    @person = PersonFacade.new(params[:id])
   end
 end
