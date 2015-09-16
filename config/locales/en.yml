@@ -9,6 +9,16 @@ en:
     twitter:
       card: summary
       site: '@fractal_soft'
+  social:
+    title:
+      blog: Read me
+      facebook: Like me
+      github: Star me
+      google: Follow me
+      instagram: Follow me
+      linkedin: Connect me
+      twitter: Follow me
+      youtube: Subscribe me
   contact_forms:
     contact:
       contact_with_us: Contact with us

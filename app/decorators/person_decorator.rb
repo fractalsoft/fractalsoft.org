@@ -3,7 +3,7 @@ class PersonDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all
 
-  %i(blog facebook github twitter).each do |name|
+  %i(blog facebook github instagram twitter).each do |name|
     define_method(name) do
       send :given_icon, name
     end
@@ -12,6 +12,28 @@ class PersonDecorator < Draper::Decorator
   def email
     content = method(:given_li)
     given :email, :mail_to, &content
+  end
+
+  def image
+    image_tag object.image
+  end
+
+  def introduction
+    raw person.introduction
+  end
+
+  def project_with_contributions(project)
+    person.project_with_contributions(project).map(&:name)
+  end
+
+  def skills
+    array = person.skill_list
+    render 'people/skills', skills: array unless array.empty?
+  end
+
+  def technologies
+    array = person.technology_list
+    render 'people/technologies', technologies: array unless array.empty?
   end
 
   def website
@@ -33,7 +55,7 @@ class PersonDecorator < Draper::Decorator
 
   def given_li(name, link)
     content_tag :li do
-      send link, send("#{name}_url"), title: name do
+      send link, send("#{name}_url"), title: social_title(name) do
         content_tag(:span, nil, class: "icon icons-#{name}")
       end
     end
@@ -55,7 +77,15 @@ class PersonDecorator < Draper::Decorator
     "https://github.com/#{object.github}"
   end
 
+  def instagram_url
+    "https://instagram.com/#{object.instagram}"
+  end
+
   def twitter_url
     "https://twitter.com/#{object.twitter}"
+  end
+
+  def social_title(name)
+    I18n.t(name, scope: 'social.title')
   end
 end
