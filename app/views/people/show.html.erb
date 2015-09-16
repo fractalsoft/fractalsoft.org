@@ -5,47 +5,39 @@
   <div class='row'>
     <div class='col-md-3 col-sm-6 col-xs-12'>
       <div class='thumbnail'>
-        <%= image_tag @person.image %>
+        <%= @person.image %>
       </div>
     </div>
     <div class='col-md-6 col-sm-6 col-xs-12'>
       <h1><%= @person.fullname %></h1>
-      <p class='position'><strang><%= @person.position %></strang></p>
-      <p class='text-justify'><%= raw @person.introduction %></p>
-      <p>
-        <h3><%= t('.skills') %></h3>
-        <% @person.skill_list.each do |skill| %>
-          <span class="label label-danger"><%= skill %></span>
-        <% end %>
-      </p>
+      <p class='position'><strong><%= @person.position %></strong></p>
+      <p class='text-justify'><%= @person.introduction %></p>
+      <%= @person.skills %>
     </div>
     <div class='col-md-3 col-sm-6 col-xs-12'>
       <ul class='social list-inline'>
-        <%= @person.github %>
         <%= @person.blog %>
+        <%= @person.github %>
         <%= @person.twitter %>
         <%= @person.facebook %>
+        <%= @person.instagram %>
       </ul>
-      <h4><%= t('.technologies') %></h4>
-      <hr>
-      <% @person.technology_list.each do |technology| %>
-        <span class="label label-default"><%= technology %></span>
-      <% end %>
+      <%= @person.technologies %>
     </div>
   </div>
   <hr>
-  <% @projects.each do |project| %>
+  <% @person.projects.each do |project| %>
     <div class='descritpion row'>
       <div class="col-md-3">
-        <h2><%= project.title %> <br><small><%= raw project.subtitle %></small></h2>
+        <h2><%= project.title %> <br><small><%= project.subtitle %></small></h2>
       </div>
       <div class='col-md-9'>
-        <h4 class='text-justify'><%= raw project.introduction %></h4>
+        <h4 class='text-justify'><%= project.introduction %></h4>
         <p>
           <strong><%= t('.major_contributions') %></strong>
           <ul>
             <% @person.project_with_contributions(project).each do |contribution| %>
-              <li><%= contribution.name %></li>
+              <li><%= contribution %></li>
             <% end %>
           </ul>
         </p>

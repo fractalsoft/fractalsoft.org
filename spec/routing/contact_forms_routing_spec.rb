@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 describe ContactFormsController, type: :routing do
-  it 'POST #create' do
-    expect(post('/contact-forms')).to route_to(
-      controller: 'contact_forms',
-      action: 'create'
-    )
+  I18n.available_locales.each do |locale|
+    it 'POST #create' do
+      expect(post("#{locale}/contact-forms")).to route_to(
+        controller: 'contact_forms',
+        action: 'create',
+        locale: "#{locale}"
+      )
+    end
   end
 end
