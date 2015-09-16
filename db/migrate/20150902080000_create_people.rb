@@ -5,10 +5,12 @@ class CreatePeople < ActiveRecord::Migration
       t.string :fullname, null: false
       t.string :position
       t.string :image
-      t.string :github
       t.string :blog
+      t.string :github
       t.string :twitter
       t.string :facebook
+      t.string :instagram
+      t.string :linkedin
       t.string :website
       t.string :email
       t.string :skills, default: ''
