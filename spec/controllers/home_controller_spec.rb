@@ -9,7 +9,7 @@ RSpec.describe HomeController, type: :controller do
 
     it 'has ContactForm object' do
       get :index
-      expect(assigns(:contact_form)).to be_an(ContactForm)
+      expect(assigns(:home)).to be_an(HomeFacade)
     end
   end
 end
