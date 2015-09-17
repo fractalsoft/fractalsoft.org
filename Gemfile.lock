@@ -277,6 +277,7 @@ GEM
     rails-assets-bootstrap (3.3.5)
       rails-assets-jquery (>= 1.9.1)
     rails-assets-jquery (2.1.4)
+    rails-assets-markdown-js (0.6.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -314,6 +315,7 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (4.2.0)
+    redcarpet (3.3.2)
     reek (1.6.5)
       parser (~> 2.2.0.pre.7)
       rainbow (>= 1.99, < 3.0)
@@ -484,9 +486,11 @@ DEPENDENCIES
   rack-attack
   rails (= 4.2.4)
   rails-assets-bootstrap!
+  rails-assets-markdown-js!
   rails-i18n
   rails_12factor
   rails_best_practices
+  redcarpet
   respond-js-rails
   rspec-rails (~> 3.3)
   rubocop

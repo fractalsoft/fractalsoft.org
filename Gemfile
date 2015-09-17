@@ -32,6 +32,7 @@ gem 'pg'
 gem 'puma'
 gem 'rack-attack'
 gem 'rails-i18n'
+gem 'redcarpet'
 gem 'respond-js-rails'
 gem 'simple_form'
 gem 'sqlite3'
@@ -75,6 +76,7 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
+  gem 'rails-assets-markdown-js'
 end
 
 # Use ActiveModel has_secure_password
