@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'actionpack-page_caching'
+gem 'active_link_to'
 gem 'carrierwave'
 gem 'compass-rails'
 gem 'diacritics'
