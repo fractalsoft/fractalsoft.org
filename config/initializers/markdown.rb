@@ -11,7 +11,7 @@ module ActionView
       # @return [String] Ruby code that when evaluated will return the rendered
       #   content
       def call(template)
-        @markdown ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, params)
+        @markdown ||= Redcarpet::Markdown.new(renderer, params)
         "#{@markdown.render(template.source).inspect}.html_safe"
       end
 
@@ -22,6 +22,13 @@ module ActionView
           autolink: true, fenced_code_blocks: true,
           space_after_headers: true, tables: true
         }
+      end
+
+      def renderer
+        options = {
+          link_attributes: { rel: 'nofollow' }
+        }
+        Redcarpet::Render::HTML.new(options)
       end
     end
   end
