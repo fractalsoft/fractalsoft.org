@@ -46,6 +46,7 @@ group :development do
   gem 'bullet'
   gem 'capistrano-rails'
   gem 'guard'
+  gem 'guard-bundler', require: false
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'quiet_safari'
