@@ -45,6 +45,7 @@ group :development do
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'capistrano-rails'
+  gem 'guard'
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'quiet_safari'
