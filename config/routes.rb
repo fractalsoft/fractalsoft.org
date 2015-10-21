@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :contact_forms, path: 'contact-forms', only: [:new, :create]
     root 'home#index'
   end
-  get '*path', to: redirect("/#{I18n.default_locale}/%{path}")
-  get '', to: redirect("/#{I18n.default_locale}")
+
+  root to: redirect("/#{I18n.default_locale}", status: 301),
+       as: :redirected_root
 end
