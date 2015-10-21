@@ -47,6 +47,7 @@ group :development do
   gem 'quiet_assets'
   gem 'quiet_safari'
   gem 'rails_best_practices'
+  gem 'rails_db'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'

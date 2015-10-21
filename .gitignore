@@ -17,9 +17,6 @@
 /tmp
 !/tmp/antibot/.keep
 
-# Ignore metric files
-/sandi_meter
-
 # Igrone assets, uploads & cache
 /public/assets
 /public/cache/*
