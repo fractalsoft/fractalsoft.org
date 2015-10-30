@@ -3,7 +3,7 @@ class PersonDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all
 
-  %i(blog facebook github instagram twitter).each do |name|
+  %i(blog facebook github instagram linkedin twitter).each do |name|
     define_method(name) do
       send :given_icon, name
     end
@@ -79,6 +79,10 @@ class PersonDecorator < Draper::Decorator
 
   def instagram_url
     "https://instagram.com/#{object.instagram}"
+  end
+
+  def linkedin_url
+    "https://linkedin.com/in/#{object.linkedin}"
   end
 
   def twitter_url
