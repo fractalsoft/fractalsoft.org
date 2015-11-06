@@ -4,11 +4,20 @@
   <h2>Cennik</h2>
   <% if(@jobs) %>
     <h3>Ceny usług</h3>
-    <table>
-      <tr><th>Usługa</th><th>Cena w złotych</th></tr>
+    <table class='prices'>
+      <tr>
+        <th>Usługa</th>
+        <th>Cena w złotych</th>
+        <th></th>
+      </tr>
       <% @jobs.each do |job| %>
-        <tr><td><%=job.name%></td><td><%=job.price%>,-</td></tr>
+        <tr>
+          <td><%=job.name%></td>
+          <td><%=job.price%>,-</td>
+          <td><input type="checkbox" name="job.name" value=<%= job.price %>></td>
+        </tr>
       <% end %>
     </table>
+    <h4>Suma: <span class='sum'></span>zł</h4>
   <% end %>
 </div>
