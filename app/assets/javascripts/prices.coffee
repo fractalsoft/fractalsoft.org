@@ -8,7 +8,7 @@ sumPrices = ->
     $('.sum').text(sum)
 
   $('.prices tr').click (event) ->
-    if (event.target.type != 'checkbox')
+    unless event.target.type == 'checkbox'
       $(':checkbox', this).trigger('click')
 
 $(document).ready(sumPrices)
