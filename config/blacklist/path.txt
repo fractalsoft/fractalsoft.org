@@ -3,7 +3,7 @@
 .php
 /admin
 /blog
-/cgi-bin/test-cgi
+/cgi-bin
 /manager/html
 /muieblackcat
 /phpmyadmin
