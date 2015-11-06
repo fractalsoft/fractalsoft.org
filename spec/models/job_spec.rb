@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cieszyn::Job, type: :model do
+RSpec.describe Job, type: :model do
   let(:job) { create(:job, name: 'lorem ipsum', price: 100) }
 
   describe '#name' do

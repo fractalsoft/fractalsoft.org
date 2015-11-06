@@ -1,6 +1,4 @@
 FactoryGirl.define do
-  factory :job, class: Cieszyn::Job do
-    name 'lorem imspum'
-    price 100
+  factory :job do
   end
 end
