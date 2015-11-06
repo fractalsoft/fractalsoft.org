@@ -32,7 +32,7 @@ module Antibot
       traps.each { |ip| cache(ip) }
     end
 
-    def run(env)
+    def call(env)
       request = Rack::Request.new env
       insert(request.ip, request.user_agent, request.referer)
       [200, { 'Content-Type' => 'text/plain' }, ['']]

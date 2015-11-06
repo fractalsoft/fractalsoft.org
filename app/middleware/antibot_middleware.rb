@@ -12,11 +12,8 @@ class AntibotMiddleware
   end
 
   def _call
-    if trap?
-      @trap.run(@env)
-    else
-      @app.call(@env)
-    end
+    app = trap? ? @trap : @app
+    app.call(@env)
   end
 
   private
