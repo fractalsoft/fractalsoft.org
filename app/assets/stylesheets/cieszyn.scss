@@ -1,0 +1,17 @@
+@import 'bootstrap';
+
+body.cieszyn {
+  h2, h3 {
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  table {
+    @extend .table;
+    @extend .table-hover;
+    @extend .table-striped;
+  }
+}
