@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head lang='<%= I18n.locale %>'>
+  <!--
+
+
+            +++++     +++++
+            +++++     +++++
+            +++++     +++++
+                 +++++
+                 +++++
+                 +++++
+            +++++
+            +++++
+            +++++
+
+
+  We're hiring full-stack developers!
+  Do you want to know more?
+  Contact us, join the Team :)
+
+  -->
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <%= display_meta_tags(default_meta_tags) %>
@@ -21,6 +40,7 @@
 </head>
 <body class='<%= yield(:body_class) %>'>
 <%= trap_link %>
+<%= query_diet_widget if Rails.env.development? %>
 <a href="http://www1441871441.edgek.com/" class='hidden'>Fight Spam! Click Here!</a>
 <%= render 'layouts/shared/header' %>
 <%= yield %>
