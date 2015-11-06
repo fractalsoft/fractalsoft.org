@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :contact_forms, path: 'contact-forms', only: [:new, :create]
     get :cieszyn, to: redirect('cieszyn/welcome')
     namespace :cieszyn do
+      resource :collaboration, only: :show, controller: :collaboration
       resource :rules, only: :show
       resource :warranty, only: :show, controller: :warranty
       resource :welcome, only: :show, controller: :welcome

@@ -45,6 +45,8 @@ group :development do
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'capistrano-rails'
+  gem 'colored'
+  gem 'deadweight'
   gem 'guard'
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
@@ -52,10 +54,13 @@ group :development do
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'quiet_safari'
+  gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
+  gem 'oink'
+  gem 'query_diet'
 end
 
 group :development, :test do
