@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'actionpack-page_caching'
+gem 'active_link_to'
 gem 'carrierwave'
 gem 'compass-rails'
 gem 'diacritics'
@@ -32,6 +33,7 @@ gem 'pg'
 gem 'puma'
 gem 'rack-attack'
 gem 'rails-i18n'
+gem 'redcarpet'
 gem 'respond-js-rails'
 gem 'simple_form'
 gem 'sqlite3'
@@ -43,14 +45,23 @@ group :development do
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'capistrano-rails'
+  gem 'colored'
+  gem 'deadweight'
+  gem 'guard'
+  gem 'guard-bundler', require: false
+  gem 'guard-livereload', require: false
+  gem 'guard-rails', require: false
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'quiet_safari'
+  gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices'
   gem 'rails_db'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
+  gem 'oink'
+  gem 'query_diet'
 end
 
 group :development, :test do
@@ -76,6 +87,7 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
+  gem 'rails-assets-markdown-js'
 end
 
 # Use ActiveModel has_secure_password
