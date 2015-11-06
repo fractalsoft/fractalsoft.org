@@ -1,6 +1,6 @@
-class CreateCieszynJobs < ActiveRecord::Migration
+class CreateJobs < ActiveRecord::Migration
   def change
-    create_table :cieszyn_jobs do |t|
+    create_table :jobs do |t|
       t.string :name
       t.integer :price
 
