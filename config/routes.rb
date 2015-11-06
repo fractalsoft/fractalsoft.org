@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resource :rules, only: :show
       resource :warranty, only: :show, controller: :warranty
       resource :welcome, only: :show, controller: :welcome
+      resources :prices, only: :index
     end
     root 'home#index'
   end
