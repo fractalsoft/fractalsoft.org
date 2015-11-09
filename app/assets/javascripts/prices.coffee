@@ -12,12 +12,12 @@ sumPrices = ->
 
   unselectOtherRows = (checkbox) ->
     $('.multiplier:checkbox').toArray().forEach (otherCheckbox) ->
-      unless otherCheckbox==checkbox
+      unless (otherCheckbox == checkbox)
         $(otherCheckbox).closest("tr").removeClass("checked")
         otherCheckbox.checked = false
 
   updateMultiplier = (checkbox) ->
-    multiplier = if checkbox.checked then parseFloat(checkbox.value) else 1
+    multiplier = if checkbox.checked then parseFloat(checkbox.value) else 1.0
 
   updateSum = (checkbox) ->
     value = parseInt(checkbox.value)
@@ -34,7 +34,7 @@ sumPrices = ->
     updateMultiplier(event.target)
     $('.sum').text(sum * multiplier)
 
-  $('.prices tr').click (event) ->
+  $('.pricelist tr').click (event) ->
     unless event.target.type == 'checkbox'
       $(':checkbox', this).trigger('click')
 
