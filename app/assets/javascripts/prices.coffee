@@ -4,9 +4,11 @@ sumPrices = ->
   $('.sum').text(0)
 
   checkedToRow = (checkbox) ->
-    checked = checkbox.checked
     row = checkbox.closest("tr")
-    if checked then $(row).addClass("checked") else $(row).removeClass("checked")
+    if checkbox.checked
+      $(row).addClass("checked")
+    else
+      $(row).removeClass("checked")
 
   unselectOtherRows = (checkbox) ->
     $('.multiplier:checkbox').toArray().forEach (otherCheckbox) ->
