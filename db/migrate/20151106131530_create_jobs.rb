@@ -2,7 +2,7 @@ class CreateJobs < ActiveRecord::Migration
   def change
     create_table :jobs do |t|
       t.string :name
-      t.integer :price
+      t.decimal :price, precision: 8, scale: 2
 
       t.timestamps null: false
     end

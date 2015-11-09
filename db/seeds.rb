@@ -19,3 +19,7 @@ hash[:team].each do |params|
     end
   end
 end
+
+hash[:jobs].each do |params|
+  Job.where(name: params[:name]).first_or_create(params)
+end
