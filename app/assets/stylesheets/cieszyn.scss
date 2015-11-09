@@ -1,6 +1,10 @@
 @import 'bootstrap';
 
 body.cieszyn {
+  $header-color: #c3261c;
+  $selected-row-color: #f5f5f5;
+  $white: #ffffff;
+
   h2, h3 {
     text-transform: uppercase;
   }
@@ -9,9 +13,23 @@ body.cieszyn {
     text-align: justify;
   }
 
-  table {
+  .warranty table {
     @extend .table;
     @extend .table-hover;
     @extend .table-striped;
+  }
+
+  .pricelist {
+    @extend .table;
+
+    th {
+      background-color: $header-color;
+      color: $white;
+      font-size: 20px;
+    }
+
+    .checked {
+      background-color: $selected-row-color;
+    }
   }
 }

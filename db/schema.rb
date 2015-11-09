@@ -64,9 +64,9 @@ ActiveRecord::Schema.define(version: 20151106131530) do
 
   create_table "jobs", force: :cascade do |t|
     t.string   "name"
-    t.integer  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "price",      precision: 8, scale: 2
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "people", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|

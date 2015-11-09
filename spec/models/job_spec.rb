@@ -1,19 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Job, type: :model do
-  let(:job) { create(:job, name: 'lorem ipsum', price: 100) }
+  let(:name) { 'Lorem ipsum' }
+  let(:price) { 100.0 }
+  subject { create(:job, name: name, price: price) }
 
   describe '#name' do
     it 'returns job string' do
-      expect(job.name).to be_kind_of(String)
-      expect(job.name).to eq 'lorem ipsum'
+      expect(subject.name).to be_kind_of(String)
+      expect(subject.name).to eq name
     end
   end
 
   describe '#price' do
-    it 'returns fixnum' do
-      expect(job.price).to be_kind_of(Fixnum)
-      expect(job.price).to eq 100
+    it 'returns float' do
+      expect(subject.price).to be_kind_of(Float)
+      expect(subject.price).to eq price
     end
   end
 end
