@@ -9,9 +9,24 @@ body.cieszyn {
     text-align: justify;
   }
 
-  table {
-    @extend .table;
-    @extend .table-hover;
-    @extend .table-striped;
+  .warranty {
+    table {
+      @extend .table;
+      @extend .table-hover;
+      @extend .table-striped;
+    }
   }
+
+  table.prices {
+    @extend .table;
+    th {
+      background-color: #c3261c;
+      color: white;
+      font-size: 20px;
+    }
+    tr.checked {
+      background-color: rgb(245, 245, 245);
+    }
+  }
+
 }
