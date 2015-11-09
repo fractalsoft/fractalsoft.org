@@ -13,7 +13,7 @@ body.cieszyn {
     text-align: justify;
   }
 
-  .warranty table {
+  .warranty {
     @extend .table;
     @extend .table-hover;
     @extend .table-striped;
@@ -21,15 +21,15 @@ body.cieszyn {
 
   .prices {
     @extend .table;
+  }
 
-    th {
-      background-color: $header-color;
-      color: $white;
-      font-size: 20px;
-    }
+  .prices.checked {
+    background-color: $selected-row-color;
+  }
 
-    .checked {
-      background-color: $selected-row-color;
-    }
+  .prices th {
+    background-color: $header-color;
+    color: $white;
+    font-size: 20px;
   }
 }
