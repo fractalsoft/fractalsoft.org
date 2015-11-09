@@ -3,17 +3,18 @@
   <%= render 'cieszyn/bar' %>
   <h2>Cennik</h2>
   <h3>Ceny usług</h3>
-  <table class='prices'>
+
+  <table class='pricelist'>
     <tr>
       <th>Usługa</th>
-      <th>Cena w złotych</th>
+      <th>Cena</th>
       <th></th>
     </tr>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%=job.name%></td>
-        <td><%=job.price%>,-</td>
-        <td><input class='price' type="checkbox" value=<%= job.price %>></td>
+        <td><%= job.name %></td>
+        <td><%= number_to_currency job.price, precision: 2, unit: " PLN" %></td>
+        <td><input class='price' type='checkbox' value=<%= job.price %>></td>
       </tr>
     <% end %>
     <tr>
@@ -24,15 +25,17 @@
     <tr>
       <td>Tryb naprawy szybkiej do 3 dni roboczych</td>
       <td>+30% ceny usług</td>
-      <td><input class='multiplier' type="checkbox" value='1.3'></td>
+      <td><input class='multiplier' type='checkbox' value='1.3'></td>
     </tr>
     <tr>
       <td>Tryb naprawy ekspresowej do 1 dnia roboczego</td>
       <td>+50% ceny usług</td>
-      <td><input class='multiplier' type="checkbox" value='1.5'></td>
+      <td><input class='multiplier' type='checkbox' value='1.5'></td>
     </tr>
   </table>
+
   <h4>Suma: <span class='sum'></span> PLN</h4>
+
   <ul>
     <li>Klient nie ponosi kosztu diagnozy gdy zdecyduje się na naprawę.</li>
     <li>Ceny mogą być ustalane indywidualnie przed oddaniem sprzętu do serwisu.</li>
