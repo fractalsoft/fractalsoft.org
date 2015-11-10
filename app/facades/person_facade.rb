@@ -3,7 +3,8 @@ class PersonFacade
   attr_reader :person, :projects
 
   delegate :fullname, :position, :image,
-           :blog, :github, :twitter, :facebook, :instagram, :google, :youtube,
+           :blog, :github, :linkedin,
+           :twitter, :facebook, :instagram, :google, :youtube,
            :introduction, :saying, :skills, :technologies,
            :project_with_contributions,
            to: :person, prefix: false
