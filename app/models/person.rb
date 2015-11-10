@@ -10,6 +10,15 @@ class Person < ActiveRecord::Base
   has_many :contributions
   has_many :projects, -> { distinct }, through: :contributions
 
+  def self.create_or_update_by_keys!(params, keys)
+    object = nil
+    keys.each do |key|
+      object = find_by("#{key} = ?", params[key]) unless params[key].present?
+      break if object
+    end
+    object ? object.update(params) : create(params)
+  end
+
   def name
     nickname || fullname.try(:permanent)
   end
