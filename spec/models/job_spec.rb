@@ -14,7 +14,7 @@ RSpec.describe Job, type: :model do
 
   describe '#price' do
     it 'returns float' do
-      expect(subject.price).to be_kind_of(Float)
+      expect(subject.price).to be_kind_of(BigDecimal)
       expect(subject.price).to eq price
     end
   end

@@ -8,7 +8,7 @@ end
 
 hash[:team].each do |params|
   contributions = params.delete(:contributions) || []
-  person = Person.where(fullname: params[:fullname]).first_or_create(params)
+  person = Person.create_or_update_by_keys!(params, [:nickname, :fullname])
   contributions.each do |project_params|
     title = project_params.delete(:title)
     project = Project.find_by(title: title)
