@@ -1,2 +1,7 @@
+# https://houndci.com/configuration
+
+scss:
+  config_file: .scss-lint.yml
+
 StringLiterals:
   EnforcedStyle: single_quotes
