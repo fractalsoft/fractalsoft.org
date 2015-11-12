@@ -3,16 +3,16 @@
 
 body.people {
   .team {
-    margin-top: -250px;
     background-color: $light-background-color;
+    margin-top: -250px;
   }
 }
 
 body.person {
   .business-card {
+    background-color: $light-background-color;
     margin-top: -250px;
     padding: 50px;
-    background-color: $light-background-color;
 
     .position {
       font-size: 18pt;
@@ -21,18 +21,14 @@ body.person {
     }
 
     .descritpion {
-      h4 {
-        margin-top: 30px;
-      }
-      p {
-        margin-top: 20px;
-      }
+      h4 { margin-top: 30px; }
+      p { margin-top: 20px; }
     }
 
     @media (max-width: 767px) {
       .social {
-        margin-top: 20px;
         margin-bottom: 20px;
+        margin-top: 20px;
       }
     }
 
@@ -40,15 +36,53 @@ body.person {
       .social { margin-bottom: 70px; }
     }
 
-    .label-default { background-color: $light-grey-background-color; }
     .label-danger { background-color: $red-background-color; }
+    .label-default { background-color: $light-grey-background-color; }
+  }
+
+  .saying {
+    $light-gray: #777;
+    $lighter-gray: #ddd;
+    $lightest-gray: #eee;
+
+    border-left: 5px solid $lighter-gray;
+    font-family: Georgia, Times;
+    font-style: italic;
+    padding-left: 10px;
+    position: relative;
+    width: 90%;
+
+    &:after {
+      bottom: 0;
+      color: $lightest-gray;
+      content: '"';
+      font-size: 7em;
+      line-height: 0;
+      position: absolute;
+      right: -40px;
+    }
+
+    footer,
+    p {
+      font-size: 10pt;
+    }
+
+    footer {
+      color: $light-gray;
+      font-size: .75em;
+    }
+
+    p:last-child:before {
+      content: '—';
+      margin-right: 5px;
+    }
   }
 }
 
 .background {
   background-color: $red-background-color;
-  margin-top: -20px;
   height: 350px;
+  margin-top: -20px;
 }
 
 .team {
@@ -56,28 +90,28 @@ body.person {
   text-align: center;
 
   h2 {
-    font-weight: 700;
     @include vertical-padding(60px);
+    font-weight: 700;
     text-transform: uppercase;
   }
 
   a {
-    text-decoration: none;
     color: $grey-text-color;
+    text-decoration: none;
 
     &:hover { color: $red-background-color; }
   }
 
   .thumbnail {
-    padding-bottom: 0;
     padding: 30px;
+    padding-bottom: 0;
 
     &:hover { border-color: $red-background-color; }
 
     h3 {
+      @include vertical-padding(25px);
       font-size: 12pt;
       margin: 0;
-      @include vertical-padding(25px);
     }
   }
 

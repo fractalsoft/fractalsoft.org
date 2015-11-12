@@ -26,6 +26,12 @@ class PersonDecorator < Draper::Decorator
     person.project_with_contributions(project).map(&:name)
   end
 
+  def saying
+    given :saying do
+      content_tag(:blockquote, raw(person.saying), class: 'saying')
+    end
+  end
+
   def skills
     array = person.skill_list
     render 'people/skills', skills: array unless array.empty?
