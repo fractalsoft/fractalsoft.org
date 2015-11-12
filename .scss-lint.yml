@@ -1,0 +1,29 @@
+# https://github.com/brigade/scss-lint/blob/master/config/default.yml
+
+linters:
+  BorderZero:
+    enabled: true
+    convention: none # or zero
+
+  LeadingZero:
+    enabled: true
+    style: include_zero # or exclude_zero
+
+  NestingDepth:
+    enabled: true
+    max_depth: 4
+    ignore_parent_selectors: false
+
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: false
+    allow_element_with_class: true
+    allow_element_with_id: false
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 4
+
+  StringQuotes:
+    enabled: true
+    style: single_quotes # or double_quotes
