@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5.rc2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -52,6 +52,8 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'guard-rails', require: false
   gem 'letter_opener'
+  gem 'oink'
+  gem 'query_diet'
   gem 'quiet_assets'
   gem 'quiet_safari'
   gem 'rack-mini-profiler', require: false
@@ -60,14 +62,11 @@ group :development do
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
-  gem 'oink'
-  gem 'query_diet'
 end
 
 group :development, :test do
-  gem 'byebug'
   gem 'dotenv-rails'
-  gem 'pry-rails'
+  gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.3'
   gem 'spring'
   gem 'web-console', '~> 2.0'
