@@ -1,5 +1,6 @@
 # Person model
 class Person < ActiveRecord::Base
+  extend CreateOrUpdateByKeysExtension
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
   translates :saying, :string
@@ -7,7 +8,7 @@ class Person < ActiveRecord::Base
   globalize_accessors locales: I18n.available_locales,
                       attributes: translated_attribute_names
 
-  has_many :contributions
+  has_many :contributions, dependent: :destroy
   has_many :projects, -> { distinct }, through: :contributions
 
   def name
