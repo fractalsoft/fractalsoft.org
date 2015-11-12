@@ -12,6 +12,7 @@
       <h1><%= @person.fullname %></h1>
       <p class='position'><strong><%= @person.position %></strong></p>
       <p class='text-justify'><%= @person.introduction %></p>
+      <%= @person.saying %>
       <%= @person.skills %>
     </div>
     <div class='col-md-3 col-sm-6 col-xs-12'>
@@ -19,7 +20,8 @@
         <%= @person.blog %>
         <%= @person.github %>
         <%= @person.twitter %>
-        <%= @person.facebook %>
+        <%= @person.linkedin %>
+        <%#= @person.facebook %>
         <%= @person.instagram %>
       </ul>
       <%= @person.technologies %>
