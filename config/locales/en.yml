@@ -41,6 +41,7 @@ en:
         contact: Contact
         language: Language
         projects: Projects
+        service: Service
         team: Team
         toggle_navigation: Toggle navigation
       footer:
