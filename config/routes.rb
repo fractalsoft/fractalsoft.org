@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     root 'home#index'
   end
 
+  get :cieszyn, to: redirect('pl/cieszyn/welcome')
+
   root to: redirect("/#{I18n.default_locale}", status: 301),
        as: :redirected_root
 end
