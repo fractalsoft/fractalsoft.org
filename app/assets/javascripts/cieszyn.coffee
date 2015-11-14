@@ -10,27 +10,35 @@ gliwice =
   title: '<b>Fractal Soft</b><br>strony internetowe'
   zoom: 19
 
-location = cieszyn
+class LocationMap
+  constructor: (@location) ->
+    @map = L.map('map').setView(
+      [@location.latitude, @location.longitude],
+      @location.zoom
+    )
+    mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>'
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution: 'Map data &copy; ' + mapLink
+      maxZoom: 19
+    ).addTo(@map)
+    @marker = @createMarker()
+    @map.on('locationfound', @onLocationFound)
+    @map.locate(setView: false, maxZoom: 19)
 
-onLocationFound = (e) ->
-  radius = e.accuracy / 2
-  L.marker(e.latlng).addTo(map).bindPopup('You are within ' + radius + ' meters from this point').openPopup()
-  L.circle(e.latlng, radius).addTo map
-  return
+  createMarker: ->
+    marker = L.marker([@location.latitude, @location.longitude]).addTo(@map)
+    marker.bindPopup(@location.title).openPopup()
+    marker
 
+  onLocationFound: (e) ->
+    console.log "#{e.latlng}"
+    console.log "#{e.accuracy}"
+    return
+
+locationMap = ->
+  new LocationMap(cieszyn)
+
+# $(document).ready(locationMap)
+# $(document).on('page:load', locationMap)
 jQuery ->
-  map = L.map('map').setView([location.latitude, location.longitude], location.zoom)
-  mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>'
-  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-      attribution: 'Map data &copy; ' + mapLink,
-      maxZoom: 19,
-    }).addTo(map)
-  marker = L.marker([location.latitude, location.longitude]).addTo(map)
-  marker.bindPopup(location.title).openPopup()
-
-  # onMapClick = (e) -> console.log "Coordinate: #{e.latlng}"
-  # onLocationFound = (e) -> console.log "#{e.accuracy}"
-
-  # map.on('click', onMapClick)
-  # map.on('locationfound', onLocationFound)
+  locationMap()
