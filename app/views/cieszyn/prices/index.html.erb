@@ -1,0 +1,48 @@
+<% content_for :body_class, 'cieszyn' %>
+<div class='banner'></div>
+<div class='container'>
+  <%= render 'cieszyn/bar' %>
+  <h2>Cennik</h2>
+  <h3>Ceny usług</h3>
+
+  <table class='pricelist'>
+    <tr>
+      <th>Usługa</th>
+      <th>Cena</th>
+      <th></th>
+    </tr>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.name %></td>
+        <td><%= number_to_currency job.price, precision: 2, unit: " PLN" %></td>
+        <td><input class='price' type='checkbox' value=<%= job.price %>></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tryb naprawy szybkiej do 3 dni roboczych</td>
+      <td>+30% ceny usług</td>
+      <td><input class='multiplier' type='checkbox' value='1.3'></td>
+    </tr>
+    <tr>
+      <td>Tryb naprawy ekspresowej do 1 dnia roboczego</td>
+      <td>+50% ceny usług</td>
+      <td><input class='multiplier' type='checkbox' value='1.5'></td>
+    </tr>
+  </table>
+
+  <h4>Suma: <span class='sum'></span> PLN</h4>
+
+  <ul>
+    <li>Klient nie ponosi kosztu diagnozy gdy zdecyduje się na naprawę.</li>
+    <li>Ceny mogą być ustalane indywidualnie przed oddaniem sprzętu do serwisu.</li>
+    <li>Podane ceny są cenami BRUTTO i nie zawierają kosztu wymienianych części.</li>
+    <li>W przypadku nie wykonania naprawy lub usługi serwisowej w określonych wyżej terminach naprawę traktuje się jako zwykłą.</li>
+    <li>Cennik nie jest ofertą handlową w rozumieniu Kodeksu Cywilnego i Prawa Handlowego,  a każda usługa wyceniana jest indywidualnie w oparciu o stopień trudności związany z jej realizacją.</li>
+    <li>Opłata za pozostałe usługi nie wymienione w cenniku - do uzgodnienia.</li>
+  </ul>
+</div>

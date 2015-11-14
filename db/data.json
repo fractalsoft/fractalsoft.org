@@ -13,8 +13,8 @@
       "linkedin": "womanonrails",
       "skills": "Backend Developer, Frontend Developer, Refactoring, TDD, Agile, Git, Teamwork, SOA",
       "technologies": "Ruby, Ruby on Rails, PostgreSQL, MySQL, JavaScript, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, RSpec",
-      "saying": "<q>Premature optimization is the root of all evil.</q> <cite>Donald Knuth</cite>",
-      "saying_pl": "<q>Przedwczesna optymalizacja to źródło wszelkiego zła.</q> <cite>Donald Knuth</cite>",
+      "saying_en": "<p>Premature optimization is the root of all evil.</p> <footer>Donald Knuth</footer>",
+      "saying_pl": "<p>Przedwczesna optymalizacja to źródło wszelkiego zła.</p> <footer>Donald Knuth</footer>",
       "introduction_en": "<strong>Ruby on Rails developer since 2011.</strong> Focused on good code quality, refactoring and TDD. Well-organized and responsible. Mentor at CoderDojo and Rails Girls workshops.",
       "introduction_pl": "<strong>Programista Ruby on Rails od 2011 roku.</strong> Specjalizuje się w dobrej jakości kodu, refaktoringu i TDD. Odpowiedzialna i dobrze zorganizowana. Mentor na CoderDojo i Rails Girls.",
       "description": "Ruby on Rails developer",
@@ -71,6 +71,7 @@
       "image": "team/uholodniak.jpg",
       "github": "shad8",
       "twitter": "8shad8",
+      "linkedin": "urszula-holodniak-0b2945109",
       "skills": "Backend Development, Frontend Development, API Design, Refactoring, Testing, Git, Photography",
       "technologies": "Ruby, Ruby on Rails, Java Script, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, MySQL, PostgreSQL, Cordova",
       "introduction_en": "<strong>Ruby geek in 150%.</strong> Conscientious and involved developer with the soul of an artist photographer. Participant and then mentor and organizer of Rails Girls workshops.",
@@ -161,8 +162,8 @@
       "linkedin": "torrocus",
       "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration",
       "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, MySQL, RSpec, HTML5, CSS3, CoffeeScript, JavaScript, EmberJS",
-      "saying_en": "<q>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</q> <cite>Antoine de Saint Exupéry</cite>",
-      "saying_pl": "<q>Wydaje się, że doskonałość osiąga się nie wtedy, gdy nie ma nic więcej do dodania, ale gdy nie ma nic więcej do usunięcia.</q> <cite>Antoine de Saint Exupéry</cite>",
+      "saying_en": "<p>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</p> <footer>Antoine de Saint Exupéry</footer>",
+      "saying_pl": "<p>Wydaje się, że doskonałość osiąga się nie wtedy, gdy nie ma nic więcej do dodania, ale gdy nie ma nic więcej do usunięcia.</p> <footer>Antoine de Saint Exupéry</footer>",
       "introduction_en": "<strong>Web developer since 1998.</strong> He had met Ruby 12 years later while using Sinatra and Ruby on Rails. Madcap for algorithms. Linux administrator and Open Source ideology evangelist.",
       "introduction_pl": "<strong>Web developer od roku 1998.</strong> Ruby poznał 12 lat później używając Sinatra i Ruby on Rails. Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.",
       "description": "Ruby on Rails developer",
@@ -261,6 +262,64 @@
       "introduction": "Logic game which learns with every play. In the game you have to answer questions asked by the AI and it will try to guess what were you thinking about.",
       "introduction_pl": "Gra logiczna ucząca się z każdą grą. Należy w niej odpowiadać na pytania zadawane przez SI a ono spróbuje odganąć o czym myślałeś.",
       "year": 2014
+    }
+  ],
+  "jobs": [
+    {
+      "name": "Diagnoza z wstępną wyceną",
+      "price": 50.0
+    },
+    {
+      "name": "Instalacja systemu operacyjnego, sterowników, programów użytkowych",
+      "price": 80.0
+    },
+    {
+      "name": "Czyszczenie wentylatora, wymiana pasty",
+      "price": 50.0
+    },
+    {
+      "name": "Naprawa płyty głównej (nie BGA)",
+      "price": 150.0
+    },
+    {
+      "name": "Czyszczenie laptopa po zalaniu",
+      "price": 120.0
+    },
+    {
+      "name": "Reballing BGA",
+      "price": 260.0
+    },
+    {
+      "name": "Wymiana układu BGA (bez ceny części)",
+      "price": 240.0
+    },
+    {
+      "name": "Aktualizacja BIOS'a",
+      "price": 30.0
+    },
+    {
+      "name": "Aktualizacja BIOS'a (programowanie wlutowanego układu)",
+      "price": 60.0
+    },
+    {
+      "name": "Naprawa zasilacza",
+      "price": 60.0
+    },
+    {
+      "name": "Naprawa gniazda zasilania, USB, audio",
+      "price": 100.0
+    },
+    {
+      "name": "Wymiana lub naprawa innych części w laptopie",
+      "price": 150.0
+    },
+    {
+      "name": "Usuwanie wirusów oraz złośliwego oprogramowania",
+      "price": 60.0
+    },
+    {
+      "name": "Naprawa monitora LCD",
+      "price": 250.0
     }
   ]
 }
