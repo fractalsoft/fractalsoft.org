@@ -1,6 +1,7 @@
 /*
  *= require normalize-rails
  *= require bootstrap
+ *= require leaflet
  *= require_self
  *= require_tree .
  */
