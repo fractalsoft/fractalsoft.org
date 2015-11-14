@@ -3,7 +3,7 @@ class PersonDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all
 
-  %i(blog facebook github instagram twitter).each do |name|
+  %i(blog facebook github instagram linkedin twitter).each do |name|
     define_method(name) do
       send :given_icon, name
     end
@@ -24,6 +24,12 @@ class PersonDecorator < Draper::Decorator
 
   def project_with_contributions(project)
     person.project_with_contributions(project).map(&:name)
+  end
+
+  def saying
+    given :saying do
+      content_tag(:blockquote, raw(person.saying), class: 'saying')
+    end
   end
 
   def skills
@@ -82,7 +88,7 @@ class PersonDecorator < Draper::Decorator
   end
 
   def linkedin_url
-    "https://www.linkedin.com/in/#{object.linkedin}"
+    "https://linkedin.com/in/#{object.linkedin}"
   end
 
   def twitter_url

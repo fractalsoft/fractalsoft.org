@@ -26,12 +26,10 @@
     margin-top: 15px;
   }
 
-  .navbar-nav>li>a {
+  .navbar-nav > li > a {
     color: $text-color;
-  }
 
-  .navbar-nav>li>a:hover {
-    color: $hover-color;
+    &:hover { color: $hover-color; }
   }
 
   .navbar-brand {
@@ -42,8 +40,9 @@
     margin-top: 20px;
   }
 
-  .navbar-collapse.collapse, .navbar-collapse.collapsing {
-    border: none;
+  .navbar-collapse.collapse,
+  .navbar-collapse.collapsing {
     background-color: $background-color;
+    border: none;
   }
 }
