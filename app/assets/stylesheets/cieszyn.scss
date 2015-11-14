@@ -1,7 +1,13 @@
 @import 'bootstrap';
+@import 'compass/css3/opacity';
 
 body.cieszyn {
-  h2, h3 {
+  $header-color: #c3261c;
+  $selected-row-color: #f5f5f5;
+  $white: #fff;
+
+  h2,
+  h3 {
     text-transform: uppercase;
   }
 
@@ -9,9 +15,38 @@ body.cieszyn {
     text-align: justify;
   }
 
-  table {
+  .banner {
+    $background-color: #ecedf1;
+    $background-image: 'locations/cieszyn/banner.jpg';
+
+    @include opacity(0.9);
+    background: $background-color url($background-image) repeat-x center center;
+    height: 145px;
+    margin-top: -20px;
+  }
+
+  .pricelist {
+    @extend .table;
+
+    th {
+      background-color: $header-color;
+      color: $white;
+      font-size: 20px;
+    }
+
+    .checked {
+      background-color: $selected-row-color;
+    }
+  }
+
+  .warranty table {
     @extend .table;
     @extend .table-hover;
     @extend .table-striped;
+  }
+
+
+  #map {
+    height: 480px;
   }
 }
