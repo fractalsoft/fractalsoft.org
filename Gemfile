@@ -51,6 +51,7 @@ group :development do
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
   gem 'guard-rails', require: false
+  gem 'i18n-tasks'
   gem 'letter_opener'
   gem 'oink'
   gem 'query_diet'
@@ -62,6 +63,7 @@ group :development do
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
+  # gem 'scss_lint'
 end
 
 group :development, :test do
