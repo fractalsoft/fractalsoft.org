@@ -5,6 +5,9 @@ linters:
     enabled: true
     convention: none # or zero
 
+  IdSelector:
+    enabled: false
+
   LeadingZero:
     enabled: true
     style: include_zero # or exclude_zero
@@ -13,6 +16,9 @@ linters:
     enabled: true
     max_depth: 4
     ignore_parent_selectors: false
+
+  PlaceholderInExtend:
+    enabled: false
 
   QualifyingElement:
     enabled: true
