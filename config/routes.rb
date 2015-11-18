@@ -10,14 +10,15 @@ Rails.application.routes.draw do
     end
   end
 
-  scope ':locale', locale: /#{I18n.available_locales.join('|')}/ do
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
     # resources :projects, only: [:index, :show]
     resources :people, path: 'team', only: [:index, :show]
     resources :contact_forms, path: 'contact-forms', only: [:new, :create]
     get :cieszyn, controller: 'cieszyn/welcome', action: :show
-    root 'home#index'
+    root 'home#index', as: :localized_root
   end
 
-  root to: redirect("/#{I18n.default_locale}", status: 301),
-       as: :redirected_root
+  root to: 'home#index'
+  # root to: redirect("/#{I18n.default_locale}", status: 301),
+  #      as: :redirected_root
 end
