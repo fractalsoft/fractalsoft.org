@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.rc2'
+gem 'rails', '4.2.5'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -26,7 +26,7 @@ gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 gem 'normalize-rails'
 gem 'oj'
 gem 'pg'
@@ -59,7 +59,7 @@ group :development do
   gem 'quiet_safari'
   gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices'
-  gem 'rails_db'
+  # gem 'rails_db'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
