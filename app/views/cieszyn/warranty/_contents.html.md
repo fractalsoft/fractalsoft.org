@@ -6,7 +6,7 @@
 | --------------------------------------------- | ---------------------------- |
 | Podzespoły nowe                               |              12              |
 | Podzespoły używane                            |             1 - 2            |
-| Przelutowanie / wymiana układu BGA            |               6              |
+| Przelutowanie / wymiana układu BGA            |             3 - 6            |
 | Poprawa lutów w układach BGA                  |               3              |
 | Naprawa po zalaniu cieczą                     |               2              |
 | Regeneracja obwodów drukowanych na płycie PCB |               3              |
