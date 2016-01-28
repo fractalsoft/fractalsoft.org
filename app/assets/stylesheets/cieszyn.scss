@@ -17,10 +17,10 @@ body.cieszyn {
 
   .banner {
     $background-color: #ecedf1;
-    $background-image: 'locations/cieszyn/banner.jpg';
+    $background-image: image-url('locations/cieszyn/banner.jpg');
 
     @include opacity(0.9);
-    background: $background-color url($background-image) repeat-x center center;
+    background: $background-color $background-image repeat-x center center;
     height: 145px;
     margin-top: -20px;
   }

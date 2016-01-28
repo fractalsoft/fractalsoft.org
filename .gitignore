@@ -26,9 +26,3 @@
 
 # Ignore environments
 /.env
-
-# Ignore generated sprites
-/app/assets/images/arts-*
-/app/assets/images/icons-*
-/app/assets/images/logotypes-*
-/app/assets/images/team-*
