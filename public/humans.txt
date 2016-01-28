@@ -5,10 +5,15 @@
   Twitter: @womanonrails
   Location: Gliwice, PL
 
-  Name: Alek Malaszkiewicz
+  Name: Alex Malaszkiewicz
   Site: http://github.com/torrocus
   Twitter: @torrocus
   Location: Cieszyn, PL
+
+  Name: Grzegorz Lisowski
+  Site: http://github.com/noplisu
+  Twitter: @noplisu
+  Location: Gliwice, PL
 
 /* THANKS */
 
@@ -16,7 +21,7 @@
 
 /* SITE */
 
-  Last update: 2015/11/02
+  Last update: 2015/11/17
   Language: English / Polish
   Standards: HTML5, CSS3
   Source: https://github.com/fractalsoft/fractalsoft.org

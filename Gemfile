@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.rc2'
+gem 'rails', '4.2.5.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'actionpack-page_caching'
 gem 'active_link_to'
 gem 'carrierwave'
-gem 'compass-rails'
+gem 'compass-rails', '~> 2.0.5'
 gem 'diacritics'
 gem 'draper'
 gem 'foreman'
@@ -26,7 +26,7 @@ gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 gem 'normalize-rails'
 gem 'oj'
 gem 'pg'
@@ -51,6 +51,7 @@ group :development do
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
   gem 'guard-rails', require: false
+  gem 'i18n-tasks'
   gem 'letter_opener'
   gem 'oink'
   gem 'query_diet'
@@ -58,16 +59,17 @@ group :development do
   gem 'quiet_safari'
   gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices'
-  gem 'rails_db'
+  # gem 'rails_db'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
+  # gem 'scss_lint'
 end
 
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
-  gem 'rspec-rails', '~> 3.3'
+  gem 'rspec-rails', '~> 3.4'
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end

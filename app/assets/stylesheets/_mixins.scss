@@ -1,26 +1,23 @@
 @mixin cover-image($path, $params: no-repeat center center fixed) {
-  background: url($path) $params;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  background: url($path) $params;
 }
 
 @mixin vertical-margin($size) {
-  margin-top: $size;
   margin-bottom: $size;
+  margin-top: $size;
 }
 
 @mixin vertical-padding($size) {
-  padding-top: $size;
   padding-bottom: $size;
+  padding-top: $size;
 }
 
 @mixin navbar($background-color, $text-color, $hover-color) {
   background-color: $background-color;
-  text-transform: uppercase;
-  font-weight: 700;
   font-family: $asap-fonts;
+  font-weight: 700;
+  text-transform: uppercase;
 
   .navbar-nav {
     margin-top: 15px;

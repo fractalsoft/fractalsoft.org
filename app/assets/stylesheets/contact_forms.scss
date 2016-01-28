@@ -2,8 +2,8 @@
 
 body.contact-forms {
   .container.contact {
-    margin-top: -20px;
     background-color: $light-background-color;
+    margin-top: -20px;
     min-height: 1200px;
   }
 
@@ -12,21 +12,27 @@ body.contact-forms {
   }
 }
 
-body.home, body.contact-forms {
+body.contact-forms,
+body.home {
   .contact {
-    h2, h4 {
+    h2,
+    h4 {
       font-weight: 700;
       text-transform: uppercase;
     }
 
+    h2,
+    p {
+      text-align: center;
+    }
+
     h4 { font-size: 12pt; }
     p { margin-bottom: 70px; }
-    h2, p { text-align: center; }
 
     .map-display-none {
-      visibility: hidden;
-      position: absolute;
       left: 15px;
+      position: absolute;
+      visibility: hidden;
     }
 
     .btn.btn-default {
