@@ -16,7 +16,7 @@ class HomeController < ApplicationController
 
   def default_url_options(options = {})
     locale = I18n.locale
-    options.merge!(locale: locale)
+    options[:locale] = locale
     options
   end
 
