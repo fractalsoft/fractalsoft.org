@@ -38,5 +38,4 @@ sumPrices = ->
     unless event.target.type == 'checkbox'
       $(':checkbox', this).trigger('click')
 
-$(document).ready(sumPrices)
-$(document).on('page:load', sumPrices)
+jQuery -> sumPrices()
