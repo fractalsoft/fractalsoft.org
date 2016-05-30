@@ -12,6 +12,7 @@ gliwice =
 
 class LocationMap
   constructor: (@location) ->
+    return unless $('#map').size()
     @map = L.map('map').setView(
       [@location.latitude, @location.longitude],
       @location.zoom
@@ -38,7 +39,4 @@ class LocationMap
 locationMap = ->
   new LocationMap(cieszyn)
 
-# $(document).ready(locationMap)
-# $(document).on('page:load', locationMap)
-jQuery ->
-  locationMap()
+ jQuery -> locationMap()
