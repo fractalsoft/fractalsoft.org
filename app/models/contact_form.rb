@@ -8,7 +8,7 @@ class ContactForm < MailForm::Base
 
   def headers
     {
-      from: %("#{name}" <#{email}>),
+      from: Rails.application.secrets.from_email,
       to: Rails.application.secrets.contact_email
     }
   end
