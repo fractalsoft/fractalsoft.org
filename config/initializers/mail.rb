@@ -3,7 +3,7 @@ ActionMailer::Base.smtp_settings = {
   port:      587,
   user_name: Rails.application.secrets.mandrill_username,
   password:  Rails.application.secrets.mandrill_api_key,
-  domain:    'heroku.com'
+  domain:    'fractalsoft.org'
 }
 ActionMailer::Base.delivery_method = :smtp
 
