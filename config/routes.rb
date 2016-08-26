@@ -11,17 +11,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # defaults locale: :pl do
-  #   get :service, controller: 'cieszyn/welcome', action: :show
-
-  #   namespace :cieszyn do
-  #     resource :collaboration, only: :show, controller: :collaboration
-  #     resource :rules, only: :show
-  #     resource :warranty, only: :show, controller: :warranty
-  #     resources :prices, only: :index
-  #   end
-  # end
-
   scope ':locale', locale: /#{I18n.available_locales.join('|')}/ do
     # resources :projects, only: [:index, :show]
     resources :people, path: 'team', only: [:index, :show]
