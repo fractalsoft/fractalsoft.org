@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   defaults locale: :pl do
-    get :service, controller: 'cieszyn/welcome', action: :show
+    get :cieszyn, controller: 'cieszyn/welcome', action: :show
+    get :service, to: redirect('/pl/cieszyn')
 
     namespace :cieszyn do
       resource :collaboration, only: :show, controller: :collaboration
@@ -21,4 +22,5 @@ Rails.application.routes.draw do
   root to: 'home#index'
   # root to: redirect("/#{I18n.default_locale}", status: 301),
   #      as: :redirected_root
+  match '*path', to: redirect('/'), via: :all
 end
