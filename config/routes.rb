@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   defaults locale: :pl do
-    get :service, controller: 'cieszyn/welcome', action: :show
+    get :cieszyn, controller: 'cieszyn/welcome', action: :show
+    get :service, to: redirect('/pl/cieszyn')
 
     namespace :cieszyn do
       resource :collaboration, only: :show, controller: :collaboration
@@ -9,6 +10,17 @@ Rails.application.routes.draw do
       resources :prices, only: :index
     end
   end
+
+  # defaults locale: :pl do
+  #   get :service, controller: 'cieszyn/welcome', action: :show
+
+  #   namespace :cieszyn do
+  #     resource :collaboration, only: :show, controller: :collaboration
+  #     resource :rules, only: :show
+  #     resource :warranty, only: :show, controller: :warranty
+  #     resources :prices, only: :index
+  #   end
+  # end
 
   scope ':locale', locale: /#{I18n.available_locales.join('|')}/ do
     # resources :projects, only: [:index, :show]
@@ -21,4 +33,5 @@ Rails.application.routes.draw do
   root to: 'home#index'
   # root to: redirect("/#{I18n.default_locale}", status: 301),
   #      as: :redirected_root
+  match '*path', to: redirect('/'), via: :all
 end
