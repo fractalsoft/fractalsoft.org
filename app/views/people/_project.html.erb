@@ -1,7 +1,9 @@
 <div class='descritpion row'>
   <div class="col-md-3">
     <h2>
-      <%= project.title %> <br>
+      <% if project.display %>
+        <%= project.title %> <br>
+      <% end %>
       <small><%= project.subtitle %></small>
     </h2>
   </div>
