@@ -20,6 +20,14 @@
       "description": "Ruby on Rails developer",
       "contributions": [
         {
+          "title": "anonymous app",
+          "names": [
+            { "name": "Backend development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" },
+            { "name": "Create gems in Ruby", "name_pl": "Tworzenie bibliotek (gem) w Ruby" }
+          ]
+        },
+        {
           "title": "hitdea",
           "names": [
             { "name": "Backend architecture", "name_pl": "Architektura części serwerowej" },
@@ -71,13 +79,21 @@
       "image": "team/uholodniak.jpg",
       "github": "shad8",
       "twitter": "8shad8",
-      "linkedin": "urszula-holodniak-0b2945109",
+      "linkedin": "uholodniak",
       "skills": "Backend Development, Frontend Development, API Design, Refactoring, Testing, Git, Photography",
       "technologies": "Ruby, Ruby on Rails, Java Script, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, MySQL, PostgreSQL, RSpec, Minitest, Cordova",
       "introduction_en": "<strong>Ruby geek in 150%.</strong> Conscientious and involved developer with the soul of an artist photographer. Participant and then mentor and organizer of Rails Girls workshops.",
       "introduction_pl": "<strong>Ruby geek na 150%.</strong> Sumienny i zaangażowany programista z duszą fotografa artysty. Uczestniczka a następnie mentor i organizator warsztatów Rails Girls.",
       "description": "Ruby on Rails developer",
       "contributions": [
+        {
+          "title": "nopaperwork",
+          "names": [
+            { "name": "Backend development in Ruby on Rails" },
+            { "name": "Frontend development in Ember.js" },
+            { "name": "Building service to SAF-T" }
+          ]
+        },
         {
           "title": "hitdea",
           "names": [
@@ -118,6 +134,14 @@
       "introduction_pl": "<strong>Programista Rails otwarty na różne technologie.</strong> Ekspert od problemów. Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.",
       "description": "Ruby on Rails developer",
       "contributions": [
+        {
+          "title": "nopaperwork",
+          "names": [
+            { "name": "Backend development in Ruby on Rails" },
+            { "name": "Frontend development in Ember.js" },
+            { "name": "Create documentation using Swagger" }
+          ]
+        },
         {
           "title": "hitdea",
           "names": [
@@ -160,7 +184,7 @@
       "facebook": "torrocus",
       "instagram": "torrocus",
       "linkedin": "torrocus",
-      "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration, Remote Work",
+      "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development",
       "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, MySQL, RSpec, HTML5, CSS3, CoffeeScript, JavaScript, Ember.js, Sidekiq, TestCase, Minitest",
       "saying_en": "<p>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</p> <footer>Antoine de Saint Exupéry</footer>",
       "saying_pl": "<p>Wydaje się, że doskonałość osiąga się nie wtedy, gdy nie ma nic więcej do dodania, ale gdy nie ma nic więcej do usunięcia.</p> <footer>Antoine de Saint Exupéry</footer>",
@@ -168,6 +192,21 @@
       "introduction_pl": "<strong>Web developer od roku 1998.</strong> Ruby poznał 12 lat później używając Sinatra i Ruby on Rails. Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.",
       "description": "Ruby on Rails developer",
       "contributions": [
+        {
+          "title": "selecthub",
+          "names": [
+            { "name": "Backend development in Ruby on Rails 3.2", "name_pl": "Rozwój aplikacji w Ruby on Rails 3.2" },
+            { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" }
+          ]
+        },
+        {
+          "title": "nopaperwork",
+          "names": [
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" },
+            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" }
+          ]
+        },
         {
           "title": "hitdea",
           "names": [
@@ -225,7 +264,42 @@
   ],
   "projects": [
     {
+      "title": "selecthub",
+      "display": true,
+      "subtitle_en": "",
+      "subtitle_pl": "",
+      "introduction_en": "Platform for business to evaluate and acquire the software products. It allows comparison of different IT solutions depending on customer needs. Software vendors give access to the database of leads.",
+      "introduction_pl": "Platforma dla firm do oceniania i nabywania oprogramowania. Umożliwia porównanie różnych rozwiązań IT w zależności od potrzeb klienta. Producentom oprogramowania daje dostęp do bazy potencjalnych klientów.",
+      "description_en": "",
+      "description_pl": "",
+      "year": 2016
+    },
+    {
+      "title": "anonymous app",
+      "display": false,
+      "subtitle_en": "crop management application",
+      "subtitle_pl": "aplikacja do zarządzania uprawami",
+      "introduction_en": "Web application to make better planning process for farmers. Geo map service, communication with external services, import / export fields, organizer for irrigation, fertilizing, planting and harvesting crops.",
+      "introduction_pl": "Aplikacja internetowa usprawniająca proces planowania dla rolników. Obsługa map, komunikacja z zewnętrznymi serwisami, import / eksport pól, organizer nawadniania, użyźniania, sadzenia i zbierania upraw.",
+      "description_en": "",
+      "description_pl": "",
+      "year": 2016
+    },
+    {
+      "title": "nopaperwork",
+      "display": true,
+      "subtitle_en": "small business management application",
+      "subtitle_pl": "aplikacja do zarządzania małą firmą",
+      "url": "nopaperwork.org",
+      "introduction_en": "Management business with no paperwork. Customer service, create invoices, order management. All in one place, easy-to-use and painless. Available API in standard JSON API.",
+      "introduction_pl": "Zarządzanie małą firmą bez zbędnych formalności. Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami. Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne. Dostępne API w standardzie JSON API.",
+      "description_en": "",
+      "description_pl": "",
+      "year": 2016
+    },
+    {
       "title": "hitdea",
+      "display": true,
       "subtitle_en": "based on microservices",
       "subtitle_pl": "aplikacja oparta o&nbsp;mikroserwisy",
       "url": "hitdea.com",
@@ -238,6 +312,7 @@
     },
     {
       "title": "advertising app",
+      "display": true,
       "url": "marketing-hitdea.herokuapp.com",
       "introduction": "Contextual advertising management. It uses API of linguistic analysis application and allows to define target group.",
       "introduction_pl": "Aplikacja do zarządzania reklamą kontekstową. Wykorzystuje API aplikacji do analizy językowej oraz umożliwia określić grupę docelową.",
@@ -245,6 +320,7 @@
     },
     {
       "title": "linguistic analysis",
+      "display": true,
       "url": "analysis.hitdea.com",
       "introduction": "Linguistic analysis system is used for word processing and automatic category detection. The application can also detect the language of the text. The database contains over 6 million words in Polish and English. The system has a learning mode with a teacher and the categorization is based on statistical methods. Application provides an external API.",
       "introduction_pl": "System analizy językowej służy do przetwarzania tekstów i automatycznego wykrycia kategorii. Aplikacja umożliwia również wykrywanie języka tekstu. Baza zawiera ponad 6 milionów słów w&nbsp;języku polskim i angielskim. System umożliwia włączenie trybu nauki z nauczycielem, a&nbsp;kategoryzacja oparta jest o metody statystyczne. Aplikacja udostępnia API zewnętrzne.",
@@ -252,6 +328,7 @@
     },
     {
       "title": "wordmaker",
+      "display": true,
       "url": "game-hitdea.herokuapp.com",
       "introduction": "Game of words based on English and Polish languages. Create as many different words as possible from randomly selected letters. Word verification is based on the external API linguistic analysis.",
       "introduction_pl": "Gra w słowa oparta o język angielski i polski. Stworzenie jak najwięcej różnych słów z losowo wybranych liter. Weryfikacja słowa wykorzytuje zewnętrzne API systemu analizy językowej.",
@@ -259,6 +336,7 @@
     },
     {
       "title": "20 questions game",
+      "display": true,
       "introduction": "Logic game which learns with every play. In the game you have to answer questions asked by the AI and it will try to guess what were you thinking about.",
       "introduction_pl": "Gra logiczna ucząca się z każdą grą. Należy w niej odpowiadać na pytania zadawane przez SI a ono spróbuje odganąć o czym myślałeś.",
       "year": 2014
