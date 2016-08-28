@@ -6,7 +6,7 @@ describe ContactFormsController, type: :routing do
       expect(post("#{locale}/contact-forms")).to route_to(
         controller: 'contact_forms',
         action: 'create',
-        locale: "#{locale}"
+        locale: locale.to_s
       )
     end
   end
