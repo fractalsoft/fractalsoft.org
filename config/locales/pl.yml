@@ -2,9 +2,9 @@ pl:
   language: polski
   meta:
     site: Fractal Soft
-    title: 'Programiści Ruby on Rails & JavaScript do wynajęcia'
-    description: 'Fractal Soft to zespół programistów webowych i mobilnych. Pomożemy Ci zbudować aplikację w Ruby on Rails & JavaScript. Sprawdź nas!'
-    keywords: 'Ruby on Rails, EmberJS, JavaScript, aplikacje internetowe i mobilne'
+    title: 'Programiści Ruby on Rails i JavaScript do wynajęcia'
+    description: 'Fractal Soft to zespół programistów webowych i mobilnych. Pomożemy Ci zbudować aplikację w Ruby on Rails i JavaScript. Sprawdź nas!'
+    keywords: 'Ruby on Rails, EmberJS, JavaScript, CoffeeScript, aplikacje internetowe i mobilne'
     publisher: https://plus.google.com/u/0/b/106386969948370069442/106386969948370069442
     twitter:
       card: summary

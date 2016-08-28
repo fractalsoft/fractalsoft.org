@@ -29,22 +29,6 @@
   </div>
   <hr>
   <% @person.projects.each do |project| %>
-    <div class='descritpion row'>
-      <div class="col-md-3">
-        <h2><%= project.title %> <br><small><%= project.subtitle %></small></h2>
-      </div>
-      <div class='col-md-9'>
-        <h4 class='text-justify'><%= project.introduction %></h4>
-        <p>
-          <strong><%= t('.major_contributions') %></strong>
-          <ul>
-            <% @person.project_with_contributions(project).each do |contribution| %>
-              <li><%= contribution %></li>
-            <% end %>
-          </ul>
-        </p>
-        <hr>
-      </div>
-    </div>
+    <%= render 'project', project: project, contributions: @person.project_with_contributions(project) %>
   <% end %>
 </div>
