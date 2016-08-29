@@ -87,9 +87,11 @@ en:
       remote_ip: IP Address
       user_agent: Browser
   people:
-    show:
+    project:
       major_contributions: Major contributions
+    skills:
       skills: Skills
+    technologies:
       technologies: Technologies
     team:
       team:
