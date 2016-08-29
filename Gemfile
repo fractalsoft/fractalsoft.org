@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.1'
-gem 'sass-rails', '~> 5.0'
+gem 'rails', '4.2.7.1'
+gem 'sass-rails', '~> 5.0.6'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
@@ -66,14 +66,14 @@ group :development do
   gem 'rubycritic', require: false
   gem 'sandi_meter'
   # gem 'scss_lint'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
-  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-rails', '~> 3.5'
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
 
 group :test do
