@@ -66,6 +66,7 @@ group :development do
   gem 'rubycritic', require: false
   gem 'sandi_meter'
   # gem 'scss_lint'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
@@ -73,7 +74,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.5'
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
 
 group :test do
