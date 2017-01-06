@@ -274,8 +274,6 @@ GEM
       less (~> 2.6.0)
       sprockets (> 2, < 4)
       tilt
-    letter_opener (1.4.1)
-      launchy (~> 2.2)
     listen (3.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -576,7 +574,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
-  letter_opener
   mail_form
   mandrill-api
   mandrill_mailer
@@ -620,4 +617,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.4
+   1.13.6
