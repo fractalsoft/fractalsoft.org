@@ -1,5 +1,8 @@
 <%= simple_form_for contact_form, html: { id: 'contact_form' } do |f| %>
   <%= f.input :name, label: false, placeholder: t('.name'), required: true %>
+  <div class='hidden'>
+    <%= f.input :nickname, label: false, placeholder: t('.nickname.placeholder'), hint: t('.nickname.hint') %>
+  </div>
   <%= f.input :email, label: false, placeholder: t('.email'), required: true %>
   <%= f.input :message, label: false, placeholder: t('.message'), required: true,
     as: :text, input_html: { rows: 10 }
