@@ -3,5 +3,5 @@
 scss:
   config_file: .scss-lint.yml
 
-StringLiterals:
-  EnforcedStyle: single_quotes
+ruby:
+  config_file: .rubocop.yml
