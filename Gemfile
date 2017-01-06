@@ -54,7 +54,6 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'guard-rails', require: false
   gem 'i18n-tasks'
-  gem 'letter_opener'
   gem 'oink'
   gem 'query_diet'
   gem 'quiet_assets'
