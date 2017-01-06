@@ -4,5 +4,5 @@
   var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
   c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
   })(document);
-  smartlook('init', Rails.application.secrets.smartlook);
+  smartlook('init', '<%= Rails.application.secrets.smartlook %>');
 </script>
