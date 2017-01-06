@@ -30,6 +30,9 @@ pl:
       email: Twój adres email
       message: Jak możemy Ci pomóc?
       name: Twoje imię
+      nickname:
+        hint: Zostaw to pole puste!
+        placeholder: Twój nick
       send: wyślij
     new:
       contact: &contact
@@ -80,8 +83,9 @@ pl:
     attributes:
       contact_form:
         email: E-mail
-        name: Imię
         message: Wysłana wiadomość
+        name: Imię
+        nickname: Nickname
     request:
       title: Informacje techniczne o użytkowniku
       remote_ip: Adres IP
