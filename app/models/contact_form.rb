@@ -6,6 +6,7 @@ class ContactForm < MailForm::Base
   attribute :message, validate: true
   attribute :name, validate: true
   attribute :nickname, captcha: true
+  attribute :browser_info
 
   def headers
     {
