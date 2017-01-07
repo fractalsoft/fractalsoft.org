@@ -12,9 +12,13 @@ class BrowserInfo
     @js['language'] = navigator.language     # language the primary browser
     @js['vendor'] = navigator.vendor         # brand name of the browser
     @js['cookieEnabled'] = navigator.cookieEnabled # cookies are enabled
+    @js['plugins'] = @plugins()
 
   json: ->
     @update()
     JSON.stringify(@js)
+
+  plugins: ->
+    (plugin.name for plugin in navigator.plugins)
 
 window.browserInfo = new BrowserInfo
