@@ -5,3 +5,6 @@ jQuery ->
     $(@).addClass('active')
     $('iframe.map').addClass('map-display-none')
     $(target).removeClass('map-display-none')
+
+  $('#contact_form').ready ->
+    $('#contact_form_browser_info').val('' + browserInfo.json())
