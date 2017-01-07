@@ -8,6 +8,8 @@ class ContactForm < MailForm::Base
   attribute :nickname, captcha: true
   attribute :browser_info
 
+  validates :email, mx_record: true
+
   def headers
     {
       from: Rails.application.secrets.from_email,
