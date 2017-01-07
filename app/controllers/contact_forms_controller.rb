@@ -1,5 +1,3 @@
-require 'resolv'
-
 # Contact Forms Controller
 class ContactFormsController < ApplicationController
   def new
