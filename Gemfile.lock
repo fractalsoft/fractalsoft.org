@@ -487,7 +487,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.11)
     sshkit (1.8.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -609,7 +608,6 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   spring
-  sqlite3
   turbolinks
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)
