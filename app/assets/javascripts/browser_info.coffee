@@ -3,12 +3,38 @@ class BrowserInfo
     @js = {}
 
   update: ->
+    @js['document'] = @document()
+    @js['innerHeight'] = innerHeight
+    @js['innerWidth'] = innerWidth
+    @js['location'] = @location()
     @js['navigator'] = @navigator()
     @js['screen'] = @screen()
+    @js['time'] = @time()
 
   json: ->
     @update()
     JSON.stringify(@js)
+
+  document: ->
+    hash = {}
+    hash['cookie'] = document.cookie
+    hash['height'] = document.height
+    hash['referrer'] = document.referrer
+    hash['width'] = document.width
+    hash
+
+  location: ->
+    hash = {}
+    hash['hash'] = location.hash
+    hash['host'] = location.host
+    hash['hostname'] = location.hostname
+    hash['href'] = location.href
+    hash['origin'] = location.origin
+    hash['pathname'] = location.pathname
+    hash['port'] = location.port
+    hash['protocol'] = location.protocol
+    hash['search'] = location.search
+    hash
 
   # appName - full browser name
   # appVersion - version of the browser
@@ -50,6 +76,12 @@ class BrowserInfo
     hash['height'] = screen.height
     hash['pixelDepth'] = screen.pixelDepth
     hash['width'] = screen.width
+    hash
+
+  time: ->
+    hash = {}
+    hash['timeOpened'] = new Date()
+    hash['timezoneOffset'] = new Date().getTimezoneOffset()
     hash
 
 window.browserInfo = new BrowserInfo
