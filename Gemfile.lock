@@ -165,10 +165,10 @@ GEM
     eventmachine (1.0.9.1)
     excon (0.45.4)
     execjs (2.6.0)
-    factory_girl (4.5.0)
+    factory_girl (4.8.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
-      factory_girl (~> 4.5.0)
+    factory_girl_rails (4.8.0)
+      factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
     ffi (1.9.10)
     flay (2.8.1)
@@ -378,7 +378,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.2.1)
     raindrops (0.17.0)
-    rake (11.2.2)
+    rake (12.0.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -524,7 +524,7 @@ DEPENDENCIES
   diacritics
   dotenv-rails
   draper
-  factory_girl_rails
+  factory_girl_rails (~> 4.8.0)
   foreman (~> 0.82)
   friendly_id
   gemsurance
