@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 0.4.2', group: :doc
 
 gem 'actionpack-page_caching'
 gem 'active_link_to'
