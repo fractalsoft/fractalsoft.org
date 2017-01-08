@@ -64,7 +64,6 @@ group :development do
   gem 'rubocop', '~> 0.46.0'
   gem 'rubycritic', '~> 3.1.3', require: false
   gem 'sandi_meter'
-  # gem 'scss_lint'
   gem 'web-console', '~> 2.0'
 end
 
