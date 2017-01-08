@@ -48,6 +48,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'colored'
   gem 'deadweight'
+  gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'guard'
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
