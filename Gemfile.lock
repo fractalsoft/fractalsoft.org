@@ -309,7 +309,7 @@ GEM
     parser (2.3.3.1)
       ast (~> 2.2)
     path_expander (1.0.1)
-    pg (0.18.4)
+    pg (0.19.0)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -549,7 +549,7 @@ DEPENDENCIES
   normalize-rails
   oink
   oj (~> 2.18.0)
-  pg
+  pg (~> 0.19.0)
   pry-byebug (~> 3.4.2)
   puma
   query_diet (~> 0.6.0)
