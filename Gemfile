@@ -29,7 +29,7 @@ gem 'meta-tags'
 gem 'mini_magick', platform: :ruby
 # gem 'newrelic_rpm'
 gem 'normalize-rails'
-gem 'oj'
+gem 'oj', '~> 2.18.0' # # Fast JSON parser and object serializer
 gem 'pg'
 gem 'puma'
 gem 'rack-attack'
@@ -62,7 +62,7 @@ group :development do
   gem 'rails_best_practices', '~> 1.17.0'
   # gem 'rails_db'
   gem 'rubocop', '~> 0.46.0'
-  gem 'rubycritic', require: false
+  gem 'rubycritic', '~> 3.1.3', require: false
   gem 'sandi_meter'
   # gem 'scss_lint'
   gem 'web-console', '~> 2.0'

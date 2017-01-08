@@ -85,7 +85,7 @@ GEM
     chunky_png (1.3.5)
     code_analyzer (0.4.7)
       sexp_processor
-    codeclimate-engine-rb (0.3.1)
+    codeclimate-engine-rb (0.4.0)
       virtus (~> 1.0)
     coderay (1.1.0)
     coercible (1.0.0)
@@ -98,7 +98,6 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     colored (1.2)
-    colorize (0.8.1)
     commonjs (0.2.7)
     compass (1.0.3)
       chunky_png (~> 1.2)
@@ -172,10 +171,13 @@ GEM
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     ffi (1.9.10)
-    flay (2.6.1)
+    flay (2.8.1)
+      erubis (~> 2.7.0)
+      path_expander (~> 1.0)
       ruby_parser (~> 3.0)
       sexp_processor (~> 4.0)
-    flog (4.3.2)
+    flog (4.4.0)
+      path_expander (~> 1.0)
       ruby_parser (~> 3.1, > 3.1.0)
       sexp_processor (~> 4.4)
     foreman (0.82.0)
@@ -304,13 +306,13 @@ GEM
     oink (0.10.1)
       activerecord
       hodel_3000_compliant_logger
-    oj (2.14.3)
+    oj (2.18.0)
     parser (2.3.3.1)
       ast (~> 2.2)
+    path_expander (1.0.1)
     pg (0.18.4)
     pkg-config (1.1.7)
     powerpack (0.1.1)
-    private_attr (1.1.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -385,10 +387,9 @@ GEM
     rdoc (4.2.1)
       json (~> 1.4)
     redcarpet (3.3.4)
-    reek (3.10.1)
-      codeclimate-engine-rb (~> 0.3.1)
-      parser (~> 2.3)
-      private_attr (~> 1.1)
+    reek (4.5.3)
+      codeclimate-engine-rb (~> 0.4.0)
+      parser (~> 2.3.1, >= 2.3.1.2)
       rainbow (~> 2.0)
     request_store (1.3.0)
     require_all (1.4.0)
@@ -422,13 +423,14 @@ GEM
     ruby-progressbar (1.8.1)
     ruby_parser (3.8.3)
       sexp_processor (~> 4.1)
-    rubycritic (2.7.1)
-      colorize
-      flay (= 2.6.1)
-      flog (= 4.3.2)
+    rubycritic (3.1.3)
+      flay (~> 2.8)
+      flog (~> 4.4)
       launchy (= 2.4.3)
-      parser (~> 2.3)
-      reek (= 3.10.1)
+      parser (= 2.3.3.1)
+      rainbow (~> 2.1)
+      reek (~> 4.4)
+      ruby_parser (~> 3.8)
       virtus (~> 1.0)
     sandi_meter (1.2.0)
       json
@@ -549,7 +551,7 @@ DEPENDENCIES
   mini_magick
   normalize-rails
   oink
-  oj
+  oj (~> 2.18.0)
   pg
   pry-byebug
   puma
@@ -570,7 +572,7 @@ DEPENDENCIES
   rollbar (~> 2.14)
   rspec-rails (~> 3.5)
   rubocop (~> 0.46.0)
-  rubycritic
+  rubycritic (~> 3.1.3)
   sandi_meter
   sass-rails (~> 5.0.6)
   sdoc (~> 0.4.0)
