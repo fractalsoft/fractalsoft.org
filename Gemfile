@@ -70,7 +70,7 @@ end
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'pry-byebug'
+  gem 'pry-byebug', '~> 3.4.2'
   gem 'rspec-rails', '~> 3.5'
   gem 'spring'
 end
