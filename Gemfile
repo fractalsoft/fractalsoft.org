@@ -55,13 +55,13 @@ group :development do
   gem 'guard-rails', require: false
   gem 'i18n-tasks'
   gem 'oink'
-  gem 'query_diet'
+  gem 'query_diet', '~> 0.6.0'
   gem 'quiet_assets'
   gem 'quiet_safari'
   gem 'rack-mini-profiler', require: false
-  gem 'rails_best_practices'
+  gem 'rails_best_practices', '~> 1.17.0'
   # gem 'rails_db'
-  gem 'rubocop'
+  gem 'rubocop', '~> 0.46.0'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
   # gem 'scss_lint'
