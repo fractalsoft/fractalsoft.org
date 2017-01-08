@@ -318,7 +318,7 @@ GEM
     pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
-    puma (3.6.2)
+    puma (2.16.0)
     query_diet (0.6.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -558,7 +558,7 @@ DEPENDENCIES
   oj (~> 2.18.0)
   pg (~> 0.19.0)
   pry-byebug (~> 3.4.2)
-  puma (~> 3.6.2)
+  puma (~> 2.16.0)
   query_diet (~> 0.6.0)
   quiet_assets
   quiet_safari
