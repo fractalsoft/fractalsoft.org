@@ -25,7 +25,7 @@ gem 'http_accept_language'
 gem 'mail_form'
 gem 'mandrill-api'
 gem 'mandrill_mailer'
-gem 'meta-tags'
+gem 'meta-tags', '~> 2.4.0' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', platform: :ruby
 # gem 'newrelic_rpm'
 gem 'normalize-rails'
