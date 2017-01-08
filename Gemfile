@@ -38,7 +38,6 @@ gem 'redcarpet'
 gem 'respond-js-rails'
 gem 'rollbar'
 gem 'simple_form'
-gem 'sqlite3'
 gem 'twitter-bootstrap-rails'
 
 group :development do
