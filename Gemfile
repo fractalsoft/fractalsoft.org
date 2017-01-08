@@ -43,7 +43,7 @@ gem 'twitter-bootstrap-rails'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'brakeman', require: false
+  gem 'brakeman', '~> 3.4.1', require: false
   gem 'bullet', '~> 5.5.0'
   gem 'capistrano-rails'
   gem 'colored'
