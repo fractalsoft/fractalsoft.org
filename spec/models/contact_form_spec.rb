@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ContactForm, type: :model do
   let(:params) do
-    { name: rand_text, email: 'test@example.com', message: rand_text }
+    { name: rand_text, email: 'test@gmail.com', message: rand_text }
   end
 
   describe 'do not validate' do

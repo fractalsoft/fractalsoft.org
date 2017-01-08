@@ -3,6 +3,7 @@ AllCops:
     - bin/*
     - config/**/*
     - db/**/*
+    - tmp/**/*
 
 ClassLength:
   CountComments: false
