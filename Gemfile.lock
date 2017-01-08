@@ -59,7 +59,7 @@ GEM
     bullet (5.5.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.10.0)
-    byebug (8.2.1)
+    byebug (9.0.6)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -87,7 +87,7 @@ GEM
       sexp_processor
     codeclimate-engine-rb (0.4.0)
       virtus (~> 1.0)
-    coderay (1.1.0)
+    coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     coffee-rails (4.1.1)
@@ -311,12 +311,12 @@ GEM
     path_expander (1.0.1)
     pg (0.18.4)
     powerpack (0.1.1)
-    pry (0.10.3)
+    pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.3.0)
-      byebug (~> 8.0)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
       pry (~> 0.10)
     puma (2.15.3)
     query_diet (0.6.0)
@@ -550,7 +550,7 @@ DEPENDENCIES
   oink
   oj (~> 2.18.0)
   pg
-  pry-byebug
+  pry-byebug (~> 3.4.2)
   puma
   query_diet (~> 0.6.0)
   quiet_assets
