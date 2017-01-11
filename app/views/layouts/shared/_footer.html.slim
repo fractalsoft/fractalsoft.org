@@ -1,0 +1,15 @@
+nav.footer.navbar.navbar-default
+  .container
+    .navbar-header
+      = link_to root_path, class: 'navbar-brand' do
+        .hidden-xs
+          = render 'layouts/shared/logo', id: 'fractalsoft-logo-footer'
+        = image_tag 'home/logo_big_white.png', class: 'visible-xs'
+
+    .collapse.navbar-collapse
+      = image_tag 'home/footer.png', class: 'pull-right'
+      ul.nav.navbar-nav.navbar-right
+        / li
+          #= link_to t('.projects'), projects_path
+        li = link_to t('.team'), people_path
+        li = link_to t('.contact'), new_contact_form_path
