@@ -1,0 +1,20 @@
+- content_for :body_class, 'project'
+
+.container.project
+  .header-img style='background-image: url("#{asset_path(@project.top_image.image_url)}")'
+    .logo
+      = image_tag @project.logo_image.image_url
+  .row
+    .col-sm-6.col-sm-offset-3
+      p = @project.description
+      = link_to @project.url, @project.url
+  .images
+    .row
+      = image_tag @project.pc_image.image_url, class: 'pull-right'
+    - @project.page_images.each do |image|
+      .row
+        .col-sm-8.col-sm-offset-2
+          = image_tag image.image_url
+  .logo
+    = image_tag @project.logo_image.image_url
+    span = @project.year
