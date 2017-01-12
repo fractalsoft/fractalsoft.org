@@ -1,7 +1,7 @@
 # People controller
 class PeopleController < ApplicationController
   def index
-    @people = Person.includes(:translations).all.decorate.sort_by(&:fullname)
+    @people = PeopleFacade.list
   end
 
   def show
