@@ -188,7 +188,7 @@
       "instagram": "torrocus",
       "linkedin": "torrocus",
       "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development",
-      "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, MySQL, RSpec, HTML5, CSS3, CoffeeScript, JavaScript, Ember.js, Sidekiq, TestCase, Minitest",
+      "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, MySQL, RSpec, HTML5, CSS3, CoffeeScript, JavaScript, Ember.js, Sidekiq, TestCase, Minitest, Sass, Slim",
       "saying_en": "<p>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</p> <footer>Antoine de Saint Exupéry</footer>",
       "saying_pl": "<p>Wydaje się, że doskonałość osiąga się nie wtedy, gdy nie ma nic więcej do dodania, ale gdy nie ma nic więcej do usunięcia.</p> <footer>Antoine de Saint Exupéry</footer>",
       "introduction_en": "<strong>Web developer since 1998.</strong> He had met Ruby 12 years later while using Sinatra and Ruby on Rails. Madcap for algorithms. Linux administrator and Open Source ideology evangelist.",
@@ -196,18 +196,20 @@
       "description": "Ruby on Rails developer",
       "contributions": [
         {
+          "title": "nopaperwork",
+          "names": [
+            { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" },
+            { "name": "Building service to SAF-T", "name_pl": "Budowa serwisu obsługi do JPK" },
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
+          ]
+        },
+        {
           "title": "selecthub",
           "names": [
             { "name": "Backend development in Ruby on Rails 3.2", "name_pl": "Rozwój aplikacji w Ruby on Rails 3.2" },
             { "name": "Frontend development (Backbone.js, Marionette)", "name_pl": "Rozwój Frontendu (Backbone.js, Marionette)" },
             { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
-            { "name": "Code refactoring", "name_pl": "Refaktoring kodu" }
-          ]
-        },
-        {
-          "title": "nopaperwork",
-          "names": [
-            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" },
             { "name": "Code refactoring", "name_pl": "Refaktoring kodu" }
           ]
         },
@@ -287,7 +289,7 @@
       "introduction_pl": "Aplikacja internetowa usprawniająca proces planowania dla rolników. Obsługa map, komunikacja z zewnętrznymi serwisami, import / eksport pól, organizer nawadniania, użyźniania, sadzenia i zbierania upraw.",
       "description_en": "",
       "description_pl": "",
-      "year": 2016
+      "year": 2017
     },
     {
       "title": "nopaperwork",
@@ -299,7 +301,7 @@
       "introduction_pl": "Zarządzanie małą firmą bez zbędnych formalności. Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami. Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne. Dostępne API w standardzie JSON API.",
       "description_en": "",
       "description_pl": "",
-      "year": 2016
+      "year": 2017
     },
     {
       "title": "hitdea",
@@ -317,7 +319,7 @@
     {
       "title": "advertising app",
       "display": true,
-      "url": "marketing-hitdea.herokuapp.com",
+      "url": "marketing.hitdea.com",
       "introduction": "Contextual advertising management. It uses API of linguistic analysis application and allows to define target group.",
       "introduction_pl": "Aplikacja do zarządzania reklamą kontekstową. Wykorzystuje API aplikacji do analizy językowej oraz umożliwia określić grupę docelową.",
       "year": 2014
@@ -333,7 +335,7 @@
     {
       "title": "wordmaker",
       "display": true,
-      "url": "game-hitdea.herokuapp.com",
+      "url": "game.hitdea.com",
       "introduction": "Game of words based on English and Polish languages. Create as many different words as possible from randomly selected letters. Word verification is based on the external API linguistic analysis.",
       "introduction_pl": "Gra w słowa oparta o język angielski i polski. Stworzenie jak najwięcej różnych słów z losowo wybranych liter. Weryfikacja słowa wykorzytuje zewnętrzne API systemu analizy językowej.",
       "year": 2014
@@ -341,6 +343,7 @@
     {
       "title": "20 questions game",
       "display": true,
+      "url": "questions.hitdea.com",
       "introduction": "Logic game which learns with every play. In the game you have to answer questions asked by the AI and it will try to guess what were you thinking about.",
       "introduction_pl": "Gra logiczna ucząca się z każdą grą. Należy w niej odpowiadać na pytania zadawane przez SI a ono spróbuje odganąć o czym myślałeś.",
       "year": 2014
