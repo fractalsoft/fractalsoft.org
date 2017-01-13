@@ -81,12 +81,10 @@
       "fullname": "Urszula Hołodniak",
       "position": "developer",
       "image": "team/uholodniak.jpg",
-      "github": "shad8",
-      "linkedin": "uholodniak",
       "skills": "Backend Development, Frontend Development, API Design, Refactoring, Testing, Git, Photography",
       "technologies": "Ruby, Ruby on Rails, Java Script, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, MySQL, PostgreSQL, RSpec, Minitest, Cordova",
-      "introduction_en": "<strong>Ruby geek in 150%.</strong> Conscientious and involved developer with the soul of an artist photographer. Participant and then mentor and organizer of Rails Girls workshops.",
-      "introduction_pl": "<strong>Ruby geek na 150%.</strong> Sumienny i zaangażowany programista z duszą fotografa artysty. Uczestniczka a następnie mentor i organizator warsztatów Rails Girls.",
+      "introduction_en": "<strong>Ruby geek in 100%.</strong> Conscientious and involved developer with the soul of an artist photographer. Participant and then mentor and organizer of Rails Girls workshops.",
+      "introduction_pl": "<strong>Ruby geek na 100%.</strong> Sumienny i zaangażowany programista z duszą fotografa artysty. Uczestniczka a następnie mentor i organizator warsztatów Rails Girls.",
       "description": "Ruby on Rails developer",
       "contributions": [
         {
@@ -270,15 +268,17 @@
   ],
   "projects": [
     {
-      "title": "selecthub",
+      "title": "nopaperwork",
       "display": true,
-      "subtitle_en": "",
-      "subtitle_pl": "",
-      "introduction_en": "Platform for business to evaluate and acquire the software products. It allows comparison of different IT solutions depending on customer needs. Software vendors give access to the database of leads.",
-      "introduction_pl": "Platforma dla firm do oceniania i nabywania oprogramowania. Umożliwia porównanie różnych rozwiązań IT w zależności od potrzeb klienta. Producentom oprogramowania daje dostęp do bazy potencjalnych klientów.",
+      "dofollow": true,
+      "subtitle_en": "small business management application",
+      "subtitle_pl": "aplikacja do zarządzania małą firmą",
+      "url": "nopaperwork.org",
+      "introduction_en": "Management business with no paperwork. Customer service, create invoices, order management. All in one place, easy-to-use and painless. Available API in standard JSON API.",
+      "introduction_pl": "Zarządzanie małą firmą bez zbędnych formalności. Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami. Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne. Dostępne API w standardzie JSON API.",
       "description_en": "",
       "description_pl": "",
-      "year": 2016
+      "year": 2017
     },
     {
       "title": "anonymous app",
@@ -292,16 +292,17 @@
       "year": 2017
     },
     {
-      "title": "nopaperwork",
+      "title": "selecthub",
       "display": true,
-      "subtitle_en": "small business management application",
-      "subtitle_pl": "aplikacja do zarządzania małą firmą",
-      "url": "nopaperwork.org",
-      "introduction_en": "Management business with no paperwork. Customer service, create invoices, order management. All in one place, easy-to-use and painless. Available API in standard JSON API.",
-      "introduction_pl": "Zarządzanie małą firmą bez zbędnych formalności. Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami. Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne. Dostępne API w standardzie JSON API.",
+      "dofollow": false,
+      "subtitle_en": "",
+      "subtitle_pl": "",
+      "url": "selecthub.com",
+      "introduction_en": "Platform for business to evaluate and acquire the software products. It allows comparison of different IT solutions depending on customer needs. Software vendors give access to the database of leads.",
+      "introduction_pl": "Platforma dla firm do oceniania i nabywania oprogramowania. Umożliwia porównanie różnych rozwiązań IT w zależności od potrzeb klienta. Producentom oprogramowania daje dostęp do bazy potencjalnych klientów.",
       "description_en": "",
       "description_pl": "",
-      "year": 2017
+      "year": 2016
     },
     {
       "title": "hitdea",
@@ -345,7 +346,7 @@
       "display": true,
       "url": "questions.hitdea.com",
       "introduction": "Logic game which learns with every play. In the game you have to answer questions asked by the AI and it will try to guess what were you thinking about.",
-      "introduction_pl": "Gra logiczna ucząca się z każdą grą. Należy w niej odpowiadać na pytania zadawane przez SI a ono spróbuje odganąć o czym myślałeś.",
+      "introduction_pl": "Gra logiczna ucząca się z każdą następną rundą gry. Należy w niej odpowiadać na pytania zadawane przez SI (Sztuczną Inteligencję) a aplikacja spróbuje odganąć o czym myślałeś.",
       "year": 2014
     }
   ],
