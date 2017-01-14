@@ -144,6 +144,14 @@
           ]
         },
         {
+          "title": "purpura",
+          "names": [
+            { "name": "Backend development in Ruby on Rails" },
+            { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
+            { "name": "Deployment to staging", "name_pl": "Wdrożenie na staging (serwer przedprodukcyjny)" }
+          ]
+        },
+        {
           "title": "hitdea",
           "names": [
             { "name": "Backend development (Ruby on Rails, Cordova)" },
@@ -199,6 +207,14 @@
             { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
             { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" },
             { "name": "Building service to SAF-T", "name_pl": "Budowa serwisu obsługi do JPK" },
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
+          ]
+        },
+        {
+          "title": "purpura",
+          "names": [
+            { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
             { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
           ]
         },
@@ -276,6 +292,18 @@
       "url": "nopaperwork.org",
       "introduction_en": "Management business with no paperwork. Customer service, create invoices, order management. All in one place, easy-to-use and painless. Available API in standard JSON API.",
       "introduction_pl": "Zarządzanie małą firmą bez zbędnych formalności. Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami. Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne. Dostępne API w standardzie JSON API.",
+      "description_en": "",
+      "description_pl": "",
+      "year": 2017
+    },
+    {
+      "title": "purpura",
+      "display": true,
+      "subtitle_en": "design handcrafted tiles application",
+      "subtitle_pl": "aplikacja do projektowania płytek",
+      "url": "purpura.eu",
+      "introduction_en": "Application supporting design hand-made ceramic tiles. Users can choose the shapes, patterns and colors. Ordering process is a multi-step and requires an individual valuation, because the tiles are manufactured by hand.",
+      "introduction_pl": "Aplikacja wspomagająca projektowanie ręcznie wykonywanych kafli ceramicznych. Użytkownicy mogą dobierać kształty, wzory i kolory. Proces zamawiania jest wieloetapowy i wymaga indywidualnej wyceny, ponieważ płytki są wyrabiane ręcznie.",
       "description_en": "",
       "description_pl": "",
       "year": 2017
