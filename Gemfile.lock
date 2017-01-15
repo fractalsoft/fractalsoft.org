@@ -305,7 +305,7 @@ GEM
     oink (0.10.1)
       activerecord
       hodel_3000_compliant_logger
-    oj (2.18.0)
+    oj (2.18.1)
     parser (2.3.3.1)
       ast (~> 2.2)
     path_expander (1.0.1)
@@ -555,7 +555,7 @@ DEPENDENCIES
   mini_magick
   normalize-rails
   oink
-  oj (~> 2.18.0)
+  oj (~> 2.18.1)
   pg (~> 0.19.0)
   pry-byebug (~> 3.4.2)
   puma (~> 2.16.0)
