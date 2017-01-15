@@ -50,10 +50,6 @@ group :development do
   gem 'colored'
   gem 'deadweight'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
-  gem 'guard'
-  gem 'guard-bundler', require: false
-  gem 'guard-livereload', require: false
-  gem 'guard-rails', require: false
   gem 'i18n-tasks'
   gem 'oink'
   gem 'query_diet', '~> 0.6.0'
