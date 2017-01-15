@@ -269,7 +269,7 @@ GEM
     net-ssh (4.0.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
-    normalize-rails (3.0.3)
+    normalize-rails (4.1.1)
     oink (0.10.1)
       activerecord
       hodel_3000_compliant_logger
@@ -516,7 +516,7 @@ DEPENDENCIES
   mandrill_mailer
   meta-tags (~> 2.4.0)
   mini_magick (~> 4.6)
-  normalize-rails
+  normalize-rails (~> 4.1.1)
   oink
   oj (~> 2.18.1)
   pg (~> 0.19.0)
