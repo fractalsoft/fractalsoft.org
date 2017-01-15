@@ -29,7 +29,7 @@ gem 'meta-tags', '~> 2.4.0' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', platform: :ruby
 # gem 'newrelic_rpm'
 gem 'normalize-rails'
-gem 'oj', '~> 2.18.0' # Fast JSON parser and object serializer
+gem 'oj', '~> 2.18.1' # Fast JSON parser and object serializer
 gem 'pg', '~> 0.19.0' # Ruby interface to PostgreSQL RDBMS
 gem 'puma', '~> 2.16.0' # Ruby web server built for concurrency
 gem 'rack-attack'
