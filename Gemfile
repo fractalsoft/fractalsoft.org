@@ -12,12 +12,12 @@ gem 'sdoc', '~> 0.4.2', group: :doc
 
 gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'compass-rails', '~> 2.0.5'
 gem 'diacritics'
 gem 'draper'
 gem 'foreman', '~> 0.82'
-gem 'friendly_id'
+gem 'friendly_id', '~> 5.2'
 gem 'globalize'
 gem 'globalize-accessors'
 gem 'html5shiv-js-rails'
@@ -29,7 +29,7 @@ gem 'meta-tags', '~> 2.4.0' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', platform: :ruby
 # gem 'newrelic_rpm'
 gem 'normalize-rails'
-gem 'oj', '~> 2.18.0' # Fast JSON parser and object serializer
+gem 'oj', '~> 2.18.1' # Fast JSON parser and object serializer
 gem 'pg', '~> 0.19.0' # Ruby interface to PostgreSQL RDBMS
 gem 'puma', '~> 2.16.0' # Ruby web server built for concurrency
 gem 'rack-attack'
@@ -37,7 +37,7 @@ gem 'rails-i18n'
 gem 'redcarpet'
 gem 'respond-js-rails'
 gem 'rollbar', '~> 2.14' # Error tracking service
-gem 'simple_form'
+gem 'simple_form', '~> 3.4'
 gem 'slim-rails', '~> 3.1.1' # Template language instead Erb
 gem 'twitter-bootstrap-rails'
 
@@ -46,7 +46,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'brakeman', '~> 3.4.1', require: false
   gem 'bullet', '~> 5.5.0'
-  gem 'capistrano-rails'
+  gem 'capistrano-rails', '~> 1.2.2'
   gem 'colored'
   gem 'deadweight'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
