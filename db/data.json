@@ -78,49 +78,6 @@
       ]
     },
     {
-      "fullname": "Urszula Hołodniak",
-      "position": "developer",
-      "image": "team/uholodniak.jpg",
-      "skills": "Backend Development, Frontend Development, API Design, Refactoring, Testing, Git, Photography",
-      "technologies": "Ruby, Ruby on Rails, Java Script, CoffeeScript, jQuery, Ember.js, HTML5, CSS3, MySQL, PostgreSQL, RSpec, Minitest, Cordova",
-      "introduction_en": "<strong>Ruby geek in 100%.</strong> Conscientious and involved developer with the soul of an artist photographer. Participant and then mentor and organizer of Rails Girls workshops.",
-      "introduction_pl": "<strong>Ruby geek na 100%.</strong> Sumienny i zaangażowany programista z duszą fotografa artysty. Uczestniczka a następnie mentor i organizator warsztatów Rails Girls.",
-      "description": "Ruby on Rails developer",
-      "contributions": [
-        {
-          "title": "nopaperwork",
-          "names": [
-            { "name": "Backend development in Ruby on Rails" },
-            { "name": "Frontend development in Ember.js" },
-            { "name": "Building service to SAF-T" }
-          ]
-        },
-        {
-          "title": "hitdea",
-          "names": [
-            { "name": "Backend development in Ruby on Rails 4.2" },
-            { "name": "Frontend development" },
-            { "name": "API building" },
-            { "name": "User authorization" },
-            { "name": "Code refactoring" },
-            { "name": "Testing" }
-          ]
-        },
-        {
-          "title": "linguistic analysis",
-          "names": [
-            { "name": "Database design architecture" },
-            { "name": "Backend development in Ruby on Rails" },
-            { "name": "Frontend development (jQuery, Bootstrap)" },
-            { "name": "Code refactoring" },
-            { "name": "Testing" },
-            { "name": "Needs analysis" },
-            { "name": "Solr implementing and configuration" }
-          ]
-        }
-      ]
-    },
-    {
       "fullname": "Grzegorz Lisowski",
       "nickname": "lisu",
       "position": "developer",
@@ -205,7 +162,10 @@
           "title": "nopaperwork",
           "names": [
             { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Architecture design", "name_pl": "Projektowanie architektury" },
             { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" },
+            { "name": "UX development", "name_pl": "Rozwój UX" },
+            { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
             { "name": "Building service to SAF-T", "name_pl": "Budowa serwisu obsługi do JPK" },
             { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
           ]
