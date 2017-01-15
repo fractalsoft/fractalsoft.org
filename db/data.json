@@ -205,7 +205,10 @@
           "title": "nopaperwork",
           "names": [
             { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Architecture design", "name_pl": "Projektowanie architektury" },
             { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" },
+            { "name": "UX development", "name_pl": "Rozwój UX" },
+            { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
             { "name": "Building service to SAF-T", "name_pl": "Budowa serwisu obsługi do JPK" },
             { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
           ]
