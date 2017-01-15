@@ -46,7 +46,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'brakeman', '~> 3.4.1', require: false
   gem 'bullet', '~> 5.5.0'
-  gem 'capistrano-rails'
+  gem 'capistrano-rails', '~> 1.2.2'
   gem 'colored'
   gem 'deadweight'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
