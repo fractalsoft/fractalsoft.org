@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.2', group: :doc
 
 gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'compass-rails', '~> 2.0.5'
 gem 'diacritics'
 gem 'draper'
