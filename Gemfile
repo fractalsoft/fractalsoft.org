@@ -1,14 +1,15 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.7.1'
-gem 'sass-rails', '~> 5.0.6'
-gem 'uglifier', '>= 1.3.0'
+
 gem 'coffee-rails', '~> 4.1.0'
+gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
+gem 'sass-rails', '~> 5.0.6'
 gem 'sdoc', '~> 0.4.2', group: :doc
+gem 'turbolinks'
+gem 'uglifier', '>= 1.3.0'
 
 gem 'actionpack-page_caching'
 gem 'active_link_to'
