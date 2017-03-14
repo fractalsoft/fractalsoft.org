@@ -185,7 +185,7 @@ GEM
     friendly_id (5.2.0)
       activerecord (>= 4.0.0)
     gems (0.8.3)
-    gemsurance (0.7.0)
+    gemsurance (0.8.0)
       bundler (~> 1.2)
       gems (~> 0.8)
       git (~> 1.2)
