@@ -30,7 +30,7 @@ gem 'mini_magick', '~> 4.6', platform: :ruby
 # gem 'newrelic_rpm'
 gem 'normalize-rails', '~> 4.1.1'
 gem 'oj', '~> 2.18.1' # Fast JSON parser and object serializer
-gem 'pg', '~> 0.19.0' # Ruby interface to PostgreSQL RDBMS
+gem 'pg', '~> 0.20.0' # Ruby interface to PostgreSQL RDBMS
 gem 'puma', '~> 2.16.0' # Ruby web server built for concurrency
 gem 'rack-attack'
 gem 'rails-i18n'
