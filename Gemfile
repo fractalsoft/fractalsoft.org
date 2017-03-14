@@ -56,7 +56,7 @@ group :development do
   gem 'quiet_assets'
   gem 'quiet_safari'
   gem 'rack-mini-profiler', require: false
-  gem 'rails_best_practices', '~> 1.17.0'
+  gem 'rails_best_practices', '~> 1.18.0'
   # gem 'rails_db'
   gem 'rubocop', '~> 0.41.1'
   gem 'rubycritic', '~> 3.1.3', require: false
