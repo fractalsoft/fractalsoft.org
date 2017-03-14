@@ -379,7 +379,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
-    rubocop (0.46.0)
+    rubocop (0.41.2)
       parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
@@ -539,7 +539,7 @@ DEPENDENCIES
   respond-js-rails
   rollbar (~> 2.14)
   rspec-rails (~> 3.5)
-  rubocop (~> 0.46.0)
+  rubocop (~> 0.41.1)
   rubycritic (~> 3.1.3)
   sandi_meter
   sass-rails (~> 5.0.6)
