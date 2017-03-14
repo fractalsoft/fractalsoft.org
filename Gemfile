@@ -58,7 +58,7 @@ group :development do
   gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices', '~> 1.17.0'
   # gem 'rails_db'
-  gem 'rubocop', '~> 0.46.0'
+  gem 'rubocop', '~> 0.41.1'
   gem 'rubycritic', '~> 3.1.3', require: false
   gem 'sandi_meter'
   gem 'web-console', '~> 2.0'
