@@ -65,7 +65,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'dotenv-rails', '~> 2.1.1'
+  gem 'dotenv-rails', '~> 2.2.0'
   gem 'pry-byebug', '~> 3.4.2'
   gem 'rspec-rails', '~> 3.5'
   gem 'spring'
