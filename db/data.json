@@ -394,6 +394,10 @@
     {
       "name": "Naprawa monitora LCD",
       "price": 250.0
+    },
+    {
+      "name": "Archiwizacja danych",
+      "price": 30.0
     }
   ]
 }
