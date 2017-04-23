@@ -31,3 +31,5 @@
 13. Wymieniony materiał nie podlega zwrotowi i są poddawane utylizacji.
 
 14. Każdy klient oddający urządzenie do serwisu jest zobowiązany do zapoznania się z niniejszym regulaminem. Oddając sprzęt do naprawy, dobrowolnie akceptuje powyższy regulamin, stanowiący zarazem umowę, na podstawie której świadczona jest usługa naprawy i ona reguluje prawa i obowiązki wynikające z tego tytułu. Wszelkie inne postanowienia muszą być przedstawione w formie pisemnej i zaakceptowanie przez obie strony.
+
+15. Klient zlecając usługę serwisową akceptuje powyższy **Regulamin** i **Warunki gwarancji** oraz wyraża zgodę na umieszczenie plomby gwarancyjnej lub innego oznaczenia w celu identyfikacji sprzętu na który jest udzielana gwarancja.
