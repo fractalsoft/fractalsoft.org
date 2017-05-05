@@ -4,7 +4,7 @@ require 'resolv'
 class MxRecordValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, email)
     mail_servers = MailServersFromEmail.new(email)
-    record.errors.add(attribute, :fake_email) if mail_servers.empty?
+    record.errors.add(attribute, :fake_email) unless mail_servers.valid?
   end
 
   class MailServersFromEmail
@@ -14,8 +14,8 @@ class MxRecordValidator < ActiveModel::EachValidator
       @email = email
     end
 
-    def empty?
-      mail_servers.empty?
+    def valid?
+      !(domain_name.blank? || mail_servers.empty?)
     end
 
     private
