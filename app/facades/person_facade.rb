@@ -17,7 +17,8 @@ class PersonFacade
     :skills,
     :technologies,
     :twitter,
-    :youtube
+    :youtube,
+    :vimeo
   ].freeze
 
   attr_reader :person, :projects
