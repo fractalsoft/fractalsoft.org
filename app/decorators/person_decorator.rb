@@ -3,7 +3,7 @@ class PersonDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all
 
-  %i(blog facebook github instagram linkedin twitter).each do |name|
+  %i(blog facebook github instagram linkedin twitter vimeo).each do |name|
     define_method(name) do
       send :given_icon, name
     end
@@ -97,5 +97,9 @@ class PersonDecorator < Draper::Decorator
 
   def social_title(name)
     I18n.t(name, scope: 'social.title')
+  end
+
+  def vimeo_url
+    "https://vimeo.com/#{object.vimeo}"
   end
 end
