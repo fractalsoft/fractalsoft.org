@@ -359,7 +359,7 @@ GEM
     require_all (1.5.0)
     respond-js-rails (1.4.2.1)
       railties (~> 4.0, < 5.0)
-    rollbar (2.14.0)
+    rollbar (2.15.5)
       multi_json
     rspec-core (3.5.2)
       rspec-support (~> 3.5.0)
@@ -534,7 +534,7 @@ DEPENDENCIES
   rails_best_practices (~> 1.19)
   redcarpet
   respond-js-rails
-  rollbar (~> 2.14)
+  rollbar (~> 2.15)
   rspec-rails (~> 3.5)
   rubocop
   rubycritic
