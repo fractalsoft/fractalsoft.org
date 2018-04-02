@@ -147,10 +147,10 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     diacritics (0.0.8)
     diff-lcs (1.2.5)
-    dotenv (2.2.0)
-    dotenv-rails (2.2.0)
-      dotenv (= 2.2.0)
-      railties (>= 3.2, < 5.1)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     draper (2.1.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -494,7 +494,7 @@ DEPENDENCIES
   database_cleaner (~> 1.6)
   deadweight
   diacritics
-  dotenv-rails (~> 2.2.0)
+  dotenv-rails (~> 2.2.1)
   draper
   factory_girl_rails (~> 4.9)
   foreman (~> 0.84)
