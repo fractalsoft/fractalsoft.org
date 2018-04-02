@@ -137,7 +137,7 @@ GEM
       nokogiri (~> 1.5)
       railties (>= 3, < 5)
     cucumber-wire (0.0.1)
-    database_cleaner (1.5.3)
+    database_cleaner (1.6.2)
     deadweight (0.2.2)
       css_parser (~> 1.2.6)
       nokogiri
@@ -491,7 +491,7 @@ DEPENDENCIES
   colored
   compass-rails (~> 2.0.5)
   cucumber-rails
-  database_cleaner (~> 1.5.3)
+  database_cleaner (~> 1.6)
   deadweight
   diacritics
   dotenv-rails (~> 2.2.0)

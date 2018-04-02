@@ -74,7 +74,7 @@ end
 
 group :test do
   gem 'cucumber-rails', require: false
-  gem 'database_cleaner', '~> 1.5.3'
+  gem 'database_cleaner', '~> 1.6'
   gem 'factory_girl_rails', '~> 4.8.0'
   gem 'shoulda-matchers'
 end
