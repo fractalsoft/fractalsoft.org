@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.2'
 gem 'compass-rails', '~> 2.0.5'
 gem 'diacritics'
 gem 'draper'
