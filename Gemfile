@@ -7,7 +7,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'sass-rails', '~> 5.0.6'
-gem 'sdoc', '~> 0.4.2', group: :doc
+gem 'sdoc', '~> 1.0', group: :doc
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
