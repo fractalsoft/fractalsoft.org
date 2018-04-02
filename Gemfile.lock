@@ -93,13 +93,13 @@ GEM
     coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    coffee-rails (4.1.1)
+    coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.1.x)
+      railties (>= 4.0.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.10.0)
+    coffee-script-source (1.12.2)
     colored (1.2)
     commonjs (0.2.7)
     compass (1.0.3)
@@ -484,7 +484,7 @@ DEPENDENCIES
   bullet (~> 5.7)
   capistrano-rails (~> 1.2.3)
   carrierwave (~> 1.2)
-  coffee-rails (~> 4.1.0)
+  coffee-rails (~> 4.2)
   colored
   compass-rails (~> 2.0.5)
   cucumber-rails
