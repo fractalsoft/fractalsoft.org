@@ -163,10 +163,10 @@ GEM
     erubis (2.7.0)
     excon (0.45.4)
     execjs (2.6.0)
-    factory_girl (4.8.0)
+    factory_girl (4.9.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.8.0)
-      factory_girl (~> 4.8.0)
+    factory_girl_rails (4.9.0)
+      factory_girl (~> 4.9.0)
       railties (>= 3.0.0)
     ffi (1.9.10)
     flay (2.10.0)
@@ -496,7 +496,7 @@ DEPENDENCIES
   diacritics
   dotenv-rails (~> 2.2.0)
   draper
-  factory_girl_rails (~> 4.8.0)
+  factory_girl_rails (~> 4.9)
   foreman (~> 0.84)
   friendly_id (~> 5.2)
   gemsurance
