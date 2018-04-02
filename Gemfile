@@ -39,7 +39,7 @@ gem 'redcarpet'
 gem 'respond-js-rails'
 gem 'rollbar', '~> 2.15' # Error tracking service
 gem 'simple_form', '~> 3.5'
-gem 'slim-rails', '~> 3.1.2' # Template language instead Erb
+gem 'slim-rails', '~> 3.1' # Template language instead Erb
 gem 'twitter-bootstrap-rails'
 
 group :development do
