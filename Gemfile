@@ -53,7 +53,7 @@ group :development do
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'i18n-tasks'
   gem 'oink'
-  gem 'query_diet', '~> 0.6.1'
+  gem 'query_diet', '~> 0.6.2'
   gem 'quiet_assets'
   gem 'quiet_safari'
   gem 'rack-mini-profiler', require: false
