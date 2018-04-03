@@ -81,7 +81,6 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'unicorn', '~> 5.2.0'
 end
 
 source 'https://rails-assets.org' do
