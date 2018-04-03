@@ -315,7 +315,7 @@ GEM
       sprockets-rails
     rails-assets-bootstrap (3.3.7)
       rails-assets-jquery (>= 1.9.1, < 4)
-    rails-assets-jquery (2.2.4)
+    rails-assets-jquery (3.3.1)
     rails-assets-leaflet (1.0.3)
     rails-assets-markdown-js (0.6.2)
     rails-deprecated_sanitizer (1.0.3)
@@ -529,7 +529,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails (= 4.2.7.1)
   rails-assets-bootstrap (~> 3.3.7)!
-  rails-assets-jquery (~> 2.2.0)!
+  rails-assets-jquery (~> 3.3)!
   rails-assets-leaflet (~> 1.0.3)!
   rails-assets-markdown-js!
   rails-i18n
