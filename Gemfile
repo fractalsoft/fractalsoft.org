@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.10'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.0'
