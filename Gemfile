@@ -28,7 +28,6 @@ gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'meta-tags', '~> 2.9.0' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', '~> 4.8', platform: :ruby
-# gem 'newrelic_rpm'
 gem 'normalize-rails', '~> 4.1.1'
 gem 'oj', '~> 3.5' # Fast JSON parser and object serializer
 gem 'pg', '~> 1.0' # Ruby interface to PostgreSQL RDBMS
