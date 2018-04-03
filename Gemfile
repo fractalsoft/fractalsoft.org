@@ -87,7 +87,7 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '~> 3.3.7'
   gem 'rails-assets-jquery', '~> 3.3'
-  gem 'rails-assets-leaflet', '~> 1.0.3'
+  gem 'rails-assets-leaflet', '~> 1.3'
   gem 'rails-assets-markdown-js'
 end
 
