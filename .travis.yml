@@ -1,11 +1,16 @@
+sudo: false
 language: ruby
+dist: trusty
+services:
+  - postgresql
+before_install:
+  - gem update --system
+  - gem --version
 rvm:
   - 2.4.1
 before_script:
-  - psql -c 'create database fractalsoft_test' -U postgres
+  - RAILS_ENV=test bundle exec rails db:create db:migrate
 script:
-  - RAILS_ENV=test bundle exec rails db:migrate
-sudo: false
-dist: trusty
+  - RAILS_ENV=test bundle exec rails spec
 addons:
   postgresql: "10"
