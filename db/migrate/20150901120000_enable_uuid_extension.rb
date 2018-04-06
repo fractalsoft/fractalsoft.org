@@ -1,4 +1,4 @@
-class EnableUuidExtension < ActiveRecord::Migration[4.2]
+class EnableUuidExtension < ActiveRecord::Migration[5.1]
   def change
     enable_extension 'uuid-ossp'
   end
