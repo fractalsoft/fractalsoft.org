@@ -60,7 +60,6 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'query_diet', '~> 0.6.2'
   gem 'quiet_safari'
-  gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices', '~> 1.19'
   gem 'rubocop'
   gem 'rubycritic', require: false

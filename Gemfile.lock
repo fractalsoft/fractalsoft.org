@@ -313,8 +313,6 @@ GEM
     rack (2.0.4)
     rack-attack (5.2.0)
       rack
-    rack-mini-profiler (1.0.0)
-      rack (>= 1.2.0)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.1.6)
@@ -546,7 +544,6 @@ DEPENDENCIES
   query_diet (~> 0.6.2)
   quiet_safari
   rack-attack
-  rack-mini-profiler
   rails (~> 5.1.6)
   rails-assets-bootstrap (~> 3.3.7)!
   rails-assets-jquery (~> 3.3)!
