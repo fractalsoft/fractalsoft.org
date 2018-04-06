@@ -1,9 +1,7 @@
 test:
   adapter: postgresql
-  database: fractalsoft_test
+  database: travis
   encoding: utf8
-  host: <%= ENV['POSTGRES_HOST'] %>
   min_messages: warning
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
   timeout: 5000
-  username: <%= ENV['POSTGRES_USER'] %>
+  username: travis
