@@ -82,7 +82,7 @@ end
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner', '~> 1.6'
-  gem 'factory_girl_rails', '~> 4.9'
+  gem 'factory_bot_rails'
   gem 'shoulda-matchers'
 end
 
