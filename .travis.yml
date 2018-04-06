@@ -6,10 +6,6 @@ before_script:
 script:
   - RAILS_ENV=test bundle exec rails db:migrate
 sudo: false
+dist: trusty
 addons:
   postgresql: "10"
-  apt:
-    packages:
-    - postgresql-10
-    - postgresql-client-10
-    - postgresql-server-dev-10
