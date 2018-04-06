@@ -9,6 +9,7 @@ before_install:
 rvm:
   - 2.4.1
 before_script:
+  - cp config/database.yml.travis config/database.yml
   - RAILS_ENV=test bundle exec rails db:create db:migrate
 script:
   - RAILS_ENV=test bundle exec rails spec
