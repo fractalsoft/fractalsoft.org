@@ -1,4 +1,4 @@
-class CreateContributions < ActiveRecord::Migration[4.2]
+class CreateContributions < ActiveRecord::Migration[5.1]
   def change
     create_table :contributions, id: :uuid do |t|
       t.uuid :person_id, index: true, foreign_key: true

@@ -1,4 +1,4 @@
-class AddDisplayToProjects < ActiveRecord::Migration[4.2]
+class AddDisplayToProjects < ActiveRecord::Migration[5.1]
   def change
     add_column :projects, :display, :boolean, default: true
   end

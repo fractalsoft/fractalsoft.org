@@ -1,4 +1,4 @@
-class CreatePeople < ActiveRecord::Migration[4.2]
+class CreatePeople < ActiveRecord::Migration[5.1]
   def change
     create_table :people, id: :uuid do |t|
       t.string :nickname

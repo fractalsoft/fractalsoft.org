@@ -1,4 +1,4 @@
-class AddDoFollowToProjects < ActiveRecord::Migration[4.2]
+class AddDoFollowToProjects < ActiveRecord::Migration[5.1]
   def change
     add_column :projects, :dofollow, :boolean, default: false
   end
