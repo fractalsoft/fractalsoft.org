@@ -2,7 +2,7 @@
 class Image < ApplicationRecord
   mount_uploader :image, ImageUploader
 
-  belongs_to :project
+  belongs_to :project, optional: true
 
   def self.logo
     where(kind: 'logo').first
