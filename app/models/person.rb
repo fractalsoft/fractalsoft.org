@@ -1,5 +1,5 @@
 # Person model
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]

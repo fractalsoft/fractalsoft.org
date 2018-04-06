@@ -1,5 +1,5 @@
 # Project class
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
   mount_uploader :thumbnail, ThumbnailUploader
   translates :subtitle, :string
