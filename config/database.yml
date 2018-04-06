@@ -10,6 +10,7 @@ development:
 test:
   <<: *default
   database: fractalsoft_test
+  host: localhost
 
 production:
   <<: *default
