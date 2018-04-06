@@ -1,14 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.10'
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
+  "https://github.com/#{repo_name}.git"
+end
+
+gem 'rails', '~> 5.1.6'
 
 gem 'coffee-rails', '~> 4.2'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'sass-rails', '~> 5.0.6'
 gem 'sdoc', '~> 1.0', group: :doc
-gem 'turbolinks'
+gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
 
 gem 'actionpack-page_caching'
@@ -21,7 +26,6 @@ gem 'foreman', '~> 0.84'
 gem 'friendly_id', '~> 5.2'
 gem 'globalize'
 gem 'globalize-accessors'
-gem 'html5shiv-js-rails', '~> 3.7.3'
 gem 'http_accept_language'
 gem 'mail_form'
 gem 'mandrill-api'
@@ -35,11 +39,13 @@ gem 'puma', '~> 3.11' # Ruby web server built for concurrency
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
-gem 'respond-js-rails'
 gem 'rollbar', '~> 2.15' # Error tracking service
 gem 'simple_form', '~> 3.5'
 gem 'slim-rails', '~> 3.1' # Template language instead Erb
 gem 'twitter-bootstrap-rails'
+# gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
   gem 'better_errors'
@@ -51,24 +57,28 @@ group :development do
   gem 'deadweight'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'i18n-tasks'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'oink'
   gem 'query_diet', '~> 0.6.2'
-  gem 'quiet_assets'
   gem 'quiet_safari'
   gem 'rack-mini-profiler', require: false
   gem 'rails_best_practices', '~> 1.19'
-  # gem 'rails_db'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
-  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0' # <%= console %> anywhere in the code
 end
 
 group :development, :test do
+  # Call 'byebug' in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara', '~> 2.13' # Adds support for Capybara system testing
   gem 'dotenv-rails', '~> 2.2.1'
   gem 'pry-byebug', '~> 3.6'
   gem 'rspec-rails', '~> 3.5'
-  gem 'spring'
+  gem 'selenium-webdriver'
 end
 
 group :test do

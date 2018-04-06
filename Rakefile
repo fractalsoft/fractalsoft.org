@@ -1,4 +1,4 @@
-require File.expand_path('../config/application', __FILE__)
+require_relative 'config/application'
 Rails.application.load_tasks
 require File.expand_path('../lib/globalize_uuid', __FILE__)
 
