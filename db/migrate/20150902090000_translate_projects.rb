@@ -1,4 +1,4 @@
-class TranslateProjects < ActiveRecord::Migration[4.2]
+class TranslateProjects < ActiveRecord::Migration[5.1]
   def up
     Project.create_translation_table!(
       subtitle: :string, introduction: :text, description: :text
