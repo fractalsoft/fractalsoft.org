@@ -11,17 +11,17 @@ RSpec.describe ContactFormsController, type: :controller do
     end
 
     it 'has ContactForm object' do
-      post :create, contact_form: params, locale: :en
+      post :create, params: { contact_form: params, locale: :en }
       expect(assigns(:contact_form)).to be_a(ContactForm)
     end
 
     it 'send mail to application owner' do
       expect_any_instance_of(ContactForm).to receive(:deliver)
-      post :create, contact_form: params, locale: :en
+      post :create, params: { contact_form: params, locale: :en }
     end
 
     it 'redirect back to main page' do
-      post :create, contact_form: params, locale: :en
+      post :create, params: { contact_form: params, locale: :en }
       expect(response).to redirect_to root_path
     end
   end

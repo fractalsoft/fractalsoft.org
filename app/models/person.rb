@@ -1,10 +1,9 @@
 # Person model
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
-  translates :saying, :string
-  translates :introduction, :text
+  translates :introduction, :saying
   globalize_accessors locales: I18n.available_locales,
                       attributes: translated_attribute_names
 

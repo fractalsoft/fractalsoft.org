@@ -24,6 +24,9 @@ ParameterLists:
   Max: 4
   CountKeywordArgs: true
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: single_quotes
   SupportedStyles:
