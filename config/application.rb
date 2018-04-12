@@ -5,6 +5,9 @@ Bundler.require(*Rails.groups)
 module FractalSoft
   # Main application
   class Application < Rails::Application
+    config.generators do |g|
+      g.orm :active_record, primary_key_type: :uuid
+    end
     config.load_defaults 5.1
     config.i18n.available_locales = [:en, :pl]
     config.i18n.default_locale = :en

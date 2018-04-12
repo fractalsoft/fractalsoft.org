@@ -1,6 +1,6 @@
 # Contribution class
 class Contribution < ApplicationRecord
-  translates :name, :string
+  translates :name
   globalize_accessors locales: I18n.available_locales,
                       attributes: translated_attribute_names
 
