@@ -73,7 +73,7 @@ group :development, :test do
   # Call 'byebug' in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13' # Adds support for Capybara system testing
-  gem 'dotenv-rails', '~> 2.2.1'
+  gem 'dotenv-rails', '~> 2.2'
   gem 'pry-byebug', '~> 3.6'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.5'
