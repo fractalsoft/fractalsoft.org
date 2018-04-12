@@ -2,7 +2,7 @@
 module ApplicationHelper
   # Example: charset: 'utf-8'
   def default_meta_tags
-    I18n.t(:meta).merge(separator: '-', author: '/humans.txt')
+    I18n.t(:meta).merge(separator: '-', author: '/humans.txt', reverse: true)
   end
 
   def link_to_locale(locale, &block)
