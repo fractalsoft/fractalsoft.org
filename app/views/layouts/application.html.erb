@@ -29,14 +29,10 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <!-- <base href='http://fractalsoft.org/' /> -->
   <%= favicon_link_tag 'favicon.ico' %>
-  <%= stylesheet_link_tag    'application', async: Rails.env.production?, media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', async: Rails.env.production?, 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
   <%= render 'layouts/shared/analytics' %>
   <%= render 'layouts/shared/hotjar' %>
-  <!--[if lt IE 9]>
-    <%= javascript_include_tag 'html5shiv' %>
-    <%= javascript_include_tag 'respond' %>
-  <![endif]-->
   <%= csrf_meta_tags unless @page_caching %>
 </head>
 <body class='<%= yield(:body_class) %>'>

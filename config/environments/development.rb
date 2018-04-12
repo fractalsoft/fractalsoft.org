@@ -1,25 +1,23 @@
 Rails.application.configure do
-  config.action_controller.page_cache_directory = "#{Rails.public_path}/cache"
-  config.action_controller.perform_caching = false # use true for caching
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.perform_caching = false
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.smtp_settings = { address: 'localhost', port: 1025 }
   config.active_record.migration_error = :page_load
   config.active_support.deprecation = :log
   config.assets.debug = true
-  config.assets.digest = true
-  config.assets.raise_runtime_errors = true
+  config.assets.quiet = true
   config.cache_classes = false
   config.consider_all_requests_local = true
   config.eager_load = false
-  config.middleware.use Oink::Middleware, logger: Rails.logger
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = true
-    Bullet.console = true
-    Bullet.rails_logger = true
-    Bullet.add_footer = true
+  if Rails.root.join('tmp/caching-dev.txt').exist?
+    config.action_controller.perform_caching = true
+    config.cache_store = :memory_store
+    config.public_file_server.headers = {
+      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
+    }
+  else
+    config.action_controller.perform_caching = false
+    config.cache_store = :null_store
   end
 end

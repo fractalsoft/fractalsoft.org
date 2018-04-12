@@ -1,3 +1,4 @@
-class Job < ActiveRecord::Base
+class Job < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
+  translates :name
 end

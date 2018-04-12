@@ -1,7 +1,7 @@
 # Home controller
 class HomeController < ApplicationController
   caches_page :index
-  before_filter(only: [:index]) { @page_caching = true }
+  before_action(only: [:index]) { @page_caching = true }
 
   def index
     @home = HomeFacade.new
