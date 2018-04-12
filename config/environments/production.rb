@@ -1,17 +1,24 @@
 Rails.application.configure do
-  config.cache_classes = true
-  config.eager_load = true
-  config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.action_controller.page_cache_directory = "#{Rails.public_path}/cache"
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  config.assets.js_compressor = :uglifier
-  config.assets.compile = false
-  config.assets.digest = true
-  config.log_level = :info # :debug
-  config.log_tags = [:remote_ip, :uuid]
-  config.i18n.fallbacks = true
-  config.active_support.deprecation = :notify
-  config.log_formatter = ::Logger::Formatter.new
+  config.action_mailer.perform_caching = false
   config.active_record.dump_schema_after_migration = false
+  config.active_support.deprecation = :notify
+  config.assets.compile = false
+  config.assets.css_compressor = :sass
+  config.assets.js_compressor = :uglifier
+  config.cache_classes = true
+  config.consider_all_requests_local = false
+  config.eager_load = true
+  config.i18n.fallbacks = true
+  config.log_formatter = ::Logger::Formatter.new
+  config.log_level = :debug
+  config.log_tags = [:remote_ip, :request_id]
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.read_encrypted_secrets = true
+
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
 end

@@ -20,6 +20,8 @@ hash[:team].each do |params|
   end
 end
 
-hash[:jobs].each do |params|
-  Job.where(name: params[:name]).first_or_create(params)
+hash[:jobs].each_with_index do |params, index|
+  Job.where(name: params[:name]).first_or_create(
+    params.merge(position: index + 1)
+  )
 end
