@@ -3,6 +3,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
     create_table :projects, id: :uuid do |t|
       t.boolean :display, default: true
       t.boolean :dofollow, default: false
+      t.integer :position, default: 0
       t.integer :year
       t.string :thumbnail
       t.string :title, null: false

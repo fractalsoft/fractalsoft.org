@@ -1,7 +1,9 @@
 class CreatePeople < ActiveRecord::Migration[5.1]
   def change
     create_table :people, id: :uuid do |t|
+      t.integer :position, default: 0
       t.string :blog
+      t.string :codeschool
       t.string :email
       t.string :facebook
       t.string :fullname, null: false
