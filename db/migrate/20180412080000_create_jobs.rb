@@ -2,7 +2,7 @@ class CreateJobs < ActiveRecord::Migration[5.1]
   def change
     create_table :jobs, id: :uuid do |t|
       t.decimal :price, precision: 16, scale: 4
-      t.integer :position
+      t.integer :position, default: 0
       t.string :currency
 
       t.timestamps null: false

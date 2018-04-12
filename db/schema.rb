@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180412080000) do
   end
 
   create_table "contributions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "position", default: 0
     t.uuid "person_id"
     t.uuid "project_id"
     t.datetime "created_at", null: false
@@ -69,14 +70,16 @@ ActiveRecord::Schema.define(version: 20180412080000) do
 
   create_table "jobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.decimal "price", precision: 16, scale: 4
-    t.integer "position"
+    t.integer "position", default: 0
     t.string "currency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "position"
     t.string "blog"
+    t.string "codeschool"
     t.string "email"
     t.string "facebook"
     t.string "fullname", null: false
@@ -85,7 +88,6 @@ ActiveRecord::Schema.define(version: 20180412080000) do
     t.string "instagram"
     t.string "linkedin"
     t.string "nickname"
-    t.string "position"
     t.string "skills", default: ""
     t.string "slug"
     t.string "technologies", default: ""
@@ -124,6 +126,7 @@ ActiveRecord::Schema.define(version: 20180412080000) do
   create_table "projects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.boolean "display", default: true
     t.boolean "dofollow", default: false
+    t.integer "position", default: 0
     t.integer "year"
     t.string "thumbnail"
     t.string "title", null: false
