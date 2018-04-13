@@ -28,7 +28,7 @@ module CreateOrUpdateByKeysExtension
 
   def update_params_with_nils(object, params)
     attributes = object.attribute_names.map(&:to_sym)
-    skip_keys = %i(id slug created_at updated_at string text) + params.keys
+    skip_keys = %i[id slug created_at updated_at string text] + params.keys
     skip_keys.each { |key| attributes.delete(key) }
     nil_hash = Hash[attributes.zip([nil] * attributes.count)]
     nil_hash.merge(params)
