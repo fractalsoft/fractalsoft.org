@@ -1,7 +1,7 @@
 {
   "background_color": "#FBFBFB",
   "display": "fullscreen",
-  "name": "Fractal Soft"
+  "name": "Fractal Soft",
   "short_name": "fractalsoft",
   "start_url": "/",
   "theme_color": "#C3261C"
