@@ -22,5 +22,8 @@ Rails.application.routes.draw do
   root to: 'home#index'
   # root to: redirect("/#{I18n.default_locale}", status: 301),
   #      as: :redirected_root
+  direct :manifest do
+    '/manifest.json'
+  end
   match '*path', to: redirect('/'), via: :all
 end

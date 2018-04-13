@@ -2,8 +2,16 @@
 class PersonDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all
+  OPTIONS = {
+    rel: %w[
+      nofollow
+      noopener
+      noreferrer
+    ].join(' '),
+    target: '_blank'
+  }.freeze
 
-  %i(blog facebook github instagram linkedin twitter vimeo).each do |name|
+  %i[blog facebook github instagram linkedin twitter vimeo].each do |name|
     define_method(name) do
       send :given_icon, name
     end
@@ -61,7 +69,7 @@ class PersonDecorator < Draper::Decorator
 
   def given_li(name, link)
     content_tag :li do
-      send link, send("#{name}_url"), title: social_title(name) do
+      send link, send("#{name}_url"), title: social_title(name), **OPTIONS do
         content_tag(:span, nil, class: "icon icons-#{name}")
       end
     end
