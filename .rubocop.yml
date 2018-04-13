@@ -33,5 +33,8 @@ Style/StringLiterals:
     - single_quotes
     - double_quotes
 
+Style/SymbolArray:
+  Enabled: false
+
 TrailingWhitespace:
   Enabled: true
