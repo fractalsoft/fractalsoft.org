@@ -260,7 +260,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     normalize-rails (4.1.1)
-    oj (3.5.0)
+    oj (3.5.1)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
