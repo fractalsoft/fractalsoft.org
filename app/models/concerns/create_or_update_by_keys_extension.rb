@@ -2,13 +2,10 @@
 module CreateOrUpdateByKeysExtension
   def create_or_update_by_keys(keys, params)
     object = find_by_keys(keys, params)
-    if object
-      params = update_params_with_nils(object, params)
-      object.update(params)
-      object
-    else
-      create(params)
-    end
+    return create(params) unless object
+    params = update_params_with_nils(object, params)
+    object.update(params)
+    object
   end
 
   private
