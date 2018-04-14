@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
-  "https://github.com/#{repo_name}.git"
-end
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '~> 5.1.6'
 
@@ -72,7 +69,6 @@ end
 group :development, :test do
   # Call 'byebug' in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13' # Adds support for Capybara system testing
   gem 'dotenv-rails', '~> 2.2'
   gem 'pry-byebug', '~> 3.6'
   gem 'rails-controller-testing'
@@ -81,7 +77,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', require: false
   gem 'database_cleaner', '~> 1.6'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
