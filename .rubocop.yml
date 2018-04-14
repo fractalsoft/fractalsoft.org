@@ -17,6 +17,9 @@ MethodLength:
   CountComments: false
   Max: 5
 
+Style/EmptyMethod:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
