@@ -1,4 +1,4 @@
 class Job < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
-  translates :name
+  translates :name, touch: true
 end
