@@ -38,7 +38,6 @@
   <%= csrf_meta_tags unless @page_caching %>
 </head>
 <body class='<%= yield(:body_class) %>'>
-<%= trap_link %>
 <%= query_diet_widget if Rails.env.development? %>
 <a href="http://www1441871441.edgek.com/" class='hidden'>Fight Spam! Click Here!</a>
 <%= render 'layouts/shared/header' %>

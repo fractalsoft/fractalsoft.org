@@ -16,7 +16,6 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-!/tmp/antibot/.keep
 
 /node_modules
 /yarn-error.log

@@ -12,8 +12,6 @@ module FractalSoft
     config.i18n.available_locales = [:en, :pl]
     config.i18n.default_locale = :en
     config.i18n.fallbacks = true
-    config.middleware.use Rack::Attack # unless Rails.env.development?
     config.middleware.use Rack::Deflater
-    # config.middleware.use AntibotMiddleware, '/trap'
   end
 end
