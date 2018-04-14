@@ -37,7 +37,7 @@ gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
 gem 'rollbar', '~> 2.15' # Error tracking service
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 4.0'
 gem 'slim-rails', '~> 3.1' # Template language instead Erb
 gem 'twitter-bootstrap-rails'
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
