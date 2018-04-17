@@ -21,8 +21,10 @@
 /yarn-error.log
 
 .byebug_history
+.env
+.env.production
 
--# Igrone assets, uploads & cache
+# Igrone assets, uploads & cache
 /public/assets
 /public/cache/*
 /public/uploads/*
