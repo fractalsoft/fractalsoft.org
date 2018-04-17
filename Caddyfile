@@ -1,0 +1,7 @@
+localhost:80, 0.0.0.0:80, 0.0.0.0:443
+gzip
+log stdout
+errors stderr
+proxy / app:3000 {
+  transparent
+}
