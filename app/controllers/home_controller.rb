@@ -21,12 +21,6 @@ class HomeController < ApplicationController
     http_accept_language.compatible_language_from(locales)
   end
 
-  def redirect_to_locale(locale = :pl)
-    return if I18n.locale == locale
-    params[:locale] = locale
-    redirect_to url_for(params)
-  end
-
   def set_locale
     super
     return if I18n.default_locale == I18n.locale
