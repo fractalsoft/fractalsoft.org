@@ -1,4 +1,3 @@
-# People controller
 class PeopleController < ApplicationController
   def index
     @people = PeopleFacade.list

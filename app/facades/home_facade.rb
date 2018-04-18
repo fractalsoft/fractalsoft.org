@@ -1,4 +1,3 @@
-# Home facade
 class HomeFacade
   attr_reader :people, :contact
 
