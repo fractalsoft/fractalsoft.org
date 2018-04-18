@@ -10,10 +10,6 @@ class HomeController < ApplicationController
 
   private
 
-  def default_locale?
-    I18n.default_locale == I18n.locale
-  end
-
   def default_url_options(options = {})
     locale = I18n.locale
     options[:locale] = locale
@@ -33,7 +29,7 @@ class HomeController < ApplicationController
 
   def set_locale
     super
-    return if default_locale?
+    return if I18n.default_locale == I18n.locale
     I18n.locale = params[:locale] || detect_locale
   end
 end
