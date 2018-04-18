@@ -1,4 +1,3 @@
-# Person model
 class Person < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
   extend FriendlyId

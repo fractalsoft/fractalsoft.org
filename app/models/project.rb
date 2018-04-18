@@ -1,4 +1,3 @@
-# Project class
 class Project < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
   mount_uploader :thumbnail, ThumbnailUploader

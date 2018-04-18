@@ -1,4 +1,3 @@
-# Home controller
 class HomeController < ApplicationController
   # caches_page :index
   # before_action(only: [:index]) { @page_caching = true }
