@@ -1,4 +1,3 @@
-# Person facade
 class PersonFacade
   PARAMS = [
     :blog,
