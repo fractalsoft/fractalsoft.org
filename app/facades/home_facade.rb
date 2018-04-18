@@ -1,9 +1,8 @@
-# Home facade
 class HomeFacade
   attr_reader :people, :contact
 
   def initialize
-    @people = Person.includes(:translations).all.decorate.shuffle
+    @people = PeopleFacade.list
     @contact = ContactForm.new
   end
 end

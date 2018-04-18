@@ -1,19 +1,13 @@
-# Person model
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
   extend FriendlyId
-  friendly_id :name, use: [:slugged, :finders]
-  translates :saying, :string
-  translates :introduction, :text
+  friendly_id :nickname, use: [:slugged, :finders]
+  translates :introduction, :saying
   globalize_accessors locales: I18n.available_locales,
                       attributes: translated_attribute_names
 
   has_many :contributions, dependent: :destroy
   has_many :projects, -> { distinct }, through: :contributions
-
-  def name
-    nickname || fullname.try(:permanent)
-  end
 
   def project_with_contributions(project)
     contributions.includes(:translations).where(project: project)

@@ -13,9 +13,16 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
-!/tmp/antibot/.keep
+!/tmp/.keep
+
+/node_modules
+/yarn-error.log
+
+.byebug_history
+.env
+.env.production
 
 # Igrone assets, uploads & cache
 /public/assets
@@ -23,6 +30,3 @@
 /public/uploads/*
 !/public/cache/.keep
 !/public/uploads/.keep
-
-# Ignore environments
-/.env

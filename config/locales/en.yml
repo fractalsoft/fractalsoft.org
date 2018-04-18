@@ -1,24 +1,5 @@
+---
 en:
-  language: english
-  meta:
-    site: Fractal Soft
-    title: 'Ruby on Rails & JavaScript developers for hire'
-    description: 'Fractal Soft is a team of professional web & mobile developers. We will help you build an application using Ruby on Rails & JavaScript. Hire us!'
-    keywords: 'Ruby on Rails, EmberJS, JavaScript, web applications, mobile applications'
-    publisher: https://plus.google.com/u/0/b/106386969948370069442/106386969948370069442
-    twitter:
-      card: summary
-      site: '@fractal_soft'
-  social:
-    title:
-      blog: Read me
-      facebook: Like me
-      github: Star me
-      google: Follow me
-      instagram: Follow me
-      linkedin: Connect me
-      twitter: Follow me
-      youtube: Subscribe me
   contact_forms:
     contact:
       contact_with_us: Contact with us
@@ -30,67 +11,100 @@ en:
       email: Your email address
       message: What we can do for you?
       name: Your name
+      nickname:
+        hint: Leave this field blank!
+        placeholder: Your nickname
       send: send
     new:
-      contact: &contact
+      contact:
+        description: No matter if you have a question or just want to say hello, we would love to hear from you.
         header: Want to get in touch with us?
-        description: 'No matter if you have a question or just want to say hello, we would love to hear from you.'
+  home:
+    index:
+      button:
+        contact_us: Contact us
+      contact:
+        description: No matter if you have a question or just want to say hello, we would love to hear from you.
+        header: Want to get in touch with us?
+      header_html: Creating <strong>web</strong> and <strong>mobile</strong> applications is our <strong>passion</strong>
+      how_we_work:
+        description:
+          one: Let's talk about your needs, before we start. We want to understand your problem and design a solution for you.
+          three: 'All-in-one: design, development & deployment. Don''t worry about anything. We keep an eye on your product.'
+          two: Step by step we build the product for you. At any time you can give us feedback. We take care about code quality, so we do tests and increase usability.
+        header:
+          one: UX & design
+          three: Deployment
+          two: Development
+        slogan: How do we work?
+      technology:
+        description:
+          one: HTML standard, which simplifies developers work and provides many new features. Such as audio, video, canvas drawing or geolocalization. It makes our projects much more interesting.
+          three_html: Software where we have open and free access to source for all users. It provides constant improvement and spread of software. This has a huge impact on application development and fixing bugs.
+          two: Modern framework to build fully functional web applications. Fast and flexible software creation is Ruby on Rails advantage. It allows to adjust to market changes in a simple way. And in the same time provides more satisfaction to our clients.
+        header:
+          one: HTML 5
+          three: Open Source
+          two: Ruby on Rails
+      title:
+        in_touch: Let's be in touch
+  language: english
   layouts:
     shared:
-      header: &header
+      footer:
         contact: Contact
         language: Language
         projects: Projects
         service: Service
         team: Team
         toggle_navigation: Toggle navigation
-      footer:
-        <<: *header
-  home:
-    index:
-      header_html: Creating <strong>web</strong> and <strong>mobile</strong> applications is our <strong>passion</strong>
-      title:
-        in_touch: Let's be in touch
-      button:
-        contact_us: Contact us
-      how_we_work:
-        slogan: How do we work?
-        header:
-          one: "UX & design"
-          two: Development
-          three: Deployment
-        description:
-          one: "Let's talk about your needs, before we start. We want to understand your problem and design a solution for you."
-          two: "Step by step we build the product for you. At any time you can give us feedback. We take care about code quality, so we do tests and increase usability."
-          three: "All-in-one: design, development & deployment. Don't worry about anything. We keep an eye on your product."
-      technology:
-        header:
-          one: HTML 5
-          two: Ruby on Rails
-          three: Open Source
-        description:
-          one: "HTML standard, which simplifies developers work and provides many new features. Such as audio, video, canvas drawing or geolocalization. It makes our projects much more interesting."
-          two: "Modern framework to build fully functional web applications. Fast and flexible software creation is Ruby on Rails advantage. It allows to adjust to market changes in a simple way. And in the same time provides more satisfaction to our clients."
-          three_html: "Software where we have open and free access to source for all users. It provides constant improvement and spread of software. This has a huge impact on application development and fixing bugs."
-      contact:
-        <<: *contact
+      header:
+        contact: Contact
+        language: Language
+        projects: Projects
+        service: Service
+        team: Team
+        toggle_navigation: Toggle navigation
   mail_form:
-    models:
-      contact_form: Fractal Soft - Your site contact form
     attributes:
       contact_form:
         email: E-mail
-        name: Name
         message: Sent message
+        name: Name
+        nickname: Nickname
+    models:
+      contact_form: Fractal Soft - Your site contact form
     request:
-      title: Technical information about the user
       remote_ip: IP Address
+      title: Technical information about the user
       user_agent: Browser
+  meta:
+    description: Fractal Soft is a team of professional web & mobile developers. We will help you build an application using Ruby on Rails and JavaScript. Hire us!
+    keywords: Ruby on Rails, EmberJS, JavaScript, CoffeeScript, web applications, mobile applications
+    publisher: https://plus.google.com/u/0/b/106386969948370069442/106386969948370069442
+    site: Fractal Soft
+    title: Ruby on Rails and JavaScript developers for hire
+    twitter:
+      card: summary
+      site: "@fractal_soft"
   people:
-    show:
+    project:
       major_contributions: Major contributions
+    skills:
       skills: Skills
-      technologies: Technologies
     team:
       team:
         meet_us: Meet our team!
+    technologies:
+      technologies: Technologies
+  social:
+    title:
+      blog: Read me
+      facebook: Like me
+      github: Star me
+      google: Follow me
+      instagram: Follow me
+      linkedin: Connect me
+      twitter: Follow me
+      vimeo: Follow me
+      youtube: Subscribe me

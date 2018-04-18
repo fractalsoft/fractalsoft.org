@@ -1,11 +1,33 @@
 # Extension to update exist objects or create them
 module CreateOrUpdateByKeysExtension
   def create_or_update_by_keys(keys, params)
-    object = nil
-    keys.each do |key|
-      object = find_by("#{key} = ?", params[key]) if params[key].present?
-      break if object
+    object = find_by_keys(keys, params)
+    return create(params) unless object
+    params = update_params_with_nils(object, params)
+    object.update(params)
+    object
+  end
+
+  private
+
+  def find_by_key(key, params)
+    value = params[key]
+    value.presence && find_by("#{key} = ?", value)
+  end
+
+  def find_by_keys(keys, params)
+    keys.each_with_object([]) do |key|
+      object = find_by_key(key, params)
+      return object if object
     end
-    object ? object.update(params) && object : create(params)
+    nil
+  end
+
+  def update_params_with_nils(object, params)
+    attributes = object.attribute_names.map(&:to_sym)
+    skip_keys = %i[id slug created_at updated_at string text] + params.keys
+    skip_keys.each { |key| attributes.delete(key) }
+    nil_hash = Hash[attributes.zip([nil] * attributes.count)]
+    nil_hash.merge(params)
   end
 end

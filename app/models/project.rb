@@ -1,10 +1,7 @@
-# Project class
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
   mount_uploader :thumbnail, ThumbnailUploader
-  translates :subtitle, :string
-  translates :introduction, :text
-  translates :description, :text
+  translates :description, :introduction, :subtitle
   globalize_accessors locales: I18n.available_locales,
                       attributes: translated_attribute_names
 

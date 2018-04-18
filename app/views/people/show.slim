@@ -1,0 +1,29 @@
+- content_for :body_class, 'person'
+
+.container-fluid.background
+.container.business-card
+  .row
+    .col-md-3.col-sm-6.col-xs-12
+      .thumbnail = @person.image
+    .col-md-6.col-sm-6.col-xs-12
+      h1
+        = @person.fullname
+      p.position
+        strong = @person.position
+      p.text-justify
+        = @person.introduction
+      = @person.saying
+      = @person.skills
+    .col-md-3.col-sm-6.col-xs-12
+      ul.list-inline.social
+        = @person.blog
+        = @person.github
+        = @person.twitter
+        = @person.linkedin
+        / #= @person.facebook
+        = @person.instagram
+        = @person.vimeo
+      = @person.technologies
+  hr
+  - @person.projects.each do |project|
+    = render 'project', project: project, contributions: @person.project_with_contributions(project)

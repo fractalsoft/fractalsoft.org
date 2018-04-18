@@ -1,94 +1,94 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.1'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+gem 'rails', '~> 5.1.6'
+
+gem 'coffee-rails', '~> 4.2'
+gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'jquery-turbolinks'
+gem 'sass-rails', '~> 5.0.6'
+gem 'sdoc', '~> 1.0', group: :doc
+gem 'turbolinks', '~> 5' # Makes navigating your web application faster
+gem 'uglifier', '>= 1.3.0'
 
 gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'carrierwave'
-gem 'compass-rails', '~> 2.0.5'
-gem 'diacritics'
+gem 'carrierwave', '~> 1.2'
+gem 'compass-rails', '~> 3.0'
 gem 'draper'
-gem 'foreman'
-gem 'friendly_id'
+gem 'foreman', '~> 0.84'
+gem 'friendly_id', '~> 5.2'
 gem 'globalize'
 gem 'globalize-accessors'
-gem 'html5shiv-js-rails'
 gem 'http_accept_language'
 gem 'mail_form'
 gem 'mandrill-api'
 gem 'mandrill_mailer'
-gem 'meta-tags'
-gem 'mini_magick', platform: :ruby
-# gem 'newrelic_rpm'
-gem 'normalize-rails'
-gem 'oj'
-gem 'pg'
-gem 'puma'
+gem 'meta-tags', '~> 2.9.0' # Search Engine Optimization (SEO) for Rails
+gem 'mini_magick', '~> 4.8', platform: :ruby
+gem 'normalize-rails', '~> 4.1.1'
+gem 'oj', '~> 3.5' # Fast JSON parser and object serializer
+gem 'pg', '~> 1.0' # Ruby interface to PostgreSQL RDBMS
+gem 'puma', '~> 3.11' # Ruby web server built for concurrency
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
-gem 'respond-js-rails'
-gem 'simple_form'
-gem 'sqlite3'
+gem 'rollbar', '~> 2.15' # Error tracking service
+gem 'simple_form', '~> 4.0'
+gem 'slim-rails', '~> 3.1' # Template language instead Erb
 gem 'twitter-bootstrap-rails'
+# gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'brakeman', require: false
-  gem 'bullet'
-  gem 'capistrano-rails'
+  gem 'brakeman', '~> 4.2', require: false
+  gem 'bullet', '~> 5.7'
+  gem 'capistrano-rails', '~> 1.3'
   gem 'colored'
   gem 'deadweight'
-  gem 'guard'
-  gem 'guard-bundler', require: false
-  gem 'guard-livereload', require: false
-  gem 'guard-rails', require: false
+  gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'i18n-tasks'
-  gem 'letter_opener'
-  gem 'oink'
-  gem 'query_diet'
-  gem 'quiet_assets'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'query_diet', '~> 0.6.2'
   gem 'quiet_safari'
-  gem 'rack-mini-profiler', require: false
-  gem 'rails_best_practices'
-  # gem 'rails_db'
+  gem 'rails_best_practices', '~> 1.19'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
-  # gem 'scss_lint'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0' # <%= console %> anywhere in the code
 end
 
 group :development, :test do
-  gem 'dotenv-rails'
-  gem 'pry-byebug'
-  gem 'rspec-rails', '~> 3.4'
-  gem 'spring'
-  gem 'web-console', '~> 2.0'
+  # Call 'byebug' in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails', '~> 2.2'
+  gem 'pry-byebug', '~> 3.6'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'selenium-webdriver'
 end
 
 group :test do
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'database_cleaner', '~> 1.6'
+  gem 'factory_bot_rails'
   gem 'shoulda-matchers'
 end
 
 group :production do
   gem 'rails_12factor'
-  gem 'unicorn'
 end
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap'
-  gem 'rails-assets-leaflet', '~> 1.0.0.beta.2'
+  gem 'rails-assets-bootstrap', '~> 3.3.7'
+  gem 'rails-assets-jquery', '~> 3.3'
+  gem 'rails-assets-leaflet', '~> 1.3'
   gem 'rails-assets-markdown-js'
 end
 

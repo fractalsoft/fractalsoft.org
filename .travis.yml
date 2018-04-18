@@ -1,8 +1,25 @@
+sudo: required
 language: ruby
+dist: trusty
+services:
+  - postgresql
+before_install:
+  - gem update --system
+  - gem --version
 rvm:
-  - 2.2.3
+  - 2.4.1
 before_script:
-  - psql -c 'create database fractalsoft_test' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - RAILS_ENV=test bundle exec rails db:create db:migrate
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate
-sudo: false
+  - RAILS_ENV=test bundle exec rails spec
+addons:
+  postgresql: "10"
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
+    - postgresql-server-dev-10
+env:
+  global:
+  - PGPORT=5433

@@ -1,8 +1,7 @@
-# Application helper
 module ApplicationHelper
   # Example: charset: 'utf-8'
   def default_meta_tags
-    I18n.t(:meta).merge(separator: '-', author: '/humans.txt')
+    I18n.t(:meta).merge(separator: '-', author: '/humans.txt', reverse: true)
   end
 
   def link_to_locale(locale, &block)
@@ -20,9 +19,5 @@ module ApplicationHelper
 
   def locale_names
     @locale_names ||= Hash[locale_name_pairs]
-  end
-
-  def trap_link
-    link_to '', Antibot::Trap.instance.path, class: 'hidden'
   end
 end
