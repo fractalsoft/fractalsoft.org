@@ -1,0 +1,16 @@
+.col-md-4.col-sm-6.col-xs-12
+  = link_to person_path(id: person) do
+    .thumbnail
+      = person.image
+      h3
+        = person.fullname
+      p.text-center
+        = person.introduction
+      ul.list-inline.social
+        = person.blog
+        = person.github
+        = person.linkedin
+        = person.twitter
+        /
+          #= person.facebook
+          #= person.instagram

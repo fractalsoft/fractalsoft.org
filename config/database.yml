@@ -1,22 +1,21 @@
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
+  min_messages: warning
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+  timeout: 5000
 
 development:
   <<: *default
   database: fractalsoft_development
 
-test: &test
+test:
   <<: *default
   database: fractalsoft_test
 
-cucumber:
-  <<: *test
-
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: <%= ENV['DATABASE_NAME'] %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: <%= ENV['DATABASE_HOST'] %>
+  <<: *default
+  database: fractalsoft_production
+  host: <%= ENV['POSTGRES_HOST'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>

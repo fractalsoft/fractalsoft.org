@@ -1,0 +1,30 @@
+- content_for :body_class, 'cieszyn'
+.banner
+.container
+  = render 'cieszyn/bar'
+
+  .row
+    .col-sm-12
+      h2.text-center Serwis laptopów
+
+  .row
+    .col-sm-6
+      h3 Czym się zajmujemy?
+
+      ul
+        li Diagnostyka oraz <strong>naprawa komputerów i laptopów</strong>
+        li Składanie lub rozbudowa komputera, wymiana części
+        li Wymiana i naprawa układów BGA
+        li Profesjonalne odzyskiwanie danych
+        li Pomoc techniczna
+
+    .col-sm-6
+      h3 Jak do nas trafić?
+      address
+        | ul. Trzech Braci 3
+        br
+        | 43-400 Cieszyn
+
+      p Naprawiamy to czego inni nie potrafią.
+
+  #map

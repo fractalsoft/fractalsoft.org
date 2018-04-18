@@ -1,13 +1,28 @@
-# Person facade
 class PersonFacade
+  PARAMS = [
+    :blog,
+    :display,
+    :facebook,
+    :fullname,
+    :github,
+    :google,
+    :image,
+    :instagram,
+    :introduction,
+    :linkedin,
+    :position,
+    :project_with_contributions,
+    :saying,
+    :skills,
+    :technologies,
+    :twitter,
+    :youtube,
+    :vimeo
+  ].freeze
+
   attr_reader :person, :projects
 
-  delegate :fullname, :position, :image,
-           :blog, :github, :linkedin,
-           :twitter, :facebook, :instagram, :google, :youtube,
-           :introduction, :saying, :skills, :technologies,
-           :project_with_contributions,
-           to: :person, prefix: false
+  delegate(*PARAMS, to: :person, prefix: false)
 
   def initialize(id)
     @person = Person.friendly.find(id).decorate

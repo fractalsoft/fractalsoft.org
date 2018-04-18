@@ -3,22 +3,31 @@ AllCops:
     - bin/*
     - config/**/*
     - db/**/*
+    - spec/i18n_spec.rb
+    - tmp/**/*
 
-ClassLength:
-  CountComments: false
-  Max: 100
+Documentation:
+  Enabled: false
 
-LineLength:
-  Enabled: true
-  Max: 79
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
 
 MethodLength:
   CountComments: false
   Max: 5
 
-ParameterLists:
-  Max: 4
-  CountKeywordArgs: true
+Style/EmptyMethod:
+  Enabled: false
 
-TrailingWhitespace:
-  Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+
+Style/SymbolArray:
+  Enabled: false

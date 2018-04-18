@@ -5,7 +5,7 @@ module ActionView
     # Rails template handler for Markdown
     class Markdown
       class_attribute :default_format
-      self.default_format = Mime::HTML
+      self.default_format = Mime[:html]
 
       # @param template [ActionView::Template]
       # @return [String] Ruby code that when evaluated will return the rendered

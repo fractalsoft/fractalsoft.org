@@ -1,0 +1,22 @@
+.row.descritpion
+  .col-md-3
+    h2
+      - options = { target: '_blank' }
+      - options[:rel] = 'nofollow' unless project.dofollow
+      - if project.display
+        = project.title
+        br
+      small
+        = link_to_if project.url, project.subtitle, "//#{project.url}/", options
+
+  .col-md-9
+    h4.text-justify
+      = project.introduction
+    p
+      strong
+        = t('.major_contributions')
+      ul
+        - contributions.each do |contribution|
+          li
+            = contribution
+    hr

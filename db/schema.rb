@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,124 +10,129 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106131530) do
+ActiveRecord::Schema.define(version: 20180412080000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
+  enable_extension "pgcrypto"
 
-  create_table "contribution_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.uuid     "contribution_id", null: false
-    t.string   "locale",          null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "name"
+  create_table "contribution_translations", force: :cascade do |t|
+    t.uuid "contribution_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["contribution_id"], name: "index_contribution_translations_on_contribution_id"
+    t.index ["locale"], name: "index_contribution_translations_on_locale"
   end
 
-  add_index "contribution_translations", ["contribution_id"], name: "index_contribution_translations_on_contribution_id", using: :btree
-  add_index "contribution_translations", ["locale"], name: "index_contribution_translations_on_locale", using: :btree
-
-  create_table "contributions", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.uuid     "person_id"
-    t.uuid     "project_id"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "contributions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "position", default: 0
+    t.uuid "person_id"
+    t.uuid "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_contributions_on_person_id"
+    t.index ["project_id"], name: "index_contributions_on_project_id"
   end
-
-  add_index "contributions", ["person_id"], name: "index_contributions_on_person_id", using: :btree
-  add_index "contributions", ["project_id"], name: "index_contributions_on_project_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",                      null: false
-    t.integer  "sluggable_id",              null: false
-    t.string   "sluggable_type", limit: 50
-    t.string   "scope"
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
     t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
-
-  create_table "images", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.string   "image"
-    t.string   "kind"
-    t.uuid     "project_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "images", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "image"
+    t.string "kind"
+    t.uuid "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_images_on_project_id"
   end
 
-  add_index "images", ["project_id"], name: "index_images_on_project_id", using: :btree
-
-  create_table "jobs", force: :cascade do |t|
-    t.string   "name"
-    t.decimal  "price",      precision: 8, scale: 2
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+  create_table "job_translations", force: :cascade do |t|
+    t.uuid "job_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["job_id"], name: "index_job_translations_on_job_id"
+    t.index ["locale"], name: "index_job_translations_on_locale"
   end
 
-  create_table "people", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.string   "nickname"
-    t.string   "fullname",                  null: false
-    t.string   "position"
-    t.string   "image"
-    t.string   "blog"
-    t.string   "github"
-    t.string   "twitter"
-    t.string   "facebook"
-    t.string   "instagram"
-    t.string   "linkedin"
-    t.string   "website"
-    t.string   "email"
-    t.string   "skills",       default: ""
-    t.string   "technologies", default: ""
-    t.string   "saying"
-    t.text     "introduction"
-    t.text     "description"
-    t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "jobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.decimal "price", precision: 16, scale: 4
+    t.integer "position", default: 0
+    t.string "currency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "people", ["slug"], name: "index_people_on_slug", using: :btree
-
-  create_table "person_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.uuid     "person_id",    null: false
-    t.string   "locale",       null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "saying"
-    t.text     "introduction"
+  create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "position"
+    t.string "blog"
+    t.string "codeschool"
+    t.string "email"
+    t.string "facebook"
+    t.string "fullname", null: false
+    t.string "github"
+    t.string "image"
+    t.string "instagram"
+    t.string "linkedin"
+    t.string "nickname"
+    t.string "skills", default: ""
+    t.string "slug"
+    t.string "technologies", default: ""
+    t.string "twitter"
+    t.string "vimeo"
+    t.string "website"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_people_on_slug"
   end
 
-  add_index "person_translations", ["locale"], name: "index_person_translations_on_locale", using: :btree
-  add_index "person_translations", ["person_id"], name: "index_person_translations_on_person_id", using: :btree
-
-  create_table "project_translations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.uuid     "project_id",   null: false
-    t.string   "locale",       null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "subtitle"
-    t.text     "introduction"
-    t.text     "description"
+  create_table "person_translations", force: :cascade do |t|
+    t.uuid "person_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "introduction"
+    t.string "saying"
+    t.index ["locale"], name: "index_person_translations_on_locale"
+    t.index ["person_id"], name: "index_person_translations_on_person_id"
   end
 
-  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale", using: :btree
-  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id", using: :btree
+  create_table "project_translations", force: :cascade do |t|
+    t.uuid "project_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.text "introduction"
+    t.string "subtitle"
+    t.index ["locale"], name: "index_project_translations_on_locale"
+    t.index ["project_id"], name: "index_project_translations_on_project_id"
+  end
 
-  create_table "projects", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.string   "title",        null: false
-    t.string   "subtitle"
-    t.string   "url"
-    t.text     "introduction"
-    t.text     "description"
-    t.string   "thumbnail"
-    t.integer  "year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "projects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "display", default: true
+    t.boolean "dofollow", default: false
+    t.integer "position", default: 0
+    t.integer "year"
+    t.string "thumbnail"
+    t.string "title", null: false
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
