@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  direct :manifest do
+    '/manifest.json'
+  end
+
   defaults locale: :pl do
     get :cieszyn, controller: 'cieszyn/welcome', action: :show
     get :service, to: redirect('/pl/cieszyn')
@@ -19,8 +23,5 @@ Rails.application.routes.draw do
     root 'home#index', as: :localized_root
   end
 
-  direct :manifest do
-    '/manifest.json'
-  end
   root to: 'home#index'
 end
