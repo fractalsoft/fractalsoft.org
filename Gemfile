@@ -26,18 +26,18 @@ gem 'http_accept_language'
 gem 'mail_form'
 gem 'mandrill-api'
 gem 'mandrill_mailer'
-gem 'meta-tags', '~> 2.9.0' # Search Engine Optimization (SEO) for Rails
+gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', '~> 4.8', platform: :ruby
 gem 'normalize-rails', '~> 4.1.1'
-gem 'oj', '~> 3.5' # Fast JSON parser and object serializer
+gem 'oj' # Fast JSON parser and object serializer
 gem 'pg', '~> 1.0' # Ruby interface to PostgreSQL RDBMS
 gem 'puma', '~> 3.11' # Ruby web server built for concurrency
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
-gem 'rollbar', '~> 2.15' # Error tracking service
+gem 'rollbar', '~> 2.18' # Error tracking service
 gem 'simple_form', '~> 4.0'
-gem 'slim-rails', '~> 3.1' # Template language instead Erb
+gem 'slim-rails', '~> 3.2' # Template language instead Erb
 gem 'twitter-bootstrap-rails'
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -46,7 +46,7 @@ gem 'twitter-bootstrap-rails'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'brakeman', '~> 4.2', require: false
+  gem 'brakeman', require: false
   gem 'bullet', '~> 5.7'
   gem 'capistrano-rails', '~> 1.3'
   gem 'colored'
@@ -54,9 +54,9 @@ group :development do
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'i18n-tasks'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'query_diet', '~> 0.6.2'
+  gem 'query_diet'
   gem 'quiet_safari'
-  gem 'rails_best_practices', '~> 1.19'
+  gem 'rails_best_practices'
   gem 'rubocop'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
