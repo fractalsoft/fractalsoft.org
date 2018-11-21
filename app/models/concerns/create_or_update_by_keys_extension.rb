@@ -16,7 +16,7 @@ module CreateOrUpdateByKeysExtension
   end
 
   def find_by_keys(keys, params)
-    keys.each_with_object([]) do |key|
+    keys.each do |key|
       object = find_by_key(key, params)
       return object if object
     end

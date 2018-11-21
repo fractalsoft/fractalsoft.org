@@ -3,7 +3,7 @@ require 'oj'
 hash = Oj.load(File.read('db/data.json'), symbol_keys: true)
 
 hash[:projects].each do |params|
-  Project.create_or_update_by_keys([:title], params)
+  Project.create_or_update_by_keys([:slug], params)
 end
 
 hash[:team].each do |params|
@@ -13,8 +13,8 @@ hash[:team].each do |params|
     params
   )
   contributions.each do |project_params|
-    title = project_params.delete(:title)
-    project = Project.find_by(title: title)
+    slug = project_params.delete(:slug)
+    project = Project.find_by(slug: slug)
     project_params[:names].each do |name|
       item = name[:name] || name[:name_en]
       options = { person_id: person.id, project_id: project.id, name: item }
