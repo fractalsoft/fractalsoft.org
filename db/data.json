@@ -22,7 +22,7 @@
       "description": "Ruby on Rails developer",
       "contributions": [
         {
-          "title": "anonymous app",
+          "slug": "agricircle.com",
           "names": [
             { "name": "Backend development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
             { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" },
@@ -34,7 +34,20 @@
           ]
         },
         {
-          "title": "hitdea",
+          "slug": "blog.fractalsoft.org",
+          "names": [
+            { "name": "Copywriting", "name_pl": "Pisanie artykułów" }
+          ]
+        },
+        {
+          "slug": "fractalsoft.org",
+          "names": [
+            { "name": "UX development", "name_pl": "Rozwój UX" },
+            { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" }
+          ]
+        },
+        {
+          "slug": "hitdea.com",
           "names": [
             { "name": "Backend architecture", "name_pl": "Architektura części serwerowej" },
             { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
@@ -47,7 +60,7 @@
           ]
         },
         {
-          "title": "advertising app",
+          "slug": "ads-system",
           "names": [
             { "name": "Backend architecture", "name_pl": "Architektura części serwerowej" },
             { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
@@ -58,7 +71,7 @@
           ]
         },
         {
-          "title": "linguistic analysis",
+          "slug": "linguistic-analysis",
           "names": [
             { "name": "Backend development in Rails 4.1", "name_pl": "Rozwój Backendu w Ruby on Rails 4.1" },
             { "name": "Upgrade Rails and Ruby version", "name_pl": "Aktualizacje wersji Rails i Ruby" },
@@ -67,7 +80,7 @@
           ]
         },
         {
-          "title": "wordmaker",
+          "slug": "wordmaker",
           "names": [
             { "name": "Backend architecture", "name_pl": "Architektura części serwerowej" },
             { "name": "Database design", "name_pl": "Projektowanie bazy danych" },
@@ -95,7 +108,14 @@
       "description": "Ruby on Rails developer",
       "contributions": [
         {
-          "title": "nopaperwork",
+          "slug": "blog.fractalsoft.org",
+          "names": [
+            { "name": "Configuration and administration", "name_pl": "Konfiguracja i administrowanie" },
+            { "name": "Copywriting", "name_pl": "Pisanie artykułów" }
+          ]
+        },
+        {
+          "slug": "nopaperwork.org",
           "names": [
             { "name": "Backend development in Ruby on Rails" },
             { "name": "Frontend development in Ember.js" },
@@ -103,7 +123,7 @@
           ]
         },
         {
-          "title": "purpura",
+          "slug": "purpura.eu",
           "names": [
             { "name": "Backend development in Ruby on Rails" },
             { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
@@ -111,7 +131,7 @@
           ]
         },
         {
-          "title": "hitdea",
+          "slug": "hitdea.com",
           "names": [
             { "name": "Backend development (Ruby on Rails, Cordova)" },
             { "name": "Developing Cordova application" },
@@ -121,13 +141,13 @@
           ]
         },
         {
-          "title": "linguistic analysis",
+          "slug": "linguistic-analysis",
           "names": [
             { "name": "Backend development in Ruby on Rails" }
           ]
         },
         {
-          "title": "20 questions game",
+          "slug": "20-questions-game",
           "names": [
             { "name": "Backend development in Ruby on Rails" },
             { "name": "Frontend development" },
@@ -155,7 +175,7 @@
       "instagram": "torrocus",
       "linkedin": "torrocus",
       "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development",
-      "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, Slim, Sass, CoffeeScript, Backbone.js, Marionette, Minitest, RSpec, TestCase, Sidekiq, Ember.js, MySQL, HTML5, CSS3, JavaScript",
+      "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, Slim, Sass, CoffeeScript, Backbone.js, Marionette, Minitest, RSpec, TestCase, Sidekiq, Ember.js, MySQL, HTML5, CSS3, JavaScript, Docker, Jekyll",
       "saying_en": "<p>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</p> <footer>Antoine de Saint Exupéry</footer>",
       "saying_pl": "<p>Wydaje się, że doskonałość osiąga się nie wtedy, gdy nie ma nic więcej do dodania, ale gdy nie ma nic więcej do usunięcia.</p> <footer>Antoine de Saint Exupéry</footer>",
       "introduction_en": "<strong>Web developer since 1998.</strong> He had met Ruby 12 years later while using Sinatra and Ruby on Rails. Madcap for algorithms. Linux administrator and Open Source ideology evangelist.",
@@ -163,7 +183,7 @@
       "description": "Ruby on Rails developer",
       "contributions": [
         {
-          "title": "nopaperwork",
+          "slug": "nopaperwork.org",
           "names": [
             { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
             { "name": "Architecture design", "name_pl": "Projektowanie architektury" },
@@ -175,7 +195,7 @@
           ]
         },
         {
-          "title": "purpura",
+          "slug": "purpura.eu",
           "names": [
             { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
             { "name": "Bugs resolving", "name_pl": "Naprawianie błędów" },
@@ -183,7 +203,24 @@
           ]
         },
         {
-          "title": "selecthub",
+          "slug": "blog.fractalsoft.org",
+          "names": [
+            { "name": "Configuration and administration", "name_pl": "Konfiguracja i administrowanie" },
+            { "name": "Copywriting", "name_pl": "Pisanie artykułów" }
+          ]
+        },
+        {
+          "slug": "fractalsoft.org",
+          "names": [
+            { "name": "Development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
+            { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" },
+            { "name": "Code refactoring and optimization", "name_pl": "Refaktoring kodu i optymalizacja" },
+            { "name": "Architecture design", "name_pl": "Projektowanie architektury" },
+            { "name": "UX development", "name_pl": "Rozwój UX" }
+          ]
+        },
+        {
+          "slug": "selecthub.com",
           "names": [
             { "name": "Backend development in Ruby on Rails 3.2", "name_pl": "Rozwój aplikacji w Ruby on Rails 3.2" },
             { "name": "Frontend development (Backbone.js, Marionette)", "name_pl": "Rozwój Frontendu (Backbone.js, Marionette)" },
@@ -192,7 +229,7 @@
           ]
         },
         {
-          "title": "hitdea",
+          "slug": "hitdea.com",
           "names": [
             { "name": "Backend development in Ruby on Rails 4.2", "name_pl": "Rozwój aplikacji w Ruby on Rails 4.2 po stronie serwerowej" },
             { "name": "Project management", "name_pl": "Zarządzanie projektem" },
@@ -209,7 +246,7 @@
           ]
         },
         {
-          "title": "advertising app",
+          "slug": "ads-system",
           "names": [
             { "name": "Ruby on Rails development", "name_pl": "Rozwój aplikacji w Ruby on Rails" },
             { "name": "Architecture design", "name_pl": "Projektowanie architektury" },
@@ -218,7 +255,7 @@
           ]
         },
         {
-          "title": "linguistic analysis",
+          "slug": "linguistic-analysis",
           "names": [
             { "name": "Backend development in Ruby on Rails", "name_pl": "Rozwój aplikacji w Ruby on Rails po stronie serwerowej" },
             { "name": "Database design architecture", "name_pl": "Projektowanie architektury bazy danych" },
@@ -229,7 +266,7 @@
           ]
         },
         {
-          "title": "wordmaker",
+          "slug": "wordmaker",
           "names": [
             { "name": "Architecture and implementation of most of application the functionality", "name_pl": "Architektura i implementacja większości funkcjonalności" },
             { "name": "Ruby on Rails development and deployment", "name_pl": "Rozwój i wdrożenie aplikacji w Ruby on Rails" },
@@ -237,7 +274,7 @@
           ]
         },
         {
-          "title": "20 questions game",
+          "slug": "20-questions-game",
           "names": [
             { "name": "Project management", "name_pl": "Zarządzanie projektem" },
             { "name": "Deployment to production", "name_pl": "Wdrożenie na produkcję" }
@@ -248,20 +285,22 @@
   ],
   "projects": [
     {
+      "slug": "nopaperwork.org",
       "title": "nopaperwork",
       "display": true,
       "dofollow": true,
-      "subtitle_en": "small business management application",
-      "subtitle_pl": "aplikacja do zarządzania małą firmą",
+      "subtitle_en": "business management application",
+      "subtitle_pl": "aplikacja do zarządzania firmą",
       "url": "nopaperwork.org",
       "introduction_en": "Management business with no paperwork. Customer service, create invoices, order management. All in one place, easy-to-use and painless. Available API in standard JSON API.",
       "introduction_pl": "Zarządzanie małą firmą bez zbędnych formalności. Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami. Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne. Dostępne API w standardzie JSON API.",
       "description_en": "",
       "description_pl": "",
-      "year": 2017
+      "year": 2018
     },
     {
-      "title": "purpura",
+      "slug": "purpura.eu",
+      "title": "Purpura",
       "display": true,
       "subtitle_en": "design handcrafted tiles application",
       "subtitle_pl": "aplikacja do projektowania płytek",
@@ -273,7 +312,34 @@
       "year": 2017
     },
     {
-      "title": "anonymous app",
+      "slug": "fractalsoft.org",
+      "title": "Website Fractal Soft",
+      "display": false,
+      "subtitle_en": "firma programistyczna",
+      "subtitle_pl": "software house",
+      "url": "https://fractalsoft.org",
+      "introduction_en": "This is our company website. It shouldn't be complicated. The task of this site is to show what and how we do. We work on it in our free time. The project is Open Source.",
+      "introduction_pl": "To nasza strona firmy. Nie ma być skomplikowana. Zadaniem tej strony jest pokazanie co i jak robimy. Pracujemy nad nią w wolnym czasie. Projekt jest Open Source.",
+      "description_en": "",
+      "description_pl": "",
+      "year": 2018
+    },
+    {
+      "slug": "blog.fractalsoft.org",
+      "title": "Blog Fractal Soft",
+      "display": false,
+      "subtitle_en": "technical blog",
+      "subtitle_pl": "blog techniczny",
+      "url": "https://blog.fractalsoft.org",
+      "introduction_en": "",
+      "introduction_pl": "",
+      "description_en": "",
+      "description_pl": "",
+      "year": 2018
+    },
+    {
+      "slug": "agricircle.com",
+      "title": "AgriCircle",
       "display": false,
       "subtitle_en": "crop management application",
       "subtitle_pl": "aplikacja do zarządzania uprawami",
@@ -281,10 +347,11 @@
       "introduction_pl": "Aplikacja internetowa usprawniająca proces planowania dla rolników. Obsługa map, komunikacja z zewnętrznymi serwisami, import / eksport pól, organizer nawadniania, użyźniania, sadzenia i zbierania upraw.",
       "description_en": "",
       "description_pl": "",
-      "year": 2017
+      "year": 2018
     },
     {
-      "title": "selecthub",
+      "slug": "selecthub.com",
+      "title": "SelectHub",
       "display": true,
       "dofollow": false,
       "subtitle_en": "",
@@ -297,6 +364,7 @@
       "year": 2016
     },
     {
+      "slug": "hitdea.com",
       "title": "hitdea",
       "display": true,
       "subtitle_en": "based on microservices",
@@ -310,6 +378,7 @@
       "year": 2015
     },
     {
+      "slug": "ads-system",
       "title": "advertising app",
       "display": true,
       "url": "marketing.hitdea.com",
@@ -318,6 +387,7 @@
       "year": 2014
     },
     {
+      "slug": "linguistic-analysis",
       "title": "linguistic analysis",
       "display": true,
       "url": "analysis.hitdea.com",
@@ -326,6 +396,7 @@
       "year": 2014
     },
     {
+      "slug": "wordmaker",
       "title": "wordmaker",
       "display": true,
       "url": "game.hitdea.com",
@@ -334,6 +405,7 @@
       "year": 2014
     },
     {
+      "slug": "20-questions-game",
       "title": "20 questions game",
       "display": true,
       "url": "questions.hitdea.com",

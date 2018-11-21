@@ -58,6 +58,7 @@ group :development do
   gem 'quiet_safari'
   gem 'rails_best_practices'
   gem 'rubocop'
+  gem 'rubocop-rspec'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
   gem 'spring'

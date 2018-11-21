@@ -1,5 +1,7 @@
 class Project < ApplicationRecord
   extend CreateOrUpdateByKeysExtension
+  extend FriendlyId
+  friendly_id :slug, use: :slugged
   mount_uploader :thumbnail, ThumbnailUploader
   translates :description, :introduction, :subtitle
   globalize_accessors locales: I18n.available_locales,

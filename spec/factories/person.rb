@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :person do
-    fullname 'Linus Torvalds'
+    fullname { 'Linus Torvalds' }
   end
 end
