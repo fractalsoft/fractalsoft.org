@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(version: 20180412080000) do
     t.boolean "dofollow", default: false
     t.integer "position", default: 0
     t.integer "year"
+    t.string "slug"
     t.string "thumbnail"
     t.string "title", null: false
     t.string "url"
