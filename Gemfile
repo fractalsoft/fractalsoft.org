@@ -60,7 +60,7 @@ group :development do
   gem 'rubocop'
   gem 'rubocop-rspec'
   gem 'rubycritic', require: false
-  gem 'sandi_meter'
+  # gem 'sandi_meter'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # <%= console %> anywhere in the code
