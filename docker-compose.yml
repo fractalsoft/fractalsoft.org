@@ -1,4 +1,4 @@
-version: '3.6'
+version: '3.7'
 services:
   app:
     build: .
@@ -20,7 +20,7 @@ services:
       - db
 
   db:
-    image: postgres:10
+    image: "postgres:${POSTGRES_VERSION}"
     restart: always
     env_file: .env
     ports:
