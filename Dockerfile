@@ -7,7 +7,7 @@ ENV \
 # zlib1g-dev: for nokogiri
 # postgresql-client
 RUN \
-    curl -sL https://deb.nodesource.com/setup_9.x | bash - \
+    curl -sL https://deb.nodesource.com/setup_11.x | bash - \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb http://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
     && apt-get update -qq \
