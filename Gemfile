@@ -36,6 +36,7 @@ gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
 gem 'rollbar', '~> 2.18' # Error tracking service
+gem 'route_translator' # Manage translations of routes
 gem 'simple_form', '~> 4.1'
 gem 'slim-rails', '~> 3.2' # Template language instead Erb
 gem 'twitter-bootstrap-rails'

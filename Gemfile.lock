@@ -354,6 +354,9 @@ GEM
     require_all (2.0.0)
     rollbar (2.19.2)
       multi_json
+    route_translator (5.7.1)
+      actionpack (>= 5.0.0.1, <= 6.0.0.beta1)
+      activesupport (>= 5.0.0.1, <= 6.0.0.beta1)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.2)
@@ -528,6 +531,7 @@ DEPENDENCIES
   rails_best_practices
   redcarpet
   rollbar (~> 2.18)
+  route_translator
   rspec-rails (~> 3.5)
   rubocop
   rubocop-rspec
