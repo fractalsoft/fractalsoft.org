@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_action :set_locale
+
   def index
     @home = HomeFacade.new
   end
