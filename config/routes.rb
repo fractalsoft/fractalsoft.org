@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   direct(:blog) { 'https://blog.fractalsoft.org' }
-  direct :manifest do
-    '/manifest.json'
-  end
+  direct(:manifest) { '/manifest.json' }
 
   defaults locale: :pl do
     get :cieszyn, controller: 'cieszyn/welcome', action: :show
