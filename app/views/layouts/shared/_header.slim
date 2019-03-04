@@ -15,6 +15,7 @@ nav.header.navbar.navbar-default
       ul.nav.navbar-nav.navbar-right
         li = link_to t('.team'), people_path
         li = link_to t('.service'), cieszyn_path
+        li = link_to t(:blog), blog_url
         / li
           #= link_to t('.projects'), projects_path
         li = link_to t('.contact'), new_contact_form_path, data: { no_turbolink: 'true' }
