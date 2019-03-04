@@ -19,6 +19,7 @@ class HomeController < ApplicationController
   def set_locale
     super
     return if I18n.default_locale == I18n.locale
+
     I18n.locale = params[:locale] || detect_locale
   end
 end
