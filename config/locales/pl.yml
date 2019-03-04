@@ -1,5 +1,6 @@
 ---
 pl:
+  blog: Blog
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
