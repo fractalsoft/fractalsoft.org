@@ -1,5 +1,6 @@
 ---
 pl:
+  blog: Blog
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
@@ -48,7 +49,6 @@ pl:
           two: Ruby on Rails
       title:
         in_touch: Bądźmy w kontakcie
-  language: polski
   layouts:
     shared:
       footer:

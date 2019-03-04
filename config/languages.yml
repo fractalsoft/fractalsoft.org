@@ -1,0 +1,4 @@
+available: &available
+  en: English
+  pl: Polski
+  # cs: čeština
