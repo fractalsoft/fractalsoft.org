@@ -49,7 +49,6 @@ en:
           two: Ruby on Rails
       title:
         in_touch: Let's be in touch
-  language: english
   layouts:
     shared:
       footer:
