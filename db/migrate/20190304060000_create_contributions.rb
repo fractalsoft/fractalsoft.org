@@ -1,7 +1,7 @@
-class CreateContributions < ActiveRecord::Migration[5.1]
+class CreateContributions < ActiveRecord::Migration[5.2]
   def change
     create_table :contributions, id: :uuid do |t|
-      t.integer :position, default: 0
+      t.integer :position, default: 0, null: false
       t.uuid :person_id, index: true, foreign_key: true
       t.uuid :project_id, index: true, foreign_key: true
 
