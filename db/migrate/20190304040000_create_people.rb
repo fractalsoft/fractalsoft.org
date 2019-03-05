@@ -1,7 +1,7 @@
-class CreatePeople < ActiveRecord::Migration[5.1]
+class CreatePeople < ActiveRecord::Migration[5.2]
   def change
     create_table :people, id: :uuid do |t|
-      t.integer :position, default: 0
+      t.integer :position, default: 0, null: false
       t.string :blog
       t.string :codeschool
       t.string :email
@@ -13,9 +13,9 @@ class CreatePeople < ActiveRecord::Migration[5.1]
       t.string :linkedin
       t.string :nickname
       t.string :position
-      t.string :skills, default: ''
+      t.string :skills, default: '', null: false
       t.string :slug, index: true
-      t.string :technologies, default: ''
+      t.string :technologies, default: '', null: false
       t.string :twitter
       t.string :vimeo
       t.string :website
