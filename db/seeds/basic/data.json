@@ -1,25 +1,7 @@
 {
   "team": [
     {
-      "fullname": "Agnieszka Matysek",
       "nickname": "womanonrails",
-      "position": "developer",
-      "image": "team/amatysek.jpg",
-      "blog": "https://womanonrails.com",
-      "codeschool": "womanonrails",
-      "github": "womanonrails",
-      "twitter": "womanonrails",
-      "facebook": "womanonrails",
-      "instagram": "womanonrails",
-      "linkedin": "womanonrails",
-      "vimeo": "womanonrails",
-      "skills": "Backend & Frontend Development, Refactoring, TDD, Agile, Scrum, Git, Teamwork, SOA, Remote Work",
-      "technologies": "Ruby on Rails, PostgreSQL, Backbone.js, PostGIS, Leaflet, Ruby, Marionette, JavaScript, CoffeeScript, RSpec, jQuery, Ember.js, Slim, MySQL, HTML5, CSS3",
-      "saying_en": "<p>Premature optimization is the root of all evil.</p> <footer>Donald Knuth</footer>",
-      "saying_pl": "<p>Przedwczesna optymalizacja to źródło wszelkiego zła.</p> <footer>Donald Knuth</footer>",
-      "introduction_en": "<strong>Ruby on Rails developer since 2011.</strong> Focused on good code quality, refactoring and TDD. Well-organized and responsible. Mentor at CoderDojo and Rails Girls workshops.",
-      "introduction_pl": "<strong>Programista Ruby on Rails od 2011 roku.</strong> Specjalizuje się w dobrej jakości kodu, refaktoringu i TDD. Odpowiedzialna i dobrze zorganizowana. Mentor na CoderDojo i Rails Girls.",
-      "description": "Ruby on Rails developer",
       "contributions": [
         {
           "slug": "agricircle.com",
@@ -93,19 +75,7 @@
       ]
     },
     {
-      "fullname": "Grzegorz Lisowski",
       "nickname": "lisu",
-      "position": "developer",
-      "image": "team/glisowski.jpg",
-      "github": "noplisu",
-      "twitter": "noplisu",
-      "facebook": "lisux",
-      "linkedin": "glisowski91",
-      "skills": "Backend & Frondend Development, Application Architecture, API Design, Refactoring, Git, Visualization",
-      "technologies": "Ruby, Ruby on Rails, JavaScript, EmberJS, RSpec, Minitest, Slim, C#, Unity3D, Cordova",
-      "introduction_en": "<strong>Rails programmer open to different technologies.</strong> Expert in unsolvable challenges. Passionate gamer, game creator and regular participant of Global Game Jam.",
-      "introduction_pl": "<strong>Programista Rails otwarty na różne technologie.</strong> Ekspert od problemów. Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.",
-      "description": "Ruby on Rails developer",
       "contributions": [
         {
           "slug": "blog.fractalsoft.org",
@@ -163,24 +133,7 @@
       ]
     },
     {
-      "fullname": "Alex Malaszkiewicz",
       "nickname": "torrocus",
-      "position": "developer",
-      "image": "team/amalaszkiewicz.jpg",
-      "blog": "https://torrocus.com",
-      "codeschool": "torrocus",
-      "github": "torrocus",
-      "twitter": "torrocus",
-      "facebook": "torrocus",
-      "instagram": "torrocus",
-      "linkedin": "torrocus",
-      "skills": "Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development",
-      "technologies": "Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, Slim, Sass, CoffeeScript, Backbone.js, Marionette, Minitest, RSpec, TestCase, Sidekiq, Ember.js, MySQL, HTML5, CSS3, JavaScript, Docker, Jekyll",
-      "saying_en": "<p>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</p> <footer>Antoine de Saint Exupéry</footer>",
-      "saying_pl": "<p>Wydaje się, że doskonałość osiąga się nie wtedy, gdy nie ma nic więcej do dodania, ale gdy nie ma nic więcej do usunięcia.</p> <footer>Antoine de Saint Exupéry</footer>",
-      "introduction_en": "<strong>Web developer since 1998.</strong> He had met Ruby 12 years later while using Sinatra and Ruby on Rails. Madcap for algorithms. Linux administrator and Open Source ideology evangelist.",
-      "introduction_pl": "<strong>Web developer od roku 1998.</strong> Ruby poznał 12 lat później używając Sinatra i Ruby on Rails. Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.",
-      "description": "Ruby on Rails developer",
       "contributions": [
         {
           "slug": "nopaperwork.org",
@@ -281,146 +234,6 @@
           ]
         }
       ]
-    }
-  ],
-  "projects": [
-    {
-      "slug": "nopaperwork.org",
-      "title": "nopaperwork",
-      "display": true,
-      "dofollow": true,
-      "subtitle_en": "business management application",
-      "subtitle_pl": "aplikacja do zarządzania firmą",
-      "url": "nopaperwork.org",
-      "introduction_en": "Management business with no paperwork. Customer service, create invoices, order management. All in one place, easy-to-use and painless. Available API in standard JSON API.",
-      "introduction_pl": "Zarządzanie małą firmą bez zbędnych formalności. Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami. Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne. Dostępne API w standardzie JSON API.",
-      "description_en": "",
-      "description_pl": "",
-      "year": 2018
-    },
-    {
-      "slug": "purpura.eu",
-      "title": "Purpura",
-      "display": true,
-      "dofollow": false,
-      "subtitle_en": "design handcrafted tiles application",
-      "subtitle_pl": "aplikacja do projektowania płytek",
-      "url": "purpura.eu",
-      "introduction_en": "Application supporting design hand-made ceramic tiles. Users can choose the shapes, patterns and colors. Ordering process is a multi-step and requires an individual valuation, because the tiles are manufactured by hand.",
-      "introduction_pl": "Aplikacja wspomagająca projektowanie ręcznie wykonywanych kafli ceramicznych. Użytkownicy mogą dobierać kształty, wzory i kolory. Proces zamawiania jest wieloetapowy i wymaga indywidualnej wyceny, ponieważ płytki są wyrabiane ręcznie.",
-      "description_en": "",
-      "description_pl": "",
-      "year": 2017
-    },
-    {
-      "slug": "fractalsoft.org",
-      "title": "Website Fractal Soft",
-      "display": false,
-      "dofollow": true,
-      "subtitle_en": "software house",
-      "subtitle_pl": "firma programistyczna",
-      "url": "https://fractalsoft.org",
-      "introduction_en": "This is our company website. It shouldn't be complicated. The task of this site is to show what and how we do. We work on it in our free time. The project is Open Source.",
-      "introduction_pl": "To nasza strona firmy. Nie ma być skomplikowana. Zadaniem tej strony jest pokazanie co i jak robimy. Pracujemy nad nią w wolnym czasie. Projekt jest Open Source.",
-      "description_en": "",
-      "description_pl": "",
-      "year": 2018
-    },
-    {
-      "slug": "blog.fractalsoft.org",
-      "title": "Blog Fractal Soft",
-      "display": false,
-      "dofollow": true,
-      "subtitle_en": "technical blog",
-      "subtitle_pl": "blog techniczny",
-      "url": "https://blog.fractalsoft.org",
-      "introduction_en": "",
-      "introduction_pl": "",
-      "description_en": "",
-      "description_pl": "",
-      "year": 2018
-    },
-    {
-      "slug": "agricircle.com",
-      "title": "AgriCircle",
-      "display": false,
-      "dofollow": false,
-      "subtitle_en": "crop management application",
-      "subtitle_pl": "aplikacja do zarządzania uprawami",
-      "introduction_en": "Web application to make better planning process for farmers. Geo map service, communication with external services, import / export fields, organizer for irrigation, fertilizing, planting and harvesting crops.",
-      "introduction_pl": "Aplikacja internetowa usprawniająca proces planowania dla rolników. Obsługa map, komunikacja z zewnętrznymi serwisami, import / eksport pól, organizer nawadniania, użyźniania, sadzenia i zbierania upraw.",
-      "description_en": "",
-      "description_pl": "",
-      "year": 2018
-    },
-    {
-      "slug": "selecthub.com",
-      "title": "SelectHub",
-      "display": true,
-      "dofollow": false,
-      "subtitle_en": "",
-      "subtitle_pl": "",
-      "url": "selecthub.com",
-      "introduction_en": "Platform for business to evaluate and acquire the software products. It allows comparison of different IT solutions depending on customer needs. Software vendors give access to the database of leads.",
-      "introduction_pl": "Platforma dla firm do oceniania i nabywania oprogramowania. Umożliwia porównanie różnych rozwiązań IT w zależności od potrzeb klienta. Producentom oprogramowania daje dostęp do bazy potencjalnych klientów.",
-      "description_en": "",
-      "description_pl": "",
-      "year": 2016
-    },
-    {
-      "slug": "hitdea.com",
-      "title": "hitdea",
-      "display": true,
-      "dofollow": false,
-      "subtitle_en": "based on microservices",
-      "subtitle_pl": "aplikacja oparta o&nbsp;mikroserwisy",
-      "url": "hitdea.com",
-      "introduction": "Collaborative web-based platform for idea management. It allows to empower people to gather ideas but also process them in a creative, productive and simple way. Based on the methodology CPS&nbsp;6.1 (Creative Problem Solving).",
-      "introduction_pl": "Platforma internetowa do zarządzania pomysłami. Umożliwia użytkownikom zbierać pomysły oraz przetwarzać je w kreatywny, wydajny i prosty sposób. Bazuje na metodologii CPS 6.1&nbsp;(Creative Problem Solving).",
-      "description_en": "",
-      "description_pl": "",
-      "thumbnail": "",
-      "year": 2015
-    },
-    {
-      "slug": "ads-system",
-      "title": "advertising app",
-      "display": true,
-      "dofollow": false,
-      "url": "marketing.hitdea.com",
-      "introduction": "Contextual advertising management. It uses API of linguistic analysis application and allows to define target group.",
-      "introduction_pl": "Aplikacja do zarządzania reklamą kontekstową. Wykorzystuje API aplikacji do analizy językowej oraz umożliwia określić grupę docelową.",
-      "year": 2014
-    },
-    {
-      "slug": "linguistic-analysis",
-      "title": "linguistic analysis",
-      "display": true,
-      "dofollow": false,
-      "url": "analysis.hitdea.com",
-      "introduction": "Linguistic analysis system is used for word processing and automatic category detection. The application can also detect the language of the text. The database contains over 6 million words in Polish and English. The system has a learning mode with a teacher and the categorization is based on statistical methods. Application provides an external API.",
-      "introduction_pl": "System analizy językowej służy do przetwarzania tekstów i automatycznego wykrycia kategorii. Aplikacja umożliwia również wykrywanie języka tekstu. Baza zawiera ponad 6 milionów słów w&nbsp;języku polskim i angielskim. System umożliwia włączenie trybu nauki z nauczycielem, a&nbsp;kategoryzacja oparta jest o metody statystyczne. Aplikacja udostępnia API zewnętrzne.",
-      "year": 2014
-    },
-    {
-      "slug": "wordmaker",
-      "title": "wordmaker",
-      "display": true,
-      "dofollow": false,
-      "url": "game.hitdea.com",
-      "introduction": "Game of words based on English and Polish languages. Create as many different words as possible from randomly selected letters. Word verification is based on the external API linguistic analysis.",
-      "introduction_pl": "Gra w słowa oparta o język angielski i polski. Stworzenie jak najwięcej różnych słów z losowo wybranych liter. Weryfikacja słowa wykorzytuje zewnętrzne API systemu analizy językowej.",
-      "year": 2014
-    },
-    {
-      "slug": "20-questions-game",
-      "title": "20 questions game",
-      "display": true,
-      "dofollow": false,
-      "url": "questions.hitdea.com",
-      "introduction": "Logic game which learns with every play. In the game you have to answer questions asked by the AI and it will try to guess what were you thinking about.",
-      "introduction_pl": "Gra logiczna ucząca się z każdą następną rundą gry. Należy w niej odpowiadać na pytania zadawane przez SI (Sztuczną Inteligencję) a aplikacja spróbuje odganąć o czym myślałeś.",
-      "year": 2014
     }
   ]
 }

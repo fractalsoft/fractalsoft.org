@@ -3,16 +3,9 @@ require 'oj'
 json_file = File.join(Rails.root, 'db', 'seeds', 'basic', 'data.json')
 hash = Oj.load(File.read(json_file), symbol_keys: true)
 
-hash[:projects].each do |params|
-  Project.create_or_update_by_keys([:slug], params)
-end
-
 hash[:team].each do |params|
   contributions = params.delete(:contributions) || []
-  person = Person.create_or_update_by_keys(
-    [:nickname, :fullname],
-    params
-  )
+  person = Person.find_by(nickname: params[:nickname])
   contributions.each do |project_params|
     slug = project_params.delete(:slug)
     project = Project.find_by(slug: slug)
