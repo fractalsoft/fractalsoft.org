@@ -1,5 +1,4 @@
 class Person < ApplicationRecord
-  extend CreateOrUpdateByKeysExtension
   extend FriendlyId
   friendly_id :nickname, use: [:slugged, :finders]
   translates :introduction, :saying

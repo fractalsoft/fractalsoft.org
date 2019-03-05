@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412080000) do
+ActiveRecord::Schema.define(version: 2019_03_04_080000) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
-  enable_extension "pgcrypto"
 
   create_table "contribution_translations", force: :cascade do |t|
     t.uuid "contribution_id", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20180412080000) do
   end
 
   create_table "contributions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.integer "position", default: 0
+    t.integer "position", default: 0, null: false
     t.uuid "person_id"
     t.uuid "project_id"
     t.datetime "created_at", null: false
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20180412080000) do
 
   create_table "jobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.decimal "price", precision: 16, scale: 4
-    t.integer "position", default: 0
+    t.integer "position", default: 0, null: false
     t.string "currency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -88,9 +88,9 @@ ActiveRecord::Schema.define(version: 20180412080000) do
     t.string "instagram"
     t.string "linkedin"
     t.string "nickname"
-    t.string "skills", default: ""
+    t.string "skills", default: "", null: false
     t.string "slug"
-    t.string "technologies", default: ""
+    t.string "technologies", default: "", null: false
     t.string "twitter"
     t.string "vimeo"
     t.string "website"
@@ -124,9 +124,9 @@ ActiveRecord::Schema.define(version: 20180412080000) do
   end
 
   create_table "projects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.boolean "display", default: true
-    t.boolean "dofollow", default: false
-    t.integer "position", default: 0
+    t.boolean "display", default: true, null: false
+    t.boolean "dofollow", default: false, null: false
+    t.integer "position", default: 0, null: false
     t.integer "year"
     t.string "slug"
     t.string "thumbnail"

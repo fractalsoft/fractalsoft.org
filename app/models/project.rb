@@ -1,5 +1,4 @@
 class Project < ApplicationRecord
-  extend CreateOrUpdateByKeysExtension
   extend FriendlyId
   friendly_id :slug, use: :slugged
   mount_uploader :thumbnail, ThumbnailUploader
