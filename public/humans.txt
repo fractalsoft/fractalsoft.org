@@ -1,17 +1,17 @@
 /* TEAM */
 
   Name: Agnieszka Matysek
-  Site: http://github.com/womanonrails
+  Site: https://womanonrails.com
   Twitter: @womanonrails
   Location: Gliwice, PL
 
   Name: Alex Malaszkiewicz
-  Site: http://github.com/torrocus
+  Site: https://torrocus.com
   Twitter: @torrocus
   Location: Cieszyn, PL
 
   Name: Grzegorz Lisowski
-  Site: http://github.com/noplisu
+  Site: https://fractalsoft.org/en/team/lisu
   Twitter: @noplisu
   Location: Gliwice, PL
 
@@ -21,7 +21,7 @@
 
 /* SITE */
 
-  Last update: 2017/01/12
+  Last update: 2019/03/12
   Language: English / Polish
   Standards: HTML5, CSS3
   Source: https://github.com/fractalsoft/fractalsoft.org

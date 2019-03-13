@@ -1,6 +1,9 @@
 ---
 pl:
   blog: Blog
+  communities:
+    index:
+      title: Społeczność
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
@@ -50,21 +53,14 @@ pl:
       title:
         in_touch: Bądźmy w kontakcie
   layouts:
-    shared:
-      footer:
-        contact: Kontakt
-        language: Język
-        projects: Projekty
-        service: Serwis
-        team: Zespół
-        toggle_navigation: Nawigacja
-      header:
-        contact: Kontakt
-        language: Język
-        projects: Projekty
-        service: Serwis
-        team: Zespół
-        toggle_navigation: Nawigacja
+    menu:
+      community: Społeczność
+      contact: Kontakt
+      language: Język
+      projects: Projekty
+      service: Serwis
+      team: Zespół
+      toggle_navigation: Nawigacja
   mail_form:
     attributes:
       contact_form:

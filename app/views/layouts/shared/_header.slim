@@ -2,7 +2,7 @@ nav.header.navbar.navbar-default
   .container
     .navbar-header
       button.navbar-toggle.collapsed type='button' data-toggle='collapse' data-target='#fractalsoft-navbar-collapse' aria-expanded='false'
-        span.sr-only = t('.toggle_navigation')
+        span.sr-only = t(:toggle_navigation, scope: [:layouts, :menu])
         span.icon-bar
         span.icon-bar
         span.icon-bar
@@ -13,14 +13,13 @@ nav.header.navbar.navbar-default
 
     #fractalsoft-navbar-collapse.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
-        li = link_to t('.team'), people_path
-        li = link_to t('.service'), cieszyn_path
+        li = link_to t(:team, scope: [:layouts, :menu]), people_path
+        li = link_to t(:service, scope: [:layouts, :menu]), cieszyn_path
         li = link_to t(:blog), blog_url
-        / li
-          #= link_to t('.projects'), projects_path
-        li = link_to t('.contact'), new_contact_form_path, data: { no_turbolink: 'true' }
+        li = link_to t(:community, scope: [:layouts, :menu]), communities_path
+        li = link_to t(:contact, scope: [:layouts, :menu]), new_contact_form_path, data: { no_turbolink: 'true' }
         li.dropdown
           a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'
-            = t('.language')
+            = t(:language, scope: [:layouts, :menu])
             span.caret
           = render 'layouts/shared/languages'

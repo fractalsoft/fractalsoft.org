@@ -10,12 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_080000) do
+ActiveRecord::Schema.define(version: 2019_03_04_090000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
+
+  create_table "communities", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "published", default: false
+    t.integer "position", default: 0, null: false
+    t.string "logo"
+    t.string "logotype"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "community_translations", force: :cascade do |t|
+    t.uuid "community_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.text "introduction"
+    t.string "meta_description"
+    t.string "name"
+    t.string "title"
+    t.index ["community_id"], name: "index_community_translations_on_community_id"
+    t.index ["locale"], name: "index_community_translations_on_locale"
+  end
 
   create_table "contribution_translations", force: :cascade do |t|
     t.uuid "contribution_id", null: false
