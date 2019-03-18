@@ -20,10 +20,13 @@
 
     .col-sm-6
       h3 Jak do nas trafić?
+      - office_address_cieszyn = OfficeAddress.find_by(slug: 'cieszyn')
       address
-        | ul. Trzech Braci 3
+        = office_address_cieszyn.street_with_number
         br
-        | 43-400 Cieszyn
+        = office_address_cieszyn.postcode
+        '
+        = office_address_cieszyn.city
 
       p Naprawiamy to czego inni nie potrafią.
 

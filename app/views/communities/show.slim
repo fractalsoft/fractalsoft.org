@@ -1,0 +1,22 @@
+- content_for :body_class, 'community'
+- description @community.meta_description
+- title @community.title
+
+.container-fluid.background
+.container.community-item
+  .row
+    .col-md-10.col-md-offset-1
+      h1
+        == @community.name
+
+      - if @community.logo?
+        = image_tag @community.logo_url, alt: @community.name, style: 'width: 256px;'
+
+      .text-justify
+        / TODO: Do not show here introduction, only description
+        == Markdown.new(@community.introduction).to_html
+        == Markdown.new(@community.description).to_html
+
+  .row
+    .col-md-10.col-md-offset-1
+      = link_to 'Back', communities_path, class: 'btn btn-default'
