@@ -1,0 +1,93 @@
+@import 'variables';
+@import 'mixins';
+
+body.community {
+  .community-list {
+    background-color: $light-background-color;
+    color: $grey-text-color;
+
+    margin-top: -250px;
+    @include vertical-padding(20px);
+    text-align: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: "Asap", Helvetica, sans-serif;
+      margin-bottom: 100px;
+      margin-top: 100px;
+    }
+
+    .logotype {
+      width: 128px;
+      margin-top: 110px;
+
+      &:hover {
+        filter: brightness(120%);
+      }
+    }
+
+    .text-left {
+      padding-left: 75px;
+      text-align: left;
+    }
+
+    .text-right {
+      padding-right: 75px;
+      text-align: right;
+    }
+
+    .media-list {
+      .media-body {
+        h4 {
+          font-size: 25pt;
+          font-weight: 700;
+          margin-bottom: 0;
+          padding-bottom: 25px;
+          padding-top: 30px;
+        }
+
+        a {
+          color: $grey-text-color;
+          &:hover, &:focus {
+            color: $black-text-color;
+            text-decoration: none;
+          }
+        }
+
+        p {
+          font-size: 10pt;
+          line-height: 1.8;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .community-item {
+    background-color: $light-background-color;
+    color: $grey-text-color;
+
+    margin-top: -250px;
+    @include vertical-padding(20px);
+    text-align: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: "Asap", Helvetica, sans-serif;
+      margin-bottom: 100px;
+      margin-top: 100px;
+    }
+
+    img {
+      margin-bottom: 100px;
+    }
+
+    .btn.btn-default {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background-color: transparent;
+    }
+  }
+}

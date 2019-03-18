@@ -1,13 +1,13 @@
 ---
 en:
   blog: Blog
+  communities:
+    index:
+      title: Community
   contact_forms:
     contact:
       contact_with_us: Contact with us
       find_us: You can also find us here
-      office:
-        cieszyn: Cieszyn Office
-        gliwice: Gliwice Office
     form:
       email: Your email address
       message: What we can do for you?
@@ -50,21 +50,14 @@ en:
       title:
         in_touch: Let's be in touch
   layouts:
-    shared:
-      footer:
-        contact: Contact
-        language: Language
-        projects: Projects
-        service: Service
-        team: Team
-        toggle_navigation: Toggle navigation
-      header:
-        contact: Contact
-        language: Language
-        projects: Projects
-        service: Service
-        team: Team
-        toggle_navigation: Toggle navigation
+    menu:
+      community: Community
+      contact: Contact
+      language: Language
+      projects: Projects
+      service: Service
+      team: Team
+      toggle_navigation: Toggle navigation
   mail_form:
     attributes:
       contact_form:
