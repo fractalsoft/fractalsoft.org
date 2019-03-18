@@ -17,7 +17,7 @@ class LocationMap
       [@location.latitude, @location.longitude],
       @location.zoom
     )
-    mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>'
+    mapLink = '<a href="https://openstreetmap.org">OpenStreetMap</a>'
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: 'Map data &copy; ' + mapLink
       maxZoom: 19

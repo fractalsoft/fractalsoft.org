@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   localized do
     # resources :projects, only: [:index, :show]
+    resources :communities, only: [:index, :show]
     resources :contact_forms, only: [:new, :create], path_names: { new: 'new_message' }
     resources :people, only: [:index, :show]
     root to: 'home#index'
