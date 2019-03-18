@@ -8,9 +8,6 @@ pl:
     contact:
       contact_with_us: Napisz do nas
       find_us: Możesz nas znaleźć też tu
-      office:
-        cieszyn: Biuro Cieszyn
-        gliwice: Biuro Gliwice
     form:
       email: Twój adres email
       message: Jak możemy Ci pomóc?

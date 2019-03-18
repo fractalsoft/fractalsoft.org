@@ -1,17 +1,16 @@
 .section.address
   h4 = t('.contact_with_us')
-  address
-    strong = t('.office.gliwice')
-    br
-    | Akademicka 5
-    br
-    | 44-100 Gliwice
-  address
-    strong = t('.office.cieszyn')
-    br
-    | Trzech Braci 3
-    br
-    | 43-400 Cieszyn
+  - OfficeAddress.sorted.each do |office_address|
+    address
+      strong = office_address.name
+      br
+      = office_address.street_with_number
+      br
+      = office_address.postcode
+      '
+      = office_address.city
+      br
+      = office_address.country
 
 .section
   h4 = t('.find_us')

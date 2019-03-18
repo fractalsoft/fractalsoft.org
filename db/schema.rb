@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_090000) do
+ActiveRecord::Schema.define(version: 2019_03_04_100000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -96,6 +96,31 @@ ActiveRecord::Schema.define(version: 2019_03_04_090000) do
     t.decimal "price", precision: 16, scale: 4
     t.integer "position", default: 0, null: false
     t.string "currency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "office_address_translations", force: :cascade do |t|
+    t.uuid "office_address_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "country"
+    t.string "name"
+    t.index ["locale"], name: "index_office_address_translations_on_locale"
+    t.index ["office_address_id"], name: "index_office_address_translations_on_office_address_id"
+  end
+
+  create_table "office_addresses", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.decimal "latitude", precision: 16, scale: 10
+    t.decimal "longitude", precision: 16, scale: 10
+    t.integer "position", default: 0
+    t.string "city"
+    t.string "iso_3166_code"
+    t.string "map_link"
+    t.string "postcode"
+    t.string "slug"
+    t.string "street_with_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
