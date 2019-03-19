@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 5.2.2.1'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
@@ -56,7 +56,6 @@ group :development do
   gem 'i18n-tasks'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'query_diet'
-  gem 'quiet_safari'
   gem 'rails_best_practices'
   gem 'rubocop'
   gem 'rubocop-rspec'
