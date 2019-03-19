@@ -56,7 +56,6 @@ group :development do
   gem 'i18n-tasks'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'query_diet'
-  gem 'quiet_safari'
   gem 'rails_best_practices'
   gem 'rubocop'
   gem 'rubocop-rspec'
