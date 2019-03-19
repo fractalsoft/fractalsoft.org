@@ -49,7 +49,9 @@
         <ul class='media-list'>
           <li class='media'>
             <a class='pull-left' href='#'>
-              <div class='media-object logotypes-html5'></div>
+              <div class='media-box'>
+                <%= image_tag '/icons/technology/html5/html5-original-wordmark.svg', alt: 'HTML5', class: 'media-object', height: '160', width: '160' %>
+              </div>
             </a>
             <div class='media-body text-left'>
               <h4 class='media-heading'><%= t('.technology.header.one') %></h4>
@@ -58,7 +60,9 @@
           </li>
           <li class='media'>
             <a class='pull-right' href='#'>
-              <div class='media-object logotypes-rails'></div>
+              <div class='media-box'>
+                <%= image_tag '/icons/technology/ruby-on-rails/rails-plain-wordmark.svg', alt: 'Ruby on Rails', class: 'media-object', width: '160' %>
+              </div>
             </a>
             <div class='media-body text-right'>
               <h4 class='media-heading'><%= t('.technology.header.two') %></h4>
@@ -67,7 +71,9 @@
           </li>
           <li class='media'>
             <a class='pull-left' href='#'>
-              <div class='media-object logotypes-open-source'></div>
+              <div class='media-box'>
+                <%= image_tag '/icons/community/open-source/opensource-original.svg', alt: 'Open Source', class: 'media-object', height: '160', width: '160' %>
+              </div>
             </a>
             <div class='media-body text-left'>
               <h4 class='media-heading'><%= t('.technology.header.three') %></h4>
