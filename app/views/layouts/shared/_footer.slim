@@ -2,9 +2,10 @@ nav.footer.navbar.navbar-default
   .container
     .navbar-header
       = link_to root_path, class: 'navbar-brand' do
-        .hidden-xs
-          = render 'layouts/shared/logo', id: 'fractalsoft-logo-footer'
-        = image_tag 'home/logo_big_white.png', class: 'visible-xs'
+        span.text-white
+          = image_tag '/icons/brand/fractalsoft.svg', alt: 'Fractal Soft', id: 'fractalsoft-logo-footer', size: '30'
+          '
+          | Fractal Soft
 
     .collapse.navbar-collapse
       = image_tag 'home/footer.png', class: 'pull-right'
