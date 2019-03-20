@@ -1,6 +1,6 @@
-class CreateJobs < ActiveRecord::Migration[5.2]
+class CreateComputerFixServices < ActiveRecord::Migration[5.2]
   def change
-    create_table :jobs, id: :uuid do |t|
+    create_table :computer_fix_services, id: :uuid do |t|
       t.decimal :price, precision: 16, scale: 4
       t.integer :position, default: 0, null: false
       t.string :currency
@@ -10,13 +10,13 @@ class CreateJobs < ActiveRecord::Migration[5.2]
 
     reversible do |dir|
       dir.up do
-        Job.create_translation_table!(
+        ComputerFixService.create_translation_table!(
           name: :string
         )
       end
 
       dir.down do
-        Job.drop_translation_table!
+        ComputerFixService.drop_translation_table!
       end
     end
   end
