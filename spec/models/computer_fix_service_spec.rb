@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe Job, type: :model do
+RSpec.describe ComputerFixService, type: :model do
   let(:name) { 'Lorem ipsum' }
   let(:price) { 100.0 }
-  subject { create(:job, name: name, price: price) }
+  subject { create(:computer_fix_service, name: name, price: price) }
 
   describe '#name' do
-    it 'returns job string' do
+    it 'returns computer fix service string' do
       expect(subject.name).to be_kind_of(String)
       expect(subject.name).to eq name
     end

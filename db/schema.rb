@@ -41,6 +41,24 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
     t.index ["locale"], name: "index_community_translations_on_locale"
   end
 
+  create_table "computer_fix_service_translations", force: :cascade do |t|
+    t.uuid "computer_fix_service_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["computer_fix_service_id"], name: "index_8cbd37260092c65a317fabf1fe6fbf080714a9c0"
+    t.index ["locale"], name: "index_computer_fix_service_translations_on_locale"
+  end
+
+  create_table "computer_fix_services", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.decimal "price", precision: 16, scale: 4
+    t.integer "position", default: 0, null: false
+    t.string "currency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contribution_translations", force: :cascade do |t|
     t.uuid "contribution_id", null: false
     t.string "locale", null: false
@@ -80,24 +98,6 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_images_on_project_id"
-  end
-
-  create_table "job_translations", force: :cascade do |t|
-    t.uuid "job_id", null: false
-    t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.index ["job_id"], name: "index_job_translations_on_job_id"
-    t.index ["locale"], name: "index_job_translations_on_locale"
-  end
-
-  create_table "jobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.decimal "price", precision: 16, scale: 4
-    t.integer "position", default: 0, null: false
-    t.string "currency"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "office_address_translations", force: :cascade do |t|
