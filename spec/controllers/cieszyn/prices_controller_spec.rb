@@ -7,9 +7,9 @@ RSpec.describe Cieszyn::PricesController, type: :controller do
       expect(response).to have_http_status(:success)
     end
 
-    it 'assigns jobs' do
+    it 'assigns computer fix services' do
       get :index
-      expect(assigns(:jobs)).to be_kind_of(ActiveRecord::Relation)
+      expect(assigns(:computer_fix_services)).to be_kind_of(ActiveRecord::Relation)
     end
   end
 end

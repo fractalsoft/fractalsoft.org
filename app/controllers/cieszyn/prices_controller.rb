@@ -1,7 +1,7 @@
 module Cieszyn
   class PricesController < ApplicationController
     def index
-      @jobs = Job.all
+      @computer_fix_services = ComputerFixService.all
     end
   end
 end

@@ -10,12 +10,12 @@
       th Usługa
       th Cena
       th
-    - @jobs.each do |job|
+    - @computer_fix_services.each do |computer_fix_service|
       tr
-        td = job.name
-        td = number_to_currency job.price, precision: 2, unit: " PLN"
+        td = computer_fix_service.name
+        td = number_to_currency computer_fix_service.price, precision: 2, unit: " #{computer_fix_service.currency}"
         td
-          input.price type='checkbox' value="#{job.price}"
+          input.price type='checkbox' value="#{computer_fix_service.price}"
     tr
       td
       td
