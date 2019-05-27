@@ -24,6 +24,9 @@
 .env
 .env.production
 
+# Ignore credentials key
+config/master.key
+
 # Igrone assets, uploads & cache
 /public/assets
 /public/cache/*
