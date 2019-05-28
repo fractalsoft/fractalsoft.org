@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
     t.integer "position", default: 0, null: false
     t.string "logo"
     t.string "logotype"
+    t.string "name"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,7 +36,6 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
     t.text "description"
     t.text "introduction"
     t.string "meta_description"
-    t.string "name"
     t.string "title"
     t.index ["community_id"], name: "index_community_translations_on_community_id"
     t.index ["locale"], name: "index_community_translations_on_locale"

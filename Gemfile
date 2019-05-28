@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.2.2.1'
+gem 'rails', '~> 5.2.3'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
@@ -21,7 +21,6 @@ gem 'draper'
 gem 'foreman', '~> 0.84'
 gem 'friendly_id', '~> 5.2'
 gem 'globalize'
-gem 'globalize-accessors'
 gem 'http_accept_language'
 gem 'mail_form'
 gem 'mandrill-api'
