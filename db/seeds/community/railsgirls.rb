@@ -1,3 +1,4 @@
+# Rails Girls
 rails_girls = Community.where(slug: 'rails-girls').first_or_create
 
 rails_girls_vimeo_silesia_url = 'https://player.vimeo.com/video/114024898'
@@ -9,47 +10,14 @@ rails_girls_vimeo_cieszyn = vimeo_iframe(rails_girls_vimeo_cieszyn_url)
 rails_girls_logotype = File.new('db/seeds/community/railsgirls/railsgirls-logotype.png')
 rails_girls_logo = File.new('db/seeds/community/railsgirls/railsgirls-logo.png')
 
-rails_girls.update(
+rails_girls.assign_attributes(
   position: 1,
   published: true,
-  name: 'Rails Girls',
-  title_en: 'Learning programming for women - Rails Girls',
-  title_pl: 'Nauka programowania dla kobiet - Rails Girls',
-  meta_description_en: %(
-We teach women`s programming and organize Ruby on Rails workshops.
-We help women enter the IT world.
-),
-  meta_description_pl: %(
-Uczymy programowania kobiety i organizujemy warsztaty z Ruby on Rails.
-Pomagamy wejść kobietom do świata IT.
-),
-  introduction_en: %(
-We organize and sponsor **Rails Girls Silesia** workshops.
-We act as Rails Girls coaches in differents cities of Poland.
-Everyone can learn programming, we strongly believe in that statement.
-As programmers professionally connected with web technologies,
-working in Ruby on Rails framework,
-the idea of Rails Girls is particularly close to us.
+  name: 'Rails Girls'
+)
 
-By organizing workshops, we try to create convenient conditions for learning
-programming for the participants of Rails Girls workshops.
-Many of women who we had the opportunity to teach have broadened their interests
-or even changed their lives.
-),
-  introduction_pl: %(
-Organizujemy i sponsorujemy warsztaty **Rails Girls na Śląsku**.
-Działamy jako coachowie Rails Girls w różnych miastach w Polsce.
-Głęboko wierzymy w to, że każdy może nauczyć się programowania.
-Jako programiści powiązani zawodowo z technologiami webowymi,
-pracujący we frameworku Ruby on Rails,
-idea Rails Girls jest nam szczególnie bliska.
-
-Organizując warsztaty staramy się stworzyć dogodne warunki do nauki
-programowania dla uczestniczek warsztatów Rails Girls.
-Wiele z kobiet, które mieliśmy okazję uczyć poszerzyło swoje zainteresowania
-lub nawet zmieniło swoje życie.
-),
-  description_en: %(
+I18n.locale = :en
+rails_girls.description = %(
 In October 2014 in _Gliwice_, we organized the first workshops
 Rails Girls in Silesia.
 30 women from all over Poland took part in it.
@@ -98,8 +66,29 @@ A short list of Rails Girls events in which we were coaches:
 - Rails Girls Szczecin 2017
 - Rails Girls Gorzów 2017
 - Rails Girls Poznań 2018
-),
-  description_pl: %(
+)
+rails_girls.introduction = %(
+We organize and sponsor **Rails Girls Silesia** workshops.
+We act as Rails Girls coaches in differents cities of Poland.
+Everyone can learn programming, we strongly believe in that statement.
+As programmers professionally connected with web technologies,
+working in Ruby on Rails framework,
+the idea of Rails Girls is particularly close to us.
+
+By organizing workshops, we try to create convenient conditions for learning
+programming for the participants of Rails Girls workshops.
+Many of women who we had the opportunity to teach have broadened their interests
+or even changed their lives.
+)
+rails_girls.meta_description = %(
+We teach women`s programming and organize Ruby on Rails workshops.
+We help women enter the IT world.
+)
+rails_girls.title = 'Learning programming for women - Rails Girls'
+
+
+I18n.locale = :pl
+rails_girls.description = %(
 W październiku 2014 roku w _Gliwicach_ zorganizowaliśmy pierwsze warsztaty
 Rails Girls na Śląsku.
 Uczestniczyło w nim 30 kobiet z całej Polski.
@@ -148,5 +137,25 @@ Krótka lista wydarzeń Rails Girls w których byliśmy coachami:
 - Rails Girls Gorzów 2017
 - Rails Girls Poznań 2018
 )
+rails_girls.introduction = %(
+Organizujemy i sponsorujemy warsztaty **Rails Girls na Śląsku**.
+Działamy jako coachowie Rails Girls w różnych miastach w Polsce.
+Głęboko wierzymy w to, że każdy może nauczyć się programowania.
+Jako programiści powiązani zawodowo z technologiami webowymi,
+pracujący we frameworku Ruby on Rails,
+idea Rails Girls jest nam szczególnie bliska.
+
+Organizując warsztaty staramy się stworzyć dogodne warunki do nauki
+programowania dla uczestniczek warsztatów Rails Girls.
+Wiele z kobiet, które mieliśmy okazję uczyć poszerzyło swoje zainteresowania
+lub nawet zmieniło swoje życie.
 )
+rails_girls.meta_description = %(
+Uczymy programowania kobiety i organizujemy warsztaty z Ruby on Rails.
+Pomagamy wejść kobietom do świata IT.
+)
+rails_girls.title = 'Nauka programowania dla kobiet - Rails Girls'
+
+rails_girls.save
+
 rails_girls.update(logo: rails_girls_logo, logotype: rails_girls_logotype)

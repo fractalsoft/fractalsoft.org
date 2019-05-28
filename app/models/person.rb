@@ -2,8 +2,6 @@ class Person < ApplicationRecord
   extend FriendlyId
   friendly_id :nickname, use: [:slugged, :finders]
   translates :introduction, :saying
-  globalize_accessors locales: I18n.available_locales,
-                      attributes: translated_attribute_names
 
   has_many :contributions, dependent: :destroy
   has_many :projects, -> { distinct }, through: :contributions

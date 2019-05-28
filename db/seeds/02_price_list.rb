@@ -1,3 +1,4 @@
+I18n.locale = :pl
 ComputerFixService.delete_all
 ComputerFixService.create position:  1, currency: 'PLN', name: "Diagnoza z wstępną wyceną", price: 50.0
 ComputerFixService.create position:  2, currency: 'PLN', name: "Instalacja systemu operacyjnego, sterowników, programów użytkowych", price: 80.0
@@ -14,3 +15,4 @@ ComputerFixService.create position: 12, currency: 'PLN', name: "Wymiana lub napr
 ComputerFixService.create position: 13, currency: 'PLN', name: "Usuwanie wirusów oraz złośliwego oprogramowania", price: 60.0
 ComputerFixService.create position: 14, currency: 'PLN', name: "Naprawa monitora LCD", price: 250.0
 ComputerFixService.create position: 15, currency: 'PLN', name: "Archiwizacja danych", price: 30.0
+I18n.locale = :en

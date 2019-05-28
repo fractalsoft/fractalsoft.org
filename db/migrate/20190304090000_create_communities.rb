@@ -5,6 +5,7 @@ class CreateCommunities < ActiveRecord::Migration[5.2]
       t.integer :position, default: 0, null: false
       t.string :logo
       t.string :logotype
+      t.string :name
       t.string :slug
 
       t.timestamps
@@ -16,7 +17,6 @@ class CreateCommunities < ActiveRecord::Migration[5.2]
           description: :text,
           introduction: :text,
           meta_description: :string,
-          name: :string,
           title: :string
         )
       end
