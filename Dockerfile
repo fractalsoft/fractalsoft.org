@@ -1,8 +1,7 @@
 FROM ruby:2.6.0
 
-ENV \
-  APP_HOME /fractalsoft \
-  && RAILS_SERVE_STATIC_FILES true
+ENV APP_HOME /fractalsoft
+ENV RAILS_SERVE_STATIC_FILES true
 
 # zlib1g-dev: for nokogiri
 # postgresql-client
