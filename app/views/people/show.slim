@@ -4,14 +4,14 @@
 .container.business-card
   .row
     .col-md-3.col-sm-6.col-xs-12
-      .thumbnail = @person.image
+      .thumbnail
+        = @person.image
     .col-md-6.col-sm-6.col-xs-12
       h1
         = @person.fullname
       p.text-justify
         = @person.introduction
       = @person.saying
-      = @person.skills
     .col-md-3.col-sm-6.col-xs-12
       ul.list-inline.social
         = @person.blog
@@ -21,7 +21,19 @@
         / #= @person.facebook
         = @person.instagram
         = @person.vimeo
-      = @person.technologies
+      = @person.skills
+
+  .row
+    = render 'technologies', category: :backend, person: @person
+    = render 'technologies', category: :database, person: @person
+    = render 'technologies', category: :frontend, person: @person
+    = render 'technologies', category: :web, person: @person
+    = render 'technologies', category: :testing, person: @person
+    = render 'technologies', category: :tool, person: @person
+    = render 'technologies', category: :gamedev, person: @person
+    = render 'technologies', category: :mobile, person: @person
+    = render 'technologies', category: :os, person: @person
+
   hr
   - @person.projects.each do |project|
     = render 'project', project: project, contributions: @person.project_with_contributions(project)

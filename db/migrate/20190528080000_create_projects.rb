@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.boolean :dofollow, default: false, null: false
       t.integer :position, default: 0, null: false
       t.integer :year
-      t.string :slug
+      t.string :slug, index: true
       t.string :thumbnail
       t.string :title, null: false
       t.string :url

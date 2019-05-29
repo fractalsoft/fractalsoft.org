@@ -22,7 +22,7 @@ class PersonDecorator < Draper::Decorator
   end
 
   def image
-    image_tag object.image
+    image_tag object.image, alt: ''
   end
 
   def introduction
@@ -42,11 +42,6 @@ class PersonDecorator < Draper::Decorator
   def skills
     array = person.skill_list
     render 'people/skills', skills: array unless array.empty?
-  end
-
-  def technologies
-    array = person.technology_list
-    render 'people/technologies', technologies: array unless array.empty?
   end
 
   def website
