@@ -90,8 +90,8 @@ en:
         meet_us: Meet our team!
     technologies:
       backend: Backend development
-      frontend: Frontend development
       database: Databases
+      frontend: Frontend development
       gamedev: Game development
       mobile: Mobile development
       os: Operating systems
