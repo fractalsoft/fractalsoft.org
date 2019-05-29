@@ -89,7 +89,15 @@ en:
       team:
         meet_us: Meet our team!
     technologies:
-      technologies: Technologies
+      backend: Backend development
+      frontend: Frontend development
+      database: Databases
+      gamedev: Game development
+      mobile: Mobile development
+      os: Operating systems
+      testing: Testing
+      tool: Tools
+      web: Web technologies
   social:
     title:
       blog: Read me

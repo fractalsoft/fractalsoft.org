@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_100000) do
+ActiveRecord::Schema.define(version: 2019_05_28_120000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_communities_on_slug"
   end
 
   create_table "community_translations", force: :cascade do |t|
@@ -114,7 +115,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
   create_table "office_addresses", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.decimal "latitude", precision: 16, scale: 10
     t.decimal "longitude", precision: 16, scale: 10
-    t.integer "position", default: 0
+    t.integer "position", default: 0, null: false
     t.string "city"
     t.string "iso_3166_code"
     t.string "map_link"
@@ -123,6 +124,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
     t.string "street_with_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_office_addresses_on_slug"
   end
 
   create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -183,6 +185,41 @@ ActiveRecord::Schema.define(version: 2019_03_04_100000) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_projects_on_slug"
+  end
+
+  create_table "technological_skills", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "rating", default: 0, null: false
+    t.uuid "person_id"
+    t.uuid "technology_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_technological_skills_on_person_id"
+    t.index ["technology_id"], name: "index_technological_skills_on_technology_id"
+  end
+
+  create_table "technologies", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "category", default: 0, null: false
+    t.string "slug"
+    t.text "icon"
+    t.text "icon_wordmark"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_technologies_on_slug"
+  end
+
+  create_table "technology_translations", force: :cascade do |t|
+    t.uuid "technology_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description", default: ""
+    t.string "meta_description", default: ""
+    t.string "meta_title", default: ""
+    t.string "name"
+    t.string "title"
+    t.index ["locale"], name: "index_technology_translations_on_locale"
+    t.index ["technology_id"], name: "index_technology_translations_on_technology_id"
   end
 
 end
