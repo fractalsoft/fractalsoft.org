@@ -6,7 +6,7 @@ class CreateCommunities < ActiveRecord::Migration[5.2]
       t.string :logo
       t.string :logotype
       t.string :name
-      t.string :slug
+      t.string :slug, index: true
 
       t.timestamps
     end

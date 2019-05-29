@@ -11,8 +11,7 @@ womanonrails.assign_attributes(
   linkedin: 'womanonrails',
   nickname: 'womanonrails',
   position: 'developer',
-  skills: %(Backend & Frontend Development, Refactoring, TDD, Agile, Scrum, Git, Teamwork, SOA, Remote Work),
-  technologies: %(Ruby on Rails, PostgreSQL, Backbone.js, PostGIS, Leaflet, Ruby, Marionette, JavaScript, CoffeeScript, RSpec, jQuery, Ember.js, Slim, MySQL, HTML5, CSS3),
+  skills: %(Backend & Frontend Development, Refactoring, TDD, Agile, Scrum, Teamwork, SOA, Remote Work),
   twitter: 'womanonrails',
   vimeo: 'womanonrails'
 )
@@ -42,3 +41,35 @@ womanonrails.saying = %(
 )
 
 womanonrails.save
+
+TechnologicalSkill.where(person_id: womanonrails.id).delete_all
+
+%w[
+  ruby-on-rails
+  ruby
+  rspec
+  postgresql
+  postgis
+  leaflet
+  coffeescript
+  backbonejs
+  marionettejs
+  javascript
+  react
+  graphql
+  jquery
+  emberjs
+  git
+  mysql
+  redis
+  docker
+  html5
+  css3
+  slim
+].each do |slug|
+  technology = Technology.find_by(slug: slug)
+  TechnologicalSkill.where(
+    person_id: womanonrails.id,
+    technology_id: technology.id
+  ).first_or_create
+end

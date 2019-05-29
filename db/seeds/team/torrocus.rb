@@ -10,8 +10,7 @@ torrocus.assign_attributes(
   instagram: 'torrocus',
   linkedin: 'torrocus',
   position: 'developer',
-  skills: %(Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, Git, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development),
-  technologies: %(Ruby, Ruby on Rails, GNU/Linux, PostgreSQL, Slim, Sass, CoffeeScript, Backbone.js, Marionette, Minitest, RSpec, TestCase, Sidekiq, Ember.js, MySQL, HTML5, CSS3, JavaScript, Docker, Jekyll),
+  skills: %(Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development),
   twitter: 'torrocus'
 )
 
@@ -39,3 +38,37 @@ Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.
 )
 
 torrocus.save
+
+TechnologicalSkill.where(person_id: torrocus.id).delete_all
+
+%w[
+  ruby
+  ruby-on-rails
+  jekyll
+  git
+  postgresql
+  mysql
+  redis
+  linux
+  docker
+  rspec
+  sass
+  less
+  coffeescript
+  backbonejs
+  marionettejs
+  emberjs
+  html5
+  css3
+  javascript
+  sidekiq
+  slim
+  minitest
+  testcase
+].each do |slug|
+  technology = Technology.find_by(slug: slug)
+  TechnologicalSkill.where(
+    person_id: torrocus.id,
+    technology_id: technology.id
+  ).first_or_create
+end

@@ -7,8 +7,7 @@ lisu.assign_attributes(
   image: 'team/glisowski.jpg',
   linkedin: 'glisowski91',
   position: 'developer',
-  skills: %(Backend & Frondend Development, Application Architecture, API Design, Refactoring, Git, Visualization),
-  technologies: %(Ruby, Ruby on Rails, JavaScript, EmberJS, RSpec, Minitest, Slim, C#, Unity3D, Cordova),
+  skills: %(Backend & Frondend Development, Application Architecture, API Design, Refactoring, Visualization),
   twitter: 'noplisu'
 )
 
@@ -27,3 +26,31 @@ Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Glo
 )
 
 lisu.save
+
+TechnologicalSkill.where(person_id: lisu.id).delete_all
+
+%w[
+  javascript
+  typescript
+  emberjs
+  react
+  ruby-on-rails
+  ruby
+  git
+  rspec
+  docker
+  html5
+  css3
+  sass
+  cordova
+  csharp
+  unity
+  minitest
+  slim
+].each do |slug|
+  technology = Technology.find_by(slug: slug)
+  TechnologicalSkill.where(
+    person_id: lisu.id,
+    technology_id: technology.id
+  ).first_or_create
+end
