@@ -6,6 +6,9 @@ services:
 before_install:
   - gem update --system
   - gem --version
+install:
+  - bundle install
+  - npm install
 rvm:
   - 2.6.3
 before_script:

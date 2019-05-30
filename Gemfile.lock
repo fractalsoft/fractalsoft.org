@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
   specs:
     actioncable (5.2.3)
       actionpack (= 5.2.3)
@@ -107,7 +106,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     colored (1.2)
-    commonjs (0.2.7)
     compass (1.0.3)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.2)
@@ -212,13 +210,6 @@ GEM
     kwalify (0.7.2)
     launchy (2.4.3)
       addressable (~> 2.3)
-    less (2.6.0)
-      commonjs (~> 0.2.7)
-    less-rails (2.8.0)
-      actionpack (>= 4.0)
-      less (~> 2.6.0)
-      sprockets (> 2, < 4)
-      tilt
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -297,11 +288,6 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.2.3)
       sprockets-rails (>= 2.0.0)
-    rails-assets-bootstrap (3.3.7)
-      rails-assets-jquery (>= 1.9.1, < 4)
-    rails-assets-jquery (3.4.1)
-    rails-assets-leaflet (1.5.1)
-    rails-assets-markdown-js (0.6.2)
     rails-controller-testing (1.0.4)
       actionpack (>= 5.0.1.x)
       actionview (>= 5.0.1.x)
@@ -445,11 +431,6 @@ GEM
     turbolinks (5.2.0)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    twitter-bootstrap-rails (4.0.0)
-      actionpack (~> 5.0, >= 5.0.1)
-      execjs (~> 2.7)
-      less-rails (~> 2.8, >= 2.8.0)
-      railties (~> 5.0, >= 5.0.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
@@ -514,10 +495,6 @@ DEPENDENCIES
   query_diet
   rack-attack
   rails (~> 5.2.3)
-  rails-assets-bootstrap (~> 3.3.7)!
-  rails-assets-jquery (~> 3.3)!
-  rails-assets-leaflet (~> 1.3)!
-  rails-assets-markdown-js!
   rails-controller-testing
   rails-i18n
   rails_12factor
@@ -538,7 +515,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
-  twitter-bootstrap-rails
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
 
