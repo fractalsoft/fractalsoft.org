@@ -1,5 +1,9 @@
 {
   "name": "fractalsoft",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap-sass": "3",
+    "jquery": "3.4.1",
+    "leaflet": "1.5.1"
+  }
 }

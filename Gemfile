@@ -38,7 +38,6 @@ gem 'rollbar', '~> 2.18' # Error tracking service
 gem 'route_translator' # Manage translations of routes
 gem 'simple_form', '~> 4.1'
 gem 'slim-rails', '~> 3.2' # Template language instead Erb
-gem 'twitter-bootstrap-rails'
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -83,13 +82,6 @@ end
 
 group :production do
   gem 'rails_12factor'
-end
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap', '~> 3.3.7'
-  gem 'rails-assets-jquery', '~> 3.3'
-  gem 'rails-assets-leaflet', '~> 1.3'
-  gem 'rails-assets-markdown-js'
 end
 
 # Use ActiveModel has_secure_password
