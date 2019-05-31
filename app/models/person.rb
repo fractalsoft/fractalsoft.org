@@ -3,6 +3,9 @@ class Person < ApplicationRecord
   friendly_id :nickname, use: [:slugged, :finders]
   translates :introduction, :saying
 
+  scope :published, -> { where(published: true) }
+  scope :sorted, -> { order(position: :asc) }
+
   has_many :contributions, dependent: :destroy
   has_many :projects, -> { distinct }, through: :contributions
   has_many :technological_skills, dependent: :destroy

@@ -17,6 +17,7 @@ nav.header.navbar.navbar-default
         li = link_to t(:service, scope: [:layouts, :menu]), cieszyn_path
         li = link_to t(:blog), blog_url
         li = link_to t(:community, scope: [:layouts, :menu]), communities_path
+        li = link_to t(:job_offers, scope: [:layouts, :menu]), job_offers_path
         li = link_to t(:contact, scope: [:layouts, :menu]), new_contact_form_path, data: { no_turbolink: 'true' }
         li.dropdown
           a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'

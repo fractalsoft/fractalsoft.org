@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_120000) do
+ActiveRecord::Schema.define(version: 2019_05_28_130000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -101,6 +101,31 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
     t.index ["project_id"], name: "index_images_on_project_id"
   end
 
+  create_table "job_offer_translations", force: :cascade do |t|
+    t.uuid "job_offer_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "brief", default: ""
+    t.text "description", default: ""
+    t.string "headline"
+    t.text "introduction", default: ""
+    t.string "meta_description", default: ""
+    t.string "meta_title", default: ""
+    t.string "name"
+    t.string "title"
+    t.index ["job_offer_id"], name: "index_job_offer_translations_on_job_offer_id"
+    t.index ["locale"], name: "index_job_offer_translations_on_locale"
+  end
+
+  create_table "job_offers", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "published", default: false
+    t.integer "position", default: 0
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "office_address_translations", force: :cascade do |t|
     t.uuid "office_address_id", null: false
     t.string "locale", null: false
@@ -128,6 +153,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   end
 
   create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "published", default: false
     t.integer "position", default: 0, null: false
     t.string "blog"
     t.string "email"

@@ -50,10 +50,17 @@ en:
           two: Ruby on Rails
       title:
         in_touch: Let's be in touch
+  job_offers:
+    index:
+      title: Job Offers
+    no_job_offers:
+      body: We currently have no open positions for jobs. However, nothing prevents you from asking directly. Please do not hesitate to contact us.
+      title: No job offers
   layouts:
     menu:
       community: Community
       contact: Contact
+      job_offers: Jobs
       language: Language
       projects: Projects
       service: Service
