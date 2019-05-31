@@ -13,6 +13,7 @@ class Technology < ApplicationRecord
   }
   friendly_id :slug, use: [:slugged, :finders]
   translates :description, :meta_description, :meta_title, :name, :title
+
   scope :sorted, -> { order(position: :asc) }
 
   def any_image?
