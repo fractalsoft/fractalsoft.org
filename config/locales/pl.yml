@@ -50,10 +50,17 @@ pl:
           two: Ruby on Rails
       title:
         in_touch: Bądźmy w kontakcie
+  job_offers:
+    index:
+      title: Oferty pracy
+    no_job_offers:
+      body: Aktualnie nie mamy ofert pracy. Jednak nic nie stoi na przeszkodzie, aby zapytać się bezpośrednio. Zapraszamy do kontaktu.
+      title: Brak ofert pracy
   layouts:
     menu:
       community: Społeczność
       contact: Kontakt
+      job_offers: Praca
       language: Język
       projects: Projekty
       service: Serwis

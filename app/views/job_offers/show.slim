@@ -1,0 +1,17 @@
+- content_for :body_class, 'job-offer'
+- description @job_offer.meta_description
+- title @job_offer.meta_title
+
+.container-fluid.background
+.container.job-offer-item
+  .row
+    .col-md-10.col-md-offset-1
+      h1
+        = @job_offer.headline
+
+      .text-justify
+        == Markdown.new(MarkdownPreparator.render(@job_offer.description)).to_html
+
+  .row
+    .col-md-10.col-md-offset-1
+      = link_to 'Back', job_offers_path, class: 'btn btn-default'
