@@ -68,6 +68,7 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   css3
   slim
   aws
+  cypress
 ].each do |slug|
   technology = Technology.find_by(slug: slug)
   TechnologicalSkill.where(

@@ -40,6 +40,7 @@ require_relative 'technology/cordova'
 require_relative 'technology/linux'
 
 # testing
+require_relative 'technology/cypress'
 require_relative 'technology/minitest'
 require_relative 'technology/rspec'
 require_relative 'technology/testcase'
