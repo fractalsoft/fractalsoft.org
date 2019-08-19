@@ -2,6 +2,7 @@ class CreateTechnologies < ActiveRecord::Migration[5.2]
   def change
     create_table :technologies, id: :uuid do |t|
       t.integer :category, default: 0, null: false
+      t.integer :position, default: 0
       t.string :slug, index: true
       t.text :icon
       t.text :icon_wordmark

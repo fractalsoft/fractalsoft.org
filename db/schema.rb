@@ -189,6 +189,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   end
 
   create_table "technological_skills", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "position", default: 0
     t.integer "rating", default: 0, null: false
     t.uuid "person_id"
     t.uuid "technology_id"
@@ -200,6 +201,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
 
   create_table "technologies", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.integer "category", default: 0, null: false
+    t.integer "position", default: 0
     t.string "slug"
     t.text "icon"
     t.text "icon_wordmark"

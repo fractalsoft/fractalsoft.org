@@ -48,6 +48,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   git
   postgresql
   mysql
+  sqlite
   redis
   linux
   docker
