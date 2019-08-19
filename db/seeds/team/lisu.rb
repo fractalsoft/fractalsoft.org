@@ -37,6 +37,9 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   ruby-on-rails
   ruby
   git
+  postgresql
+  mysql
+  sqlite
   rspec
   docker
   html5
