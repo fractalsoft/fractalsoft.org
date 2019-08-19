@@ -61,11 +61,13 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   emberjs
   git
   mysql
+  sqlite
   redis
   docker
   html5
   css3
   slim
+  aws
 ].each do |slug|
   technology = Technology.find_by(slug: slug)
   TechnologicalSkill.where(

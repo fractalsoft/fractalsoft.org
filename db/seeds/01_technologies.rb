@@ -13,6 +13,7 @@ require_relative 'technology/ruby'
 require_relative 'technology/mysql'
 require_relative 'technology/postgresql'
 require_relative 'technology/redis'
+require_relative 'technology/sqlite'
 
 # frontend development
 ## frameworks
@@ -44,6 +45,7 @@ require_relative 'technology/rspec'
 require_relative 'technology/testcase'
 
 # tools
+require_relative 'technology/aws'
 require_relative 'technology/docker'
 require_relative 'technology/git'
 require_relative 'technology/graphql'
