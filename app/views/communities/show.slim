@@ -13,8 +13,6 @@
         = image_tag @community.logo_url, alt: @community.name, style: 'width: 256px;'
 
       .text-justify
-        / TODO: Do not show here introduction, only description
-        == Markdown.new(@community.introduction).to_html
         == Markdown.new(@community.description).to_html
 
   .row
