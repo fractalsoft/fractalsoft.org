@@ -64,6 +64,8 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   sqlite
   redis
   docker
+  sass
+  less
   html5
   css3
   slim
