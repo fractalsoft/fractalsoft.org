@@ -5,9 +5,10 @@ MetaTags.configure do |config|
   # How many characters should the title meta tag have at most. Default is 70.
   # Set to nil or 0 to remove limits.
   # config.title_limit = 70
+  config.title_limit = 0
 
   # When true, site title will be truncated instead of title. Default is false.
-  config.truncate_site_title_first = true
+  # config.truncate_site_title_first = true
 
   # Maximum length of the page description. Default is 300.
   # Set to nil or 0 to remove limits.

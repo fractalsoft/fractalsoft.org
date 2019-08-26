@@ -8,7 +8,7 @@
         - technologies.each do |technology|
           li
           - if technology.any_image?
-              = image_tag technology.logotype_or_image_base64, alt: technology.name, title: technology.title, width: '75px'
+              = image_tag technology.logotype_or_image_base64, alt: technology.name, title: technology.title, width: '64px'
           - else
             span.label.label-default
               = technology.title
