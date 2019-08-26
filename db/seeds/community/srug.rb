@@ -36,38 +36,103 @@ We share knowledge with other programmers.
 We show technical presentations about Ruby and not only.
 We are building a Ruby community.
 )
-srug.title = 'Silesian Ruby Users Group - we share knowledge with other programmers - SRUG'
+# srug.title = 'Silesian Ruby Users Group - we share knowledge with other programmers - SRUG'
+srug.title = "Silesian Ruby Users Group | SRUG - let's share Ruby knowledge"
 
 I18n.locale = :pl
 srug.description = %(
-Tytuły prezentacji, które przedstawialiśmy na spotkaniach SRUG:
+## Czym jest **SRUG**?
 
-- Czy jesteś programistą egoistą? Dbaj o swój kod - Pomysły na refaktoryzację
-- Dobra jakość projektu - SEO Onsite
-- Don't git blame me
-- Dlaczego lubię język Ruby?
-- Jak oswoić roboty sieciowe?
-- Programowanie funkcyjne w Ruby
-- Ruboto - wprowadzenie
-- Wprowadzenie do SVG
-)
-srug.introduction = %(
 SRUG to lokalna grupa programistów **języka Ruby** działająca głównie
 w _Gliwicach_, ale również na całym _Śląsku_.
-Z przyjemnością aktywnie uczestniczymy we wszystkich spotkaniach Ruby.
+Nazwa SRUG to skrót od Silesian Ruby Users Group,
+czyli w dosłowym tłumaczeniu **Śląska Grupa Użytkowników języka Ruby**.
+Zamiennie można używać też mniej dokładnych tłumaczeń _Śląska Grupa Miłośników Ruby_ lub _Śląska Grupa Rubiego_.
+Istotne jest, że rozwinięcie nazwy SRUG składa się ze słowa Ruby, jako języka programowania
+oraz z rejonu działania grupy, w tym wypadku w Silesii, czyli na Śląsku.
+
+
+## Krótka historia SRUG-a
+
+Pierwsze spotkania SRUG odbywały się na Politechnice Śląskiej w Gliwicach już od roku 2009.
+Z czasem programistów Ruby w Gliwicach przybywało.
+SRUG dojrzał i wyjrzał poza mury uczelni.
+Społeczność Ruby zaczęła spotykać się w różnych miejscach w Gliwicach.
+Najpierw na Nowych Gliwicach, potem w Starych Browarze oraz w klubie muzycznym 4art.
+Następnie przyszedł czas na SRUG-i wyjazdowe.
+Każde kolejne spotkanie miłośników Ruby na Śląsku odbywało się w innym mieście
+(Gliwice, Bielsko-Biała, Żywiec, Pszczyna, Katowice).
+Przez pewien czas Śląska Grupa Użytkowników Języka Ruby spotykała się w Hackerspace w Katowicach.
+Finalnie jednak SRUG powrócił do Gliwic i regularne meetupy odbywają się w Dobry Zbeerze.
+
+
+## Nasi programiści uwielbiają SRUG-i ❤️
+
+Z przyjemnością aktywnie uczestniczymy we wszystkich spotkaniach Ruby na Śląsku.
 Czujemy się częścią tej społeczności Ruby i wspieramy te świetne wydarzenia.
+Zachęcamy również innych programistów do aktywnego uczestnictwa we SRUG-ach.
+Nie ma znaczenia, że na co dzień ktoś pracuje w innych technologiach, uczestnictwo w SRUG-u przynosi same korzyści.
+Każde spotkanie SRUG jest wyjątkowe i zbalansowane.
+Oznacza to, że zarówno początkujący programista-pasjonat jak i doświadczony Ruby developer znajdzie coś dla siebie.
+Po prostu uczymy się od siebie nawzajem.
+A do tego meetupy SRUG są darmowe.
+
+
+### Nasze prezentacje
 
 Często przygotowujemy prezentacje i dzielimy się naszą wiedzą i doświadczeniem.
 Staramy się aby nasze prezentacje poruszały różne ważne tematy tj.
-nowości w języku Ruby, programowanie funkcyjne, aplikacje mobilne,
+nowości w języku Ruby, dopasowanie do wzorca, programowanie funkcyjne, aplikacje mobilne,
 dobra jakość i refaktoryzacja kodu, pozycjonowanie i roboty sieciowe.
+
+Tytuły prezentacji, które przedstawialiśmy na spotkaniach SRUG:
+
++ Czy jesteś programistą egoistą? Dbaj o swój kod - Pomysły na refaktoryzację
++ Dlaczego lubię język Ruby?
++ Dobra jakość projektu - SEO Onsite
++ Don't git blame me
++ Jak oswoić roboty sieciowe?
++ Dopasowanie do wzorca w Ruby
++ Programowanie funkcyjne w Ruby
++ Ruboto - wprowadzenie
++ Wprowadzenie do SVG
+
+
+## Język Ruby a społeczność lokalna
+
+Społeczność języka Ruby na Śląsku działa podobnie jak inne lokalne grupy rubiego w Polsce.
+Wbrew pozorom popularność języka Ruby oraz społeczność, która się wokół niego wytworzyła nie jest wcale taka mała.
+W Polsce działa kilka lokalnych grup Ruby i stale powstają nowe.
+Oto kilka polskich społeczności języka Ruby:
+
++ BRUG - Białystok Ruby User Group
++ DRUG - Dolnośląska Grupa Użytkowników Ruby
++ KRUG - Kraków Ruby User Group
++ LRUG - Łódź Ruby User Group
++ PRUG - Poznań Ruby User Group
++ RzRUG - Rzeszów Ruby User Group
++ SzRUG - Szczecin Ruby User Group
++ TRUG - Trójmiejska Grupa Użytkowników Ruby
++ WRUG - Warsaw Ruby User Group
+
+)
+srug.introduction = %(
+> _Myśl globalnie, działaj lokalnie._ - René Dubos
+
+To motto ekologów, ale sprawdza się również w branżach technologicznych.
+
+DRUG, KRUG, LRUG, PRUG, SRUG, TRUG, WRUG, itd. to lokalne grupy programistów Ruby rozsiane po w całej Polsce.
+**SRUG**, czyli Silesian Ruby User Group jest najbliższa naszemu sercu.
+To właśnie na _Śląsku_ jesteśmy najczęściej na spotkaniach rubiowców.
+
+Zachęcamy do zapoznania się z tym co robimy na SRUG-ach i jak współtworzymy gliwicką społeczność Ruby.
 )
 srug.meta_description = %(
 Dzielimy się wiedzą z innymi programistami.
 Pokazujemy prezentacje techniczne o języku Ruby i nie tylko.
-Budujemy społeczność Rubiego.
+Budujemy społeczność Rubiego na Śląsku.
 )
-srug.title = 'Śląska Grupa Użytkowników Języka Ruby - dzielimy się wiedzą z innymi - SRUG'
+srug.title = 'Śląska Grupa Użytkowników Języka Ruby - dzielimy się wiedzą o Ruby'
 
 srug.save
 

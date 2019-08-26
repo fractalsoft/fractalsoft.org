@@ -17,7 +17,20 @@ rails_girls.assign_attributes(
 )
 
 I18n.locale = :en
+
 rails_girls.description = %(
+We organize and sponsor **Rails Girls Silesia** workshops.
+We act as Rails Girls coaches in differents cities of Poland.
+Everyone can learn programming, we strongly believe in that statement.
+As programmers professionally connected with web technologies,
+working in Ruby on Rails framework,
+the idea of Rails Girls is particularly close to us.
+
+By organizing workshops, we try to create convenient conditions for learning
+programming for the participants of Rails Girls workshops.
+Many of women who we had the opportunity to teach have broadened their interests
+or even changed their lives.
+
 In October 2014 in _Gliwice_, we organized the first workshops
 Rails Girls in Silesia.
 30 women from all over Poland took part in it.
@@ -67,6 +80,7 @@ A short list of Rails Girls events in which we were coaches:
 - Rails Girls Gorzów 2017
 - Rails Girls Poznań 2018
 )
+
 rails_girls.introduction = %(
 We organize and sponsor **Rails Girls Silesia** workshops.
 We act as Rails Girls coaches in differents cities of Poland.
@@ -80,15 +94,30 @@ programming for the participants of Rails Girls workshops.
 Many of women who we had the opportunity to teach have broadened their interests
 or even changed their lives.
 )
+
 rails_girls.meta_description = %(
 We teach women`s programming and organize Ruby on Rails workshops.
 We help women enter the IT world.
 )
+
 rails_girls.title = 'Learning programming for women - Rails Girls'
 
 
 I18n.locale = :pl
+
 rails_girls.description = %(
+Organizujemy i sponsorujemy warsztaty **Rails Girls na Śląsku**.
+Działamy jako coachowie Rails Girls w różnych miastach w Polsce.
+Głęboko wierzymy w to, że każdy może nauczyć się programowania.
+Jako programiści powiązani zawodowo z technologiami webowymi,
+pracujący we frameworku Ruby on Rails,
+idea Rails Girls jest nam szczególnie bliska.
+
+Organizując warsztaty staramy się stworzyć dogodne warunki do nauki
+programowania dla uczestniczek warsztatów Rails Girls.
+Wiele z kobiet, które mieliśmy okazję uczyć poszerzyło swoje zainteresowania
+lub nawet zmieniło swoje życie.
+
 W październiku 2014 roku w _Gliwicach_ zorganizowaliśmy pierwsze warsztaty
 Rails Girls na Śląsku.
 Uczestniczyło w nim 30 kobiet z całej Polski.
@@ -137,6 +166,7 @@ Krótka lista wydarzeń Rails Girls w których byliśmy coachami:
 - Rails Girls Gorzów 2017
 - Rails Girls Poznań 2018
 )
+
 rails_girls.introduction = %(
 Organizujemy i sponsorujemy warsztaty **Rails Girls na Śląsku**.
 Działamy jako coachowie Rails Girls w różnych miastach w Polsce.
@@ -150,10 +180,12 @@ programowania dla uczestniczek warsztatów Rails Girls.
 Wiele z kobiet, które mieliśmy okazję uczyć poszerzyło swoje zainteresowania
 lub nawet zmieniło swoje życie.
 )
+
 rails_girls.meta_description = %(
 Uczymy programowania kobiety i organizujemy warsztaty z Ruby on Rails.
 Pomagamy wejść kobietom do świata IT.
 )
+
 rails_girls.title = 'Nauka programowania dla kobiet - Rails Girls'
 
 rails_girls.save
