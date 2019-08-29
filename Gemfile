@@ -61,7 +61,7 @@ group :development do
   # gem 'sandi_meter'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 3.3.0' # <%= console %> anywhere in the code
+  gem 'web-console', '>= 3.7' # <%= console %> anywhere in the code
 end
 
 group :development, :test do
