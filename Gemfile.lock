@@ -335,8 +335,7 @@ GEM
     request_store (1.4.1)
       rack (>= 1.4)
     require_all (2.0.0)
-    rollbar (2.20.0)
-      multi_json
+    rollbar (2.22.0)
     route_translator (6.0.0)
       actionpack (>= 5.0.0.1, < 6.1)
       activesupport (>= 5.0.0.1, < 6.1)
@@ -500,7 +499,7 @@ DEPENDENCIES
   rails_12factor
   rails_best_practices
   redcarpet
-  rollbar (~> 2.18)
+  rollbar (~> 2.22)
   route_translator
   rspec-rails (~> 3.5)
   rubocop
