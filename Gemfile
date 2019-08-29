@@ -4,11 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '~> 5.2.3'
 
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'sass-rails', '~> 5.0.6'
+gem 'sass-rails'
 gem 'sdoc', '~> 1.0', group: :doc
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
@@ -26,15 +26,15 @@ gem 'mail_form'
 gem 'mandrill-api'
 gem 'mandrill_mailer'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
-gem 'mini_magick', '~> 4.8', platform: :ruby
+gem 'mini_magick', '~> 4.9', platform: :ruby
 gem 'normalize-rails', '~> 4.1.1'
 gem 'oj' # Fast JSON parser and object serializer
 gem 'pg', '~> 1.0' # Ruby interface to PostgreSQL RDBMS
-gem 'puma', '~> 3.11' # Ruby web server built for concurrency
+gem 'puma' # Ruby web server built for concurrency
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
-gem 'rollbar', '~> 2.18' # Error tracking service
+gem 'rollbar', '~> 2.22' # Error tracking service
 gem 'route_translator' # Manage translations of routes
 gem 'simple_form', '~> 4.1'
 gem 'slim-rails', '~> 3.2' # Template language instead Erb
@@ -46,7 +46,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
-  gem 'bullet', '~> 5.7'
+  gem 'bullet'
   gem 'capistrano-rails', '~> 1.3'
   gem 'colored'
   gem 'deadweight'
@@ -61,13 +61,13 @@ group :development do
   # gem 'sandi_meter'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 3.3.0' # <%= console %> anywhere in the code
+  gem 'web-console', '>= 3.7' # <%= console %> anywhere in the code
 end
 
 group :development, :test do
   # Call 'byebug' in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'dotenv-rails', '~> 2.2'
+  gem 'dotenv-rails'
   gem 'pry-byebug', '~> 3.6'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.5'
