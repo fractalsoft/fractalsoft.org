@@ -2,8 +2,13 @@
   "name": "fractalsoft",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "^4.0.7",
     "bootstrap-sass": "3",
     "jquery": "3.4.1",
-    "leaflet": "1.5.1"
+    "leaflet": "1.5.1",
+    "yarn": "^1.17.3"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.8.0"
   }
 }

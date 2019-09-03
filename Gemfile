@@ -2,29 +2,30 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.0.0'
 
 gem 'coffee-rails', '~> 5.0'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'sass-rails'
+gem 'sass-rails', '~> 5'
 gem 'sdoc', '~> 1.0', group: :doc
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
+gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript.
 
-gem 'actionpack-page_caching'
+# gem 'actionpack-page_caching'
 gem 'active_link_to'
 gem 'carrierwave', '~> 1.2'
 gem 'compass-rails', '~> 3.0'
 gem 'draper'
-gem 'foreman', '~> 0.84'
+# gem 'foreman'
 gem 'friendly_id', '~> 5.2'
 gem 'globalize'
 gem 'http_accept_language'
 gem 'mail_form'
-gem 'mandrill-api'
-gem 'mandrill_mailer'
+# gem 'mandrill-api'
+# gem 'mandrill_mailer'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', '~> 4.9', platform: :ruby
 gem 'normalize-rails', '~> 4.1.1'
@@ -65,6 +66,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'bootsnap', '>= 1.4.2', require: false
   # Call 'byebug' in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
@@ -78,14 +80,18 @@ group :test do
   gem 'database_cleaner', '~> 1.6'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
+  gem 'webdrivers' # Web drivers to run system tests with browsers
 end
 
 group :production do
   gem 'rails_12factor'
 end
 
-# Use ActiveModel has_secure_password
+# Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# Use Active Storage variant
+# gem 'image_processing', '~> 1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
