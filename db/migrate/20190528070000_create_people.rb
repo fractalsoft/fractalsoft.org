@@ -12,7 +12,6 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.string :instagram
       t.string :linkedin
       t.string :nickname
-      t.string :position
       t.string :skills, default: '', null: false
       t.string :slug, index: true
       t.string :technologies, default: '', null: false

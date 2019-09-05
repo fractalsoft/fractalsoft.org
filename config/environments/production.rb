@@ -2,10 +2,11 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
   config.action_mailer.perform_caching = false
   config.active_record.dump_schema_after_migration = false
+  config.active_storage.service = :local
   config.active_support.deprecation = :notify
   config.assets.compile = false
   config.assets.css_compressor = :sass
-  config.assets.js_compressor = :uglifier
+  # config.assets.js_compressor = :uglifier
   config.cache_classes = true
   config.consider_all_requests_local = false
   config.eager_load = true

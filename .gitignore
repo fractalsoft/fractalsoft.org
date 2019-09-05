@@ -17,6 +17,10 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+
 /node_modules
 /yarn-error.log
 
@@ -24,8 +28,8 @@
 .env
 .env.production
 
-# Ignore credentials key
-config/master.key
+# Ignore master key for decrypting credentials and more.
+/config/master.key
 
 # Igrone assets, uploads & cache
 /public/assets
@@ -33,3 +37,10 @@ config/master.key
 /public/uploads/*
 !/public/cache/.keep
 !/public/uploads/.keep
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
