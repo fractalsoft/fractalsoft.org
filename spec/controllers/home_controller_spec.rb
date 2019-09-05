@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe HomeController, type: :controller do
+  render_views
   describe 'GET index' do
     I18n.available_locales.each do |locale|
       context "locale #{locale}" do

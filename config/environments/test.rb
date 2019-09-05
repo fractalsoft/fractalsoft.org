@@ -5,7 +5,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :test
   config.action_mailer.perform_caching = false
   config.active_support.deprecation = :stderr
-  config.cache_classes = true
+  config.cache_classes = false
+  config.cache_store = :null_store
   config.consider_all_requests_local = true
   config.eager_load = false
   config.public_file_server.enabled = true
