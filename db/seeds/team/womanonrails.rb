@@ -1,7 +1,6 @@
 womanonrails = Person.where(nickname: 'womanonrails').first_or_initialize
 womanonrails.assign_attributes(
   blog: 'https://womanonrails.com',
-  codeschool: 'womanonrails',
   description: 'Ruby on Rails developer',
   facebook: 'womanonrails',
   fullname: 'Agnieszka Matysek',

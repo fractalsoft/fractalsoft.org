@@ -1,24 +1,34 @@
 class PersonDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all
-  OPTIONS = {
-    rel: %w[
-      nofollow
-      noopener
-      noreferrer
-    ].join(' '),
-    target: '_blank'
-  }.freeze
 
-  %i[blog facebook github instagram linkedin twitter vimeo].each do |name|
-    define_method(name) do
-      send :given_icon, name
+  LINK_NAMES = %w[
+    Blog
+    Facebook
+    Github
+    Instagram
+    Linkedin
+    Twitter
+    Vimeo
+    Website
+    Youtube
+  ].freeze
+
+  # Metaprogramming
+  # def method_name
+  #   ExternalLink::ClassName.link path: object.method_name,
+  #                                title: social_title(:method_name)
+  # end
+  LINK_NAMES.each do |name|
+    method_name = name.downcase
+    define_method(method_name) do
+      class_name = "ExternalLink::#{name}".constantize
+      html = class_name.link path: object.send(method_name),
+                             title: social_title(method_name.to_sym)
+      return unless html
+
+      content_tag :li, html
     end
-  end
-
-  def email
-    content = method(:given_li)
-    given :email, :mail_to, &content
   end
 
   def image
@@ -44,64 +54,13 @@ class PersonDecorator < Draper::Decorator
     render 'people/skills', skills: array unless array.empty?
   end
 
-  def website
-    given :website do
-      link_to object.website, object.website
-    end
-  end
-
   private
 
   def given(method, link = :link_to, &block)
     block.call(method, link) if object.send(method)
   end
 
-  def given_icon(name)
-    content = method(:given_li)
-    given name, &content
-  end
-
-  def given_li(name, link)
-    content_tag :li do
-      send link, send("#{name}_url"), title: social_title(name), **OPTIONS do
-        content_tag(:span, nil, class: "icon icons-#{name}")
-      end
-    end
-  end
-
-  def email_url
-    object.email
-  end
-
-  def blog_url
-    object.blog
-  end
-
-  def facebook_url
-    "https://facebook.com/#{object.facebook}"
-  end
-
-  def github_url
-    "https://github.com/#{object.github}"
-  end
-
-  def instagram_url
-    "https://instagram.com/#{object.instagram}"
-  end
-
-  def linkedin_url
-    "https://linkedin.com/in/#{object.linkedin}"
-  end
-
-  def twitter_url
-    "https://twitter.com/#{object.twitter}"
-  end
-
   def social_title(name)
     I18n.t(name, scope: 'social.title')
-  end
-
-  def vimeo_url
-    "https://vimeo.com/#{object.vimeo}"
   end
 end

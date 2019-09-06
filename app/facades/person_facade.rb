@@ -5,7 +5,6 @@ class PersonFacade
     :facebook,
     :fullname,
     :github,
-    :google,
     :image,
     :instagram,
     :introduction,
@@ -16,8 +15,9 @@ class PersonFacade
     :skills,
     :technologies,
     :twitter,
-    :youtube,
-    :vimeo
+    :vimeo,
+    :website,
+    :youtube
   ].freeze
 
   attr_reader :person, :projects

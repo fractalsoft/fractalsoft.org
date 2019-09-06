@@ -1,7 +1,5 @@
 torrocus = Person.where(nickname: 'torrocus').first_or_initialize
 torrocus.assign_attributes(
-  blog: 'https://torrocus.com',
-  codeschool: 'torrocus',
   description: 'Ruby on Rails developer',
   facebook: 'torrocus',
   fullname: 'Alex Malaszkiewicz',
@@ -11,7 +9,8 @@ torrocus.assign_attributes(
   linkedin: 'torrocus',
   position: 'developer',
   skills: %(Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development),
-  twitter: 'torrocus'
+  twitter: 'torrocus',
+  website: 'https://torrocus.com'
 )
 
 I18n.locale = :en

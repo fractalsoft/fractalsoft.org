@@ -1,11 +1,3 @@
-$logotypes-sort-by: 'name';
-$logotypes-layout: vertical;
-$logotypes-sprite-dimensions: true;
-
-@import 'compass';
-@import 'icons/*.png';
-@include all-icons-sprites;
-
 span.icon {
   display: block;
   height: 32px;
