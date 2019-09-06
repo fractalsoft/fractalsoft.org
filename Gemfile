@@ -8,7 +8,7 @@ gem 'coffee-rails', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'sass-rails', '~> 5'
+gem 'sass-rails', '~> 6.0'
 gem 'sdoc', '~> 1.0', group: :doc
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
@@ -16,7 +16,7 @@ gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript.
 
 # gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 2.0'
 gem 'draper'
 # gem 'foreman'
 gem 'friendly_id', '~> 5.2'
