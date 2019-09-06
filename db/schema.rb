@@ -2,11 +2,11 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
+# This file is the source Rails uses to define your schema when running `rails
+# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   create_table "community_translations", force: :cascade do |t|
     t.uuid "community_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "description"
     t.text "introduction"
     t.string "meta_description"
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   create_table "computer_fix_service_translations", force: :cascade do |t|
     t.uuid "computer_fix_service_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.index ["computer_fix_service_id"], name: "index_8cbd37260092c65a317fabf1fe6fbf080714a9c0"
     t.index ["locale"], name: "index_computer_fix_service_translations_on_locale"
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   create_table "contribution_translations", force: :cascade do |t|
     t.uuid "contribution_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.index ["contribution_id"], name: "index_contribution_translations_on_contribution_id"
     t.index ["locale"], name: "index_contribution_translations_on_locale"
@@ -104,8 +104,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   create_table "office_address_translations", force: :cascade do |t|
     t.uuid "office_address_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "country"
     t.string "name"
     t.index ["locale"], name: "index_office_address_translations_on_locale"
@@ -128,9 +128,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   end
 
   create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "position"
+    t.integer "position", default: 0, null: false
     t.string "blog"
-    t.string "codeschool"
     t.string "email"
     t.string "facebook"
     t.string "fullname", null: false
@@ -154,8 +153,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   create_table "person_translations", force: :cascade do |t|
     t.uuid "person_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "introduction"
     t.string "saying"
     t.index ["locale"], name: "index_person_translations_on_locale"
@@ -165,8 +164,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   create_table "project_translations", force: :cascade do |t|
     t.uuid "project_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "description"
     t.text "introduction"
     t.string "subtitle"
@@ -213,8 +212,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_120000) do
   create_table "technology_translations", force: :cascade do |t|
     t.uuid "technology_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "description", default: ""
     t.string "meta_description", default: ""
     t.string "meta_title", default: ""

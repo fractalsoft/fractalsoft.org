@@ -16,23 +16,14 @@
   h4 = t('.find_us')
   ul.list-inline
     li
-      = link_to 'https://github.com/fractalsoft', rel: 'nofollow noopener noreferrer', target: '_blank', title: 'Star us' do
-        span.icon.icons-github
+      = ExternalLink::Github.link path: 'fractalsoft', title: 'Star us'
     li
-      = link_to 'https://twitter.com/fractal_soft', rel: 'nofollow noopener noreferrer', target: '_blank', title: 'Follow us' do
-        span.icon.icons-twitter
+      = ExternalLink::Twitter.link path: 'fractal_soft', title: 'Follow us'
     li
-      = link_to 'https://www.linkedin.com/company/fractalsoft', rel: 'nofollow noopener noreferrer', target: '_blank', title: 'Follow us' do
-        span.icon.icons-linkedin
+      = ExternalLink::Linkedin.link path: 'fractalsoft', title: 'Business with us'
     li
-      = link_to 'https://www.youtube.com/c/fractalsoft', rel: 'nofollow noopener noreferrer', target: '_blank', title: 'Subscribe' do
-        span.icon.icons-youtube
+      = ExternalLink::Youtube.link path: 'c/fractalsoft', title: 'Subscribe us'
     li
-      = link_to 'https://www.google.com/+fractalsoft', rel: 'nofollow noopener noreferrer', target: '_blank', title: 'Follow us' do
-        span.icon.icons-google
+      = ExternalLink::Facebook.link path: 'fractalsoft', title: 'Like us'
     li
-      = link_to 'https://www.facebook.com/fractalsoft', rel: 'nofollow noopener noreferrer', target: '_blank', title: 'Like us' do
-        span.icon.icons-facebook
-    li
-      = link_to 'https://instagram.com/fractalsoft', rel: 'nofollow noopener noreferrer', target: '_blank', title: 'Follow us' do
-        span.icon.icons-instagram
+      = ExternalLink::Instagram.link path: 'fractalsoft', title: 'Follow us'
