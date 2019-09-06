@@ -16,7 +16,7 @@ gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript.
 
 # gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 2.0'
 gem 'draper'
 # gem 'foreman'
 gem 'friendly_id', '~> 5.2'
