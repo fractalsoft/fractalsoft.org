@@ -8,7 +8,7 @@ gem 'coffee-rails', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'sass-rails', '~> 5'
+gem 'sass-rails', '~> 6.0'
 gem 'sdoc', '~> 1.0', group: :doc
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
