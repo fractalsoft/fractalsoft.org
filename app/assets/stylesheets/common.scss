@@ -11,7 +11,8 @@
     color: $light-grey-text-color;
     font-weight: 700;
 
-    &.active {
+    &.active,
+    &:active {
       background-color: $grey-background-color;
       box-shadow: none;
     }
@@ -21,12 +22,24 @@
     background-color: $dark-background-color;
     border-width: 0;
     color: $white-text-color;
+
+    &.active,
+    &:active {
+      background-color: $dark-background-color;
+      box-shadow: none;
+    }
   }
 
   &.btn-primary {
     background-color: $red-background-color;
     border-width: 0;
     color: $white-text-color;
+
+    &.active,
+    &:active {
+      background-color: $red-background-color;
+      box-shadow: none;
+    }
   }
 }
 
