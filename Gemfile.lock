@@ -278,7 +278,7 @@ GEM
     query_diet (0.6.2)
     quiet_safari (1.0.0)
       railties (>= 3.1.0)
-    rack (2.0.6)
+    rack (2.0.8)
     rack-attack (5.4.2)
       rack (>= 1.0, < 3)
     rack-test (1.1.0)
