@@ -274,7 +274,7 @@ GEM
       byebug (~> 10.0)
       pry (~> 0.10)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.3)
     query_diet (0.6.2)
     quiet_safari (1.0.0)
       railties (>= 3.1.0)
@@ -507,7 +507,7 @@ DEPENDENCIES
   oj
   pg (~> 1.0)
   pry-byebug (~> 3.6)
-  puma (~> 3.11)
+  puma (~> 3.12)
   query_diet
   quiet_safari
   rack-attack
