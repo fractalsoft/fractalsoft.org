@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'compass-rails', '~> 3.0'
 gem 'draper'
 gem 'foreman', '~> 0.84'
