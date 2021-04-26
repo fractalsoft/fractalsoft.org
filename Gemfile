@@ -9,10 +9,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'sass-rails', '~> 6.0'
-gem 'sdoc', '~> 1.0', group: :doc
+gem 'sdoc', '~> 2.1.0', group: :doc
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript.
+gem 'webpacker', '~> 5.2.1' # Transpile app-like JavaScript.
 
 gem 'active_link_to'
 gem 'carrierwave', '~> 2.0'
@@ -25,16 +25,16 @@ gem 'mail_form'
 # gem 'mandrill_mailer'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', '~> 4.9', platform: :ruby
-gem 'normalize-rails', '~> 4.1.1'
+gem 'normalize-rails', '~> 8.0.1'
 gem 'oj' # Fast JSON parser and object serializer
 gem 'pg', '~> 1.0' # Ruby interface to PostgreSQL RDBMS
 gem 'puma' # Ruby web server built for concurrency
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
-gem 'rollbar', '~> 2.22' # Error tracking service
+gem 'rollbar', '~> 3.1.2' # Error tracking service
 gem 'route_translator' # Manage translations of routes
-gem 'simple_form', '~> 4.1'
+gem 'simple_form', '~> 5.1'
 gem 'slim-rails', '~> 3.2' # Template language instead Erb
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -50,7 +50,7 @@ group :development do
   gem 'deadweight'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'i18n-tasks'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '~> 3.5.1'
   gem 'query_diet'
   gem 'rails_best_practices'
   gem 'rubocop'
@@ -67,14 +67,14 @@ group :development, :test do
   # Call 'byebug' in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
-  gem 'pry-byebug', '~> 3.6'
+  gem 'pry-byebug', '~> 3.9'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 5.0.1'
   gem 'selenium-webdriver'
 end
 
 group :test do
-  gem 'database_cleaner', '~> 1.6'
+  gem 'database_cleaner', '~> 2.0.1'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
   gem 'webdrivers' # Web drivers to run system tests with browsers
