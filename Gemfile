@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 6.0.3.6'
+gem 'rails', '~> 6.1.3.1'
 
 gem 'coffee-rails', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
