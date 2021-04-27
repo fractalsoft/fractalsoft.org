@@ -2,6 +2,11 @@
 # https://globalgamejam.org/about
 # https://en.wikipedia.org/wiki/Global_Game_Jam
 # https://en.wikipedia.org/wiki/Game_jam
+# 24-26.01.2014
+# 23-25.01.2015
+# 29-31.01.2016
+# 26-28.01.2018
+# 25-27.01.2019
 ggj = Community.where(slug: 'global-game-jam').first_or_create
 
 ggj_cieszyn2016_youtube_url = 'https://www.youtube.com/embed/-g4BbTNCgck'
@@ -90,7 +95,7 @@ Game Jamy w których braliśmy udział:
 - Game Jam 2015 w Cieszynie
 - Game Jam 2016 w Cieszynie
 - [Game Jam 2018 w Cieszynie](https://blog.fractalsoft.org/news/2019/01/programujemy-gry-game-jam-2018/)
-- Game Jam 2019 w Cieszynie (29-31.01.2016)
+- Game Jam 2019 w Cieszynie 
 
 
 #{ggj_cieszyn2016}

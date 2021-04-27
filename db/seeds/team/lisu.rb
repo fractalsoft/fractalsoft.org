@@ -16,6 +16,7 @@ lisu.introduction = %(
 <strong>Rails programmer open to different technologies.</strong>
 Expert in unsolvable challenges.
 Passionate gamer, game creator and regular participant of Global Game Jam.
+Constantly developing skills related to image analysis and neural networks.
 )
 
 I18n.locale = :pl
@@ -23,6 +24,7 @@ lisu.introduction = %(
 <strong>Programista Rails otwarty na różne technologie.</strong>
 Ekspert od problemów.
 Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.
+Stale rozwija umiejętności związane z analizą obrazu i sieciami neuronowymi.
 )
 
 lisu.save
@@ -36,6 +38,7 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   react
   ruby-on-rails
   ruby
+  python
   git
   postgresql
   mysql
