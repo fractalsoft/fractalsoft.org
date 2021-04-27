@@ -79,6 +79,9 @@ A short list of Rails Girls events in which we were coaches:
 - Rails Girls Szczecin 2017
 - Rails Girls Gorzów 2017
 - Rails Girls Poznań 2018
+- Rails Girls Warsaw 2019
+- Rails Girls Wrocław 2020
+- Rails Girls Bielsko-Biała 2020
 )
 
 rails_girls.introduction = %(
@@ -165,6 +168,9 @@ Krótka lista wydarzeń Rails Girls w których byliśmy coachami:
 - Rails Girls Szczecin 2017
 - Rails Girls Gorzów 2017
 - Rails Girls Poznań 2018
+- Rails Girls Warsaw 2019
+- Rails Girls Wrocław 2020
+- Rails Girls Bielsko-Biała 2020
 )
 
 rails_girls.introduction = %(

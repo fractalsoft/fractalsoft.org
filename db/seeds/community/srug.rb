@@ -9,16 +9,26 @@ srug.assign_attributes(
 
 I18n.locale = :en
 srug.description = %(
+SRUG is a local group of **Ruby language** programmers mostly operating in Gliwice, but also in whole _Silesian_ region.
+We active participate in all Ruby meetings with pleasure.
+We feel as a part of this Ruby community and we support these great events.
+
+We often prepare presentations and share our knowledge and experience.
+We try to make our presentations to raise various important topics, such as newness features in Ruby language,
+functional programming, mobile application, good quality and refactoring of code, SEO and web crawlers.
+
 The titles of the presentation that we presented at SRUG meetings:
 
 - Are you an Egoistic Programmer? Take Care of your Code - Refactoring Ideas
 - Good Quality of a Project - SEO Onsite
 - Don't git blame me
-- Why do I like Ruby
 - How to Tame Robots
+- Introduction to SVG
+- Occupational Burnout Syndrome - How to still feel passion, even after years of programming?
+- Pattern Matching in Ruby
 - Ruby Functional Programming
 - Ruboto - introduction
-- Introduction to SVG
+- Why do I like Ruby
 )
 srug.introduction = %(
 SRUG is a local group of **Ruby language** programmers mostly operating
@@ -91,10 +101,12 @@ Tytuły prezentacji, które przedstawialiśmy na spotkaniach SRUG:
 + Dlaczego lubię język Ruby?
 + Dobra jakość projektu - SEO Onsite
 + Don't git blame me
-+ Jak oswoić roboty sieciowe?
 + Dopasowanie do wzorca w Ruby
++ Jak oswoić roboty sieciowe?
++ Pattern Matching w Ruby
 + Programowanie funkcyjne w Ruby
 + Ruboto - wprowadzenie
++ Syndrom wypalenia zawodowego - Jak nadal czuć pasję, nawet po latach programowania?
 + Wprowadzenie do SVG
 
 
