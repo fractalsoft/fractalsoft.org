@@ -7,6 +7,7 @@ require_relative 'technology/jekyll'
 require_relative 'technology/ruby_on_rails'
 ## programming language
 require_relative 'technology/csharp'
+require_relative 'technology/python'
 require_relative 'technology/ruby'
 
 # database

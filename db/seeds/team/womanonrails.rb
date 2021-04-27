@@ -3,7 +3,7 @@ womanonrails.assign_attributes(
   blog: 'https://womanonrails.com',
   description: 'Ruby on Rails developer',
   facebook: 'womanonrails',
-  fullname: 'Agnieszka Matysek',
+  fullname: 'Agnieszka Malaszkiewicz',
   github: 'womanonrails',
   image: 'team/amatysek.jpg',
   instagram: 'womanonrails',
@@ -58,6 +58,7 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   graphql
   jquery
   emberjs
+  react
   git
   mysql
   sqlite

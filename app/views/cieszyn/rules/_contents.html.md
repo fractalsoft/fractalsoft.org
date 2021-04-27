@@ -2,6 +2,7 @@
 
 1. Serwis komputerowy w Cieszynie jest cześcią firmy **Fractal Soft Sp. z o.o.**
    - Biuro w Cieszynie (adres główny): **43-400 Cieszyn, ul. Trzech Braci 3**
+   - Biuro w Gliwicach (druga siedziba): **44-100 Gliwice, ul. Średnia 24/5**
 
 2. Biura czynne są **od poniedziałku do piątku w godzinach od 8:00 do 16:00**.
 
@@ -22,7 +23,7 @@
 8. Zlecenia, których wartość nie przekracza 150 PLN (kwota z VAT) serwis wykonuje bez uprzedniej konsultacji z Klientem.
 
 9. Odbiór urządzenia możliwy jest tylko po przedstawieniu pokwitowania serwisowego.
-   Zgubienie pokwitowania uprawnia obsługę serwisu do wylegitymowania odbiorcy urządzenia dokumentem ze zdjęciem.
+   Zagubienie pokwitowania uprawnia obsługę do wylegitymowania odbiorcy urządzenia dokumentem ze zdjęciem.
 
 10. Zamówione usługi wykonywane są co do zasady w terminie do 10 dni roboczych.
     Jeśli termin naprawy miałby się wydłużyć Klient zostanie o tym poinformowany drogą telefoniczną bądź mailową.

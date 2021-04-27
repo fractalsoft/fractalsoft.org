@@ -1,5 +1,6 @@
 torrocus = Person.where(nickname: 'torrocus').first_or_initialize
 torrocus.assign_attributes(
+  blog: 'https://torrocus.com/blog/',
   description: 'Ruby on Rails developer',
   facebook: 'torrocus',
   fullname: 'Alex Malaszkiewicz',
@@ -19,6 +20,7 @@ torrocus.introduction = %(
 He had met Ruby 12 years later while using Sinatra and Ruby on Rails.
 Madcap for algorithms.
 Linux administrator and Open Source ideology evangelist.
+In free time he explores the secrets of machine learning.
 )
 torrocus.saying = %(
 <p>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</p>
@@ -34,6 +36,7 @@ torrocus.introduction = %(
 <strong>Web developer od roku 1998.</strong>
 Ruby poznał 12 lat później używając Sinatra i Ruby on Rails.
 Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.
+W wolnym czasie zgłębia tajniki uczenia maszynowego.
 )
 
 torrocus.save
@@ -58,6 +61,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   backbonejs
   marionettejs
   emberjs
+  react
   html5
   css3
   javascript

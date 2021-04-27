@@ -4,7 +4,7 @@ nopaperwork.assign_attributes(
   display: true,
   dofollow: true,
   title: 'nopaperwork',
-  url: 'nopaperwork.org',
+  url: 'https://nopaperwork.org/',
   year: 2019
 )
 
@@ -36,7 +36,7 @@ purpura.assign_attributes(
   display: true,
   dofollow: false,
   title: 'Purpura',
-  url: 'purpura.eu',
+  url: 'http://purpura.eu',
   year: 2017
 )
 
@@ -149,7 +149,7 @@ selecthub.assign_attributes(
   display: true,
   dofollow: false,
   title: 'SelectHub',
-  url: 'selecthub.com',
+  url: 'https://www.selecthub.com/',
   year: 2016
 )
 
@@ -179,7 +179,6 @@ hitdea.assign_attributes(
   display: true,
   dofollow: false,
   title: 'hitdea',
-  url: 'hitdea.com',
   year: 2015
 )
 
