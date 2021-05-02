@@ -24,22 +24,25 @@ Zgodnie z ustawą z dnia 27 lipca 2002 r. o szczególnych warunkach sprzedaży k
 Definicje:
 
 <dl>
-  <dt>Serwis</dt>
-  <dd>Fractal Soft Aleksander Małaszkiewicz, NIP: 548-232-53-40</dd>
+  <dt>Serwis komputerowy</dt>
+  <dd>Fractal Soft Sp. z o.o., NIP: 5482686629</dd>
 
   <dt>Klient</dt>
   <dd>osoba lub firma zlecająca naprawę serwisową lub dokonująca zakupu w firmie, widniejąca na zleceniu serwisowym i rachunku</dd>
 
   <dt>Strona internetowa</dt>
-  <dd><a href='http://fractalsoft.org/cieszyn'>http://fractalsoft.org</a></dd>
+  <dd><a href='https://fractalsoft.org/cieszyn'>https://fractalsoft.org</a></dd>
 </dl>
 
 
 1. **Gwarantuje się** poprawne działanie elementów będących przedmiotem zlecenia serwisowego, przez ustalony okres czasu, dostępny w tabeli prezentującej informacje o okresie gwarancji na wykonane naprawy serwisowe lub okresie gwarancji ustalonego indywidualnie.
 
-2. **Gwarancji udziela się** na każdą czynność oraz podzespół z osobna. Okres obowiązywania gwarancji liczy się od daty zakupu materiałów lub wydania serwisowego sprzętu.
+2. **Gwarancji udziela się** na każdą czynność oraz podzespół z osobna.
+   Okres obowiązywania gwarancji liczy się od daty zakupu materiałów lub wydania serwisowego sprzętu.
 
-3. Wady objęte gwarancją ujawnione w okresie trwania gwarancji są usuwane **w terminie** do 14 dni roboczych od momentu dostarczenia sprzętu objętego gwarancją do serwisu firmy. W przypadku zaistnienia potrzeby wymiany podzespołów, które wiążą się z zakupem i dostawą do serwisu, okres gwarancji może przedłużyć się o czas nieokreślony uwarunkowany czasem przesyłki podzespołu oraz wymianą lub naprawą. Z uwagi na częste zamówienia podzespołów z krajów Azjatyckich, czas dostawy, w niektórych przypadkach, to około 31 dni.
+3. Wady objęte gwarancją ujawnione w okresie trwania gwarancji są usuwane **w terminie** do 14 dni roboczych od momentu dostarczenia sprzętu objętego gwarancją do serwisu firmy.
+   W przypadku zaistnienia potrzeby wymiany podzespołów, które wiążą się z zakupem i dostawą do serwisu, okres gwarancji może przedłużyć się o czas nieokreślony uwarunkowany czasem przesyłki podzespołu oraz wymianą lub naprawą.
+   Z uwagi na częste zamówienia podzespołów z krajów azjatyckich, czas dostawy, w niektórych przypadkach, to około 31 dni.
 
 4. **Serwis nie ponosi odpowiedzialności**:
   - za wady ukryte sprzętu,
@@ -47,9 +50,11 @@ Definicje:
   - za legalność oprogramowania i danych znajdujących się na dostarczonych nośnikach informacji,
   - za utracone w rezultacie ujawnienia się wady dane, a także oprogramowanie zainstalowane na dostarczonym sprzęcie, z tytułu poniesionych przez klienta kosztów odtworzenia (odzyskania) danych i ponownej instalacji oprogramowania lub jego ponownego nabycia i uzyskania licencji.
 
-5. **Prawa gwarancyjne posiada** osoba lub firma, której dane widnieją na zleceniu serwisowym. Dalsze zbycie sprzętu nie powoduje przeniesienia praw gwarancyjnych na kolejnego nabywcę.
+5. **Prawa gwarancyjne posiada** osoba lub firma, której dane widnieją na zleceniu serwisowym.
+   Dalsze zbycie sprzętu nie powoduje przeniesienia praw gwarancyjnych na kolejnego nabywcę.
 
-6. W przypadku **odstąpienia od naprawy gwarancyjnej** istnieje możliwość zwrotu nakładów finansowych związanych z naprawą serwisową pod warunkiem braku możliwości naprawy. Zwrot w wysokości ceny naprawy nie uwzględnia żadnych kosztów przesyłki pocztowej lub kurierskiej, następuje na wskazany przez klienta rachunek bankowy w terminie do 21 dni od momentu odstąpienia od naprawy gwarancyjnej.
+6. W przypadku **odstąpienia od naprawy gwarancyjnej** istnieje możliwość zwrotu nakładów finansowych związanych z naprawą serwisową pod warunkiem braku możliwości naprawy.
+   Zwrot w wysokości ceny naprawy nie uwzględnia żadnych kosztów przesyłki pocztowej lub kurierskiej, następuje na wskazany przez klienta rachunek bankowy w terminie do 21 dni od momentu odstąpienia od naprawy gwarancyjnej.
 
 7. **Gwarancji nie podlega** zainstalowane oprogramowanie systemowe oraz użytkowe, a także dane zapisane na nośnikach informacji, w przypadku gdy przedmiotem serwisowania jest podzespół różny od nośnika danych.
 

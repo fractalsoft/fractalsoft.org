@@ -1,12 +1,11 @@
 <ul class='dropdown-menu'>
-  <% I18n.available_locales.each do |language| %>
-    <li>
-      <%= link_to_unless_current locale_names[language.to_s],
-        { locale: language },
-        { rel: 'alternate', hreflang: language } do |text|
-      %>
-        <%= content_tag(:span, text) %>
-      <% end %>
-    </li>
+  <% Language.available.each_pair do |locale, name| %>
+    <%
+      I18n.with_locale(locale) do
+        url = yield(:current_page_url).presence || url_for(locale: locale.to_s)
+        url = '#' if url == request.env['PATH_INFO']
+        hreflang = (locale == I18n.default_locale) ? 'x-default' : locale
+    %><li><%= link_to name, url, hreflang: hreflang, rel: 'alternate' %></li>
+    <% end %>
   <% end %>
 </ul>

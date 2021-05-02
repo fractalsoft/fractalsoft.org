@@ -1,0 +1,11 @@
+pl:
+  routes:
+    collaboration: wspolpraca
+    communities: spolecznosc
+    contact_forms: formularz-kontaktowy
+    new_message: nowa-wiadomosc
+    people: zespol
+    prices: cennik
+    projects: projekty
+    rules: zasady
+    warranty: gwarancja

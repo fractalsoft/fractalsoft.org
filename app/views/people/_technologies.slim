@@ -1,7 +1,15 @@
-h4
-  = t('.technologies')
-hr
-- technologies.each do |technology|
-  span.label.label-default
-    = technology
-  '
+- technologies = person.technologies.send(category)
+- if technologies.present?
+    .col-md-4.col-sm-6.col-xs-12
+      h4
+        = t(".#{category}")
+      hr
+      ul.list-inline
+        - technologies.each do |technology|
+          li
+          - if technology.any_image?
+              = image_tag technology.logotype_or_image_base64, alt: technology.name, title: technology.title, width: '64px'
+          - else
+            span.label.label-default
+              = technology.title
+          '

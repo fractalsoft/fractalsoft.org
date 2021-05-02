@@ -52,7 +52,7 @@ class BrowserInfo
     hash['cookieEnabled'] = navigator.cookieEnabled
     hash['doNotTrack'] = navigator.doNotTrack
     hash['hardwareConcurrency'] = navigator.hardwareConcurrency
-    hash['javaEnabled'] = navigator.javaEnabled()
+    hash['javaEnabled'] = navigator.javaEnabled() if navigator.javaEnabled?
     hash['language'] = navigator.language
     hash['languages'] = navigator.languages
     hash['onLine'] = navigator.onLine
@@ -71,6 +71,8 @@ class BrowserInfo
   screen: ->
     hash = {}
     hash['availHeight'] = screen.availHeight
+    hash['availLeft'] = screen.availLeft
+    hash['availTop'] = screen.availTop
     hash['availWidth'] = screen.availWidth
     hash['colorDepth'] = screen.colorDepth
     hash['height'] = screen.height
@@ -81,6 +83,7 @@ class BrowserInfo
   time: ->
     hash = {}
     hash['timeOpened'] = new Date()
+    hash['timezoneName'] = Intl.DateTimeFormat().resolvedOptions().timeZone
     hash['timezoneOffset'] = new Date().getTimezoneOffset()
     hash
 

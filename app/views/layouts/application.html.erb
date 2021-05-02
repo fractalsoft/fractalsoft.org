@@ -29,17 +29,15 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <meta name='theme-color' content='#C3261C' />
   <link href='<%= manifest_path %>' rel='manifest' />
-  <!-- <base href='http://fractalsoft.org/' /> -->
-  <%= favicon_link_tag 'favicon.ico', skip_pipeline: true %>
+  <!-- <base href='https://fractalsoft.org/' /> -->
+  <%= favicon_link_tag '/favicon.ico', skip_pipeline: true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
   <%= render 'layouts/shared/analytics' %>
-  <%= render 'layouts/shared/hotjar' %>
   <%= csrf_meta_tags unless @page_caching %>
 </head>
 <body class='<%= yield(:body_class) %>'>
 <%= query_diet_widget if Rails.env.development? %>
-<a href="http://www1441871441.edgek.com/" class='hidden'>Fight Spam! Click Here!</a>
 <%= render 'layouts/shared/header' %>
 <%= yield %>
 <%= render 'layouts/shared/footer' %>
