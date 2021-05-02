@@ -95,7 +95,7 @@ Game Jamy w których braliśmy udział:
 - Game Jam 2015 w Cieszynie
 - Game Jam 2016 w Cieszynie
 - [Game Jam 2018 w Cieszynie](https://blog.fractalsoft.org/news/2019/01/programujemy-gry-game-jam-2018/)
-- Game Jam 2019 w Cieszynie 
+- Game Jam 2019 w Cieszynie
 
 
 #{ggj_cieszyn2016}
