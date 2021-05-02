@@ -4,7 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "^5.2.1",
     "bootstrap-sass": "3",
-    "jquery": "3.6.0",
+    "jquery": "3.5.0",
     "leaflet": "1.7.1",
     "yarn": "^1.22.10"
   },
