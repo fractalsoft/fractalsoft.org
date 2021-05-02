@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  direct :manifest do
-    '/manifest.json'
-  end
+  direct(:blog) { 'https://blog.fractalsoft.org' }
+  direct(:manifest) { '/manifest.json' }
 
   defaults locale: :pl do
     get :cieszyn, controller: 'cieszyn/welcome', action: :show
@@ -16,12 +15,14 @@ Rails.application.routes.draw do
   end
 
   scope ':locale', locale: /#{I18n.available_locales.join('|')}/ do
-    # resources :projects, only: [:index, :show]
-    resources :people, path: 'team', only: [:index, :show]
-    resources :contact_forms, path: 'contact-forms', only: [:new, :create]
     get :cieszyn, controller: 'cieszyn/welcome', action: :show
-    root 'home#index', as: :localized_root
   end
 
-  root to: 'home#index'
+  localized do
+    # resources :projects, only: [:index, :show]
+    resources :communities, only: [:index, :show]
+    resources :contact_forms, only: [:new, :create], path_names: { new: 'new_message' }
+    resources :people, only: [:index, :show]
+    root to: 'home#index'
+  end
 end

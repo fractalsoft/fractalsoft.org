@@ -1,12 +1,12 @@
 ---
 en:
+  blog: Blog
+  communities:
+    index:
+      title: Community
   contact_forms:
     contact:
       contact_with_us: Contact with us
-      find_us: You can also find us here
-      office:
-        cieszyn: Cieszyn Office
-        gliwice: Gliwice Office
     form:
       email: Your email address
       message: What we can do for you?
@@ -15,6 +15,8 @@ en:
         hint: Leave this field blank!
         placeholder: Your nickname
       send: send
+    icons:
+      find_us: You can also find us here
     new:
       contact:
         description: No matter if you have a question or just want to say hello, we would love to hear from you.
@@ -48,23 +50,15 @@ en:
           two: Ruby on Rails
       title:
         in_touch: Let's be in touch
-  language: english
   layouts:
-    shared:
-      footer:
-        contact: Contact
-        language: Language
-        projects: Projects
-        service: Service
-        team: Team
-        toggle_navigation: Toggle navigation
-      header:
-        contact: Contact
-        language: Language
-        projects: Projects
-        service: Service
-        team: Team
-        toggle_navigation: Toggle navigation
+    menu:
+      community: Community
+      contact: Contact
+      language: Language
+      projects: Projects
+      service: Service
+      team: Team
+      toggle_navigation: Toggle navigation
   mail_form:
     attributes:
       contact_form:
@@ -96,15 +90,23 @@ en:
       team:
         meet_us: Meet our team!
     technologies:
-      technologies: Technologies
+      backend: Backend development
+      database: Databases
+      frontend: Frontend development
+      gamedev: Game development
+      mobile: Mobile development
+      os: Operating systems
+      testing: Testing
+      tool: Tools
+      web: Web technologies
   social:
     title:
       blog: Read me
       facebook: Like me
       github: Star me
-      google: Follow me
       instagram: Follow me
       linkedin: Connect me
       twitter: Follow me
-      vimeo: Follow me
+      vimeo: Watch me
+      website: Visit me
       youtube: Subscribe me

@@ -1,0 +1,84 @@
+- content_for :body_class, 'home'
+.container-fluid
+  .jumbotron
+    .container
+      #carousel-main.carousel.slide[data-ride='carousel']
+        .carousel-inner
+          .item.active
+            .carousel-caption
+              h3.normal
+                = t('.header_html')
+              p
+                a.btn.btn-info.btn-lg[href='#contact' title="#{t('.title.in_touch')}"]
+                  = t('.button.contact_us')
+
+  .container.description
+    h1
+      = t('.how_we_work.slogan')
+    .row
+      .col-sm-4
+        .arts
+          = image_tag 'arts/design.png'
+        h4
+          = t('.how_we_work.header.one')
+        p
+          = t('.how_we_work.description.one')
+      .col-sm-4
+        .arts
+          = image_tag 'arts/development.png'
+        h4
+          = t('.how_we_work.header.two')
+        p
+          = t('.how_we_work.description.two')
+      .col-sm-4
+        .arts
+          = image_tag 'arts/deployment.png'
+        h4
+          = t('.how_we_work.header.three')
+        p
+          = t('.how_we_work.description.three')
+
+  = render 'people/team', people: @home.people
+
+  .container.technology.hidden-xs
+    .row
+      .col-sm-10.col-sm-offset-1
+        ul.media-list
+          li.media
+            a.pull-left[href='#']
+              .media-box
+                = image_tag '/icons/technology/html5/html5-original-wordmark.svg', alt: 'HTML5', class: 'media-object', height: '160', width: '160'
+            .media-body.text-left
+              h4.media-heading
+                = t('.technology.header.one')
+              p
+                = t('.technology.description.one')
+          li.media
+            a.pull-right[href='#']
+              .media-box
+                = image_tag '/icons/technology/ruby-on-rails/rails-plain-wordmark.svg', alt: 'Ruby on Rails', class: 'media-object', width: '160'
+            .media-body.text-right
+              h4.media-heading
+                = t('.technology.header.two')
+              p
+                = t('.technology.description.two')
+          li.media
+            a.pull-left[href='#']
+              .media-box
+                = image_tag '/icons/community/open-source/opensource-original.svg', alt: 'Open Source', class: 'media-object', height: '160', width: '160'
+            .media-body.text-left
+              h4.media-heading
+                = t('.technology.header.three')
+              p
+                = t('.technology.description.three_html')
+
+  #contact.container.contact
+    h2
+      = t('.contact.header')
+    p.hidden-xs
+      = t('.contact.description')
+    .row
+      .col-sm-8.col-sm-push-4.col-xs-12
+        - #= render 'contact_forms/form', contact_form: @home.contact
+      .col-sm-4.col-sm-pull-8.col-xs-12
+        = render 'contact_forms/contact'

@@ -2,33 +2,76 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412080000) do
+ActiveRecord::Schema.define(version: 2019_05_28_120000) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
-  enable_extension "pgcrypto"
+
+  create_table "communities", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "published", default: false
+    t.integer "position", default: 0, null: false
+    t.string "logo"
+    t.string "logotype"
+    t.string "name"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_communities_on_slug"
+  end
+
+  create_table "community_translations", force: :cascade do |t|
+    t.uuid "community_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.text "introduction"
+    t.string "meta_description"
+    t.string "title"
+    t.index ["community_id"], name: "index_community_translations_on_community_id"
+    t.index ["locale"], name: "index_community_translations_on_locale"
+  end
+
+  create_table "computer_fix_service_translations", force: :cascade do |t|
+    t.uuid "computer_fix_service_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.index ["computer_fix_service_id"], name: "index_8cbd37260092c65a317fabf1fe6fbf080714a9c0"
+    t.index ["locale"], name: "index_computer_fix_service_translations_on_locale"
+  end
+
+  create_table "computer_fix_services", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.decimal "price", precision: 16, scale: 4
+    t.integer "position", default: 0, null: false
+    t.string "currency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contribution_translations", force: :cascade do |t|
     t.uuid "contribution_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.index ["contribution_id"], name: "index_contribution_translations_on_contribution_id"
     t.index ["locale"], name: "index_contribution_translations_on_locale"
   end
 
   create_table "contributions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.integer "position", default: 0
+    t.integer "position", default: 0, null: false
     t.uuid "person_id"
     t.uuid "project_id"
     t.datetime "created_at", null: false
@@ -58,28 +101,35 @@ ActiveRecord::Schema.define(version: 20180412080000) do
     t.index ["project_id"], name: "index_images_on_project_id"
   end
 
-  create_table "job_translations", force: :cascade do |t|
-    t.uuid "job_id", null: false
+  create_table "office_address_translations", force: :cascade do |t|
+    t.uuid "office_address_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "country"
     t.string "name"
-    t.index ["job_id"], name: "index_job_translations_on_job_id"
-    t.index ["locale"], name: "index_job_translations_on_locale"
+    t.index ["locale"], name: "index_office_address_translations_on_locale"
+    t.index ["office_address_id"], name: "index_office_address_translations_on_office_address_id"
   end
 
-  create_table "jobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.decimal "price", precision: 16, scale: 4
-    t.integer "position", default: 0
-    t.string "currency"
+  create_table "office_addresses", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.decimal "latitude", precision: 16, scale: 10
+    t.decimal "longitude", precision: 16, scale: 10
+    t.integer "position", default: 0, null: false
+    t.string "city"
+    t.string "iso_3166_code"
+    t.string "map_link"
+    t.string "postcode"
+    t.string "slug"
+    t.string "street_with_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_office_addresses_on_slug"
   end
 
   create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "position"
+    t.integer "position", default: 0, null: false
     t.string "blog"
-    t.string "codeschool"
     t.string "email"
     t.string "facebook"
     t.string "fullname", null: false
@@ -88,9 +138,9 @@ ActiveRecord::Schema.define(version: 20180412080000) do
     t.string "instagram"
     t.string "linkedin"
     t.string "nickname"
-    t.string "skills", default: ""
+    t.string "skills", default: "", null: false
     t.string "slug"
-    t.string "technologies", default: ""
+    t.string "technologies", default: "", null: false
     t.string "twitter"
     t.string "vimeo"
     t.string "website"
@@ -103,8 +153,8 @@ ActiveRecord::Schema.define(version: 20180412080000) do
   create_table "person_translations", force: :cascade do |t|
     t.uuid "person_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "introduction"
     t.string "saying"
     t.index ["locale"], name: "index_person_translations_on_locale"
@@ -114,8 +164,8 @@ ActiveRecord::Schema.define(version: 20180412080000) do
   create_table "project_translations", force: :cascade do |t|
     t.uuid "project_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "description"
     t.text "introduction"
     t.string "subtitle"
@@ -124,15 +174,53 @@ ActiveRecord::Schema.define(version: 20180412080000) do
   end
 
   create_table "projects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.boolean "display", default: true
-    t.boolean "dofollow", default: false
-    t.integer "position", default: 0
+    t.boolean "display", default: true, null: false
+    t.boolean "dofollow", default: false, null: false
+    t.integer "position", default: 0, null: false
     t.integer "year"
+    t.string "slug"
     t.string "thumbnail"
     t.string "title", null: false
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_projects_on_slug"
+  end
+
+  create_table "technological_skills", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "position", default: 0
+    t.integer "rating", default: 0, null: false
+    t.uuid "person_id"
+    t.uuid "technology_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_technological_skills_on_person_id"
+    t.index ["technology_id"], name: "index_technological_skills_on_technology_id"
+  end
+
+  create_table "technologies", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "category", default: 0, null: false
+    t.integer "position", default: 0
+    t.string "slug"
+    t.text "icon"
+    t.text "icon_wordmark"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_technologies_on_slug"
+  end
+
+  create_table "technology_translations", force: :cascade do |t|
+    t.uuid "technology_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description", default: ""
+    t.string "meta_description", default: ""
+    t.string "meta_title", default: ""
+    t.string "name"
+    t.string "title"
+    t.index ["locale"], name: "index_technology_translations_on_locale"
+    t.index ["technology_id"], name: "index_technology_translations_on_technology_id"
   end
 
 end

@@ -7,7 +7,7 @@
         = project.title
         br
       small
-        = link_to_if project.url, project.subtitle, "//#{project.url}/", options
+        = link_to_if project.url, project.subtitle, project.url, options
 
   .col-md-9
     h4.text-justify

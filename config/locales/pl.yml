@@ -1,12 +1,12 @@
 ---
 pl:
+  blog: Blog
+  communities:
+    index:
+      title: Społeczność
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
-      find_us: Możesz nas znaleźć też tu
-      office:
-        cieszyn: Biuro Cieszyn
-        gliwice: Biuro Gliwice
     form:
       email: Twój adres email
       message: Jak możemy Ci pomóc?
@@ -15,6 +15,8 @@ pl:
         hint: Zostaw to pole puste!
         placeholder: Twój nick
       send: wyślij
+    icons:
+      find_us: Możesz nas znaleźć też tu
     new:
       contact:
         description: Nie zależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
@@ -48,23 +50,15 @@ pl:
           two: Ruby on Rails
       title:
         in_touch: Bądźmy w kontakcie
-  language: polski
   layouts:
-    shared:
-      footer:
-        contact: Kontakt
-        language: Język
-        projects: Projekty
-        service: Serwis
-        team: Zespół
-        toggle_navigation: Nawigacja
-      header:
-        contact: Kontakt
-        language: Język
-        projects: Projekty
-        service: Serwis
-        team: Zespół
-        toggle_navigation: Nawigacja
+    menu:
+      community: Społeczność
+      contact: Kontakt
+      language: Język
+      projects: Projekty
+      service: Serwis
+      team: Zespół
+      toggle_navigation: Nawigacja
   mail_form:
     attributes:
       contact_form:
@@ -96,15 +90,23 @@ pl:
       team:
         meet_us: Poznaj nasz zespół!
     technologies:
-      technologies: Technologie
+      backend: Backend development
+      database: Bazy danych
+      frontend: Frontend development
+      gamedev: Programowanie gier
+      mobile: Mobile development
+      os: Systemy operacyjne
+      testing: Testowanie
+      tool: Narzędzia
+      web: Technologie webowe
   social:
     title:
       blog: Czytaj mnie
       facebook: Polub mnie
       github: Śledź mnie
-      google: Śledź mnie
       instagram: Śledź mnie
       linkedin: Połączmy się
       twitter: Śledź mnie
-      vimeo: Śledź mnie
+      vimeo: Oglądaj mnie
+      website: Odwiedź mnie
       youtube: Daj suba

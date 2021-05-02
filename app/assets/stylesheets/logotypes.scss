@@ -1,6 +1,0 @@
-@import 'compass';
-$logotypes-sort-by: 'width';
-$logotypes-layout: horizontal;
-$logotypes-sprite-dimensions: true;
-@import 'logotypes/*.png';
-@include all-logotypes-sprites;

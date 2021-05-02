@@ -1,0 +1,11 @@
+en:
+  routes:
+    collaboration: collaboration
+    communities: community
+    contact_forms: contact-form
+    new_message: new-message
+    people: team
+    prices: prices
+    projects: projects
+    rules: rules
+    warranty: warranty

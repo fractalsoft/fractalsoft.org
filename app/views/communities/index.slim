@@ -1,0 +1,22 @@
+- content_for :body_class, 'community'
+
+.container-fluid.background
+.container.community-list
+  .row
+    .col-md-10.col-md-offset-1
+      h1.text-center
+        = t('.title')
+  .row
+    .col-md-10.col-md-offset-1
+      ul.media-list
+        - @communities.each_with_index do |community, index|
+          li.media
+            - if community.logotype?
+              = link_to community_path(community, locale: locale), class: index.even? ? 'pull-left' : 'pull-right' do
+                = image_tag community.logotype_url, class: 'media-object logotype'
+              .media-body class=(index.even? ? 'text-left' : 'text-right')
+                h4.media-heading
+                  = link_to community_path(community, locale: locale) do
+                    == community.name
+                p
+                  == Markdown.new(community.introduction).to_html

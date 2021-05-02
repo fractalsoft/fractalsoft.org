@@ -1,5 +1,4 @@
-@import 'bootstrap';
-@import 'compass/css3/opacity';
+@import 'bootstrap-sass/assets/stylesheets/_bootstrap';
 
 body.cieszyn {
   $header-color: #c3261c;
@@ -19,10 +18,10 @@ body.cieszyn {
     $background-color: #ecedf1;
     $background-image: image-url('locations/cieszyn/banner.jpg');
 
-    @include opacity(0.9);
     background: $background-color $background-image repeat-x center center;
     height: 145px;
     margin-top: -20px;
+    opacity: 0.9;
   }
 
   .pricelist {
