@@ -7,7 +7,7 @@ RSpec.describe CommunitiesController, type: :routing do
     end
 
     it 'routes to #show' do
-      expect(get: "/community/1").to route_to('communities#show', id: '1', locale: 'en')
+      expect(get: '/community/1').to route_to('communities#show', id: '1', locale: 'en')
     end
   end
 end
