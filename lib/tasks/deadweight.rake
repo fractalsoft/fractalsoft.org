@@ -6,7 +6,7 @@ if Rails.env.development?
   end
 
   desc 'run Deadweight (requires script/server)'
-  task :deadweight do
+  task deadweight: :environment do
     deadweight = Deadweight.new
     deadweight.stylesheets = ['/assets/application.css']
     deadweight.pages = ['/']

@@ -4,8 +4,8 @@ class Project < ApplicationRecord
   mount_uploader :thumbnail, ThumbnailUploader
   translates :description, :introduction, :subtitle
 
-  has_many :images
-  has_many :contributions
+  has_many :images, dependent: :nullify
+  has_many :contributions, dependent: :nullify
   has_many :people, -> { distinct }, through: :contributions
 
   # the newest projects are the most important
