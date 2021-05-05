@@ -1,16 +1,16 @@
 class Technology < ApplicationRecord
   extend FriendlyId
-  enum category: [
-    :backend,
-    :database,
-    :frontend,
-    :gamedev,
-    :mobile,
-    :os,
-    :testing,
-    :tool,
-    :web
-  ]
+  enum category: {
+    backend: 0,
+    database: 1,
+    frontend: 2,
+    gamedev: 3,
+    mobile: 4,
+    os: 5,
+    testing: 6,
+    tool: 7,
+    web: 8
+  }
   friendly_id :slug, use: [:slugged, :finders]
   translates :description, :meta_description, :meta_title, :name, :title
   scope :sorted, -> { order(position: :asc) }

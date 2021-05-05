@@ -4,7 +4,7 @@ class Image < ApplicationRecord
   belongs_to :project, optional: true
 
   def self.logo
-    where(kind: 'logo').first
+    find_by(kind: 'logo')
   end
 
   def self.pages
@@ -12,10 +12,10 @@ class Image < ApplicationRecord
   end
 
   def self.pc
-    where(kind: 'pc').first
+    find_by(kind: 'pc')
   end
 
   def self.top
-    where(kind: 'top').first
+    find_by(kind: 'top')
   end
 end
