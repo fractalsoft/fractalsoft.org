@@ -54,6 +54,7 @@ group :development do
   gem 'query_diet'
   gem 'rails_best_practices'
   gem 'rubocop'
+  gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
   gem 'rubycritic', require: false
