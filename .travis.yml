@@ -1,6 +1,6 @@
 sudo: required
 language: ruby
-dist: trusty
+dist: xenial
 services:
   - postgresql
 before_install:
@@ -10,19 +10,20 @@ install:
   - bundle install
   - npm install
 rvm:
-  - 2.6.3
+  - 2.7.2
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - RAILS_ENV=test bundle exec rails db:create db:migrate
 script:
+  - RAILS_ENV=test bundle exec rails db:reset db:setup db:migrate
   - RAILS_ENV=test bundle exec rails spec
 addons:
-  postgresql: "10"
+  postgresql: "11"
   apt:
     packages:
-    - postgresql-10
-    - postgresql-client-10
-    - postgresql-server-dev-10
+    - postgresql-11
+    - postgresql-client-11
+    - postgresql-server-dev-11
 env:
   global:
   - PGPORT=5433
+  - PGUSER=travis
