@@ -1,6 +1,7 @@
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
   Exclude:
@@ -191,6 +192,10 @@ Rails/WhereExists: # (new in 2.7)
 
 Rails/WhereNot: # (new in 2.8)
   Enabled: true
+
+RSpec/AnyInstance:
+  Exclude:
+  - spec/controllers/contact_forms_controller_spec.rb
 
 Style/ArgumentsForwarding: # (new in 1.1)
   Enabled: true

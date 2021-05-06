@@ -7,23 +7,23 @@ RSpec.describe ContactForm, type: :model do
 
   describe 'do not validate' do
     it 'if name is empty sting' do
-      contact_form = ContactForm.new(params.merge(name: ''))
+      contact_form = described_class.new(params.merge(name: ''))
       expect(contact_form).to be_invalid
     end
 
     it 'if email has wrong format' do
-      contact_form = ContactForm.new(params.merge(email: 'lorem'))
+      contact_form = described_class.new(params.merge(email: 'lorem'))
       expect(contact_form).to be_invalid
     end
 
     it 'if message is empty string' do
-      contact_form = ContactForm.new(params.merge(message: ''))
+      contact_form = described_class.new(params.merge(message: ''))
       expect(contact_form).to be_invalid
     end
   end
 
   it 'is valid for correct data' do
-    contact = ContactForm.new(params)
+    contact = described_class.new(params)
     expect(contact).to be_valid
   end
 end
