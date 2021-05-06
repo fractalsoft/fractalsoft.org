@@ -2,22 +2,30 @@ require 'rails_helper'
 
 RSpec.describe ContactFormsController, type: :routing do
   describe 'routing' do
-    it 'routes to #create with locale en' do
-      path = '/contact-form'
-      expect(post(path)).to route_to(
-        controller: 'contact_forms',
-        action: 'create',
-        locale: 'en'
-      )
+    context 'when locale is en' do
+      let(:contact_form_path) { '/contact-form' }
+      let(:locale) { 'en' }
+
+      it 'returns route to #create' do
+        expect(post(contact_form_path)).to route_to(
+          controller: 'contact_forms',
+          action: 'create',
+          locale: locale
+        )
+      end
     end
 
-    it 'routes to #create with locale pl' do
-      path = '/pl/formularz-kontaktowy'
-      expect(post(path)).to route_to(
-        controller: 'contact_forms',
-        action: 'create',
-        locale: 'pl'
-      )
+    context 'when locale is pl' do
+      let(:contact_form_path) { '/pl/formularz-kontaktowy' }
+      let(:locale) { 'pl' }
+
+      it 'routes to #create with locale pl' do
+        expect(post(contact_form_path)).to route_to(
+          controller: 'contact_forms',
+          action: 'create',
+          locale: locale
+        )
+      end
     end
   end
 end
