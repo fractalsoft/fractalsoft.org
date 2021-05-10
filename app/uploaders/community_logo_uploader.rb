@@ -8,6 +8,7 @@ class CommunityLogoUploader < ImageUploader
     height = params.first
     ratio = height / (image[:height] * 1.0)
     return [image[:width], image[:height]] if height > image[:height]
+
     [image[:width] * ratio, height]
   end
 
@@ -25,10 +26,10 @@ class CommunityLogoUploader < ImageUploader
   def resize(width, height, gravity = 'Center')
     manipulate! do |img|
       img.combine_options do |cmd|
-        cmd.resize "#{width}"
+        cmd.resize width.to_s
         if img[:width] < img[:height]
           cmd.gravity gravity
-          cmd.background "rgba(255,255,255,0.0)"
+          cmd.background 'rgba(255,255,255,0.0)'
           cmd.extent "#{width}x#{height}"
         end
       end

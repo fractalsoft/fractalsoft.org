@@ -3,6 +3,9 @@ require 'rails_helper'
 RSpec.describe Project, type: :model do
   subject(:project) { build(:project) }
 
+  let(:contribution) { create(:contribution) }
+  let(:person) { create(:person) }
+
   it 'has many images' do
     image = Image.new
     project.images << image
@@ -10,17 +13,20 @@ RSpec.describe Project, type: :model do
   end
 
   it 'has many contributions' do
-    contribution = create(:contribution)
-    project.contributions << contribution
     expect(project).to have_many(:contributions)
+  end
+
+  it 'returns contributions' do
+    project.contributions << contribution
     expect(project.contributions).to eq [contribution]
   end
 
   it 'has many people through contibutions' do
-    person = create(:person)
-    create(:contribution, person: person)
-    project.people << person
     expect(project).to have_many(:people)
+  end
+
+  it 'returns people' do
+    create(:contribution, person: person, project: project)
     expect(project.people).to eq [person]
   end
 
