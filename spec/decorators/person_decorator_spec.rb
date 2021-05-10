@@ -40,13 +40,22 @@ RSpec.describe PersonDecorator, type: :decorator do
     end
   end
 
-  context 'no params' do
+  context 'without params' do
     let(:params) { {} }
 
-    it 'do not show any field' do
+    it 'do not show facebook' do
       expect(decorator.facebook).to be_nil
+    end
+
+    it 'do not show github' do
       expect(decorator.github).to be_nil
+    end
+
+    it 'do not show twitter' do
       expect(decorator.twitter).to be_nil
+    end
+
+    it 'do not show website' do
       expect(decorator.website).to be_nil
     end
   end

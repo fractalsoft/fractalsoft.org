@@ -56,8 +56,8 @@ class PersonDecorator < Draper::Decorator
 
   private
 
-  def given(method, link = :link_to, &block)
-    block.call(method, link) if object.send(method)
+  def given(method, link = :link_to)
+    yield(method, link) if object.send(method)
   end
 
   def social_title(name)

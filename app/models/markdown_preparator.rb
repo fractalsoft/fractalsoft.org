@@ -5,7 +5,7 @@ class MarkdownPreparator
   def initialize(input)
     @input = input
     @output = input.gsub(REGEXP) do
-      prepare(slug: $1, type: $3)
+      prepare(slug: Regexp.last_match(1), type: Regexp.last_match(3))
     end
   end
 
@@ -32,8 +32,10 @@ class MarkdownPreparator
   def prepare(slug:, type:)
     technology = Technology.find_by(slug: slug)
     return slug unless technology
+
     source = image_data(technology, type: type)
     return technology.title unless source
+
     "<img src='#{source}' #{options(technology)}>"
   end
 end
