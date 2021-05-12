@@ -22,6 +22,16 @@ body.job-offer {
     }
 
     .row-margin {
+      .center-block {
+        display: block;
+        margin-left: 175px;
+        margin-right: 238px;
+      }
+
+      img {
+        width: 50%;
+      }
+      
       margin-top: 40px;
     }
   }
