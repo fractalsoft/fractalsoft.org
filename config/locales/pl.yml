@@ -19,14 +19,14 @@ pl:
       find_us: Możesz nas znaleźć też tu
     new:
       contact:
-        description: Nie zależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
+        description: Niezależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
         header: Chcesz się z nami skontaktować?
   home:
     index:
       button:
         contact_us: Napisz do nas
       contact:
-        description: Nie zależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
+        description: Niezależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
         header: Chcesz się z nami skontaktować?
       header_html: Aplikacje <strong>internetowe</strong> i <strong>mobilne</strong> to nasza pasja
       how_we_work:
