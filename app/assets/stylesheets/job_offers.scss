@@ -2,13 +2,12 @@
 @import 'variables';
 
 body.job-offer {
-  .job-offer-item,
-  .job-offer-list {
-    @include vertical-padding(20px);
+  .job-offers-list, .job-offer-item {
     background-color: $light-background-color;
     color: $grey-text-color;
+
     margin-top: -250px;
-    text-align: center;
+    @include vertical-padding(20px);
 
     h1 {
       font-family: 'Asap', Helvetica, sans-serif;
@@ -17,5 +16,17 @@ body.job-offer {
       margin-top: 100px;
       text-transform: uppercase;
     }
+
+    h2 {
+      font-weight: 520;
+    }
+
+    .row-margin {
+      margin-top: 40px;
+    }
+  }
+
+  .job-offer-item {
+    text-align: center;
   }
 }
