@@ -33,6 +33,9 @@ MethodLength:
 Layout/SpaceBeforeBrackets: # (new in 1.7)
   Enabled: true
 
+Layout/TrailingWhitespace:
+  Enabled: true
+
 Lint/AmbiguousAssignment: # (new in 1.7)
   Enabled: true
 
