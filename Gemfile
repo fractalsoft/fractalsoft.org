@@ -46,6 +46,7 @@ group :development do
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'capistrano-rails', '~> 1.3'
+  gem 'coffeelint'
   gem 'colored'
   gem 'deadweight'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
@@ -59,6 +60,7 @@ group :development do
   gem 'rubocop-rspec', require: false
   gem 'rubycritic', require: false
   # gem 'sandi_meter'
+  gem 'scss_lint', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.7' # <%= console %> anywhere in the code
