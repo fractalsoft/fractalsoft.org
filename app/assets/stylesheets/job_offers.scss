@@ -24,11 +24,12 @@ body.job-offer {
     .row-margin {
       .center-block {
         display: block;
-        margin-left: 175px;
-        margin-right: 238px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       img {
+        padding-right: 8%;
         width: 50%;
       }
       
