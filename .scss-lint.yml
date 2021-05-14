@@ -1,25 +1,46 @@
 # https://github.com/brigade/scss-lint/blob/master/config/default.yml
+scss_files: 'app/assets/stylesheets/**/*.scss'
+
+severity: error
 
 linters:
   BorderZero:
     enabled: true
     convention: none # or zero
 
+  Comment:
+    enabled: false
+
+  DeclarationOrder:
+    enabled: false
+    
+  EmptyLineBetweenBlocks:
+    enabled: false
+  
   IdSelector:
     enabled: false
 
+  ImportPath:
+    enabled: false
+  
   LeadingZero:
     enabled: true
     style: include_zero # or exclude_zero
 
   NestingDepth:
     enabled: true
-    max_depth: 4
+    max_depth: 6
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
     enabled: false
 
+  PropertySortOrder:
+    enabled: false
+  
+  PseudoElement:
+    enabled: false
+  
   QualifyingElement:
     enabled: true
     allow_element_with_attribute: false
@@ -28,8 +49,17 @@ linters:
 
   SelectorDepth:
     enabled: true
-    max_depth: 4
+    max_depth: 6
 
+  SelectorFormat:
+    enabled: false
+  
+  SingleLinePerSelector:
+    enabled: false
+  
   StringQuotes:
     enabled: true
     style: single_quotes # or double_quotes
+
+  TrailingWhitespace:
+    enabled: true
