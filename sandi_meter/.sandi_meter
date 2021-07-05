@@ -1,0 +1,2 @@
+db/migrate
+db/seeds/06_community.rb
