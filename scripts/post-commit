@@ -1,0 +1,35 @@
+#!/bin/bash
+
+COLOR_RED='\033[0;31m'
+COLOR_WHITE='\033[1;37m'
+COLOR_YELLOW='\033[1;33m'
+NO_COLOR='\033[0m'
+
+exec 1>&2
+
+MESSAGE=$(git log --format=%B -n 1)
+
+EXIT_STATUS=0
+
+if hash aspell 2>/dev/null && hash awk 2>/dev/null; then
+  WORDS=$(echo "$MESSAGE" | aspell list -l en | awk '!_[$0]++')
+  if [ -n "$WORDS" ]; then
+    echo -e "${COLOR_YELLOW}Warning:${NO_COLOR} Possible spelling errors found in commit message."
+    echo -e "Possible mispelled words:"
+    for WORD in $WORDS; do
+      echo -e " - ${COLOR_RED}$WORD${NO_COLOR}"
+    done
+    EXIT_STATUS=1
+  fi
+else
+  echo "Error: need aspell and awk to check spelling of commit messages."
+  EXIT_STATUS=1
+fi
+
+if [ $EXIT_STATUS -ne 0 ]; then
+  echo
+  echo -e "Use ${COLOR_WHITE}git commit --amend${NO_COLOR} to change the message."
+  echo
+fi
+
+exit $EXIT_STATUS
