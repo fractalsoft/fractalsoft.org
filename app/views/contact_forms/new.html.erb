@@ -18,7 +18,7 @@ office_addresses = OfficeAddress.sorted
         <div class='btn btn-default btn-map <%= class_name %>' data-target='#<%= office_address.slug %>-map'><%= office_address.name %></div>
       <% end %>
       </div>
-      <%#= render 'form', contact_form: @contact_form %>
+      <%= render 'form', contact_form: @contact_form %>
     </div>
     <div class='col-sm-4 col-sm-pull-8 col-xs-12'>
       <%= render 'contact' %>
