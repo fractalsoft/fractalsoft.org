@@ -1,0 +1,1 @@
+RemoveUnusedMethodsInControllersCheck: { except_methods: [ContactForm#headers] }
