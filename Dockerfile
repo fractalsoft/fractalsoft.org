@@ -1,4 +1,4 @@
-FROM ruby:2.6.3
+FROM ruby:3.0.1
 
 ENV APP_HOME /fractalsoft
 ENV RAILS_SERVE_STATIC_FILES true
@@ -6,7 +6,7 @@ ENV RAILS_SERVE_STATIC_FILES true
 # zlib1g-dev: for nokogiri
 # postgresql-client
 RUN \
-    curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb http://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
     && apt-get update -qq \
