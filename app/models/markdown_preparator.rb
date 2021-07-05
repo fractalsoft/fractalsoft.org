@@ -1,5 +1,5 @@
 class MarkdownPreparator
-  REGEXP = /\[technology:(.*)\](\<([AIL])\>)?/.freeze
+  REGEXP = /\[technology:(.*)\](\<([AIL])\>)?/
   attr_reader :output
 
   def initialize(input)
