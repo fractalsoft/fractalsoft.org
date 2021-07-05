@@ -12,7 +12,7 @@ module ExternalLink
       target: '_blank'
     }.freeze
 
-    def initialize(path:, title:, width: '32px')
+    def initialize(path: '#', title: '', width: '32px')
       @path = path
       @title = title
       @width = width
@@ -24,8 +24,8 @@ module ExternalLink
       link_to(icon, url, title: title, **options)
     end
 
-    def self.link(params)
-      new(params).link
+    def self.link(**params)
+      new(**params).link
     end
 
     private
