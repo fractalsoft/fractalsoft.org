@@ -14,8 +14,20 @@ AllCops:
     - spec/i18n_spec.rb
     - tmp/**/*
 
-Documentation:
+Bundler/DuplicatedGem:
+  Enabled: true
+
+Bundler/GemComment:
   Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+Bundler/InsecureProtocolSource:
+  Enabled: true
+
+Bundler/OrderedGems:
+  Enabled: true
 
 Gemspec/DateAssignment:
   Enabled: true
@@ -24,7 +36,7 @@ Metrics/BlockLength:
   Exclude:
     - spec/**/*
 
-MethodLength:
+Metrics/MethodLength:
   CountComments: false
   Exclude:
     - app/uploaders/community_logo_uploader.rb
@@ -33,8 +45,16 @@ MethodLength:
 Naming/InclusiveLanguage:
   Enabled: true
 
+Layout/DotPosition:
+  Enabled: true
+  EnforcedStyle: leading
+
 Layout/LineEndStringConcatenationIndentation:
   Enabled: true
+
+Layout/LineLength:
+  Enabled: true
+  Max: 128
 
 Layout/SpaceBeforeBrackets:
   Enabled: true
@@ -76,6 +96,9 @@ Lint/OrAssignmentToConstant:
   Enabled: true
 
 Lint/RedundantDirGlobSort:
+  Enabled: true
+
+Lint/ScriptPermission:
   Enabled: true
 
 Lint/SymbolConversion:
@@ -240,6 +263,9 @@ Style/CollectionCompact:
 
 Style/DocumentDynamicEvalDefinition:
   Enabled: true
+
+Style/Documentation:
+  Enabled: false
 
 Style/EmptyMethod:
   Enabled: false
