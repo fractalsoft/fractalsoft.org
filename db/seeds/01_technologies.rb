@@ -21,6 +21,7 @@ require_relative 'technology/sqlite'
 require_relative 'technology/angularjs'
 require_relative 'technology/backbonejs'
 require_relative 'technology/emberjs'
+require_relative 'technology/gatsby'
 require_relative 'technology/marionettejs'
 require_relative 'technology/react'
 ## javascript libraries
@@ -34,6 +35,9 @@ require_relative 'technology/typescript'
 # game development
 require_relative 'technology/unity'
 
+# mathematical software
+require_relative 'technology/mathematica'
+
 # mobile development
 require_relative 'technology/cordova'
 
@@ -43,6 +47,7 @@ require_relative 'technology/linux'
 # testing
 require_relative 'technology/cypress'
 require_relative 'technology/minitest'
+require_relative 'technology/playwright'
 require_relative 'technology/rspec'
 require_relative 'technology/testcase'
 
@@ -53,6 +58,7 @@ require_relative 'technology/git'
 require_relative 'technology/graphql'
 require_relative 'technology/postgis'
 require_relative 'technology/sidekiq'
+require_relative 'technology/sonic_pi'
 
 # web
 require_relative 'technology/css3'
@@ -61,3 +67,4 @@ require_relative 'technology/html5'
 require_relative 'technology/less'
 require_relative 'technology/sass'
 require_relative 'technology/slim'
+require_relative 'technology/svg'

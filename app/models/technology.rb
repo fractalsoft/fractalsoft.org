@@ -6,10 +6,11 @@ class Technology < ApplicationRecord
     frontend: 2,
     gamedev: 3,
     mobile: 4,
-    os: 5,
-    testing: 6,
-    tool: 7,
-    web: 8
+    ms: 5,
+    os: 6,
+    testing: 7,
+    tool: 8,
+    web: 9
   }
   friendly_id :slug, use: [:slugged, :finders]
   translates :description, :meta_description, :meta_title, :name, :title
