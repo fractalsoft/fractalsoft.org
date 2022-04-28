@@ -409,7 +409,7 @@ GEM
       simplecov (>= 0.17.0)
       tty-which (~> 0.4.0)
       virtus (~> 1.0)
-    rubyzip (2.3.0)
+    rubyzip (2.3.2)
     sandi_meter (1.2.0)
       json
       launchy
