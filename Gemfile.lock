@@ -281,7 +281,7 @@ GEM
     query_diet (0.7.1)
     racc (1.6.0)
     rack (2.2.3)
-    rack-attack (6.5.0)
+    rack-attack (6.6.1)
       rack (>= 1.0, < 3)
     rack-proxy (0.7.2)
       rack
