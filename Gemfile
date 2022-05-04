@@ -32,7 +32,7 @@ gem 'puma' # Ruby web server built for concurrency
 gem 'rack-attack'
 gem 'rails-i18n'
 gem 'redcarpet'
-gem 'rollbar', '~> 3.1.2' # Error tracking service
+gem 'rollbar', '~> 3.3.0' # Error tracking service
 gem 'route_translator' # Manage translations of routes
 gem 'simple_form', '~> 5.1'
 gem 'slim-rails', '~> 3.2' # Template language instead Erb
