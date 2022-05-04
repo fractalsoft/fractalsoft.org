@@ -12,7 +12,7 @@ gem 'sass-rails', '~> 6.0'
 gem 'sdoc', '~> 2.3.2', group: :doc
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', '~> 5.2.1' # Transpile app-like JavaScript.
+gem 'webpacker', '~> 5.4.3' # Transpile app-like JavaScript.
 
 gem 'active_link_to'
 gem 'carrierwave', '~> 2.0'
