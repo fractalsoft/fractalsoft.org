@@ -262,7 +262,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     normalize-rails (8.0.1)
-    oj (3.11.7)
+    oj (3.13.11)
     parallel (1.22.1)
     parser (3.0.3.2)
       ast (~> 2.4.1)
