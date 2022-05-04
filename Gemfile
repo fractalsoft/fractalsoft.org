@@ -9,7 +9,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'sass-rails', '~> 6.0'
-gem 'sdoc', '~> 2.1.0', group: :doc
+gem 'sdoc', '~> 2.3.2', group: :doc
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', '~> 5.2.1' # Transpile app-like JavaScript.

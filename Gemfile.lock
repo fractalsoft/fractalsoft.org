@@ -339,7 +339,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rchardet (1.8.0)
-    rdoc (6.3.1)
+    rdoc (6.3.3)
     redcarpet (3.5.1)
     reek (6.0.4)
       kwalify (~> 0.7.0)
@@ -432,7 +432,7 @@ GEM
       tilt
     scss_lint (0.59.0)
       sass (~> 3.5, >= 3.5.5)
-    sdoc (2.1.0)
+    sdoc (2.3.2)
       rdoc (>= 5.0)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
@@ -571,7 +571,7 @@ DEPENDENCIES
   sandi_meter
   sass-rails (~> 6.0)
   scss_lint
-  sdoc (~> 2.1.0)
+  sdoc (~> 2.3.2)
   selenium-webdriver
   shoulda-matchers
   simple_form (~> 5.1)
