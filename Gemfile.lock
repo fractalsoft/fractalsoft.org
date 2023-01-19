@@ -127,7 +127,7 @@ GEM
       execjs
       json
     colored (1.2)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     css_parser (1.2.6)
       addressable
@@ -185,15 +185,15 @@ GEM
       git (~> 1.2)
     git (1.8.1)
       rchardet (~> 1.8)
-    globalid (0.4.2)
-      activesupport (>= 4.2.0)
+    globalid (1.0.1)
+      activesupport (>= 5.0)
     globalize (6.0.1)
       activemodel (>= 4.2, < 7.0)
       activerecord (>= 4.2, < 7.0)
       request_store (~> 1.0)
     highline (2.0.3)
     http_accept_language (2.1.1)
-    i18n (1.8.10)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.34)
       activesupport (>= 4.0.2)
@@ -240,7 +240,7 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.1.0)
     mini_portile2 (2.5.3)
-    minitest (5.14.4)
+    minitest (5.17.0)
     mixlib-cli (2.1.8)
     msgpack (1.4.2)
     net-scp (3.0.0)
@@ -472,7 +472,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -500,7 +500,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.4.2)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
