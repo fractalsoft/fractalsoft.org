@@ -29,9 +29,6 @@ Bundler/InsecureProtocolSource:
 Bundler/OrderedGems:
   Enabled: true
 
-Gemspec/DateAssignment:
-  Enabled: true
-
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
