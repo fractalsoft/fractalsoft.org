@@ -6,7 +6,7 @@ RSpec.describe PersonDecorator, type: :decorator do
 
   describe '#facebook' do
     let(:facebook) { 'fractalsoft' }
-    let(:params) { { facebook: facebook } }
+    let(:params) { { facebook: } }
 
     it 'shows facebook' do
       expect(decorator.facebook).to include facebook, 'href', '.svg'
@@ -15,7 +15,7 @@ RSpec.describe PersonDecorator, type: :decorator do
 
   describe '#github' do
     let(:github) { 'fractalsoft' }
-    let(:params) { { github: github } }
+    let(:params) { { github: } }
 
     it 'shows github' do
       expect(decorator.github).to include github, 'href', '.svg'
@@ -24,7 +24,7 @@ RSpec.describe PersonDecorator, type: :decorator do
 
   describe '#twitter' do
     let(:twitter) { 'fractal_soft' }
-    let(:params) { { twitter: twitter } }
+    let(:params) { { twitter: } }
 
     it 'shows twitter' do
       expect(decorator.twitter).to include twitter, 'href', '.svg'
@@ -33,7 +33,7 @@ RSpec.describe PersonDecorator, type: :decorator do
 
   describe '#website' do
     let(:website) { 'https://fractalsoft.org' }
-    let(:params) { { website: website } }
+    let(:params) { { website: } }
 
     it 'shows website' do
       expect(decorator.website).to include website, 'href', '.svg'

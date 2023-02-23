@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ComputerFixService, type: :model do
-  subject(:price_list) { create(:computer_fix_service, name: name, price: price) }
+  subject(:price_list) { create(:computer_fix_service, name:, price:) }
 
   let(:name) { 'Lorem ipsum' }
   let(:price) { 100.0 }

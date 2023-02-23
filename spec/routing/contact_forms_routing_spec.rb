@@ -10,7 +10,7 @@ RSpec.describe ContactFormsController, type: :routing do
         expect(post(contact_form_path)).to route_to(
           controller: 'contact_forms',
           action: 'create',
-          locale: locale
+          locale:
         )
       end
     end
@@ -23,7 +23,7 @@ RSpec.describe ContactFormsController, type: :routing do
         expect(post(contact_form_path)).to route_to(
           controller: 'contact_forms',
           action: 'create',
-          locale: locale
+          locale:
         )
       end
     end
