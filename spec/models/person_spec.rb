@@ -7,7 +7,7 @@ RSpec.describe Person, type: :model do
     end
 
     let(:project) { create(:project) }
-    let(:contribution) { create(:contribution, project: project) }
+    let(:contribution) { create(:contribution, project:) }
 
     it 'has many projects through contributions' do
       expect(member_team).to have_many(:projects)
@@ -28,12 +28,12 @@ RSpec.describe Person, type: :model do
 
   context 'with #project_with_contributions' do
     subject(:person_with_contributions) do
-      create(:contribution, project: project, person: create(:person))
+      create(:contribution, project:, person: create(:person))
       described_class.create(fullname: 'John Smith', contributions: [contribution])
     end
 
     let(:project) { create(:project) }
-    let(:contribution) { create(:contribution, project: project) }
+    let(:contribution) { create(:contribution, project:) }
 
     it 'show only contribution for specific person' do
       expect(person_with_contributions.project_with_contributions(project)).to eq [contribution]

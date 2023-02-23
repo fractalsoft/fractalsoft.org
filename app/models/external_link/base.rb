@@ -21,7 +21,7 @@ module ExternalLink
     def link
       return unless path
 
-      link_to(icon, url, title: title, **options)
+      link_to(icon, url, title:, **options)
     end
 
     def self.link(**params)
@@ -34,7 +34,7 @@ module ExternalLink
 
     def icon
       content_tag :span, class: 'icon' do
-        image_tag image_url, width: width
+        image_tag image_url, width:
       end
     end
 

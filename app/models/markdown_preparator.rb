@@ -30,10 +30,10 @@ class MarkdownPreparator
   end
 
   def prepare(slug:, type:)
-    technology = Technology.find_by(slug: slug)
+    technology = Technology.find_by(slug:)
     return slug unless technology
 
-    source = image_data(technology, type: type)
+    source = image_data(technology, type:)
     return technology.title unless source
 
     "<img src='#{source}' #{options(technology)}>"

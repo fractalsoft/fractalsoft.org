@@ -26,14 +26,14 @@ RSpec.describe Project, type: :model do
   end
 
   it 'returns people' do
-    create(:contribution, person: person, project: project)
+    create(:contribution, person:, project:)
     expect(project.people).to eq [person]
   end
 
   describe '#logo_image' do
     it 'show logo image' do
-      image = Image.create(kind: 'logo', project: project)
-      Image.create(kind: 'other', project: project)
+      image = Image.create(kind: 'logo', project:)
+      Image.create(kind: 'other', project:)
 
       expect(project.logo_image).to eq(image)
     end
@@ -41,8 +41,8 @@ RSpec.describe Project, type: :model do
 
   describe '#page_images' do
     it 'show all page images' do
-      image = Image.create(kind: 'page', project: project)
-      Image.create(kind: 'other', project: project)
+      image = Image.create(kind: 'page', project:)
+      Image.create(kind: 'other', project:)
 
       expect(project.page_images).to eq([image])
     end
@@ -50,8 +50,8 @@ RSpec.describe Project, type: :model do
 
   describe '#pc_image' do
     it 'show pc image' do
-      image = Image.create(kind: 'pc', project: project)
-      Image.create(kind: 'other', project: project)
+      image = Image.create(kind: 'pc', project:)
+      Image.create(kind: 'other', project:)
 
       expect(project.pc_image).to eq(image)
     end
@@ -59,8 +59,8 @@ RSpec.describe Project, type: :model do
 
   describe '#top_image' do
     it 'show top image' do
-      image = Image.create(kind: 'top', project: project)
-      Image.create(kind: 'other', project: project)
+      image = Image.create(kind: 'top', project:)
+      Image.create(kind: 'other', project:)
 
       expect(project.top_image).to eq(image)
     end
