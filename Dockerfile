@@ -1,4 +1,4 @@
-FROM ruby:3.0.1
+FROM ruby:3.1.3
 
 ENV APP_HOME /fractalsoft
 ENV RAILS_SERVE_STATIC_FILES true
