@@ -62,26 +62,28 @@ We've been to many cities in Poland, where we taught programming women.
 
 A short list of Rails Girls events in which we were coaches:
 
-- Rails Girls Warsaw 2014
-- Rails Girls Poznań 2014
-- Rails Girls Szczecin 2014
-- Rails Girls Łódź 2014
-- Rails Girls Youth Kraków 2014
-- Rails Girls Wrocław 2014
-- Rails Girls Youth Szczecin 2014
-- Rails Girls Warsaw 2015
-- Rails Girls Łódź 2015
-- Rails Girls Szczecin 2015
-- Rails Girls Warsaw 2016
-- Rails Girls Poznań 2016
-- Rails Girls Szczecin 2016
-- Rails Girls Łódź 2016
-- Rails Girls Szczecin 2017
-- Rails Girls Gorzów 2017
-- Rails Girls Poznań 2018
-- Rails Girls Warsaw 2019
-- Rails Girls Wrocław 2020
-- Rails Girls Bielsko-Biała 2020
+1. Rails Girls Warsaw 2014
+2. Rails Girls Poznań 2014
+3. Rails Girls Szczecin 2014
+4. Rails Girls Łódź 2014
+5. Rails Girls Youth Kraków 2014
+6. Rails Girls Wrocław 2014
+7. Rails Girls Youth Szczecin 2014
+8. Rails Girls Warsaw 2015
+9. Rails Girls Łódź 2015
+10. Rails Girls Szczecin 2015
+11. Rails Girls Warsaw 2016
+12. Rails Girls Poznań 2016
+13. Rails Girls Szczecin 2016
+14. Rails Girls Łódź 2016
+15. Rails Girls Szczecin 2017
+16. Rails Girls Gorzów 2017
+17. Rails Girls Poznań 2018
+18. Rails Girls Warsaw 2019
+19. Rails Girls Wrocław 2020
+20. Rails Girls Bielsko-Biała 2020
+21. Rails Girls Warsaw 2022
+22. Rails Girls Wrocław 2022
 )
 
 rails_girls.introduction = %(
@@ -151,26 +153,28 @@ Byliśmy już w wielu miastach w Polsce, gdzie uczyliśmy kobiety programowania.
 
 Krótka lista wydarzeń Rails Girls w których byliśmy coachami:
 
-- Rails Girls Warsaw 2014
-- Rails Girls Poznań 2014
-- Rails Girls Szczecin 2014
-- Rails Girls Łódź 2014
-- Rails Girls Youth Kraków 2014
-- Rails Girls Wrocław 2014
-- Rails Girls Youth Szczecin 2014
-- Rails Girls Warsaw 2015
-- Rails Girls Łódź 2015
-- Rails Girls Szczecin 2015
-- Rails Girls Warsaw 2016
-- Rails Girls Poznań 2016
-- Rails Girls Szczecin 2016
-- Rails Girls Łódź 2016
-- Rails Girls Szczecin 2017
-- Rails Girls Gorzów 2017
-- Rails Girls Poznań 2018
-- Rails Girls Warsaw 2019
-- Rails Girls Wrocław 2020
-- Rails Girls Bielsko-Biała 2020
+1. Rails Girls Warsaw 2014
+2. Rails Girls Poznań 2014
+3. Rails Girls Szczecin 2014
+4. Rails Girls Łódź 2014
+5. Rails Girls Youth Kraków 2014
+6. Rails Girls Wrocław 2014
+7. Rails Girls Youth Szczecin 2014
+8. Rails Girls Warsaw 2015
+9. Rails Girls Łódź 2015
+10. Rails Girls Szczecin 2015
+11. Rails Girls Warsaw 2016
+12. Rails Girls Poznań 2016
+13. Rails Girls Szczecin 2016
+14. Rails Girls Łódź 2016
+15. Rails Girls Szczecin 2017
+16. Rails Girls Gorzów 2017
+17. Rails Girls Poznań 2018
+18. Rails Girls Warsaw 2019
+19. Rails Girls Wrocław 2020
+20. Rails Girls Bielsko-Biała 2020
+21. Rails Girls Warsaw 2022
+22. Rails Girls Wrocław 2022
 )
 
 rails_girls.introduction = %(
