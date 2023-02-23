@@ -19,16 +19,20 @@ functional programming, mobile application, good quality and refactoring of code
 
 The titles of the presentation that we presented at SRUG meetings:
 
-- Are you an Egoistic Programmer? Take Care of your Code - Refactoring Ideas
-- Good Quality of a Project - SEO Onsite
-- Don't git blame me
-- How to Tame Robots
-- Introduction to SVG
-- Occupational Burnout Syndrome - How to still feel passion, even after years of programming?
-- Pattern Matching in Ruby
-- Ruby Functional Programming
-- Ruboto - introduction
-- Why do I like Ruby
++ Are you an Egoistic Programmer? Take Care of your Code - Refactoring Ideas
++ Good Quality of a Project - SEO Onsite
++ Don't git blame me
++ How to deal with flaky tests?
++ How to focus?
++ How to Tame Robots
++ Introduction to SVG
++ Occupational Burnout Syndrome - How to still feel passion, even after years of programming?
++ Pattern Matching in Ruby
++ Ruby Functional Programming
++ Ruboto - introduction
++ Ruby map(&:method) syntax
++ Why do I like Ruby
++ Zero downtime migrations in Rails
 )
 srug.introduction = %(
 SRUG is a local group of **Ruby language** programmers mostly operating
@@ -103,11 +107,14 @@ Tytuły prezentacji, które przedstawialiśmy na spotkaniach SRUG:
 + Don't git blame me
 + Dopasowanie do wzorca w Ruby
 + Jak oswoić roboty sieciowe?
++ Jak radzić sobie z niestabilnymi testami?
 + Pattern Matching w Ruby
 + Programowanie funkcyjne w Ruby
 + Ruboto - wprowadzenie
++ Ruby map(&:method) składnia
 + Syndrom wypalenia zawodowego - Jak nadal czuć pasję, nawet po latach programowania?
 + Wprowadzenie do SVG
++ Zero przestojów w migracjach w Ruby on Rails
 
 
 ## Język Ruby a społeczność lokalna
