@@ -18,7 +18,7 @@ class Technology < ApplicationRecord
   scope :sorted, -> { order(position: :asc) }
 
   def any_image?
-    !(icon_wordmark || icon).nil?
+    logotype_or_image.present?
   end
 
   def image_base64
@@ -31,6 +31,10 @@ class Technology < ApplicationRecord
     return unless icon_wordmark
 
     svg_to_base64(icon_wordmark)
+  end
+
+  def logotype_or_image
+    icon_wordmark || icon
   end
 
   def logotype_or_image_base64
