@@ -47,6 +47,7 @@ require_relative 'technology/linux'
 
 # testing
 require_relative 'technology/cypress'
+require_relative 'technology/jest'
 require_relative 'technology/minitest'
 require_relative 'technology/playwright'
 require_relative 'technology/rspec'
