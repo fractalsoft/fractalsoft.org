@@ -76,13 +76,33 @@ contribution.attributes = { locale: :pl, name: 'Implementacja dynamicznych pól 
 contribution.save
 
 contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en, name: 'Phone number normalization (standard E.164)' }
+contribution.attributes = { locale: :pl, name: 'Normalizacja numerów telefonw (E.164)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Post-migration PDF generators configuration' }
+contribution.attributes = { locale: :pl, name: 'Konfiguracja generatorów PDF po migracji' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
 contribution.attributes = { locale: :en, name: 'Application update (Ruby, Rails and gems)' }
 contribution.attributes = { locale: :pl, name: 'Aktualizacja aplikacji (Ruby, Rails i biblioteki)' }
 contribution.save
 
-contribution = Contribution.new(params.merge(position: 6))
+contribution = Contribution.new(params.merge(position: 8))
 contribution.attributes = { locale: :en, name: 'Code refactoring' }
 contribution.attributes = { locale: :pl, name: 'Refaktoring kodu' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 9))
+contribution.attributes = { locale: :en, name: 'UX development' }
+contribution.attributes = { locale: :pl, name: 'Rozwój UX' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 10))
+contribution.attributes = { locale: :en, name: 'Creating translations' }
+contribution.attributes = { locale: :pl, name: 'Tworzenie tłumaczeń' }
 contribution.save
 
 # ania in purpura
@@ -111,4 +131,14 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 5))
 contribution.attributes = { locale: :en, name: 'Code refactoring' }
 contribution.attributes = { locale: :pl, name: 'Refaktoryzacja kodu' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Admin Dashboard Enhancement' }
+contribution.attributes = { locale: :pl, name: 'Ulepszenie pulpitu administratora' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en, name: 'Creating translations' }
+contribution.attributes = { locale: :pl, name: 'Tworzenie tłumaczeń' }
 contribution.save
