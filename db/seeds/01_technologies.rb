@@ -23,6 +23,7 @@ require_relative 'technology/backbonejs'
 require_relative 'technology/emberjs'
 require_relative 'technology/gatsby'
 require_relative 'technology/marionettejs'
+require_relative 'technology/nextjs'
 require_relative 'technology/react'
 ## javascript libraries
 require_relative 'technology/jquery'
