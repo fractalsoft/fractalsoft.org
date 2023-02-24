@@ -5,6 +5,7 @@ Technology.delete_all
 ## frameworks
 require_relative 'technology/jekyll'
 require_relative 'technology/ruby_on_rails'
+require_relative 'technology/sinatra'
 ## programming language
 require_relative 'technology/csharp'
 require_relative 'technology/python'
