@@ -46,6 +46,7 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
 %w[
   ruby-on-rails
   ruby
+  rails-event-store
   rspec
   postgresql
   postgis

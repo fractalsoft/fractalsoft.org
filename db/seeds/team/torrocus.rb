@@ -47,6 +47,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   ruby
   ruby-on-rails
   jekyll
+  sinatra
   git
   postgresql
   mysql
@@ -55,6 +56,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   linux
   docker
   rspec
+  svg
   sass
   less
   coffeescript
@@ -65,10 +67,13 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   html5
   css3
   javascript
+  typescript
   sidekiq
   slim
   minitest
   testcase
+  next-js
+  playwright
 ].each do |slug|
   technology = Technology.find_by(slug: slug)
   TechnologicalSkill.where(
