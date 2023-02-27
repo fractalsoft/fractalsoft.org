@@ -2,6 +2,7 @@ class Technology < ApplicationRecord
   extend FriendlyId
   enum category: {
     backend: 0,
+    cloud_computing: 10,
     database: 1,
     frontend: 2,
     gamedev: 3,
