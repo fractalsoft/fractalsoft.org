@@ -12,6 +12,9 @@ require_relative 'technology/csharp'
 require_relative 'technology/python'
 require_relative 'technology/ruby'
 
+# cloud computing
+require_relative 'technology/amazon_web_services'
+
 # database
 require_relative 'technology/mysql'
 require_relative 'technology/postgresql'
@@ -56,7 +59,6 @@ require_relative 'technology/rspec'
 require_relative 'technology/testcase'
 
 # tools
-require_relative 'technology/aws'
 require_relative 'technology/docker'
 require_relative 'technology/git'
 require_relative 'technology/graphql'
