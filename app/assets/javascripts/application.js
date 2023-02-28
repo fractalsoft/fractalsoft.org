@@ -13,7 +13,7 @@
 //= require jquery/dist/jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require bootstrap-sass/assets/javascripts/bootstrap
+//= require bootstrap
 //= require turbolinks
 //= require leaflet/dist/leaflet
 //= require_tree .
