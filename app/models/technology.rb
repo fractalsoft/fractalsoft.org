@@ -11,6 +11,7 @@ class Technology < ApplicationRecord
     os: 6,
     testing: 7,
     tool: 8,
+    web_server: 11,
     web: 9
   }
   friendly_id :slug, use: [:slugged, :finders]
