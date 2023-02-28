@@ -14,6 +14,7 @@ require_relative 'technology/ruby'
 
 # cloud computing
 require_relative 'technology/amazon_web_services'
+require_relative 'technology/google_cloud'
 
 # database
 require_relative 'technology/mysql'
