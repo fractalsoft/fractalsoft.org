@@ -72,6 +72,10 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   slim
   aws
   cypress
+  ubuntu
+  heroku
+  github
+  selenium
 ].each do |slug|
   technology = Technology.find_by(slug: slug)
   TechnologicalSkill.where(

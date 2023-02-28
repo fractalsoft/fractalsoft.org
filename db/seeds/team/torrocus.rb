@@ -43,11 +43,13 @@ torrocus.save
 
 TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
+# sinatra
+# minitest
+# testcase
 %w[
   ruby
   ruby-on-rails
   jekyll
-  sinatra
   git
   postgresql
   mysql
@@ -70,10 +72,19 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   typescript
   sidekiq
   slim
-  minitest
-  testcase
   next-js
   playwright
+  ubuntu
+  debian
+  aws
+  digital-ocean
+  google-cloud
+  heroku
+  github
+  apache
+  nginx
+  selenium
+  haml
 ].each do |slug|
   technology = Technology.find_by(slug: slug)
   TechnologicalSkill.where(

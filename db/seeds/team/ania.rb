@@ -26,6 +26,7 @@ ania.save
 
 TechnologicalSkill.where(person_id: ania.id).delete_all
 
+# minitest
 %w[
   coffeescript
   css3
@@ -36,7 +37,6 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
   mathematica
   postgresql
   rspec
-  minitest
   playwright
   ruby
   ruby-on-rails
@@ -44,6 +44,9 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
   sass
   slim
   sonic-pi
+  ubuntu
+  heroku
+  github
 ].each do |slug|
   technology = Technology.find_by(slug: slug)
   TechnologicalSkill.where(
