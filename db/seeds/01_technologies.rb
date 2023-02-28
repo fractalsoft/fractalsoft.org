@@ -80,3 +80,6 @@ require_relative 'technology/less'
 require_relative 'technology/sass'
 require_relative 'technology/slim'
 require_relative 'technology/svg'
+
+# web server
+require_relative 'technology/apache'
