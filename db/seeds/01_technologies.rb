@@ -82,6 +82,7 @@ require_relative 'technology/sass'
 require_relative 'technology/slim'
 require_relative 'technology/svg'
 ## css frameworks
+require_relative 'technology/bootstrap'
 require_relative 'technology/foundation_framework'
 
 # web server
