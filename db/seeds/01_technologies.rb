@@ -66,6 +66,7 @@ require_relative 'technology/testcase'
 # tools
 require_relative 'technology/docker'
 require_relative 'technology/git'
+require_relative 'technology/github'
 require_relative 'technology/graphql'
 require_relative 'technology/postgis'
 require_relative 'technology/sidekiq'
