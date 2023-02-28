@@ -31,6 +31,8 @@ lisu.save
 
 TechnologicalSkill.where(person_id: lisu.id).delete_all
 
+# sinatra
+# minitest
 %w[
   javascript
   typescript
@@ -39,7 +41,6 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   react
   ruby-on-rails
   ruby
-  sinatra
   python
   git
   postgresql
@@ -53,10 +54,14 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   cordova
   csharp
   unity
-  minitest
   slim
   next-js
   jest
+  playwright
+  ubuntu
+  google-cloud
+  heroku
+  github
 ].each do |slug|
   technology = Technology.find_by(slug: slug)
   TechnologicalSkill.where(
