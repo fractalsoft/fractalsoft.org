@@ -48,6 +48,7 @@ require_relative 'technology/mathematica'
 require_relative 'technology/cordova'
 
 # operating system
+require_relative 'technology/debian'
 require_relative 'technology/linux'
 require_relative 'technology/ubuntu'
 
