@@ -83,3 +83,4 @@ require_relative 'technology/svg'
 
 # web server
 require_relative 'technology/apache'
+require_relative 'technology/nginx'
