@@ -4,4 +4,3 @@ We are [Rails developers team](http://fractalsoft.org), so we decided that our w
 
 
 ## Code Status
-[![Build Status](https://travis-ci.org/fractalsoft/fractalsoft.org.svg)](https://travis-ci.org/fractalsoft/fractalsoft.org)
