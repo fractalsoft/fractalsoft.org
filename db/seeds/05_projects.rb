@@ -321,3 +321,37 @@ Należy w niej odpowiadać na pytania zadawane przez SI (Sztuczną Inteligencję
 questions_hitdea.subtitle = ''
 
 questions_hitdea.save
+
+# andy
+andy = Project.where(slug: 'andy.be').first_or_initialize
+andy.assign_attributes(
+  display: true,
+  dofollow: false,
+  title: 'Andy',
+  url: 'https://andy.be',
+  year: 2022
+)
+
+I18n.locale = :en
+andy.description = %()
+andy.introduction = %(
+E-commerce platform for ordering drinks with fast delivery (up to 3 hours) in an eco-friendly way.
+Service is available to individuals and businesses.
+From ordering to delivery to picking up empty bottles and reordering, the entire supply chain is supported.
+Frontend application in Next.js and onion architecture under the hood.
+Microservices built on Sinatra and powered by Apache Kafka.
+)
+andy.subtitle = 'beverage purchasing & delivery platform'
+
+I18n.locale = :pl
+andy.description = %()
+andy.introduction = %(
+Platforma e-commerce do zamawiania napojów z szybką dostawą (do 3 godzin) w sposób ekologiczny i przyjazny dla środowiska.
+Usługa jest dostępna dla osób fizycznych i firm.
+Od zamówienia, przez dostawę, po odbiór pustych butelek i ponowne zamawianie, obsługiwany jest cały łańcuch dostaw.
+Aplikacja frontendowa w Next.js a pod maską cebulowa architektura (ang. Onion Architecture).
+Mikroserwisy zbudowane na Sinatrze i obsługiwane przez Apache Kafka.
+)
+andy.subtitle = 'platforma do zakupu i dostawy napojów'
+
+andy.save
