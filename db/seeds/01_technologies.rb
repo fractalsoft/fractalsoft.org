@@ -72,6 +72,8 @@ require_relative 'technology/graphql'
 require_relative 'technology/postgis'
 require_relative 'technology/sidekiq'
 require_relative 'technology/sonic_pi'
+## message broker
+require_relative 'technology/apache_kafka'
 
 # web
 require_relative 'technology/css3'
