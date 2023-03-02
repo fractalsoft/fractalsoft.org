@@ -322,6 +322,40 @@ questions_hitdea.subtitle = ''
 
 questions_hitdea.save
 
+# futurelearn
+futurelearn = Project.where(slug: 'futurelearn.com').first_or_initialize
+futurelearn.assign_attributes(
+  display: true,
+  dofollow: false,
+  title: 'FutureLearn',
+  url: 'https://futurelearn.com',
+  year: 2020
+)
+
+I18n.locale = :en
+futurelearn.description = %()
+futurelearn.introduction = %(
+Global learning platform offering online courses from universities worldwide.
+Over 19 million users, thousands of courses in dozens of industries.
+Partners (universities, organizations, industry partners, and government partners) create different types of courses in the app.
+These include MOOCs (Massive Open Online Courses), ExpertTrack, microcredentials, and degrees.
+Technologically, the application is a Rails monolith with a React frontend.
+)
+futurelearn.subtitle = 'digital education platform'
+
+I18n.locale = :pl
+futurelearn.description = %()
+futurelearn.introduction = %(
+Globalna platforma edukacyjna oferująca kursy online z uniwersytetów na całym świecie.
+Ponad 19 milionów użytkowników, tysiące kursów w dziesiątkach branż.
+Partnerzy (uniwersytety, organizacje, partnerzy branżowi i partnerzy rządowi) tworzą w aplikacji różne rodzaje kursów.
+Należą do nich MOOC (masowe otwarte kursy online), ExpertTrack, mikrokredyty i stopnie naukowe.
+Technologicznie aplikacja jest monolitem Rails-owym z frontendem React-owym.
+)
+futurelearn.subtitle = 'cyfrowa platforma edukacyjna'
+
+futurelearn.save
+
 # andy
 andy = Project.where(slug: 'andy.be').first_or_initialize
 andy.assign_attributes(
