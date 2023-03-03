@@ -3,8 +3,10 @@ lisu = Person.find_by(nickname: 'lisu')
 # projects
 agricircle = Project.find_by(slug: 'agricircle.com')
 analysis_hitdea = Project.find_by(slug: 'linguistic-analysis')
+andy = Project.find_by(slug: 'andy.be')
 blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
+futurelearn = Project.find_by(slug: 'futurelearn.com')
 game_hitdea = Project.find_by(slug: 'wordmaker')
 hitdea = Project.find_by(slug: 'hitdea.com')
 marketing_hitdea = Project.find_by(slug: 'ads-system')
@@ -12,6 +14,49 @@ nopaperwork = Project.find_by(slug: 'nopaperwork.org')
 purpura = Project.find_by(slug: 'purpura.eu')
 questions_hitdea = Project.find_by(slug: '20-questions-game')
 selecthub = Project.find_by(slug: 'selecthub.com')
+tmc_ops = Project.find_by(slug: 'tmc-ops')
+
+# lisu in andy
+params = { person_id: lisu.id, project_id: andy.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Development in Sinatra (Ruby)' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Sinatra (Ruby)' }
+contribution.save
+
+## customer-accounts
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Customer Accounts Authentication service' }
+contribution.attributes = { locale: :pl, name: 'Usługa uwierzytelniania kont klientów' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'React frontend development (Next.js)' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w React (Next.js)' }
+contribution.save
+
+# lisu in futurelearn
+params = { person_id: lisu.id, project_id: futurelearn.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Development in Ruby on Rails' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby on Rails' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'User conversion experiments' }
+contribution.attributes = { locale: :pl, name: 'Eksperymenty zwiększające konwersję użytkowników' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'GDPR compliance tools' }
+contribution.attributes = { locale: :pl, name: 'Narzędzia zgodności z RODO' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Frontend development in React' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji frontendowej w React' }
+contribution.save
 
 # lisu in blog
 params = { person_id: lisu.id, project_id: blog.id }
