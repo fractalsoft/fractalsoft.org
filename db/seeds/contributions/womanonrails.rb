@@ -3,8 +3,10 @@ womanonrails = Person.find_by(nickname: 'womanonrails')
 # projects
 agricircle = Project.find_by(slug: 'agricircle.com')
 analysis_hitdea = Project.find_by(slug: 'linguistic-analysis')
+andy = Project.find_by(slug: 'andy.be')
 blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
+futurelearn = Project.find_by(slug: 'futurelearn.com')
 game_hitdea = Project.find_by(slug: 'wordmaker')
 hitdea = Project.find_by(slug: 'hitdea.com')
 marketing_hitdea = Project.find_by(slug: 'ads-system')
@@ -12,6 +14,31 @@ nopaperwork = Project.find_by(slug: 'nopaperwork.org')
 purpura = Project.find_by(slug: 'purpura.eu')
 questions_hitdea = Project.find_by(slug: '20-questions-game')
 selecthub = Project.find_by(slug: 'selecthub.com')
+tmc_ops = Project.find_by(slug: 'tmc-ops')
+
+# WomanOnRails in TMC
+
+params = { person_id: womanonrails.id, project_id: tmc_ops.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Moving from Pub/Sub to Rails Event Store' }
+contribution.attributes = { locale: :pl, name: 'Przejście z Pub/Sub na Rails Event Store' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Backend development in Ruby on Rails' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby on Rails' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Code refactoring and optimization' }
+contribution.attributes = { locale: :pl, name: 'Refaktoring kodu i optymalizacja' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Bugs resolving' }
+contribution.attributes = { locale: :pl, name: 'Naprawianie błędów' }
+contribution.save
 
 # WomanOnRails in AgriCircle
 params = { person_id: womanonrails.id, project_id: agricircle.id }
