@@ -3,8 +3,10 @@ torrocus = Person.find_by(nickname: 'torrocus')
 # projects
 agricircle = Project.find_by(slug: 'agricircle.com')
 analysis_hitdea = Project.find_by(slug: 'linguistic-analysis')
+andy = Project.find_by(slug: 'andy.be')
 blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
+futurelearn = Project.find_by(slug: 'futurelearn.com')
 game_hitdea = Project.find_by(slug: 'wordmaker')
 hitdea = Project.find_by(slug: 'hitdea.com')
 marketing_hitdea = Project.find_by(slug: 'ads-system')
@@ -12,6 +14,7 @@ nopaperwork = Project.find_by(slug: 'nopaperwork.org')
 purpura = Project.find_by(slug: 'purpura.eu')
 questions_hitdea = Project.find_by(slug: '20-questions-game')
 selecthub = Project.find_by(slug: 'selecthub.com')
+tmc_ops = Project.find_by(slug: 'tmc-ops')
 
 # torrocus in nopaperwork
 params = { person_id: torrocus.id, project_id: nopaperwork.id }
@@ -281,4 +284,111 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 2))
 contribution.attributes = { locale: :en, name: 'Deployment to production' }
 contribution.attributes = { locale: :pl, name: 'Wdrożenie na produkcję' }
+contribution.save
+
+# torrocus in futurelearn
+params = { person_id: torrocus.id, project_id: futurelearn.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Development in Ruby on Rails' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby on Rails' }
+contribution.save
+
+## CI (Continuous Integration)
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Reusable workflows in the CI pipeline' }
+contribution.attributes = { locale: :pl, name: 'Wdrożenie przepływu pracy wielokrotnego użytku w potoku CI' }
+contribution.save
+
+## RTE (Rich Text Editor)
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Rich Text Editor in Course Creator' }
+contribution.attributes = { locale: :pl, name: 'Edytor tekstu sformatowanego w Kreatorze kursów' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Bulk revocation for organisation memberships' }
+contribution.attributes = { locale: :pl, name: 'Masowe wycofanie członkostwa w organizacji' }
+contribution.save
+
+## SAML (Security Assertion Markup Language)
+## SSO (Single Sign-On)
+contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en, name: 'Support for partners in setting up SAML SSO' }
+contribution.attributes = { locale: :pl, name: 'Wsparcie partnerów w ustawianiu SAML SSO' }
+contribution.save
+
+## LTI (Learning Tools Interoperability)
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Maintain and develop integration with LTI' }
+contribution.attributes = { locale: :pl, name: 'Utrzymanie i rozwój integracji z LTI' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en, name: 'Expert Track in Learning Manager' }
+contribution.attributes = { locale: :pl, name: 'Ścieżka ekspercka w Menedżerze nauki' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 8))
+contribution.attributes = { locale: :en, name: 'Strong password enforcement feature' }
+contribution.attributes = { locale: :pl, name: 'Wymuszanie ustawiania silnego hasła' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 9))
+contribution.attributes = { locale: :en, name: 'API endpoint improvements' }
+contribution.attributes = { locale: :pl, name: 'Ulepszenia punktów końcowych interfejsu API' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 10))
+contribution.attributes = { locale: :en, name: 'Flaky tests reduction' }
+contribution.attributes = { locale: :pl, name: 'Redukcja niestabilnych testów' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 11))
+contribution.attributes = { locale: :en, name: 'Bugs resolving' }
+contribution.attributes = { locale: :pl, name: 'Naprawianie błędów' }
+contribution.save
+
+# torrocus in andy
+params = { person_id: torrocus.id, project_id: andy.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Development in Next.js' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Next.js' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Optimize end-to-end testing for CI' }
+contribution.attributes = { locale: :pl, name: 'Optymalizacja kompleksowych testów E2E na CI' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Custom automated process improvement' }
+contribution.attributes = { locale: :pl, name: 'Ulepszanie automatycznych procesów' }
+contribution.save
+
+## TMS (Transport Management Software)
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'TMS Order Monitoring service' }
+contribution.attributes = { locale: :pl, name: 'Usługa monitorowania zamówień TMS' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en, name: 'Development in Ruby' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Eliminate flaky tests' }
+contribution.attributes = { locale: :pl, name: 'Wyeliminowanie niestabilnych testów' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en, name: 'Bugs resolving' }
+contribution.attributes = { locale: :pl, name: 'Naprawianie błędów' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 8))
+contribution.attributes = { locale: :en, name: 'Internal CLI tool development' }
+contribution.attributes = { locale: :pl, name: 'Rozwój wewnętrznego narzędzia CLI' }
 contribution.save
