@@ -63,7 +63,7 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   heroku
   github
 ].each do |slug|
-  technology = Technology.find_by(slug: slug)
+  technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
     person_id: lisu.id,
     technology_id: technology.id
