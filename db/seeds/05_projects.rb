@@ -129,7 +129,8 @@ I18n.locale = :en
 agricircle.description = %()
 agricircle.introduction = %(
 Web application to make better planning process for farmers.
-Geo map service, communication with external services, import / export fields, organizer for irrigation, fertilizing, planting and harvesting crops.
+Geo map service, communication with external services, import / export fields,
+organizer for irrigation, fertilizing, planting and harvesting crops.
 )
 agricircle.subtitle = 'crop management application'
 
@@ -137,7 +138,8 @@ I18n.locale = :pl
 agricircle.description = %()
 agricircle.introduction = %(
 Aplikacja internetowa usprawniająca proces planowania dla rolników.
-Obsługa map, komunikacja z zewnętrznymi serwisami, import / eksport pól, organizer nawadniania, użyźniania, sadzenia i zbierania upraw.
+Obsługa map, komunikacja z zewnętrznymi serwisami, import / eksport pól,
+organizer nawadniania, użyźniania, sadzenia i zbierania upraw.
 )
 agricircle.subtitle = 'aplikacja do zarządzania uprawami'
 
@@ -404,7 +406,8 @@ I18n.locale = :en
 tmc_ops.description = %()
 tmc_ops.introduction = %(
 The Ops application allowed the Bode and Drift chain of hotels in North and Central America to be fully automated.
-Door lock control, automatic email and SMS notifications from booking to check-in to final guest check-out.
+Door lock control, automatic email and SMS notifications
+from booking to check-in to final guest check-out.
 Integrations with other hotel management platforms (StayNTouch, SynXis) and other services (Google, Facebook).
 All of this adds up to thousands of events combined into neatly organized streams in the Rails Event Store.
 )
@@ -414,7 +417,8 @@ I18n.locale = :pl
 tmc_ops.description = %()
 tmc_ops.introduction = %(
 Aplikacja Ops pozwoliła na pełną automatyzację sieci hoteli Bode oraz Drift w Ameryce Północnej i Środkowej.
-Sterowanie zamkami do drzwi, automatyczne powiadomienia e-mail i SMS od rezerwacji, aż do zameldowania i ostatecznego wymeldowania.
+Sterowanie zamkami do drzwi, automatyczne powiadomienia e-mail i SMS od rezerwacji,
+aż do zameldowania i ostatecznego wymeldowania.
 Integracje z innymi platformami do zarządzania hotelami (StayNTouch, SynXis) i innymi usługami (Google, Facebook).
 Wszystko to składa się na tysiące wydarzeń połączonych w zgrabne strumienie w Rails Event Store.
 )
