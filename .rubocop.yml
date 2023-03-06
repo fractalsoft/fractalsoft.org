@@ -13,6 +13,7 @@ AllCops:
     - node_modules/**/*
     - spec/i18n_spec.rb
     - tmp/**/*
+  NewCops: enable
 
 Bundler/DuplicatedGem:
   Enabled: true
