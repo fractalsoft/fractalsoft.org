@@ -10,7 +10,7 @@ RSpec.describe Cieszyn::PricesController do
 
     it 'assigns computer fix services' do
       get :index
-      expect(assigns(:computer_fix_services)).to be_kind_of(ActiveRecord::Relation)
+      expect(assigns(:computer_fix_services)).to be_a(ActiveRecord::Relation)
     end
   end
 end

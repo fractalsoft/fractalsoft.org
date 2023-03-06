@@ -8,7 +8,7 @@ RSpec.describe ComputerFixService do
 
   describe '#name' do
     it 'checks a String type' do
-      expect(price_list.name).to be_kind_of(String)
+      expect(price_list.name).to be_a(String)
     end
 
     it 'returns computer fix service string' do
@@ -18,7 +18,7 @@ RSpec.describe ComputerFixService do
 
   describe '#price' do
     it 'checks a BigDecimal type' do
-      expect(price_list.price).to be_kind_of(BigDecimal)
+      expect(price_list.price).to be_a(BigDecimal)
     end
 
     it 'returns float' do
