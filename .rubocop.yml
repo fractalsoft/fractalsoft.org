@@ -9,7 +9,8 @@ AllCops:
   Exclude:
     - bin/*
     - config/**/*
-    - db/**/*
+    - db/migrate/**
+    - db/schema.rb
     - node_modules/**/*
   NewCops: enable
 
