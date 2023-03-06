@@ -107,7 +107,6 @@ We help women enter the IT world.
 
 rails_girls.title = 'Learning programming for women - Rails Girls'
 
-
 I18n.locale = :pl
 
 rails_girls.description = %(

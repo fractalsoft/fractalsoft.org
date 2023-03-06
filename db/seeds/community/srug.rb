@@ -4,7 +4,7 @@ srug_logo = File.new('db/seeds/community/srug/srug-logo.png')
 srug.assign_attributes(
   position: 2,
   published: true,
-  name: 'SRUG',
+  name: 'SRUG'
 )
 
 I18n.locale = :en
