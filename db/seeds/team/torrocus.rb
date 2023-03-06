@@ -86,7 +86,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   selenium
   haml
 ].each do |slug|
-  technology = Technology.find_by(slug: slug)
+  technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
     person_id: torrocus.id,
     technology_id: technology.id
