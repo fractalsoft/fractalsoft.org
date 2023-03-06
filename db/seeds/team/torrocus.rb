@@ -9,7 +9,10 @@ torrocus.assign_attributes(
   instagram: 'torrocus',
   linkedin: 'torrocus',
   position: 'developer',
-  skills: %(Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, TDD, Agile, Team Building, Linux Server Administration, Remote Work, Product Development),
+  skills: %(
+            Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, TDD,
+            Agile, Team Building, Linux Server Administration, Remote Work, Product Development
+          ),
   twitter: 'torrocus',
   website: 'https://torrocus.com'
 )
@@ -23,13 +26,20 @@ Linux administrator and Open Source ideology evangelist.
 In free time he explores the secrets of machine learning.
 )
 torrocus.saying = %(
-<p>It seems that perfection is attained not when there is nothing more to add, but when there is nothing more to remove.</p>
+<p>
+  It seems that perfection is attained not when there is nothing more to add,
+  but when there is nothing more to remove.
+</p>
 <footer>Antoine de Saint Exupéry</footer>
 )
 
 I18n.locale = :pl
 torrocus.saying = %(
-<p>Wydaje się, że doskonałość osiąga się nie wtedy, gdy nie ma nic więcej do dodania, ale gdy nie ma nic więcej do usunięcia.</p>
+<p>
+  Wydaje się, że doskonałość osiąga się nie wtedy,
+  gdy nie ma nic więcej do dodania,
+  ale gdy nie ma nic więcej do usunięcia.
+</p>
 <footer>Antoine de Saint Exupéry</footer>
 )
 torrocus.introduction = %(
