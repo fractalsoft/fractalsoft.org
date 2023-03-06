@@ -22,6 +22,7 @@ Metrics/MethodLength:
   CountComments: false
   Exclude:
     - app/uploaders/community_logo_uploader.rb
+    - db/seeds/06_community.rb
   Max: 5
 
 Layout/LineLength:
