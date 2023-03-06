@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe CommunitiesController, type: :routing do
+RSpec.describe CommunitiesController do
   describe 'routing' do
     it 'routes to #index' do
       expect(get: '/community').to route_to('communities#index', locale: 'en')

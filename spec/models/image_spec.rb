@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Image, type: :model do
+RSpec.describe Image do
   describe '.logo' do
     it 'show first image logo kind' do
       image = described_class.create(kind: 'logo')

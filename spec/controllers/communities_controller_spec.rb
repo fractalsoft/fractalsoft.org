@@ -23,7 +23,7 @@ require 'rails_helper'
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
 
-RSpec.describe CommunitiesController, type: :controller do
+RSpec.describe CommunitiesController do
   # This should return the minimal set of attributes required to create a valid
   # Community. As you add validations to Community, be sure to
   # adjust the attributes here as well.

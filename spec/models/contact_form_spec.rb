@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ContactForm, type: :model do
+RSpec.describe ContactForm do
   let(:params) do
     { name: rand_text, email: 'test@gmail.com', message: rand_text }
   end

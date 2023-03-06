@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cieszyn::RulesController, type: :controller do
+RSpec.describe Cieszyn::RulesController do
   render_views
   describe 'GET #show' do
     it 'returns http success' do

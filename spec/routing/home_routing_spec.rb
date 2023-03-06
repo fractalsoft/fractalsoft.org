@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HomeController, type: :routing do
+RSpec.describe HomeController do
   describe 'routing' do
     I18n.available_locales.each do |locale|
       it "routes to #index with locale #{locale}" do

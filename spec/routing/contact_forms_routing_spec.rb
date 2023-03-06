@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ContactFormsController, type: :routing do
+RSpec.describe ContactFormsController do
   describe 'routing' do
     context 'when locale is en' do
       let(:contact_form_path) { '/contact-form' }

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ContactFormsController, type: :controller do
+RSpec.describe ContactFormsController do
   describe 'POST #create' do
     let(:locale) { 'en' }
     let(:params) do

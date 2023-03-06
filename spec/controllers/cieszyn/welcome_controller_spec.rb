@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cieszyn::WelcomeController, type: :controller do
+RSpec.describe Cieszyn::WelcomeController do
   render_views
   describe 'GET #show' do
     it 'returns http success' do

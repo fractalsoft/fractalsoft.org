@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cieszyn::WarrantyController, type: :controller do
+RSpec.describe Cieszyn::WarrantyController do
   render_views
   describe 'GET #show' do
     it 'returns http success' do
