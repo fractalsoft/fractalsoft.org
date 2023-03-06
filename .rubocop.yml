@@ -28,6 +28,10 @@ Layout/LineLength:
   Enabled: true
   Max: 128
 
+Lint/UselessAssignment:
+  Exclude:
+    - db/seeds/contributions/**
+
 Rails/OutputSafety:
   Exclude:
     - app/decorators/*
