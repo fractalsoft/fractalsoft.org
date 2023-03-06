@@ -198,7 +198,7 @@ Platforma internetowa do zarządzania pomysłami.
 Umożliwia użytkownikom zbierać pomysły oraz przetwarzać je w kreatywny, wydajny i prosty sposób.
 Bazuje na metodologii CPS 6.1 (Creative Problem Solving).
 )
-hitdea.subtitle = "aplikacja oparta o&nbsp;mikroserwisy"
+hitdea.subtitle = 'aplikacja oparta o&nbsp;mikroserwisy'
 
 hitdea.save
 
