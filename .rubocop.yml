@@ -13,21 +13,6 @@ AllCops:
     - node_modules/**/*
   NewCops: enable
 
-Bundler/DuplicatedGem:
-  Enabled: true
-
-Bundler/GemComment:
-  Enabled: false
-
-Bundler/GemVersion:
-  Enabled: false
-
-Bundler/InsecureProtocolSource:
-  Enabled: true
-
-Bundler/OrderedGems:
-  Enabled: true
-
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
@@ -38,227 +23,17 @@ Metrics/MethodLength:
     - app/uploaders/community_logo_uploader.rb
   Max: 5
 
-Naming/InclusiveLanguage:
-  Enabled: true
-
-Layout/DotPosition:
-  Enabled: true
-  EnforcedStyle: leading
-
-Layout/LineEndStringConcatenationIndentation:
-  Enabled: true
-
 Layout/LineLength:
   Enabled: true
   Max: 128
-
-Layout/SpaceBeforeBrackets:
-  Enabled: true
-
-Layout/TrailingWhitespace:
-  Enabled: true
-
-Lint/AmbiguousAssignment:
-  Enabled: true
-
-Lint/DeprecatedConstants:
-  Enabled: true
-
-Lint/DuplicateBranch:
-  Enabled: true
-
-Lint/DuplicateRegexpCharacterClassElement:
-  Enabled: true
-
-Lint/EmptyBlock:
-  Enabled: true
-
-Lint/EmptyClass:
-  Enabled: true
-
-Lint/EmptyInPattern:
-  Enabled: true
-
-Lint/LambdaWithoutLiteralBlock:
-  Enabled: true
-
-Lint/NoReturnInBeginEndBlocks:
-  Enabled: true
-
-Lint/NumberedParameterAssignment:
-  Enabled: true
-
-Lint/OrAssignmentToConstant:
-  Enabled: true
-
-Lint/RedundantDirGlobSort:
-  Enabled: true
-
-Lint/ScriptPermission:
-  Enabled: true
-
-Lint/SymbolConversion:
-  Enabled: true
-
-Lint/ToEnumArguments:
-  Enabled: true
-
-Lint/TripleQuotes:
-  Enabled: true
-
-Lint/UnexpectedBlockArity:
-  Enabled: true
-
-Lint/UnmodifiedReduceAccumulator:
-  Enabled: true
-
-Performance/AncestorsInclude:
-  Enabled: true
-
-Performance/BigDecimalWithNumericArgument:
-  Enabled: true
-
-Performance/BlockGivenWithExplicitBlock:
-  Enabled: true
-
-Performance/CollectionLiteralInLoop:
-  Enabled: true
-
-Performance/ConstantRegexp:
-  Enabled: true
-
-Performance/MapCompact:
-  Enabled: true
-
-Performance/MethodObjectAsBlock:
-  Enabled: true
-
-Performance/RedundantEqualityComparisonBlock:
-  Enabled: true
-
-Performance/RedundantSortBlock:
-  Enabled: true
-
-Performance/RedundantSplitRegexpArgument:
-  Enabled: true
-
-Performance/RedundantStringChars:
-  Enabled: true
-
-Performance/ReverseFirst:
-  Enabled: true
-
-Performance/SortReverse:
-  Enabled: true
-
-Performance/Squeeze:
-  Enabled: true
-
-Performance/StringInclude:
-  Enabled: true
-
-Performance/Sum:
-  Enabled: true
-
-Rails/ActiveRecordCallbacksOrder:
-  Enabled: true
-
-Rails/AddColumnIndex:
-  Enabled: true
-
-Rails/AfterCommitOverride:
-  Enabled: true
-
-Rails/AttributeDefaultBlockValue:
-  Enabled: true
-
-Rails/ContentTag:
-  Exclude:
-    - app/decorators/person_decorator.rb
-    - app/models/external_link/base.rb
-
-Rails/EagerEvaluationLogMessage:
-  Enabled: true
-
-Rails/EnvironmentVariableAccess:
-  Enabled: true
-
-Rails/ExpandedDateRange:
-  Enabled: true
-
-Rails/FindById:
-  Enabled: true
-
-Rails/I18nLocaleAssignment:
-  Enabled: true
-
-Rails/Inquiry:
-  Enabled: true
-
-Rails/MailerName:
-  Enabled: true
-
-Rails/MatchRoute:
-  Enabled: true
-
-Rails/NegateInclude:
-  Enabled: true
 
 Rails/OutputSafety:
   Exclude:
     - app/decorators/*
 
-Rails/Pluck:
-  Enabled: true
-
-Rails/PluckInWhere:
-  Enabled: true
-
-Rails/RenderInline:
-  Enabled: true
-
-Rails/RenderPlainText:
-  Enabled: true
-
-Rails/ShortI18n:
-  Enabled: true
-
-Rails/SquishedSQLHeredocs:
-  Enabled: true
-
-Rails/TimeZoneAssignment:
-  Enabled: true
-
-Rails/UnusedIgnoredColumns:
-  Enabled: true
-
-Rails/WhereEquals:
-  Enabled: true
-
-Rails/WhereExists:
-  Enabled: true
-
-Rails/WhereNot:
-  Enabled: true
-
 RSpec/AnyInstance:
   Exclude:
   - spec/controllers/contact_forms_controller_spec.rb
-
-RSpec/IdenticalEqualityAssertion:
-  Enabled: true
-
-RSpec/Rails/AvoidSetupHook:
-  Enabled: true
-
-Style/ArgumentsForwarding:
-  Enabled: true
-
-Style/CollectionCompact:
-  Enabled: true
-
-Style/DocumentDynamicEvalDefinition:
-  Enabled: true
 
 Style/Documentation:
   Enabled: false
@@ -266,56 +41,14 @@ Style/Documentation:
 Style/EmptyMethod:
   Enabled: false
 
-Style/EndlessMethod:
-  Enabled: true
-
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-Style/HashConversion:
-  Enabled: true
-
-Style/HashExcept:
-  Enabled: true
-
-Style/InPatternThen:
-  Enabled: true
-
-Style/IfWithBooleanLiteralBranches:
-  Enabled: true
-
-Style/MultilineInPatternThen:
-  Enabled: true
-
-Style/NegatedIfElseCondition:
-  Enabled: true
-
-Style/NilLambda:
-  Enabled: true
-
-Style/QuotedSymbols:
-  Enabled: true
-
-Style/RedundantArgument:
-  Enabled: true
 
 Style/RedundantRegexpEscape:
   Enabled: true
   Exclude:
     - app/models/markdown_preparator.rb
     - app/models/contact_form.rb
-
-Style/StringChars:
-  Enabled: true
-
-Style/StringLiterals:
-  EnforcedStyle: single_quotes
-  SupportedStyles:
-    - single_quotes
-    - double_quotes
-
-Style/SwapValues:
-  Enabled: true
 
 Style/SymbolArray:
   Enabled: false
