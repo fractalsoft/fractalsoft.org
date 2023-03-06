@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Project, type: :model do
+RSpec.describe Project do
   subject(:project) { build(:project) }
 
   let(:contribution) { create(:contribution) }

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ComputerFixService, type: :model do
+RSpec.describe ComputerFixService do
   subject(:price_list) { create(:computer_fix_service, name:, price:) }
 
   let(:name) { 'Lorem ipsum' }

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Person, type: :model do
+RSpec.describe Person do
   context 'with relations' do
     subject(:member_team) do
       described_class.create(fullname: 'John Smith', contributions: [contribution])
