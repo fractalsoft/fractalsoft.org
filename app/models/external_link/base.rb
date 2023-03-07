@@ -2,6 +2,7 @@ module ExternalLink
   class Base
     include ActionView::Context
     include ActionView::Helpers
+    include ::ApplicationHelper
 
     DEFAULT_OPTIONS = {
       rel: %w[
@@ -34,7 +35,9 @@ module ExternalLink
 
     def icon
       content_tag :span, class: 'icon' do
-        image_tag image_url, width:
+        svg_path = Rails.public_path.join(*image_url.split('/'))
+        svg_body = File.read(svg_path)
+        embedded_svg svg_body, options: { width:, height: width }
       end
     end
 

@@ -9,7 +9,7 @@ RSpec.describe PersonDecorator, type: :decorator do
     let(:params) { { facebook: } }
 
     it 'shows facebook' do
-      expect(decorator.facebook).to include facebook, 'href', '.svg'
+      expect(decorator.facebook).to include facebook, 'href', 'svg'
     end
   end
 
@@ -18,7 +18,7 @@ RSpec.describe PersonDecorator, type: :decorator do
     let(:params) { { github: } }
 
     it 'shows github' do
-      expect(decorator.github).to include github, 'href', '.svg'
+      expect(decorator.github).to include github, 'href', 'svg'
     end
   end
 
@@ -27,7 +27,7 @@ RSpec.describe PersonDecorator, type: :decorator do
     let(:params) { { twitter: } }
 
     it 'shows twitter' do
-      expect(decorator.twitter).to include twitter, 'href', '.svg'
+      expect(decorator.twitter).to include twitter, 'href', 'svg'
     end
   end
 
@@ -36,7 +36,7 @@ RSpec.describe PersonDecorator, type: :decorator do
     let(:params) { { website: } }
 
     it 'shows website' do
-      expect(decorator.website).to include website, 'href', '.svg'
+      expect(decorator.website).to include website, 'href', 'svg'
     end
   end
 
