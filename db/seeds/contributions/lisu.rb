@@ -9,6 +9,7 @@ fractalsoft = Project.find_by(slug: 'fractalsoft.org')
 futurelearn = Project.find_by(slug: 'futurelearn.com')
 game_hitdea = Project.find_by(slug: 'wordmaker')
 hitdea = Project.find_by(slug: 'hitdea.com')
+julinek_ar = Project.find_by(slug: 'julinek-ar')
 marketing_hitdea = Project.find_by(slug: 'ads-system')
 nopaperwork = Project.find_by(slug: 'nopaperwork.org')
 purpura = Project.find_by(slug: 'purpura.eu')
@@ -33,6 +34,24 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 3))
 contribution.attributes = { locale: :en, name: 'React frontend development (Next.js)' }
 contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w React (Next.js)' }
+contribution.save
+
+# lisu in julinek AR
+params = { person_id: lisu.id, project_id: julinek_ar.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Development in Unity' }
+contribution.attributes = { locale: :pl, name: 'Rozwój gry w Unity' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Bugs resolving' }
+contribution.attributes = { locale: :pl, name: 'Naprawianie błędów' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Submitting to the App Store' }
+contribution.attributes = { locale: :pl, name: 'Zgłoszenie gry do App Store' }
 contribution.save
 
 # lisu in futurelearn
