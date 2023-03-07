@@ -15,13 +15,17 @@
   Twitter: @noplisu
   Location: Gliwice, PL
 
+  Name: Anna Bargiel
+  Site: https://fractalsoft.org/en/team/ania
+  Location: Gliwice, PL
+
 /* THANKS */
 
   Name: <name>
 
 /* SITE */
 
-  Last update: 2021/04/27
+  Last update: 2023/03/07
   Language: English / Polish
   Standards: HTML5, CSS3
   Source: https://github.com/fractalsoft/fractalsoft.org
