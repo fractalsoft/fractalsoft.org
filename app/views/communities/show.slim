@@ -7,7 +7,7 @@
   .row
     .col-md-10.col-md-offset-1
       h1
-        == @community.name
+        = sanitize(@community.name)
 
       - if @community.logo?
         = image_tag @community.logo_url, alt: @community.name, style: 'width: 256px;'

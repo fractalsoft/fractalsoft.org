@@ -17,6 +17,6 @@
               .media-body class=(index.even? ? 'text-left' : 'text-right')
                 h4.media-heading
                   = link_to community_path(community, locale: locale) do
-                    == community.name
+                    = sanitize(community.name)
                 p
                   == Markdown.new(community.introduction).to_html
