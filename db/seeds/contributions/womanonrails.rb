@@ -40,6 +40,46 @@ contribution.attributes = { locale: :en, name: 'Bugs resolving' }
 contribution.attributes = { locale: :pl, name: 'Naprawianie błędów' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en, name: 'Automate SMS flow process for bookings' }
+contribution.attributes = { locale: :pl, name: 'Automatyzacja procesu SMS w rezerwacjach' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Full integration with SNT' }
+contribution.attributes = { locale: :pl, name: 'Pełna integracja z SNT' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en, name: 'Multiple account creation automation (Google, Facebook, RemoteLock)' }
+contribution.attributes = { locale: :pl, name: 'Automatyzacja tworzenia wielu kont (Google, Facebook, RemoteLock)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 8))
+contribution.attributes = { locale: :en, name: 'Phone number normalization (standard E.164)' }
+contribution.attributes = { locale: :pl, name: 'Normalizacja numerów telefonw (E.164)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 9))
+contribution.attributes = { locale: :en, name: 'Manual RemoteLock sync (electronic locks)' }
+contribution.attributes = { locale: :pl, name: 'Ręczna synchronizacja RemoteLock (zamki elektroniczne)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 10))
+contribution.attributes = { locale: :en, name: 'API for reporting to PDF & CSV' }
+contribution.attributes = { locale: :pl, name: 'API do raportowania do PDF i CSV' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 11))
+contribution.attributes = { locale: :en, name: 'Twilio integration' }
+contribution.attributes = { locale: :pl, name: 'Integracja z API Twilio' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 12))
+contribution.attributes = { locale: :en, name: 'Import TrackHS messages' }
+contribution.attributes = { locale: :pl, name: 'Import wiadomości z TrackHS' }
+contribution.save
+
 # WomanOnRails in AgriCircle
 params = { person_id: womanonrails.id, project_id: agricircle.id }
 
