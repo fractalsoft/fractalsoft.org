@@ -27,7 +27,7 @@ class PersonDecorator < Draper::Decorator
                              title: social_title(method_name.to_sym)
       return unless html
 
-      content_tag :li, html
+      content_tag :li, html, class: 'list-inline-item'
     end
   end
 

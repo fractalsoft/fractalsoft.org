@@ -1,14 +1,14 @@
-.col-md-3.col-sm-6.col-xs-12
-  = link_to person_path(id: person) do
-    .thumbnail
+.col-md-6.col-sm-12.g-3
+  .img-thumbnail.position-relative.h-100.pb-3.d-flex.flex-column.justify-content-between.person-card
+    = link_to person_path(id: person), class: "stretched-link" do
       = person.image
       h3
         = person.fullname
       p.text-center
         = person.introduction
-      ul.list-inline.social
-        = person.blog
-        = person.github
-        = person.linkedin
-        = person.twitter
-        = person.website
+    ul.d-inline.social
+      = person.blog
+      = person.github
+      = person.linkedin
+      = person.twitter
+      = person.website
