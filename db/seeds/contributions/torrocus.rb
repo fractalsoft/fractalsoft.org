@@ -113,6 +113,16 @@ contribution.attributes = { locale: :en, name: 'UX development' }
 contribution.attributes = { locale: :pl, name: 'Rozwój UX' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Upgrade Rails and Ruby version' }
+contribution.attributes = { locale: :pl, name: 'Aktualizacje wersji Rails i Ruby' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en, name: 'Code quality process automation' }
+contribution.attributes = { locale: :pl, name: 'Automatyzacja procesu jakości kodu' }
+contribution.save
+
 # torrocus in SelectHub
 params = { person_id: torrocus.id, project_id: selecthub.id }
 
