@@ -42,6 +42,7 @@ require_relative 'technology/javascript'
 require_relative 'technology/typescript'
 
 # game development
+require_relative 'technology/threejs'
 require_relative 'technology/unity'
 
 # mathematical software
