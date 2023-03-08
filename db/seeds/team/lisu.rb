@@ -62,6 +62,7 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   google-cloud
   heroku
   github
+  three-js
 ].each do |slug|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
