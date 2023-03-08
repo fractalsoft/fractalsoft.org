@@ -41,6 +41,7 @@ group :development do
   gem 'coffeelint'
   gem 'colored'
   gem 'deadweight'
+  gem 'derailed_benchmarks'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'i18n-tasks'
   gem 'listen'
@@ -54,6 +55,7 @@ group :development do
   gem 'sandi_meter'
   gem 'scss_lint', require: false
   gem 'spring'
+  gem 'stackprof'
   gem 'web-console', '>= 4.2' # <%= console %> anywhere in the code
 end
 
