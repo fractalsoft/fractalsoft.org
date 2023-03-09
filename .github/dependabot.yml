@@ -10,9 +10,10 @@ updates:
     labels:
       - dependencies
       - ruby
+    allow:
+      - dependency-type: "development"
     ignore:
       - dependency-name: "rails"
-      - dependency-type: "development"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
