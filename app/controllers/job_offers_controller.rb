@@ -1,4 +1,7 @@
 class JobOffersController < ApplicationController
+  before_action :set_page_caching
+  caches_page :index, :show
+
   # GET /jobs
   def index
     @job_offers = JobOffer.published.sorted
