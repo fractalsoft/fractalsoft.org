@@ -8,7 +8,7 @@ module FractalSoft
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
     end
-    config.load_defaults 6.0
+    config.load_defaults 6.1
     config.i18n.available_locales = [:en, :pl]
     config.i18n.default_locale = :en
     config.i18n.fallbacks = true
