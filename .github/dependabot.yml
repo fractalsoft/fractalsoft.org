@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "09:00"
+    pull-request-branch-name:
+      separator: "-"
+    labels:
+      - dependencies
+      - ruby
+    ignore:
+      - dependency-name: rails
+      - dependency-type: development
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "12:00"
+    labels:
+      - dependencies
+      - javascript
