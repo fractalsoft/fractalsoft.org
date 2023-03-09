@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = params[:locale] if params[:locale]
   end
+
+  def set_page_caching
+    @page_caching = true
+  end
 end
