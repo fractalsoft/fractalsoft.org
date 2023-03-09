@@ -31,11 +31,13 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Igrone assets, uploads & cache
+# Ignore assets, uploads & cache
 /public/assets
 /public/cache/*
+/public/cached_pages/*
 /public/uploads/*
 !/public/cache/.keep
+!/public/cached_pages/.keep
 !/public/uploads/.keep
 
 /public/packs
