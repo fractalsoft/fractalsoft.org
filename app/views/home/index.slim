@@ -38,7 +38,7 @@
         p
           = t('.how_we_work.description.three')
 
-  = render 'people/team', people: @home.people
+  = render 'people/team', people: @home.people, cached: true
 
   .container.technology.hidden-xs
     .row
