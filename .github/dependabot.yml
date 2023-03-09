@@ -11,8 +11,8 @@ updates:
       - dependencies
       - ruby
     ignore:
-      - dependency-name: rails
-      - dependency-type: development
+      - dependency-name: "rails"
+      - dependency-type: "development"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
