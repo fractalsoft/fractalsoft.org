@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '~> 6.1.7.2'
 
+gem 'actionpack-action_caching'
+gem 'actionpack-page_caching'
 gem 'active_link_to'
 gem 'carrierwave', '~> 2.2'
 gem 'coffee-rails', '~> 5.0'
