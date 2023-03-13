@@ -1,34 +1,84 @@
-FROM ruby:3.1.3
+# syntax = docker/dockerfile:experimental
 
-ENV APP_HOME /fractalsoft
-ENV RAILS_SERVE_STATIC_FILES true
+# Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
+# https://github.com/evilmartians/fullstaq-ruby-docker
+ARG RUBY_VERSION=3.1.3
+ARG VARIANT=jemalloc-bullseye-slim
+# FROM ruby:$RUBY_VERSION-slim as base
+FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
-# zlib1g-dev: for nokogiri
-# postgresql-client
-RUN \
-    curl -sL https://deb.nodesource.com/setup_14.x | bash - \
-    && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-    && echo "deb http://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
-    && apt-get update -qq \
-    && apt-get install -y \
-    build-essential \
-    imagemagick \
-    libpq-dev \
-    nodejs \
-    yarn \
-    --no-install-recommends \
-    && apt-get -q clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && mkdir -p $APP_HOME
+ARG BUNDLER_VERSION=2.4.7
 
-WORKDIR $APP_HOME
+# Rails app lives here
+WORKDIR /rails
 
-COPY Gemfile* ./
-RUN \
-    gem install bundler \
-    && RAILS_ENV=production bundle install --jobs 20 --retry 5 --without development test
+# Set production environment
+ENV RAILS_ENV="production" \
+    BUNDLE_DEPLOYMENT="1" \
+    BUNDLE_PATH="/usr/local/bundle" \
+    BUNDLE_WITHOUT="development:test"
 
+
+# Throw-away build stage to reduce size of final image
+FROM base as build
+
+ARG BUILD_PACKAGES="build-essential git pkg-config libpq-dev curl node-gyp python-is-python3"
+
+# Install packages needed to build gems and node modules
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y ${BUILD_PACKAGES}
+
+# Install JavaScript dependencies
+ARG NODE_VERSION=18.15.0
+ARG YARN_VERSION=1.22.19
+ENV PATH=/usr/local/node/bin:$PATH
+RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz -C /tmp/ && \
+    /tmp/node-build-master/bin/node-build "${NODE_VERSION}" /usr/local/node && \
+    npm install -g yarn@$YARN_VERSION && \
+    rm -rf /tmp/node-build-master
+
+# Install application gems
+COPY Gemfile Gemfile.lock ./
+RUN bundle install && \
+    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
+
+# RUN bundle exec bootsnap precompile --gemfile
+
+# Install node modules
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# Copy application code
 COPY . .
 
-RUN \
-    RAILS_ENV=production bundle exec rails assets:precompile
+# Precompile bootsnap code for faster boot times
+# RUN bundle exec bootsnap precompile app/ lib/
+
+# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+# RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+
+# Final stage for app image
+FROM base
+
+ARG DEPLOY_PACKAGES="build-essential git pkg-config libpq-dev curl node-gyp python-is-python3 postgresql-client"
+
+# Install packages needed for deployment
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y ${DEPLOY_PACKAGES} && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+
+# Copy built artifacts: gems, application
+COPY --from=build /usr/local/bundle /usr/local/bundle
+COPY --from=build /rails /rails
+
+# Run and own only the runtime files as a non-root user for security
+RUN useradd rails --home /rails --shell /bin/bash && \
+    chown -R rails:rails db log tmp
+USER rails:rails
+
+# Entrypoint prepares the database.
+ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+
+# Start the server by default, this can be overwritten at runtime
+EXPOSE 3000
+CMD ["./bin/rails", "server"]
