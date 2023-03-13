@@ -1,4 +1,6 @@
 class MarkdownPreparator
+  include ::ApplicationHelper
+
   REGEXP = /\[technology:(.*)\](\<([AIL])\>)?/
   attr_reader :output
 
@@ -19,14 +21,10 @@ class MarkdownPreparator
 
   def image_data(technology, type:)
     case type
-    when 'I' then technology.image_base64
-    when 'L' then technology.logotype_base64
-    else technology.logotype_or_image_base64
+    when 'I' then technology.icon
+    when 'L' then technology.icon_wordmark
+    else technology.logotype_or_image
     end
-  end
-
-  def options(technology)
-    "alt='#{technology.name}' title='#{technology.title}' width='64px'"
   end
 
   def prepare(slug:, type:)
@@ -36,6 +34,6 @@ class MarkdownPreparator
     source = image_data(technology, type:)
     return technology.title unless source
 
-    "<img src='#{source}' #{options(technology)}>"
+    embedded_svg(source, options: { height: '64px', width: '64px' }, title: technology.title)
   end
 end
