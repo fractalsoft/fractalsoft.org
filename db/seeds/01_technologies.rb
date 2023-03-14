@@ -58,6 +58,7 @@ require_relative 'technology/ubuntu'
 
 ## search engine indexing
 require_relative 'technology/elasticsearch'
+require_relative 'technology/opensearch'
 
 # testing
 require_relative 'technology/cypress'
