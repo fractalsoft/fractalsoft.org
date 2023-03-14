@@ -57,6 +57,7 @@ require_relative 'technology/linux'
 require_relative 'technology/ubuntu'
 
 ## search engine indexing
+require_relative 'technology/apache_solr'
 require_relative 'technology/elasticsearch'
 require_relative 'technology/opensearch'
 
