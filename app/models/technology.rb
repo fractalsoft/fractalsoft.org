@@ -9,6 +9,7 @@ class Technology < ApplicationRecord
     mobile: 4,
     ms: 5,
     os: 6,
+    search_engine: 12,
     testing: 7,
     tool: 8,
     web_server: 11,
