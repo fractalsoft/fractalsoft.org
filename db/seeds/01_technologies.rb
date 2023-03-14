@@ -56,6 +56,9 @@ require_relative 'technology/debian'
 require_relative 'technology/linux'
 require_relative 'technology/ubuntu'
 
+## search engine indexing
+require_relative 'technology/elasticsearch'
+
 # testing
 require_relative 'technology/cypress'
 require_relative 'technology/jest'
