@@ -67,6 +67,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   redis
   linux
   docker
+  terraform
   rspec
   svg
   sass
@@ -95,6 +96,9 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   nginx
   selenium
   haml
+  elasticsearch
+  opensearch
+  solr
 ].each do |slug|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
