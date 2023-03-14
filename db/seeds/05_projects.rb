@@ -210,7 +210,7 @@ marketing_hitdea.assign_attributes(
   display: true,
   dofollow: false,
   title: 'advertising app',
-  url: 'marketing.hitdea.com',
+  url: nil,
   year: 2014
 )
 
@@ -238,7 +238,7 @@ analysis_hitdea.assign_attributes(
   display: true,
   dofollow: false,
   title: 'linguistic analysis',
-  url: 'analysis.hitdea.com',
+  url: nil,
   year: 2014
 )
 
@@ -272,7 +272,7 @@ game_hitdea.assign_attributes(
   display: true,
   dofollow: false,
   title: 'wordmaker',
-  url: 'game.hitdea.com',
+  url: nil,
   year: 2014
 )
 
@@ -302,7 +302,7 @@ questions_hitdea.assign_attributes(
   display: true,
   dofollow: false,
   title: '20 questions game',
-  url: 'questions.hitdea.com',
+  url: nil,
   year: 2014
 )
 
