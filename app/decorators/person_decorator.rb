@@ -27,12 +27,12 @@ class PersonDecorator < Draper::Decorator
                              title: social_title(method_name.to_sym)
       return unless html
 
-      content_tag :li, html, class: 'list-inline-item'
+      content_tag :li, html, class: 'social-link list-inline-item'
     end
   end
 
   def image
-    image_tag object.image, alt: ''
+    image_tag object.image, alt: '', class: 'img-fluid'
   end
 
   def introduction
