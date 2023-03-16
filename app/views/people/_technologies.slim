@@ -1,15 +1,15 @@
 - technologies = person.technologies.send(category)
 - if technologies.present?
-    .col-md-4.col-sm-6.col-xs-12
+    .col-md-4.col-sm-6.col-xs-12.mb-3
       h4
         = t(".#{category}")
       hr
       ul.list-inline
         - technologies.each do |technology|
-          li
+          li.list-inline-item
             - if technology.any_image?
                 = embedded_svg(technology.logotype_or_image, options: { height: '64px', width: '64px' }, title: technology.title)
             - else
-              span.label.label-default
+              span.badge.bg-primary
                 = technology.title
             '

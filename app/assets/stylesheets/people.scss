@@ -21,7 +21,7 @@ body.person {
     }
 
     .descritpion {
-      h4 { margin-top: 30px; }
+      h4 { margin-top: 20px; }
       p { margin-top: 20px; }
     }
 
@@ -102,7 +102,7 @@ body.person {
     &:hover { color: $red-background-color; }
   }
 
-  .thumbnail {
+  .person-card {
     padding: 30px;
     padding-bottom: 0;
 
@@ -117,4 +117,9 @@ body.person {
 
   .btn { margin-top: 50px; }
   .social { margin-top: 40px; }
+
+  .social-link {
+    z-index: 10;
+    position: relative;
+  }
 }
