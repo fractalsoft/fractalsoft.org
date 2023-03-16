@@ -2,6 +2,13 @@
 @import 'mixins';
 
 body.community {
+
+  .logotype {
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+
   .community-list {
     background-color: $light-background-color;
     color: $grey-text-color;
@@ -16,15 +23,6 @@ body.community {
       margin-bottom: 100px;
       margin-top: 100px;
       text-transform: uppercase;
-    }
-
-    .logotype {
-      margin-top: 110px;
-      width: 128px;
-
-      &:hover {
-        filter: brightness(120%);
-      }
     }
 
     .text-left {

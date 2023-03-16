@@ -5,7 +5,7 @@
 .container-fluid.background
 .container.community-item
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.offset-md-1
       h1
         = sanitize(@community.name)
 
@@ -16,5 +16,5 @@
         == Markdown.new(@community.description).to_html
 
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.offset-md-1
       = link_to 'Back', communities_path, class: 'btn btn-default'
