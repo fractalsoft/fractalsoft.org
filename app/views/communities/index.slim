@@ -3,20 +3,20 @@
 .container-fluid.background
 .container.community-list
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.offset-md-1
       h1.text-center
         = t('.title')
   .row
-    .col-md-10.col-md-offset-1
-      ul.media-list
-        - @communities.each_with_index do |community, index|
-          li.media
-            - if community.logotype?
-              = link_to community_path(community, locale: locale), class: index.even? ? 'pull-left' : 'pull-right' do
-                = image_tag community.logotype_url, class: 'media-object logotype'
-              .media-body class=(index.even? ? 'text-left' : 'text-right')
-                h4.media-heading
-                  = link_to community_path(community, locale: locale) do
-                    = sanitize(community.name)
-                p
-                  == Markdown.new(community.introduction).to_html
+    .col-md-10.offset-md-1
+      - @communities.each_with_index do |community, index|
+        - if community.logotype?
+          .row.mb-3
+            .col-md-9 class=(index.even? ? 'offset-md-3 text-start' : 'text-end')
+              h3.fw-bold
+                = link_to community_path(community, locale: locale), class: 'link-secondary text-decoration-none' do
+                  = sanitize(community.name)
+          .row.mb-5
+            = link_to community_path(community, locale: locale), class: "col-md-3 #{index.even? ? 'order-1' : 'order-2'}" do
+              = image_tag community.logotype_url, class: 'logotype'
+            .col-md-9.text-justify class=(index.even? ? 'order-2' : 'order-1')
+              == Markdown.new(community.introduction).to_html
