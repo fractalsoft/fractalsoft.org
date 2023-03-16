@@ -5,23 +5,27 @@ office_addresses = OfficeAddress.sorted
 
 <div class='container contact'>
   <h2><%= t('.contact.header') %></h2>
-  <p class='hidden-xs'><%= t('.contact.description') %></p>
+  <p class='d-none d-sm-block'><%= t('.contact.description') %></p>
   <div class='row'>
-    <div class='col-sm-8 col-sm-push-4 col-xs-12 hidden-xs'>
+    <div class='col-sm-4 col-12'>
+      <%= render 'contact' %>
+    </div>
+    <div class='col-sm-8 col-12 d-none d-sm-block'>
       <% office_addresses.each do |office_address| %>
         <% class_name = (office_address.position == 1) ? '' : ' map-display-none' %>
         <iframe width='425' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="<%= office_address.map_link %>" style='border: 1px solid #e1e1e1' class='map <%= class_name %>' id='<%= office_address.slug %>-map'></iframe>
       <% end %>
-      <div class='hidden-xs'>
-      <% office_addresses.each do |office_address| %>
-        <% class_name = (office_address.position == 1) ? 'active' : '' %>
-        <div class='btn btn-default btn-map <%= class_name %>' data-target='#<%= office_address.slug %>-map'><%= office_address.name %></div>
-      <% end %>
+      <div class='d-none d-sm-block'>
+        <% office_addresses.each do |office_address| %>
+          <% class_name = (office_address.position == 1) ? 'active' : '' %>
+          <div class='btn btn-default btn-map <%= class_name %>' data-target='#<%= office_address.slug %>-map'><%= office_address.name %></div>
+        <% end %>
       </div>
-      <%= render 'form', contact_form: @contact_form %>
     </div>
-    <div class='col-sm-4 col-sm-pull-8 col-xs-12'>
-      <%= render 'contact' %>
+    <div class='row'>
+      <div class='col-md-5 offset-md-4'>
+        <%= render 'form', contact_form: @contact_form %>
+      </div>
     </div>
   </div>
 </div>
