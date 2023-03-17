@@ -32,9 +32,9 @@
   <!-- <base href='https://fractalsoft.org/' /> -->
   <%= favicon_link_tag '/favicon.ico', skip_pipeline: true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
   <%= render 'layouts/shared/analytics' %>
   <%= csrf_meta_tags unless @page_caching %>
+  <%= javascript_importmap_tags %>
 </head>
 <body class='<%= yield(:body_class) %>'>
 <%= query_diet_widget if Rails.env.development? && ENV['OPTIMIZATION'] %>
