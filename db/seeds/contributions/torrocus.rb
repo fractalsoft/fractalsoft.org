@@ -54,6 +54,11 @@ contribution.attributes = { locale: :en, name: 'Deployment to production' }
 contribution.attributes = { locale: :pl, name: 'Wdrożenie na produkcję' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 8))
+contribution.attributes = { locale: :en, name: 'Migration from Heroku to another platform' }
+contribution.attributes = { locale: :pl, name: 'Migracja z Heroku na inną platformę' }
+contribution.save
+
 # torrocus in purpura
 params = { person_id: torrocus.id, project_id: purpura.id }
 
@@ -70,6 +75,11 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 3))
 contribution.attributes = { locale: :en, name: 'Deployment to production' }
 contribution.attributes = { locale: :pl, name: 'Wdrożenie na produkcję' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Migration to other platforms' }
+contribution.attributes = { locale: :pl, name: 'Migracja na inne platformy' }
 contribution.save
 
 # torrocus in blog
@@ -121,6 +131,11 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 7))
 contribution.attributes = { locale: :en, name: 'Code quality process automation' }
 contribution.attributes = { locale: :pl, name: 'Automatyzacja procesu jakości kodu' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Migration of app between platforms' }
+contribution.attributes = { locale: :pl, name: 'Migracja aplikacji pomiędzy platformami' }
 contribution.save
 
 # torrocus in SelectHub
