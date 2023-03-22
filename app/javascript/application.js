@@ -1,6 +1,17 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
+import ujs from "@rails/ujs";
+import turbolinks from "turbolinks";
+import * as activeStorage from "@rails/activestorage";
+
+ujs.start();
+turbolinks.start();
+activeStorage.start();
+
+import "jquery";
+import "@popperjs/core";
+import "bootstrap";
+import "./fractalsoft/browser_info";
+import "./fractalsoft/cieszyn";
+import "./fractalsoft/contact_forms";
+import "./fractalsoft/prices";
