@@ -1,3 +1,5 @@
+import L from 'leaflet'
+
 const cieszyn = {
   latitude: 49.7483,
   longitude: 18.6307,
@@ -14,35 +16,28 @@ const gliwice = {
 
 class LocationMap {
   constructor(location) {
-    this.location = location;
-    if (!$('#map').length) { return; }
-    this.map = L.map('map').setView(
-      [this.location.latitude, this.location.longitude],
-      this.location.zoom
+    if (!document.getElementById('map')) { return; }
+    const map = L.map('map').setView(
+      [location.latitude, location.longitude],
+      location.zoom
     );
     const mapLink = '<a href="https://openstreetmap.org">OpenStreetMap</a>';
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; ' + mapLink,
       maxZoom: 19
     }
-    ).addTo(this.map);
-    this.marker = this.createMarker();
-    this.map.on('locationfound', this.onLocationFound);
-    this.map.locate({setView: false, maxZoom: 19});
+    ).addTo(map);
+    this.createMarker(location, map);
+    map.locate({setView: false, maxZoom: 19});
   }
 
-  createMarker() {
-    const marker = L.marker([this.location.latitude, this.location.longitude]).addTo(this.map);
-    marker.bindPopup(this.location.title).openPopup();
-    return marker;
-  }
-
-  onLocationFound(e) {
-    console.log(`${e.latlng}`);
-    console.log(`${e.accuracy}`);
+  createMarker(location, map) {
+    const marker = L.marker([location.latitude, location.longitude]).addTo(map);
+    marker.bindPopup(location.title).openPopup();
   }
 }
 
-const locationMap = () => new LocationMap(cieszyn);
-
-jQuery(() => locationMap());
+document.addEventListener("turbolinks:load", function() {
+  const locationMap = () => new LocationMap(cieszyn);
+  locationMap();
+});
