@@ -1,4 +1,4 @@
-jQuery(function() {
+document.addEventListener("turbolinks:load", function() {
   $('.btn-map').click(function() {
     const target = $(this).data('target');
     $('.btn-map').removeClass('active');

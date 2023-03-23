@@ -46,4 +46,6 @@ const sumPrices = function() {
   });
 };
 
-jQuery(() => sumPrices());
+document.addEventListener("turbolinks:load", function() {
+  sumPrices();
+});
