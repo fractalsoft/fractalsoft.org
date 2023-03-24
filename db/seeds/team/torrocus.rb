@@ -60,45 +60,57 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   ruby
   ruby-on-rails
   jekyll
+
+  rspec
+  selenium
+  playwright
+
   git
+
+  github
+
+  linux
+  ubuntu
+  debian
+
   postgresql
   mysql
   sqlite
   redis
-  linux
-  docker
-  terraform
-  rspec
-  svg
-  sass
-  less
-  coffeescript
-  backbonejs
-  marionettejs
-  emberjs
-  react
-  html5
-  css3
+
+  sidekiq
+
   javascript
   typescript
-  sidekiq
-  slim
+  react
   next-js
-  playwright
-  ubuntu
-  debian
-  aws
-  digital-ocean
-  google-cloud
-  heroku
-  github
-  apache
-  nginx
-  selenium
+  coffeescript
+  emberjs
+  backbonejs
+  marionettejs
+
+  less
+  sass
   haml
+  slim
+  svg
+  html5
+  css3
+
   elasticsearch
-  opensearch
   solr
+  opensearch
+
+  heroku
+  digital-ocean
+  aws
+  google-cloud
+
+  docker
+  terraform
+
+  nginx
+  apache
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
