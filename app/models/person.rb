@@ -8,7 +8,7 @@ class Person < ApplicationRecord
 
   has_many :contributions, dependent: :destroy
   has_many :projects, -> { distinct }, through: :contributions
-  has_many :technological_skills, dependent: :destroy
+  has_many :technological_skills, -> { sorted }, inverse_of: :person, dependent: :destroy
   has_many :technologies, through: :technological_skills
 
   def project_with_contributions(project)
