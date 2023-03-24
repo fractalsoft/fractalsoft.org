@@ -99,10 +99,11 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   elasticsearch
   opensearch
   solr
-].each do |slug|
+].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
     person_id: torrocus.id,
+    position: index + 1,
     technology_id: technology.id
   ).first_or_create
 end
