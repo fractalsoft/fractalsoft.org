@@ -3,11 +3,11 @@
 .container-fluid.background
 .container.job-offers-list
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.offset-md-1
       h1.text-center
         = t('.title')
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.offset-md-1
       - if @job_offers.empty?
         = render 'no_job_offers'
       - else
