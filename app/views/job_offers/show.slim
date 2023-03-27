@@ -5,7 +5,7 @@
 .container-fluid.background
 .container.job-offer-item
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.offset-md-1
       h1
         = @job_offer.headline
 
@@ -13,5 +13,5 @@
         == Markdown.new(MarkdownPreparator.render(@job_offer.description)).to_html
 
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.offset-md-1
       = link_to 'Back', job_offers_path, class: 'btn btn-default'
