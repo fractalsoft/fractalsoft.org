@@ -64,6 +64,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   rspec
   selenium
   playwright
+  shoulda-matchers
 
   git
 
