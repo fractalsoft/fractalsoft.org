@@ -59,7 +59,6 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   graphql
   jquery
   emberjs
-  react
   git
   mysql
   sqlite
