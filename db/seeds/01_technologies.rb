@@ -68,6 +68,7 @@ require_relative 'technology/minitest'
 require_relative 'technology/playwright'
 require_relative 'technology/rspec'
 require_relative 'technology/selenium'
+require_relative 'technology/shoulda_matchers'
 require_relative 'technology/testcase'
 
 # tools
