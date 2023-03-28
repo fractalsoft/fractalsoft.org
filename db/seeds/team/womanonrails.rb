@@ -75,6 +75,8 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   heroku
   github
   selenium
+  elasticsearch
+  solr
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
