@@ -29,7 +29,7 @@ womanonrails.saying = %(
 
 I18n.locale = :pl
 womanonrails.introduction = %(
-<strong>Programista Ruby on Rails od 2011 roku.</strong>
+<strong>Programistka Ruby on Rails od 2011 roku.</strong>
 Specjalizuje się w dobrej jakości kodu, refaktoringu i TDD.
 Odpowiedzialna i dobrze zorganizowana.
 Mentor na CoderDojo i Rails Girls.
