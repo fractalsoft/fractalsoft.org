@@ -24,7 +24,7 @@ lisu.introduction = %(
 <strong>Programista Rails otwarty na różne technologie.</strong>
 Ekspert od problemów.
 Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.
-Stale rozwija umiejętności związane z analizą obrazu i sieciami neuronowymi.
+Stale rozwija umiejętności związane z analizą obrazów i sieciami neuronowymi.
 )
 
 lisu.save
