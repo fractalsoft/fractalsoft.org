@@ -42,35 +42,31 @@
 
   .container.technology.hidden-xs
     .row
-      .col-sm-10.col-sm-offset-1
-        ul.media-list
-          li.media
-            a.pull-left[href='#']
-              .media-box
-                = image_tag '/icons/technology/html5/html5-original-wordmark.svg', alt: 'HTML5', class: 'media-object', height: '160', width: '160'
-            .media-body.text-left
-              h4.media-heading
-                = t('.technology.header.one')
-              p
-                = t('.technology.description.one')
-          li.media
-            a.pull-right[href='#']
-              .media-box
-                = image_tag '/icons/technology/ruby-on-rails/rails-plain-wordmark.svg', alt: 'Ruby on Rails', class: 'media-object', width: '160'
-            .media-body.text-right
-              h4.media-heading
-                = t('.technology.header.two')
-              p
-                = t('.technology.description.two')
-          li.media
-            a.pull-left[href='#']
-              .media-box
-                = image_tag '/icons/community/open-source/opensource-original.svg', alt: 'Open Source', class: 'media-object', height: '160', width: '160'
-            .media-body.text-left
-              h4.media-heading
-                = t('.technology.header.three')
-              p
-                = t('.technology.description.three_html')
+      .col-sm-10.offset-md-1
+        .row.mb-5
+          .col-md-3.align-self-center
+            = image_tag '/icons/technology/html5/html5-original-wordmark.svg', alt: 'HTML5', height: '160', width: '160'
+          .col-md-9.align-self-center
+            h3.fw-bold.text-start.mb-3
+              = t('.technology.header.one')
+            p.text-justify
+              = t('.technology.description.one')
+        .row.mb-5
+          .col-md-3.align-self-center.order-2
+            = image_tag '/icons/technology/ruby-on-rails/rails-plain-wordmark.svg', alt: 'Ruby on Rails', width: '160'
+          .col-md-9.align-self-center.order-1
+            h3.fw-bold.text-end.mb-3
+              = t('.technology.header.two')
+            p.text-justify
+              = t('.technology.description.two')
+        .row.mb-5
+          .col-md-3.align-self-center.mb-3
+            = image_tag '/icons/community/open-source/opensource-original.svg', alt: 'Open Source', height: '160', width: '160'
+          .col-md-9.align-self-center
+            h3.fw-bold.text-start
+              = t('.technology.header.three')
+            p.text-justify
+              = t('.technology.description.three_html')
 
   #contact.container.contact
     h2
