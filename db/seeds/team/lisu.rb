@@ -63,6 +63,7 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   heroku
   github
   three-js
+  apple
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(

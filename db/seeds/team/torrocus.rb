@@ -73,6 +73,9 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   linux
   ubuntu
   debian
+  opensuse
+  slackware
+  slax-linux
 
   postgresql
   mysql
