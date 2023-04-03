@@ -14,6 +14,7 @@ gem 'draper'
 gem 'friendly_id', '~> 5.5'
 gem 'globalize'
 gem 'http_accept_language'
+gem 'importmap-rails', '~> 1.1'
 gem 'jbuilder', '~> 2.11'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
@@ -33,7 +34,6 @@ gem 'simple_form', '~> 5.2'
 gem 'slim-rails', '~> 3.6' # Template language instead Erb
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 gem 'uglifier', '>= 1.3.0'
-gem 'importmap-rails', '~> 1.1'
 
 group :development do
   gem 'better_errors'
