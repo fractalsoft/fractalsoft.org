@@ -55,6 +55,7 @@ require_relative 'technology/cordova'
 require_relative 'technology/apple'
 require_relative 'technology/debian'
 require_relative 'technology/linux'
+require_relative 'technology/slackware'
 require_relative 'technology/slax_linux'
 require_relative 'technology/ubuntu'
 
