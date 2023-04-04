@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_130000) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_04_04_095025) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -24,16 +23,16 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.string "logotype"
     t.string "name"
     t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["slug"], name: "index_communities_on_slug"
   end
 
   create_table "community_translations", force: :cascade do |t|
     t.uuid "community_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "description"
     t.text "introduction"
     t.string "meta_description"
@@ -45,8 +44,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
   create_table "computer_fix_service_translations", force: :cascade do |t|
     t.uuid "computer_fix_service_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "name"
     t.index ["computer_fix_service_id"], name: "index_8cbd37260092c65a317fabf1fe6fbf080714a9c0"
     t.index ["locale"], name: "index_computer_fix_service_translations_on_locale"
@@ -56,15 +55,15 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.decimal "price", precision: 16, scale: 4
     t.integer "position", default: 0, null: false
     t.string "currency"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "contribution_translations", force: :cascade do |t|
     t.uuid "contribution_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "name"
     t.index ["contribution_id"], name: "index_contribution_translations_on_contribution_id"
     t.index ["locale"], name: "index_contribution_translations_on_locale"
@@ -74,8 +73,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.integer "position", default: 0, null: false
     t.uuid "person_id"
     t.uuid "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["person_id"], name: "index_contributions_on_person_id"
     t.index ["project_id"], name: "index_contributions_on_project_id"
   end
@@ -85,7 +84,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.integer "sluggable_id", null: false
     t.string "sluggable_type", limit: 50
     t.string "scope"
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
@@ -96,16 +95,16 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.string "image"
     t.string "kind"
     t.uuid "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["project_id"], name: "index_images_on_project_id"
   end
 
   create_table "job_offer_translations", force: :cascade do |t|
     t.uuid "job_offer_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "brief", default: ""
     t.text "description", default: ""
     t.string "headline"
@@ -122,15 +121,15 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.boolean "published", default: false
     t.integer "position", default: 0
     t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "office_address_translations", force: :cascade do |t|
     t.uuid "office_address_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "country"
     t.string "name"
     t.index ["locale"], name: "index_office_address_translations_on_locale"
@@ -147,8 +146,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.string "postcode"
     t.string "slug"
     t.string "street_with_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["slug"], name: "index_office_addresses_on_slug"
   end
 
@@ -171,16 +170,16 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.string "vimeo"
     t.string "website"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["slug"], name: "index_people_on_slug"
   end
 
   create_table "person_translations", force: :cascade do |t|
     t.uuid "person_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "introduction"
     t.string "saying"
     t.index ["locale"], name: "index_person_translations_on_locale"
@@ -190,8 +189,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
   create_table "project_translations", force: :cascade do |t|
     t.uuid "project_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "description"
     t.text "introduction"
     t.string "subtitle"
@@ -208,8 +207,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.string "thumbnail"
     t.string "title", null: false
     t.string "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["slug"], name: "index_projects_on_slug"
   end
 
@@ -218,8 +217,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.integer "rating", default: 0, null: false
     t.uuid "person_id"
     t.uuid "technology_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["person_id"], name: "index_technological_skills_on_person_id"
     t.index ["technology_id"], name: "index_technological_skills_on_technology_id"
   end
@@ -230,16 +229,16 @@ ActiveRecord::Schema.define(version: 2019_05_28_130000) do
     t.string "slug"
     t.text "icon"
     t.text "icon_wordmark"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["slug"], name: "index_technologies_on_slug"
   end
 
   create_table "technology_translations", force: :cascade do |t|
     t.uuid "technology_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "description", default: ""
     t.string "meta_description", default: ""
     t.string "meta_title", default: ""
