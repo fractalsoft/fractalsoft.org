@@ -9,6 +9,7 @@ class Technology < ApplicationRecord
     mobile: 4,
     mathematical_software: 5,
     os: 6,
+    project_management_software: 13,
     search_engine: 12,
     testing: 7,
     tool: 8,
