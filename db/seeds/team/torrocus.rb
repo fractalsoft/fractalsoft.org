@@ -53,12 +53,12 @@ torrocus.save
 
 TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
-# sinatra
 # minitest
 # testcase
 %w[
   ruby
   ruby-on-rails
+  sinatra
   jekyll
 
   rspec
