@@ -9,6 +9,7 @@ require_relative 'technology/sinatra'
 require_relative 'technology/rails_event_store'
 ## programming language
 require_relative 'technology/csharp'
+require_relative 'technology/jruby'
 require_relative 'technology/python'
 require_relative 'technology/ruby'
 
