@@ -31,7 +31,6 @@ lisu.save
 
 TechnologicalSkill.where(person_id: lisu.id).delete_all
 
-# sinatra
 # minitest
 %w[
   javascript
@@ -64,6 +63,7 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   github
   three-js
   apple
+  sinatra
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
