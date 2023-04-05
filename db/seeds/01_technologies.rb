@@ -64,6 +64,8 @@ require_relative 'technology/slackware'
 require_relative 'technology/slax_linux'
 require_relative 'technology/ubuntu'
 
+# project management software
+
 ## search engine indexing
 require_relative 'technology/apache_solr'
 require_relative 'technology/elasticsearch'
