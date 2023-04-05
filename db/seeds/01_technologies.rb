@@ -12,6 +12,7 @@ require_relative 'technology/csharp'
 require_relative 'technology/jruby'
 require_relative 'technology/python'
 require_relative 'technology/ruby'
+require_relative 'technology/truffleruby'
 
 # cloud computing
 require_relative 'technology/amazon_web_services'
