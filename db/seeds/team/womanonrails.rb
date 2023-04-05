@@ -74,7 +74,7 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   ubuntu
   heroku
   github
-  selenium
+  selenium-webdriver
   elasticsearch
   solr
 ].each_with_index do |slug, index|

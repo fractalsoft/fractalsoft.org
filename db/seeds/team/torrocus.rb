@@ -62,7 +62,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   jekyll
 
   rspec
-  selenium
+  selenium-webdriver
   playwright
   shoulda-matchers
 
