@@ -49,6 +49,7 @@ require_relative 'technology/unity'
 
 # mathematical software
 require_relative 'technology/mathematica'
+require_relative 'technology/matlab'
 
 # mobile development
 require_relative 'technology/cordova'
