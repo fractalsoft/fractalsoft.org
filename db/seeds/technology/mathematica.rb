@@ -8,4 +8,4 @@ technology_mathematica.assign_attributes(
   icon: icon_mathematica_svg
 )
 technology_mathematica.save
-technology_mathematica.ms!
+technology_mathematica.mathematical_software!
