@@ -77,7 +77,7 @@ This is our company website.
 It shouldn't be complicated.
 The task of this site is to show what and how we do.
 We work on it in our free time.
-The project is Open Source.
+The project is public and anyone can look at the code.
 )
 fractalsoft.subtitle = 'software house'
 
@@ -88,7 +88,7 @@ To nasza strona firmy.
 Nie ma być skomplikowana.
 Zadaniem tej strony jest pokazanie co i jak robimy.
 Pracujemy nad nią w wolnym czasie.
-Projekt jest Open Source.
+Projekt jest publiczny i każdy może spojrzeć w kod.
 )
 fractalsoft.subtitle = 'firma programistyczna'
 
