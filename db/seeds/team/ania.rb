@@ -64,6 +64,8 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
   mathematica
 
   sonic-pi
+
+  trello
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(

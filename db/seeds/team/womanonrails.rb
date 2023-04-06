@@ -77,6 +77,9 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   selenium-webdriver
   elasticsearch
   solr
+  trello
+  taiga
+  pivotal-tracker
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(

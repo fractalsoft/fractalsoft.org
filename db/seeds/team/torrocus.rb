@@ -60,6 +60,8 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   ruby-on-rails
   sinatra
   jekyll
+  jruby
+  truffleruby
 
   rspec
   playwright
@@ -74,6 +76,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   linux
   ubuntu
   debian
+  linux-mint
   opensuse
   slackware
   slax-linux
@@ -116,6 +119,11 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
   nginx
   apache
+
+  matlab
+
+  trello
+  taiga
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
