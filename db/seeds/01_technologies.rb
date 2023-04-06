@@ -65,6 +65,7 @@ require_relative 'technology/slax_linux'
 require_relative 'technology/ubuntu'
 
 # project management software
+require_relative 'technology/taiga'
 require_relative 'technology/trello'
 
 ## search engine indexing
