@@ -14,11 +14,3 @@ updates:
       - dependency-type: "development"
     ignore:
       - dependency-name: "rails"
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: monthly
-      time: "12:00"
-    labels:
-      - dependencies
-      - javascript
