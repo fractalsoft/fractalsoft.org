@@ -10,7 +10,7 @@ Rails.application.configure do
   config.active_support.report_deprecations = false
   config.assets.compile = false
   config.assets.css_compressor = :sass
-  # config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = :uglifier
   config.cache_classes = true
   config.consider_all_requests_local = false
   config.eager_load = true
