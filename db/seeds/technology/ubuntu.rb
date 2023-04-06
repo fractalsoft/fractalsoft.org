@@ -10,4 +10,4 @@ technology_ubuntu.assign_attributes(
   icon_wordmark: icon_ubuntu_wordmark_svg
 )
 technology_ubuntu.save
-technology_ubuntu.os!
+technology_ubuntu.operating_system!

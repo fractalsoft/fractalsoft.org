@@ -10,4 +10,4 @@ technology_red_hat_linux.assign_attributes(
   icon_wordmark: icon_red_hat_wordmark_svg
 )
 technology_red_hat_linux.save
-technology_red_hat_linux.os!
+technology_red_hat_linux.operating_system!
