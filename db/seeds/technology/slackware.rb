@@ -8,4 +8,4 @@ technology_slackware_linux.assign_attributes(
   icon: icon_slackware_linux_original_svg
 )
 technology_slackware_linux.save
-technology_slackware_linux.os!
+technology_slackware_linux.operating_system!

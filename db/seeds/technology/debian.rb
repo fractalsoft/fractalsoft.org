@@ -10,4 +10,4 @@ technology_debian.assign_attributes(
   icon_wordmark: icon_debian_wordmark_svg
 )
 technology_debian.save
-technology_debian.os!
+technology_debian.operating_system!

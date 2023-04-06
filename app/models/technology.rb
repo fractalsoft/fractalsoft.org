@@ -8,7 +8,7 @@ class Technology < ApplicationRecord
     gamedev: 3,
     mobile: 4,
     mathematical_software: 5,
-    os: 6,
+    operating_system: 6,
     project_management_software: 13,
     search_engine: 12,
     testing: 7,

@@ -8,4 +8,4 @@ technology_slax_linux.assign_attributes(
   icon: icon_slax_linux_svg
 )
 technology_slax_linux.save
-technology_slax_linux.os!
+technology_slax_linux.operating_system!

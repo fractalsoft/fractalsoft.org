@@ -7,4 +7,4 @@ technology_apple.assign_attributes(
   icon: icon_apple_original_svg
 )
 technology_apple.save
-technology_apple.os!
+technology_apple.operating_system!

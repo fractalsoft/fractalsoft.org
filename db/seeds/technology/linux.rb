@@ -7,4 +7,4 @@ technology_linux.assign_attributes(
   icon: icon_linux_original_svg
 )
 technology_linux.save
-technology_linux.os!
+technology_linux.operating_system!

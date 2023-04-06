@@ -10,4 +10,4 @@ technology_opensuse.assign_attributes(
   icon_wordmark: icon_opensuse_wordmark_svg
 )
 technology_opensuse.save
-technology_opensuse.os!
+technology_opensuse.operating_system!
