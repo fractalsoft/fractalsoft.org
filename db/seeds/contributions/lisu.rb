@@ -36,6 +36,24 @@ contribution.attributes = { locale: :en, name: 'React frontend development (Next
 contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w React (Next.js)' }
 contribution.save
 
+# lisu in fractalsoft
+params = { person_id: lisu.id, project_id: fractalsoft.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Updating Rails to version 7.x' }
+contribution.attributes = { locale: :pl, name: 'Aktualizacja Railsów do wersji 7.x' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Implementation of importmaps' }
+contribution.attributes = { locale: :pl, name: 'Wdrożenie importmap' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Updating Bootstrap 3 to Bootstrap 5' }
+contribution.attributes = { locale: :pl, name: 'Aktualizacja Bootstrapa 3 na 5' }
+contribution.save
+
 # lisu in julinek AR
 params = { person_id: lisu.id, project_id: julinek_ar.id }
 
