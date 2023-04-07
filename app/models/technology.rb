@@ -3,9 +3,11 @@ class Technology < ApplicationRecord
   enum category: {
     backend: 0,
     cloud_computing: 10,
+    code_formatter: 15,
     database: 1,
     frontend: 2,
     gamedev: 3,
+    linter: 14,
     mobile: 4,
     mathematical_software: 5,
     operating_system: 6,
@@ -19,6 +21,7 @@ class Technology < ApplicationRecord
   friendly_id :slug, use: [:slugged, :finders]
   translates :description, :meta_description, :meta_title, :name, :title
 
+  scope :linters_and_code_formaters, -> { linter.or(code_formatter) }
   scope :sorted, -> { order(position: :asc) }
 
   def any_image?

@@ -47,6 +47,8 @@ require_relative 'technology/typescript'
 require_relative 'technology/threejs'
 require_relative 'technology/unity'
 
+# linters & code formatters
+
 # mathematical software
 require_relative 'technology/mathematica'
 require_relative 'technology/matlab'
