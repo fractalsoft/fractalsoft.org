@@ -48,6 +48,7 @@ require_relative 'technology/threejs'
 require_relative 'technology/unity'
 
 # linters & code formatters
+require_relative 'technology/eslint'
 
 # mathematical software
 require_relative 'technology/mathematica'
