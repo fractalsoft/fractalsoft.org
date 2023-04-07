@@ -124,6 +124,11 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
   trello
   taiga
+
+  rubocop
+  eslint
+  prettier
+  stylelint
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
