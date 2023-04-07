@@ -50,6 +50,7 @@ require_relative 'technology/unity'
 # linters & code formatters
 require_relative 'technology/eslint'
 require_relative 'technology/rubocop'
+require_relative 'technology/stylelint'
 
 # mathematical software
 require_relative 'technology/mathematica'
