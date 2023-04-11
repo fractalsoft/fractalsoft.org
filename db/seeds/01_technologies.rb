@@ -23,6 +23,7 @@ require_relative 'technology/heroku'
 # continuous integration
 require_relative 'technology/circleci'
 require_relative 'technology/github_actions'
+require_relative 'technology/hound_ci'
 require_relative 'technology/jenkins'
 require_relative 'technology/travis_ci'
 
