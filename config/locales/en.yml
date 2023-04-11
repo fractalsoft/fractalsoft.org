@@ -97,6 +97,7 @@ en:
         meet_us: Meet our team!
     technologies:
       backend: Backend development
+      continuous_integration: CI (Continuous Integration)
       database: Databases
       frontend: Frontend development
       gamedev: Game development
