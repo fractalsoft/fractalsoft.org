@@ -20,6 +20,8 @@ require_relative 'technology/digital_ocean'
 require_relative 'technology/google_cloud'
 require_relative 'technology/heroku'
 
+# continuous integration
+
 # database
 require_relative 'technology/mysql'
 require_relative 'technology/postgresql'

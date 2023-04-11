@@ -4,6 +4,7 @@ class Technology < ApplicationRecord
     backend: 0,
     cloud_computing: 10,
     code_formatter: 15,
+    continuous_integration: 16,
     database: 1,
     frontend: 2,
     gamedev: 3,
