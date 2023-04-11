@@ -21,6 +21,7 @@ require_relative 'technology/google_cloud'
 require_relative 'technology/heroku'
 
 # continuous integration
+require_relative 'technology/circleci'
 
 # database
 require_relative 'technology/mysql'
