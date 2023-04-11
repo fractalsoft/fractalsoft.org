@@ -97,6 +97,7 @@ en:
         meet_us: Meet our team!
     technologies:
       backend: Backend development
+      cloud_computing: Cloud Computing
       continuous_integration: CI (Continuous Integration)
       database: Databases
       frontend: Frontend development
