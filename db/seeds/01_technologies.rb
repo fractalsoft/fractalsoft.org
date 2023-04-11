@@ -21,6 +21,7 @@ require_relative 'technology/google_cloud'
 require_relative 'technology/heroku'
 
 # continuous integration
+require_relative 'technology/codeship'
 require_relative 'technology/circleci'
 require_relative 'technology/github_actions'
 require_relative 'technology/hound_ci'
