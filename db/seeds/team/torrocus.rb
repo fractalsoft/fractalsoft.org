@@ -129,6 +129,11 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   eslint
   prettier
   stylelint
+
+  github-actions
+  jenkins
+  hound-ci
+  travis-ci
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
