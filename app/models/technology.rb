@@ -1,6 +1,7 @@
 class Technology < ApplicationRecord
   extend FriendlyId
   enum category: {
+    amazon_web_services: 17,
     backend: 0,
     cloud_computing: 10,
     code_formatter: 15,

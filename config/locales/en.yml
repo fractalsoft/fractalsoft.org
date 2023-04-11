@@ -96,6 +96,7 @@ en:
       team:
         meet_us: Meet our team!
     technologies:
+      amazon_web_services: AWS (Amazon Web Services)
       backend: Backend development
       cloud_computing: Cloud Computing
       continuous_integration: CI (Continuous Integration)
