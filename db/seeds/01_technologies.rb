@@ -24,6 +24,7 @@ require_relative 'technology/heroku'
 require_relative 'technology/circleci'
 require_relative 'technology/github_actions'
 require_relative 'technology/jenkins'
+require_relative 'technology/travis_ci'
 
 # database
 require_relative 'technology/mysql'
