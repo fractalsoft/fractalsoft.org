@@ -22,6 +22,7 @@ require_relative 'technology/heroku'
 
 # continuous integration
 require_relative 'technology/circleci'
+require_relative 'technology/jenkins'
 
 # database
 require_relative 'technology/mysql'
