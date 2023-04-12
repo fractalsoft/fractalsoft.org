@@ -32,7 +32,7 @@ class PersonDecorator < Draper::Decorator
   end
 
   def image
-    image_tag object.image, alt: '', class: 'img-fluid'
+    image_tag object.image, alt: '', class: 'rounded'
   end
 
   def introduction
