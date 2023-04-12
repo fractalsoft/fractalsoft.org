@@ -87,6 +87,7 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   aws-s3
   aws-sns
   aws-sqs
+  sidekiq
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
