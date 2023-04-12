@@ -82,7 +82,7 @@ GEM
     airbrussh (1.4.1)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.2)
-    autoprefixer-rails (10.4.7.0)
+    autoprefixer-rails (10.4.13.0)
       execjs (~> 2)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -105,9 +105,9 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    bootstrap (5.2.3)
+    bootstrap (5.3.0.alpha3)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 2.11.6, < 3)
+      popper_js (>= 2.11.7, < 3)
       sassc-rails (>= 2.0.0)
     brakeman (5.4.0)
     builder (3.2.4)
@@ -318,7 +318,7 @@ GEM
       ast (~> 2.4.1)
     path_expander (1.1.1)
     pg (1.4.5)
-    popper_js (2.11.6)
+    popper_js (2.11.7)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -568,7 +568,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap (>= 1.16.0)
-  bootstrap (~> 5.2)
+  bootstrap (~> 5.3.0.alpha3)
   brakeman
   bullet
   byebug
