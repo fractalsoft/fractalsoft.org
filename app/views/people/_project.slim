@@ -1,7 +1,7 @@
 .row.description
   .col-md-3
     h4
-      - options = { target: '_blank' }
+      - options = { target: '_blank', class: 'link-secondary link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' }
       - options[:rel] = 'nofollow' unless project.dofollow
       - if project.display
         = project.title
