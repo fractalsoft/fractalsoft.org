@@ -86,20 +86,10 @@ body.person {
 }
 
 .team {
-  padding-bottom: 100px;
-  text-align: center;
-
   h2 {
     @include vertical-padding(60px);
     font-weight: 700;
     text-transform: uppercase;
-  }
-
-  a {
-    color: $grey-text-color;
-    text-decoration: none;
-
-    &:hover { color: $red-background-color; }
   }
 
   .person-card {

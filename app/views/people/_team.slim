@@ -1,6 +1,8 @@
 - cache people do
   .container.team
-    h2
-      = t('.team.meet_us')
     .row
+      .col-md-10.offset-md-1
+        h2.text-center
+          = t('.team.meet_us')
+    .row.row-cols-1.row-cols-md-2.g-5
       = render people
