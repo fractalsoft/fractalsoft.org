@@ -88,6 +88,9 @@ en:
       card: summary
       site: "@fractal_soft"
   people:
+    person:
+      person:
+        see_full_profile: See full profile
     project:
       major_contributions: Major contributions
     skills:
