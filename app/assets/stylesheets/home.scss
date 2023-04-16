@@ -111,75 +111,19 @@ body.home {
   }
 
   .technology {
-    background-color: $light-background-color;
     @include vertical-padding(120px);
-    text-align: center;
 
-    .btn.btn-default {
-      background-color: transparent;
+    .featurette-divider {
+      margin: 5rem 0; /* Space out the Bootstrap <hr> more */
     }
 
-    .text-left {
-      padding-left: 75px;
-      text-align: left;
+    .featurette-heading {
+      letter-spacing: -.05rem;
     }
 
-    .text-right {
-      padding-right: 75px;
-      text-align: right;
-    }
-
-    .media-list {
-      margin-top: 50px;
-
-      .media-body {
-        h4 {
-          font-size: 25pt;
-          font-weight: 700;
-          margin-bottom: 0;
-          padding-bottom: 25px;
-          padding-top: 30px;
-        }
-
-        p {
-          font-size: 10pt;
-          line-height: 1.8;
-        }
-      }
-
-      .media-box {
-        display: table-cell;
-        height: 160px;
-        vertical-align: middle;
-
-        &:hover {
-          filter: brightness(120%);
-        }
-      }
-    }
-  }
-
-  .opinions {
-    .cover {
-      height: 470px;
-      @include cover-image('<%= asset_path('home/opinions.jpg') %>');
-
-      .carousel-caption {
-        img {
-          margin-bottom: 30px;
-          margin-top: 80px;
-          height: 140px;
-          width: 140px;
-        }
-
-        p {
-          font-family: $asap-fonts;
-
-          strong {
-            font-size: 20pt;
-            font-weight: 700;
-          }
-        }
+    @media (min-width: 40em) {
+      .featurette-heading {
+        font-size: 50px;
       }
     }
   }
