@@ -40,33 +40,30 @@
 
   = render 'people/team', people: @home.people, cached: true
 
-  .container.technology.hidden-xs
-    .row
-      .col-sm-10.offset-md-1
-        .row.mb-5
-          .col-md-3.align-self-center
-            = image_tag '/icons/technology/html5/html5-original-wordmark.svg', alt: 'HTML5', height: '160', width: '160'
-          .col-md-9.align-self-center
-            h3.fw-bold.text-start.mb-3
-              = t('.technology.header.one')
-            p.text-justify
-              = t('.technology.description.one')
-        .row.mb-5
-          .col-md-3.align-self-center.order-2
-            = image_tag '/icons/technology/ruby-on-rails/rails-plain-wordmark.svg', alt: 'Ruby on Rails', width: '160'
-          .col-md-9.align-self-center.order-1
-            h3.fw-bold.text-end.mb-3
-              = t('.technology.header.two')
-            p.text-justify
-              = t('.technology.description.two')
-        .row.mb-5
-          .col-md-3.align-self-center.mb-3
-            = image_tag '/icons/community/open-source/opensource-original.svg', alt: 'Open Source', height: '160', width: '160'
-          .col-md-9.align-self-center
-            h3.fw-bold.text-start
-              = t('.technology.header.three')
-            p.text-justify
-              = t('.technology.description.three_html')
+  .container
+    = render 'used_technology_on_left',
+      description: t('.technology.description.one'),
+      headline: t('.technology.header.one'),
+      image_name: 'HTML5',
+      image_path: '/icons/technology/html5/html5-original-wordmark.svg',
+      image_height: 250,
+      image_width: 250
+
+    = render 'used_technology_on_right',
+      description: t('.technology.description.two'),
+      headline: t('.technology.header.two'),
+      image_name: 'Ruby on Rails',
+      image_path: '/icons/technology/ruby-on-rails/rails-plain-wordmark.svg',
+      image_height: 250,
+      image_width: 250
+
+    = render 'used_technology_on_left',
+      description: t('.technology.description.three_html'),
+      headline: t('.technology.header.three'),
+      image_name: 'Open Source',
+      image_path: '/icons/community/open-source/opensource-original.svg',
+      image_height: 250,
+      image_width: 250
 
   #contact.container.contact
     h2
