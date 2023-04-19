@@ -1,15 +1,12 @@
 - content_for :body_class, 'community'
 
 .container-fluid.background
-.container.community-list
-  .row
-    .col-md-10.offset-md-1
-      h1.text-center
-        = t('.title')
-  .row
-    .col-md-10.offset-md-1
-      - @communities.each_with_index do |community, index|
-        - if index.even?
-          = render 'community_on_right', community: community
-        - else
-          = render 'community_on_left', community: community
+.container-fluid
+  .container.px-5.community-list
+    h1.text-center
+      = t('.title')
+    - @communities.each_with_index do |community, index|
+      - if index.even?
+        = render 'community_on_left', community: community
+      - else
+        = render 'community_on_right', community: community
