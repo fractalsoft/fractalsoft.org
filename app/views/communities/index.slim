@@ -7,6 +7,12 @@
       = t('.title')
     - @communities.each_with_index do |community, index|
       - if index.even?
-        = render 'community_on_left', community: community
+        = render 'community_on_left',
+          community:,
+          image_height: 256,
+          image_width: 256
       - else
-        = render 'community_on_right', community: community
+        = render 'community_on_right',
+          community:,
+          image_height: 256,
+          image_width: 256
