@@ -15,7 +15,6 @@ body.community {
 
     margin-top: -250px;
     @include vertical-padding(20px);
-    text-align: center;
 
     h1 {
       font-family: "Asap", Helvetica, sans-serif;
@@ -23,42 +22,6 @@ body.community {
       margin-bottom: 100px;
       margin-top: 100px;
       text-transform: uppercase;
-    }
-
-    .text-left {
-      padding-left: 75px;
-      text-align: left;
-    }
-
-    .text-right {
-      padding-right: 75px;
-      text-align: right;
-    }
-
-    .media-list {
-      .media-body {
-        h4 {
-          font-size: 25pt;
-          font-weight: 700;
-          margin-bottom: 0;
-          padding-bottom: 25px;
-          padding-top: 30px;
-        }
-
-        a {
-          color: $grey-text-color;
-          &:hover, &:focus {
-            color: $black-text-color;
-            text-decoration: none;
-          }
-        }
-
-        p {
-          font-size: 10pt;
-          line-height: 1.8;
-          text-align: justify;
-        }
-      }
     }
   }
 
