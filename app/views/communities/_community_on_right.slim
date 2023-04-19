@@ -1,0 +1,11 @@
+- if community.logotype?
+  .row.mb-3
+    .col-md-9 class='offset-md-3 text-start'
+      h3.fw-bold
+        = link_to community_path(community, locale: locale), class: 'link-secondary text-decoration-none' do
+          = sanitize(community.name)
+  .row.mb-5
+    = link_to community_path(community, locale: locale), class: 'col-md-3 order-1' do
+      = image_tag community.logotype_url, class: 'logotype'
+    .col-md-9.text-justify class='order-2'
+      == Markdown.new(community.introduction).to_html
