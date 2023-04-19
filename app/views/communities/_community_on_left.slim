@@ -7,5 +7,9 @@
       == Markdown.new(community.introduction).to_html
   .col-md-4.order-md-1.text-center
     = link_to community_path(community, locale: locale) do
-      = image_tag community.logotype_url, alt: community.name, height: 256, width: 256, class: 'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto logotype'
+      = image_tag community.logotype_url,
+        alt: community.name,
+        height: image_height,
+        width: image_width,
+        class: 'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto logotype'
 hr.featurette-divider
