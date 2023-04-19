@@ -9,14 +9,7 @@
   .row
     .col-md-10.offset-md-1
       - @communities.each_with_index do |community, index|
-        - if community.logotype?
-          .row.mb-3
-            .col-md-9 class=(index.even? ? 'offset-md-3 text-start' : 'text-end')
-              h3.fw-bold
-                = link_to community_path(community, locale: locale), class: 'link-secondary text-decoration-none' do
-                  = sanitize(community.name)
-          .row.mb-5
-            = link_to community_path(community, locale: locale), class: "col-md-3 #{index.even? ? 'order-1' : 'order-2'}" do
-              = image_tag community.logotype_url, class: 'logotype'
-            .col-md-9.text-justify class=(index.even? ? 'order-2' : 'order-1')
-              == Markdown.new(community.introduction).to_html
+        - if index.even?
+          = render 'community_on_right', community: community
+        - else
+          = render 'community_on_left', community: community
