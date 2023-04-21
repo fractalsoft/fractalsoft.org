@@ -23,10 +23,15 @@
         = @person.website
       = @person.skills
 
-  hr
-
-  - @person.projects.each do |project|
-    = render 'project', project: project, contributions: @person.project_with_contributions(project)
+  - @person.projects.each_with_index do |project, index|
+    .accordion
+      .accordion-item
+        h2.accordion-header
+          button.accordion-button type='button' data-bs-toggle='collapse' data-bs-target="#collapse-project-#{project.slug}" aria-expanded='true' aria-controls="collapse-project-#{project.slug}"
+            = project.title
+        .accordion-collapse.collapse aria-labelledby='projectListHeader' id="collapse-project-#{project.slug}" class="#{index < 2 ? 'show' : ''}"
+          .accordion-body
+            = render 'project', project: project, contributions: @person.project_with_contributions(project)
 
   hr
 
