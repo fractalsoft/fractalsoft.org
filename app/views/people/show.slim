@@ -23,24 +23,19 @@
         = @person.website
       = @person.skills
 
-  .row
-    = render 'technologies', category: :backend, person: @person
-    = render 'technologies', category: :database, person: @person
-    = render 'technologies', category: :frontend, person: @person
-    = render 'technologies', category: :web, person: @person
-    = render 'technologies', category: :testing, person: @person
-    = render 'technologies', category: :tool, person: @person
-    = render 'technologies', category: :gamedev, person: @person
-    = render 'technologies', category: :mobile, person: @person
-    = render 'technologies', category: :search_engine, person: @person
-    = render 'technologies', category: :operating_system, person: @person
-    = render 'technologies', category: :cloud_computing, person: @person
-    = render 'technologies', category: :mathematical_software, person: @person
-    = render 'technologies', category: :project_management_software, person: @person
-    = render 'technologies', category: :linters_and_code_formaters, person: @person
-    = render 'technologies', category: :continuous_integration, person: @person
-    = render 'technologies', category: :amazon_web_services, person: @person
-
   hr
+
   - @person.projects.each do |project|
     = render 'project', project: project, contributions: @person.project_with_contributions(project)
+
+  hr
+
+  .row
+    .accordion
+      .accordion-item
+        h2.accordion-header
+          button.accordion-button type='button' data-bs-toggle='collapse' data-bs-target="#collapseTechnologyList" aria-expanded='true' aria-controls='collapseTechnologyList'
+            = t('.see_more_technology')
+        #collapseTechnologyList.accordion-collapse.collapse aria-labelledby='technologyListHeader'
+          .accordion-body
+            = render 'technologies_in_categories', person: @person
