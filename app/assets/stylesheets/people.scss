@@ -9,6 +9,14 @@ body.people {
 }
 
 body.person {
+  .accordion-button {
+    --bs-accordion-active-bg: #c3261c;
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-border-color: #fff;
+    --bs-accordion-btn-bg: #fbfbfb;
+    --bs-accordion-btn-color: #2e3641;
+  }
+
   .business-card {
     background-color: $light-background-color;
     margin-top: -250px;
