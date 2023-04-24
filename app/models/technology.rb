@@ -1,24 +1,24 @@
 class Technology < ApplicationRecord
   extend FriendlyId
   enum category: {
-    amazon_web_services: 17,
-    backend: 0,
-    cloud_computing: 10,
-    code_formatter: 15,
-    continuous_integration: 16,
-    database: 1,
-    frontend: 2,
-    gamedev: 3,
-    linter: 14,
-    mobile: 4,
-    mathematical_software: 5,
-    operating_system: 6,
+    amazon_web_services: 1,
+    backend: 2,
+    cloud_computing: 3,
+    code_formatter: 4,
+    continuous_integration: 5,
+    database: 6,
+    frontend: 7,
+    gamedev: 8,
+    linter: 9,
+    mobile: 10,
+    mathematical_software: 11,
+    operating_system: 12,
     project_management_software: 13,
-    search_engine: 12,
-    testing: 7,
-    tool: 8,
-    web_server: 11,
-    web: 9
+    search_engine: 14,
+    testing: 15,
+    tool: 16,
+    web_server: 17,
+    web: 18
   }
   friendly_id :slug, use: [:slugged, :finders]
   translates :description, :meta_description, :meta_title, :name, :title
