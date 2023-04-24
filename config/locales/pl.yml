@@ -93,10 +93,10 @@ pl:
         see_full_profile: Zobacz pełny profil
     project:
       major_contributions: Znaczący wkład
-    skills:
-      skills: Umiejętności
     show:
       see_more_technology: Zobacz więcej technologii, które znam
+    skills:
+      skills: Umiejętności
     team:
       team:
         meet_us: Poznaj nasz zespół!
