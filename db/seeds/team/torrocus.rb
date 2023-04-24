@@ -55,90 +55,91 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
 # minitest
 # testcase
-%w[
-  ruby
-  ruby-on-rails
-  sinatra
-  jekyll
-  jruby
-  truffleruby
+{
+  'ruby' => { experience_rating: 90 },
+  'ruby-on-rails' => { experience_rating: 80 },
+  'sinatra' => { experience_rating: 60 },
+  'jekyll' => { experience_rating: 80 },
+  'jruby' => { experience_rating: 50 },
+  'truffleruby' => { experience_rating: 40 },
 
-  rspec
-  playwright
-  selenium-webdriver
-  selenium-ide
-  shoulda-matchers
+  'rspec' => { experience_rating: 70 },
+  'playwright' => { experience_rating: 60 },
+  'selenium-webdriver' => { experience_rating: 50 },
+  'selenium-ide' => { experience_rating: 30 },
+  'shoulda-matchers' => { experience_rating: 40 },
 
-  git
+  'git' => { experience_rating: 90 },
 
-  github
+  'github' => { experience_rating: 80 },
 
-  linux
-  ubuntu
-  debian
-  linux-mint
-  opensuse
-  slackware
-  slax-linux
+  'linux' => { experience_rating: 70 },
+  'ubuntu' => { experience_rating: 80 },
+  'debian' => { experience_rating: 60 },
+  'linux-mint' => { experience_rating: 50 },
+  'opensuse' => { experience_rating: 40 },
+  'slackware' => { experience_rating: 30 },
+  'slax-linux' => { experience_rating: 40 },
 
-  postgresql
-  mysql
-  sqlite
-  redis
+  'postgresql' => { experience_rating: 70 },
+  'mysql' => { experience_rating: 60 },
+  'sqlite' => { experience_rating: 60 },
+  'redis' => { experience_rating: 50 },
 
-  sidekiq
+  'sidekiq' => { experience_rating: 70 },
 
-  javascript
-  typescript
-  react
-  next-js
-  coffeescript
-  emberjs
-  backbonejs
-  marionettejs
+  'javascript' => { experience_rating: 65 },
+  'typescript' => { experience_rating: 45 },
+  'react' => { experience_rating: 45 },
+  'next-js' => { experience_rating: 55 },
+  'coffeescript' => { experience_rating: 55 },
+  'emberjs' => { experience_rating: 30 },
+  'backbonejs' => { experience_rating: 45 },
+  'marionettejs' => { experience_rating: 35 },
 
-  less
-  sass
-  haml
-  slim
-  svg
-  html5
-  css3
+  'less' => { experience_rating: 70 },
+  'sass' => { experience_rating: 80 },
+  'haml' => { experience_rating: 70 },
+  'slim' => { experience_rating: 70 },
+  'svg' => { experience_rating: 80 },
+  'html5' => { experience_rating: 90 },
+  'css3' => { experience_rating: 80 },
 
-  elasticsearch
-  solr
-  opensearch
+  'elasticsearch' => { experience_rating: 60 },
+  'solr' => { experience_rating: 50 },
+  'opensearch' => { experience_rating: 60 },
 
-  heroku
-  digital-ocean
-  aws
-  google-cloud
+  'heroku' => { experience_rating: 50 },
+  'digital-ocean' => { experience_rating: 35 },
+  'aws' => { experience_rating: 45 },
+  'google-cloud' => { experience_rating: 40 },
 
-  docker
-  terraform
+  'docker' => { experience_rating: 75 },
+  'terraform' => { experience_rating: 45 },
 
-  nginx
-  apache
+  'nginx' => { experience_rating: 65 },
+  'apache' => { experience_rating: 60 },
 
-  matlab
+  'matlab' => { experience_rating: 70 },
 
-  trello
-  taiga
+  'trello' => { experience_rating: 80 },
+  'taiga' => { experience_rating: 60 },
 
-  rubocop
-  eslint
-  prettier
-  stylelint
+  'rubocop' => { experience_rating: 85 },
+  'eslint' => { experience_rating: 65 },
+  'prettier' => { experience_rating: 65 },
+  'stylelint' => { experience_rating: 75 },
 
-  github-actions
-  jenkins
-  hound-ci
-  travis-ci
-].each_with_index do |slug, index|
+  'github-actions' => { experience_rating: 80 },
+  'jenkins' => { experience_rating: 60 },
+  'hound-ci' => { experience_rating: 50 },
+  'travis-ci' => { experience_rating: 50 }
+}.each_with_index do |(slug, result), index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
     person_id: torrocus.id,
     position: index + 1,
+    rating: result[:experience_rating],
     technology_id: technology.id
   ).first_or_create
 end
