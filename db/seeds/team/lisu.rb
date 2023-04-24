@@ -66,6 +66,7 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   sinatra
   trello
   taiga
+  kafka
 ].each_with_index do |slug, index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
