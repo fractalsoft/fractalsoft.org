@@ -51,9 +51,9 @@ group :development do
   gem 'query_diet'
   gem 'rails_best_practices'
   gem 'rubocop'
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
   gem 'rubycritic', require: false
   gem 'sandi_meter'
   gem 'scss_lint', require: false
