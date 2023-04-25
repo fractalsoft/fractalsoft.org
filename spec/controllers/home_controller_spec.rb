@@ -4,7 +4,7 @@ RSpec.describe HomeController do
   render_views
   describe 'GET index' do
     I18n.available_locales.each do |locale|
-      context "locale #{locale}" do
+      context "when locale is #{locale}" do
         let(:params) { { locale: locale.to_s } }
 
         it 'render home template' do
