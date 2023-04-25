@@ -2,8 +2,10 @@ version: 2
 updates:
   - package-ecosystem: bundler
     directory: "/"
+    open-pull-requests-limit: 3
     schedule:
-      interval: monthly
+      day: wednesday
+      interval: weekly
       time: "09:00"
     pull-request-branch-name:
       separator: "-"
@@ -12,5 +14,20 @@ updates:
       - ruby
     allow:
       - dependency-type: "development"
+      - dependency-type: "test"
     ignore:
       - dependency-name: "rails"
+    versioning-strategy: increase-if-necessary
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    labels:
+      - ci
+    open-pull-requests-limit: 2
+    pull-request-branch-name:
+      separator: "-"
+    schedule:
+      day: thursday
+      interval: weekly
+      time: "09:00"
+    versioning-strategy: auto
