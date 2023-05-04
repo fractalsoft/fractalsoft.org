@@ -32,7 +32,6 @@ gem 'sass-rails', '~> 6.0'
 gem 'simple_form', '~> 5.2'
 gem 'slim-rails', '~> 3.6' # Template language instead Erb
 gem 'turbolinks', '~> 5' # Makes navigating your web application faster
-gem 'uglifier', '>= 1.3.0'
 
 group :development do
   gem 'better_errors'
