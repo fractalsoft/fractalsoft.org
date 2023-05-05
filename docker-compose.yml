@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.9'
 services:
   app:
     build: .
@@ -27,19 +27,6 @@ services:
       - 5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
-  https:
-    image: abiosoft/caddy
-    depends_on:
-      - app
-    links:
-      - app
-    ports:
-      - 80:80
-      - 443:443
-    restart: always
-    volumes:
-      - ./Caddyfile:/etc/Caddyfile
 
 volumes:
   postgres_data:
