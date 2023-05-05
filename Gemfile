@@ -20,6 +20,7 @@ gem 'jquery-turbolinks'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', '~> 4.12', platform: :ruby
+gem 'mini_racer'
 gem 'nokogiri'
 gem 'normalize-rails', '~> 8.0.1'
 gem 'oj' # Fast JSON parser and object serializer
