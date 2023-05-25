@@ -16,7 +16,6 @@ gem 'http_accept_language'
 gem 'importmap-rails', '~> 1.1'
 gem 'jbuilder', '~> 2.11'
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', '~> 4.12', platform: :ruby
@@ -32,7 +31,6 @@ gem 'route_translator' # Manage translations of routes
 gem 'sass-rails', '~> 6.0'
 gem 'simple_form', '~> 5.2'
 gem 'slim-rails', '~> 3.6' # Template language instead Erb
-gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 
 group :development do
   gem 'better_errors'
