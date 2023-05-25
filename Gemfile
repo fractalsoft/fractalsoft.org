@@ -54,7 +54,6 @@ group :development do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'rubycritic', require: false
-  gem 'sandi_meter'
   gem 'scss_lint', require: false
   gem 'spring'
   gem 'stackprof'
