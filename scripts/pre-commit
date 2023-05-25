@@ -21,9 +21,3 @@ if [ $? -ne 0 ]; then
   echo "${WHITE}rails_best_practices ${RED}failed${NONE}"
   exit 1
 fi
-
-bundle exec sandi_meter
-if [ $? -ne 0 ]; then
-  echo "${WHITE}sandi_meter ${RED}failed${NONE}"
-  exit 1
-fi

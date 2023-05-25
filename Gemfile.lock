@@ -285,7 +285,6 @@ GEM
     mini_racer (0.6.3)
       libv8-node (~> 16.10.0.0)
     minitest (5.18.0)
-    mixlib-cli (2.1.8)
     msgpack (1.7.0)
     net-imap (0.3.4)
       date
@@ -457,10 +456,6 @@ GEM
       tty-which (~> 0.4.0)
       virtus (~> 1.0)
     rubyzip (2.3.2)
-    sandi_meter (1.2.0)
-      json
-      launchy
-      mixlib-cli
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -609,7 +604,6 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   rubycritic
-  sandi_meter
   sass-rails (~> 6.0)
   scss_lint
   selenium-webdriver
