@@ -37,7 +37,7 @@ gem 'turbolinks', '~> 5' # Makes navigating your web application faster
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'brakeman', require: false
+  gem 'brakeman'
   gem 'bullet'
   gem 'capistrano-rails', '~> 1.3'
   gem 'colored'
@@ -54,7 +54,7 @@ group :development do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'rubycritic', require: false
-  gem 'scss_lint', require: false
+  gem 'scss_lint'
   gem 'spring'
   gem 'stackprof'
   gem 'web-console', '>= 4.2' # <%= console %> anywhere in the code
