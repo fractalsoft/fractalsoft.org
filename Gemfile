@@ -49,6 +49,7 @@ group :development do
   gem 'query_diet'
   gem 'rails_best_practices'
   gem 'rubocop'
+  gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
