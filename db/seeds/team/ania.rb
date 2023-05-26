@@ -34,43 +34,44 @@ ania.save
 TechnologicalSkill.where(person_id: ania.id).delete_all
 
 # minitest
-%w[
-  ruby
-  ruby-on-rails
-  jekyll
+{
+  'ruby' => { experience_rating: 40 },
+  'ruby-on-rails' => { experience_rating: 30 },
+  'jekyll' => { experience_rating: 15 },
 
-  postgresql
+  'postgresql' => { experience_rating: 25 },
 
-  rspec
-  playwright
+  'minitest' => { experience_rating: 25 },
+  'playwright' => { experience_rating: 10 },
 
-  git
-  github
+  'git' => { experience_rating: 40 },
+  'github' => { experience_rating: 35 },
 
-  javascript
-  gatsby
+  'javascript' => { experience_rating: 10 },
+  'gatsby' => { experience_rating: 10 },
 
-  slim
-  html5
-  css3
-  sass
-  haml
-  svg
+  'slim' => { experience_rating: 35 },
+  'html5' => { experience_rating: 35 },
+  'css3' => { experience_rating: 35 },
+  'sass' => { experience_rating: 15 },
+  'haml' => { experience_rating: 20 },
+  'svg' => { experience_rating: 10 },
 
-  ubuntu
+  'ubuntu' => { experience_rating: 20 },
 
-  heroku
+  'heroku' => { experience_rating: 10 },
 
-  mathematica
+  'mathematica' => { experience_rating: 10 },
 
-  sonic-pi
+  'sonic-pi' => { experience_rating: 10 },
 
-  trello
-].each_with_index do |slug, index|
+  'trello' => { experience_rating: 30 }
+}.each_with_index do |(slug, result), index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
     person_id: ania.id,
     position: index + 1,
+    rating: result[:experience_rating],
     technology_id: technology.id
   ).first_or_create
 end
