@@ -139,6 +139,7 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     colored (1.2)
+    colorize (0.8.1)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     css_parser (1.2.6)
@@ -191,6 +192,9 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    fasterer (0.10.1)
+      colorize (~> 0.7)
+      ruby_parser (>= 3.19.1)
     ffi (1.15.5)
     flay (2.13.0)
       erubi (~> 1.10)
@@ -562,6 +566,7 @@ DEPENDENCIES
   dotenv-rails
   draper
   factory_bot_rails
+  fasterer
   friendly_id (~> 5.5)
   gemsurance
   globalize
