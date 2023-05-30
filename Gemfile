@@ -39,7 +39,6 @@ group :development do
   gem 'bullet'
   gem 'capistrano-rails', '~> 1.3'
   gem 'colored'
-  gem 'deadweight'
   gem 'derailed_benchmarks'
   gem 'fasterer'
   gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
