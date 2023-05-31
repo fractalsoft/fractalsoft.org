@@ -567,6 +567,7 @@ DEPENDENCIES
   rails_12factor
   rails_best_practices
   redcarpet
+  reek
   route_translator
   rspec-rails (~> 6.0.1)
   rubocop
