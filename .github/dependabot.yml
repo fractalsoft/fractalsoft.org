@@ -13,8 +13,7 @@ updates:
       - dependencies
       - ruby
     allow:
-      - dependency-type: "development"
-      - dependency-type: "test"
+      - dependency-type: "all"
     ignore:
       - dependency-name: "rails"
     versioning-strategy: increase-if-necessary
