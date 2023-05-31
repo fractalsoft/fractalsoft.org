@@ -15,7 +15,6 @@ gem 'globalize'
 gem 'http_accept_language'
 gem 'importmap-rails', '~> 1.1'
 gem 'jbuilder', '~> 2.11'
-gem 'jquery-rails'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_magick', '~> 4.12', platform: :ruby
