@@ -10,7 +10,7 @@ module ActionView
       # @param template [ActionView::Template]
       # @return [String] Ruby code that when evaluated will return the rendered
       #   content
-      def call(template, body)
+      def call(_template, body)
         @markdown ||= Redcarpet::Markdown.new(renderer, params)
         "#{@markdown.render(body).inspect}.html_safe"
       end
