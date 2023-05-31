@@ -16,6 +16,12 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+bundle exec fasterer
+if [ $? -ne 0 ]; then
+  echo "${WHITE}fasterer ${RED}failed${NONE}"
+  exit 1
+fi
+
 bundle exec rails_best_practices --silent
 if [ $? -ne 0 ]; then
   echo "${WHITE}rails_best_practices ${RED}failed${NONE}"
