@@ -41,7 +41,6 @@ group :development do
   gem 'colored'
   gem 'derailed_benchmarks'
   gem 'fasterer'
-  gem 'gemsurance' # Monitoring of gems version (out-of-date or vulnerable)
   gem 'i18n-tasks'
   gem 'listen'
   gem 'query_diet'
