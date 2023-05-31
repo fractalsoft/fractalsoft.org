@@ -2,6 +2,14 @@ detectors:
   IrresponsibleModule:
     enabled: false
 
+  UncommunicativeMethodName:
+    accept:
+      - base64
+
+  UncommunicativeVariableName:
+    accept:
+      - base64
+
 exclude_paths:
   - db/**/*.rb
   - vendor/**/*.rb
