@@ -1,0 +1,7 @@
+detectors:
+  IrresponsibleModule:
+    enabled: false
+
+exclude_paths:
+  - db/**/*.rb
+  - vendor/**/*.rb
