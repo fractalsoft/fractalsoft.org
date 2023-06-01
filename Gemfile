@@ -64,7 +64,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug', '~> 3.9'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 6.0.1'
+  gem 'rspec-rails', '~> 6.0.3'
   gem 'selenium-webdriver'
 end
 
