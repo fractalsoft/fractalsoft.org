@@ -380,7 +380,7 @@ GEM
     rspec-mocks (3.12.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-rails (6.0.2)
+    rspec-rails (6.0.3)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -569,7 +569,7 @@ DEPENDENCIES
   redcarpet
   reek
   route_translator
-  rspec-rails (~> 6.0.1)
+  rspec-rails (~> 6.0.3)
   rubocop
   rubocop-factory_bot
   rubocop-performance
