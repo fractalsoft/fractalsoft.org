@@ -10,6 +10,11 @@ detectors:
     accept:
       - base64
 
+directories:
+  "app/helpers":
+    UtilityFunction:
+      enabled: false
+
 exclude_paths:
   - db/**/*.rb
   - vendor/**/*.rb
