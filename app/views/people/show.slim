@@ -13,11 +13,11 @@
       = @person.saying
     .col-md-3.col-sm-6.col-xs-12
       ul.list-inline
+        = @person.website
         = @person.blog
         = @person.github
         = @person.twitter
         = @person.instagram
-        = @person.website
       = @person.skills
 
   - @person.projects.each_with_index do |project, index|
