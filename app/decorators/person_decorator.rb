@@ -31,10 +31,6 @@ class PersonDecorator < Draper::Decorator
     end
   end
 
-  def first_name
-    object.fullname.split.first
-  end
-
   def image
     image_tag object.image, alt: '', class: 'rounded-circle', size: '256x256'
   end
