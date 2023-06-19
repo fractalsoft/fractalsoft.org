@@ -3,10 +3,11 @@ torrocus.assign_attributes(
   blog: 'https://torrocus.com/blog/',
   description: 'Ruby on Rails developer',
   facebook: 'torrocus',
-  fullname: 'Alex Malaszkiewicz',
+  first_name: 'Alex',
   github: 'torrocus',
   image: 'team/amalaszkiewicz.jpg',
   instagram: 'torrocus',
+  last_name: 'Malaszkiewicz',
   linkedin: 'torrocus',
   position: 'developer',
   skills: %(

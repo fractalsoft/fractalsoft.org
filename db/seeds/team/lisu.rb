@@ -2,9 +2,10 @@ lisu = Person.where(nickname: 'lisu').first_or_initialize
 lisu.assign_attributes(
   description: 'Ruby on Rails developer',
   facebook: 'lisux',
-  fullname: 'Grzegorz Lisowski',
+  first_name: 'Grzegorz',
   github: 'noplisu',
   image: 'team/glisowski.jpg',
+  last_name: 'Lisowski',
   linkedin: 'glisowski91',
   position: 'developer',
   skills: %(Backend & Frondend Development, Application Architecture, API Design, Refactoring, Visualization)
