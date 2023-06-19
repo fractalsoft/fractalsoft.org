@@ -1,5 +1,5 @@
 class PeopleFacade
   def self.list
-    Person.order(:fullname).includes(:translations).all.decorate
+    Person.order(:full_name).includes(:translations).all.decorate
   end
 end

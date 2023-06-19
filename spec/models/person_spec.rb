@@ -3,7 +3,11 @@ require 'rails_helper'
 RSpec.describe Person do
   context 'with relations' do
     subject(:member_team) do
-      described_class.create(fullname: 'John Smith', contributions: [contribution])
+      described_class.create(
+        first_name: 'John',
+        last_name: 'Smith',
+        contributions: [contribution]
+      )
     end
 
     let(:project) { create(:project) }
@@ -29,7 +33,11 @@ RSpec.describe Person do
   context 'with #project_with_contributions' do
     subject(:person_with_contributions) do
       create(:contribution, project:, person: create(:person))
-      described_class.create(fullname: 'John Smith', contributions: [contribution])
+      described_class.create(
+        first_name: 'John',
+        last_name: 'Smith',
+        contributions: [contribution]
+      )
     end
 
     let(:project) { create(:project) }

@@ -3,7 +3,7 @@ class PersonFacade
     :blog,
     :display,
     :facebook,
-    :fullname,
+    :first_name,
     :github,
     :image,
     :instagram,
