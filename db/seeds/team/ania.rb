@@ -1,9 +1,10 @@
 ania = Person.where(nickname: 'ania').first_or_initialize
 ania.assign_attributes(
   description: 'Programming adept',
-  fullname: 'Anna Bargieł',
+  first_name: 'Anna',
   github: 'ania-hm',
   image: 'team/ania.jpg',
+  last_name: 'Bargieł',
   position: 'adept of programming',
   skills: %(
     Backend Development, Teamwork, GDPR knowledge,
