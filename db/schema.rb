@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_04_095025) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_19_100000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -157,7 +157,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_095025) do
     t.string "blog"
     t.string "email"
     t.string "facebook"
-    t.string "fullname", null: false
     t.string "github"
     t.string "image"
     t.string "instagram"
@@ -172,6 +171,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_095025) do
     t.text "description"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.virtual "full_name", type: :string, as: "(((first_name)::text || ' '::text) || (last_name)::text)", stored: true
     t.index ["slug"], name: "index_people_on_slug"
   end
 
