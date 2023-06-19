@@ -11,9 +11,7 @@
       p
         = link_to t('.person.see_full_profile'), person_path(id: person), class: 'btn btn-outline-dark btn-sm'
     .card-footer.bg-transparent
-      ul.d-inline.social
+      ul.list-group.list-group-horizontal.justify-content-center
         = person.blog
         = person.github
-        = person.linkedin
-        = person.twitter
         = person.website
