@@ -20,7 +20,7 @@
 
     .col-sm-6
       h3 Jak do nas trafić?
-      - office_address_cieszyn = OfficeAddress.find_by(slug: 'cieszyn')
+      - office_address_cieszyn = OfficeAddress.find_by(slug: 'cieszyn-serwis')
       address
         = office_address_cieszyn.street_with_number
         br
