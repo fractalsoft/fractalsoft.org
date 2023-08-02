@@ -8,17 +8,17 @@ RSpec.describe ContactForm do
   describe 'do not validate' do
     it 'if name is empty sting' do
       contact_form = described_class.new(params.merge(name: ''))
-      expect(contact_form).to be_invalid
+      expect(contact_form).not_to be_valid
     end
 
     it 'if email has wrong format' do
       contact_form = described_class.new(params.merge(email: 'lorem'))
-      expect(contact_form).to be_invalid
+      expect(contact_form).not_to be_valid
     end
 
     it 'if message is empty string' do
       contact_form = described_class.new(params.merge(message: ''))
-      expect(contact_form).to be_invalid
+      expect(contact_form).not_to be_valid
     end
   end
 
