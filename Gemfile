@@ -76,7 +76,3 @@ group :test do
   gem 'shoulda-matchers'
   gem 'webdrivers' # Web drivers to run system tests with browsers
 end
-
-group :production do
-  gem 'rails_12factor'
-end
