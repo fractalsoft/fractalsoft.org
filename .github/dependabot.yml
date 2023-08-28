@@ -2,11 +2,10 @@ version: 2
 updates:
   - package-ecosystem: bundler
     directory: "/"
-    open-pull-requests-limit: 3
+    open-pull-requests-limit: 16
     schedule:
-      day: wednesday
-      interval: weekly
-      time: "09:00"
+      interval: daily
+      time: "12:00"
     pull-request-branch-name:
       separator: "-"
     labels:
