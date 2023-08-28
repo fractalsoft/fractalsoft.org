@@ -1,26 +1,3 @@
-# Office in Cieszyn
-office_address_cieszyn = OfficeAddress.where(slug: 'cieszyn-serwis').first_or_initialize
-office_address_cieszyn.assign_attributes(
-  city: 'Cieszyn',
-  iso_3166_code: 'PL',
-  latitude: BigDecimal('49.748297833181816'),
-  longitude: BigDecimal('18.630715012550354'),
-  map_link: 'https://www.openstreetmap.org/export/embed.html?bbox=18.629009127616886%2C49.74753179676538%2C18.632412850856785%2C49.749088120517136&layer=mapnik&marker=49.74830996488296%2C18.63071098923683',
-  position: 1,
-  postcode: '43-400',
-  street_with_number: 'ul. Trzech Braci 3/1'
-)
-
-I18n.locale = :en
-office_address_cieszyn.country = 'Poland'
-office_address_cieszyn.name = 'Cieszyn Office'
-
-I18n.locale = :pl
-office_address_cieszyn.country = 'Polska'
-office_address_cieszyn.name = 'Biuro Cieszyn'
-
-office_address_cieszyn.save
-
 # Office in Gliwice (Srednia)
 office_address_gliwice_srednia = OfficeAddress.where(slug: 'gliwice-srednia').first_or_initialize
 office_address_gliwice_srednia.assign_attributes(
