@@ -191,7 +191,7 @@ GEM
       colorize (~> 0.7)
       ruby_parser (>= 3.19.1)
     ffi (1.15.5)
-    flay (2.13.0)
+    flay (2.13.1)
       erubi (~> 1.10)
       path_expander (~> 1.0)
       ruby_parser (~> 3.0)
