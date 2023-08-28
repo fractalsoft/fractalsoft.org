@@ -11,9 +11,9 @@ nav.header.navbar.navbar-expand-lg
     #fractalsoft-navbar-collapse.collapse.navbar-collapse.justify-content-end
       ul.navbar-nav
         li.nav-item = link_to t(:team, scope: [:layouts, :menu]), people_path, class: 'nav-link'
-        li.nav-item = link_to t(:blog), blog_url, class: 'nav-link'
         li.nav-item = link_to t(:community, scope: [:layouts, :menu]), communities_path, class: 'nav-link'
         li.nav-item = link_to t(:job_offers, scope: [:layouts, :menu]), job_offers_path, class: 'nav-link'
+        li.nav-item = link_to t(:blog), blog_url, class: 'nav-link'
         li.nav-item = link_to t(:contact, scope: [:layouts, :menu]), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'nav-link'
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle href='#' id='navbar-language-dropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'
