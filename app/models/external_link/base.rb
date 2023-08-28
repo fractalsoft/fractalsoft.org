@@ -25,8 +25,8 @@ module ExternalLink
       link_to(icon, url, title:, **options)
     end
 
-    def self.link(**)
-      new(**).link
+    def self.link(path: '#', title: '', width: '32px')
+      new(path:, title:, width:).link
     end
 
     private
