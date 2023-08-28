@@ -15,7 +15,7 @@ gem 'draper'
 gem 'friendly_id', '~> 5.5'
 gem 'globalize'
 gem 'http_accept_language'
-gem 'importmap-rails', '~> 1.1'
+gem 'importmap-rails', '~> 1.2'
 gem 'jbuilder', '~> 2.11'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
