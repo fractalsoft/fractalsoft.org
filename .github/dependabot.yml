@@ -15,7 +15,6 @@ updates:
       - dependency-type: "all"
     ignore:
       - dependency-name: "rails"
-    versioning-strategy: increase-if-necessary
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -28,4 +27,3 @@ updates:
       day: thursday
       interval: weekly
       time: "09:00"
-    versioning-strategy: auto
