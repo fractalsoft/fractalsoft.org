@@ -126,13 +126,12 @@ GEM
     capistrano-rails (1.6.3)
       capistrano (~> 3.1)
       capistrano-bundler (>= 1.1, < 3)
-    carrierwave (2.2.3)
-      activemodel (>= 5.0.0)
-      activesupport (>= 5.0.0)
+    carrierwave (3.0.3)
+      activemodel (>= 6.0.0)
+      activesupport (>= 6.0.0)
       addressable (~> 2.6)
       image_processing (~> 1.1)
       marcel (~> 1.0.0)
-      mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
     code_analyzer (0.5.5)
       sexp_processor
@@ -536,7 +535,7 @@ DEPENDENCIES
   bullet
   byebug
   capistrano-rails (~> 1.6)
-  carrierwave (~> 2.2)
+  carrierwave (~> 3.0)
   colored
   database_cleaner (~> 2.0.1)
   derailed_benchmarks
