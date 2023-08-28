@@ -2,21 +2,11 @@ Rails.application.routes.draw do
   direct(:blog) { 'https://blog.fractalsoft.org' }
   direct(:manifest) { '/manifest.json' }
 
-  defaults locale: :pl do
-    get :cieszyn, controller: 'cieszyn/welcome', action: :show
-    get :service, to: redirect('/pl/cieszyn')
-
-    namespace :cieszyn do
-      resource :collaboration, only: :show, controller: :collaboration
-      resource :rules, only: :show
-      resource :warranty, only: :show, controller: :warranty
-      resources :prices, only: :index
-    end
-  end
-
-  scope ':locale', locale: /#{I18n.available_locales.join('|')}/ do
-    get :cieszyn, controller: 'cieszyn/welcome', action: :show
-  end
+  get '/cieszyn' => redirect('/')
+  get '/cieszyn/:path' => redirect('/')
+  get '/pl/cieszyn' => redirect('/pl')
+  get '/pl/cieszyn/:path' => redirect('/pl')
+  get '/service' => redirect('/')
 
   localized do
     # resources :projects, only: [:index, :show]
