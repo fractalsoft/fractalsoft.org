@@ -14,4 +14,3 @@ import "bootstrap";
 import "./fractalsoft/browser_info";
 import "./fractalsoft/cieszyn";
 import "./fractalsoft/contact_forms";
-import "./fractalsoft/prices";
