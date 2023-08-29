@@ -42,21 +42,22 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
 
   'postgresql' => { experience_rating: 25 },
 
-  'minitest' => { experience_rating: 25 },
+  'minitest' => { experience_rating: 30 },
   'playwright' => { experience_rating: 10 },
 
   'git' => { experience_rating: 40 },
   'github' => { experience_rating: 35 },
 
-  'javascript' => { experience_rating: 10 },
+  'javascript' => { experience_rating: 12 },
   'gatsby' => { experience_rating: 10 },
 
-  'slim' => { experience_rating: 35 },
+  'slim' => { experience_rating: 40 },
   'html5' => { experience_rating: 35 },
-  'css3' => { experience_rating: 35 },
+  'css3' => { experience_rating: 37 },
   'sass' => { experience_rating: 15 },
   'haml' => { experience_rating: 20 },
   'svg' => { experience_rating: 10 },
+  'bootstrap' => { experience_rating: 20 },
 
   'ubuntu' => { experience_rating: 20 },
 
@@ -66,7 +67,7 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
 
   'sonic-pi' => { experience_rating: 10 },
 
-  'trello' => { experience_rating: 30 }
+  'trello' => { experience_rating: 35 }
 }.each_with_index do |(slug, result), index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
