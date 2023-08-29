@@ -117,11 +117,31 @@ contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby on Rail
 contribution.save
 
 contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Integration with polish e-Invoicing' }
+contribution.attributes = { locale: :pl, name: 'Integracja z KSeF (Krajowy System e-Faktur)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Updating Rails to version 7.x' }
+contribution.attributes = { locale: :pl, name: 'Aktualizacja Railsów do wersji 7.x' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Implementation of importmaps' }
+contribution.attributes = { locale: :pl, name: 'Wdrożenie importmap' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en, name: 'Updating Bootstrap 3 to Bootstrap 5' }
+contribution.attributes = { locale: :pl, name: 'Aktualizacja Bootstrapa 3 na 5' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 6))
 contribution.attributes = { locale: :en, name: 'Frontend development in Ember.js' }
 contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ember.js' }
 contribution.save
 
-contribution = Contribution.new(params.merge(position: 3))
+contribution = Contribution.new(params.merge(position: 7))
 contribution.attributes = { locale: :en, name: 'Create documentation using Swagger' }
 contribution.attributes = { locale: :pl, name: 'Tworzenie dokumentacji przy użyciu Swaggera' }
 contribution.save
