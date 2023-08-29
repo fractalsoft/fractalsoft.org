@@ -52,6 +52,11 @@ contribution.attributes = { locale: :en, name: 'Database changes' }
 contribution.attributes = { locale: :pl, name: 'Zmiany w bazie danych' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Deployment to test server' }
+contribution.attributes = { locale: :pl, name: 'Wdrożenie na serwer testowy' }
+contribution.save
+
 # ania in nopaperwork
 params = { person_id: ania.id, project_id: nopaperwork.id }
 
@@ -103,6 +108,11 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 10))
 contribution.attributes = { locale: :en, name: 'Creating translations' }
 contribution.attributes = { locale: :pl, name: 'Tworzenie tłumaczeń' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 10))
+contribution.attributes = { locale: :en, name: 'Implementation of internal invoice posting' }
+contribution.attributes = { locale: :pl, name: 'Implementacja wewnętrznego księgowania faktur' }
 contribution.save
 
 # ania in purpura
