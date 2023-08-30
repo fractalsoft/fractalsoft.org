@@ -76,3 +76,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'webdrivers' # Web drivers to run system tests with browsers
 end
+
+gem 'mandrill_mailer', group: :production
