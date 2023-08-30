@@ -82,6 +82,11 @@ contribution.attributes = { locale: :en, name: 'Migration to other platforms' }
 contribution.attributes = { locale: :pl, name: 'Migracja na inne platformy' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en, name: 'Ruby gems dependency reduction' }
+contribution.attributes = { locale: :pl, name: 'Redukcja zależności od Ruby gems' }
+contribution.save
+
 # torrocus in blog
 params = { person_id: torrocus.id, project_id: blog.id }
 
@@ -136,6 +141,11 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 4))
 contribution.attributes = { locale: :en, name: 'Migration of app between platforms' }
 contribution.attributes = { locale: :pl, name: 'Migracja aplikacji pomiędzy platformami' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 8))
+contribution.attributes = { locale: :en, name: 'Design of application data structure' }
+contribution.attributes = { locale: :pl, name: 'Projektowanie struktury danych aplikacji' }
 contribution.save
 
 # torrocus in SelectHub

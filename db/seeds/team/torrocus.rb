@@ -75,7 +75,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'github' => { experience_rating: 80 },
 
   'linux' => { experience_rating: 70 },
-  'ubuntu' => { experience_rating: 80 },
+  'ubuntu' => { experience_rating: 85 },
   'debian' => { experience_rating: 60 },
   'linux-mint' => { experience_rating: 50 },
   'opensuse' => { experience_rating: 40 },
@@ -105,6 +105,8 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'svg' => { experience_rating: 80 },
   'html5' => { experience_rating: 90 },
   'css3' => { experience_rating: 80 },
+  'bootstrap' => { experience_rating: 60 },
+  'foundation-css' => { experience_rating: 30 },
 
   'elasticsearch' => { experience_rating: 60 },
   'solr' => { experience_rating: 50 },
@@ -115,7 +117,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'aws' => { experience_rating: 45 },
   'google-cloud' => { experience_rating: 40 },
 
-  'docker' => { experience_rating: 75 },
+  'docker' => { experience_rating: 77 },
   'terraform' => { experience_rating: 45 },
 
   'nginx' => { experience_rating: 65 },
@@ -123,7 +125,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
   'matlab' => { experience_rating: 70 },
 
-  'trello' => { experience_rating: 80 },
+  'trello' => { experience_rating: 82 },
   'taiga' => { experience_rating: 60 },
 
   'rubocop' => { experience_rating: 85 },
