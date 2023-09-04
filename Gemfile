@@ -77,4 +77,5 @@ group :test do
   gem 'webdrivers' # Web drivers to run system tests with browsers
 end
 
+gem 'dockerfile-rails', '>= 1.5', group: :development
 gem 'mandrill_mailer', group: :production
