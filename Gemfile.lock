@@ -498,7 +498,7 @@ GEM
     sshkit (1.21.5)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    ssrf_filter (1.1.1)
+    ssrf_filter (1.1.2)
     stackprof (0.2.25)
     temple (0.10.2)
     terminal-table (3.0.2)
