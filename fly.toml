@@ -1,3 +1,8 @@
+# fly.toml app configuration file generated
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = "temporary-app-name"
 primary_region = "ams"
 console_command = "/rails/bin/rails console"
