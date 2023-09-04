@@ -167,6 +167,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    dockerfile-rails (1.5.4)
+      rails
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -548,6 +550,7 @@ DEPENDENCIES
   colored
   database_cleaner (~> 2.0.1)
   derailed_benchmarks
+  dockerfile-rails (>= 1.5)
   dotenv-rails
   draper
   factory_bot_rails
