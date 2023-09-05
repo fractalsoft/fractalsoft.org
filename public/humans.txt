@@ -8,7 +8,7 @@
   Name: Alex Malaszkiewicz
   Site: https://torrocus.com
   Twitter: @torrocus
-  Location: Cieszyn, PL
+  Location: Gliwice, PL
 
   Name: Grzegorz Lisowski
   Site: https://fractalsoft.org/en/team/lisu
@@ -25,7 +25,7 @@
 
 /* SITE */
 
-  Last update: 2023/03/07
+  Last update: 2023/09/05
   Language: English / Polish
   Standards: HTML5, CSS3
   Source: https://github.com/fractalsoft/fractalsoft.org
