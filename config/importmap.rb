@@ -2,7 +2,6 @@
 
 pin "application", preload: true
 pin "leaflet", to: "https://ga.jspm.io/npm:leaflet@1.9.4/dist/leaflet-src.js"
-pin "postcss", to: "https://ga.jspm.io/npm:postcss@8.4.21/lib/postcss.mjs"
 pin "buffer", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/buffer.js"
 pin "fs", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/fs.js"
 pin "nanoid/non-secure", to: "https://ga.jspm.io/npm:nanoid@3.3.4/non-secure/index.js"
