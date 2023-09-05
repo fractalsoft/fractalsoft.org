@@ -4,13 +4,14 @@
 #
 
 app = "temporary-app-name"
-primary_region = "ams"
 console_command = "/rails/bin/rails console"
+primary_region = "ams"
+# swap_size_mb = 512
 
 [build]
 
 [deploy]
-  release_command = "bundle exec rails db:migrate db:seed"
+  release_command = "bundle exec rails db:migrate"
   strategy = "immediate"
 
 [http_service]
