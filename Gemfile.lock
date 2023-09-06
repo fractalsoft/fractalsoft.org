@@ -205,7 +205,7 @@ GEM
       activerecord (>= 4.0.0)
     get_process_mem (0.2.7)
       ffi (~> 1.0)
-    globalid (1.2.0)
+    globalid (1.2.1)
       activesupport (>= 6.1)
     globalize (6.2.1)
       activemodel (>= 4.2, < 7.1)
