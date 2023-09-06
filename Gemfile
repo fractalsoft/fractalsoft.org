@@ -79,4 +79,3 @@ group :test do
 end
 
 gem 'dockerfile-rails', '>= 1.5', group: :development
-gem 'mandrill_mailer', group: :production

@@ -1,14 +1,13 @@
-if Rails.env.production?
-  ActionMailer::Base.smtp_settings = {
-    address:   'smtp.mandrillapp.com',
-    port:      587,
-    user_name: Rails.application.secrets.mandrill_username,
-    password:  Rails.application.secrets.mandrill_api_key,
-    domain:    'fractalsoft.org'
-  }
-  ActionMailer::Base.delivery_method = :smtp
-
-  MandrillMailer.configure do |config|
-    config.api_key = Rails.application.secrets.mandrill_api_key
-  end
-end
+ ActionMailer::Base.smtp_settings = {
+  address:              Rails.application.secrets.regular_mailer_address,
+  port:                 Rails.application.secrets.regular_mailer_port,
+  user_name:            Rails.application.secrets.regular_mailer_username,
+  password:             Rails.application.secrets.regular_mailer_password,
+  domain:               Rails.application.secrets.regular_mailer_domain,
+  authentication:       Rails.application.secrets.regular_mailer_authentication,
+  ssl:                  true,
+  enable_starttls_auto: true,
+  open_timeout:         5,
+  read_timeout:         5
+}
+ActionMailer::Base.delivery_method = :smtp
