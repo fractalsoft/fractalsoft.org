@@ -19,7 +19,6 @@ gem 'importmap-rails', '~> 1.2'
 gem 'jbuilder', '~> 2.11'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
-gem 'mini_magick', '~> 4.12', platform: :ruby
 gem 'mini_racer'
 gem 'nokogiri'
 gem 'normalize-rails', '~> 8.0.1'

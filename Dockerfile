@@ -23,7 +23,7 @@ ENV RAILS_ENV="production" \
 # Throw-away build stage to reduce size of final image
 FROM base as build
 
-ARG BUILD_PACKAGES="build-essential git imagemagick pkg-config libpq-dev curl python-is-python3"
+ARG BUILD_PACKAGES="build-essential git libvips42 pkg-config libpq-dev curl python-is-python3"
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
@@ -48,7 +48,7 @@ RUN SECRET_KEY_BASE=DUMMY bundle exec rails assets:precompile
 # Final stage for app image
 FROM base
 
-ARG DEPLOY_PACKAGES="build-essential git imagemagick pkg-config libpq-dev curl python-is-python3 postgresql-client"
+ARG DEPLOY_PACKAGES="build-essential git libvips42 pkg-config libpq-dev curl python-is-python3 postgresql-client"
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \

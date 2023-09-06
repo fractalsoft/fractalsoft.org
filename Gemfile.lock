@@ -557,7 +557,6 @@ DEPENDENCIES
   listen
   mail_form
   meta-tags
-  mini_magick (~> 4.12)
   mini_racer
   nokogiri
   normalize-rails (~> 8.0.1)
