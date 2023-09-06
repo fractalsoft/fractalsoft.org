@@ -11,7 +11,7 @@ class ContactForm < MailForm::Base
 
   def headers
     {
-      from: Rails.application.secrets.from_email,
+      from: Rails.application.secrets.noreply_email,
       to: Rails.application.secrets.contact_email
     }
   end

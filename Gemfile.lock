@@ -182,7 +182,6 @@ GEM
       ruby2_keywords
     erubi (1.12.0)
     erubis (2.7.0)
-    excon (0.102.0)
     execjs (2.8.1)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -259,14 +258,6 @@ GEM
     mail_form (1.10.0)
       actionmailer (>= 5.2)
       activemodel (>= 5.2)
-    mandrill_mailer (1.8.0)
-      actionpack
-      activejob
-      activesupport
-      mandrillus (~> 2.0.0)
-    mandrillus (2.0.0)
-      excon (>= 0.16.0, < 1.0)
-      json (>= 1.7.7, < 3.0)
     marcel (1.0.2)
     memory_profiler (1.0.1)
     meta-tags (2.18.0)
@@ -565,7 +556,6 @@ DEPENDENCIES
   jbuilder (~> 2.11)
   listen
   mail_form
-  mandrill_mailer
   meta-tags
   mini_magick (~> 4.12)
   mini_racer
