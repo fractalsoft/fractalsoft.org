@@ -9,7 +9,7 @@ coderdojo_meeting_in_twenty_fifteen = youtube_iframe(coderdojo_meeting_in_twenty
 coderdojo_santa_claus_in_twenty_fifteen = youtube_iframe(coderdojo_santa_claus_in_twenty_fifteen_youtube_url)
 coderdojo_preparing_coolest_project = vimeo_iframe(coderdojo_preparing_coolest_project_vimeo_url)
 
-coderdojo_logo = File.new('db/seeds/community/coderdojo/coderdojo-logo.png')
+# coderdojo_logo = File.new('db/seeds/community/coderdojo/coderdojo-logo.png')
 coderdojo_logotype = File.new('db/seeds/community/coderdojo/coderdojo-logotype.png')
 
 coderdojo.assign_attributes(
@@ -87,4 +87,4 @@ coderdojo.title = 'Nauka programowania dla dzieci i młodzieży - CoderDojo'
 
 coderdojo.save
 
-coderdojo.update(logo: coderdojo_logo, logotype: coderdojo_logotype)
+coderdojo.update(logo: coderdojo_logotype, logotype: coderdojo_logotype)

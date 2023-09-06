@@ -1,5 +1,5 @@
 class CommunityLogoUploader < ImageUploader
-  process resize_to_minimum_fill: [256]
+  process resize_to_fit: [256, 256]
   process convert: 'png'
 
   protected
