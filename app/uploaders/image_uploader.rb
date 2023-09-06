@@ -1,5 +1,7 @@
+require 'carrierwave/processing/vips'
+
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
+  include CarrierWave::Vips
 
   storage :file
   # storage :fog
