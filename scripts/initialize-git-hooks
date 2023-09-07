@@ -1,7 +1,12 @@
 #!/bin/bash
 
+# This script is used to initialize git hooks.
+# Run like this:
+#
+# $ ./script/initialize-git-hooks
+
 cd .git/hooks
-ln -s ../../scripts/post-commit
-ln -s ../../scripts/pre-commit
-ln -s ../../scripts/pre-push
+ln -s ../../scripts/githooks/post-commit
+ln -s ../../scripts/githooks/pre-commit
+ln -s ../../scripts/githooks/pre-push
 cd ../..
