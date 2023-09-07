@@ -81,6 +81,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'opensuse' => { experience_rating: 40 },
   'slackware' => { experience_rating: 30 },
   'slax-linux' => { experience_rating: 40 },
+  'alpine-linux' => { experience_rating: 15 },
 
   'postgresql' => { experience_rating: 70 },
   'mysql' => { experience_rating: 60 },
@@ -116,6 +117,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'digital-ocean' => { experience_rating: 35 },
   'aws' => { experience_rating: 45 },
   'google-cloud' => { experience_rating: 40 },
+  'fly-io' => { experience_rating: 30 },
 
   'docker' => { experience_rating: 77 },
   'terraform' => { experience_rating: 45 },
