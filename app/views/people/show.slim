@@ -24,7 +24,7 @@
     .accordion
       .accordion-item
         h2.accordion-header
-          button.accordion-button type='button' data-bs-toggle='collapse' data-bs-target="#collapse-project-#{project.slug}" aria-expanded='true' aria-controls="collapse-project-#{project.slug}"
+          button.accordion-button type='button' data-bs-toggle='collapse' data-bs-target="#collapse-project-#{project.slug}" aria-expanded='true' aria-controls="collapse-project-#{project.slug}" class="#{index >= 2 ? 'collapsed' : ''}"
             = project.title
         .accordion-collapse.collapse aria-labelledby='projectListHeader' id="collapse-project-#{project.slug}" class="#{index < 2 ? 'show' : ''}"
           .accordion-body
@@ -36,7 +36,7 @@
     .accordion
       .accordion-item
         h2.accordion-header
-          button.accordion-button type='button' data-bs-toggle='collapse' data-bs-target="#collapseTechnologyList" aria-expanded='true' aria-controls='collapseTechnologyList'
+          button.accordion-button.collapsed type='button' data-bs-toggle='collapse' data-bs-target="#collapseTechnologyList" aria-expanded='true' aria-controls='collapseTechnologyList'
             = t('.see_more_technology')
         #collapseTechnologyList.accordion-collapse.collapse aria-labelledby='technologyListHeader'
           .accordion-body
