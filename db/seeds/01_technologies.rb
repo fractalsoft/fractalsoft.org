@@ -17,6 +17,7 @@ require_relative 'technology/truffleruby'
 # cloud computing
 require_relative 'technology/amazon_web_services'
 require_relative 'technology/digital_ocean'
+require_relative 'technology/fly_io'
 require_relative 'technology/google_cloud'
 require_relative 'technology/heroku'
 ## amazon web services
