@@ -34,7 +34,6 @@ ania.save
 
 TechnologicalSkill.where(person_id: ania.id).delete_all
 
-# minitest
 {
   'ruby' => { experience_rating: 40 },
   'ruby-on-rails' => { experience_rating: 30 },
@@ -61,6 +60,9 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
 
   'ubuntu' => { experience_rating: 20 },
 
+  'docker' => { experience_rating: 13 },
+
+  'fly-io' => { experience_rating: 20 },
   'heroku' => { experience_rating: 10 },
 
   'mathematica' => { experience_rating: 10 },
