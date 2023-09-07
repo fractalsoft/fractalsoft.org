@@ -74,7 +74,6 @@ group :test do
   gem 'database_cleaner', '~> 2.0.1'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
-  gem 'webdrivers' # Web drivers to run system tests with browsers
 end
 
 gem 'dockerfile-rails', '>= 1.5', group: :development
