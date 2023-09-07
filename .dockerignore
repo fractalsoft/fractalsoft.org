@@ -10,7 +10,6 @@ node_modules
 public/cache/*
 public/cached_pages/*
 public/uploads/*
-scripts
 spec
 tmp/*
 
