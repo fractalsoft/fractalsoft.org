@@ -93,6 +93,7 @@ require_relative 'technology/matlab'
 require_relative 'technology/cordova'
 
 # operating system
+require_relative 'technology/alpine_linux'
 require_relative 'technology/apple'
 require_relative 'technology/debian'
 require_relative 'technology/linux'
