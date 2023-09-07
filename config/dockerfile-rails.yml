@@ -10,5 +10,5 @@ options:
     build: "libmagickwand-dev"
     deploy: "imagemagick postgresql-client"
   postgresql: true
-  # swap: 512M
+  swap: 512M
   variant: slim
