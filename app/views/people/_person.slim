@@ -1,7 +1,8 @@
 .col
   .card.h-100.text-center.border-0
     .card-img-top
-      = person.image
+      = link_to person_path(id: person) do
+        = person.image
     .card-header.bg-transparent
       h3.card-title
         = person.first_name
