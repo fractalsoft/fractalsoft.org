@@ -17,6 +17,7 @@ gem 'globalize'
 gem 'http_accept_language'
 gem 'importmap-rails', '~> 1.2'
 gem 'jbuilder', '~> 2.11'
+gem 'lograge'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_racer'
