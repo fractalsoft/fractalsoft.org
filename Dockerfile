@@ -27,7 +27,9 @@ ARG BUILD_PACKAGES="build-essential git libvips42 pkg-config libpq-dev curl pyth
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y ${BUILD_PACKAGES}
+    apt-get install --no-install-recommends -y ${BUILD_PACKAGES} && \
+    apt-get autoremove --assume-yes && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
@@ -53,6 +55,7 @@ ARG DEPLOY_PACKAGES="build-essential git libvips42 pkg-config libpq-dev curl pyt
 # Install packages needed for deployment
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y ${DEPLOY_PACKAGES} && \
+    apt-get autoremove --assume-yes && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built artifacts: gems, application
