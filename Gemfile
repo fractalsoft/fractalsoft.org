@@ -32,6 +32,7 @@ gem 'route_translator' # Manage translations of routes
 gem 'sass-rails', '~> 6.0'
 gem 'simple_form', '~> 5.2'
 gem 'slim-rails', '~> 3.6' # Template language instead Erb
+gem 'terser'
 gem 'tzinfo-data'
 
 group :development do
