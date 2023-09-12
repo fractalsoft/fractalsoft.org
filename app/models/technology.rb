@@ -24,7 +24,7 @@ class Technology < ApplicationRecord
   friendly_id :slug, use: [:slugged, :finders]
   translates :description, :meta_description, :meta_title, :name, :title
 
-  scope :linters_and_code_formaters, -> { linter.or(code_formatter) }
+  scope :linters_and_code_formatters, -> { linter.or(code_formatter) }
   scope :sorted, -> { order(position: :asc) }
 
   def any_image?
