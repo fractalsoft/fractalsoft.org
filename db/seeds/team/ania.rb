@@ -7,7 +7,7 @@ ania.assign_attributes(
   last_name: 'Bargieł',
   position: 'adept of programming',
   skills: %(
-    Backend Development, Teamwork, GDPR knowledge,
+    Backend Development, Deployment, Teamwork, GDPR knowledge,
     User Technical Support, Willingness to learn, Logical thinking
   )
 )
@@ -36,7 +36,7 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
 
 {
   'ruby' => { experience_rating: 40 },
-  'ruby-on-rails' => { experience_rating: 30 },
+  'ruby-on-rails' => { experience_rating: 33 },
   'jekyll' => { experience_rating: 15 },
 
   'postgresql' => { experience_rating: 25 },

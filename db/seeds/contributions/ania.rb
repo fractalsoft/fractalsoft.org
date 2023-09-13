@@ -24,6 +24,11 @@ contribution.attributes = { locale: :en, name: 'Ruby update' }
 contribution.attributes = { locale: :pl, name: 'Aktualizacja Ruby' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Updating gems' }
+contribution.attributes = { locale: :pl, name: 'Aktualizacja gemów' }
+contribution.save
+
 # ania in fractalsoft
 params = { person_id: ania.id, project_id: fractalsoft.id }
 
@@ -57,6 +62,11 @@ contribution.attributes = { locale: :en, name: 'Deployment to test server' }
 contribution.attributes = { locale: :pl, name: 'Wdrożenie na serwer testowy' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en, name: 'Importmaps optimization' }
+contribution.attributes = { locale: :pl, name: 'Optymalizacja importmaps' }
+contribution.save
+
 # ania in nopaperwork
 params = { person_id: ania.id, project_id: nopaperwork.id }
 
@@ -82,7 +92,7 @@ contribution.save
 
 contribution = Contribution.new(params.merge(position: 5))
 contribution.attributes = { locale: :en, name: 'Phone number normalization (standard E.164)' }
-contribution.attributes = { locale: :pl, name: 'Normalizacja numerów telefonw (E.164)' }
+contribution.attributes = { locale: :pl, name: 'Normalizacja numerów telefonów (E.164)' }
 contribution.save
 
 contribution = Contribution.new(params.merge(position: 6))
@@ -113,6 +123,11 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 10))
 contribution.attributes = { locale: :en, name: 'Implementation of internal invoice posting' }
 contribution.attributes = { locale: :pl, name: 'Implementacja wewnętrznego księgowania faktur' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 11))
+contribution.attributes = { locale: :en, name: 'Writing system tests' }
+contribution.attributes = { locale: :pl, name: 'Pisanie testów systemowych' }
 contribution.save
 
 # ania in purpura
