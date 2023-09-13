@@ -1,7 +1,7 @@
 class HtmlMinifier
   REGEXES = [
     # Join lines
-    [/[\r\n]+/, ''],
+    [/[\r\n]+/, ' '],
 
     # Remove whitespace between tags
     [/>\s+</, '><'],
