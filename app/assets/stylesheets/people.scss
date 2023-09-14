@@ -109,3 +109,16 @@ body.person {
     position: relative;
   }
 }
+
+.member-picture img {
+  box-shadow: 0 0 4px 4px $light-grey-background-color;
+  transition: 1s ease-in-out;
+  transform: scale(0.9);
+
+  &:hover {
+    box-shadow: 0 0 0 0;
+    filter: brightness(110%);
+    transition: 1s ease-in-out;
+    transform: scale(0.95);
+  }
+}
