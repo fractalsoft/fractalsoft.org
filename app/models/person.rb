@@ -1,4 +1,16 @@
 class Person < ApplicationRecord
+  LINK_NAMES = %w[
+    blog
+    facebook
+    github
+    instagram
+    linkedin
+    twitter
+    vimeo
+    website
+    youtube
+  ].freeze
+
   extend FriendlyId
   friendly_id :nickname, use: [:slugged, :finders]
   translates :introduction, :saying
