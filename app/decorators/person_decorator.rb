@@ -23,7 +23,7 @@ class PersonDecorator < Draper::Decorator
     method_name = name.downcase
     define_method(method_name) do
       class_name = "ExternalLink::#{name}".constantize
-      html = class_name.link path: object.send(method_name),
+      html = class_name.link path: object.send("#{method_name}_url"),
                              title: social_title(method_name.to_sym)
       return unless html
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PersonDecorator, type: :decorator do
   let(:person) { create(:person, params) }
-  let(:decorator) { described_class.decorate(person) }
+  let(:decorator) { described_class.decorate(person.reload) }
 
   describe '#facebook' do
     let(:facebook) { 'fractalsoft' }
@@ -33,7 +33,7 @@ RSpec.describe PersonDecorator, type: :decorator do
 
   describe '#website' do
     let(:website) { 'https://fractalsoft.org' }
-    let(:params) { { website: } }
+    let(:params) { { website_url: website } }
 
     it 'shows website' do
       expect(decorator.website).to include website, 'href', 'svg'
