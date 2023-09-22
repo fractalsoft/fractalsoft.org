@@ -36,7 +36,7 @@ RSpec.describe AddNamesToPeople do
   end
 
   context 'when the first name and the last name are present' do
-    it 'returns the full name as nil' do
+    it 'returns the full name as a combination of first name and last name' do
       person = people.create(first_name: 'Matsumoto', last_name: 'Yukihiro')
 
       expect(person.reload.full_name).to eq('Matsumoto Yukihiro')
