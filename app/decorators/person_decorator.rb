@@ -2,32 +2,27 @@ class PersonDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all
 
-  LINK_NAMES = %w[
-    Blog
-    Facebook
-    Github
-    Instagram
-    Linkedin
-    Twitter
-    Vimeo
-    Website
-    Youtube
-  ].freeze
-
   # Metaprogramming
   # def method_name
-  #   ExternalLink::ClassName.link path: object.method_name,
-  #                                title: social_title(:method_name)
+  #   ExternalLink.new(link_type: object.method_name, url: object.method_name_url).link
   # end
-  LINK_NAMES.each do |name|
-    method_name = name.downcase
-    define_method(method_name) do
-      class_name = "ExternalLink::#{name}".constantize
-      html = class_name.link path: object.send("#{method_name}_url"),
-                             title: social_title(method_name.to_sym)
-      return unless html
-
-      content_tag :li, html, class: 'social-link list-inline-item'
+  %i[
+    blog
+    facebook
+    github
+    instagram
+    linkedin
+    twitter
+    vimeo
+    website
+    youtube
+  ].each do |name|
+    define_method(name) do
+      html = ExternalLink.new(
+        link_type: name,
+        url: object.send("#{name}_url")
+      ).link
+      content_tag :li, html, class: 'social-link list-inline-item' if html
     end
   end
 
@@ -58,9 +53,5 @@ class PersonDecorator < Draper::Decorator
 
   def given(method, link = :link_to)
     yield(method, link) if object.send(method)
-  end
-
-  def social_title(name)
-    I18n.t(name, scope: 'social.title')
   end
 end
