@@ -4,40 +4,30 @@ module ExternalLink
     include ActionView::Helpers
     include ::ApplicationHelper
 
-    DEFAULT_OPTIONS = {
-      rel: %w[
-        nofollow
-        noopener
-        noreferrer
-      ].join(' '),
-      target: '_blank'
-    }.freeze
-
-    def initialize(path: '#', title: '', width: '32px')
+    def initialize(path: '#', title: '')
       @path = path
       @title = title
-      @width = width
     end
 
     def link
       return unless path
 
-      link_to(icon, url, title:, **options)
+      link_to(icon, url, title:, rel: 'noopener', target: '_blank')
     end
 
-    def self.link(path: '#', title: '', width: '32px')
-      new(path:, title:, width:).link
+    def self.link(path: '#', title: '')
+      new(path:, title:).link
     end
 
     private
 
-    attr_reader :path, :title, :width
+    attr_reader :path, :title
 
     def icon
       content_tag :span, class: 'icon' do
         svg_path = Rails.public_path.join(*image_url.split('/'))
         svg_body = File.read(svg_path)
-        embedded_svg svg_body, options: { width:, height: width }
+        embedded_svg svg_body, options: { height: '32px', width: '32px' }
       end
     end
 
@@ -45,12 +35,8 @@ module ExternalLink
       raise
     end
 
-    def options
-      DEFAULT_OPTIONS
-    end
-
     def url
-      raise
+      path.to_s
     end
   end
 end

@@ -5,9 +5,5 @@ module ExternalLink
     def image_url
       '/icons/social-media/instagram/instagram-original.svg'
     end
-
-    def url
-      "https://instagram.com/#{path}"
-    end
   end
 end
