@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_07_120000) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_22_100000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -154,7 +154,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_120000) do
   create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.boolean "published", default: false
     t.integer "position", default: 0, null: false
-    t.string "blog"
+    t.string "blog_url"
     t.string "email"
     t.string "facebook"
     t.string "github"
@@ -167,13 +167,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_120000) do
     t.string "technologies", default: "", null: false
     t.string "twitter"
     t.string "vimeo"
-    t.string "website"
+    t.string "website_url"
     t.text "description"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "first_name"
     t.string "last_name"
     t.virtual "full_name", type: :string, as: "(((first_name)::text || ' '::text) || (last_name)::text)", stored: true
+    t.string "youtube"
+    t.virtual "facebook_url", type: :string, as: "('https://facebook.com/'::text || (facebook)::text)", stored: true
+    t.virtual "github_url", type: :string, as: "('https://github.com/'::text || (github)::text)", stored: true
+    t.virtual "instagram_url", type: :string, as: "('https://instagram.com/'::text || (instagram)::text)", stored: true
+    t.virtual "linkedin_url", type: :string, as: "('https://linkedin.com/in/'::text || (linkedin)::text)", stored: true
+    t.virtual "twitter_url", type: :string, as: "('https://twitter.com/'::text || (twitter)::text)", stored: true
+    t.virtual "vimeo_url", type: :string, as: "('https://vimeo.com/'::text || (vimeo)::text)", stored: true
+    t.virtual "youtube_url", type: :string, as: "('https://youtube.com/@'::text || (youtube)::text)", stored: true
     t.index ["slug"], name: "index_people_on_slug"
   end
 
