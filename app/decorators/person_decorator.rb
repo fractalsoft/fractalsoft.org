@@ -6,23 +6,13 @@ class PersonDecorator < Draper::Decorator
   # def method_name
   #   ExternalLink.new(link_type: object.method_name, url: object.method_name_url).link
   # end
-  %i[
-    blog
-    facebook
-    github
-    instagram
-    linkedin
-    twitter
-    vimeo
-    website
-    youtube
-  ].each do |name|
-    define_method(name) do
-      html = ExternalLink.new(
-        link_type: name,
-        url: object.send("#{name}_url")
-      ).link
-      content_tag :li, html, class: 'social-link list-inline-item' if html
+  Person::LINK_NAMES.each do |link_name|
+    define_method(link_name) do
+      return if object.public_send("#{link_name}_url").blank?
+
+      url = person_external_link_path(person_id: object.slug, link_name:)
+      html = ExternalLink.new(link_type: link_name, url:).link
+      content_tag :li, html, class: 'social-link list-inline-item'
     end
   end
 

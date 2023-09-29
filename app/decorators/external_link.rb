@@ -41,6 +41,6 @@ class ExternalLink
   end
 
   def image_url
-    ICONS_FOR_LINKS[link_type]
+    ICONS_FOR_LINKS[link_type.to_sym]
   end
 end
