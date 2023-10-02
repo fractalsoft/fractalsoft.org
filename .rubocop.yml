@@ -46,6 +46,9 @@ RSpec/AnyInstance:
   Exclude:
   - spec/controllers/contact_forms_controller_spec.rb
 
+RSpec/ExampleLength:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
