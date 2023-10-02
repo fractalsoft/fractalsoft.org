@@ -510,7 +510,7 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2023.3)
       tzinfo (>= 1.0.0)
-    unicode-display_width (2.4.2)
+    unicode-display_width (2.5.0)
     uniform_notifier (1.16.0)
     virtus (2.0.0)
       axiom-types (~> 0.1)
