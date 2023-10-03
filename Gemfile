@@ -65,11 +65,12 @@ group :development, :test do
   gem 'bootsnap', '>= 1.16.0', require: false
   # Call 'byebug' in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara'
+  gem 'cuprite'
   gem 'dotenv-rails'
   gem 'pry-byebug', '~> 3.9'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 6.0.3'
-  gem 'selenium-webdriver'
 end
 
 group :test do
