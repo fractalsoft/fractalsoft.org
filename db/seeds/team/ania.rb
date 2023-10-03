@@ -43,6 +43,7 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
 
   'minitest' => { experience_rating: 30 },
   'playwright' => { experience_rating: 10 },
+  'rspec' => { experience_rating: 12 },
 
   'git' => { experience_rating: 40 },
   'github' => { experience_rating: 35 },

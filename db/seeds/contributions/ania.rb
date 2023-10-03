@@ -67,6 +67,11 @@ contribution.attributes = { locale: :en, name: 'Importmaps optimization' }
 contribution.attributes = { locale: :pl, name: 'Optymalizacja importmaps' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 8))
+contribution.attributes = { locale: :en, name: 'Writing unit tests' }
+contribution.attributes = { locale: :pl, name: 'Pisanie testów jednostkowych' }
+contribution.save
+
 # ania in nopaperwork
 params = { person_id: ania.id, project_id: nopaperwork.id }
 
