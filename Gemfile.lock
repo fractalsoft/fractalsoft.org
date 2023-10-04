@@ -295,7 +295,7 @@ GEM
     normalize-rails (8.0.1)
     oj (3.16.1)
     parallel (1.23.0)
-    parser (3.2.2.3)
+    parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
     path_expander (1.1.1)
