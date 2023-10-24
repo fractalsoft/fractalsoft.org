@@ -42,6 +42,6 @@ class PersonDecorator < Draper::Decorator
   private
 
   def given(method, link = :link_to)
-    yield(method, link) if object.send(method)
+    yield(method, link) if object.public_send(method)
   end
 end
