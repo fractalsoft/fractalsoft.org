@@ -5,18 +5,18 @@ nav.header.navbar.navbar-expand-lg
         = render 'layouts/shared/logo', id: 'fractalsoft-logo-header'
       = image_tag 'home/logo_big.png', class: 'd-none d-sm-block'
     button.navbar-toggler type='button' data-bs-toggle='collapse' data-bs-target='#fractalsoft-navbar-collapse' aria-controls='fractalsoft-navbar-collapse' aria-expanded='false' aria-label='Toggle navigation'
-      span.visually-hidden = t(:toggle_navigation, scope: [:layouts, :menu])
+      span.visually-hidden = t('layouts.menu.toggle_navigation')
       span.navbar-toggler-icon
 
     #fractalsoft-navbar-collapse.collapse.navbar-collapse.justify-content-end
       ul.navbar-nav
-        li.nav-item = link_to t(:team, scope: [:layouts, :menu]), people_path, class: 'nav-link'
-        li.nav-item = link_to t(:community, scope: [:layouts, :menu]), communities_path, class: 'nav-link'
-        li.nav-item = link_to t(:job_offers, scope: [:layouts, :menu]), job_offers_path, class: 'nav-link'
+        li.nav-item = link_to t('layouts.menu.team'), people_path, class: 'nav-link'
+        li.nav-item = link_to t('layouts.menu.community'), communities_path, class: 'nav-link'
+        li.nav-item = link_to t('layouts.menu.job_offers'), job_offers_path, class: 'nav-link'
         li.nav-item = link_to t(:blog), blog_url, class: 'nav-link'
-        li.nav-item = link_to t(:contact, scope: [:layouts, :menu]), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'nav-link'
+        li.nav-item = link_to t('layouts.menu.contact'), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'nav-link'
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle href='#' id='navbar-language-dropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'
-            = t(:language, scope: [:layouts, :menu])
+            = t('layouts.menu.language')
             span.caret
           = render 'layouts/shared/languages'
