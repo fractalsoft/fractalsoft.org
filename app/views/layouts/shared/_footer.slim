@@ -8,7 +8,7 @@ nav.footer.navbar.navbar-expand-md.pt-0
 
     .collapse.justify-content-end.d-md-flex.d-none
       ul.nav.navbar-nav.nav-fill
-        li.nav-item = link_to t(:team, scope: [:layouts, :menu]), people_path, class: 'nav-link'
-        li.nav-item = link_to t(:community, scope: [:layouts, :menu]), communities_path, class: 'nav-link'
-        li.nav-item = link_to t(:contact, scope: [:layouts, :menu]), new_contact_form_path, class: 'nav-link'
+        li.nav-item = link_to t('layouts.menu.team'), people_path, class: 'nav-link'
+        li.nav-item = link_to t('layouts.menu.community'), communities_path, class: 'nav-link'
+        li.nav-item = link_to t('layouts.menu.contact'), new_contact_form_path, class: 'nav-link'
       = image_tag 'home/footer.png', class: 'float-end'
