@@ -2,12 +2,14 @@ require 'rails_helper'
 
 RSpec.describe CommunitiesController do
   describe 'routing' do
-    it 'routes to #index' do
-      expect(get: '/community').to route_to('communities#index', locale: 'en')
+    context 'with English language' do
+      it { is_expected.to route(:get, '/community').to(controller: :communities, action: :index, locale: 'en') }
+      it { is_expected.to route(:get, '/community/1').to(controller: :communities, action: :show, id: 1, locale: 'en') }
     end
 
-    it 'routes to #show' do
-      expect(get: '/community/1').to route_to('communities#show', id: '1', locale: 'en')
+    context 'with Polish language' do
+      it { is_expected.to route(:get, '/pl/spolecznosc').to(controller: :communities, action: :index, locale: 'pl') }
+      it { is_expected.to route(:get, '/pl/spolecznosc/1').to(controller: :communities, action: :show, id: 1, locale: 'pl') }
     end
   end
 end
