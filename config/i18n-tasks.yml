@@ -98,7 +98,6 @@ ignore_unused:
   - 'mail_form.models.contact_form'
   - 'mail_form.request.{remote_ip,title,user_agent}'
   - 'meta.{description,keywords,site,title,twitter.card,twitter.site}'
-  - 'social.title.{blog,facebook,github,google,instagram,linkedin,twitter,vimeo,website,youtube}'
   - 'layouts.menu.{projects}'
 # - 'activerecord.attributes.*'
 # - '{devise,kaminari,will_paginate}.*'
