@@ -116,7 +116,9 @@ require_relative 'technology/elasticsearch'
 require_relative 'technology/opensearch'
 
 # testing
+require_relative 'technology/cuprite'
 require_relative 'technology/cypress'
+require_relative 'technology/ferrum'
 require_relative 'technology/jest'
 require_relative 'technology/minitest'
 require_relative 'technology/playwright'
