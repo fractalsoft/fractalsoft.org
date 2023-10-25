@@ -27,101 +27,101 @@ ggj.assign_attributes(
 
 I18n.locale = :en
 
-ggj.description = %(
-GGJ is a **hackathon for creating games**.
-Within 48 hours, teams from around the world create different games
-on a specific topic.
-It is a cyclical event and takes place every year.
+ggj.description = <<~DESCRIPTION.chomp
+  GGJ is a **hackathon for creating games**.
+  Within 48 hours, teams from around the world create different games
+  on a specific topic.
+  It is a cyclical event and takes place every year.
 
-For several years we have regularly participated in Global Game Jams in Cieszyn.
-Each project we create is different and better from year to year.
-By participating in this hackathon, we strengthen our friendships
-and gain more and more experience in game development.
-We build a local community of developers and game designers.
+  For several years we have regularly participated in Global Game Jams in Cieszyn.
+  Each project we create is different and better from year to year.
+  By participating in this hackathon, we strengthen our friendships
+  and gain more and more experience in game development.
+  We build a local community of developers and game designers.
 
-Game Jams in which we participated:
+  Game Jams in which we participated:
 
-- Game Jam 2014 in Cieszyn
-- Game Jam 2015 in Cieszyn
-- Game Jam 2016 in Cieszyn
-- Game Jam 2018 in Cieszyn
-- Game Jam 2019 in Cieszyn
+  - Game Jam 2014 in Cieszyn
+  - Game Jam 2015 in Cieszyn
+  - Game Jam 2016 in Cieszyn
+  - Game Jam 2018 in Cieszyn
+  - Game Jam 2019 in Cieszyn
 
 
-#{ggj_cieszyn2016}
+  #{ggj_cieszyn2016}
 
-#{ggj_cieszyn2018}
+  #{ggj_cieszyn2018}
 
-#{ggj_cieszyn2019}
-)
+  #{ggj_cieszyn2019}
+DESCRIPTION
 
-ggj.introduction = %(
-GGJ is a **hackathon for creating games**.
-Within 48 hours, teams from around the world create different games
-on a specific topic.
-It is a cyclical event and takes place every year.
+ggj.introduction = <<~INTRODUCTION.chomp
+  GGJ is a **hackathon for creating games**.
+  Within 48 hours, teams from around the world create different games
+  on a specific topic.
+  It is a cyclical event and takes place every year.
 
-For several years we have regularly participated in Global Game Jams in Cieszyn.
-Each project we create is different and better from year to year.
-By participating in this hackathon, we strengthen our friendships
-and gain more and more experience in game development.
-We build a local community of developers and game designers.
-)
+  For several years we have regularly participated in Global Game Jams in Cieszyn.
+  Each project we create is different and better from year to year.
+  By participating in this hackathon, we strengthen our friendships
+  and gain more and more experience in game development.
+  We build a local community of developers and game designers.
+INTRODUCTION
 
-ggj.meta_description = %(
-We are building games in Unity for sport in one weekend.
-Programming games on time is a challenge for us and we do it every year.
-)
+ggj.meta_description = <<~META_DESCRIPTION.chomp.tr("\n", ' ')
+  We are building games in Unity for sport in one weekend.
+  Programming games on time is a challenge for us and we do it every year.
+META_DESCRIPTION
 
 ggj.title = 'Game Development in 48 hours - Global Game Jam'
 
 I18n.locale = :pl
 
-ggj.description = %(
-GGJ to **hackaton tworzenia gier**.
-W ciągu 48 godzin zespoły z całego świata tworzą różne gry
-o określonej tematyce.
-Jest to wydarzenie cykliczne i odbywa się co roku.
+ggj.description = <<~DESCRIPTION.chomp
+  GGJ to **hackaton tworzenia gier**.
+  W ciągu 48 godzin zespoły z całego świata tworzą różne gry
+  o określonej tematyce.
+  Jest to wydarzenie cykliczne i odbywa się co roku.
 
-Od kilku lat regularnie uczestniczymy w Global Game Jamach w Cieszynie.
-Każdy tworzony przez nas projekt jest inny i w każdym roku coraz lepszy.
-Uczestnicząc w tym hackatonie umacniamy nasze przyjaźnie
-oraz zdobywamy coraz większe doświadczenie w game devie.
-Budujemy lokalną społeczność twórców i projektantów gier.
+  Od kilku lat regularnie uczestniczymy w Global Game Jamach w Cieszynie.
+  Każdy tworzony przez nas projekt jest inny i w każdym roku coraz lepszy.
+  Uczestnicząc w tym hackatonie umacniamy nasze przyjaźnie
+  oraz zdobywamy coraz większe doświadczenie w game devie.
+  Budujemy lokalną społeczność twórców i projektantów gier.
 
-Game Jamy w których braliśmy udział:
+  Game Jamy w których braliśmy udział:
 
-- Game Jam 2014 w Cieszynie
-- Game Jam 2015 w Cieszynie
-- Game Jam 2016 w Cieszynie
-- [Game Jam 2018 w Cieszynie](https://blog.fractalsoft.org/news/2019/01/programujemy-gry-game-jam-2018/)
-- Game Jam 2019 w Cieszynie
+  - Game Jam 2014 w Cieszynie
+  - Game Jam 2015 w Cieszynie
+  - Game Jam 2016 w Cieszynie
+  - [Game Jam 2018 w Cieszynie](https://blog.fractalsoft.org/news/2019/01/programujemy-gry-game-jam-2018/)
+  - Game Jam 2019 w Cieszynie
 
 
-#{ggj_cieszyn2016}
+  #{ggj_cieszyn2016}
 
-#{ggj_cieszyn2018}
+  #{ggj_cieszyn2018}
 
-#{ggj_cieszyn2019}
-)
+  #{ggj_cieszyn2019}
+DESCRIPTION
 
-ggj.introduction = %(
-GGJ to **hackaton tworzenia gier**.
-W ciągu 48 godzin zespoły z całego świata tworzą różne gry
-o określonej tematyce.
-Jest to wydarzenie cykliczne i odbywa się co roku.
+ggj.introduction = <<~INTRODUCTION.chomp
+  GGJ to **hackaton tworzenia gier**.
+  W ciągu 48 godzin zespoły z całego świata tworzą różne gry
+  o określonej tematyce.
+  Jest to wydarzenie cykliczne i odbywa się co roku.
 
-Od kilku lat regularnie uczestniczymy w Global Game Jamach w Cieszynie.
-Każdy tworzony przez nas projekt jest inny i w każdym roku coraz lepszy.
-Uczestnicząc w tym hackatonie umacniamy nasze przyjaźnie
-oraz zdobywamy coraz większe doświadczenie w game devie.
-Budujemy lokalną społeczność twórców i projektantów gier.
-)
+  Od kilku lat regularnie uczestniczymy w Global Game Jamach w Cieszynie.
+  Każdy tworzony przez nas projekt jest inny i w każdym roku coraz lepszy.
+  Uczestnicząc w tym hackatonie umacniamy nasze przyjaźnie
+  oraz zdobywamy coraz większe doświadczenie w game devie.
+  Budujemy lokalną społeczność twórców i projektantów gier.
+INTRODUCTION
 
-ggj.meta_description = %(
-Budujemy gry w Unity dla sportu w jeden weekend.
-Programowanie gier na czas to dla nas wyzwanie i robimy to co roku.
-)
+ggj.meta_description = <<~META_DESCRIPTION.chomp.tr("\n", ' ')
+  Budujemy gry w Unity dla sportu w jeden weekend.
+  Programowanie gier na czas to dla nas wyzwanie i robimy to co roku.
+META_DESCRIPTION
 
 ggj.title = 'Programowanie gier w 48 godzin - Global Game Jam'
 
