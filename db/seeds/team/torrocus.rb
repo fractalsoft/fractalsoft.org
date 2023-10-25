@@ -57,18 +57,20 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 # minitest
 # testcase
 {
-  'ruby' => { experience_rating: 90 },
-  'ruby-on-rails' => { experience_rating: 80 },
+  'ruby' => { experience_rating: 91 },
+  'ruby-on-rails' => { experience_rating: 81 },
   'sinatra' => { experience_rating: 60 },
-  'jekyll' => { experience_rating: 80 },
+  'jekyll' => { experience_rating: 82 },
   'jruby' => { experience_rating: 50 },
   'truffleruby' => { experience_rating: 40 },
 
-  'rspec' => { experience_rating: 70 },
+  'rspec' => { experience_rating: 72 },
   'playwright' => { experience_rating: 60 },
   'selenium-webdriver' => { experience_rating: 50 },
   'selenium-ide' => { experience_rating: 30 },
   'shoulda-matchers' => { experience_rating: 40 },
+  'cuprite' => { experience_rating: 30 },
+  'ferrum' => { experience_rating: 20 },
 
   'git' => { experience_rating: 90 },
 
@@ -103,7 +105,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'sass' => { experience_rating: 80 },
   'haml' => { experience_rating: 70 },
   'slim' => { experience_rating: 70 },
-  'svg' => { experience_rating: 80 },
+  'svg' => { experience_rating: 82 },
   'html5' => { experience_rating: 90 },
   'css3' => { experience_rating: 80 },
   'bootstrap' => { experience_rating: 60 },
@@ -135,7 +137,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'prettier' => { experience_rating: 65 },
   'stylelint' => { experience_rating: 75 },
 
-  'github-actions' => { experience_rating: 80 },
+  'github-actions' => { experience_rating: 83 },
   'jenkins' => { experience_rating: 60 },
   'hound-ci' => { experience_rating: 50 },
   'travis-ci' => { experience_rating: 50 }
