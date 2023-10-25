@@ -17,28 +17,30 @@ womanonrails.assign_attributes(
 )
 
 I18n.locale = :en
-womanonrails.introduction = %(
-<strong>Ruby on Rails developer since 2011.</strong>
-Focused on good code quality, refactoring and TDD.
-Well-organized and responsible.
-Mentor at CoderDojo and Rails Girls workshops.
-)
-womanonrails.saying = %(
-<p>Premature optimization is the root of all evil.</p>
-<footer>Donald Knuth</footer>
-)
+womanonrails.introduction = <<~INTRODUCTION.chomp
+  <strong>Ruby on Rails developer since 2011.</strong>
+  Focused on good code quality, refactoring and TDD.
+  Well-organized and responsible.
+  Mentor at CoderDojo and Rails Girls workshops.
+INTRODUCTION
+
+womanonrails.saying = <<~SAYING.chomp
+  <p>Premature optimization is the root of all evil.</p>
+  <footer>Donald Knuth</footer>
+SAYING
 
 I18n.locale = :pl
-womanonrails.introduction = %(
-<strong>Programistka Ruby on Rails od 2011 roku.</strong>
-Specjalizuje się w dobrej jakości kodu, refaktoringu i TDD.
-Odpowiedzialna i dobrze zorganizowana.
-Mentor na CoderDojo i Rails Girls.
-)
-womanonrails.saying = %(
-<p>Przedwczesna optymalizacja to źródło wszelkiego zła.</p>
-<footer>Donald Knuth</footer>
-)
+womanonrails.introduction = <<~INTRODUCTION.chomp
+  <strong>Programistka Ruby on Rails od 2011 roku.</strong>
+  Specjalizuje się w dobrej jakości kodu, refaktoringu i TDD.
+  Odpowiedzialna i dobrze zorganizowana.
+  Mentor na CoderDojo i Rails Girls.
+INTRODUCTION
+
+womanonrails.saying = <<~SAYING.chomp
+  <p>Przedwczesna optymalizacja to źródło wszelkiego zła.</p>
+  <footer>Donald Knuth</footer>
+SAYING
 
 womanonrails.save
 
