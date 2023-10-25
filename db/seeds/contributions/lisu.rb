@@ -117,7 +117,7 @@ contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby on Rail
 contribution.save
 
 contribution = Contribution.new(params.merge(position: 2))
-contribution.attributes = { locale: :en, name: 'Integration with polish e-Invoicing' }
+contribution.attributes = { locale: :en, name: 'Integration with polish e-Invoicing (Polish KSeF)' }
 contribution.attributes = { locale: :pl, name: 'Integracja z KSeF (Krajowy System e-Faktur)' }
 contribution.save
 
