@@ -8,54 +8,55 @@ def facebook_iframe(url, height: 280, width: 500)
     'appId'
   ].join('&')
   video_url = "https://www.facebook.com/plugins/video.php?#{params}"
-  %(
-<div class='embed-responsive embed-responsive-16by9'>
-  <iframe class='embed-responsive-item'
-          src='#{video_url}'
-          width='500'
-          height='280'
-          style='border:none;overflow:hidden'
-          scrolling='no'
-          frameborder='0'
-          allowTransparency='true'
-          allow='encrypted-media'
-          allowFullScreen='true'
-  ></iframe>
-</div>
-<br>
-)
+  <<~FACEBOOK.chomp
+    <div class='embed-responsive embed-responsive-16by9'>
+      <iframe class='embed-responsive-item'
+              src='#{video_url}'
+              width='500'
+              height='280'
+              style='border:none;overflow:hidden'
+              scrolling='no'
+              frameborder='0'
+              allowTransparency='true'
+              allow='encrypted-media'
+              allowFullScreen='true'
+      ></iframe>
+    </div>
+    <br>
+  FACEBOOK
 end
 
 def vimeo_iframe(url)
-  %(
-<div class='embed-responsive embed-responsive-16by9'>
-  <iframe class='embed-responsive-item'
-          src='#{url}'
-          width='940'
-          height='562'
-          frameborder='0'
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen
-  ></iframe>
-</div>
-<br>
-)
+  <<~VIMEO.chomp
+    <div class='embed-responsive embed-responsive-16by9'>
+      <iframe class='embed-responsive-item'
+              src='#{url}'
+              width='940'
+              height='562'
+              frameborder='0'
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+      ></iframe>
+    </div>
+    <br>
+  VIMEO
 end
 
 def youtube_iframe(url)
-  %(
-<div class='embed-responsive embed-responsive-16by9'>
-  <iframe class='embed-responsive-item'
-          src='#{url}'
-          width='940'
-          height='529'
-          frameborder='0'
-          allowfullscreen
-  ></iframe>
-</div>
-<br>
-)
+  <<~YOUTUBE.chomp
+    <div class='embed-responsive embed-responsive-16by9'>
+      <iframe class='embed-responsive-item'
+              src='#{url}'
+              width='940'
+              height='529'
+              frameborder='0'
+              allowfullscreen
+      ></iframe>
+    </div>
+    <br>
+    )
+  YOUTUBE
 end
 
 require_relative 'community/railsgirls'
