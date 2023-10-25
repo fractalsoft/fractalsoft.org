@@ -107,8 +107,6 @@ TechnologicalSkill.where(person_id: womanonrails.id).delete_all
   'mathematica' => { experience_rating: 40 }
 }.each_with_index do |(slug, result), index|
   technology = Technology.find_by(slug:)
-  next unless technology
-
   TechnologicalSkill.where(
     person_id: womanonrails.id,
     position: index + 1,
