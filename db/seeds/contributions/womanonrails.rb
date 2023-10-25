@@ -3,7 +3,6 @@ womanonrails = Person.find_by(nickname: 'womanonrails')
 # projects
 agricircle = Project.find_by(slug: 'agricircle.com')
 analysis_hitdea = Project.find_by(slug: 'linguistic-analysis')
-andy = Project.find_by(slug: 'andy.be')
 blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
 futurelearn = Project.find_by(slug: 'futurelearn.com')
