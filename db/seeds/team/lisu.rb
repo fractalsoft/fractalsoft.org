@@ -12,20 +12,20 @@ lisu.assign_attributes(
 )
 
 I18n.locale = :en
-lisu.introduction = %(
-<strong>Rails programmer open to different technologies.</strong>
-Expert in unsolvable challenges.
-Passionate gamer, game creator and regular participant of Global Game Jam.
-Constantly developing skills related to image analysis and neural networks.
-)
+lisu.introduction = <<~INTRODUCTION.chomp
+  <strong>Rails programmer open to different technologies.</strong>
+  Expert in unsolvable challenges.
+  Passionate gamer, game creator and regular participant of Global Game Jam.
+  Constantly developing skills related to image analysis and neural networks.
+INTRODUCTION
 
 I18n.locale = :pl
-lisu.introduction = %(
-<strong>Programista Rails otwarty na różne technologie.</strong>
-Ekspert od problemów.
-Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.
-Stale rozwija umiejętności związane z analizą obrazów i sieciami neuronowymi.
-)
+lisu.introduction = <<~INTRODUCTION.chomp
+  <strong>Programista Rails otwarty na różne technologie.</strong>
+  Ekspert od problemów.
+  Zapalony gracz, twórca gier komputerowych i regularny uczestnik hackatonów Global Game Jam.
+  Stale rozwija umiejętności związane z analizą obrazów i sieciami neuronowymi.
+INTRODUCTION
 
 lisu.save
 

@@ -19,36 +19,38 @@ torrocus.assign_attributes(
 )
 
 I18n.locale = :en
-torrocus.introduction = %(
-<strong>Web developer since 1998.</strong>
-He had met Ruby 12 years later while using Sinatra and Ruby on Rails.
-Madcap for algorithms.
-Linux administrator and Open Source ideology evangelist.
-In free time he explores the secrets of machine learning.
-)
-torrocus.saying = %(
-<p>
-  It seems that perfection is attained not when there is nothing more to add,
-  but when there is nothing more to remove.
-</p>
-<footer>Antoine de Saint Exupéry</footer>
-)
+torrocus.introduction = <<~INTRODUCTION.chomp
+  <strong>Web developer since 1998.</strong>
+  He had met Ruby 12 years later while using Sinatra and Ruby on Rails.
+  Madcap for algorithms.
+  Linux administrator and Open Source ideology evangelist.
+  In free time he explores the secrets of machine learning.
+INTRODUCTION
+
+torrocus.saying = <<~SAYING.chomp
+  <p>
+    It seems that perfection is attained not when there is nothing more to add,
+    but when there is nothing more to remove.
+  </p>
+  <footer>Antoine de Saint Exupéry</footer>
+SAYING
 
 I18n.locale = :pl
-torrocus.saying = %(
-<p>
-  Wydaje się, że doskonałość osiąga się nie wtedy,
-  gdy nie ma nic więcej do dodania,
-  ale gdy nie ma nic więcej do usunięcia.
-</p>
-<footer>Antoine de Saint Exupéry</footer>
-)
-torrocus.introduction = %(
-<strong>Web developer od roku 1998.</strong>
-Ruby poznał 12 lat później używając Sinatra i Ruby on Rails.
-Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.
-W wolnym czasie zgłębia tajniki uczenia maszynowego.
-)
+torrocus.introduction = <<~INTRODUCTION.chomp
+  <strong>Web developer od roku 1998.</strong>
+  Ruby poznał 12 lat później używając Sinatra i Ruby on Rails.
+  Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.
+  W wolnym czasie zgłębia tajniki uczenia maszynowego.
+INTRODUCTION
+
+torrocus.saying = <<~SAYING.chomp
+  <p>
+    Wydaje się, że doskonałość osiąga się nie wtedy,
+    gdy nie ma nic więcej do dodania,
+    ale gdy nie ma nic więcej do usunięcia.
+  </p>
+  <footer>Antoine de Saint Exupéry</footer>
+SAYING
 
 torrocus.save
 
