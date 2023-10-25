@@ -14,7 +14,7 @@ nopaperwork.introduction = <<~INTRODUCTION.chomp
   Management business with no paperwork.
   Customer service, create invoices, order management.
   All in one place, easy-to-use and painless.
-  Available API in standard JSON API.
+  Available API in standard JSON API (in progress).
 INTRODUCTION
 nopaperwork.subtitle = 'business management application'
 
@@ -24,7 +24,7 @@ nopaperwork.introduction = <<~INTRODUCTION.chomp
   Zarządzanie małą firmą bez zbędnych formalności.
   Obsługa klientów, tworzenie faktur, zarządzanie zamówieniami.
   Wszystko w jednym miejscu, łatwe w obsłudze i bezbolesne.
-  Dostępne API w standardzie JSON API.
+  Rozwijane jest API w standardzie JSON API.
 INTRODUCTION
 nopaperwork.subtitle = 'aplikacja do zarządzania firmą'
 
