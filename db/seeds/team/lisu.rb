@@ -82,8 +82,6 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   'jenkins' => { experience_rating: 30 }
 }.each_with_index do |(slug, result), index|
   technology = Technology.find_by(slug:)
-  next unless technology
-
   TechnologicalSkill.where(
     person_id: lisu.id,
     position: index + 1,
