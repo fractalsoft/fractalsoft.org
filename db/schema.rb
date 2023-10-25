@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_22_100000) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_26_080000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -242,6 +242,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_22_100000) do
     t.text "icon_wordmark"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.string "github_repo"
+    t.virtual "github_url", type: :string, as: "('https://github.com/'::text || (github_repo)::text)", stored: true
+    t.string "website_url"
     t.index ["slug"], name: "index_technologies_on_slug"
   end
 
