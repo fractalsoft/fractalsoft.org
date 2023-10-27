@@ -5,7 +5,7 @@ womanonrails.assign_attributes(
   facebook: 'womanonrails',
   first_name: 'Agnieszka',
   github: 'womanonrails',
-  image: 'team/amatysek.jpg',
+  image: 'team/agnieszka.jpg',
   instagram: 'womanonrails',
   last_name: 'Malaszkiewicz',
   linkedin: 'womanonrails',

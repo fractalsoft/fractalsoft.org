@@ -4,7 +4,7 @@ lisu.assign_attributes(
   facebook: 'lisux',
   first_name: 'Grzegorz',
   github: 'noplisu',
-  image: 'team/glisowski.jpg',
+  image: 'team/grzegorz.jpg',
   last_name: 'Lisowski',
   linkedin: 'glisowski91',
   position: 'developer',
