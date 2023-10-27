@@ -5,7 +5,7 @@ torrocus.assign_attributes(
   facebook: 'torrocus',
   first_name: 'Alex',
   github: 'torrocus',
-  image: 'team/amalaszkiewicz.jpg',
+  image: 'team/alek.jpg',
   instagram: 'torrocus',
   last_name: 'Malaszkiewicz',
   linkedin: 'torrocus',
