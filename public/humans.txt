@@ -1,22 +1,22 @@
 /* TEAM */
 
   Name: Agnieszka Malaszkiewicz
-  Site: https://womanonrails.com
+  Site: https://fractalsoft.org/team/womanonrails
   Twitter: @womanonrails
   Location: Gliwice, PL
 
   Name: Alex Malaszkiewicz
-  Site: https://torrocus.com
+  Site: https://fractalsoft.org/team/torrocus
   Twitter: @torrocus
   Location: Gliwice, PL
 
   Name: Grzegorz Lisowski
-  Site: https://fractalsoft.org/en/team/lisu
+  Site: https://fractalsoft.org/team/lisu
   Twitter: @noplisu
   Location: Gliwice, PL
 
   Name: Anna Bargiel
-  Site: https://fractalsoft.org/en/team/ania
+  Site: https://fractalsoft.org/team/ania
   Location: Gliwice, PL
 
 /* THANKS */
@@ -25,7 +25,7 @@
 
 /* SITE */
 
-  Last update: 2023/09/05
+  Last update: 2023/10/27
   Language: English / Polish
   Standards: HTML5, CSS3
   Source: https://github.com/fractalsoft/fractalsoft.org
