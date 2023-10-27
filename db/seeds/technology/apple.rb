@@ -2,9 +2,10 @@
 technology_apple = Technology.where(slug: 'apple').first_or_initialize
 icon_apple_original_svg = File.read('./db/seeds/technology/svg/apple-original.svg')
 technology_apple.assign_attributes(
+  icon: icon_apple_original_svg,
   name: 'apple',
   title: 'Apple',
-  icon: icon_apple_original_svg
+  website_url: 'https://www.apple.com/'
 )
 technology_apple.save
 technology_apple.operating_system!
