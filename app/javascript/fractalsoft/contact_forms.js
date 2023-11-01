@@ -1,6 +1,6 @@
 document.addEventListener("turbolinks:load", function() {
   $('.btn-map').click(function() {
-    const target = $(this).data('target');
+    const target = '#' + $(this).data('target');
     $('.btn-map').removeClass('active');
     $(this).addClass('active');
     $('iframe.map').addClass('map-display-none');
