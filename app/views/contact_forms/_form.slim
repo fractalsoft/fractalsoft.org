@@ -1,0 +1,11 @@
+= simple_form_for contact_form, html: { id: 'contact_form' } do |f|
+  = f.input :name, label: false, placeholder: t('.name'), required: true
+  .d-none
+    = f.input :nickname, label: false, placeholder: t('.nickname.placeholder'), hint: t('.nickname.hint')
+  = f.input :email, label: false, placeholder: t('.email'), required: true
+  = f.input :message, label: false, placeholder: t('.message'), required: true, as: :text, input_html: { rows: 10 }
+  = f.hidden_field :browser_info, value: ''
+  .form-group
+    .row
+      .col-sm-5.col-xs-12
+        = f.submit t('.send'), class: 'btn btn-primary btn-block submit'
