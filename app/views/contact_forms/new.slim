@@ -1,0 +1,22 @@
+- content_for :body_class, 'contact-forms'
+- office_addresses = OfficeAddress.sorted
+.container.contact
+  h2
+    = t('.contact.header')
+  p.d-none.d-sm-block
+    = t('.contact.description')
+  .row
+    .col-sm-4.col-12
+      = render 'contact'
+    .col-sm-8.col-12.d-none.d-sm-block
+      - office_addresses.each do |office_address|
+        - class_name = (office_address.position == 1) ? '' : ' map-display-none'
+        iframe width='425' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="#{office_address.map_link}" style='border: 1px solid #e1e1e1' class="map #{class_name}" id="#{office_address.slug}-map"
+      .d-none.d-sm-block
+        - office_addresses.each do |office_address|
+          - class_name = (office_address.position == 1) ? 'active' : ''
+          .btn.btn-default.btn-map class="#{class_name}" data-target="#{office_address.slug}-map"
+            = office_address.name
+    .row
+      .col-md-5.offset-md-4
+        = render 'form', contact_form: @contact_form
