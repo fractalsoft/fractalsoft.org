@@ -4,7 +4,6 @@ module ApplicationHelper
     I18n.t(:meta).merge(separator: '|', author: '/humans.txt', reverse: true)
   end
 
-  # rubocop:disable Rails/OutputSafety
   def embedded_svg(svg_body, options: {}, title: nil)
     doc = Nokogiri::HTML::DocumentFragment.parse(svg_body)
     svg = doc.at_css 'svg'
@@ -14,5 +13,4 @@ module ApplicationHelper
 
     doc.to_html.html_safe
   end
-  # rubocop:enable Rails/OutputSafety
 end

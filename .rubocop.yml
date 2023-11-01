@@ -38,6 +38,7 @@ Lint/UselessAssignment:
 Rails/OutputSafety:
   Exclude:
     - app/decorators/*
+    - app/helpers/application_helper.rb
 
 RSpec/AnyInstance:
   Exclude:
