@@ -1,0 +1,68 @@
+name: Rails tools
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  i18n_tasks:
+    name: I18n
+
+    permissions:
+      contents: read
+      pull-requests: read
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: .ruby-version
+      - name: health
+        run: bundle exec i18n-tasks health
+
+  rails_best_practices:
+    name: Rails Best Practices
+
+    permissions:
+      contents: read
+      pull-requests: read
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: .ruby-version
+      - name: rbp
+        run: bundle exec rails_best_practices
+
+  zeitwerk:
+    name: Zeitwerk
+
+    permissions:
+      contents: read
+      pull-requests: read
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: .ruby-version
+      - name: Check
+        run: bundle exec rails zeitwerk:check
