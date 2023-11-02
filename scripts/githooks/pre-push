@@ -4,7 +4,7 @@ NONE='\033[0m'
 RED='\033[0;31m'
 WHITE='\033[1;37m'
 
-scss-lint app/assets/stylesheets
+bundle exec scss-lint app/assets/stylesheets
 if [ $? -ne 0 ]; then
   echo "${WHITE}scss-lint ${RED}failed${NONE}"
   exit 1
