@@ -24,7 +24,7 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: .ruby-version
-      - name: health
+      - name: Checking I18n health
         run: bundle exec i18n-tasks health
 
   rails_best_practices:
@@ -44,7 +44,7 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: .ruby-version
-      - name: rbp
+      - name: Checking Rails Best Practices
         run: bundle exec rails_best_practices
 
   zeitwerk:
@@ -67,5 +67,5 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: .ruby-version
-      - name: Check
+      - name: Checking Zeitwerk
         run: bundle exec rails zeitwerk:check
