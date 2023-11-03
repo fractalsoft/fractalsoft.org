@@ -53,6 +53,8 @@ GEM
     active_link_to (1.0.5)
       actionpack
       addressable
+    active_record_doctor (1.12.0)
+      activerecord (>= 4.2.0)
     activejob (7.0.7.2)
       activesupport (= 7.0.7.2)
       globalid (>= 0.3.6)
@@ -550,6 +552,7 @@ DEPENDENCIES
   actionpack-action_caching
   actionpack-page_caching
   active_link_to
+  active_record_doctor
   better_errors
   binding_of_caller
   bootsnap (>= 1.16.0)

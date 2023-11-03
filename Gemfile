@@ -36,6 +36,7 @@ gem 'terser'
 gem 'tzinfo-data'
 
 group :development do
+  gem 'active_record_doctor'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'
