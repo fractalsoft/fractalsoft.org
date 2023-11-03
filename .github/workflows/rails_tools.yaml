@@ -1,5 +1,7 @@
 name: Rails tools
 on:
+  pull_request:
+    types: [opened,synchronize]
   workflow_dispatch:
 
 concurrency:
