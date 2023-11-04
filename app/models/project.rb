@@ -11,6 +11,8 @@ class Project < ApplicationRecord
   # the newest projects are the most important
   default_scope { order('year DESC') }
 
+  validates :title, presence: true
+
   def logo_image
     images.logo
   end

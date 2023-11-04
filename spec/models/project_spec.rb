@@ -6,6 +6,8 @@ RSpec.describe Project do
   let(:contribution) { create(:contribution) }
   let(:person) { create(:person) }
 
+  it { is_expected.to validate_presence_of(:title) }
+
   it 'has many images' do
     image = Image.new
     project.images << image
