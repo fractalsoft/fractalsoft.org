@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resource :business_contact_forms, only: [:show, :new, :create]
     resources :communities, only: [:index, :show]
     resources :contact_forms, only: [:new, :create], path_names: { new: 'new_message' }
+    resources :domains, only: [:show]
     resources :job_offers, only: [:index, :show]
     resources :people, only: [:index, :show] do
       constraints link_name: /#{Person::LINK_NAMES.join('|')}/ do
