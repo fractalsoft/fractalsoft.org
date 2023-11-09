@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/pl/cieszyn/:path' => redirect('/pl')
   get '/service' => redirect('/')
 
+  get '/pl/branza/technika-dla-rolnika', to: 'domains#show'
+
   localized do
     # resources :projects, only: [:index, :show]
     resources :communities, only: [:index, :show]
