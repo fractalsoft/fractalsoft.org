@@ -5,56 +5,120 @@
 
 <div class='clearfix'></div>
 
-![Maszyny rolnicze](/domains/agricultural-machinery-400x400.jpg)
+<!-- ![Maszyny rolnicze](/domains/agricultural-machinery-380x380.jpg) -->
+<img src="/domains/agricultural-machinery-380x380.jpg" alt="Machinery" class="img-right">
+<p style="text-align:center">
+🛰️ 🐄 🌱 🚜 🧑‍🌾
+</p>
+
 Współczesne rolnictwo dąży do stałego doskonalenia i osiągania jak najwyższej wydajności.
 Dzięki połączeniu ekologii, rolnictwa i technologii można uzyskać większą produktywność oraz lepszą jakość produktów.
 Inteligentne rozwiązania pozwalają przewidywać zmiany, kontrolować procesy i minimalizować negatywny wpływ na środowisko naturalne.
 To podejście sprawia, że rolnictwo może sprostać wyzwaniom przyszłości.
 
+<p style="text-align:center">
+🛰️ 🐄 🌱 🚜 🧑‍🌾
+</p>
+
+<br>
+
 Wspólnie stworzymy system, który w pełni wykorzysta twoją wiedzę i zaspokoi potrzeby współczesnych gospodarstw.
+<img src="/domains/cooperation.png" alt="Coopration" class="img-left">
 Możemy stworzyć innowacyjne rozwiązanie, które w jednym miejscu pozwoli na zarządzanie, rejestrowanie oraz analizowanie działalności gospodarczej.
 
 A może masz już swój produkt i chcesz go dalej rozwijać zgodnie z twoimi pomysłami i aby nadążył za możliwościami obecnych dokonań technologicznych?
 Jesteśmy tu by wdrożyć twoje koncepcje w życie.
 
-Pozwól by najnowsze technologie pracowały dla ciebie.
+<p style="text-align: center; margin-top: 50px">
+Pozwól by najnowsze technologie pracowały dla ciebie. 👍
+</p>
 
+<br>
+
+<img src="/domains/satellite-23.png" alt="Satellite" class="img-left">
 Technologie satelitarne otworzyły przed rolnictwem nowe możliwości, a Ty możesz je wykorzystać do efektywnego zarządzania uprawą roślin, a nawet hodowlą zwierząt.
 
-1. Precyzyjnie monitoruj swoje uprawy: Technologia satelitarna pomoże Ci zachować pełną kontrolę nad swoimi uprawami, bez wychodzenia z domu i pokonywania setek, a może nawet tysięcy kilometrów.
+
+<ul style="text-align:left">
+<li>
+Precyzyjnie monitoruj swoje uprawy: Technologia satelitarna pomoże Ci zachować pełną kontrolę nad swoimi uprawami, bez wychodzenia z domu i pokonywania setek, a może nawet tysięcy kilometrów.
 Precyzyjnie monitoruj stan rozwoju roślin i określ, które obszary wymagają twojej uwagi. Zaoszczędzisz czas i skupisz się na tych obszarach swojej roli, która będzie wymagać twojego osobistego zaangażowania.
-2. Kontroluj cykl życia  swoich roślin: Wykorzystując satelity, precyzyjnie śledź etapy wzrostu roślin od momentu ich wschodów do zbiorów.
+</li>
+<li>
+Kontroluj cykl życia  swoich roślin: Wykorzystując satelity, precyzyjnie śledź etapy wzrostu roślin od momentu ich wschodów do zbiorów.
 Będziesz na bieżąco z ich rozwojem.
-3. Dokładnie określaj i wykorzystaj swoje pola: Wykorzystaj technologię satelitarną do dokładnego ustalenia stanu swoich pól rolnych.
+</li>
+<li>
+Dokładnie określaj i wykorzystaj swoje pola: Wykorzystaj technologię satelitarną do dokładnego ustalenia stanu swoich pól rolnych.
 Określisz, które pola są już obsiane i jakie rośliny się na nich znajdują, a także zlokalizujesz te niewykorzystane.
 A to wszystko za pomocą kilku kliknięć myszką.
-4. Monitoruj zmiany: Wykorzystaj dane satelitarne, aby sondować wszelkie zmiany w swoich uprawach, również te, stanowiące zagrożenie jakim są agrofagi.
+</li>
+<li>
+Monitoruj zmiany: Wykorzystaj dane satelitarne, aby sondować wszelkie zmiany w swoich uprawach, również te, stanowiące zagrożenie jakim są agrofagi.
 Poznaj wielkość problemu dzięki informacjom jakiego obszaru dotyczą te zmiany.
-5. Szacuj wielkość plonów: Dane uzyskane z satelitów wykorzystaj w modelach, które pozwalają na kalkulowanie wielkości plonów.
+</li>
+<li>
+Szacuj wielkość plonów: Dane uzyskane z satelitów wykorzystaj w modelach, które pozwalają na kalkulowanie wielkości plonów.
 Swoje dalsze decyzje będziesz mógł dopasować do otrzymanych wyników aby zapewnić jak najlepsze rezultaty swojej pracy.
-6. Analizuj właściwości gleby: Technologia satelitarna pozwala na badanie właściwości gleby, w tym jej składników odżywczych i pH.
+</li>
+<li>
+Analizuj właściwości gleby: Technologia satelitarna pozwala na badanie właściwości gleby, w tym jej składników odżywczych i pH.
 Dzięki temu będziesz w stanie dokładnie planować roślinność na danej glebie oraz nawożenie skorelowane do jej potrzeb .
-7. Monitoruj wilgotności gleby: Satelity umożliwiają śledzenie poziomu wilgotności gleby na różnych jej poziomach, co pozwala na skuteczne monitorowanie zagrożenia suszą.
+</li>
+<li>
+Monitoruj wilgotności gleby: Satelity umożliwiają śledzenie poziomu wilgotności gleby na różnych jej poziomach, co pozwala na skuteczne monitorowanie zagrożenia suszą.
 Będzie wiedział, które obszary potrzebują nawodnienia i w jakiej ilości.
-8. Doglądaj swoje zwierzęta: Dzięki technologii satelitarnej, zapewnij  sobie nadzór nad położeniem swoich zwierząt i zwiększ, tym samym, bezpieczeństwo stada.
+</li>
+<li>
+Doglądaj swoje zwierzęta: Dzięki technologii satelitarnej, zapewnij  sobie nadzór nad położeniem swoich zwierząt i zwiększ, tym samym, bezpieczeństwo stada.
 Zarządzaj hodowlą w bardziej wydajny sposób.
+</li>
+</ul>
 
+<br>
+
+<img src="/domains/drone.png" alt="Drone - autor vectorjuice" class="img-left">
 Drony stają się coraz bardziej popularnym narzędziem wykorzystywanym w wielu dziedzinach, w tym w rolnictwie.
 Ich znaczenie rośnie z każdym rokiem.
 Wykorzystaj drony do rozwoju swojego gospodarstwa.
 
-1. Kontroluj zdrowie swoich upraw: Podobnie jak satelity, drony wyposażone w specjalne urządzenia pozwalają ocenić stan uprawianych roślin. Dostarczają aktualne, wysokiej jakości obrazy prezentujące kondycję roślin. Będziesz monitorować wzrost swoich upraw i oszacujesz wielkość plonów oraz biomasy.
-2. Zadbaj o bezpieczeństwo swoich upraw oraz zwierząt: Drony pomagają w wychwyceniu różnego rodzaju agrofagów. Pozwoli ci to już na wczesnym etapie zdiagnozować problem i zastosować odpowiednie środki zaradcze, a tym samym zminimalizujesz swoje straty. Możesz lokalizować położenie zwierząt, odnajdywać zaginione lub ranne osobniki, kontrolować ich przemieszczanie.
-3. Monitoruj stan swojej gleby: Uzyskaj dostęp do dokładnych informacji o swoim polu, w tym o jego wysokości, aby wykrywać wszelkie nierówności i zmiany w glebie. W efektywny sposób kontroluj poziom wilgotności, identyfikując obszary zarówno z nadmiernym, jak i niedostatecznym nawodnieniem. Miej dostęp do takich informacji, jak poziom azotu w glebie, co pozwoli na precyzyjne dawkowanie nawozów.
-4. Siej i sadź w każdych warunkach: Drony pozwalają na uprawę roślin na trudno dostępnych terenach, gdzie standardowe maszyny rolnicze nie mogą wykonać swojej pracy.
-5. Dotrzyj do trudno dostępnych miejsc: Drony skutecznie docierają z nawodnieniem i  opryskami do roślin, które ze względu na swoje potrzeby są uprawiane na trudniejszych terenach, gdzie standardowe maszyny natryskowe nie mają dostępu.
-6. Bądź precyzyjny w swoich działaniach: Drony gwarantują dokładną dystrybucję środków ochronnych, nawozów, pestycydów oraz nawadnianie upraw, dostosowaną zarówno pod względem ilości podanych substancji, jak i lokalizacji pola oraz samych miejsc na opryskiwanym polu.
+<ul style="text-align:left">
+<li>
+Kontroluj zdrowie swoich upraw: Podobnie jak satelity, drony wyposażone w specjalne urządzenia pozwalają ocenić stan uprawianych roślin. Dostarczają aktualne, wysokiej jakości obrazy prezentujące kondycję roślin. Będziesz monitorować wzrost swoich upraw i oszacujesz wielkość plonów oraz biomasy.
+</li>
+<li>
+Zadbaj o bezpieczeństwo swoich upraw oraz zwierząt: Drony pomagają w wychwyceniu różnego rodzaju agrofagów. Pozwoli ci to już na wczesnym etapie zdiagnozować problem i zastosować odpowiednie środki zaradcze, a tym samym zminimalizujesz swoje straty. Możesz lokalizować położenie zwierząt, odnajdywać zaginione lub ranne osobniki, kontrolować ich przemieszczanie.
+</li>
+<li>
+Monitoruj stan swojej gleby: Uzyskaj dostęp do dokładnych informacji o swoim polu, w tym o jego wysokości, aby wykrywać wszelkie nierówności i zmiany w glebie. W efektywny sposób kontroluj poziom wilgotności, identyfikując obszary zarówno z nadmiernym, jak i niedostatecznym nawodnieniem. Miej dostęp do takich informacji, jak poziom azotu w glebie, co pozwoli na precyzyjne dawkowanie nawozów.
+</li>
+<li>
+Siej i sadź w każdych warunkach: Drony pozwalają na uprawę roślin na trudno dostępnych terenach, gdzie standardowe maszyny rolnicze nie mogą wykonać swojej pracy.
+</li>
+<li>
+Dotrzyj do trudno dostępnych miejsc: Drony skutecznie docierają z nawodnieniem i  opryskami do roślin, które ze względu na swoje potrzeby są uprawiane na trudniejszych terenach, gdzie standardowe maszyny natryskowe nie mają dostępu.
+</li>
+<li>
+Bądź precyzyjny w swoich działaniach: Drony gwarantują dokładną dystrybucję środków ochronnych, nawozów, pestycydów oraz nawadnianie upraw, dostosowaną zarówno pod względem ilości podanych substancji, jak i lokalizacji pola oraz samych miejsc na opryskiwanym polu.
+</li>
+</ul>
 
+<br>
+
+<img src="/domains/weather.png" alt="Weather - autor rawpixel.com" class="img-left">
 Wykorzystaj informacje pogodowe do jak najlepszego zarządzania swoim gospodarstwem.
 
-1. Dostępność takich informacji jak: nasłonecznienie, wilgotność, wiatr, opady, temperatura powietrza i gleby pozwoli na osiągnięcie największej wydajności i zmniejszy ryzyko utraty lub zniszczenia plonów.
-2. Będziesz miał kontrolę nad wypasem swoich zwierząt.
+<ul style="text-align:left">
+<li>
+Dostępność takich informacji jak: nasłonecznienie, wilgotność, wiatr, opady, temperatura powietrza i gleby pozwoli na osiągnięcie największej wydajności i zmniejszy ryzyko utraty lub zniszczenia plonów.
+</li>
+<li>
+Będziesz miał kontrolę nad wypasem swoich zwierząt.
 Zapewnisz im bezpieczeństwo, minimalizując ryzyko wypadków i chorób z powodu niesprzyjających warunków atmosferycznych.
+</li>
+</ul>
+
+<br>
 
 Zarządzaj swoją działalnością.
 
