@@ -14,18 +14,18 @@ kontrolować procesy i minimalizować negatywny wpływ na środowisko naturalne.
 To podejście sprawia, że rolnictwo może sprostać wyzwaniom przyszłości.
 
 ![Cooperation](/domains/connection.png)
-Wspólnie stworzymy system, który w pełni wykorzysta twoją wiedzę
+Wspólnie stworzymy system, który w pełni wykorzysta Twoją wiedzę
 i zaspokoi potrzeby współczesnych gospodarstw.
 Możemy stworzyć innowacyjne rozwiązanie,
 które w jednym miejscu pozwoli na zarządzanie,
 rejestrowanie oraz analizowanie działalności gospodarczej.
 
 A może masz już swój produkt
-i chcesz go dalej rozwijać zgodnie z twoimi pomysłami,
+i chcesz go dalej rozwijać zgodnie z Twoimi pomysłami,
 i aby nadążył za możliwościami obecnych dokonań technologicznych?
-Jesteśmy tu by wdrożyć twoje koncepcje w życie.
+Jesteśmy tu by wdrożyć Twoje koncepcje w życie.
 
-Pozwól by najnowsze technologie pracowały dla ciebie. 👍
+Pozwól by najnowsze technologie pracowały dla Ciebie. 👍
 
 ## Uprawy rolne
 
@@ -37,9 +37,9 @@ a Ty możesz je wykorzystać do efektywnego zarządzania uprawą roślin.
 Technologia satelitarna pomoże Ci zachować pełną kontrolę nad swoimi uprawami,
 bez wychodzenia z domu i pokonywania setek, a może nawet tysięcy kilometrów.
 Precyzyjnie monitoruj stan rozwoju roślin i określ,
-które obszary wymagają twojej uwagi.
+które obszary wymagają Twojej uwagi.
 Zaoszczędzisz czas i skupisz się na tych obszarach swojej roli,
-która będzie wymagać twojego osobistego zaangażowania.
+która będzie wymagać Twojego osobistego zaangażowania.
 2. Kontroluj cykl życia swoich roślin:
 Wykorzystując satelity, precyzyjnie śledź etapy wzrostu roślin
 od momentu ich wschodów do zbiorów.
@@ -110,18 +110,18 @@ Pogoda odgrywa kluczą rolę w twojej działalności.
 Wykorzystaj informacje pogodowe do jak najlepszego zarządzania swoim gospodarstwem.
 
 1. Dostępność takich informacji jak: nasłonecznienie, wilgotność, wiatr, opady,
-temperatura powietrza i gleby pozwoli na osiągnięcie największej wydajności
+temperatura powietrza i gleby pozwoli na osiągnięcie większej wydajności
 i zmniejszy ryzyko utraty lub zniszczenia plonów.
 
 ![Management](/domains/growth.png)
 Każdego dnia musisz podejmować cały szereg decyzji.
 Pozwól by technologia była dla ciebie wsparciem.
-Stwórzmy narzędzie, które ułatwi zarządzanie twoją działalnością.
+Stwórzmy narzędzie, które ułatwi zarządzanie Twoją działalnością.
 
 1. W zgodzie z ekologią planuj z wyprzedzeniem przedplon, międzyplon lub poplon.
-Wtedy twoja gleba jak najdłużej zachowa swoją wydajność,
-a ty zmniejszysz zużycie środków wspierających rozwój i ochronę roślin.
-2. Stwórz plan nawożenia dostosowany do aktualnych wymogów i potrzeb twoich roślin.
+Wtedy Twoja gleba jak najdłużej zachowa swoją wydajność,
+a Ty zmniejszysz zużycie środków wspierających rozwój i ochronę roślin.
+2. Stwórz plan nawożenia dostosowany do aktualnych wymogów i potrzeb Twoich roślin.
 W ten sposób unikniesz problemów takich jak:
 wyjałowienie gleby, niedobór składników odżywczych
 lub niewłaściwy zestaw tych składników.
@@ -129,21 +129,21 @@ Będziesz miał możliwość oceny skuteczności swoich decyzji.
 
 ![Stock system](/domains/stock.png)
 Uprawa roślin wymaga wielu środków również tych materialnych.
-Aby całe móc wykonać wszystkie konieczne zadania musisz mieć pewność,
+Aby móc wykonać wszystkie konieczne zadania musisz mieć pewność,
 że kontrolujesz posiadane dobra.
 Stwórz swój system magazynowania i nie martw się o jego nadzór.
 
 1. Dokładnie dokumentuj stan magazynowy o nabywanych środkach, jak nawozy,
 środki ochronne oraz pozostałe materiały związane z działalnością rolniczą.
 To zagwarantuje, że na bieżąco będziesz mógł uzupełnić
-konieczne dla funkcjonowania twojego gospodarstwa zapasy.
+konieczne dla funkcjonowania Twojego gospodarstwa zapasy.
 2. Rejestruj dane z uprawy roślin, takie jak ilość, rodzaj.
 Dzięki precyzyjnym danym będziesz miał kompleksowy przegląd zarządzania zasobami
-i efektami twojej uprawy.
+i efektami Twojej uprawy.
 Będziesz mógł dokładnie zaplanować dostawy
 i odbiory produktów przez swoich kontrahentów.
 Zminimalizujesz ryzyko przeładowania lub braków magazynowych,
-co usprawni działalność twojego gospodarstwa.
+co usprawni działalność Twojego gospodarstwa.
 
 ## Hodowla zwierząt
 
@@ -151,7 +151,7 @@ co usprawni działalność twojego gospodarstwa.
 Jednym z narzędzi wspierającym hodowlę zwierząt
 jest stale rozwijający się poziom działania satelit.
 Wykorzystaj zaawansowaną technologię
-dla swoich korzyści i swojego dobytku
+dla swoich korzyści i swojego dobytku.
 
 1. Doglądaj swoje zwierzęta:
 Dzięki technologii satelitarnej zapewnij sobie nadzór
@@ -168,15 +168,15 @@ Możesz lokalizować położenie zwierząt, odnajdywać zaginione lub ranne osob
 kontrolować ich przemieszczanie.
 
 ![Weather](/domains/season.png)
-Warunki pogodowe wpływają na twoje zwierzęta i ich kondycje.
-Decydują również o twoich działaniach związanych
+Warunki pogodowe wpływają na Twoje zwierzęta i ich kondycje.
+Decydują również o Twoich działaniach związanych
 z optymalizacją środowiska w pomieszczeniach do ich przetrzymywania.
 
 1. Będziesz miał kontrolę nad wypasem swoich zwierząt.
 Zapewnisz im bezpieczeństwo, minimalizując ryzyko wypadków
 i chorób z powodu niesprzyjających warunków atmosferycznych.
 2. W miejscach hodowli dostosujesz ekosystem do tych warunków panujących na zewnątrz,
-a tym samym zapenisz najlepsze możliwości do rozwoju swojego dobytku.
+a tym samym zapewnisz najlepsze możliwości do rozwoju swojego dobytku.
 
 Posiadanie zwierząt wiąże się z wieloma obowiązkami.
 Im więcej ich posiadasz tym większy nakład pracy jest od ciebie wymagany.
@@ -186,7 +186,7 @@ Dlatego kluczowe znaczenie ma wydajne zarządzanie swoją działalnością.
 Zbieraj i aktualizuj dane o ich liczebności, rasie, dacie urodzenia, wadze,
 posiadanym potomstwu, urazach, chorobach,
 zabiegach zdrowotnych, stosowanym leczeniu.
-Będziesz miał pewność, że twoje produkty będą najwyższej jakości
+Będziesz miał pewność, że Twoje produkty będą najwyższej jakości
 i spełnią rosnące wymagania rynku zbytu.
 2. Zadbaj o zwierzęta tworząc terminarz z rozpisanym schematem ilościowym
 i jakościowym przyjmowanej paszy.
@@ -207,27 +207,27 @@ tak by stworzyć najlepsze warunki rozwojowe swojego inwentarza.
 dzięki temu przeanalizujesz wpływ dotychczasowych działań na osiągane wyniki.
 Podniesiesz jakość twoich produktów i zwiększysz zyski.
 
-Dostosowany system magazynowania poprawi twoją produktywność
-i zapewni płynność w funkcjonowaniu twojego dobytku.
-W jednym miejscu będziesz miał wgląd w aktualny stan twojego gospodarstwa.
+Dostosowany system magazynowania poprawi Twoją produktywność
+i zapewni płynność w funkcjonowaniu Twojego dobytku.
+W jednym miejscu będziesz miał wgląd w aktualny stan Twojego gospodarstwa.
 
 1. Dokładnie dokumentuj stan magazynowy o nabywanych środkach,
 jak pasze, witaminy oraz pozostałe materiały związane z działalnością hodowlaną.
 To zagwarantuje, że na bieżąco będziesz mógł uzupełnić
-konieczne dla funkcjonowania twojego gospodarstwa zapasy.
+konieczne dla funkcjonowania Twojego gospodarstwa zapasy.
 2. Rejestruj dane z hodowli zwierząt i uzyskanych produktów,
 takie jak ilość mięsa, mleka, jaj czy wełny.
 Dzięki precyzyjnym danym będziesz miał kompleksowy przegląd zarządzania zasobami
-i efektami twojej hodowli.
+i efektami Twojej hodowli.
 3. Będziesz mógł dokładnie zaplanować dostawy
 i odbiory produktów przez swoich kontrahentów.
 Zminimalizujesz ryzyko przeładowania lub braków magazynowych
-co usprawni działalność twojego gospodarstwa.
+co usprawni działalność Twojego gospodarstwa.
 
 ## Pszczoły
 
 ![Apiary](/domains/apiary.png)
-Twoje pszczoły są ważne nie tylko dla ciebie, ale dla nas wszystkich.
+Twoje pszczoły są ważne nie tylko dla Ciebie, ale dla nas wszystkich.
 Zadbajmy o nie najlepiej jak to możliwe z pomocą najnowszej technologii.
 
 1. Dodawaj i monitoruj matki.
@@ -238,7 +238,7 @@ Wymiana matki pozwoli zachować kontrolę nad funkcjonowaniem ula.
 3. Prowadź rejestr zbiorów miodu i określaj najlepiej funkcjonujące pszczele rodziny.
 4. Zaplanuj wszelkie inspekcje i zadania oraz otrzymuj powiadomienia o nich,
 tak by nic cię nie ominęło w dbaniu o swoje pasieki.
-5. Diagnozuj i planuj leczenie twoich pszczół aby zachować ich zdrowie.
+5. Diagnozuj i planuj leczenie Twoich pszczół aby zachować ich zdrowie.
 6. Twórz raporty i analizuj wyniki by jak najlepiej zarządzać ulami oraz pszczołami.
 7. Twórz swoje pasieki zgodnie z zasięgiem paszy i ilości posiadanych rodzin,
 tak aby zoptymalizować napszczelenie terenu.
@@ -253,7 +253,7 @@ lub prowadzeniu intratnego biznesu dalszej sprzedaży.
 ## Zarządzania zasobami
 
 W rolnictwie, aspekty finansowe są nieodłączną częścią sukcesu.
-Mają one ogromny wpływ na twoje decycje związane z funkcjonowaniem gospodarstwa.
+Mają one ogromny wpływ na Twoje decycje związane z funkcjonowaniem gospodarstwa.
 
 1. Kontroluj dochody generowane ze sprzedaży swoich produktów,
 oraz inwestycje w niezbędny sprzęt i zasoby.
@@ -264,14 +264,14 @@ Dzięki temu możesz efektywniej planować budżet i zarządzać swoim majątkie
 W ten sposób zaplanujesz swoją strategię tak aby uzyskać najkorzystniejszy dochód.
 
 Wykresy oraz raporty w prosty i skumulowany sposób przedstawiają
-wybrane obszary twojej działalności.
+wybrane obszary Twojej działalności.
 Te niezwykle wydajne narzędzia pomogą ci przeanalizować dotychczasowe rezultaty.
 
 1. Uzyskaj szybki wgląd w stan swojego gospodarstwa
 oraz przeprowadź analizę konieczną do podejmowania następnych kroków.
 2. Miej dostęp do skumulowanej wiedzy
 i danych zobrazowanych w przystępny sposób.
-3. Komponuj wykresy i raporty zgodnie z twoimi potrzebami,
+3. Komponuj wykresy i raporty zgodnie z Twoimi potrzebami,
 dzięki temu będziesz mógł skupić się na rozwoju swojej działalności.
 4. Twórz raporty na potrzeby inspekcji, uzyskania dofinansowania
 czy rozliczenia z wybranego okresu czasu.
