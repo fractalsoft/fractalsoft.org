@@ -14,7 +14,6 @@ class CreateOfficeAddresses < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-
     reversible do |dir|
       dir.up do
         OfficeAddress.create_translation_table!(
