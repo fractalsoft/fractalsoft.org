@@ -1,7 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.action_controller.allow_forgery_protection = false
+  config.action_controller.allow_forgery_protection = true
   config.action_controller.perform_caching = true
   config.action_mailer.perform_caching = false
   config.active_record.dump_schema_after_migration = false
