@@ -1,0 +1,23 @@
+name: Markdown reviewdog
+on:
+  pull_request:
+    types: [opened,synchronize]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdownlint:
+    name: Markdown linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Check Markdown
+        uses: reviewdog/action-markdownlint@v0
+        with:
+          fail_on_error: true
+          filter_mode: diff_context
+          level: error
+          reporter: github-pr-check
