@@ -184,7 +184,8 @@ i chorób z powodu niesprzyjających warunków atmosferycznych.
 a tym samym zapewnisz najlepsze możliwości do rozwoju swojego dobytku.
 
 Posiadanie zwierząt wiąże się z wieloma obowiązkami.
-Im więcej ich posiadasz tym większy nakład pracy jest od ciebie wymagany.
+Większy inwentarz wymaga od Ciebie większego nakładu pracy
+oraz bardziej zaawansowanej logistyki.
 Dlatego kluczowe znaczenie ma wydajne zarządzanie swoją działalnością.
 
 1. Zapewnij sobie pełną kontrolę nad swoim żywym inwentarzem.
@@ -200,8 +201,8 @@ kontrolując ich przyjmowanie i dawkowanie.
 W ten sposób wspierasz ich rozwój i zapewniasz zdrowie.
 
 Zapewnij swoim zwierzętom najlepsze warunki do życia.
-Dla ich rozwoju ważne jest środowisko w jakim żyją,
-dlatego zadbaj o to aby mieć rękę na pulsie.
+Środowisko pełni istotną rolę w ich rozwoju,
+a to przekłada się na jakość otrzymanych produktów.
 Dzięki temu zyskać pewność, że dostarczysz produkty najwyższej jakości.
 
 1. W jednym miejscu będziesz miał dostęp do informacji odnośnie
@@ -212,7 +213,7 @@ tak by stworzyć najlepsze warunki rozwojowe swojego inwentarza.
 dzięki temu przeanalizujesz wpływ dotychczasowych działań na osiągane wyniki.
 Podniesiesz jakość twoich produktów i zwiększysz zyski.
 
-Dostosowany system magazynowania poprawi Twoją produktywność
+Dostosowany system magazynowania poprawi produktywność
 i zapewni płynność w funkcjonowaniu Twojego dobytku.
 W jednym miejscu będziesz miał wgląd w aktualny stan Twojego gospodarstwa.
 
