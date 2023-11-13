@@ -37,16 +37,16 @@ a Ty możesz je wykorzystać do efektywnego zarządzania uprawą roślin.
 Technologia satelitarna pomoże Ci zachować pełną kontrolę nad swoimi uprawami,
 bez wychodzenia z domu i pokonywania setek, a może nawet tysięcy kilometrów.
 Precyzyjnie monitoruj stan rozwoju roślin i określ,
-które obszary wymagają Twojej uwagi.
+które miejsca wymagają Twojej uwagi.
 Zaoszczędzisz czas i skupisz się na tych obszarach swojej roli,
-która będzie wymagać Twojego osobistego zaangażowania.
+która będzie wymagać osobistego zaangażowania.
 2. Kontroluj cykl życia swoich roślin:
 Wykorzystując satelity, precyzyjnie śledź etapy wzrostu roślin
 od momentu ich wschodów do zbiorów.
 Będziesz na bieżąco z ich rozwojem.
 3. Dokładnie określaj i wykorzystaj swoje pola:
 Wykorzystaj technologię satelitarną do dokładnego ustalenia stanu swoich pól rolnych.
-Określisz, które pola są już obsiane i jakie rośliny się na nich znajdują,
+Sprecyzujesz, które pola są już obsiane i jakie rośliny się na nich znajdują,
 a także zlokalizujesz te niewykorzystane.
 A to wszystko za pomocą kilku kliknięć myszką.
 4. Monitoruj zmiany:
@@ -56,7 +56,7 @@ Poznaj wielkość problemu dzięki informacjom jakiego obszaru dotyczą te zmian
 5. Szacuj wielkość plonów:
 Dane uzyskane z satelitów wykorzystaj w modelach,
 które pozwalają na kalkulowanie wielkości plonów.
-Swoje dalsze decyzje będziesz mógł dopasować do otrzymanych wyników
+Swoje dalsze decyzje będziesz mógł dopasować do otrzymanych wyników,
 aby zapewnić jak najlepsze rezultaty swojej pracy.
 6. Analizuj właściwości gleby:
 Technologia satelitarna pozwala na badanie właściwości gleby,
@@ -148,24 +148,29 @@ co usprawni działalność Twojego gospodarstwa.
 ## Hodowla zwierząt
 
 ![Satellite](/domains/earth.png)
-Jednym z narzędzi wspierającym hodowlę zwierząt
-jest stale rozwijający się poziom działania satelit.
-Wykorzystaj zaawansowaną technologię
-dla swoich korzyści i swojego dobytku.
+Jednym z kluczowych narzędzi wspierających hodowlę zwierząt
+jest stale rozwijająca się technologia satelitarna.
+Odkryj, jak zaawansowane rozwiązania mogą przynieść realne korzyści
+dla Twojego gospodarstwa i zwiększyć dobrostan oraz efektywność hodowli.
 
-1. Doglądaj swoje zwierzęta:
+1. Doglądaj swoje zwierzęta na nowym poziomie:
 Dzięki technologii satelitarnej zapewnij sobie nadzór
 nad położeniem swoich zwierząt i zwiększ, tym samym, bezpieczeństwo stada.
 Zarządzaj hodowlą w bardziej wydajny sposób.
 
 ![Drone](/domains/pin.png)
-Gospodarstwo wymaga od ciebie ciągłego działania i dozoru.
-Potrzeba bycia w wielu miejscach na raz staje się codziennością.
-Pozwól aby drony przejęły część tych obowiązków.
+Zarządzanie gospodarstwem to wyzwanie,
+które wymaga ciągłego zaangażowania i nadzoru.
+Jednak, w erze nowoczesnych technologii,
+możesz zrewolucjonizować swoje podejście do codziennych obowiązków.
+Drony stanowią innowacyjne narzędzie, które może przejąć część zadań,
+pozwalając Ci skupić się na kluczowych aspektach prowadzenia gospodarstwa.
 
 1. Zadbaj o bezpieczeństwo swoich zwierząt:
-Możesz lokalizować położenie zwierząt, odnajdywać zaginione lub ranne osobniki,
-kontrolować ich przemieszczanie.
+Monitoruj całe stado lub poszczególne jednostki.
+W razie potrzeby skieruj drony  do odnajdywania zagubionych osobników,
+a także szybciej lokalizuj ranne zwierzęta.
+Dzięki temu będzie możliwa skuteczna pomoc w kryzysowych sytuacjach.
 
 ![Weather](/domains/season.png)
 Warunki pogodowe wpływają na Twoje zwierzęta i ich kondycje.
@@ -232,13 +237,13 @@ Zadbajmy o nie najlepiej jak to możliwe z pomocą najnowszej technologii.
 
 1. Dodawaj i monitoruj matki.
 Dzięki temu będziesz mógł ocenić w jaki sposób planują hodowlę i budują rodzinę.
-2. Kontroluj wymianę swoich matek aby mieć pewność,
+2. Kontroluj wymianę swoich matek, aby mieć pewność,
 że następne pokolenia pszczół będą zdrowe i silne.
 Wymiana matki pozwoli zachować kontrolę nad funkcjonowaniem ula.
 3. Prowadź rejestr zbiorów miodu i określaj najlepiej funkcjonujące pszczele rodziny.
 4. Zaplanuj wszelkie inspekcje i zadania oraz otrzymuj powiadomienia o nich,
 tak by nic cię nie ominęło w dbaniu o swoje pasieki.
-5. Diagnozuj i planuj leczenie Twoich pszczół aby zachować ich zdrowie.
+5. Diagnozuj i planuj leczenie Twoich pszczół, aby zachować ich zdrowie.
 6. Twórz raporty i analizuj wyniki by jak najlepiej zarządzać ulami oraz pszczołami.
 7. Twórz swoje pasieki zgodnie z zasięgiem paszy i ilości posiadanych rodzin,
 tak aby zoptymalizować napszczelenie terenu.
@@ -261,7 +266,7 @@ Skrupulatne prowadzenie dokumentacji dotyczącej wydatków
 i prognozowanie przyszłych zysków pozwala na lepszą kontrolę nad finansami gospodarstwa.
 Dzięki temu możesz efektywniej planować budżet i zarządzać swoim majątkiem.
 2. Bądź na bieżąco z aktualnymi cenami na rynku zbytu.
-W ten sposób zaplanujesz swoją strategię tak aby uzyskać najkorzystniejszy dochód.
+W ten sposób zaplanujesz swoją strategię, tak aby uzyskać najkorzystniejszy dochód.
 
 Wykresy oraz raporty w prosty i skumulowany sposób przedstawiają
 wybrane obszary Twojej działalności.
@@ -287,5 +292,5 @@ a będziesz na bieżąco z zakresem wykonanych prac.
 To pozwoli ci na analizę potrzebnego czasu
 i osób niezbędnych do wykonania konkretnych zadań.
 W przyszłości efektywniej rozplanujesz pracę
-i przydzielisz pracowników aby zwiększyć ich wydajność
+i przydzielisz pracowników, aby zwiększyć ich wydajność
 i zminimalizować nieefektywne działania.
