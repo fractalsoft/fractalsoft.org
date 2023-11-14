@@ -1,6 +1,9 @@
 # Technika dla Rolnika
 
-> **Eko** i **Smart** Rolnictwo to Twoja droga do efektywności i automatyzacji pracy.
+## 🚜🔧💻🌾
+
+> **Eko** 💚🌱 i **Smart** 🧠🤖 Rolnictwo 👩‍🌾🚜 to Twoja droga
+> do efektywności i automatyzacji pracy.
 > Wykorzystaj **technologie w rolnictwie** z naszym wsparciem.
 
 ![Machinery](/domains/agricultural-machinery-400x400.jpg)
@@ -27,7 +30,15 @@ Jesteśmy tu by wdrożyć Twoje koncepcje w życie.
 
 Pozwól by najnowsze technologie pracowały dla Ciebie. 👍
 
-## Uprawy rolne
+## Uprawy rolne 🚜🌾
+
+Postęp technologiczny, zmiany klimatyczne i rosnące zapotrzebowanie na żywność sprawia,
+że nowoczesne uprawianie roli to złożony proces,
+który wymaga elastyczności, innowacyjności i zrównoważonego podejścia.
+Rolnictwo wspierane przez zaawansowane technologie,
+takie jak sztuczna inteligencja, robotyka, drony, i IoT (Internet of Things)
+pomaga w optymalizacji procesów, monitorowaniu plonów, zarządzaniu zasobami wodnymi
+i minimalizowaniu wpływu na środowisko.
 
 ![Satellite](/domains/earth.png)
 Technologie satelitarne otworzyły przed rolnictwem nowe możliwości,
@@ -109,9 +120,10 @@ jak i lokalizacji pola oraz samych miejsc na opryskiwanym polu.
 Pogoda odgrywa kluczą rolę w twojej działalności.
 Wykorzystaj informacje pogodowe do jak najlepszego zarządzania swoim gospodarstwem.
 
-1. Dostępność takich informacji jak: nasłonecznienie, wilgotność, wiatr, opady,
-temperatura powietrza i gleby pozwoli na osiągnięcie większej wydajności
-i zmniejszy ryzyko utraty lub zniszczenia plonów.
+1. Monitoruj informacje takie jak:
+nasłonecznienie, wilgotność, wiatr, opady, temperatura powietrza i gleby,
+aby dostosować czynności rolne.
+Zwiększysz wydajność swojej pracy i zmiejszysz ryzyko otraty lub zniszczenia plonów.
 
 ![Management](/domains/growth.png)
 Każdego dnia musisz podejmować cały szereg decyzji.
@@ -145,7 +157,13 @@ i odbiory produktów przez swoich kontrahentów.
 Zminimalizujesz ryzyko przeładowania lub braków magazynowych,
 co usprawni działalność Twojego gospodarstwa.
 
-## Hodowla zwierząt
+## Hodowla zwierząt 🐄🐖🐓
+
+Hodowla zwierząt podlega dynamicznym zmianom, zasilana postępem technologicznym,
+zmianami w preferencjach konsumentów i rosnącą świadomością zrównoważonego rozwoju.
+Nowoczesna hodowla nie ogranicza się jedynie do produkcji żywności,
+lecz obejmuje także troskę o dobrostan zwierząt,
+ochronę środowiska i spełnienie wymagań rynku.
 
 ![Satellite](/domains/earth.png)
 Jednym z kluczowych narzędzi wspierających hodowlę zwierząt
@@ -183,6 +201,7 @@ i chorób z powodu niesprzyjających warunków atmosferycznych.
 2. W miejscach hodowli dostosujesz ekosystem do tych warunków panujących na zewnątrz,
 a tym samym zapewnisz najlepsze możliwości do rozwoju swojego dobytku.
 
+![Managment](/domains/smart-farm.png)
 Posiadanie zwierząt wiąże się z wieloma obowiązkami.
 Większy inwentarz wymaga od Ciebie większego nakładu pracy
 oraz bardziej zaawansowanej logistyki.
@@ -213,6 +232,7 @@ tak by stworzyć najlepsze warunki rozwojowe swojego inwentarza.
 dzięki temu przeanalizujesz wpływ dotychczasowych działań na osiągane wyniki.
 Podniesiesz jakość twoich produktów i zwiększysz zyski.
 
+![Stock system](/domains/stock.png)
 Dostosowany system magazynowania poprawi produktywność
 i zapewni płynność w funkcjonowaniu Twojego dobytku.
 W jednym miejscu będziesz miał wgląd w aktualny stan Twojego gospodarstwa.
@@ -230,7 +250,17 @@ i odbiory produktów przez swoich kontrahentów.
 Zminimalizujesz ryzyko przeładowania lub braków magazynowych
 co usprawni działalność Twojego gospodarstwa.
 
-## Pszczoły
+## Pszczelarstwo 🐝🌼🍯
+
+W obliczu globalnego kryzysu ekologicznego i kluczowej roli pszczół w zapylaniu roślin,
+pszczelarstwo stało się nie tylko formą produkcji miodu,
+lecz także integralnym elementem ochrony środowiska i zrównoważonego rolnictwa,
+skupia się na zdrowiu pszczół.
+Wprowadzenie nowoczesnych technologii,
+takich jak inteligentne ule, sensory monitorujące warunki w ulu,
+czy systemy informatyczne do analizy danych,
+umożliwia hodowcom lepszą kontrolę nad warunkami w ulach.
+To pozwala na szybką reakcję na ewentualne problemy i optymalizację warunków hodowli.
 
 ![Apiary](/domains/apiary.png)
 Twoje pszczoły są ważne nie tylko dla Ciebie, ale dla nas wszystkich.
@@ -256,7 +286,7 @@ Analizując te dane będziesz znał kondycję swoich pszczół.
 10. Zarządzaj swoimi odkładami w celu rozwoju swojej pasieki
 lub prowadzeniu intratnego biznesu dalszej sprzedaży.
 
-## Zarządzania zasobami
+## Zarządzania zasobami 📊🔄
 
 W rolnictwie, aspekty finansowe są nieodłączną częścią sukcesu.
 Mają one ogromny wpływ na Twoje decycje związane z funkcjonowaniem gospodarstwa.
