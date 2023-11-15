@@ -24,9 +24,9 @@
     .accordion
       .accordion-item
         h2.accordion-header
-          button.accordion-button type='button' data-bs-toggle='collapse' data-bs-target="#collapse-project-#{project.slug}" aria-expanded='true' aria-controls="collapse-project-#{project.slug}" class="#{index >= 2 ? 'collapsed' : ''}"
+          button.accordion-button type='button' data-bs-toggle='collapse' data-bs-target="#collapse-project-#{index}" aria-expanded='true' aria-controls="collapse-project-#{index}" class="#{index >= 2 ? 'collapsed' : ''}"
             = project.title
-        .accordion-collapse.collapse aria-labelledby='projectListHeader' id="collapse-project-#{project.slug}" class="#{index < 2 ? 'show' : ''}"
+        .accordion-collapse.collapse aria-labelledby='projectListHeader' id="collapse-project-#{index}" class="#{index < 2 ? 'show' : ''}"
           .accordion-body
             = render 'project', project: project, contributions: @person.project_with_contributions(project)
 
