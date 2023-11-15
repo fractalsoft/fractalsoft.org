@@ -13,7 +13,6 @@ inherit_mode:
 
 AllCops:
   Exclude:
-    - bin/*
     - config/**/*
     - db/migrate/**
     - db/schema.rb
