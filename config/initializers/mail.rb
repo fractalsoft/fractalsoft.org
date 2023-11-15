@@ -1,4 +1,4 @@
- ActionMailer::Base.smtp_settings = {
+ActionMailer::Base.smtp_settings = {
   address:              Rails.application.secrets.regular_mailer_address,
   port:                 Rails.application.secrets.regular_mailer_port,
   user_name:            Rails.application.secrets.regular_mailer_username,
