@@ -67,4 +67,22 @@ RSpec.describe Project do
       expect(project.top_image).to eq(image)
     end
   end
+
+  describe 'slug validation' do
+    context 'when slug does not contain a dot' do
+      it 'is validated correctly' do
+        project = build(:project, slug: 'slug-name-without-dot')
+
+        expect(project).to be_valid
+      end
+    end
+
+    context 'when slug contains a dot' do
+      it 'is also validated correctly' do
+        project = build(:project, slug: 'slug-name-with.dot')
+
+        expect(project).to be_valid
+      end
+    end
+  end
 end
