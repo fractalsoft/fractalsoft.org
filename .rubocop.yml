@@ -56,7 +56,6 @@ Style/RedundantRegexpEscape:
   Enabled: true
   Exclude:
     - app/models/markdown_preparator.rb
-    - app/models/contact_form.rb
 
 Style/SymbolArray:
   Enabled: false
