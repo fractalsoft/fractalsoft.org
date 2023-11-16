@@ -160,6 +160,7 @@ GEM
       descendants_tracker (~> 0.0.1)
     colored (1.2)
     colorize (0.8.1)
+    commonmarker (1.0.0.pre11-x86_64-linux)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -281,7 +282,7 @@ GEM
     language_server-protocol (3.17.0.3)
     launchy (2.5.2)
       addressable (~> 2.8)
-    libv8-node (18.16.0.0)
+    libv8-node (18.16.0.0-x86_64-linux)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -310,7 +311,6 @@ GEM
     mini_histogram (0.3.1)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.5)
     mini_racer (0.8.0)
       libv8-node (~> 18.16.0.0)
     minitest (5.20.0)
@@ -329,8 +329,7 @@ GEM
       net-protocol
     net-ssh (7.2.0)
     nio4r (2.5.9)
-    nokogiri (1.15.4)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     normalize-rails (8.0.1)
     oj (3.16.1)
@@ -579,6 +578,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-linux
 
 DEPENDENCIES
   actionpack-action_caching
@@ -596,6 +596,7 @@ DEPENDENCIES
   capybara
   carrierwave (~> 3.0)
   colored
+  commonmarker (~> 1.0.0.pre11)
   cuprite
   database_cleaner (~> 2.0.1)
   derailed_benchmarks
