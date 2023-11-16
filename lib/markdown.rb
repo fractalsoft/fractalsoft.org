@@ -1,12 +1,8 @@
-require 'redcarpet'
+require 'commonmarker'
 
 class Markdown
-  EXTENSIONS = {
-    autolink: true,
-    fenced_code_blocks: true,
-    space_after_headers: true,
-    strikethrough: true,
-    tables: true
+  RENDER = {
+    hardbreaks: false
   }.freeze
 
   def initialize(input)
@@ -14,15 +10,16 @@ class Markdown
   end
 
   def to_html
-    @markdown = Redcarpet::Markdown.new(renderer, EXTENSIONS)
-    @markdown.render(input)
+    Commonmarker.to_html(input, options:)
   end
 
   private
 
   attr_reader :input
 
-  def renderer
-    Redcarpet::Render::HTML.new(link_attributes: { rel: 'nofollow' })
+  def options
+    {
+      render: RENDER
+    }
   end
 end

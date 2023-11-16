@@ -29,7 +29,7 @@ RSpec.describe Markdown do
 
     it 'returns the HTML code the corresponds to the text containing quotation marks in Markdown' do
       input = "My name is 'Bond, James Bond'"
-      expected_result_in_html = "<p>My name is &#39;Bond, James Bond&#39;</p>\n"
+      expected_result_in_html = "<p>My name is 'Bond, James Bond'</p>\n"
       markdown = described_class.new(input)
 
       expect(markdown.to_html).to eq(expected_result_in_html)
@@ -49,10 +49,12 @@ RSpec.describe Markdown do
         puts 'Hello world'
         ```
       BLOCK_CODE
-      expected_result_in_html = <<~HTML
-        <pre><code class="ruby">puts &#39;Hello world&#39;
-        </code></pre>
-      HTML
+      expected_result_in_html = '<pre style="background-color:#2b303b;">' \
+                                '<code class="language-ruby">' \
+                                '<span style="color:#96b5b4;">puts </span>' \
+                                '<span style="color:#c0c5ce;">&#39;</span>' \
+                                '<span style="color:#a3be8c;">Hello world</span>' \
+                                "<span style=\"color:#c0c5ce;\">&#39;\n</span></code></pre>\n"
       markdown = described_class.new(block_code_in_markdown)
 
       expect(markdown.to_html).to eq(expected_result_in_html)
@@ -60,15 +62,18 @@ RSpec.describe Markdown do
 
     it 'returns the HTML code that corresponds to the header in Markdown' do
       header_in_markdown = '# The most important heading'
+      expected_result_in_html = '<h1><a href="#the-most-important-heading" ' \
+                                'aria-hidden="true" class="anchor" id="the-most-important-heading"></a>' \
+                                "The most important heading</h1>\n"
       markdown = described_class.new(header_in_markdown)
 
-      expect(markdown.to_html).to eq("<h1>The most important heading</h1>\n")
+      expect(markdown.to_html).to eq(expected_result_in_html)
     end
 
     it 'returns the HTML code that corresponds to the link in Markdown' do
       link_in_markdown = 'This is the [FractalSoft](https://fractalsoft.org/)'
       expected_result_in_html = <<~HTML
-        <p>This is the <a href="https://fractalsoft.org/" rel="nofollow">FractalSoft</a></p>
+        <p>This is the <a href="https://fractalsoft.org/">FractalSoft</a></p>
       HTML
       markdown = described_class.new(link_in_markdown)
 
@@ -78,7 +83,7 @@ RSpec.describe Markdown do
     it 'returns the HTML code that corresponds to the link in Markdown with www recognition' do
       markdown_with_www_link = 'Visit www.fractalsoft.org'
       expected_result_in_html = <<~HTML
-        <p>Visit <a href="http://www.fractalsoft.org" rel="nofollow">www.fractalsoft.org</a></p>
+        <p>Visit <a href="http://www.fractalsoft.org">www.fractalsoft.org</a></p>
       HTML
       markdown = described_class.new(markdown_with_www_link)
 
@@ -88,7 +93,7 @@ RSpec.describe Markdown do
     it 'returns the HTML code that corresponds to the image as link in Markdown' do
       image_as_link_in_markdown = '[![My image](/path/to/image)](https://fractalsoft.org/)'
       expected_result_in_html = <<~HTML
-        <p><a href="https://fractalsoft.org/" rel="nofollow"><img src="/path/to/image" alt="My image"></a></p>
+        <p><a href="https://fractalsoft.org/"><img src="/path/to/image" alt="My image" /></a></p>
       HTML
       markdown = described_class.new(image_as_link_in_markdown)
 
@@ -97,9 +102,8 @@ RSpec.describe Markdown do
 
     it 'returns the HTML code that corresponds to the link in header in Markdown' do
       header_link_in_markdown = '# My Header [link](https://fractalsoft.org/)'
-      expected_result_in_html = <<~HTML
-        <h1>My Header <a href="https://fractalsoft.org/" rel="nofollow">link</a></h1>
-      HTML
+      expected_result_in_html = '<h1><a href="#my-header-link" aria-hidden="true" class="anchor" id="my-header-link"></a>' \
+                                "My Header <a href=\"https://fractalsoft.org/\">link</a></h1>\n"
       markdown = described_class.new(header_link_in_markdown)
 
       expect(markdown.to_html).to eq(expected_result_in_html)
@@ -152,7 +156,7 @@ RSpec.describe Markdown do
     it 'returns the HTML code that corresponds to the image in Markdown' do
       image_in_markdown = '![My image](/path/to/image)'
       expected_result_in_html = <<~HTML
-        <p><img src="/path/to/image" alt="My image"></p>
+        <p><img src="/path/to/image" alt="My image" /></p>
       HTML
       markdown = described_class.new(image_in_markdown)
 
@@ -167,12 +171,14 @@ RSpec.describe Markdown do
         | Paragraph   | Text        |
       TABLE
       expected_result_in_html = <<~HTML
-        <table><thead>
+        <table>
+        <thead>
         <tr>
         <th>Syntax</th>
         <th>Description</th>
         </tr>
-        </thead><tbody>
+        </thead>
+        <tbody>
         <tr>
         <td>Header</td>
         <td>Title</td>
@@ -181,9 +187,26 @@ RSpec.describe Markdown do
         <td>Paragraph</td>
         <td>Text</td>
         </tr>
-        </tbody></table>
+        </tbody>
+        </table>
       HTML
       markdown = described_class.new(table_in_markdown)
+
+      expect(markdown.to_html).to eq(expected_result_in_html)
+    end
+
+    it 'returns the HTML code that corresponds to the task list in Markdown' do
+      task_list_in_markdown = <<~TASK_LIST
+        - [ ] first to do
+        - [x] second to do
+      TASK_LIST
+      expected_result_in_html = <<~HTML
+        <ul>
+        <li><input type="checkbox" disabled="" /> first to do</li>
+        <li><input type="checkbox" checked="" disabled="" /> second to do</li>
+        </ul>
+      HTML
+      markdown = described_class.new(task_list_in_markdown)
 
       expect(markdown.to_html).to eq(expected_result_in_html)
     end
