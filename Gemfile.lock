@@ -628,7 +628,6 @@ DEPENDENCIES
   rails-controller-testing
   rails-i18n
   rails_best_practices
-  redcarpet
   reek
   route_translator
   rspec-rails (~> 6.0.3)

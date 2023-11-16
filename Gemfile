@@ -28,7 +28,6 @@ gem 'oj' # Fast JSON parser and object serializer
 gem 'pg' # Ruby interface to PostgreSQL RDBMS
 gem 'puma' # Ruby web server built for concurrency
 gem 'rails-i18n'
-gem 'redcarpet'
 gem 'route_translator' # Manage translations of routes
 gem 'sass-rails', '~> 6.0'
 gem 'simple_form', '~> 5.3'
