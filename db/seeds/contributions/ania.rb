@@ -72,6 +72,16 @@ contribution.attributes = { locale: :en, name: 'Writing unit tests' }
 contribution.attributes = { locale: :pl, name: 'Pisanie testów jednostkowych' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 9))
+contribution.attributes = { locale: :en, name: 'Copywriting' }
+contribution.attributes = { locale: :pl, name: 'Copywriting' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 10))
+contribution.attributes = { locale: :en, name: 'Refactoring the Markdown parser from Redcarpet to CommonMarker' }
+contribution.attributes = { locale: :pl, name: 'Refaktoring parsera Markdowna z Redcarpet na CommonMarker' }
+contribution.save
+
 # ania in nopaperwork
 params = { person_id: ania.id, project_id: nopaperwork.id }
 
