@@ -24,7 +24,7 @@ class Person < ApplicationRecord
   has_many :technologies, through: :technological_skills
 
   def project_with_contributions(project)
-    contributions.includes(:translations).where(project:)
+    contributions.includes(:translations).where(project:).order(position: :asc)
   end
 
   def skill_list

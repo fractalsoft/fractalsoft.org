@@ -46,6 +46,16 @@ RSpec.describe Person do
     it 'show only contribution for specific person' do
       expect(person_with_contributions.project_with_contributions(project)).to eq [contribution]
     end
+
+    it 'sorts contributions by their ascending positions' do
+      subject = described_class.build(first_name: 'John', last_name: 'Smith')
+      project = create(:project)
+      second_contribution = create(:contribution, position: 2, project:, person: subject)
+      third_contribution = create(:contribution, position: 3, project:, person: subject)
+      first_contribution = create(:contribution, position: 1, project:, person: subject)
+
+      expect(subject.project_with_contributions(project)).to eq [first_contribution, second_contribution, third_contribution]
+    end
   end
 
   context 'with #skill_list' do
