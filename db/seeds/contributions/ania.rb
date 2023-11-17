@@ -63,23 +63,23 @@ contribution.attributes = { locale: :pl, name: 'Wdrożenie na serwer testowy' }
 contribution.save
 
 contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en, name: 'Markdown parser (Redcarpet → CommonMark)' }
+contribution.attributes = { locale: :pl, name: 'Parser Markdowna (Redcarpet → CommonMark)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 8))
 contribution.attributes = { locale: :en, name: 'Importmaps optimization' }
 contribution.attributes = { locale: :pl, name: 'Optymalizacja importmaps' }
 contribution.save
 
-contribution = Contribution.new(params.merge(position: 8))
+contribution = Contribution.new(params.merge(position: 9))
 contribution.attributes = { locale: :en, name: 'Writing unit tests' }
 contribution.attributes = { locale: :pl, name: 'Pisanie testów jednostkowych' }
 contribution.save
 
-contribution = Contribution.new(params.merge(position: 9))
+contribution = Contribution.new(params.merge(position: 10))
 contribution.attributes = { locale: :en, name: 'Copywriting' }
 contribution.attributes = { locale: :pl, name: 'Copywriting' }
-contribution.save
-
-contribution = Contribution.new(params.merge(position: 10))
-contribution.attributes = { locale: :en, name: 'Refactoring the Markdown parser from Redcarpet to CommonMarker' }
-contribution.attributes = { locale: :pl, name: 'Refaktoring parsera Markdowna z Redcarpet na CommonMarker' }
 contribution.save
 
 # ania in nopaperwork
