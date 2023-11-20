@@ -2,6 +2,7 @@
 technology_elasticsearch = Technology.where(slug: 'elasticsearch').first_or_initialize
 icon_elasticsearch_original_svg = File.read('./db/seeds/technology/svg/elasticsearch.svg')
 technology_elasticsearch.assign_attributes(
+  emoji: '🔍🌐📈',
   github_repo: 'elastic/elasticsearch',
   icon: icon_elasticsearch_original_svg,
   name: 'elasticsearch',

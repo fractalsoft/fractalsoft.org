@@ -2,6 +2,7 @@
 technology_matlab = Technology.where(slug: 'matlab').first_or_initialize
 icon_matlab_original_svg = File.read('./db/seeds/technology/svg/matlab-original.svg')
 technology_matlab.assign_attributes(
+  emoji: '📊🔢💻',
   icon: icon_matlab_original_svg,
   name: 'MATLAB',
   title: 'MATLAB',
