@@ -327,7 +327,7 @@ GEM
       net-protocol
     net-ssh (7.2.0)
     nio4r (2.6.0)
-    nokogiri (1.15.4-x86_64-linux)
+    nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     normalize-rails (8.0.1)
     oj (3.16.1)
