@@ -3,6 +3,7 @@ technology_python = Technology.where(slug: 'python').first_or_initialize
 icon_python_original_svg = File.read('./db/seeds/technology/svg/python-original.svg')
 icon_python_wordmark_svg = File.read('./db/seeds/technology/svg/python-original-wordmark.svg')
 technology_python.assign_attributes(
+  emoji: '🐍👨‍💻',
   icon: icon_python_original_svg,
   icon_wordmark: icon_python_wordmark_svg,
   name: 'python',
