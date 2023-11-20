@@ -2,6 +2,7 @@
 technology_cuprite = Technology.where(slug: 'cuprite').first_or_initialize
 icon_cuprite_svg = File.read('./db/seeds/technology/svg/cuprite.svg')
 technology_cuprite.assign_attributes(
+  emoji: '☕👁️‍🗨️🚀',
   github_repo: 'rubycdp/cuprite',
   icon: icon_cuprite_svg,
   name: 'Cuprite',
