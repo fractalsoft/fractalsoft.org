@@ -56,17 +56,17 @@ torrocus.save
 
 TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
-# minitest
 # testcase
 {
   'ruby' => { experience_rating: 91 },
-  'ruby-on-rails' => { experience_rating: 81 },
+  'ruby-on-rails' => { experience_rating: 82 },
   'sinatra' => { experience_rating: 60 },
-  'jekyll' => { experience_rating: 82 },
+  'jekyll' => { experience_rating: 83 },
   'jruby' => { experience_rating: 50 },
   'truffleruby' => { experience_rating: 40 },
 
   'rspec' => { experience_rating: 72 },
+  'minitest' => { experience_rating: 50 },
   'playwright' => { experience_rating: 60 },
   'selenium-webdriver' => { experience_rating: 50 },
   'selenium-ide' => { experience_rating: 30 },
@@ -87,7 +87,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'slax-linux' => { experience_rating: 40 },
   'alpine-linux' => { experience_rating: 15 },
 
-  'postgresql' => { experience_rating: 70 },
+  'postgresql' => { experience_rating: 72 },
   'mysql' => { experience_rating: 60 },
   'sqlite' => { experience_rating: 60 },
   'redis' => { experience_rating: 50 },
@@ -107,7 +107,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'sass' => { experience_rating: 80 },
   'haml' => { experience_rating: 70 },
   'slim' => { experience_rating: 70 },
-  'svg' => { experience_rating: 82 },
+  'svg' => { experience_rating: 83 },
   'html5' => { experience_rating: 90 },
   'css3' => { experience_rating: 80 },
   'bootstrap' => { experience_rating: 60 },
@@ -139,7 +139,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'prettier' => { experience_rating: 65 },
   'stylelint' => { experience_rating: 75 },
 
-  'github-actions' => { experience_rating: 83 },
+  'github-actions' => { experience_rating: 84 },
   'jenkins' => { experience_rating: 60 },
   'hound-ci' => { experience_rating: 50 },
   'travis-ci' => { experience_rating: 50 }
