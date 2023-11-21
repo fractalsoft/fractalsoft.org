@@ -61,6 +61,7 @@ RSpec.describe Markdown do
     end
 
     it 'returns the HTML code that corresponds to the header in Markdown' do
+      skip 'extension for Header IDs is yet to be specced out in comrak'
       header_in_markdown = '# The most important heading'
       expected_result_in_html = '<h1><a href="#the-most-important-heading" ' \
                                 'aria-hidden="true" class="anchor" id="the-most-important-heading"></a>' \
@@ -101,6 +102,7 @@ RSpec.describe Markdown do
     end
 
     it 'returns the HTML code that corresponds to the link in header in Markdown' do
+      skip 'extension for Header IDs is yet to be specced out in comrak'
       header_link_in_markdown = '# My Header [link](https://fractalsoft.org/)'
       expected_result_in_html = '<h1><a href="#my-header-link" aria-hidden="true" class="anchor" id="my-header-link"></a>' \
                                 "My Header <a href=\"https://fractalsoft.org/\">link</a></h1>\n"
