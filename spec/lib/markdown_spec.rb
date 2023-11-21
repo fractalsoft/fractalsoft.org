@@ -212,5 +212,37 @@ RSpec.describe Markdown do
 
       expect(markdown.to_html).to eq(expected_result_in_html)
     end
+
+    it 'returns the HTML code for Markdown contains the HTML code' do
+      markdown_with_html = <<~MARKDOWN_WITH_HTML
+        **Hello** world
+        <strong>This is very important text</strong>
+      MARKDOWN_WITH_HTML
+      expected_result_in_html = <<~HTML
+        <p><strong>Hello</strong> world
+        <strong>This is very important text</strong></p>
+      HTML
+      markdown = described_class.new(markdown_with_html)
+
+      expect(markdown.to_html).to eq(expected_result_in_html)
+    end
+
+    it 'returns HTML code for Markdown inside the HTML code' do
+      markdown_inside_html = <<~MARKDOWN_INSIDE_HTML
+        <div>
+
+          **Hello** world
+
+        </div>
+      MARKDOWN_INSIDE_HTML
+      expected_result_in_html = <<~HTML
+        <div>
+        <p><strong>Hello</strong> world</p>
+        </div>
+      HTML
+      markdown = described_class.new(markdown_inside_html)
+
+      expect(markdown.to_html).to eq(expected_result_in_html)
+    end
   end
 end
