@@ -1,8 +1,18 @@
 require 'commonmarker'
 
 class Markdown
+  EXTENSION = {
+    autolink: true,
+    footnotes: true,
+    strikethrough: true,
+    table: true,
+    tagfilter: false,
+    tasklist: true
+  }.freeze
+
   RENDER = {
-    hardbreaks: false
+    hardbreaks: false,
+    unsafe: true
   }.freeze
 
   def initialize(input)
@@ -19,6 +29,7 @@ class Markdown
 
   def options
     {
+      extension: EXTENSION,
       render: RENDER
     }
   end
