@@ -4,9 +4,9 @@ icon_selenium_ide_svg = File.read('./db/seeds/technology/svg/selenium-ide.svg')
 technology_selenium_ide.assign_attributes(
   emoji: '🕷️🛠️🖱️',
   github_repo: 'seleniumhq/selenium-ide',
+  icon: icon_selenium_ide_svg,
   name: 'Selenium IDE',
   title: 'Selenium IDE',
-  icon: icon_selenium_ide_svg,
   website_url: 'https://www.selenium.dev/'
 )
 technology_selenium_ide.save
