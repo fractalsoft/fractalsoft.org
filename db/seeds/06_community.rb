@@ -55,7 +55,6 @@ def youtube_iframe(url)
       ></iframe>
     </div>
     <br>
-    )
   YOUTUBE
 end
 
