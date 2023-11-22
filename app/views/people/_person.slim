@@ -7,7 +7,7 @@
       h3.card-title
         = person.first_name
     .card-body
-      p.card-text
+      .card-text
         == person.introduction
       p
         = link_to t('.person.see_full_profile'), person_path(id: person), class: 'btn btn-outline-dark btn-sm'

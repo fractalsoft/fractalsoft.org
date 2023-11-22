@@ -8,9 +8,9 @@
     .col-md-6.col-sm-6.col-xs-12
       h1
         = @person.first_name
-      p.text-justify
-        = @person.introduction
-      = @person.saying
+      .text-justify
+        == @person.introduction
+      == @person.saying
     .col-md-3.col-sm-6.col-xs-12
       ul.list-inline
         = @person.website
