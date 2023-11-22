@@ -33,6 +33,8 @@ class HtmlMinifier
 
   def compress(response)
     response.each do |chunk|
+      next if chunk.frozen?
+
       REGEXES.each do |regex, substitute|
         chunk.gsub! regex, substitute
       end
