@@ -6,7 +6,7 @@ class ContactFormsController < ApplicationController
   def create
     @contact_form = ContactForm.new(params[:contact_form])
     @contact_form.request = request
-    @contact_form.deliver
-    redirect_to root_path
+    @contact_form.deliver ? flash[:notice] = t('.success') : flash[:alert] = t('.fail')
+    redirect_to "#{@contact_form.request.referrer}#contact"
   end
 end
