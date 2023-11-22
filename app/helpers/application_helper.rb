@@ -13,4 +13,11 @@ module ApplicationHelper
 
     doc.to_html.html_safe
   end
+
+  def flash_class(flash_type)
+    {
+      alert: 'danger',
+      notice: 'success'
+    }[flash_type.to_sym]
+  end
 end
