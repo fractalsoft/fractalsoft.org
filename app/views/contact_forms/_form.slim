@@ -1,3 +1,6 @@
+- flash.each do |type, message|
+  p class="alert alert-#{flash_class(type)}" role='alert'
+    = message
 = simple_form_for contact_form, html: { id: 'contact_form' } do |f|
   = f.input :name, label: false, placeholder: t('.name'), required: true
   .d-none
@@ -6,6 +9,6 @@
   = f.input :message, label: false, placeholder: t('.message'), required: true, as: :text, input_html: { rows: 10 }
   = f.hidden_field :browser_info, value: ''
   .form-group
-    .row
+    .row.mb-3
       .col-sm-5.col-xs-12
         = f.submit t('.send'), class: 'btn btn-primary btn-block submit'
