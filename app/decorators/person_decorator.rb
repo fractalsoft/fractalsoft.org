@@ -21,7 +21,7 @@ class PersonDecorator < Draper::Decorator
   end
 
   def introduction
-    raw person.introduction
+    raw Markdown.new(person.introduction).to_html
   end
 
   def project_with_contributions(project)
@@ -29,9 +29,7 @@ class PersonDecorator < Draper::Decorator
   end
 
   def saying
-    given :saying do
-      content_tag(:blockquote, raw(person.saying), class: 'saying')
-    end
+    raw Markdown.new(person.saying || '').to_html
   end
 
   def skills
