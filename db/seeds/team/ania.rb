@@ -14,7 +14,7 @@ ania.assign_attributes(
 
 I18n.locale = :en
 ania.introduction = <<~INTRODUCTION.chomp
-  <strong>Promising programming enthusiast.</strong>
+  **Promising programming enthusiast.**
   Learning Ruby and Ruby on Rails with great determination to write high-quality code and tests.
   Striving for continuous improvement of her skills, despite limited experience.
   Willing to take on challenges and work collaboratively.
@@ -23,7 +23,7 @@ INTRODUCTION
 
 I18n.locale = :pl
 ania.introduction = <<~INTRODUCTION.chomp
-  <strong>Rokująca 🎸 entuzjastka programowania.</strong>
+  **Rokująca 🎸 entuzjastka programowania.**
   Uczy się Ruby oraz Railsów z wielką determinacją, aby pisać najlepszej jakości kod i testy.
   Dąży do ciągłego doskonalenia swoich umiejętności, mimo niezbyt dużego doświadczenia.
   Gotowa na ciągłe wyzwania i pracę zespołową.
