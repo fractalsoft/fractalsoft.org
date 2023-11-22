@@ -22,6 +22,7 @@ AllCops:
 Metrics/MethodLength:
   CountComments: false
   Exclude:
+    - app/middleware/html_minifier.rb
     - app/uploaders/community_logo_uploader.rb
     - db/seeds/06_community.rb
   Max: 5
