@@ -20,7 +20,7 @@ torrocus.assign_attributes(
 
 I18n.locale = :en
 torrocus.introduction = <<~INTRODUCTION.chomp
-  <strong>Web developer since 1998.</strong>
+  **Web developer since 1998.**
   He had met Ruby 12 years later while using Sinatra and Ruby on Rails.
   Madcap for algorithms.
   Linux administrator and Open Source ideology evangelist.
@@ -28,28 +28,25 @@ torrocus.introduction = <<~INTRODUCTION.chomp
 INTRODUCTION
 
 torrocus.saying = <<~SAYING.chomp
-  <p>
-    It seems that perfection is attained not when there is nothing more to add,
-    but when there is nothing more to remove.
-  </p>
-  <footer>Antoine de Saint Exupéry</footer>
+  > It seems that perfection is attained not
+  > when there is nothing more to add,
+  > but when there is nothing more to remove.
+  > <footer>Antoine de Saint Exupéry</footer>
 SAYING
 
 I18n.locale = :pl
 torrocus.introduction = <<~INTRODUCTION.chomp
-  <strong>Web developer od roku 1998.</strong>
+  **Web developer od roku 1998.**
   Ruby poznał 12 lat później używając Sinatra i Ruby on Rails.
   Pasjonat algorytmiki, administrator Linuksa i ewangelista ideologii Open Source.
   W wolnym czasie zgłębia tajniki uczenia maszynowego.
 INTRODUCTION
 
 torrocus.saying = <<~SAYING.chomp
-  <p>
-    Wydaje się, że doskonałość osiąga się nie wtedy,
-    gdy nie ma nic więcej do dodania,
-    ale gdy nie ma nic więcej do usunięcia.
-  </p>
-  <footer>Antoine de Saint Exupéry</footer>
+  > Wydaje się, że doskonałość osiąga się nie wtedy,
+  > gdy nie ma nic więcej do dodania,
+  > ale gdy nie ma nic więcej do usunięcia.
+  > <footer>Antoine de Saint Exupéry</footer>
 SAYING
 
 torrocus.save
