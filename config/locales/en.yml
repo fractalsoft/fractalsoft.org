@@ -7,6 +7,9 @@ en:
   contact_forms:
     contact:
       contact_with_us: Contact with us
+    create:
+      fail: Unfortunately, something went wrong. The message has not been sent.
+      success: Thank you for Your message. We will reply as soon as possible.
     form:
       email: Your email address
       message: What we can do for you?
