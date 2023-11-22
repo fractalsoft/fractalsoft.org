@@ -7,6 +7,9 @@ pl:
   contact_forms:
     contact:
       contact_with_us: Napisz do nas
+    create:
+      fail: Niestety coś poszło nie tak. Wiadomość nie została wysłana.
+      success: Dziękuję za Twoją wiadomość. Odpowiemy tak szybko, jak to możliwe.
     form:
       email: Twój adres email
       message: Jak możemy Ci pomóc?
