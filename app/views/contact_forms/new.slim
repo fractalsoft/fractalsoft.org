@@ -17,6 +17,6 @@
           - class_name = (office_address.position == 1) ? 'active' : ''
           .btn.btn-default.btn-map class="#{class_name}" data-target="#{office_address.slug}-map"
             = office_address.name
-    .row
+    #contact.row
       .col-md-5.offset-md-4
         = render 'form', contact_form: @contact_form
