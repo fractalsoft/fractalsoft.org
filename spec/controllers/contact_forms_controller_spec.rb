@@ -25,31 +25,39 @@ RSpec.describe ContactFormsController do
       end
 
       it 'stays in the contact section of the home page after sending an email from the home page' do
-        allow_any_instance_of(ActionController::TestRequest).to receive(:referrer).and_return(root_path)
-        post :create, params: { contact_form: params, locale: }
+        I18n.with_locale(:en) do
+          allow_any_instance_of(ActionController::TestRequest).to receive(:referrer).and_return(root_path)
+          post :create, params: { contact_form: params, locale: }
 
-        expect(response).to redirect_to(root_path(locale:, anchor: 'contact'))
+          expect(response).to redirect_to(root_path(locale:, anchor: 'contact'))
+        end
       end
 
       it 'stays on the contact page after sending an email from the contact page' do
-        allow_any_instance_of(ActionController::TestRequest).to receive(:referrer).and_return(new_contact_form_path)
-        post :create, params: { contact_form: params, locale: }
+        I18n.with_locale(:en) do
+          allow_any_instance_of(ActionController::TestRequest).to receive(:referrer).and_return(new_contact_form_path)
+          post :create, params: { contact_form: params, locale: }
 
-        expect(response).to redirect_to(new_contact_form_path(locale:, anchor: 'contact'))
+          expect(response).to redirect_to(new_contact_form_path(locale:, anchor: 'contact'))
+        end
       end
 
       it 'displays a success message when an email has been sent' do
-        allow_any_instance_of(ContactForm).to receive(:deliver).and_return(true)
-        post :create, params: { contact_form: params, locale: }
+        I18n.with_locale(:en) do
+          allow_any_instance_of(ContactForm).to receive(:deliver).and_return(true)
+          post :create, params: { contact_form: params, locale: }
 
-        expect(flash[:notice]).to eq(I18n.t('contact_forms.create.success'))
+          expect(flash[:notice]).to eq(I18n.t('contact_forms.create.success'))
+        end
       end
 
       it 'displays a failed message when an email has failed to be sent' do
-        allow_any_instance_of(ContactForm).to receive(:deliver).and_return(false)
-        post :create, params: { contact_form: params, locale: }
+        I18n.with_locale(:en) do
+          allow_any_instance_of(ContactForm).to receive(:deliver).and_return(false)
+          post :create, params: { contact_form: params, locale: }
 
-        expect(flash[:alert]).to eq(I18n.t('contact_forms.create.fail'))
+          expect(flash[:alert]).to eq(I18n.t('contact_forms.create.fail'))
+        end
       end
     end
 
