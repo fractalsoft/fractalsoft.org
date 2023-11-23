@@ -4,7 +4,6 @@ import turbolinks from "turbolinks";
 
 turbolinks.start();
 
-import "jquery";
 import "@popperjs/core";
 import "bootstrap";
 import "fractalsoft/browser_info";
