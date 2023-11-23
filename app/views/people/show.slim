@@ -3,15 +3,16 @@
 .container-fluid.background
 .container.business-card
   .row.mb-5
-    .col-md-3.col-sm-6.col-xs-12
-      = @person.image
-    .col-md-6.col-sm-6.col-xs-12
+    .col-md-8.col-sm-12
+      .float-md-start.me-2
+        = @person.image
       h1
         = @person.first_name
-      .text-justify
+      .d-flex.justify-content-around.text-justify
         == @person.introduction
-      == @person.saying
-    .col-md-3.col-sm-6.col-xs-12
+      .d-flex.justify-content-around
+        == @person.saying
+    .col-md-4.col-sm-12
       ul.list-inline
         = @person.website
         = @person.blog
