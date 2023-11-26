@@ -54,6 +54,7 @@ group :development do
   gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
+  gem 'rubocop-rake'
   gem 'rubocop-rspec'
   gem 'rubycritic', require: false
   gem 'scss_lint'
