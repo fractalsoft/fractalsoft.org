@@ -1,7 +1,9 @@
 require 'rails/code_statistics'
 
+desc 'Report code statistics (KLOCs, etc) from the application or engine'
 task stats: :extended_stats
 
+desc 'Report code statistics in extended version'
 task extended_stats: :environment do
   %w[
     decorators
