@@ -1,5 +1,6 @@
 pl:
   routes:
+    business_contact_forms: biznesowy-formularz-kontaktowy
     communities: spolecznosc
     contact_forms: formularz-kontaktowy
     job_offers: praca
