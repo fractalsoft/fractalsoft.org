@@ -1,5 +1,6 @@
 en:
   routes:
+    business_contact_forms: business-contact-form
     communities: community
     contact_forms: contact-form
     job_offers: jobs

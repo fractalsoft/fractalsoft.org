@@ -1,0 +1,2 @@
+class BusinessContactFormsController < ApplicationController
+end
