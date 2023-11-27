@@ -56,4 +56,8 @@ body.home {
       }
     }
   }
+
+  @media(max-width: 768px) {
+    .contact { text-align: center; }
+  }
 }
