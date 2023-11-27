@@ -17,7 +17,7 @@ en:
       nickname:
         hint: Leave this field blank!
         placeholder: Your nickname
-      send: send
+      send: Send message
     icons:
       find_us: You can also find us here
     new:
@@ -71,9 +71,9 @@ en:
   mail_form:
     attributes:
       contact_form:
-        email: E-mail
-        message: Sent message
-        name: Name
+        email: E-mail address
+        message: Message content
+        name: Your name
         nickname: Nickname
     models:
       contact_form: Fractal Soft - Your site contact form

@@ -17,7 +17,7 @@ pl:
       nickname:
         hint: Zostaw to pole puste!
         placeholder: Twój nick
-      send: wyślij
+      send: Wyślij wiadomość
     icons:
       find_us: Możesz nas znaleźć też tu
     new:
@@ -71,9 +71,9 @@ pl:
   mail_form:
     attributes:
       contact_form:
-        email: E-mail
-        message: Wysłana wiadomość
-        name: Imię
+        email: Adres e-mail
+        message: Treść wiadomości
+        name: Imię i nazwisko
         nickname: Nickname
     models:
       contact_form: Fractal Soft - Formularz kontaktowy z Twojej strony
