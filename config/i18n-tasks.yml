@@ -95,6 +95,7 @@ search:
 ## Consider these keys used:
 ignore_unused:
   - 'mail_form.attributes.contact_form.{email,message,name,nickname}'
+  - 'business_contact_forms.areas_of_interest.{infrastructure_development,mobile_application_development,other,product_design,web_application_development}'
   - 'mail_form.models.contact_form'
   - 'mail_form.request.{remote_ip,title,user_agent}'
   - 'meta.{description,keywords,site,title,twitter.card,twitter.site}'

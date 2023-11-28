@@ -1,0 +1,26 @@
+.container.contact
+  h1.p-3
+    = t('.title')
+  .row.justify-content-center
+    .col-md-8.col-11
+      = simple_form_for @business_contact_form do |f|
+        .row.gx-2
+          .col-lg-6.col-12
+            = f.input :first_name, placeholder: t('mail_form.attributes.business_contact_form.first_name')
+          .col-lg-6.col-12
+            = f.input :last_name, placeholder: t('mail_form.attributes.business_contact_form.last_name')
+        = f.input :company_name, placeholder: t('mail_form.attributes.business_contact_form.company_name')
+        .row.gx-2
+          .col-lg-6.col-12
+            = f.input :email, placeholder: t('mail_form.attributes.business_contact_form.email'), required: true
+          .col-lg-6.col-12
+            = f.input :phone_number, placeholder: t('mail_form.attributes.business_contact_form.phone_number')
+        = f.input :industry, placeholder: t('mail_form.attributes.business_contact_form.industry')
+        fieldset
+          = f.input :message, placeholder: t('mail_form.attributes.business_contact_form.message'), as: :text, input_html: { class: 'mt-3', style: 'height: 240px' }
+          = f.input :attached_file, label: false, as: :file, hint: t('.maximum_attached_file_size')
+        .check-form.form-switch
+          = f.input :need_nda, label: t('.need_nda'), as: :boolean
+        .row
+          .col-md-5.pb-5
+            = f.submit t('.send'), class: 'btn btn-primary btn-block'

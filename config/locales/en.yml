@@ -1,6 +1,16 @@
 ---
 en:
   blog: Blog
+  business_contact_forms:
+    form:
+      maximum_attached_file_size: 'Maximum size file: 20 MB'
+      need_nda: Do you need to get NDA first?
+      send: Send message
+      title: Got a project in mind?
+    show:
+      back_to_home_page: Back to homepage
+      body_html: "<p>\nWe appreciate the trust you've placed in us, and we eagerly embark on analyzing your inquiry. 💼\nThis initial step towards potential collaboration holds particular significance for us.\n</p>\n<p>\nShortly, we will delve into a thorough analysis of your project. 🕒\nKindly exercise patience, as our top priority is to furnish you with a comprehensive and substantive response.\n</p>\n<p>\nIn the meantime, should any questions or ideas arise, do not hesitate to reach out to us. ✉️\nWe are here to assist and clarify any details.\n</p>\n<p>\nOnce again, we appreciate your contact and trust. 🎉\n</p>\n<p>\nBest regards,\nFractal Soft Team 🚀\n</p>\n"
+      headline: "Thank you for your message! 🌟"
   communities:
     index:
       title: Community
@@ -70,6 +80,14 @@ en:
       toggle_navigation: Toggle navigation
   mail_form:
     attributes:
+      business_contact_form:
+        company_name: Company name
+        email: E-mail address
+        first_name: First name
+        industry: Industry
+        last_name: Last name
+        message: Tell us your problem
+        phone_number: Phone number
       contact_form:
         email: E-mail address
         message: Message content

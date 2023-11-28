@@ -1,0 +1,13 @@
+- content_for :body_class, 'business-contact-forms'
+.container-fluid.background
+.container.contact
+  .row
+    .col.my-5.pt-5.px-3
+      h1.text-center = t('.headline')
+  .row.justify-content-center
+    .col-8
+      = t('.body_html')
+  .row
+    .col.mt-5.pb-5
+      .text-center
+        = link_to t('.back_to_home_page'), root_path, class: 'btn btn-primary'
