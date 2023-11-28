@@ -1,6 +1,16 @@
 ---
 pl:
   blog: Blog
+  business_contact_forms:
+    form:
+      maximum_attached_file_size: 'Maksymalny rozmiar załącznika: 20 MB'
+      need_nda: Czy potrzebujesz najpierw otrzymać NDA?
+      send: Wyślij wiadomość
+      title: Masz jakiś projekt w planach?
+    show:
+      back_to_home_page: Wróć do strony głównej
+      body_html: "<p>\nCenimy zaufanie, jakie nam okazałeś, i z zapałem przystępujemy do analizy Twojego zapytania. 💼\nTen pierwszy krok w kierunku potencjalnej współpracy ma dla nas szczególne znaczenie.\n</p>\n<p>\nJuż wkrótce poświęcimy się dogłębnej analizie Twojego projektu. 🕒\nProsimy o chwilę cierpliwości, gdyż naszym priorytetem jest dostarczenie Ci kompleksowej i merytorycznej odpowiedzi.\n</p>\n<p>\nW międzyczasie, jeśli pojawią się pytania lub pomysły, śmiało się z nami skontaktuj. ✉️\nJesteśmy tu, aby pomóc i doprecyzować wszelkie szczegóły.\n</p>\n<p>\nRaz jeszcze dziękujemy za kontakt i zaufanie. 🎉\n</p>\n<p>\nPozdrawiamy\nZespół Fractal Soft 🚀\n</p>\n"
+      headline: "Dziękujemy za Twoją wiadomość! 🌟"
   communities:
     index:
       title: Społeczność
@@ -70,6 +80,14 @@ pl:
       toggle_navigation: Nawigacja
   mail_form:
     attributes:
+      business_contact_form:
+        company_name: Nazwa firmy
+        email: Adres e-mail
+        first_name: Imię
+        industry: Branża
+        last_name: Nazwisko
+        message: Opowiedz nam o swoim problemie
+        phone_number: Numer telefonu
       contact_form:
         email: Adres e-mail
         message: Treść wiadomości
