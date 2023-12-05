@@ -275,7 +275,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (2.7.0)
+    json (2.7.1)
     kwalify (0.7.2)
     language_server-protocol (3.17.0.3)
     launchy (2.5.2)
