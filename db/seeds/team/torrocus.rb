@@ -56,7 +56,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 # testcase
 {
   'ruby' => { experience_rating: 91 },
-  'ruby-on-rails' => { experience_rating: 82 },
+  'ruby-on-rails' => { experience_rating: 83 },
   'sinatra' => { experience_rating: 60 },
   'jekyll' => { experience_rating: 83 },
   'jruby' => { experience_rating: 50 },
@@ -118,7 +118,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'digital-ocean' => { experience_rating: 35 },
   'aws' => { experience_rating: 45 },
   'google-cloud' => { experience_rating: 40 },
-  'fly-io' => { experience_rating: 30 },
+  'fly-io' => { experience_rating: 32 },
 
   'docker' => { experience_rating: 77 },
   'terraform' => { experience_rating: 45 },
@@ -136,7 +136,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'prettier' => { experience_rating: 65 },
   'stylelint' => { experience_rating: 75 },
 
-  'github-actions' => { experience_rating: 84 },
+  'github-actions' => { experience_rating: 85 },
   'jenkins' => { experience_rating: 60 },
   'hound-ci' => { experience_rating: 50 },
   'travis-ci' => { experience_rating: 50 }
