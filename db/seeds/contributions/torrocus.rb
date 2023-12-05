@@ -84,7 +84,7 @@ contribution.save
 
 contribution = Contribution.new(params.merge(position: 5))
 contribution.attributes = { locale: :en, name: 'Ruby gems dependency reduction' }
-contribution.attributes = { locale: :pl, name: 'Redukcja zależności od Ruby gems' }
+contribution.attributes = { locale: :pl, name: 'Redukcja zależności od zewnętrznych gemów' }
 contribution.save
 
 # torrocus in blog
