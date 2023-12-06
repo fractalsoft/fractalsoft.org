@@ -80,6 +80,7 @@ group :test do
   gem 'factory_bot_rails'
   gem 'factory_trace'
   gem 'shoulda-matchers'
+  gem 'test-prof'
 end
 
 gem 'dockerfile-rails', '>= 1.5', group: :development
