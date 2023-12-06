@@ -8,6 +8,9 @@ require:
 
 inherit_from: .rubocop_todo.yml
 
+inherit_gem:
+  test-prof: config/rubocop-rspec.yml
+
 inherit_mode:
   merge:
     - Exclude
