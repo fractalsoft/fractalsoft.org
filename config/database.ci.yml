@@ -1,0 +1,8 @@
+test:
+  adapter: postgresql
+  encoding: utf8
+  username: postgres
+  password: postgres
+  host: 127.0.0.1
+  pool: 5
+  database: postgres
