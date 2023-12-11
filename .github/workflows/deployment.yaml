@@ -15,7 +15,7 @@ jobs:
       - name: Fly actions
         uses: superfly/flyctl-actions/setup-flyctl@master
         with:
-          version: 0.0.462
+          version: 0.1.134
       - name: Fly deploy
         run: flyctl deploy --remote-only
         env:
