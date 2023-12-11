@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Run like this:
+#
+# sh scripts/deploy/after_release
+
+bundle exec rails tmp:cache:clear
+bundle exec rails db:migrate
+bundle exec rails db:seed

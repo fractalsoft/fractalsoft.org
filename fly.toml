@@ -14,7 +14,7 @@ swap_size_mb = 512
 [build]
 
 [deploy]
-  release_command = "bundle exec rails db:migrate"
+  release_command = "sh scripts/deploy/after_release"
   strategy = "immediate"
 
 [http_service]
