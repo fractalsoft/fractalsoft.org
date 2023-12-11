@@ -8,6 +8,9 @@ console_command = "/rails/bin/rails console"
 primary_region = "ams"
 swap_size_mb = 512
 
+[env]
+  RAILS_SERVE_STATIC_FILES = "1"
+
 [build]
 
 [deploy]
@@ -21,7 +24,3 @@ swap_size_mb = 512
   auto_start_machines = true
   min_machines_running = 1
   processes = ["app"]
-
-[[statics]]
-  guest_path = "/rails/public"
-  url_prefix = "/"
