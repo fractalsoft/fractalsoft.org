@@ -82,6 +82,11 @@ contribution.attributes = { locale: :en, name: 'Copywriting' }
 contribution.attributes = { locale: :pl, name: 'Copywriting' }
 contribution.save
 
+contribution = Contribution.new(params.merge(position: 11))
+contribution.attributes = { locale: :en, name: 'Creating the Github Action Workflow' }
+contribution.attributes = { locale: :pl, name: 'Tworzenie przepływu pracy dla akcji Github' }
+contribution.save
+
 # ania in nopaperwork
 params = { person_id: ania.id, project_id: nopaperwork.id }
 
@@ -143,6 +148,11 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 11))
 contribution.attributes = { locale: :en, name: 'Writing system tests' }
 contribution.attributes = { locale: :pl, name: 'Pisanie testów systemowych' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 12))
+contribution.attributes = { locale: :en, name: 'Creating the Github Action Workflow' }
+contribution.attributes = { locale: :pl, name: 'Tworzenie przepływu pracy dla akcji Github' }
 contribution.save
 
 # ania in purpura
