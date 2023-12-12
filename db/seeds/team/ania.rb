@@ -64,8 +64,10 @@ TechnologicalSkill.where(person_id: ania.id).delete_all
 
   'docker' => { experience_rating: 13 },
 
-  'fly-io' => { experience_rating: 20 },
+  'fly-io' => { experience_rating: 25 },
   'heroku' => { experience_rating: 10 },
+
+  'github-actions' => { experience_rating: 15 },
 
   'mathematica' => { experience_rating: 10 },
 
