@@ -174,7 +174,7 @@ GEM
     database_cleaner-core (2.0.1)
     date (3.3.4)
     dead_end (4.0.0)
-    debug_inspector (1.1.0)
+    debug_inspector (1.2.0)
     derailed_benchmarks (2.1.2)
       benchmark-ips (~> 2)
       dead_end
