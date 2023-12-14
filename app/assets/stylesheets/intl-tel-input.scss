@@ -1,0 +1,23 @@
+.iti__flag {
+  background-image: url(asset-path('country_flags/intl-tel-input/flags.png'));
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url(asset-path('country_flags/intl-tel-input/flags@2x.png'));
+  }
+}
+
+.iti {
+  display: block;
+  height: 56px;
+
+  &__country-list {
+    // popup so render above everything else
+    z-index: 1060;
+  }
+
+  .contact-phone-input {
+    height: 56px;
+  }
+}

@@ -14,7 +14,9 @@
           .col-lg-6.col-12
             = f.input :email, placeholder: t('mail_form.attributes.business_contact_form.email'), required: true
           .col-lg-6.col-12
-            = f.input :phone_number, placeholder: t('mail_form.attributes.business_contact_form.phone_number')
+            = f.input :phone_number, type: 'tel', label: false, placeholder: t('mail_form.attributes.business_contact_form.phone_number'), input_html: { class: 'js-phone-input contact-phone-input' }
+            = f.input :phone_country_code, as: :hidden, input_html: { class: 'js-phone-country-code' }
+            = f.input :phone_country_iso2, as: :hidden, input_html: { class: 'js-phone-country-iso2' }
         = f.input :industry, placeholder: t('mail_form.attributes.business_contact_form.industry')
         fieldset
           = f.input :message, placeholder: t('mail_form.attributes.business_contact_form.message'), as: :text, input_html: { class: 'mt-3', style: 'height: 240px' }
