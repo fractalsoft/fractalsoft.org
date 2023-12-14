@@ -32,6 +32,7 @@
   <!-- <base href='https://fractalsoft.org/' /> -->
   <%= favicon_link_tag '/favicon.ico', skip_pipeline: true %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
+  <%= yield(:custom_stylesheets) %>
   <%= render 'layouts/shared/analytics' %>
   <%= csrf_meta_tags unless @page_caching %>
   <%= javascript_importmap_tags %>
