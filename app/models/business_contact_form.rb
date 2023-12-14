@@ -10,6 +10,8 @@ class BusinessContactForm < MailForm::Base
   attribute :message
   attribute :need_nda
   attribute :phone_number
+  attribute :phone_country_code
+  attribute :phone_country_iso2
 
   def headers
     {
