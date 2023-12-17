@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Fractal Soft
 fractalsoft = Project.where(slug: 'fractalsoft.org').first_or_initialize
 fractalsoft.assign_attributes(

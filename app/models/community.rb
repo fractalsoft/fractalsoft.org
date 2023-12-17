@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Community < ApplicationRecord
   extend FriendlyId
   friendly_id :slug, use: [:slugged, :finders]

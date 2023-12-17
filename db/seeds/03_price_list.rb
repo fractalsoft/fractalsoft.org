@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 I18n.locale = :pl
 ComputerFixService.delete_all
 [

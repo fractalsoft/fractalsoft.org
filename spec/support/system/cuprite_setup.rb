@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Cuprite is a modern Capybara driver which uses Chrome CDP API
 # instead of Selenium & co.
 

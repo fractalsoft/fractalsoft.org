@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Slackware
 technology_slackware_linux = Technology.where(slug: 'slackware').first_or_initialize
 icon_slackware_linux_original_svg = File.read('./db/seeds/technology/svg/slackware.svg')

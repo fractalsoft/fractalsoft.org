@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Linux Mint
 technology_linux_mint = Technology.where(slug: 'linux-mint').first_or_initialize
 icon_linux_mint_svg = File.read('./db/seeds/technology/svg/linux-mint.svg')

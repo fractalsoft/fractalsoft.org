@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Ember.js
 technology_emberjs = Technology.where(slug: 'emberjs').first_or_initialize
 icon_emberjs_wordmark_svg = File.read('./db/seeds/technology/svg/ember-original-wordmark.svg')

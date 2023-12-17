@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # JRuby
 technology_jruby = Technology.where(slug: 'jruby').first_or_initialize
 icon_jruby_svg = File.read('./db/seeds/technology/svg/jruby.svg')

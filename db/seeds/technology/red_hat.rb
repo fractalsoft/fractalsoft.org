@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Red Hat
 technology_red_hat_linux = Technology.where(slug: 'red-hat-linux').first_or_initialize
 icon_red_hat_original_svg = File.read('./db/seeds/technology/svg/redhat-original.svg')

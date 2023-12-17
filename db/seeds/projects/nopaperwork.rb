@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # nopaperwork
 project_nopaperwork = Project.where(slug: 'nopaperwork.org').first_or_initialize
 project_nopaperwork.assign_attributes(

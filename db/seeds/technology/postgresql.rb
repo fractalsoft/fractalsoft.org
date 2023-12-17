@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # PostgreSQL
 technology_postgresql = Technology.where(slug: 'postgresql').first_or_initialize
 icon_postgresql_original_svg = File.read('./db/seeds/technology/svg/postgresql-original.svg')

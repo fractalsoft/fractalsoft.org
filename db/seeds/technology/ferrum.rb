@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Ferrum
 technology_ferrum = Technology.where(slug: 'ferrum').first_or_initialize
 icon_ferrum_svg = File.read('./db/seeds/technology/svg/ferrum.svg')

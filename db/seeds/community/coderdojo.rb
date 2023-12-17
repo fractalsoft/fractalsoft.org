@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # CoderDojo
 coderdojo = Community.where(slug: 'coderdojo').first_or_create
 

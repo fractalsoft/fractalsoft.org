@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Prettier
 technology_prettier = Technology.where(slug: 'prettier').first_or_initialize
 icon_prettier_svg = File.read('./db/seeds/technology/svg/prettier.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Purpura
 project_purpura = Project.where(slug: 'purpura.eu').first_or_initialize
 project_purpura.assign_attributes(

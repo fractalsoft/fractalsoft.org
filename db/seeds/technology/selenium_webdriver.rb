@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Selenium WebDriver
 technology_selenium_webdriver = Technology.where(slug: 'selenium-webdriver').first_or_initialize
 icon_selenium_webdriver_svg = File.read('./db/seeds/technology/svg/selenium-webdriver.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # openSUSE
 technology_opensuse = Technology.where(slug: 'opensuse').first_or_initialize
 icon_opensuse_original_svg = File.read('./db/seeds/technology/svg/opensuse-original.svg')

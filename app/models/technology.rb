@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Technology < ApplicationRecord
   extend FriendlyId
   enum category: {

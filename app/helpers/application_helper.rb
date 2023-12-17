@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   # Example: charset: 'utf-8'
   def default_meta_tags

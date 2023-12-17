@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ContactForm < MailForm::Base
   include ActiveModel::Validations
   append :remote_ip, :user_agent

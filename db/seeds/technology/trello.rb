@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Trello
 technology_trello = Technology.where(slug: 'trello').first_or_initialize
 icon_trello_plain_svg = File.read('./db/seeds/technology/svg/trello-plain.svg')

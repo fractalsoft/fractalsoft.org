@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Sidekiq
 technology_sidekiq = Technology.where(slug: 'sidekiq').first_or_initialize
 icon_sidekiq_original_svg = File.read('./db/seeds/technology/svg/sidekiq.svg')

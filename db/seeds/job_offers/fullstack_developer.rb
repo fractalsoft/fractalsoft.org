@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Fullstack developer
 job_offer = JobOffer.where(slug: 'fullstack-developer').first_or_create
 

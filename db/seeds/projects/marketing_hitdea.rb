@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # marketing.hitdea.com
 marketing_hitdea = Project.where(slug: 'ads-system').first_or_initialize
 marketing_hitdea.assign_attributes(

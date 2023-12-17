@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Hound CI
 technology_hound_ci = Technology.where(slug: 'hound-ci').first_or_initialize
 icon_hound_ci_svg = File.read('./db/seeds/technology/svg/houndci.svg')

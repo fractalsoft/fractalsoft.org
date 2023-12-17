@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # PostGIS
 technology_postgis = Technology.where(slug: 'postgis').first_or_initialize
 icon_postgis_brand_svg = File.read('./db/seeds/technology/svg/postgis-brand.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Python
 technology_python = Technology.where(slug: 'python').first_or_initialize
 icon_python_original_svg = File.read('./db/seeds/technology/svg/python-original.svg')

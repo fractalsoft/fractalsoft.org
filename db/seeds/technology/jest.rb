@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Jest (JavaScript Testing Framework)
 technology_jest = Technology.where(slug: 'jest').first_or_initialize
 icon_jest_plain_svg = File.read('./db/seeds/technology/svg/jest-plain.svg')

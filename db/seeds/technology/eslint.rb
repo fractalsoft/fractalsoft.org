@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # ESLint
 technology_eslint = Technology.where(slug: 'eslint').first_or_initialize
 icon_eslint_original_svg = File.read('./db/seeds/technology/svg/eslint-original.svg')

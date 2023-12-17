@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Apache Cordova
 technology_cordova = Technology.where(slug: 'cordova').first_or_initialize
 icon_cordova_original_svg = File.read('./db/seeds/technology/svg/apache_cordova.svg')

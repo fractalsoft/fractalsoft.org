@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HomeFacade
   attr_reader :people, :contact
 

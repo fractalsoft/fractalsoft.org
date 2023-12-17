@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # AWS Lambda
 technology_aws_lambda = Technology.where(slug: 'aws-lambda').first_or_initialize
 icon_aws_lambda_svg = File.read('./db/seeds/technology/svg/aws-lambda.svg')

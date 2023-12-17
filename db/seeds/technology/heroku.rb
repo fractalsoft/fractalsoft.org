@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Heroku
 technology_heroku = Technology.where(slug: 'heroku').first_or_initialize
 icon_heroku_original_svg = File.read('./db/seeds/technology/svg/heroku-original.svg')

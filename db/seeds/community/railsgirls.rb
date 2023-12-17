@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Rails Girls
 rails_girls = Community.where(slug: 'rails-girls').first_or_create
 

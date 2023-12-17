@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Nginx Open Source
 technology_nginx = Technology.where(slug: 'nginx').first_or_initialize
 icon_nginx_original_svg = File.read('./db/seeds/technology/svg/nginx-original.svg')

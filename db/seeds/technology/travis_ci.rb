@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Travis CI
 technology_travis_ci = Technology.where(slug: 'travis-ci').first_or_initialize
 icon_travis_ci_svg = File.read('./db/seeds/technology/svg/travis-ci.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Backbone.js
 technology_backbonejs = Technology.where(slug: 'backbonejs').first_or_initialize
 icon_backbonejs_original_svg = File.read('./db/seeds/technology/svg/backbonejs-original.svg')

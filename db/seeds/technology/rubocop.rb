@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # RuboCop
 # https://rubocop.org/
 technology_rubocop = Technology.where(slug: 'rubocop').first_or_initialize

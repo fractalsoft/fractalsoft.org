@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # MySQL
 technology_mysql = Technology.where(slug: 'mysql').first_or_initialize
 icon_mysql_original_svg = File.read('./db/seeds/technology/svg/mysql-original.svg')

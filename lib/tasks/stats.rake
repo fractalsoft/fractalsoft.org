@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails/code_statistics'
 
 desc 'Report code statistics (KLOCs, etc) from the application or engine'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 lisu = Person.where(nickname: 'lisu').first_or_initialize
 lisu.assign_attributes(
   description: 'Ruby on Rails developer',

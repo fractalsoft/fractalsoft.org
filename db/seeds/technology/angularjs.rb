@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Angularjs
 technology_angularjs = Technology.where(slug: 'angularjs').first_or_initialize
 icon_angularjs_original_svg = File.read('./db/seeds/technology/svg/angularjs-original.svg')

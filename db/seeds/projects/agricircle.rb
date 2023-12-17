@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # AgriCircle
 project_agricircle = Project.where(slug: 'agricircle.com').first_or_initialize
 project_agricircle.assign_attributes(

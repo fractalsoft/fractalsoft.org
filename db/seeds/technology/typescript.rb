@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TypeScript
 technology_typescript = Technology.where(slug: 'typescript').first_or_initialize
 icon_typescript_original_svg = File.read('./db/seeds/technology/svg/typescript-original.svg')

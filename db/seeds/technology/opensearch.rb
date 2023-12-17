@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # OpenSearch
 technology_opensearch = Technology.where(slug: 'opensearch').first_or_initialize
 icon_opensearch_original_svg = File.read('./db/seeds/technology/svg/opensearch_logo_default.svg')

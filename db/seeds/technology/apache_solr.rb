@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Apache Solr
 technology_solr = Technology.where(slug: 'solr').first_or_initialize
 icon_solr_original_svg = File.read('./db/seeds/technology/svg/apache_solr.svg')

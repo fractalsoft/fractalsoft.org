@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Jenkins
 technology_jenkins = Technology.where(slug: 'jenkins').first_or_initialize
 icon_jenkins_original_svg = File.read('./db/seeds/technology/svg/jenkins-original.svg')

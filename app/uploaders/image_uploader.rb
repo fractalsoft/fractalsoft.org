@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'carrierwave/processing/vips'
 
 class ImageUploader < CarrierWave::Uploader::Base

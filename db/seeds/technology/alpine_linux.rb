@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Alpine Linux
 technology_alpine_linux = Technology.where(slug: 'alpine-linux').first_or_initialize
 icon_alpine_linux_svg = File.read('./db/seeds/technology/svg/alpine_linux.svg')

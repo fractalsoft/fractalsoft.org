@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # jQuery
 technology_jquery = Technology.where(slug: 'jquery').first_or_initialize
 icon_jquery_original_svg = File.read('./db/seeds/technology/svg/jquery-original.svg')

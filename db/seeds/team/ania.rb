@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ania = Person.where(nickname: 'ania').first_or_initialize
 ania.assign_attributes(
   description: 'Programming adept',

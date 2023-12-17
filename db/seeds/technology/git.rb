@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Git
 technology_git = Technology.where(slug: 'git').first_or_initialize
 icon_git_original_svg = File.read('./db/seeds/technology/svg/git-original.svg')

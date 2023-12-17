@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # AWS CodeDeploy
 technology_aws_codedeploy = Technology.where(slug: 'aws-codedeploy').first_or_initialize
 icon_aws_codedeploy_svg = File.read('./db/seeds/technology/svg/aws-codedeploy.svg')

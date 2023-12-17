@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # questions.hitdea.com
 questions_hitdea = Project.where(slug: '20-questions-game').first_or_initialize
 questions_hitdea.assign_attributes(

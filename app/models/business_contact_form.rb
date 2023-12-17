@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BusinessContactForm < MailForm::Base
   include ActiveModel::Validations
 

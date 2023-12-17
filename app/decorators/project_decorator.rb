@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProjectDecorator < Draper::Decorator
   include Draper::LazyHelpers
   delegate_all

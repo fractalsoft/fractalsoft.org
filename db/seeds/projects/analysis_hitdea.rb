@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # analysis.hitdea.com
 analysis_hitdea = Project.where(slug: 'linguistic-analysis').first_or_initialize
 analysis_hitdea.assign_attributes(

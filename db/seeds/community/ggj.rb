@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Global Game Jam
 # https://globalgamejam.org/about
 # https://en.wikipedia.org/wiki/Global_Game_Jam

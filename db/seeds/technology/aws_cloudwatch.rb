@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon CloudWatch
 technology_aws_cloudwatch = Technology.where(slug: 'aws-cloudwatch').first_or_initialize
 icon_aws_cloudwatch_svg = File.read('./db/seeds/technology/svg/aws-cloudwatch.svg')

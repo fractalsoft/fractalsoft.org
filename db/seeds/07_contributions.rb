@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Contributions
 Contribution.delete_all
 require_relative 'contributions/ania'

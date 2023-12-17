@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # CoffeeScript
 technology_coffeescript = Technology.where(slug: 'coffeescript').first_or_initialize
 icon_coffeescript_original_svg = File.read('./db/seeds/technology/svg/coffeescript-original.svg')

@@ -54,7 +54,7 @@ RSpec/ExampleLength:
 Style/Documentation:
   Enabled: false
 
-Style/FrozenStringLiteralComment:
+Style/RedundantFetchBlock:
   Enabled: false
 
 Style/RedundantRegexpEscape:

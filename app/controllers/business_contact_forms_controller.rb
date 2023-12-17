@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BusinessContactFormsController < ApplicationController
   before_action :set_business_contact_form, only: :create
 

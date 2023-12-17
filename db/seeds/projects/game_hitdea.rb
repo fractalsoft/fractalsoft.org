@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # game.hitdea.com
 game_hitdea = Project.where(slug: 'wordmaker').first_or_initialize
 game_hitdea.assign_attributes(

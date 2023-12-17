@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Pivotal Tracker
 technology_pivotal_tracker = Technology.where(slug: 'pivotal-tracker').first_or_initialize
 icon_pivotal_tracker_svg = File.read('./db/seeds/technology/svg/pivotal-tracker.svg')

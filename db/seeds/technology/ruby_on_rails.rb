@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Ruby on Rails
 technology_ruby_on_rails = Technology.where(slug: 'ruby-on-rails').first_or_initialize
 icon_ruby_on_rails_wordmark_svg = File.read('./db/seeds/technology/svg/rails-original-wordmark.svg')

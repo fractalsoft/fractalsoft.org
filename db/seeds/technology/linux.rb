@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Linux
 technology_linux = Technology.where(slug: 'linux').first_or_initialize
 icon_linux_original_svg = File.read('./db/seeds/technology/svg/linux-original.svg')

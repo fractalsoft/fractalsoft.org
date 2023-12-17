@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # CSS3
 technology_css3 = Technology.where(slug: 'css3').first_or_initialize
 icon_css3_original_svg = File.read('./db/seeds/technology/svg/css3-original.svg')

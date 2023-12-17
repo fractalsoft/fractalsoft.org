@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Digial Ocean
 technology_digital_ocean = Technology.where(slug: 'digital-ocean').first_or_initialize
 icon_digital_ocean_original_svg = File.read('./db/seeds/technology/svg/digitalocean-original.svg')

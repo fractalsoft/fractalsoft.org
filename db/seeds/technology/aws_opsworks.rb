@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # AWS OpsWorks
 technology_aws_opsworks = Technology.where(slug: 'aws-opsworks').first_or_initialize
 icon_aws_opsworks_svg = File.read('./db/seeds/technology/svg/aws-opsworks.svg')

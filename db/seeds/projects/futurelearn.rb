@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # futurelearn
 project_futurelearn = Project.where(slug: 'futurelearn.com').first_or_initialize
 project_futurelearn.assign_attributes(

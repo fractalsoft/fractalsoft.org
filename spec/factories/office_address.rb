@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :office_address do
     sequence(:slug) { |number| "slug-#{number}" }

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Ubuntu
 technology_ubuntu = Technology.where(slug: 'ubuntu').first_or_initialize
 icon_ubuntu_plain_svg = File.read('./db/seeds/technology/svg/ubuntu-plain.svg')

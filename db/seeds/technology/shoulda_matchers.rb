@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Shoulda Matchers
 technology_shoulda_matchers = Technology.where(slug: 'shoulda-matchers').first_or_initialize
 icon_shoulda_matchers_original_svg = File.read('./db/seeds/technology/svg/shoulda-matchers.svg')

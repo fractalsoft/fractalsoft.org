@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # GitHub Actions
 # https://docs.github.com/en/actions
 technology_github_actions = Technology.where(slug: 'github-actions').first_or_initialize

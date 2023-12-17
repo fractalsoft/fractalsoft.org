@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Next.js
 technology_nextjs = Technology.where(slug: 'next-js').first_or_initialize
 icon_nextjs_original_svg = File.read('./db/seeds/technology/svg/nextjs-original.svg')

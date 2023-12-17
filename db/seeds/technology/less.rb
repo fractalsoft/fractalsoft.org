@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Less
 technology_less = Technology.where(slug: 'less').first_or_initialize
 icon_less_wordmark_svg = File.read('./db/seeds/technology/svg/less-plain-wordmark.svg')

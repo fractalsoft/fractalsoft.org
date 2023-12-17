@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Google Cloud
 technology_gcloud = Technology.where(slug: 'google-cloud').first_or_initialize
 icon_gcloud_original_svg = File.read('./db/seeds/technology/svg/googlecloud-original.svg')

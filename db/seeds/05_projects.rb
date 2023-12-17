@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'projects/nopaperwork'
 require_relative 'projects/purpura'
 require_relative 'projects/fractalsoft'

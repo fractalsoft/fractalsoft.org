@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Taiga
 technology_taiga = Technology.where(slug: 'taiga').first_or_initialize
 icon_taiga_svg = File.read('./db/seeds/technology/svg/taiga.svg')
