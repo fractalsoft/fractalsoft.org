@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 torrocus = Person.where(nickname: 'torrocus').first_or_initialize
 torrocus.assign_attributes(
   blog_url: 'https://torrocus.com/blog/',

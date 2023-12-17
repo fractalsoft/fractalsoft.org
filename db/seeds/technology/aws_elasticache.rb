@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon ElastiCache
 technology_aws_elasticache = Technology.where(slug: 'aws-elasti-cache').first_or_initialize
 icon_aws_elasticache_svg = File.read('./db/seeds/technology/svg/aws-elasti-cache.svg')

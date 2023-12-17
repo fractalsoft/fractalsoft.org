@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Fly.io
 technology_fly_io = Technology.where(slug: 'fly-io').first_or_initialize
 icon_fly_io_svg = File.read('./db/seeds/technology/svg/fly-io.svg')

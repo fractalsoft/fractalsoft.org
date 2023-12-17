@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Slax (linux)
 technology_slax_linux = Technology.where(slug: 'slax-linux').first_or_initialize
 icon_slax_linux_svg = File.read('./db/seeds/technology/svg/slax_linux.svg')

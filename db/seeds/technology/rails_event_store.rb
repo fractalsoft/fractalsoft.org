@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Rails Event Store
 technology_rails_event_store = Technology.where(slug: 'rails-event-store').first_or_initialize
 icon_rails_event_store_svg = File.read('./db/seeds/technology/svg/rails-event-store.svg')

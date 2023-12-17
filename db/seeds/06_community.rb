@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def facebook_iframe(url, height: 280, width: 500)
   escaped_url = CGI.escape(url)
   params = [

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Unity (game engine)
 technology_unity = Technology.where(slug: 'unity').first_or_initialize
 icon_unity_original_svg = File.read('./db/seeds/technology/svg/unity-original.svg')

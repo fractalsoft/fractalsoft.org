@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon CloudSearch
 technology_aws_cloudsearch = Technology.where(slug: 'aws-cloudsearch').first_or_initialize
 icon_aws_cloudsearch_svg = File.read('./db/seeds/technology/svg/aws-cloudsearch.svg')

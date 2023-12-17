@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Foundation Framework
 technology_foundation = Technology.where(slug: 'foundation-css').first_or_initialize
 icon_foundation_original_svg = File.read('./db/seeds/technology/svg/foundation-original.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Hitdea
 project_hitdea = Project.where(slug: 'hitdea.com').first_or_initialize
 project_hitdea.assign_attributes(

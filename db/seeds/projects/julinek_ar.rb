@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Julinek AR
 # https://apps.apple.com/us/developer/grzegorz-lisowski/id1665804173
 # https://play.google.com/store/apps/details?id=com.Trusense.JulinekWyspy

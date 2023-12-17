@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon S3 Glacier
 technology_aws_glacier = Technology.where(slug: 'aws-glacier').first_or_initialize
 icon_aws_glacier_svg = File.read('./db/seeds/technology/svg/aws-glacier.svg')

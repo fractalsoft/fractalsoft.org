@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Haml
 technology_haml = Technology.where(slug: 'haml').first_or_initialize
 icon_haml_svg = File.read('./db/seeds/technology/svg/haml.svg')

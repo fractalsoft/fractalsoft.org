@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon CloudFront
 technology_aws_cloudfront = Technology.where(slug: 'aws-cloudfront').first_or_initialize
 icon_aws_cloudfront_svg = File.read('./db/seeds/technology/svg/aws-cloudfront.svg')

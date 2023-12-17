@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Mathematica
 technology_mathematica = Technology.where(slug: 'mathematica').first_or_initialize
 icon_mathematica_svg = File.read('./db/seeds/technology/svg/mathematica.svg')

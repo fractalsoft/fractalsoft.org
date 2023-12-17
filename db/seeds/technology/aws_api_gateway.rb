@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon API Gateway
 technology_aws_api_gateway = Technology.where(slug: 'aws-api-gateway').first_or_initialize
 icon_aws_api_gateway_svg = File.read('./db/seeds/technology/svg/aws-api-gateway.svg')

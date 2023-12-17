@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ExternalLink
   include ActionView::Context
   include ActionView::Helpers

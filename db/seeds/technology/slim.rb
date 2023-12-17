@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Slim
 technology_slim = Technology.where(slug: 'slim').first_or_initialize
 icon_slim_svg = File.read('./db/seeds/technology/svg/slim.svg')

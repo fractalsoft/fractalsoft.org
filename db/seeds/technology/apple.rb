@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Apple
 technology_apple = Technology.where(slug: 'apple').first_or_initialize
 icon_apple_original_svg = File.read('./db/seeds/technology/svg/apple-original.svg')

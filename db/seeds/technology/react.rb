@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # React
 technology_react = Technology.where(slug: 'react').first_or_initialize
 icon_react_original_svg = File.read('./db/seeds/technology/svg/react-original.svg')

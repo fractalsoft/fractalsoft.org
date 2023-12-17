@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Marionette.js
 technology_marionettejs = Technology.where(slug: 'marionettejs').first_or_initialize
 icon_marionettejs_original_svg = File.read('./db/seeds/technology/svg/marionettejs.svg')

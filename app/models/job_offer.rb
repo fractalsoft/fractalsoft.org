@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class JobOffer < ApplicationRecord
   extend FriendlyId
   friendly_id :slug, use: [:slugged, :finders]

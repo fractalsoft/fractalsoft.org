@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Make server listening on all hosts
 Capybara.server_host = '0.0.0.0'
 Capybara.server_port = 3001

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Bootstrap
 technology_bootstrap = Technology.where(slug: 'bootstrap').first_or_initialize
 icon_bootstrap_original_svg = File.read('./db/seeds/technology/svg/bootstrap-original.svg')

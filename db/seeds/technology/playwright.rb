@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Playwright
 technology_playwright = Technology.where(slug: 'playwright').first_or_initialize
 icon_playwright_original_svg = File.read('./db/seeds/technology/svg/playwright.svg')

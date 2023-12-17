@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon SQS
 technology_aws_sqs = Technology.where(slug: 'aws-sqs').first_or_initialize
 icon_aws_sqs_svg = File.read('./db/seeds/technology/svg/aws-sqs.svg')

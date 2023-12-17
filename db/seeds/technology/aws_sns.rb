@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon SNS
 technology_aws_sns = Technology.where(slug: 'aws-sns').first_or_initialize
 icon_aws_sns_svg = File.read('./db/seeds/technology/svg/aws-sns.svg')

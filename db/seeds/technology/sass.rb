@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Sass
 technology_sass = Technology.where(slug: 'sass').first_or_initialize
 icon_sass_original_svg = File.read('./db/seeds/technology/svg/sass-original.svg')

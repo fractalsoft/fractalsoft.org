@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Ruby
 technology_ruby = Technology.where(slug: 'ruby').first_or_initialize
 icon_ruby_original_svg = File.read('./db/seeds/technology/svg/ruby-original.svg')

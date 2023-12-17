@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # andy drink delivery
 # https://be.linkedin.com/company/andydrinks
 # https://www.instagram.com/andy_drinks/

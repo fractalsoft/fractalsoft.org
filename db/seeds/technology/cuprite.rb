@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Cuprite
 technology_cuprite = Technology.where(slug: 'cuprite').first_or_initialize
 icon_cuprite_svg = File.read('./db/seeds/technology/svg/cuprite.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Office in Gliwice (Srednia)
 office_address_gliwice_srednia = OfficeAddress.where(slug: 'gliwice-srednia').first_or_initialize
 office_address_gliwice_srednia.assign_attributes(

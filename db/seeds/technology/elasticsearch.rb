@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Elasticsearch
 technology_elasticsearch = Technology.where(slug: 'elasticsearch').first_or_initialize
 icon_elasticsearch_original_svg = File.read('./db/seeds/technology/svg/elasticsearch.svg')

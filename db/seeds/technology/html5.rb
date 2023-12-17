@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # HTML5
 technology_html5 = Technology.where(slug: 'html5').first_or_initialize
 icon_html5_original_svg = File.read('./db/seeds/technology/svg/html5-original.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # SRUG
 srug = Community.where(slug: 'srug').first_or_create
 srug_logo = File.new('db/seeds/community/srug/srug-logo.png')

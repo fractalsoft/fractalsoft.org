@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Sonic pi
 technology_sonic_pi = Technology.where(slug: 'sonic-pi').first_or_initialize
 icon_sonic_pi_svg = File.read('./db/seeds/technology/svg/sonic-pi.svg')

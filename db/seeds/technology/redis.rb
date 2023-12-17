@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Redis
 technology_redis = Technology.where(slug: 'redis').first_or_initialize
 icon_redis_original_svg = File.read('./db/seeds/technology/svg/redis-original.svg')

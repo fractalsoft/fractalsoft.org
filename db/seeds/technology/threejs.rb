@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # three.js (JavaScript 3D Library)
 technology_three_js = Technology.where(slug: 'three-js').first_or_initialize
 icon_three_js_original_svg = File.read('./db/seeds/technology/svg/threejs-original.svg')

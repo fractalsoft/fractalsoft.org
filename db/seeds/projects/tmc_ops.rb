@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TMC Hospitality: Bode & Drift
 tmc_ops = Project.where(slug: 'tmc-ops').first_or_initialize
 tmc_ops.assign_attributes(

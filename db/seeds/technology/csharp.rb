@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # C#
 technology_csharp = Technology.where(slug: 'csharp').first_or_initialize
 icon_csharp_original_svg = File.read('./db/seeds/technology/svg/csharp-original.svg')

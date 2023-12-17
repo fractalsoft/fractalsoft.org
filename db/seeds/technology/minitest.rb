@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # minitest
 technology_minitest = Technology.where(slug: 'minitest').first_or_initialize
 icon_minitest_svg = File.read('./db/seeds/technology/svg/minitest-spec-rails.svg')

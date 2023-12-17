@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # AWS CloudFormation
 technology_aws_cloudformation = Technology.where(slug: 'aws-cloudformation').first_or_initialize
 icon_aws_cloudformation_svg = File.read('./db/seeds/technology/svg/aws-cloudformation.svg')

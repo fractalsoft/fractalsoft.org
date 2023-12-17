@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # GraphQL
 technology_graphql = Technology.where(slug: 'graphql').first_or_initialize
 icon_graphql_plain_svg = File.read('./db/seeds/technology/svg/graphql-plain.svg')

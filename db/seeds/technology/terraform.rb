@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Terraform
 technology_terraform = Technology.where(slug: 'terraform').first_or_initialize
 icon_terraform_original_svg = File.read('./db/seeds/technology/svg/terraform-original.svg')

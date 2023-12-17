@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon Cognito
 technology_aws_cognito = Technology.where(slug: 'aws-cognito').first_or_initialize
 icon_aws_cognito_svg = File.read('./db/seeds/technology/svg/aws-cognito.svg')

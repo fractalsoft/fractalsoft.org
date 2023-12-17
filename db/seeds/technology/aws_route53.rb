@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon Route 53
 technology_aws_route53 = Technology.where(slug: 'aws-route53').first_or_initialize
 icon_aws_route53_svg = File.read('./db/seeds/technology/svg/aws-route53.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon QuickSight
 technology_aws_quicksight = Technology.where(slug: 'aws-quicksight').first_or_initialize
 icon_aws_quicksight_svg = File.read('./db/seeds/technology/svg/aws-quicksight.svg')

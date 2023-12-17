@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Debian
 technology_debian = Technology.where(slug: 'debian').first_or_initialize
 icon_debian_original_svg = File.read('./db/seeds/technology/svg/debian-original.svg')

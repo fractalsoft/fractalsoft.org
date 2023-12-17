@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Precompile assets before running tests to avoid timeouts.
 # Do not precompile if webpack-dev-server is running
 # (NOTE: MUST be launched with RAILS_ENV=test)

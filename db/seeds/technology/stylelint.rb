@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Stylelint
 technology_stylelint = Technology.where(slug: 'stylelint').first_or_initialize
 icon_stylelint_svg = File.read('./db/seeds/technology/svg/stylelint.svg')

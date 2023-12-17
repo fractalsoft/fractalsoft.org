@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Sinatra
 technology_sinatra = Technology.where(slug: 'sinatra').first_or_initialize
 icon_sinatra_svg = File.read('./db/seeds/technology/svg/sinatra.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TestCase
 technology_testcase = Technology.where(slug: 'testcase').first_or_initialize
 technology_testcase.assign_attributes(

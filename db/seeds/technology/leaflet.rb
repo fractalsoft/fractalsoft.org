@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Leaflet
 technology_leaflet = Technology.where(slug: 'leaflet').first_or_initialize
 icon_leaflet_wordmark_svg = File.read('./db/seeds/technology/svg/leaflet-wordmark.svg')

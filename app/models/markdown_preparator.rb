@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MarkdownPreparator
   include ::ApplicationHelper
 

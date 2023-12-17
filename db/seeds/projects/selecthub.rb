@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # SelectHub
 project_selecthub = Project.where(slug: 'selecthub.com').first_or_initialize
 project_selecthub.assign_attributes(

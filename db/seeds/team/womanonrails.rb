@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 womanonrails = Person.where(nickname: 'womanonrails').first_or_initialize
 womanonrails.assign_attributes(
   blog_url: 'https://womanonrails.com',

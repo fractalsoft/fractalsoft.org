@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ania = Person.find_by(nickname: 'ania')
 
 # projects

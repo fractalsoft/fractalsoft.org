@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Selenium IDE
 technology_selenium_ide = Technology.where(slug: 'selenium-ide').first_or_initialize
 icon_selenium_ide_svg = File.read('./db/seeds/technology/svg/selenium-ide.svg')

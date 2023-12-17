@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Amazon RDS
 technology_aws_rds = Technology.where(slug: 'aws-rds').first_or_initialize
 icon_aws_rds_svg = File.read('./db/seeds/technology/svg/aws-rds.svg')

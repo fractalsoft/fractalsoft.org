@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Apache Kafka
 technology_kafka = Technology.where(slug: 'kafka').first_or_initialize
 icon_kafka_original_svg = File.read('./db/seeds/technology/svg/apache_kafka.svg')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Apache
 technology_apache = Technology.where(slug: 'apache').first_or_initialize
 icon_apache_original_svg = File.read('./db/seeds/technology/svg/apache-original.svg')

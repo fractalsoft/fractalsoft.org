@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TruffleRuby
 technology_truffleruby = Technology.where(slug: 'truffleruby').first_or_initialize
 icon_truffleruby_svg = File.read('./db/seeds/technology/svg/truffleruby.svg')

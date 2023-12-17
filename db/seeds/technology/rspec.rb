@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Rspec
 technology_rspec = Technology.where(slug: 'rspec').first_or_initialize
 icon_rspec_original_svg = File.read('./db/seeds/technology/svg/rspec-original.svg')
