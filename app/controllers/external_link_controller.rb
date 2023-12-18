@@ -5,7 +5,7 @@ class ExternalLinkController < ApplicationController
 
   def show
     person = Person.find(params[:person_id])
-    url = person.public_send("#{link_name}_url")
+    url = person.public_send(:"#{link_name}_url")
     redirect_to url, allow_other_host: true, status: :found
   end
 
