@@ -10,7 +10,7 @@ class PersonDecorator < Draper::Decorator
   # end
   Person::LINK_NAMES.each do |link_name|
     define_method(link_name) do
-      return if object.public_send("#{link_name}_url").blank?
+      return if object.public_send(:"#{link_name}_url").blank?
 
       url = person_external_link_path(person_id: object.slug, link_name:)
       html = ExternalLink.new(link_type: link_name, url:).link
