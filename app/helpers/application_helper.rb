@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'holiday_calendar'
+
 module ApplicationHelper
   # Example: charset: 'utf-8'
   def default_meta_tags
