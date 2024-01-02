@@ -52,4 +52,32 @@ RSpec.describe HtmlMinifier do
       expect(html_minifier.call({}).last).to eq(expected)
     end
   end
+
+  context 'when HTML includes many comments' do
+    let(:body) do
+      [
+        <<~HTML.chomp
+          <html>
+            <body>
+            <!-- This is a comment -->
+            <!-- This is another comment -->
+            <!-- This is yet another comment -->
+            <!-- This is a comment with a very long string of spaces at the end -->
+            <!-- #{' ' * 1000} -->
+            </body>
+          </html>
+        HTML
+      ]
+    end
+    let(:expected) do
+      ['<html><body></body></html>']
+    end
+
+    it 'returns minified HTML without many comments' do
+      app = ->(_) { [200, { 'Content-Type' => 'text/html' }, body] }
+      html_minifier = described_class.new(app)
+
+      expect(html_minifier.call({}).last).to eq(expected)
+    end
+  end
 end
