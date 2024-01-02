@@ -9,7 +9,7 @@ class HtmlMinifier
     [/>\s+</, '><'],
 
     # Remove comments
-    [/<!--(.|\s)*?-->/, ''],
+    [/<!--[^-]*?-->/, ''],
 
     # Remove whitespace in inline JavaScript
     [/;\s+/, ';'],
