@@ -2,6 +2,6 @@
 
 class PeopleFacade
   def self.list
-    Person.order(:full_name).includes(:translations).all.decorate
+    Person.order(:full_name).includes(:translations).published.decorate
   end
 end
