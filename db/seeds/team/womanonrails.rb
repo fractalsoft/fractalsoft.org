@@ -13,6 +13,7 @@ womanonrails.assign_attributes(
   linkedin: 'womanonrails',
   nickname: 'womanonrails',
   position: 'developer',
+  published: true,
   skills: %(Backend & Frontend Development, Refactoring, TDD, Agile, Scrum, Teamwork, SOA, Remote Work),
   twitter: 'womanonrails',
   vimeo: 'womanonrails'
