@@ -10,6 +10,7 @@ lisu.assign_attributes(
   last_name: 'Lisowski',
   linkedin: 'glisowski91',
   position: 'developer',
+  published: true,
   skills: %(Backend & Frondend Development, Application Architecture, API Design, Refactoring, Visualization)
 )
 

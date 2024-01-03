@@ -12,6 +12,7 @@ torrocus.assign_attributes(
   last_name: 'Malaszkiewicz',
   linkedin: 'torrocus',
   position: 'developer',
+  published: true,
   skills: %(
             Backend & Frontend Development, Deployment, Teamwork, Leadership, Refactoring, TDD,
             Agile, Team Building, Linux Server Administration, Remote Work, Product Development
