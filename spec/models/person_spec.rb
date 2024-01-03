@@ -71,4 +71,16 @@ RSpec.describe Person do
       expect(person.skill_list).to be_empty
     end
   end
+
+  describe '.published' do
+    it 'returns only published persons' do
+      published_person = create(:person, published: true)
+      unpublished_person = create(:person, published: false)
+
+      aggregate_failures do
+        expect(described_class.published).to include(published_person)
+        expect(described_class.published).not_to include(unpublished_person)
+      end
+    end
+  end
 end
