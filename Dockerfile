@@ -7,7 +7,7 @@ ARG VARIANT=jemalloc-bullseye-slim
 # FROM ruby:$RUBY_VERSION-slim as base
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
-ARG BUNDLER_VERSION=2.4.10
+ARG BUNDLER_VERSION=2.4.20
 
 # Rails app lives here
 WORKDIR /rails
