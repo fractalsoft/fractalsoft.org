@@ -1,0 +1,6 @@
+Contact: https://twitter.com/torrocus
+Encryption:
+Acknowledgements:
+Preferred-Languages: en, pl
+Canonical: https://fractalsoft.org/security.txt
+Policy:
