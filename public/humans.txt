@@ -25,7 +25,7 @@
 
 /* SITE */
 
-  Last update: 2023/10/27
+  Last update: 2024/01/18
   Language: English / Polish
   Standards: HTML5, CSS3
   Source: https://github.com/fractalsoft/fractalsoft.org
