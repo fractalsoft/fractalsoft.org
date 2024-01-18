@@ -6,6 +6,7 @@ class ContactFormsController < ApplicationController
   end
 
   def create
+    request.remote_ip = request.env['HTTP_FLY_CLIENT_IP'] || request.remote_ip
     @contact_form = ContactForm.new(params[:contact_form])
     @contact_form.request = request
     @contact_form.deliver ? flash[:notice] = t('.success') : flash[:alert] = t('.fail')
