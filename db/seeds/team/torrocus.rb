@@ -64,6 +64,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'jekyll' => { experience_rating: 83 },
   'jruby' => { experience_rating: 50 },
   'truffleruby' => { experience_rating: 40 },
+  'go' => { experience_rating: 5 },
 
   'rspec' => { experience_rating: 72 },
   'minitest' => { experience_rating: 50 },
