@@ -58,16 +58,16 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
 # testcase
 {
-  'ruby' => { experience_rating: 91 },
-  'ruby-on-rails' => { experience_rating: 83 },
+  'ruby' => { experience_rating: 92 },
+  'ruby-on-rails' => { experience_rating: 84 },
   'sinatra' => { experience_rating: 60 },
-  'jekyll' => { experience_rating: 83 },
+  'jekyll' => { experience_rating: 85 },
   'jruby' => { experience_rating: 50 },
   'truffleruby' => { experience_rating: 40 },
   'go' => { experience_rating: 5 },
 
   'rspec' => { experience_rating: 72 },
-  'minitest' => { experience_rating: 50 },
+  'minitest' => { experience_rating: 52 },
   'playwright' => { experience_rating: 60 },
   'selenium-webdriver' => { experience_rating: 50 },
   'selenium-ide' => { experience_rating: 30 },
@@ -77,7 +77,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
 
   'git' => { experience_rating: 90 },
 
-  'github' => { experience_rating: 80 },
+  'github' => { experience_rating: 82 },
 
   'linux' => { experience_rating: 70 },
   'ubuntu' => { experience_rating: 85 },
@@ -88,14 +88,14 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'slax-linux' => { experience_rating: 40 },
   'alpine-linux' => { experience_rating: 15 },
 
-  'postgresql' => { experience_rating: 72 },
+  'postgresql' => { experience_rating: 73 },
   'mysql' => { experience_rating: 60 },
   'sqlite' => { experience_rating: 60 },
   'redis' => { experience_rating: 50 },
 
   'sidekiq' => { experience_rating: 70 },
 
-  'javascript' => { experience_rating: 65 },
+  'javascript' => { experience_rating: 66 },
   'typescript' => { experience_rating: 45 },
   'react' => { experience_rating: 45 },
   'next-js' => { experience_rating: 55 },
@@ -122,7 +122,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'digital-ocean' => { experience_rating: 35 },
   'aws' => { experience_rating: 45 },
   'google-cloud' => { experience_rating: 40 },
-  'fly-io' => { experience_rating: 32 },
+  'fly-io' => { experience_rating: 35 },
 
   'docker' => { experience_rating: 77 },
   'terraform' => { experience_rating: 45 },
