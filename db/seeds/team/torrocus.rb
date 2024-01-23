@@ -113,6 +113,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'css3' => { experience_rating: 80 },
   'bootstrap' => { experience_rating: 60 },
   'foundation-css' => { experience_rating: 30 },
+  'markdown' => { experience_rating: 70 },
 
   'elasticsearch' => { experience_rating: 60 },
   'solr' => { experience_rating: 50 },
