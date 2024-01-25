@@ -464,7 +464,7 @@ GEM
     rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-rails (6.1.0)
+    rspec-rails (6.1.1)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -664,7 +664,7 @@ DEPENDENCIES
   rails_best_practices
   reek
   route_translator
-  rspec-rails (~> 6.1.0)
+  rspec-rails (~> 6.1.1)
   rubocop
   rubocop-factory_bot
   rubocop-performance
