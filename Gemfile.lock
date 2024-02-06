@@ -252,7 +252,7 @@ GEM
       webrick (~> 1.7)
       websocket-driver (>= 0.6, < 0.8)
     ffi (1.16.3)
-    flay (2.13.1)
+    flay (2.13.2)
       erubi (~> 1.10)
       path_expander (~> 1.0)
       ruby_parser (~> 3.0)
