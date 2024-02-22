@@ -10,6 +10,7 @@ blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
 futurelearn = Project.find_by(slug: 'futurelearn.com')
 game_hitdea = Project.find_by(slug: 'wordmaker')
+gobl = Project.find_by(slug: 'gobl')
 hitdea = Project.find_by(slug: 'hitdea.com')
 marketing_hitdea = Project.find_by(slug: 'ads-system')
 nopaperwork = Project.find_by(slug: 'nopaperwork.org')
@@ -428,4 +429,17 @@ contribution.save
 contribution = Contribution.new(params.merge(position: 8))
 contribution.attributes = { locale: :en, name: 'Internal CLI tool development' }
 contribution.attributes = { locale: :pl, name: 'Rozwój wewnętrznego narzędzia CLI' }
+contribution.save
+
+# torrocus in gobl
+params = { person_id: torrocus.id, project_id: gobl.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'XRechnung standard validator on CI' }
+contribution.attributes = { locale: :pl, name: 'Walidator standardu XRechnung na CI' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Assisting with JSON to XRechnung converter implementation' }
+contribution.attributes = { locale: :pl, name: 'Pomoc przy implementacji konwertera JSON na strukturę XRechnung' }
 contribution.save
