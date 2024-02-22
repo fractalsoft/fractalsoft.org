@@ -10,6 +10,7 @@ blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
 futurelearn = Project.find_by(slug: 'futurelearn.com')
 game_hitdea = Project.find_by(slug: 'wordmaker')
+gobl = Project.find_by(slug: 'gobl')
 hitdea = Project.find_by(slug: 'hitdea.com')
 julinek_ar = Project.find_by(slug: 'julinek-ar')
 marketing_hitdea = Project.find_by(slug: 'ads-system')
@@ -18,6 +19,19 @@ purpura = Project.find_by(slug: 'purpura.eu')
 questions_hitdea = Project.find_by(slug: '20-questions-game')
 selecthub = Project.find_by(slug: 'selecthub.com')
 tmc_ops = Project.find_by(slug: 'tmc-ops')
+
+# lisu in gobl
+params = { person_id: lisu.id, project_id: gobl.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'JSON to KSeF structure converter (Go)' }
+contribution.attributes = { locale: :pl, name: 'Konwerter z JSON na strukturę KSeF (Go)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'JSON to XRechnung structure converter (Go)' }
+contribution.attributes = { locale: :pl, name: 'Konwerter z JSON na strukturę XRechnung (Go)' }
+contribution.save
 
 # lisu in andy
 params = { person_id: lisu.id, project_id: andy.id }
