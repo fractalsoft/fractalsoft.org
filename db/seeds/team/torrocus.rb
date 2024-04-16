@@ -64,7 +64,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'jekyll' => { experience_rating: 85 },
   'jruby' => { experience_rating: 50 },
   'truffleruby' => { experience_rating: 40 },
-  'go' => { experience_rating: 5 },
+  'go' => { experience_rating: 15 },
 
   'rspec' => { experience_rating: 72 },
   'minitest' => { experience_rating: 52 },
@@ -75,7 +75,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'cuprite' => { experience_rating: 30 },
   'ferrum' => { experience_rating: 20 },
 
-  'git' => { experience_rating: 90 },
+  'git' => { experience_rating: 91 },
 
   'github' => { experience_rating: 82 },
 
@@ -141,7 +141,7 @@ TechnologicalSkill.where(person_id: torrocus.id).delete_all
   'prettier' => { experience_rating: 65 },
   'stylelint' => { experience_rating: 75 },
 
-  'github-actions' => { experience_rating: 85 },
+  'github-actions' => { experience_rating: 86 },
   'jenkins' => { experience_rating: 60 },
   'hound-ci' => { experience_rating: 50 },
   'travis-ci' => { experience_rating: 50 }
