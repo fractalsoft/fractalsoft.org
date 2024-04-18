@@ -73,5 +73,15 @@ RSpec.describe ExternalLinkController do
 
       expect(response).to redirect_to 'https://youtube.com/@womanonrails'
     end
+
+    context 'when attempting to access a dangerous link' do
+      it 'raises an error to prevent unauthorized execution' do
+        dangerous_link_name = "`exec('ls')`"
+        hacker = create(:person)
+        expect do
+          get :show, params: { person_id: hacker.id, link_name: dangerous_link_name, locale: 'en' }
+        end.to raise_error(ActionController::UrlGenerationError)
+      end
+    end
   end
 end
