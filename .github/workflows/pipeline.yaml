@@ -11,6 +11,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  js-lint:
+    name: JS Lint
+    permissions:
+      contents: read
+      pull-requests: read
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install MarkdownLint
+        run: npm install -g markdownlint-cli
+      - name: Checking markdown
+        run: markdownlint .
+
   lint:
     name: Lint
 
