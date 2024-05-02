@@ -161,7 +161,7 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     colored (1.2)
-    commonmarker (1.1.0-x86_64-linux)
+    commonmarker (1.1.1-x86_64-linux)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -635,7 +635,7 @@ DEPENDENCIES
   capybara
   carrierwave (~> 3.0)
   colored
-  commonmarker (~> 1.1.0)
+  commonmarker (~> 1.1.1)
   cuprite
   database_cleaner (~> 2.0.1)
   derailed_benchmarks
