@@ -439,7 +439,7 @@ GEM
       rainbow (>= 2.0, < 4.0)
       rexml (~> 3.1)
     regexp_parser (2.9.2)
-    reline (0.5.7)
+    reline (0.5.8)
       io-console (~> 0.5)
     request_store (1.7.0)
       rack (>= 1.4)
