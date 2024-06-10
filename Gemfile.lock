@@ -444,8 +444,8 @@ GEM
     request_store (1.7.0)
       rack (>= 1.4)
     require_all (3.0.0)
-    rexml (3.2.8)
-      strscan (>= 3.0.9)
+    rexml (3.2.9)
+      strscan
     rouge (4.2.1)
     route_translator (14.1.2)
       actionpack (>= 6.1, < 8.0)
