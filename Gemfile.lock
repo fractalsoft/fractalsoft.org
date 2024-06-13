@@ -573,7 +573,7 @@ GEM
       net-ssh (>= 2.8.0)
     ssrf_filter (1.1.2)
     stackprof (0.2.26)
-    stringio (3.1.0)
+    stringio (3.1.1)
     strscan (3.1.0)
     temple (0.10.3)
     terminal-table (3.0.2)
