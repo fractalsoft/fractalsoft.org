@@ -446,7 +446,7 @@ GEM
     require_all (3.0.0)
     rexml (3.3.0)
       strscan
-    rouge (4.2.1)
+    rouge (4.3.0)
     route_translator (14.1.2)
       actionpack (>= 6.1, < 8.0)
       activesupport (>= 6.1, < 8.0)
