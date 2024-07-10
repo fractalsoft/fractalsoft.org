@@ -538,7 +538,7 @@ GEM
       tilt
     scss_lint (0.60.0)
       sass (~> 3.5, >= 3.5.5)
-    sexp_processor (4.17.1)
+    sexp_processor (4.17.2)
     shoulda-matchers (6.2.0)
       activesupport (>= 5.2.0)
     simple_form (5.3.1)
