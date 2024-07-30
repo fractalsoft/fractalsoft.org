@@ -22,7 +22,7 @@ AllCops:
     - db/migrate/**
     - db/schema.rb
   NewCops: enable
-  TargetRubyVersion: 3.2.3
+  TargetRubyVersion: 3.3.4
 
 Metrics/MethodLength:
   CountComments: false
