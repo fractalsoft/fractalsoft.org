@@ -147,7 +147,8 @@ GEM
       image_processing (~> 1.1)
       marcel (~> 1.0.0)
       ssrf_filter (~> 1.0)
-    childprocess (5.0.0)
+    childprocess (5.1.0)
+      logger (~> 1.5)
     code_analyzer (0.5.5)
       sexp_processor
     coderay (1.1.3)
