@@ -37,6 +37,7 @@ gem 'slim-rails', '~> 3.6' # Template language instead Erb
 gem 'terser'
 gem 'tzinfo-data'
 
+# rubocop:disable Metrics/BlockLength
 group :development do
   gem 'active_record_doctor'
   gem 'better_errors'
@@ -53,17 +54,20 @@ group :development do
   gem 'rails_best_practices'
   gem 'reek'
   gem 'rubocop'
+  gem 'rubocop-capybara'
   gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
+  gem 'rubocop-rspec_rails'
   gem 'rubycritic', require: false
   gem 'scss_lint'
   gem 'spring'
   gem 'stackprof'
   gem 'web-console', '>= 4.2' # <%= console %> anywhere in the code
 end
+# rubocop:enable Metrics/BlockLength
 
 group :development, :test do
   gem 'bootsnap', '>= 1.16.0', require: false
