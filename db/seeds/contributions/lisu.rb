@@ -35,6 +35,26 @@ contribution.attributes = { locale: :pl, name: 'Konfiguracja fakturowania dla Me
 contribution.save
 
 contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Backend development in Ruby on Rails' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby on Rails' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en, name: 'Backend development in Go' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Go' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en, name: 'Frontend development in React (Storybook)' }
+contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w React (Storybook)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en, name: 'Backend communication using protobuf' }
+contribution.attributes = { locale: :pl, name: 'Komunikacja między aplikacjami używając protobuf' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
 contribution.attributes = { locale: :en, name: 'Fixes & pipeline maintenance' }
 contribution.attributes = { locale: :pl, name: 'Naprawa i utrzymanie potoków' }
 contribution.save
