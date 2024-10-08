@@ -58,7 +58,7 @@ contribution.save
 
 contribution = Contribution.new(params.merge(position: 8))
 contribution.attributes = { locale: :en, name: 'Phone number normalization (standard E.164)' }
-contribution.attributes = { locale: :pl, name: 'Normalizacja numerów telefonw (E.164)' }
+contribution.attributes = { locale: :pl, name: 'Normalizacja numerów telefonów (E.164)' }
 contribution.save
 
 contribution = Contribution.new(params.merge(position: 9))
