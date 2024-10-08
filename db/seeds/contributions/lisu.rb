@@ -11,6 +11,7 @@ fractalsoft = Project.find_by(slug: 'fractalsoft.org')
 futurelearn = Project.find_by(slug: 'futurelearn.com')
 game_hitdea = Project.find_by(slug: 'wordmaker')
 gobl = Project.find_by(slug: 'gobl')
+amenitiz = Project.find_by(slug: 'amenitiz.com')
 hitdea = Project.find_by(slug: 'hitdea.com')
 julinek_ar = Project.find_by(slug: 'julinek-ar')
 marketing_hitdea = Project.find_by(slug: 'ads-system')
@@ -19,6 +20,24 @@ purpura = Project.find_by(slug: 'purpura.eu')
 questions_hitdea = Project.find_by(slug: '20-questions-game')
 selecthub = Project.find_by(slug: 'selecthub.com')
 tmc_ops = Project.find_by(slug: 'tmc-ops')
+
+# lisu in amenitiz
+params = { person_id: lisu.id, project_id: amenitiz.id }
+
+contribution = Contribution.new(params.merge(position: 1))
+contribution.attributes = { locale: :en, name: 'Integration with Invopop' }
+contribution.attributes = { locale: :pl, name: 'Integracja z Invopop' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 2))
+contribution.attributes = { locale: :en, name: 'Invoicing configuration for Mexico' }
+contribution.attributes = { locale: :pl, name: 'Konfiguracja fakturowania dla Meksyku' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 3))
+contribution.attributes = { locale: :en, name: 'Fixes & pipeline maintenance' }
+contribution.attributes = { locale: :pl, name: 'Naprawa i utrzymanie potoków' }
+contribution.save
 
 # lisu in gobl
 params = { person_id: lisu.id, project_id: gobl.id }

@@ -82,7 +82,8 @@ TechnologicalSkill.where(person_id: lisu.id).delete_all
   'prettier' => { experience_rating: 70 },
   'github-actions' => { experience_rating: 65 },
   'bootstrap' => { experience_rating: 70 },
-  'jenkins' => { experience_rating: 30 }
+  'jenkins' => { experience_rating: 30 },
+  'go' => { experience_rating: 50 }
 }.each_with_index do |(slug, result), index|
   technology = Technology.find_by(slug:)
   TechnologicalSkill.where(
