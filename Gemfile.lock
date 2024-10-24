@@ -455,7 +455,7 @@ GEM
     request_store (1.7.0)
       rack (>= 1.4)
     require_all (3.0.0)
-    rexml (3.3.8)
+    rexml (3.3.9)
     rouge (4.4.0)
     route_translator (14.1.2)
       actionpack (>= 6.1, < 8.0)
