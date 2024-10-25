@@ -162,7 +162,7 @@ GEM
     cuprite (0.15.1)
       capybara (~> 3.0)
       ferrum (~> 0.15.0)
-    database_cleaner (2.0.2)
+    database_cleaner (2.1.0)
       database_cleaner-active_record (>= 2, < 3)
     database_cleaner-active_record (2.2.0)
       activerecord (>= 5.a)
@@ -637,7 +637,7 @@ DEPENDENCIES
   colored
   commonmarker (~> 1.1.5)
   cuprite
-  database_cleaner (~> 2.0.1)
+  database_cleaner (~> 2.1.0)
   derailed_benchmarks
   dockerfile-rails (>= 1.5)
   dotenv-rails
