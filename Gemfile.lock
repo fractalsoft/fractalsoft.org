@@ -579,7 +579,7 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
-    ssrf_filter (1.1.2)
+    ssrf_filter (1.2.0)
     stackprof (0.2.26)
     stringio (3.1.2)
     temple (0.10.3)
