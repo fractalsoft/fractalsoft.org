@@ -550,7 +550,7 @@ GEM
       tilt
     scss_lint (0.60.0)
       sass (~> 3.5, >= 3.5.5)
-    securerandom (0.3.2)
+    securerandom (0.4.0)
     sexp_processor (4.17.3)
     shoulda-matchers (6.4.0)
       activesupport (>= 5.2.0)
