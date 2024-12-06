@@ -51,8 +51,8 @@ RSpec.describe Markdown do
         puts 'Hello world'
         ```
       BLOCK_CODE
-      expected_result_in_html = '<pre style="background-color:#2b303b;">' \
-                                '<code class="language-ruby">' \
+      expected_result_in_html = '<pre lang="ruby" style="background-color:#2b303b;">' \
+                                '<code>' \
                                 '<span style="color:#96b5b4;">puts </span>' \
                                 '<span style="color:#c0c5ce;">&#39;</span>' \
                                 '<span style="color:#a3be8c;">Hello world</span>' \
