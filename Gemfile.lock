@@ -363,7 +363,7 @@ GEM
       net-protocol
     net-ssh (7.3.0)
     nio4r (2.7.4)
-    nokogiri (1.17.1-x86_64-linux)
+    nokogiri (1.17.2-x86_64-linux)
       racc (~> 1.4)
     normalize-rails (8.0.1)
     oj (3.16.7)
