@@ -2,7 +2,8 @@
 
 class DomainsController < ApplicationController
   MAP_SLUG_TO_VIEW_NAME = {
-    'technika-dla-rolnika' => 'technika_dla_rolnika'
+    'technika-dla-rolnika' => 'technika_dla_rolnika',
+    'modernizing-rails' => 'modernizing_rails'
   }.freeze
 
   private_constant :MAP_SLUG_TO_VIEW_NAME
