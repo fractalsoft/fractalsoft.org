@@ -209,14 +209,56 @@ contribution.attributes = { locale: :en, name: 'Backend development in Ruby on R
 contribution.attributes = { locale: :pl, name: 'Rozwój aplikacji w Ruby on Rails' }
 contribution.save
 
-contribution = Contribution.new(params.merge(position: 1))
+contribution = Contribution.new(params.merge(position: 2))
 contribution.attributes = { locale: :en, name: 'Bugs resolving' }
 contribution.attributes = { locale: :pl, name: 'Naprawianie błędów' }
 contribution.save
 
-contribution = Contribution.new(params.merge(position: 1))
+contribution = Contribution.new(params.merge(position: 3))
 contribution.attributes = { locale: :en, name: 'Deployment to staging' }
 contribution.attributes = { locale: :pl, name: 'Wdrożenie na staging (serwer przedprodukcyjny)' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 4))
+contribution.attributes = { locale: :en,
+                            name: 'Modernized the Tech Stack: Replaced outdated tools like Hamlbars, CoffeeScript, and' \
+                                  'EmberScript with modern JavaScript (ES6+) and Handlebars, simplifying the asset pipeline.' }
+contribution.attributes = { locale: :pl,
+                            name: 'Unowocześniono stos technologiczny: Zastąpiono przestarzałe narzędzia, takie jak' \
+                                  'Hamlbars, CoffeeScript i EmberScript, nowoczesnym JavaScriptem (ES6+) i Handlebars,' \
+                                  'upraszczając pipeline zasobów.' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 5))
+contribution.attributes = { locale: :en,
+                            name: 'Upgraded Rails and Ruby: Incrementally upgraded from Rails 4.2 to Rails 7.1 and Ruby' \
+                                  '2.7.8 to Ruby 3.2.3, ensuring compatibility and leveraging modern features.' }
+contribution.attributes = { locale: :pl,
+                            name: 'Zaktualizowano Rails i Ruby: Stopniowo zaktualizowano aplikację z Rails 4.2 do' \
+                                  'Rails 7.1 oraz Ruby 2.7.8 do Ruby 3.2.3, zapewniając zgodność i wykorzystanie nowoczesnych' \
+                                  'funkcji.' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 6))
+contribution.attributes = { locale: :en,
+                            name: 'Improved Performance and Security: Integrated Bootsnap to reduce boot times, added' \
+                                  'real-time file watching with Listen, and implemented Content Security Policy (CSP) for' \
+                                  'enhanced security.' }
+contribution.attributes = { locale: :pl,
+                            name: 'Poprawiono wydajność i bezpieczeństwo: Wprowadzono Bootsnap, aby skrócić czas' \
+                                  'uruchamiania, dodano Listen do obserwacji plików w czasie rzeczywistym oraz wdrożono' \
+                                  'Content Security Policy (CSP) dla lepszej ochrony aplikacji.' }
+contribution.save
+
+contribution = Contribution.new(params.merge(position: 7))
+contribution.attributes = { locale: :en,
+                            name: 'Streamlined Developer Experience: Optimized boot times, improved file reload' \
+                                  'performance, and simplified onboarding by adopting modern tools, making development faster' \
+                                  'and more efficient.' }
+contribution.attributes = { locale: :pl,
+                            name: 'Usprawniono doświadczenie deweloperów: Zoptymalizowano czas uruchamiania, poprawiono' \
+                                  'wydajność przeładowywania plików i uproszczono onboarding dzięki nowoczesnym narzędziom,' \
+                                  'co przyspieszyło i ułatwiło pracę programistów.' }
 contribution.save
 
 # lisu in hitdea
