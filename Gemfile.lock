@@ -568,7 +568,7 @@ GEM
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
-    slim-rails (3.6.3)
+    slim-rails (3.7.0)
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 6.0, != 5.0.0)
@@ -690,7 +690,7 @@ DEPENDENCIES
   scss_lint
   shoulda-matchers
   simple_form (~> 5.3)
-  slim-rails (~> 3.6)
+  slim-rails (~> 3.7)
   spring
   stackprof
   terser
