@@ -44,7 +44,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'brakeman'
   gem 'bullet'
-  gem 'capistrano-rails', '~> 1.6'
+  gem 'capistrano-rails', '~> 1.7'
   gem 'colored'
   gem 'derailed_benchmarks'
   gem 'fasterer'
