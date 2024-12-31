@@ -255,7 +255,7 @@ GEM
       concurrent-ruby (~> 1.1)
       webrick (~> 1.7)
       websocket-driver (~> 0.7)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.1-x86_64-linux-gnu)
     flay (2.13.3)
       erubi (~> 1.10)
       path_expander (~> 1.0)
