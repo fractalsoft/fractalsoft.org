@@ -196,7 +196,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.5.1)
     docile (1.4.1)
-    dockerfile-rails (1.7.0)
+    dockerfile-rails (1.7.2)
       rails (>= 3.0.0)
     dotenv (3.1.7)
     dotenv-rails (3.1.7)
