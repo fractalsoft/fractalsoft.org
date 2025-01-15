@@ -590,7 +590,7 @@ GEM
       net-ssh (>= 2.8.0)
       ostruct
     ssrf_filter (1.2.0)
-    stackprof (0.2.26)
+    stackprof (0.2.27)
     stringio (3.1.2)
     temple (0.10.3)
     terminal-table (3.0.2)
