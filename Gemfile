@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.4'
 
-gem 'rails', '~> 7.1.5'
+gem 'rails', '~> 8.0.1'
 
 gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'
