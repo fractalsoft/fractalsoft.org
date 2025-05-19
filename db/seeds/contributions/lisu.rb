@@ -5,10 +5,10 @@ lisu = Person.find_by(nickname: 'lisu')
 # projects
 agricircle = Project.find_by(slug: 'agricircle.com')
 analysis_hitdea = Project.find_by(slug: 'linguistic-analysis')
-andy = Project.find_by(slug: 'andy-drink-delivery')
+nda_koch = Project.find_by(slug: 'nda-koch')
 blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
-futurelearn = Project.find_by(slug: 'futurelearn.com')
+nda_julia = Project.find_by(slug: 'nda-julia')
 game_hitdea = Project.find_by(slug: 'wordmaker')
 gobl = Project.find_by(slug: 'gobl')
 amenitiz = Project.find_by(slug: 'amenitiz.com')
@@ -19,7 +19,6 @@ nopaperwork = Project.find_by(slug: 'nopaperwork.org')
 purpura = Project.find_by(slug: 'purpura.eu')
 questions_hitdea = Project.find_by(slug: '20-questions-game')
 selecthub = Project.find_by(slug: 'selecthub.com')
-tmc_ops = Project.find_by(slug: 'tmc-ops')
 
 # lisu in amenitiz
 params = { person_id: lisu.id, project_id: amenitiz.id }
@@ -72,8 +71,8 @@ contribution.attributes = { locale: :en, name: 'JSON to XRechnung structure conv
 contribution.attributes = { locale: :pl, name: 'Konwerter z JSON na strukturę XRechnung (Go)' }
 contribution.save
 
-# lisu in andy
-params = { person_id: lisu.id, project_id: andy.id }
+# lisu in NDA Koch
+params = { person_id: lisu.id, project_id: nda_koch.id }
 
 contribution = Contribution.new(params.merge(position: 1))
 contribution.attributes = { locale: :en, name: 'Development in Sinatra (Ruby)' }
@@ -127,8 +126,8 @@ contribution.attributes = { locale: :en, name: 'Submitting to the App Store' }
 contribution.attributes = { locale: :pl, name: 'Zgłoszenie gry do App Store' }
 contribution.save
 
-# lisu in futurelearn
-params = { person_id: lisu.id, project_id: futurelearn.id }
+# lisu in NDA Julia
+params = { person_id: lisu.id, project_id: nda_julia.id }
 
 contribution = Contribution.new(params.merge(position: 1))
 contribution.attributes = { locale: :en, name: 'Development in Ruby on Rails' }
