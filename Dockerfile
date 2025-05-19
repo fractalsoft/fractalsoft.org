@@ -3,70 +3,61 @@
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
 # https://github.com/evilmartians/fullstaq-ruby-docker
 ARG RUBY_VERSION=3.3.4
-ARG VARIANT=jemalloc-bullseye-slim
-# FROM ruby:$RUBY_VERSION-slim as base
-FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
+FROM ruby:${RUBY_VERSION}-bullseye AS base
 
 ARG BUNDLER_VERSION=2.5.11
 
 # Rails app lives here
 WORKDIR /rails
 
-# Set production environment
+# Set production environment variables
 ENV RAILS_ENV="production" \
     RAILS_LOG_TO_STDOUT="1" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development:test"
 
-
-# Throw-away build stage to reduce size of final image
-FROM base as build
+# Temporary build stage
+FROM base AS build
 
 ARG BUILD_PACKAGES="build-essential git libvips42 pkg-config libpq-dev curl python-is-python3 libyaml-dev"
 
-# Install packages needed to build gems
+# Install build dependencies
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y ${BUILD_PACKAGES} && \
-    apt-get autoremove --assume-yes && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    rm -rf /var/lib/apt/lists/*
 
-# Install application gems
+# Install gems
 COPY Gemfile Gemfile.lock ./
-RUN bundle install && \
-    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
-
-# RUN bundle exec bootsnap precompile --gemfile
+RUN gem install bundler -v "${BUNDLER_VERSION}" && \
+    bundle install && \
+    rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
 
 # Copy application code
 COPY . .
 
-# Precompile bootsnap code for faster boot times
-# RUN bundle exec bootsnap precompile app/ lib/
-
-# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+# Precompile assets without requiring secret key
 RUN SECRET_KEY_BASE=DUMMY bundle exec rails assets:precompile
 
-# Final stage for app image
+# Final image
 FROM base
 
-ARG DEPLOY_PACKAGES="build-essential git libvips42 pkg-config libpq-dev curl python-is-python3 postgresql-client libyaml-dev"
+ARG DEPLOY_PACKAGES="libvips42 libpq5 curl postgresql-client libyaml-0-2"
 
-# Install packages needed for deployment
+# Install runtime dependencies
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y ${DEPLOY_PACKAGES} && \
-    apt-get autoremove --assume-yes && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    rm -rf /var/lib/apt/lists/*
 
-# Copy built artifacts: gems, application
+# Copy app and gems from build stage
 COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build /rails /rails
 
-# Run and own only the runtime files as a non-root user for security
+# Create app user and fix permissions
 RUN useradd rails --home /rails --shell /bin/bash && \
-    chown -R rails:rails db log public tmp
+    chown -R rails:rails /rails
 USER rails:rails
 
-# Start the server by default, this can be overwritten at runtime
+# Default server command
 EXPOSE 3000
 CMD ["./bin/rails", "server", "-b", "0.0.0.0"]
