@@ -5,10 +5,10 @@ torrocus = Person.find_by(nickname: 'torrocus')
 # projects
 agricircle = Project.find_by(slug: 'agricircle.com')
 analysis_hitdea = Project.find_by(slug: 'linguistic-analysis')
-andy = Project.find_by(slug: 'andy-drink-delivery')
+nda_koch = Project.find_by(slug: 'nda-koch')
 blog = Project.find_by(slug: 'blog.fractalsoft.org')
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
-futurelearn = Project.find_by(slug: 'futurelearn.com')
+nda_julia = Project.find_by(slug: 'nda-julia')
 game_hitdea = Project.find_by(slug: 'wordmaker')
 gobl = Project.find_by(slug: 'gobl')
 hitdea = Project.find_by(slug: 'hitdea.com')
@@ -17,7 +17,6 @@ nopaperwork = Project.find_by(slug: 'nopaperwork.org')
 purpura = Project.find_by(slug: 'purpura.eu')
 questions_hitdea = Project.find_by(slug: '20-questions-game')
 selecthub = Project.find_by(slug: 'selecthub.com')
-tmc_ops = Project.find_by(slug: 'tmc-ops')
 
 # torrocus in nopaperwork
 params = { person_id: torrocus.id, project_id: nopaperwork.id }
@@ -324,8 +323,8 @@ contribution.attributes = { locale: :en, name: 'Deployment to production' }
 contribution.attributes = { locale: :pl, name: 'Wdrożenie na produkcję' }
 contribution.save
 
-# torrocus in futurelearn
-params = { person_id: torrocus.id, project_id: futurelearn.id }
+# torrocus in NDA Julia
+params = { person_id: torrocus.id, project_id: nda_julia.id }
 
 contribution = Contribution.new(params.merge(position: 1))
 contribution.attributes = { locale: :en, name: 'Development in Ruby on Rails' }
@@ -387,8 +386,8 @@ contribution.attributes = { locale: :en, name: 'Bugs resolving' }
 contribution.attributes = { locale: :pl, name: 'Naprawianie błędów' }
 contribution.save
 
-# torrocus in andy
-params = { person_id: torrocus.id, project_id: andy.id }
+# torrocus in NDA Koch
+params = { person_id: torrocus.id, project_id: nda_koch.id }
 
 contribution = Contribution.new(params.merge(position: 1))
 contribution.attributes = { locale: :en, name: 'Development in Next.js' }

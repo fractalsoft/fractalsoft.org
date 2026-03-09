@@ -18,7 +18,7 @@ gem 'draper'
 gem 'friendly_id', '~> 5.5'
 gem 'globalize'
 gem 'http_accept_language'
-gem 'importmap-rails', '~> 2.0'
+gem 'importmap-rails', '~> 2.1'
 gem 'jbuilder', '~> 2.13'
 gem 'lograge'
 gem 'mail_form'
@@ -33,7 +33,7 @@ gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
 gem 'sass-rails', '~> 6.0'
 gem 'simple_form', '~> 5.3'
-gem 'slim-rails', '~> 3.6' # Template language instead Erb
+gem 'slim-rails', '~> 3.7' # Template language instead Erb
 gem 'terser'
 gem 'tzinfo-data'
 
@@ -44,7 +44,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'brakeman'
   gem 'bullet'
-  gem 'capistrano-rails', '~> 1.6'
+  gem 'capistrano-rails', '~> 1.7'
   gem 'colored'
   gem 'derailed_benchmarks'
   gem 'fasterer'
@@ -78,7 +78,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug', '~> 3.9'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 7.1.0'
+  gem 'rspec-rails', '~> 7.1.1'
 end
 
 group :test do
