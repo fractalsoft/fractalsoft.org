@@ -345,7 +345,7 @@ GEM
       actionmailer (>= 5.2)
       activemodel (>= 5.2)
     marcel (1.0.4)
-    matrix (0.4.2)
+    matrix (0.4.3)
     memory_profiler (1.1.0)
     meta-tags (2.22.1)
       actionpack (>= 6.0.0, < 8.1)
