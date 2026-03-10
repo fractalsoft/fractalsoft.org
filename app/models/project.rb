@@ -2,6 +2,7 @@
 
 class Project < ApplicationRecord
   extend FriendlyId
+
   friendly_id :slug, use: :slugged
   mount_uploader :thumbnail, ThumbnailUploader
   translates :description, :introduction, :subtitle

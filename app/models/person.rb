@@ -14,6 +14,7 @@ class Person < ApplicationRecord
   ].freeze
 
   extend FriendlyId
+
   friendly_id :nickname, use: [:slugged, :finders]
   translates :introduction, :saying
 
