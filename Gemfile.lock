@@ -270,7 +270,7 @@ GEM
       path_expander (~> 2.0)
       prism (~> 1.7)
       sexp_processor (~> 4.8)
-    friendly_id (5.5.1)
+    friendly_id (5.6.0)
       activerecord (>= 4.0.0)
     get_process_mem (1.0.0)
       bigdecimal (>= 2.0)
@@ -704,7 +704,7 @@ DEPENDENCIES
   factory_bot_rails
   factory_trace
   fasterer
-  friendly_id (~> 5.5)
+  friendly_id (~> 5.6)
   globalize
   http_accept_language
   i18n-tasks
