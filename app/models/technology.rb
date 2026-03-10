@@ -2,6 +2,7 @@
 
 class Technology < ApplicationRecord
   extend FriendlyId
+
   enum :category, {
     unknown: 0,
     amazon_web_services: 1,
