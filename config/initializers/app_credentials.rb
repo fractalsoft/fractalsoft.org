@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# Replaces Rails.application.secrets for contact/mailer From/To (former secrets.yml default section).
 module AppCredentials
   module_function
 

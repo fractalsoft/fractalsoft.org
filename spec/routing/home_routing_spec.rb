@@ -4,7 +4,6 @@ require 'rails_helper'
 
 RSpec.describe HomeController do
   describe 'routing' do
-    # Only app-configured locales have localized routes (see config/application.rb).
     %i[en pl].each do |locale|
       it "routes to #index with locale #{locale}" do
         path = "/#{locale}".gsub(I18n.default_locale.to_s, '')
