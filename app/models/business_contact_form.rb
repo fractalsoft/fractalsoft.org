@@ -17,8 +17,8 @@ class BusinessContactForm < MailForm::Base
 
   def headers
     {
-      from: Rails.application.secrets.noreply_email,
-      to: Rails.application.secrets.contact_email
+      from: AppCredentials.noreply_email,
+      to: AppCredentials.contact_email
     }
   end
 end
