@@ -163,6 +163,9 @@ GEM
     cuprite (0.17)
       capybara (~> 3.0)
       ferrum (~> 0.17.0)
+    dartsass-rails (0.5.1)
+      railties (>= 6.0.0)
+      sass-embedded (~> 1.63)
     database_cleaner (2.1.0)
       database_cleaner-active_record (>= 2, < 3)
     database_cleaner-active_record (2.2.2)
@@ -278,6 +281,12 @@ GEM
       activerecord (>= 7.0, < 8.1)
       activesupport (>= 7.0, < 8.1)
       request_store (~> 1.0)
+    google-protobuf (4.34.0)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.34.0-x86_64-linux-gnu)
+      bigdecimal
+      rake (~> 13.3)
     heapy (0.2.0)
       thor
     highline (3.1.2)
@@ -403,6 +412,10 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.9.0)
+    propshaft (1.3.1)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -582,19 +595,14 @@ GEM
       virtus (~> 2.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
+    sass-embedded (1.98.0)
+      google-protobuf (~> 4.31)
+      rake (>= 13)
+    sass-embedded (1.98.0-x86_64-linux-gnu)
+      google-protobuf (~> 4.31)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.4.0)
-      ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     scss_lint (0.60.0)
       sass (~> 3.5, >= 3.5.5)
     securerandom (0.4.1)
@@ -618,13 +626,6 @@ GEM
       railties (>= 3.1)
       slim (>= 3.0, < 6.0, != 5.0.0)
     spring (4.4.2)
-    sprockets (4.2.1)
-      concurrent-ruby (~> 1.0)
-      rack (>= 2.2.4, < 4)
-    sprockets-rails (3.5.2)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      sprockets (>= 3.0.0)
     sshkit (1.25.0)
       base64
       logger
@@ -638,8 +639,6 @@ GEM
     temple (0.10.3)
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
-    terser (1.2.5)
-      execjs (>= 0.3.0, < 3)
     test-prof (1.4.4)
     thor (1.5.0)
     thread_safe (0.3.6)
@@ -697,6 +696,7 @@ DEPENDENCIES
   colored
   commonmarker (~> 2.6.3)
   cuprite
+  dartsass-rails
   database_cleaner (~> 2.1.0)
   derailed_benchmarks
   dockerfile-rails (>= 1.5)
@@ -720,6 +720,7 @@ DEPENDENCIES
   normalize-rails (~> 8.0.1)
   oj
   pg
+  propshaft
   pry-byebug (~> 3.9)
   puma
   query_diet
@@ -739,15 +740,12 @@ DEPENDENCIES
   rubocop-rspec
   rubocop-rspec_rails
   rubycritic
-  sass-rails (~> 6.0)
   scss_lint
   shoulda-matchers
   simple_form (~> 5.3)
   slim-rails (~> 3.7)
   spring
-  sprockets-rails
   stackprof
-  terser
   test-prof
   tzinfo-data
   web-console (>= 4.2)

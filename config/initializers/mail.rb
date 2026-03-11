@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# Replaces deprecated Rails.application.secrets; mirrors former config/secrets.yml (ENV-based).
 module AppMailerConfig
   module_function
 

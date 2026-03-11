@@ -7,7 +7,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.3.4'
 
 gem 'rails', '~> 8.0.0'
-gem 'sprockets-rails' # Keep Sprockets (sass-rails); Rails 8 defaults to Propshaft
+gem 'dartsass-rails' # Compiles SCSS to app/assets/builds (Propshaft serves builds + static assets)
+gem 'propshaft' # Rails 8 default asset pipeline (replaces sprockets-rails)
 
 gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'
@@ -32,10 +33,8 @@ gem 'pg' # Ruby interface to PostgreSQL RDBMS
 gem 'puma' # Ruby web server built for concurrency
 gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
-gem 'sass-rails', '~> 6.0'
 gem 'simple_form', '~> 5.3'
 gem 'slim-rails', '~> 3.7' # Template language instead Erb
-gem 'terser'
 gem 'tzinfo-data'
 
 # rubocop:disable Metrics/BlockLength
