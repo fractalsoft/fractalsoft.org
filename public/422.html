@@ -8,242 +8,185 @@
   <meta name='robots' content='noindex,nofollow,noarchive' />
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link rel='shortcut icon' href='favicon.ico'>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap' rel='stylesheet'>
   <style>
-  /* style reset */
-  html{font-family:Helvetica,sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
-
+  *,
+  *::before,
+  *::after { box-sizing: border-box; }
   body {
-    background-color: #fff;
-    color: #000;
-    font: 1em/1.2 Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Asap', Helvetica, sans-serif;
+    background: #fbfbfb;
+    color: #2e3641;
+    -webkit-font-smoothing: antialiased;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 900;
-    line-height: 1.1;
-    margin: 0;
-  }
-
-  h1 { font-size: 2.25em; }
-  h2 { font-size: 1.75em; }
-  h3 { font-size: 1.375em; }
-  h4 { font-size: 1.125em; }
-  h5 { font-size: 1em; }
-  h6 { font-size: .875em; }
-
-  p {
-    line-height: 1.5;
-    text-align: justify;
-  }
-
-  svg {
-    padding: 10px;
-  }
-
-  .container {
-    margin: 0 auto;
-    max-width: 1140px;
-  }
-
+  .container { margin: 0 auto; max-width: 1140px; width: 100%; padding: 0 1.25rem; }
   .header {
-    color: #000;
     background: #fff;
-    padding: 1em 1.25em;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0 0.75rem;
   }
-
-  .brand {
-    margin: 0;
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #2e3641;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 1rem;
   }
-
-  .nav-bar {
-    background: #f5f5f5;
-    padding: 0;
+  .header-brand img { display: block; width: 36px; height: auto; }
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
-
-  .content {
-    padding: 1em 1.25em;
-    background-color: #fff;
-  }
-
-  .footer {
-    background: #2e2e2e;
-    bottom: 0;
-    color: #fff;
-    left: 0;
-    padding: 1em 1em;
-    position: fixed;
-    right: 0;
-  }
-
-  .main {
-    text-align: center;
-  }
-
-  .nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .nav li {
-    display: inline;
-    margin: 0;
-  }
-
-  .nav a {
-    display: block;
-    padding: .7em 1.25em;
+  .header-home {
     color: #2e3641;
     text-decoration: none;
-    border-bottom: 1px solid gray;
+    font-size: 0.875rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
   }
-
-  .nav a:link { color: #2e3641; }
-  .nav a:visited { color: #2e3641; }
-
-  .nav a:focus {
-    color: black;
-    background-color: white;
+  .header-home:hover,
+  .header-home:focus { color: #ff2a25; outline: none; }
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.25rem 5rem;
   }
-
-  .nav a:hover {
-    color: #c3261c;
-  }
-
-  .nav a:active {}
-
-  .btn {
-    color: #fff !important;
-    background-color: #337ab7;
-    border-color: #2e6da4;
-    display: inline-block;
-    padding: .5em 1em;
-    margin-bottom: 0;
-    font-weight: 400;
-    line-height: 1.2;
+  .content > .container { display: flex; justify-content: center; }
+  .main {
     text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.25rem 1.75rem;
+    max-width: 36rem;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(46, 54, 65, 0.06);
+    border: 1px solid #eee;
+    border-top: 4px solid #c3261c;
+  }
+  .main-logo {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 96px;
+    height: auto;
+  }
+  .main h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: #2e3641;
+  }
+  .main .lead {
+    margin: 0 0 1.25rem;
+    line-height: 1.5;
+    color: #616060;
+    font-size: 1rem;
+  }
+  .main .redirect {
+    margin: 1rem 0 0;
+    line-height: 1.5;
+    color: #616060;
+    font-size: 0.9375rem;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 15px 20px;
+    background: #c3261c;
+    color: #fff !important;
     text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    transition: opacity 0.2s ease;
+    box-sizing: border-box;
   }
-
-  .btn:hover, .btn:focus, .btn:active {
-    background-color: #286090;
-    border-color: #204d74;
+  .btn:hover,
+  .btn:focus { opacity: 0.92; }
+  .footer {
+    margin-top: auto;
+    background: #2e2e2e;
+    color: #fff;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
   }
-
-  #fractalsoft-logo {
-            transition:         transform .8s ease-in-out;
-        -ms-transition:     -ms-transform .8s ease-in-out;
-    -webkit-transition: -webkit-transform .8s ease-in-out;
+  .footer-copy {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.75);
   }
-
-  #fractalsoft-logo:hover {
-            transform:rotate(360deg);
-        -ms-transform:rotate(360deg);
-    -webkit-transform:rotate(360deg);
+  @media (min-width: 600px) {
+    .content { padding: 3rem 2rem 6rem; }
+    .main { padding: 2.5rem 2.5rem; }
   }
-
-  @media screen and (min-width: 400px) {}
-  @media screen and (min-width: 600px)  {
-    h1 { font-size: 4em; }
-    .header { padding: 1.5em 3em; }
-    .nav-bar { padding: 1em 3em; }
-    .content { padding: 2em 3em; }
-    .footer { padding: 2em 3em; }
-
-    .nav li {
-      display: inline;
-      margin: 0 1em 0 0;
-    }
-
-    .nav a {
-      display: inline;
-      padding: 0;
-      border-bottom: 0;
-    }
-  }
-  @media screen and (min-width: 1000px) {}
-  @media screen and (min-width: 1400px) {}
   </style>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKMWEXWYK9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NKMWEXWYK9');
   </script>
 </head>
-
 <body class='error 422'>
-
 <div class='header'>
   <div class='container'>
-    <h2 class='header-heading'>Fractal Soft</h2>
+    <a href='/' class='header-brand'>
+      <img src='/icons/brand/fractalsoft.svg' alt='' width='36' height='36'>
+      Fractal Soft
+    </a>
+    <a href='/' class='header-home'>Home</a>
   </div>
 </div>
-
-<div class='nav-bar'>
-  <div class='container'>
-    <ul class='nav'>
-      <li><a href='/'>Homepage</a></li>
-      <li><a href='/contact-forms/new'>Contact</a></li>
-    </ul>
-  </div>
-</div>
-
 <div class='content'>
   <div class='container'>
     <div class='main'>
-      <svg version='1.1' id='fractalsoft-logo' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='128px' height='128px' viewBox='0 0 3 3' enable-background='new 0 0 3 3' xml:space='preserve'>
-        <g>
-          <rect x='0' y='0' fill='#c3261c' width='1' height='1'/>
-          <rect x='0' y='2' fill='#c3261c' width='1' height='1'/>
-          <rect x='2' y='0' fill='#c3261c' width='1' height='1'/>
-          <rect x='1' y='1' fill='#c3261c' width='1' height='1'/>
-        </g>
-      </svg>
+      <img class='main-logo' src='/icons/brand/fractalsoft.svg' alt='Fractal Soft' width='96' height='96'>
       <h1>422 Unprocessable Entity</h1>
-      <p>
-        The change you wanted was rejected—often due to a missing or invalid security token, or a validation error.
-        Try again from the <a href='/' class='btn'>homepage</a> or go back and resubmit the form.
-        You will be redirected to the homepage in <span id='count'>30</span> seconds.
-      </p>
+      <p class='lead'>Your request could not be processed.</p>
+      <a href='/' class='btn'>Homepage</a>
+      <p class='redirect'>Redirecting in <span id='count'>30</span> seconds.</p>
     </div>
   </div>
 </div>
-
 <footer class='footer'>
-  <div class='container'>Fractal Soft 2018</div>
+  <div class='container'>
+    <div class='footer-copy'>&copy; Fractal Soft 2018&ndash;2026</div>
+  </div>
 </footer>
-
-<script type='text/javascript'>
+<script>
   function ready(fn) {
-    if (document.readyState != 'loading') {
-      fn();
-    } else {
-      document.addEventListener('DOMContentLoaded', fn);
-    }
+    if (document.readyState != 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
   }
-
   var counter = 30;
   function countDown() {
     if (counter >= 0) {
       counter--;
-      span = document.getElementById('count');
+      var span = document.getElementById('count');
       if (span) span.innerHTML = counter;
     }
   }
-
   ready(function() { setInterval(countDown, 1000); });
 </script>
 </body>
