@@ -12,7 +12,7 @@ class Project < ApplicationRecord
   has_many :people, -> { distinct }, through: :contributions
 
   # the newest projects are the most important
-  default_scope { order('year DESC') }
+  default_scope { order(year: :desc) }
 
   validates :title, presence: true
 
