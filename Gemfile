@@ -33,7 +33,7 @@ gem 'pg' # Ruby interface to PostgreSQL RDBMS
 gem 'puma' # Ruby web server built for concurrency
 gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
-gem 'simple_form', '~> 5.3'
+gem 'simple_form', '~> 5.4'
 gem 'slim-rails', '~> 3.7' # Template language instead Erb
 gem 'tzinfo-data'
 
