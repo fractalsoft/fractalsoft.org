@@ -6,9 +6,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.4'
 
-gem 'rails', '~> 8.0.0'
 gem 'dartsass-rails' # Compiles SCSS to app/assets/builds (Propshaft serves builds + static assets)
 gem 'propshaft' # Rails 8 default asset pipeline (replaces sprockets-rails)
+gem 'rails', '~> 8.0.0'
 
 gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'
