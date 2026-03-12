@@ -21,7 +21,7 @@ gem 'friendly_id', '~> 5.6'
 gem 'globalize'
 gem 'http_accept_language'
 gem 'importmap-rails', '~> 2.1'
-gem 'jbuilder', '~> 2.13'
+gem 'jbuilder', '~> 2.14'
 gem 'lograge'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
