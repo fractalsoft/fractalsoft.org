@@ -1,26 +1,32 @@
-section#pillars.home-pillars.py-12.bg-base-200
-  .container.mx-auto.px-4
-    h2.home-pillars__title.text-center.mb-8
+section#pillars.home-pillars.py-16
+  .container.mx-auto.px-4.space-y-10
+    h2.text-center.text-2xl.md:text-3xl.font-bold.text-neutral-900
       = t('home.index.pillars.section_title')
-    .grid.grid-cols-1.lg:grid-cols-3.gap-6
-      .col
-        .card.home-pillar-card.bg-base-100.shadow-md.h-full
-          .card-body.space-y-3
-            h3.home-pillar-card__title.text-lg.font-bold
-              = t('home.index.pillars.full_stack.title')
-            p.home-pillar-card__body.text-base
-              = t('home.index.pillars.full_stack.body')
-      .col
-        .card.home-pillar-card.bg-base-100.shadow-md.h-full
-          .card-body.space-y-3
-            h3.home-pillar-card__title.text-lg.font-bold
-              = t('home.index.pillars.vibe_cleanup.title')
-            p.home-pillar-card__body.text-base
-              = t('home.index.pillars.vibe_cleanup.body')
-      .col
-        .card.home-pillar-card.bg-base-100.shadow-md.h-full
-          .card-body.space-y-3
-            h3.home-pillar-card__title.text-lg.font-bold
-              = t('home.index.pillars.rescue.title')
-            p.home-pillar-card__body.text-base
-              = t('home.index.pillars.rescue.body')
+
+    .grid.grid-cols-1.md:grid-cols-3.gap-6
+      .card.card-bordered.bg-base-100.shadow-md.rounded-xl.h-full
+        .card-body.space-y-4.text-left.items-start
+          .home-pillar-icon
+            = lucide_icon 'terminal', class: 'w-6 h-6'
+          h3.text-lg.font-bold.text-neutral-900
+            = t('home.index.pillars.legacy_ai.title')
+          p.text-sm.text-neutral-600.leading-relaxed
+            = t('home.index.pillars.legacy_ai.body')
+
+      .card.card-bordered.bg-base-100.shadow-md.rounded-xl.h-full
+        .card-body.space-y-4.text-left.items-start
+          .home-pillar-icon
+            = lucide_icon 'brain', class: 'w-6 h-6'
+          h3.text-lg.font-bold.text-neutral-900
+            = t('home.index.pillars.vibe_cleanup.title')
+          p.text-sm.text-neutral-600.leading-relaxed
+            = t('home.index.pillars.vibe_cleanup.body')
+
+      .card.card-bordered.bg-base-100.shadow-md.rounded-xl.h-full
+        .card-body.space-y-4.text-left.items-start
+          .home-pillar-icon
+            = lucide_icon 'handshake', class: 'w-6 h-6'
+          h3.text-lg.font-bold.text-neutral-900
+            = t('home.index.pillars.direct_senior.title')
+          p.text-sm.text-neutral-600.leading-relaxed
+            = t('home.index.pillars.direct_senior.body')

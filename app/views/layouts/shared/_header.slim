@@ -1,36 +1,39 @@
-nav.header.navbar.bg-base-100.shadow-md
-  .navbar-start
-    = link_to root_path, class: 'btn btn-ghost normal-case text-xl flex items-center gap-2' do
-      span.block.sm:hidden
-        = render 'layouts/shared/logo', id: 'fractalsoft-logo-header'
-      = image_tag 'home/logo_big.png', class: 'hidden sm:block max-h-10'
+header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-base-200
+  .container.mx-auto.px-4
+    .flex.items-center.justify-between.gap-6.h-16
+      = link_to root_path, class: 'flex items-center gap-2 shrink-0' do
+        = image_tag '/icons/brand/fractalsoft.svg', alt: 'Fractal Soft', class: 'h-6 w-auto'
+        span.text-base.font-semibold.text-neutral-900
+          | Fractal Soft
 
-  .navbar-end.hidden.lg:flex
-    ul.menu.menu-horizontal.gap-2
-      li = link_to t('layouts.menu.team'), people_path, class: 'btn btn-ghost'
-      li = link_to t('layouts.menu.community'), communities_path, class: 'btn btn-ghost'
-      li = link_to t('layouts.menu.job_offers'), job_offers_path, class: 'btn btn-ghost'
-      li = link_to t(:blog), blog_url, class: 'btn btn-ghost'
-      li = link_to t('layouts.menu.contact'), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'btn btn-primary'
-      li
-        details.dropdown
-          summary.btn.btn-ghost id='navbar-language-dropdown'
-            = t('layouts.menu.language')
-          = render 'layouts/shared/languages'
+      nav.hidden.md:flex.items-center.gap-8.text-sm.font-medium.text-neutral-700
+        a.hover:text-neutral-900 href='#'
+          | Services
+        a.hover:text-neutral-900 href='#'
+          | Portfolio
+        a.hover:text-neutral-900 href='#'
+          | Innovation Hub
+        a.hover:text-neutral-900 href='#'
+          | About
+        a href='#' class='btn btn-primary'
+          | Contact Us
 
-  .navbar-end.lg:hidden
-    details.dropdown.dropdown-end
-      summary.btn.btn-ghost aria-label=t('layouts.menu.toggle_navigation')
-        svg.h-5.w-5 xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'
-          path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'
-      ul.menu.menu-sm.dropdown-content.mt-3.p-2.shadow.bg-base-100.rounded-box.w-52
-        li = link_to t('layouts.menu.team'), people_path, class: 'btn btn-ghost justify-start'
-        li = link_to t('layouts.menu.community'), communities_path, class: 'btn btn-ghost justify-start'
-        li = link_to t('layouts.menu.job_offers'), job_offers_path, class: 'btn btn-ghost justify-start'
-        li = link_to t(:blog), blog_url, class: 'btn btn-ghost justify-start'
-        li = link_to t('layouts.menu.contact'), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'btn btn-primary justify-start'
-        li
-          details.dropdown
-            summary.btn.btn-ghost justify-start id='navbar-language-dropdown-mobile'
-              = t('layouts.menu.language')
-            = render 'layouts/shared/languages'
+      .flex.md:hidden.items-center.gap-2
+        .dropdown.dropdown-end
+          button.btn.btn-ghost.btn-sm[tabindex='0' aria-label='Toggle navigation']
+            = lucide_icon 'menu', class: 'w-5 h-5'
+          ul.menu.menu-sm.dropdown-content.mt-3.p-3.shadow-lg
+            li
+              a href='#' class='hover:bg-base-200 rounded-lg'
+                | Services
+            li
+              a href='#' class='hover:bg-base-200 rounded-lg'
+                | Portfolio
+            li
+              a href='#' class='hover:bg-base-200 rounded-lg'
+                | Innovation Hub
+            li
+              a href='#' class='hover:bg-base-200 rounded-lg'
+                | About
+        a href='#' class='btn btn-primary'
+          | Contact Us

@@ -36,30 +36,26 @@ en:
   home:
     index:
       button:
-        contact_us: Contact us
+        contact_us: Schedule Your Technical Consultation
+        rescue_cta: View Our Work
       contact:
         description: No matter if you have a question or just want to say hello, we would love to hear from you.
         header: Want to get in touch with us?
-      header_html: Creating <strong>web</strong> and <strong>mobile</strong> applications is our <strong>passion</strong>
-      how_we_work:
-        description:
-          one: Let's talk about your needs, before we start. We want to understand your problem and design a solution for you.
-          three: 'All-in-one: design, development & deployment. Don''t worry about anything. We keep an eye on your product.'
-          two: Step by step we build the product for you. At any time you can give us feedback. We take care about code quality, so we do tests and increase usability.
-        header:
-          one: UX & design
-          three: Deployment
-          two: Development
-        slogan: How do we work?
-      technology:
-        description:
-          one: HTML standard, which simplifies developers work and provides many new features. Such as audio, video, canvas drawing or geolocalization. It makes our projects much more interesting.
-          three_html: Software where we have open and free access to source for all users. It provides constant improvement and spread of software. This has a huge impact on application development and fixing bugs.
-          two: Modern framework to build fully functional web applications. Fast and flexible software creation is Ruby on Rails advantage. It allows to adjust to market changes in a simple way. And in the same time provides more satisfaction to our clients.
-        header:
-          one: HTML 5
-          three: Open Source
-          two: Ruby on Rails
+      hero:
+        label: High-performance engineering
+        headline: "AI-Augmented Engineering. Human-Grade Reliability."
+        subheadline: "We are the full-stack builders who turn insights into production-ready software. From high-performance Ruby on Rails mastery to practical AI integration, we scale what others only prototype."
+      pillars:
+        section_title: Our Engineering Philosophy
+        legacy_ai:
+          title: Legacy & AI Recovery
+          body: "We specialize in turning stalled projects and broken AI prototypes into scalable, production-grade infrastructure. If your previous team hit a wall, we find the way through."
+        vibe_cleanup:
+          title: Vibe Coding Cleanup
+          body: "Turning experimental 'vibe-driven' scripts into secure, maintainable codebases. We embed high-performance engineering patterns directly into your next-gen product features."
+        direct_senior:
+          title: Direct Senior Access
+          body: "No middle-management layers or junior shadows. You work directly with senior builders who share ownership of your business outcomes and technical architecture."
       title:
         in_touch: Let's be in touch
   job_offers:
@@ -99,10 +95,10 @@ en:
       title: Technical information about the user
       user_agent: Browser
   meta:
-    description: Fractal Soft is a team of professional web & mobile developers. We will help you build an application using Ruby on Rails and JavaScript. Hire us!
-    keywords: Ruby on Rails, EmberJS, JavaScript, CoffeeScript, web applications, mobile applications
+    description: Fractal Soft—full stack builders from insight to production, vibe coding cleanup for AI-built apps, and project rescue for stalled or misaligned software. Ruby on Rails and modern web.
+    keywords: full stack development, project rescue, production ready, Ruby on Rails, JavaScript, web applications, AI code cleanup, software audit
     site: Fractal Soft
-    title: Ruby on Rails and JavaScript developers for hire
+    title: Full stack builders and project rescue—Fractal Soft
     twitter:
       card: summary
       site: "@fractal_soft"

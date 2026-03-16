@@ -1,130 +1,23 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables' as *;
+@use 'mixins' as *;
 
 body.home {
-  background-color: $white-background-color;
+  background-color: #f8f6f5;
   color: $grey-text-color;
 
-  .carousel-caption {
-    z-index: 0;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-
-  .header { margin-bottom: 0; }
-
-  .container-fluid {
-    padding: 0;
-
-    .row { margin: 0; }
-  }
-
-  @media(min-width: 768px) {
-    .jumbotron h3 {
-      margin-top: 140px;
-      font-size: 40pt;
-    }
-
-    .contact {
-      h2 { padding-top: 60px; }
-    }
-  }
-
-  @media(max-width: 768px) {
-    .jumbotron h3 {
-      margin-top: 80px;
-      font-size: 30pt;
-    }
-
-    .description {
-      h4 { font-size: 18pt; }
-    }
-
-    .images {
-      .col-xs-12 { padding: 0; }
-    }
-
-    .contact {
-      h2 { padding-top: 0; }
-      .section { text-align: center; }
-    }
-  }
-
-  .jumbotron {
-    background-color: $red-background-color;
-    height: 540px;
-    margin-bottom: 0;
+  // Keep home-specific refinements that complement Tailwind utilities
+  .home-team-trim .team {
     padding-top: 0;
-    border-radius: 0;
-
-    .carousel {
-      height: 510px;
-
-      .carousel-control { background-image: none; }
-
-      .carousel-caption {
-        text-shadow: none;
-
-        .btn { margin-top: 30px; }
-      }
-    }
+    padding-bottom: 0;
   }
 
-  .description {
-    background-color: $light-background-color;
-    margin-top: -60px;
-    padding-bottom: 120px;
-
-    h1, h4 {
-      font-weight: 700;
-      text-align: center;
-    }
-
-    h1 {
-      text-transform: uppercase;
-      @include vertical-margin(100px);
-    }
-
-    h4 { @include vertical-margin(10px); }
-
-    p {
-      font-size: 10pt;
-      text-align: center;
-    }
+  .home-hero-minheight {
+    min-height: 460px;
   }
 
-  .images {
-    max-height: 360px;
-    overflow: hidden;
-
-    .img-thumbnail {
-      padding: 0;
-      border: none;
-    }
-
-    .col-xs-2 {
-      padding: 0;
-      margin-bottom: -20px;
-    }
-  }
-
-  .technology {
-    @include vertical-padding(120px);
-
-    .featurette-divider {
-      margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-    }
-
-    .featurette-heading {
-      letter-spacing: -0.05rem;
-    }
-
-    @media (min-width: 40em) {
-      .featurette-heading {
-        font-size: 50px;
-      }
+  @media (min-width: 768px) {
+    .home-hero-minheight {
+      min-height: 520px;
     }
   }
 }

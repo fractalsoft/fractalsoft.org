@@ -1,30 +1,141 @@
 - content_for :body_class, 'home'
-.w-full.bg-gradient-to-br.from-[#c3261c].to-red-800.text-white
-  section.home-hero
-    .max-w-4xl.mx-auto.px-4.py-16.md:py-20
-      h1.home-hero__headline.text-4xl.md:text-5xl.font-bold.leading-tight.mb-4
-        = t('.hero.headline')
-      p.home-hero__subheadline.text-lg.opacity-95.mb-6.max-w-2xl
-        = t('.hero.subheadline')
-      .flex.flex-wrap.items-center.gap-3
-        = link_to '#contact', title: t('.title.in_touch'), class: 'btn btn-lg btn-accent text-neutral font-semibold shadow' do
-          = t('.button.contact_us')
-        = link_to '#pillars', class: 'btn btn-lg btn-outline btn-ghost text-white border-2 font-semibold' do
-          = t('.button.rescue_cta')
 
-  = render 'home/pillars'
+/ Top hero — daisyUI hero + card
+.hero
+  .hero-content.w-full.max-w-7xl.px-4.py-12.md:py-16.home-hero-minheight
+    .flex.flex-col.md:flex-row.gap-8.lg:gap-12.items-stretch.w-full
+      / Left: copy + CTAs
+      .flex-1.min-w-0.space-y-6.self-center
+        .badge.badge-error.badge-outline.gap-2.font-semibold.uppercase.tracking-wide class='text-[11px]'
+          = lucide_icon 'zap', class: 'w-3.5 h-3.5 shrink-0'
+          = t('.hero.label', default: 'High-performance engineering')
+        h1.text-4xl.md:text-5xl.lg:text-6xl.font-extrabold.leading-tight.text-neutral-900
+          = t('.hero.headline')
+        p.text-base.md:text-lg.text-neutral-600.max-w-xl
+          = t('.hero.subheadline')
+        .flex.flex-wrap.items-center.gap-3
+          = link_to '#contact', title: t('.title.in_touch'), class: 'btn btn-primary inline-flex items-center gap-2' do
+            = t('.button.contact_us', default: 'Schedule Your Technical Consultation')
+            = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
+          = link_to '#pillars', class: 'btn btn-ghost bg-base-200 hover:bg-base-300 text-neutral-800' do
+            = t('.button.rescue_cta', default: 'View Our Work')
+        .flex.flex-wrap.items-center.gap-3.text-xs.text-neutral-500
+          span.font-semibold.uppercase.tracking-wide.mr-2
+            = t('.hero.trust.label', default: 'Trusted by teams who ship')
+          span.badge.badge-ghost
+            = t('.hero.trust.item_1', default: 'Rescued legacy Rails apps')
+          span.badge.badge-ghost
+            = t('.hero.trust.item_2', default: 'Embedded product squads')
 
-  .container.mx-auto.px-4.home-team-trim.py-8
-    = render 'people/team', people: @home.people, cached: true, compact: true
+      / Right: illustrative card with full-height image and status overlays
+      .flex-1.min-w-0.flex.items-stretch
+        .card.shadow-xl.rounded-2xl.border.border-dashed.border-rose-200.flex-1.min-h-0
+          .card-body.relative.p-6.md:p-8.min-h-0
+            .absolute.top-6.right-6.z-10.badge.badge-neutral.gap-2.bg-white.text-neutral-800.border-0.shadow-sm
+              span.w-2.h-2.rounded-full.bg-green-500
+              | System Uptime 99.9%
+            figure.rounded-xl.overflow-hidden.flex-1.min-h-0
+              img.w-full.h-full.object-cover src='https://placehold.co/560x320/fef2f2/db2626?text=Fractal+Engine' alt='System uptime visual'
+            p.text-center.text-xs.font-semibold.uppercase.tracking-wider.text-rose-400.mt-3
+              | FRACTAL_ENGINE_ACTIVE
 
-  #contact.container.mx-auto.px-4.contact.py-10
-    h2.text-2xl.font-bold.mb-4
-      = t('.contact.header')
-    p.hidden.md:block.mb-6.max-w-xl.text-base
-      = t('.contact.description')
-    .grid.grid-cols-1.md:grid-cols-3.gap-8.items-start
-      .md:col-span-1
+/ Engineering philosophy / pillars
+= render 'home/pillars'
+
+/ Results / case studies (placeholder section wired to projects later)
+.bg-base-200
+  .container.mx-auto.px-4.py-16.space-y-8
+    .flex.items-end.justify-between.gap-6
+      .space-y-2
+        h2.text-3xl.md:text-4xl.font-extrabold.text-neutral-900.tracking-tight
+          | Proven Results
+        p.text-sm.md:text-base.text-neutral-600
+          | Transformative engineering for global leaders.
+      = link_to '#', class: 'text-sm font-semibold inline-flex items-center gap-1 text-red-600 hover:text-red-700' do
+        | All Case Studies
+        = lucide_icon 'arrow-up-right', class: 'w-4 h-4 shrink-0'
+
+    .grid.grid-cols-1.md:grid-cols-2.gap-6
+      = link_to '#', class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
+        figure class='min-h-[320px] md:min-h-[380px]'
+          img.w-full.h-full.object-cover src='https://placehold.co/1200x700/f3f4f6/111827?text=Case+Study+Image' alt='Case study preview'
+        .card-body.p-8.md:p-10.justify-between
+          .space-y-2
+            .badge.badge-error.uppercase.tracking-wide.leading-none class='text-[10px]'
+              | Fintech Scaleup
+            .badge.badge-ghost.bg-white/15.text-white/85.leading-none class='text-[10px]'
+              | Infrastructure Rescue
+          .space-y-3
+            .space-y-1
+              h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
+                | 40% cost reduction
+              p.text-sm.md:text-base.leading-relaxed.text-white/90 class='max-w-[46ch]'
+                | Reduced infrastructure costs for SaaS platform Y
+            p.text-xs.md:text-sm.leading-relaxed.text-white/65 class='max-w-[64ch]'
+              | Modernizing legacy monolith into high-performance micro-services.
+
+      = link_to '#', class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
+        figure class='min-h-[320px] md:min-h-[380px]'
+          img.w-full.h-full.object-cover src='https://placehold.co/1200x700/0f766e/ecfeff?text=Case+Study+Image' alt='Case study preview'
+        .card-body.p-8.md:p-10.justify-between
+          .space-y-2
+            .badge.badge-error.uppercase.tracking-wide.leading-none class='text-[10px]'
+              | Health Tech
+            .badge.badge-ghost.bg-white/15.text-white/85.leading-none class='text-[10px]'
+              | AI Integration
+          .space-y-3
+            .space-y-1
+              h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
+                | 3‑month launch
+              p.text-sm.md:text-base.leading-relaxed.text-white/90 class='max-w-[46ch]'
+                | Launched MVP Z with 99.9% uptime
+            p.text-xs.md:text-sm.leading-relaxed.text-white/65 class='max-w-[64ch]'
+              | Rapid development cycle for a critical patient monitoring tool.
+
+/ Insights / metrics
+.bg-base-100
+  .container.mx-auto.px-4.py-16.space-y-8
+    .max-w-2xl.space-y-3
+      h2.text-2xl.md:text-3xl.font-bold.text-neutral-900
+        = t('.insights.title', default: 'Innovation hub')
+      p.text-base.text-neutral-600
+        = t('.insights.body', default: 'We partner long-term with teams to keep products fast, secure, and evolving.')
+    .stats.stats-vertical.lg:stats-horizontal.shadow.bg-base-100
+      .stat
+        .stat-title
+          = t('.insights.metrics.projects.title', default: 'Products rescued or launched')
+        .stat-value
+          = t('.insights.metrics.projects.value', default: '50+')
+        .stat-desc
+          = t('.insights.metrics.projects.desc', default: 'From prototypes to high-traffic platforms')
+      .stat
+        .stat-title
+          = t('.insights.metrics.years.title', default: 'Years shipping production code')
+        .stat-value
+          = t('.insights.metrics.years.value', default: '10+')
+        .stat-desc
+          = t('.insights.metrics.years.desc', default: 'Battle-tested across stacks & domains')
+      .stat
+        .stat-title
+          = t('.insights.metrics.stack.title', default: 'Technologies we work with')
+        .stat-value
+          = t('.insights.metrics.stack.value', default: '60+')
+        .stat-desc
+          = t('.insights.metrics.stack.desc', default: 'Rails, JS, cloud, data & more')
+
+/ Final CTA with contact + map
+#contact.bg-base-200
+  .container.mx-auto.px-4.py-16
+    .grid.grid-cols-1.lg:grid-cols-2.gap-10.items-start
+      .space-y-4
+        h2.text-2xl.md:text-3xl.font-bold.text-neutral-900
+          = t('.contact.header')
+        p.text-base.text-neutral-600.max-w-xl
+          = t('.contact.description')
+        .card.bg-base-100.shadow-xl
+          .card-body
+            = render 'contact_forms/form', contact_form: @home.contact
+      .space-y-4
         = render 'contact_forms/contact'
-      .md:col-span-2
-        = render 'contact_forms/form', contact_form: @home.contact
+
 = render 'xmas'

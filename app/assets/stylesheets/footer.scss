@@ -1,17 +1,8 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables' as *;
 
 .footer {
-  @include navbar($dark-background-color, $white-text-color, $hover-header-text-color);
-
+  background-color: $dark-background-color;
+  color: $white-text-color;
   margin-bottom: 0;
   margin-top: 110px;
-
-  .container {
-    margin-bottom: 20px;
-  }
-
-  .text-white {
-    color: $white-text-color;
-  }
 }

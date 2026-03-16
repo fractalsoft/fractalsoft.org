@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables' as *;
 
 body.contact-forms {
   .container.contact {
@@ -32,11 +32,6 @@ body.home {
       left: 15px;
       position: absolute;
       visibility: hidden;
-    }
-
-    .btn.btn-default {
-      border-width: 1px;
-      width: 212px;
     }
 
     .row { margin: 0; }

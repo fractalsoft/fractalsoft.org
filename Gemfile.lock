@@ -90,8 +90,6 @@ GEM
     airbrussh (1.6.1)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.3)
-    autoprefixer-rails (10.4.21.0)
-      execjs (~> 2)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -109,9 +107,6 @@ GEM
       debug_inspector (>= 1.2.0)
     bootsnap (1.23.0)
       msgpack (~> 1.2)
-    bootstrap (5.3.3)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 2.11.8, < 3)
     brakeman (8.0.4)
       racc
     builder (3.3.0)
@@ -242,7 +237,6 @@ GEM
     erb (6.0.2)
     erubi (1.13.1)
     erubis (2.7.0)
-    execjs (2.10.0)
     factory_bot (6.5.6)
       activesupport (>= 6.1.0)
     factory_bot_rails (6.5.1)
@@ -348,6 +342,8 @@ GEM
     loofah (2.25.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
+    lucide-rails (0.7.3)
+      railties (>= 4.1.0)
     mail (2.9.0)
       logger
       mini_mime (>= 0.1.1)
@@ -397,7 +393,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.1-x86_64-linux-gnu)
       racc (~> 1.4)
-    normalize-rails (8.0.1)
     oj (3.16.15)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
@@ -408,7 +403,6 @@ GEM
       racc
     path_expander (2.0.1)
     pg (1.5.9)
-    popper_js (2.11.8)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -594,18 +588,11 @@ GEM
       simplecov (>= 0.22.0)
       tty-which (~> 0.5.0)
       virtus (~> 2.0)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
     sass-embedded (1.98.0)
       google-protobuf (~> 4.31)
       rake (>= 13)
     sass-embedded (1.98.0-x86_64-linux-gnu)
       google-protobuf (~> 4.31)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-    scss_lint (0.60.0)
-      sass (~> 3.5, >= 3.5.5)
     securerandom (0.4.1)
     sexp_processor (4.17.5)
     shoulda-matchers (6.4.0)
@@ -692,7 +679,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap (>= 1.16.0)
-  bootstrap (~> 5.3.3)
   brakeman
   bullet
   byebug
@@ -719,11 +705,11 @@ DEPENDENCIES
   jbuilder (~> 2.14)
   listen
   lograge
+  lucide-rails (~> 0.7)
   mail_form
   meta-tags
   mini_racer
   nokogiri
-  normalize-rails (~> 8.0.1)
   oj
   pg
   propshaft
@@ -746,7 +732,6 @@ DEPENDENCIES
   rubocop-rspec
   rubocop-rspec_rails
   rubycritic
-  scss_lint
   shoulda-matchers
   simple_form (~> 5.4)
   slim-rails (~> 3.7)
