@@ -1,9 +1,9 @@
-.row.featurette
-  .col-md-8.order-md-2
-    h2.featurette-heading.fw-bold.lh-1
+.grid.grid-cols-1.md:grid-cols-3.gap-8.items-center.py-10
+  .md:col-span-1.order-last.md:order-first.text-center
+    = image_tag image_path, alt: image_name, height: image_height, width: image_width, class: 'mx-auto max-h-56'
+  .md:col-span-2
+    h2.text-2xl.md:text-3xl.font-bold.mb-3
       = headline
-    p.lead
+    p.text-lg.text-base-content/80
       = description
-  .col-md-4.order-md-1.text-center
-    = image_tag image_path, alt: image_name, height: image_height, width: image_width, class: 'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto'
-hr.featurette-divider
+hr.border-t.border-base-300.my-8

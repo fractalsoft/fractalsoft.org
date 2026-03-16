@@ -4,75 +4,12 @@
 body.people {
   .team {
     background-color: $light-background-color;
-    margin-top: -250px;
   }
 }
 
 body.person {
-  .accordion-button {
-    --bs-accordion-active-bg: #c3261c;
-    --bs-accordion-active-color: #fff;
-    --bs-accordion-border-color: #fff;
-    --bs-accordion-btn-bg: #fbfbfb;
-    --bs-accordion-btn-color: #2e3641;
-  }
-
   .business-card {
     background-color: $light-background-color;
-    margin-top: -250px;
-    padding: 50px;
-
-    .position {
-      font-size: 18pt;
-      font-weight: 700;
-      margin-bottom: 40px;
-    }
-
-    .description {
-      h4 { margin-top: 20px; }
-      p { margin-top: 20px; }
-    }
-
-    .label-danger { background-color: $red-background-color; }
-    .label-default { background-color: $light-grey-background-color; }
-  }
-
-  blockquote {
-    $light-gray: #777;
-    $lighter-gray: #ddd;
-    $lightest-gray: #eee;
-
-    border-left: 5px solid $lighter-gray;
-    font-family: Georgia, Times;
-    font-style: italic;
-    padding-left: 10px;
-    position: relative;
-    width: 90%;
-
-    &:after {
-      bottom: 0;
-      color: $lightest-gray;
-      content: '"';
-      font-size: 7em;
-      line-height: 0;
-      position: absolute;
-      right: -40px;
-    }
-
-    footer,
-    p {
-      font-size: 10pt;
-    }
-
-    footer {
-      color: $light-gray;
-      font-size: 0.75em;
-    }
-
-    p:last-child:before {
-      content: '—';
-      margin-right: 5px;
-    }
   }
 }
 
@@ -80,43 +17,4 @@ body.person {
   background-color: $red-background-color;
   height: 350px;
   margin-top: -20px;
-}
-
-.team {
-  h2 {
-    @include vertical-padding(60px);
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  .person-card {
-    padding: 30px;
-    padding-bottom: 0;
-
-    &:hover { border-color: $red-background-color; }
-
-    h3 {
-      @include vertical-padding(25px);
-      font-size: 12pt;
-      margin: 0;
-    }
-  }
-
-  .social-link {
-    z-index: 10;
-    position: relative;
-  }
-}
-
-.member-picture img {
-  box-shadow: 0 0 4px 4px $light-grey-background-color;
-  transition: 1s ease-in-out;
-  transform: scale(0.9);
-
-  &:hover {
-    box-shadow: 0 0 0 0;
-    filter: brightness(110%);
-    transition: 1s ease-in-out;
-    transform: scale(0.95);
-  }
 }

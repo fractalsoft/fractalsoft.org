@@ -1,8 +1,8 @@
-ul.dropdown-menu aria-labelledby="navbar-language-dropdown"
+ul.menu.menu-sm
   - Language.available.each_pair do |locale, name|
     - I18n.with_locale(locale) do
       - url = yield(:current_page_url).presence || url_for(locale: locale.to_s)
       - url = '#' if url == request.env['PATH_INFO']
       - hreflang = (locale == I18n.default_locale) ? 'x-default' : locale
       li
-        = link_to name, url, hreflang: hreflang, rel: 'alternate', class: 'dropdown-item'
+        = link_to name, url, hreflang: hreflang, rel: 'alternate', class: 'btn btn-ghost justify-start'

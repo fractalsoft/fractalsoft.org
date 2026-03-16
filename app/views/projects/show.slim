@@ -1,20 +1,24 @@
 - content_for :body_class, 'project'
 
-.container.project
-  .header-img style='background-image: url("#{asset_path(@project.top_image.image_url)}")'
-    .logo
-      = image_tag @project.logo_image.image_url
-  .row
-    .col-sm-6.col-sm-offset-3
-      p = @project.description
-      = link_to @project.url, @project.url
-  .images
-    .row
-      = image_tag @project.pc_image.image_url, class: 'pull-right'
-    - @project.page_images.each do |image|
-      .row
-        .col-sm-8.col-sm-offset-2
-          = image_tag image.image_url
-  .logo
-    = image_tag @project.logo_image.image_url
-    span = @project.year
+.w-full.project
+  .header-img.relative.flex.items-end.justify-center
+    .logo.relative.mb-8
+      = image_tag @project.logo_image.image_url, class: 'mx-auto drop-shadow-lg'
+
+  .container.mx-auto.px-4.py-10
+    .max-w-2xl.mx-auto.space-y-4.text-center
+      p.text-lg.text-base-content/90
+        = @project.description
+      = link_to @project.url, @project.url, class: 'link link-primary break-all'
+
+    .images.mt-12.space-y-10
+      .flex.justify-center
+        = image_tag @project.pc_image.image_url, class: 'max-w-4xl w-full rounded-xl shadow-lg'
+      - @project.page_images.each do |image|
+        .flex.justify-center
+          = image_tag image.image_url, class: 'max-w-3xl w-full rounded-xl shadow-md'
+
+    .logo.mt-10.text-center.text-base-content/70.space-x-2
+      = image_tag @project.logo_image.image_url, class: 'inline-block h-10 align-middle mr-2'
+      span.align-middle.font-medium
+        = @project.year

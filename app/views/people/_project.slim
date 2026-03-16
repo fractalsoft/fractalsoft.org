@@ -1,21 +1,21 @@
 .row.description
-  .col-md-3
-    h4
-      - options = { target: '_blank', class: 'link-secondary link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' }
+  .md:w-1/3.w-full.mb-4.md:mb-0
+    h4.text-base.font-semibold
+      - options = { target: '_blank', class: 'link link-primary' }
       - options[:rel] = 'nofollow' unless project.dofollow
       - if project.display
         = project.title
         br
-      small
+      small.block.text-sm.text-base-content/70
         = link_to_if project.url, project.subtitle, project.url, options
 
-  .col-md-9
-    p.text-justify
+  .md:w-2/3.w-full.space-y-2
+    p.text-justify.text-sm.text-base-content/80
       = project.introduction
-    p
-      strong
+    p.text-sm
+      strong.block.mb-1
         = t('.major_contributions')
-      ul
+      ul.list-disc.list-inside.space-y-1
         - contributions.each do |contribution|
           li
             = contribution
