@@ -1,4 +1,5 @@
 - content_for :body_class, 'people'
 
-.container-fluid.background
-= render 'team', people: @people
+.w-full.background
+  .container.mx-auto.px-4.py-12
+    = render 'team', people: @people

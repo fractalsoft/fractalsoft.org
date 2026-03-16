@@ -1,8 +1,8 @@
-.jumbotron
-  .container
-    h2
-      = t('.title')
-    p
-      = t('.body')
-    .row.row-margin
-      = image_tag 'job_offers/job.svg', alt: 'looking job', class: 'center-block'
+.hero.min-h-[320px].bg-base-200
+  .hero-content.flex-col.md:flex-row-reverse.gap-10
+    = image_tag 'job_offers/job.svg', alt: 'looking job', class: 'max-w-xs md:max-w-sm'
+    .max-w-xl
+      h2.text-2xl.font-bold.mb-3
+        = t('.title')
+      p.text-base.text-base-content/80
+        = t('.body')

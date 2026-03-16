@@ -1,22 +1,36 @@
-nav.header.navbar.navbar-expand-lg
-  .container
-    = link_to root_path, class: 'navbar-brand' do
-      .d-block.d-sm-none
+nav.header.navbar.bg-base-100.shadow-md
+  .navbar-start
+    = link_to root_path, class: 'btn btn-ghost normal-case text-xl flex items-center gap-2' do
+      span.block.sm:hidden
         = render 'layouts/shared/logo', id: 'fractalsoft-logo-header'
-      = image_tag 'home/logo_big.png', class: 'd-none d-sm-block'
-    button.navbar-toggler type='button' data-bs-toggle='collapse' data-bs-target='#fractalsoft-navbar-collapse' aria-controls='fractalsoft-navbar-collapse' aria-expanded='false' aria-label='Toggle navigation'
-      span.visually-hidden = t('layouts.menu.toggle_navigation')
-      span.navbar-toggler-icon
+      = image_tag 'home/logo_big.png', class: 'hidden sm:block max-h-10'
 
-    #fractalsoft-navbar-collapse.collapse.navbar-collapse.justify-content-end
-      ul.navbar-nav
-        li.nav-item = link_to t('layouts.menu.team'), people_path, class: 'nav-link'
-        li.nav-item = link_to t('layouts.menu.community'), communities_path, class: 'nav-link'
-        li.nav-item = link_to t('layouts.menu.job_offers'), job_offers_path, class: 'nav-link'
-        li.nav-item = link_to t(:blog), blog_url, class: 'nav-link'
-        li.nav-item = link_to t('layouts.menu.contact'), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'nav-link'
-        li.nav-item.dropdown
-          a.nav-link.dropdown-toggle href='#' id='navbar-language-dropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'
+  .navbar-end.hidden.lg:flex
+    ul.menu.menu-horizontal.gap-2
+      li = link_to t('layouts.menu.team'), people_path, class: 'btn btn-ghost'
+      li = link_to t('layouts.menu.community'), communities_path, class: 'btn btn-ghost'
+      li = link_to t('layouts.menu.job_offers'), job_offers_path, class: 'btn btn-ghost'
+      li = link_to t(:blog), blog_url, class: 'btn btn-ghost'
+      li = link_to t('layouts.menu.contact'), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'btn btn-primary'
+      li
+        details.dropdown
+          summary.btn.btn-ghost id='navbar-language-dropdown'
             = t('layouts.menu.language')
-            span.caret
           = render 'layouts/shared/languages'
+
+  .navbar-end.lg:hidden
+    details.dropdown.dropdown-end
+      summary.btn.btn-ghost aria-label=t('layouts.menu.toggle_navigation')
+        svg.h-5.w-5 xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'
+          path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'
+      ul.menu.menu-sm.dropdown-content.mt-3.p-2.shadow.bg-base-100.rounded-box.w-52
+        li = link_to t('layouts.menu.team'), people_path, class: 'btn btn-ghost justify-start'
+        li = link_to t('layouts.menu.community'), communities_path, class: 'btn btn-ghost justify-start'
+        li = link_to t('layouts.menu.job_offers'), job_offers_path, class: 'btn btn-ghost justify-start'
+        li = link_to t(:blog), blog_url, class: 'btn btn-ghost justify-start'
+        li = link_to t('layouts.menu.contact'), new_contact_form_path, data: { no_turbolink: 'true' }, class: 'btn btn-primary justify-start'
+        li
+          details.dropdown
+            summary.btn.btn-ghost justify-start id='navbar-language-dropdown-mobile'
+              = t('layouts.menu.language')
+            = render 'layouts/shared/languages'

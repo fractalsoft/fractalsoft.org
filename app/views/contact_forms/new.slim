@@ -1,22 +1,21 @@
 - content_for :body_class, 'contact-forms'
 - office_addresses = OfficeAddress.sorted
-.container.contact
-  h2
+.container.contact.mx-auto.px-4.py-12
+  h2.text-3xl.font-bold.mb-3
     = t('.contact.header')
-  p.d-none.d-sm-block
+  p.hidden.sm:block.mb-6.max-w-xl.text-base.text-base-content/80
     = t('.contact.description')
-  .row
-    .col-md-4.col-12
+  .grid.grid-cols-1.lg:grid-cols-3.gap-8.items-start
+    .lg:col-span-1
       = render 'contact'
-    .col-md-8.col-12.d-none.d-sm-block
-      - office_addresses.each do |office_address|
-        - class_name = (office_address.position == 1) ? '' : ' map-display-none'
-        iframe width='425' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="#{office_address.map_link}" style='border: 1px solid #e1e1e1' class="map #{class_name}" id="#{office_address.slug}-map"
-      .d-none.d-sm-block
+      .mt-6.space-y-3.hidden.sm:block
         - office_addresses.each do |office_address|
-          - class_name = (office_address.position == 1) ? 'active' : ''
-          .btn.btn-default.btn-map class="#{class_name}" data-target="#{office_address.slug}-map"
+          - class_name = (office_address.position == 1) ? '' : ' map-display-none'
+          iframe.w-full.h-72.border.border-base-300.rounded-lg.frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="#{office_address.map_link}" class="map #{class_name}" id="#{office_address.slug}-map"
+      .mt-4.hidden.sm:flex.flex-wrap.gap-2
+        - office_addresses.each do |office_address|
+          - class_name = (office_address.position == 1) ? 'btn-active' : ''
+          button.btn.btn-sm.btn-outline.btn-map class=class_name data-target="#{office_address.slug}-map"
             = office_address.name
-    #contact.row
-      .col-xl-5.offset-xl-4.col-lg-6.offset-lg-4.col-md-8.offset-md-4
-        = render 'form', contact_form: @contact_form
+    #contact.lg:col-span-2
+      = render 'form', contact_form: @contact_form

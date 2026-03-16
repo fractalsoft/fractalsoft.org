@@ -2,19 +2,17 @@
 - description @community.meta_description
 - title @community.title
 
-.container-fluid.background
-.container.community-item
-  .row
-    .col-md-10.offset-md-1
-      h1
-        = sanitize(@community.name)
+.w-full.background
+.container.mx-auto.px-4.py-12.community-item
+  .max-w-3xl.mx-auto.space-y-6.text-center
+    h1.text-3xl.font-bold.uppercase
+      = sanitize(@community.name)
 
-      - if @community.logo?
-        = image_tag @community.logo_url, alt: @community.name, style: 'width: 256px;'
+    - if @community.logo?
+      = image_tag @community.logo_url, alt: @community.name, style: 'width: 256px;', class: 'mx-auto mb-8'
 
-      .text-justify
-        == Markdown.new(@community.description).to_html
+    .text-left.text-base.text-base-content/80.prose.max-w-none
+      == Markdown.new(@community.description).to_html
 
-  .row
-    .col-md-10.offset-md-1
-      = link_to 'Back', communities_path, class: 'btn btn-default'
+  .mt-10.text-center
+    = link_to 'Back', communities_path, class: 'btn btn-outline'

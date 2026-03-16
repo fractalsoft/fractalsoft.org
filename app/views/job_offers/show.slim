@@ -2,16 +2,14 @@
 - description @job_offer.meta_description
 - title @job_offer.meta_title
 
-.container-fluid.background
-.container.job-offer-item
-  .row
-    .col-md-10.offset-md-1
-      h1
-        = @job_offer.headline
+.w-full.background
+.container.mx-auto.px-4.py-12.job-offer-item
+  .max-w-3xl.mx-auto.space-y-6.text-center
+    h1.text-3xl.font-bold.uppercase
+      = @job_offer.headline
 
-      .text-justify
-        == Markdown.new(MarkdownPreparator.render(@job_offer.description)).to_html
+    .text-left.text-base.text-base-content/80.prose.max-w-none
+      == Markdown.new(MarkdownPreparator.render(@job_offer.description)).to_html
 
-  .row
-    .col-md-10.offset-md-1
-      = link_to 'Back', job_offers_path, class: 'btn btn-default'
+  .mt-10.text-center
+    = link_to 'Back', job_offers_path, class: 'btn btn-outline'
