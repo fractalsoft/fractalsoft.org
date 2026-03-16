@@ -37,29 +37,25 @@ pl:
     index:
       button:
         contact_us: Napisz do nas
+        rescue_cta: Ratujemy projekty
       contact:
         description: Niezależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
         header: Chcesz się z nami skontaktować?
-      header_html: Aplikacje <strong>internetowe</strong> i <strong>mobilne</strong> to nasza pasja
-      how_we_work:
-        description:
-          one: Porozmawiajmy o Twoich potrzebach, zanim rozpoczniemy. Chcemy dobrze zrozumieć Twój problem i zaprojektować rozwiązanie specjalnie dla Ciebie.
-          three: 'Wszystko w jednym miejscu: projekt, wykonanie i wdrożenie. Nie musisz się o nic martwić. Zadbamy o Twój produkt do samego końca.'
-          two: Krok po kroku budujemy produkt dla Ciebie. W każdej chwili możesz dać nam sugestie. Zależy nam na wysokiej jakości kodu, dlatego tworzymy testy i dbamy o użyteczność aplikacji.
-        header:
-          one: UX i projekt graficzny
-          three: Wdrożenie aplikacji
-          two: Rozwijanie projektu
-        slogan: Jak pracujemy?
-      technology:
-        description:
-          one: Standard HTML, który ułatwia programistom pracę nad tworzeniem stron internetowych. Dodatkowo zapewnia on takie funkcjonalności jak obsługę audio i video, rysowanie grafiki w canvas oraz geolokalizację. Sprawia, że nasze projekty stają się jeszcze ciekawsze.
-          three_html: Otwarte oprogramowanie, czyli takie do którego istnieje swobodny i&nbsp;wolny dostęp dla wszystkich jego użytkowników. Dzięki wglądowi w kod źródłowy aplikacji mogą one być nieustannie zmieniane, udoskonalane i rozpowszechniane. Powodując w ten sposób szybszy rozwój programów oraz efektywne eliminowanie błędów.
-          two: Nowoczesny framework do budowania w pełni funkcjonalnych aplikacji internetowych. Jego ogromną zaletą jest możliwość szybkiego i przyjemnego tworzenia oprogramowania. Pozwala to na błyskawiczne dostosowywanie się do zmiennych wymagań rynku. Zapewniając klientowi większą satysfakcję z efektów pracy programistów.
-        header:
-          one: HTML5
-          three: Open Source
-          two: Ruby on Rails
+      hero:
+        label: Inżynieria wysokiej wydajności
+        headline: Full stack od pomysłu do produkcji
+        subheadline: Kompletny produkt od insightów po wdrożenie. Ty prowadzisz biznes—my załatwiamy technicznie.
+      pillars:
+        section_title: Nasza filozofia inżynierii
+        legacy_ai:
+          title: Legacy & odzyskiwanie AI
+          body: "Specjalizujemy się w zamianie zatrzymanych projektów i zepsutych prototypów AI w skalowalną infrastrukturę gotową do produkcji. Jeśli poprzedni zespół utknął—my znajdziemy wyjście."
+        vibe_cleanup:
+          title: Porządki po vibe codingu
+          body: "Zamieniamy eksperymentalne „vibe-driven” skrypty w bezpieczne, utrzymywalne codebase’y. Wdrażamy wzorce high-performance engineering bezpośrednio w Wasze nowe funkcje produktu."
+        direct_senior:
+          title: Bezpośredni dostęp do seniorów
+          body: "Bez warstw middle managementu i juniorów w cieniu. Pracujesz bezpośrednio z seniorami, którzy współodpowiadają za Wasze rezultaty biznesowe i architekturę techniczną."
       title:
         in_touch: Bądźmy w kontakcie
   job_offers:
@@ -99,10 +95,10 @@ pl:
       title: Informacje techniczne o użytkowniku
       user_agent: Przeglądarka
   meta:
-    description: Fractal Soft to zespół programistów webowych i mobilnych. Pomożemy Ci zbudować aplikację w Ruby on Rails i JavaScript. Sprawdź nas!
-    keywords: Ruby on Rails, EmberJS, JavaScript, CoffeeScript, aplikacje internetowe i mobilne
+    description: Fractal Soft—full stack od insightu do produkcji, porządki po vibe codingu dla aplikacji z AI oraz ratowanie projektów i audyty. Ruby on Rails i nowoczesny web.
+    keywords: full stack, ratowanie projektów, produkcja, Ruby on Rails, JavaScript, audyt oprogramowania, vibe coding
     site: Fractal Soft
-    title: Programiści Ruby on Rails i JavaScript do wynajęcia
+    title: Full stack i ratowanie projektów—Fractal Soft
     twitter:
       card: summary
       site: "@fractal_soft"

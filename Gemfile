@@ -14,6 +14,7 @@ gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'
 gem 'active_link_to'
 gem 'tailwindcss-rails', '~> 4.4'
+gem 'lucide-rails', '~> 0.7'
 gem 'carrierwave', '~> 3.1'
 gem 'commonmarker', '~>2.6.3'
 gem 'draper'
@@ -27,7 +28,6 @@ gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_racer'
 gem 'nokogiri'
-gem 'normalize-rails', '~> 8.0.1'
 gem 'oj' # Fast JSON parser and object serializer
 gem 'pg' # Ruby interface to PostgreSQL RDBMS
 gem 'puma' # Ruby web server built for concurrency
@@ -47,6 +47,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.7'
   gem 'colored'
   gem 'derailed_benchmarks'
+  gem 'dockerfile-rails', '>= 1.5'
   gem 'fasterer'
   gem 'i18n-tasks'
   gem 'listen'
@@ -62,7 +63,6 @@ group :development do
   gem 'rubocop-rspec'
   gem 'rubocop-rspec_rails'
   gem 'rubycritic', require: false
-  gem 'scss_lint'
   gem 'spring'
   gem 'stackprof'
   gem 'web-console', '>= 4.2' # <%= console %> anywhere in the code
@@ -88,7 +88,3 @@ group :test do
   gem 'shoulda-matchers'
   gem 'test-prof'
 end
-
-gem 'dockerfile-rails', '>= 1.5', group: :development
-
-gem "tailwindcss-rails", "~> 4.4"

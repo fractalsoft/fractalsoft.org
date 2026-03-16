@@ -1,45 +1,8 @@
-@import 'variables';
+@use 'variables' as *;
 
-.btn {
-  font-family: $asap-fonts;
-  padding: 15px 50px;
-
-  &.btn-default {
-    background-color: $white-background-color;
-    border-width: 3px;
-    color: $light-grey-text-color;
-    font-weight: 700;
-
-    &.active,
-    &:active {
-      background-color: $grey-background-color;
-      box-shadow: none;
-    }
-  }
-
-  &.btn-info {
-    background-color: $dark-background-color;
-    border-width: 0;
-    color: $white-text-color;
-
-    &.active,
-    &:active {
-      background-color: $dark-background-color;
-      box-shadow: none;
-    }
-  }
-
-  &.btn-primary {
-    background-color: $red-background-color;
-    border-width: 0;
-    color: $white-text-color;
-
-    &.active,
-    &:active {
-      background-color: $red-background-color;
-      box-shadow: none;
-    }
-  }
+body.home {
+  background-color: #f8f6f5;
+  color: #616060;
 }
 
 h1,
@@ -62,4 +25,40 @@ p {
 
 .text-justify {
   text-align: justify;
+}
+
+.btn.btn-primary {
+  background-color: #d9251c;
+  color: #ffffff;
+  border: none;
+  padding-inline: 1.25rem;
+  padding-block: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  min-height: 0;
+  height: auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: #c11f16;
+    box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Pillar card icons (home page): rounded square, rose background + icon color */
+section#pillars.home-pillars .home-pillar-icon {
+  display: flex !important;
+  flex-shrink: 0 !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 0.5rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #ffe4e6 !important;
+  color: #e11d48 !important;
+}
+section#pillars.home-pillars .home-pillar-icon svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
 }
