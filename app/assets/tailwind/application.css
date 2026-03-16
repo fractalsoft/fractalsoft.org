@@ -1,2 +1,19 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Pillar card icons: rounded square, light rose background + rose icon */
+section.home-pillars .home-pillar-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe4e6;
+  color: #e11d48;
+}
+section.home-pillars .home-pillar-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
