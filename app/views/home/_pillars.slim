@@ -1,0 +1,26 @@
+section#pillars.home-pillars.py-12.bg-base-200
+  .container.mx-auto.px-4
+    h2.home-pillars__title.text-center.mb-8
+      = t('home.index.pillars.section_title')
+    .grid.grid-cols-1.lg:grid-cols-3.gap-6
+      .col
+        .card.home-pillar-card.bg-base-100.shadow-md.h-full
+          .card-body.space-y-3
+            h3.home-pillar-card__title.text-lg.font-bold
+              = t('home.index.pillars.full_stack.title')
+            p.home-pillar-card__body.text-base
+              = t('home.index.pillars.full_stack.body')
+      .col
+        .card.home-pillar-card.bg-base-100.shadow-md.h-full
+          .card-body.space-y-3
+            h3.home-pillar-card__title.text-lg.font-bold
+              = t('home.index.pillars.vibe_cleanup.title')
+            p.home-pillar-card__body.text-base
+              = t('home.index.pillars.vibe_cleanup.body')
+      .col
+        .card.home-pillar-card.bg-base-100.shadow-md.h-full
+          .card-body.space-y-3
+            h3.home-pillar-card__title.text-lg.font-bold
+              = t('home.index.pillars.rescue.title')
+            p.home-pillar-card__body.text-base
+              = t('home.index.pillars.rescue.body')

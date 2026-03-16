@@ -1,19 +1,20 @@
 - content_for :body_class, 'projects'
 
-.container.projects
-  .row
+.container.mx-auto.px-4.py-12.projects
+  h1.text-3xl.font-bold.mb-8
+    = t('projects.index.title', default: 'Projects')
+
+  .grid.grid-cols-1.sm:grid-cols-2.lg:grid-cols-3.gap-8
     - @projects.each do |project|
-      .col-md-4.col-sm-6
-        .thumbnail
-          = image_tag project.thumbnail_url(:thumb)
-          .caption
-            h3
-              = project.title
-              - if project.subtitle?
-                small
-                  '
-                  '|
-                  '
-                  = project.subtitle
-            p = project.description
-            p = link_to 'See more', project_path(project, locale: locale)
+      .card.bg-base-100.shadow-md.hover:shadow-lg.transition.hover:-translate-y-1
+        = image_tag project.thumbnail_url(:thumb), class: 'w-full h-48 object-cover rounded-t-2xl'
+        .card-body.space-y-3
+          h3.text-lg.font-semibold.flex.flex-wrap.items-baseline.gap-1
+            span = project.title
+            - if project.subtitle?
+              span.text-sm.font-normal.text-base-content/70
+                = project.subtitle
+          p.text-sm.text-base-content/80
+            = project.description
+          .card-actions.justify-end
+            = link_to t('projects.index.see_more', default: 'See more'), project_path(project, locale: locale), class: 'btn btn-sm btn-primary'

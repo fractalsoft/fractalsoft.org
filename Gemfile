@@ -13,7 +13,7 @@ gem 'rails', '~> 8.0.0'
 gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'bootstrap', '~> 5.3.3'
+gem 'tailwindcss-rails', '~> 4.4'
 gem 'carrierwave', '~> 3.1'
 gem 'commonmarker', '~>2.6.3'
 gem 'draper'
@@ -90,3 +90,5 @@ group :test do
 end
 
 gem 'dockerfile-rails', '>= 1.5', group: :development
+
+gem "tailwindcss-rails", "~> 4.4"

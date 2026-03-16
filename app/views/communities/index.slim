@@ -1,10 +1,11 @@
 - content_for :body_class, 'community'
 
-.container-fluid.background
-.container-fluid
-  .container.px-5.community-list
-    h1.text-center
+.w-full.background
+.container.mx-auto.px-4.py-12.community-list
+  .max-w-3xl.mx-auto.text-center.mb-10
+    h1.text-3xl.font-bold.uppercase
       = t('.title')
+  .space-y-4
     - @communities.each_with_index do |community, index|
       - if index.even?
         = render 'community_on_left',

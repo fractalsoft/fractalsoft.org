@@ -1,18 +1,18 @@
 .col
-  .card.h-100.text-center.border-0
+  .card.h-full.text-center.border-0.bg-base-100.shadow-md.hover:shadow-lg.transition.hover:-translate-y-1
     .card-img-top.member-picture
       = link_to person_path(id: person) do
         = person.image
     .card-header.bg-transparent
-      h3.card-title
+      h3.card-title.text-lg.font-semibold.mt-2
         = person.first_name
-    .card-body.d-flex.flex-column
-      .card-text
+    .card-body.flex.flex-col.gap-3
+      .card-text.text-sm.text-base-content/80
         == person.introduction
       p.mt-auto.pt-4
-        = link_to t('.person.see_full_profile'), person_path(id: person), class: 'btn btn-outline-dark btn-sm'
+        = link_to t('.person.see_full_profile'), person_path(id: person), class: 'btn btn-outline btn-sm'
     .card-footer.bg-transparent
-      ul.list-group.list-group-horizontal.justify-content-center
+      ul.flex.justify-center.gap-3
         = person.website
         = person.blog
         = person.github

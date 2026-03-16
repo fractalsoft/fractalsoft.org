@@ -1,7 +1,6 @@
 - content_for :body_class, 'domain'
 
-.container-fluid.background
-.container.domain-item
-  .row
-    .col-md-10.offset-md-1.text-justify
-      == @body
+.w-full.background
+.container.mx-auto.px-4.py-12.domain-item
+  .max-w-3xl.mx-auto.text-justify.text-base.text-base-content/80.prose.max-w-none
+    == @body

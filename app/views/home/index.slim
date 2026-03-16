@@ -1,78 +1,30 @@
 - content_for :body_class, 'home'
-.container-fluid
-  .jumbotron
-    .container
-      #carousel-main.carousel.slide[data-ride='carousel']
-        .carousel-inner
-          .item.active
-            .carousel-caption
-              h3.normal
-                = t('.header_html')
-              p
-                a.btn.btn-info.btn-lg[href='#contact' title="#{t('.title.in_touch')}"]
-                  = t('.button.contact_us')
+.w-full.bg-gradient-to-br.from-[#c3261c].to-red-800.text-white
+  section.home-hero
+    .max-w-4xl.mx-auto.px-4.py-16.md:py-20
+      h1.home-hero__headline.text-4xl.md:text-5xl.font-bold.leading-tight.mb-4
+        = t('.hero.headline')
+      p.home-hero__subheadline.text-lg.opacity-95.mb-6.max-w-2xl
+        = t('.hero.subheadline')
+      .flex.flex-wrap.items-center.gap-3
+        = link_to '#contact', title: t('.title.in_touch'), class: 'btn btn-lg btn-accent text-neutral font-semibold shadow' do
+          = t('.button.contact_us')
+        = link_to '#pillars', class: 'btn btn-lg btn-outline btn-ghost text-white border-2 font-semibold' do
+          = t('.button.rescue_cta')
 
-  .container.description
-    h1
-      = t('.how_we_work.slogan')
-    .row
-      .col-sm-4
-        .arts
-          = image_tag 'arts/design.png'
-        h4
-          = t('.how_we_work.header.one')
-        p
-          = t('.how_we_work.description.one')
-      .col-sm-4
-        .arts
-          = image_tag 'arts/development.png'
-        h4
-          = t('.how_we_work.header.two')
-        p
-          = t('.how_we_work.description.two')
-      .col-sm-4
-        .arts
-          = image_tag 'arts/deployment.png'
-        h4
-          = t('.how_we_work.header.three')
-        p
-          = t('.how_we_work.description.three')
+  = render 'home/pillars'
 
-  = render 'people/team', people: @home.people, cached: true
+  .container.mx-auto.px-4.home-team-trim.py-8
+    = render 'people/team', people: @home.people, cached: true, compact: true
 
-  .container.technology
-    = render 'used_technology_on_left',
-      description: t('.technology.description.one'),
-      headline: t('.technology.header.one'),
-      image_name: 'HTML5',
-      image_path: '/icons/technology/html5/html5-original-wordmark.svg',
-      image_height: 250,
-      image_width: 250
-
-    = render 'used_technology_on_right',
-      description: t('.technology.description.two'),
-      headline: t('.technology.header.two'),
-      image_name: 'Ruby on Rails',
-      image_path: '/icons/technology/ruby-on-rails/rails-plain-wordmark.svg',
-      image_height: 250,
-      image_width: 250
-
-    = render 'used_technology_on_left',
-      description: t('.technology.description.three_html'),
-      headline: t('.technology.header.three'),
-      image_name: 'Open Source',
-      image_path: '/icons/community/open-source/opensource-original.svg',
-      image_height: 250,
-      image_width: 250
-
-  #contact.container.contact
-    h2
+  #contact.container.mx-auto.px-4.contact.py-10
+    h2.text-2xl.font-bold.mb-4
       = t('.contact.header')
-    p.hidden-xs
+    p.hidden.md:block.mb-6.max-w-xl.text-base
       = t('.contact.description')
-    .row
-      .col-md-4.col-sm-12
+    .grid.grid-cols-1.md:grid-cols-3.gap-8.items-start
+      .md:col-span-1
         = render 'contact_forms/contact'
-      .col-md-8.col-sm-12
+      .md:col-span-2
         = render 'contact_forms/form', contact_form: @home.contact
 = render 'xmas'
