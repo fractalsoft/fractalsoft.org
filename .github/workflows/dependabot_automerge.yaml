@@ -1,35 +1,47 @@
 name: Dependabot automerge
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: ["Pipeline"]
-    types:
-      - completed
+    types: [completed]
+  pull_request:
+    types: [opened, reopened, synchronize, labeled, unlabeled]
 
 jobs:
-  automerge:
-    name: Automerge PRs
+  qualify:
+    name: Qualify PRs
     runs-on: ubuntu-latest
 
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-
     permissions:
-      contents: write
       pull-requests: write
 
     steps:
-      - name: Enable auto-merge for Dependabot PRs
+      - name: Checkout repo
+        uses: actions/checkout@v6
+      - name: Label Dependabot PRs
         run: |
           PRS=$(gh pr list \
             --state open \
             --author "dependabot[bot]" \
             --label "dependencies" \
-            --json number,title,mergeable \
-            --jq '.[] | select(.mergeable == "MERGEABLE") | {number: .number, title: .title}')
+            --json number,title,labels)
 
-          for PR in $(echo "$PRS" | jq -c '.'); do
+          echo "$PRS" | jq -c '.[]' | while read -r PR; do
             NUMBER=$(echo "$PR" | jq -r '.number')
             TITLE=$(echo "$PR" | jq -r '.title')
+            LABELS=$(echo "$PR" | jq -r '.labels[].name')
+
+            # skip if already manually controlled
+            if echo "$LABELS" | grep -q "automerge-ready"; then
+              echo "PR #$NUMBER already ready → skipping qualification"
+              continue
+            fi
+
+            if echo "$LABELS" | grep -q "automerge-blocked"; then
+              echo "PR #$NUMBER blocked → skipping qualification"
+              continue
+            fi
 
             # extract versions from title
             if [[ $TITLE =~ from\ ([0-9]+)\.([0-9]+)\.([0-9]+)\ to\ ([0-9]+)\.([0-9]+)\.([0-9]+) ]]; then
@@ -37,13 +49,84 @@ jobs:
               NEW_MAJOR=${BASH_REMATCH[4]}
 
               if [[ "$NEW_MAJOR" -eq "$OLD_MAJOR" ]]; then
-                echo "Processing PR #$NUMBER (safe version bump)"
-                gh pr merge $NUMBER --auto --rebase || echo "Skipping PR #$NUMBER"
+                echo "Labeling PR #$NUMBER → waiting (safe version bump)"
+                gh pr edit $NUMBER \
+                  --add-label "automerge-waiting" \
+                  --remove-label "automerge-blocked" 2>/dev/null || true
               else
-                echo "Skipping PR #$NUMBER (major version bump)"
+                echo "Labeling PR #$NUMBER → blocked (major version bump)"
+                gh pr edit $NUMBER \
+                  --add-label "automerge-blocked" \
+                  --remove-label "automerge-waiting" 2>/dev/null || true
               fi
             else
               echo "Skipping PR #$NUMBER (cannot parse version)"
+            fi
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  process:
+    name: Process PRs
+    needs: qualify
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' }}
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+      - name: Process automerge logic
+        run: |
+          NOW=$(date +%s)
+          WAIT_SECONDS=$((72 * 3600))  # 72h in seconds
+
+          PRS=$(gh pr list \
+            --state open \
+            --author "dependabot[bot]" \
+            --json number,mergeable,labels,createdAt \
+            --jq '.[] | {number:.number, mergeable:.mergeable, labels:[.labels[].name], createdAt:.createdAt}')
+
+          echo "$PRS" | jq -c '.' | while read -r PR; do
+            NUMBER=$(echo "$PR" | jq -r '.number')
+            MERGEABLE=$(echo "$PR" | jq -r '.mergeable')
+            LABELS=$(echo "$PR" | jq -r '.labels | join(" ")')
+            CREATED=$(echo "$PR" | jq -r '.createdAt')
+
+            # Skip blocked
+            if echo "$LABELS" | grep -q "automerge-blocked"; then
+              echo "PR #$NUMBER is blocked → skipping"
+              continue
+            fi
+
+            # Step 1: merge ready PRs
+            if echo "$LABELS" | grep -q "automerge-ready"; then
+              if [[ "$MERGEABLE" == "MERGEABLE" ]]; then
+                echo "Merging PR #$NUMBER"
+                gh pr merge $NUMBER --auto --rebase || echo "Merge failed for #$NUMBER"
+              else
+                echo "PR #$NUMBER not mergeable yet"
+              fi
+              continue
+            fi
+
+            # Step 2: promote waiting → ready
+            if echo "$LABELS" | grep -q "automerge-waiting"; then
+              CREATED_TS=$(date -d "$CREATED" +%s)
+              AGE=$((NOW - CREATED_TS))
+
+              if [[ $AGE -ge $WAIT_SECONDS ]]; then
+                echo "PR #$NUMBER → promoting to automerge-ready"
+                gh pr edit $NUMBER \
+                  --remove-label "automerge-waiting" \
+                  --add-label "automerge-ready"
+              else
+                echo "PR #$NUMBER still waiting"
+              fi
             fi
           done
         env:
