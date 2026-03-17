@@ -1,0 +1,50 @@
+name: Dependabot automerge
+
+on:
+  workflow_run:
+    workflows: ["Pipeline"]
+    types:
+      - completed
+
+jobs:
+  automerge:
+    name: Automerge PRs
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Enable auto-merge for Dependabot PRs
+        run: |
+          PRS=$(gh pr list \
+            --state open \
+            --author "dependabot[bot]" \
+            --label "dependencies" \
+            --json number,title,mergeable \
+            --jq '.[] | select(.mergeable == "MERGEABLE") | {number: .number, title: .title}')
+
+          for PR in $(echo "$PRS" | jq -c '.'); do
+            NUMBER=$(echo "$PR" | jq -r '.number')
+            TITLE=$(echo "$PR" | jq -r '.title')
+
+            # extract versions from title
+            if [[ $TITLE =~ from\ ([0-9]+)\.([0-9]+)\.([0-9]+)\ to\ ([0-9]+)\.([0-9]+)\.([0-9]+) ]]; then
+              OLD_MAJOR=${BASH_REMATCH[1]}
+              NEW_MAJOR=${BASH_REMATCH[4]}
+
+              if [[ "$NEW_MAJOR" -eq "$OLD_MAJOR" ]]; then
+                echo "Processing PR #$NUMBER (safe version bump)"
+                gh pr merge $NUMBER --auto --rebase || echo "Skipping PR #$NUMBER"
+              else
+                echo "Skipping PR #$NUMBER (major version bump)"
+              fi
+            else
+              echo "Skipping PR #$NUMBER (cannot parse version)"
+            fi
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
