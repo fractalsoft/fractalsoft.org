@@ -2,10 +2,9 @@
 @use 'mixins' as *;
 
 body.home {
-  background-color: #f8f6f5;
+  background-color: $white-background-color;
   color: $grey-text-color;
 
-  // Keep home-specific refinements that complement Tailwind utilities
   .home-team-trim .team {
     padding-top: 0;
     padding-bottom: 0;
