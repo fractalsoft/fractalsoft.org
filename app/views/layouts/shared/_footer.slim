@@ -1,12 +1,6 @@
-footer.footer.bg-neutral.text-neutral-content.py-6.mt-12
-  .container.mx-auto.px-4.flex.flex-col.md:flex-row.items-center.justify-between.gap-4
-    = link_to root_path, class: 'flex items-center gap-2 text-lg font-semibold' do
+footer.footer.bg-neutral.text-neutral-content.mt-12.py-8
+  .container.mx-auto.px-4
+    = link_to root_path, class: 'inline-flex items-center gap-2' do
       = image_tag '/icons/brand/fractalsoft.svg', alt: 'Fractal Soft', id: 'fractalsoft-logo-footer', size: '30'
-      span
+      span.font-semibold.text-lg
         | Fractal Soft
-
-    nav.flex.items-center.gap-4
-      = link_to t('layouts.menu.team'), people_path, class: 'link link-hover'
-      = link_to t('layouts.menu.community'), communities_path, class: 'link link-hover'
-      = link_to t('layouts.menu.contact'), new_contact_form_path, class: 'link link-hover'
-      = image_tag 'home/footer.png', class: 'h-10 hidden md:inline-block'

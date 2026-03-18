@@ -1,0 +1,16 @@
+- flash.each do |type, message|
+  p class="alert alert-#{flash_class(type)}" role='alert'
+    = message
+= simple_form_for contact_form, html: { id: 'contact_form', class: 'space-y-4' } do |f|
+  .d-none
+    = f.input :nickname, label: false, placeholder: t('contact_forms.form.nickname.placeholder'), hint: t('contact_forms.form.nickname.hint')
+  = f.hidden_field :browser_info, value: ''
+  .grid.grid-cols-1.sm:grid-cols-2.gap-4
+    = f.input :name, placeholder: t('home.index.contact.form.name_placeholder'), required: true, label: false, wrapper_html: { class: 'sm:col-span-1' }, input_html: { class: 'input input-bordered w-full bg-base-200' }
+    = f.input :email, placeholder: t('home.index.contact.form.email_placeholder'), required: true, label: false, wrapper_html: { class: 'sm:col-span-1' }, input_html: { class: 'input input-bordered w-full bg-base-200' }
+  = f.input :message, label: t('home.index.contact.form.message_label'), placeholder: t('home.index.contact.form.message_placeholder'), required: true, as: :text, input_html: { class: 'textarea textarea-bordered w-full bg-base-200 min-h-32', rows: 5 }
+  .flex.flex-col.gap-3
+    = f.submit t('home.index.contact.form.send_inquiry'), class: 'btn btn-primary w-full'
+    = link_to '#', class: 'btn btn-ghost bg-base-200 hover:bg-base-300 w-full justify-center gap-2' do
+      = lucide_icon 'link', class: 'w-4 h-4 shrink-0'
+      = t('home.index.contact.form.book_audit')

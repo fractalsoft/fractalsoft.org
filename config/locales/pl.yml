@@ -39,8 +39,19 @@ pl:
         contact_us: Napisz do nas
         rescue_cta: Ratujemy projekty
       contact:
-        description: Niezależnie czy masz do nas pytanie czy tylko chcesz się przywitać, z przyjemnością przeczytamy Twoją wiadomość.
-        header: Chcesz się z nami skontaktować?
+        description: Odpowiadamy w ciągu 24 godzin — senior inżynier, nie handlowiec.
+        header: Gotowy rozwinąć swój produkt?
+        form:
+          name_placeholder: Jan Kowalski
+          email_placeholder: jan@firma.pl
+          message_label: W czym możemy pomóc?
+          message_placeholder: Opisz swoje wyzwanie...
+          send_inquiry: Wyślij zapytanie
+          book_audit: Umów 15-minutowy audyt techniczny
+        location:
+          title: Nasza siedziba
+          email: contact@fractalsoft.com
+          current_time: AKTUALNY CZAS
       hero:
         label: Inżynieria wysokiej wydajności
         headline: Full stack od pomysłu do produkcji
