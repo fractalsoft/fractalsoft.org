@@ -39,8 +39,19 @@ en:
         contact_us: Schedule Your Technical Consultation
         rescue_cta: View Our Work
       contact:
-        description: No matter if you have a question or just want to say hello, we would love to hear from you.
-        header: Want to get in touch with us?
+        description: We respond within 24 hours with a senior engineer, not a salesperson.
+        header: Ready to Scale Your Product?
+        form:
+          name_placeholder: John Doe
+          email_placeholder: john@company.com
+          message_label: What can we help you with?
+          message_placeholder: Describe your challenge...
+          send_inquiry: Send Inquiry
+          book_audit: Book a 15-min Technical Audit
+        location:
+          title: Our Engineering HQ
+          email: contact@fractalsoft.com
+          current_time: CURRENT TIME
       hero:
         label: High-performance engineering
         headline: "AI-Augmented Engineering. Human-Grade Reliability."

@@ -20,4 +20,10 @@ body.home {
       min-height: 520px;
     }
   }
+
+  .home-hero-image-card {
+    &.card.image-full > figure img {
+      filter: none;
+    }
+  }
 }
