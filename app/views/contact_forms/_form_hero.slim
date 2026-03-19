@@ -2,8 +2,8 @@
   p class="alert alert-#{flash_class(type)}" role='alert'
     = message
 = simple_form_for contact_form, html: { id: 'contact_form', class: 'space-y-4' } do |f|
-  .d-none
-    = f.input :nickname, label: false, placeholder: t('contact_forms.form.nickname.placeholder'), hint: t('contact_forms.form.nickname.hint')
+  .hidden
+    = f.input :nickname, label: false, placeholder: t('contact_forms.form.nickname.placeholder'), hint: false, input_html: { class: 'input input-bordered w-full bg-base-200' }
   = f.hidden_field :browser_info, value: ''
   .grid.grid-cols-1.sm:grid-cols-2.gap-4
     = f.input :name, placeholder: t('home.index.contact.form.name_placeholder'), required: true, label: false, wrapper_html: { class: 'sm:col-span-1' }, input_html: { class: 'input input-bordered w-full bg-base-200' }
