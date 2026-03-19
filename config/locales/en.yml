@@ -69,6 +69,70 @@ en:
           body: "No middle-management layers or junior shadows. You work directly with senior builders who share ownership of your business outcomes and technical architecture."
       title:
         in_touch: Let's be in touch
+  services:
+    index:
+      hero:
+        eyebrow: Expert Engineering Services
+        title_sophisticated: Sophisticated
+        title_engineering: Engineering
+        subtext: We focus on high-performance systems, Ruby on Rails backends, and agentic AI systems that scale from prototype to production.
+      core:
+        title: Core Engineering Mastery
+        rails:
+          title: Ruby on Rails Development
+          body: "Expert-led backend engineering with a focus on long-term maintainability and rapid iteration. We leverage the full power of the Rails ecosystem to deliver robust, secure, and performant web applications."
+        architectures:
+          title: Scalable Architectures
+          body: "Cloud-native systems designed for millions of concurrent users. We specialize in microservices, event-driven designs, and zero-downtime deployment strategies that grow with your business."
+      ai:
+        title: AI-Augmented Solutions
+        agentic:
+          title: Agentic Systems
+          body: Design autonomous agents capable of complex reasoning and task execution. We build the 'brains' of your next-gen workflow—a foundation for agent workflows.
+          bullet_1: Autonomous Customer Support Agents with RAG
+          bullet_2: Automated QA & Regression Testing Pipelines
+          bullet_3: Agentic Workflows for Data Extraction
+        llm:
+          title: LLM Integration
+          body: Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.
+        vector:
+          title: Vector Search
+          body: High-performance semantic search and recommendation engines powered by Pinecone and Milvus.
+      advisory:
+        title: Strategic Technical Advisory
+        audit:
+          title: Tech Audit
+          body: Deep-dive assessment of your codebase, security, and scalability technologies. Our audits provide a roadmap for technical excellence.
+        cto:
+          title: CTO-as-a-Service
+          body: Strategic technology leadership for startups looking to scale their engineering culture. Get executive-level guidance without the full-time overhead.
+        secure:
+          title: Secure Scaling
+          body: Implementing zero-trust architectures and SOC2 compliance-ready infrastructure. Secure your integrity is integrated into every layer of our deployments.
+        vibe:
+          title: Vibe Coding Remediation & Hardening
+          body: Incremental, risk-mitigated migration of monoliths to modern modular systems. We transform fragile code into resilient, scalable platforms.
+      trust:
+        label: Trusted by
+        quote: "FractalSoft didn't just write code, they refactored our entire AI logic for 3x lower latency."
+      process:
+        title: Our Surgical Engagement Process
+        step1:
+          title: Deep-Dive Audit
+          body: We find the bottlenecks in your code and infrastructure.
+        step2:
+          title: Surgical Execution
+          body: We implement high-performance patterns and AI agents.
+        step3:
+          title: Scalable Handover
+          body: We provide documentation and zero-downtime deployment.
+      cta:
+        headline: Ready to engineer your future?
+        subheadline: Let's discuss how our sophisticated engineering patterns can accelerate your product development.
+        book_audit: Book a 15-min Technical Audit
+        schedule: Schedule a Consultation
+        view_work: View Our Work
+        footer_note: No sales pitch. You'll speak directly with an engineer.
   job_offers:
     index:
       title: Job Offers
@@ -79,6 +143,8 @@ en:
     menu:
       community: Community
       contact: Contact
+      contact_us: Contact Us
+      services: Services
       job_offers: Jobs
       language: Language
       projects: Projects

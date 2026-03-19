@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   localized do
     # resources :projects, only: [:index, :show]
+    get 'services', to: 'services#index'
     resource :business_contact_forms, only: [:show, :new, :create]
     resources :communities, only: [:index, :show]
     resources :contact_forms, only: [:new, :create], path_names: { new: 'new_message' }
