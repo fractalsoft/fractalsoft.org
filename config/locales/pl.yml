@@ -69,6 +69,69 @@ pl:
           body: "Bez warstw middle managementu i juniorów w cieniu. Pracujesz bezpośrednio z seniorami, którzy współodpowiadają za Wasze rezultaty biznesowe i architekturę techniczną."
       title:
         in_touch: Bądźmy w kontakcie
+  services:
+    index:
+      hero:
+        eyebrow: Eksperckie usługi inżynierskie
+        title_sophisticated: Wyrafinowana
+        title_engineering: inżynieria
+        subtext: Skupiamy się na systemach wysokiej wydajności, backendach Ruby on Rails oraz agentowych systemach AI, które skalują się od prototypu do produkcji.
+      core:
+        title: Kluczowe kompetencje inżynieryjne
+        rails:
+          title: Rozwój Ruby on Rails
+          body: "Backend pod okiem ekspertów z naciskiem na długoterminową utrzymywalność i szybką iterację. Wykorzystujemy pełnię ekosystemu Rails do budowy solidnych, bezpiecznych i wydajnych aplikacji webowych."
+        architectures:
+          title: Skalowalne architektury
+          body: "Systemy cloud-native dla milionów równoczesnych użytkowników. Specjalizujemy się w mikrousługach, architekturze opartej na zdarzeniach i strategiach wdrożeń bez przestojów, które rosną z Twoim biznesem."
+      ai:
+        title: Rozwiązania wspomagane AI
+        agentic:
+          title: Systemy agentowe
+          body: Autonomiczne agenty, które rozumują, wyszukują i działają—zbudowane pod niezawodność i obserwowalność.
+          bullet_1: Obsługa klienta z RAG
+          bullet_2: Pipeline’y QA
+          bullet_3: Ekstrakcja danych
+        llm:
+          title: Integracja LLM
+        vector:
+          title: Wyszukiwanie wektorowe
+          body: Wyszukiwanie semantyczne i infrastruktura RAG z Pinecone, Milvus i własnymi embeddingami.
+      advisory:
+        title: Doradztwo techniczne strategiczne
+        audit:
+          title: Audyt techniczny
+          body: Dogłębna ocena codebase’u, bezpieczeństwa i skalowalności.
+        cto:
+          title: CTO-as-a-Service
+          body: Strategiczne przywództwo techniczne dla startupów i scale-upów.
+        secure:
+          title: Bezpieczne skalowanie
+          body: Architektury zero-trust i zgodność SOC2.
+        vibe:
+          title: Remediacja i utwardzanie vibe codingu
+          body: Stopniowa migracja monolitów do modularnych, utrzymywalnych systemów.
+      trust:
+        label: Zaufali nam
+        quote: FractalSoft nie tylko napisał kod—przeprojektował całą logikę AI pod 3x mniejsze opóźnienia.
+      process:
+        title: Nasz precyzyjny proces współpracy
+        step1:
+          title: Dogłębny audyt
+          body: Oceniamy Twój codebase, architekturę i cele.
+        step2:
+          title: Precyzyjna realizacja
+          body: Skupiona dostawa z jasnymi kamieniami milowymi.
+        step3:
+          title: Skalowalne przekazanie
+          body: Dokumentacja i transfer wiedzy.
+      cta:
+        headline: Gotowy zbudować swoją przyszłość?
+        subheadline: Porozmawiajmy o wzorcach inżynieryjnych i skalujmy Twój produkt.
+        book_audit: Umów 15-min audyt techniczny
+        schedule: Umów konsultację
+        view_work: Zobacz nasze realizacje
+        footer_note: Bez pitchy sprzedażowego. Rozmawiasz bezpośrednio z inżynierem.
   job_offers:
     index:
       title: Oferty pracy
@@ -79,6 +142,8 @@ pl:
     menu:
       community: Społeczność
       contact: Kontakt
+      contact_us: Skontaktuj się
+      services: Usługi
       job_offers: Praca
       language: Język
       projects: Projekty

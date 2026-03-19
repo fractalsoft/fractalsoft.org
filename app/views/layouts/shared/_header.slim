@@ -7,16 +7,15 @@ header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-bas
           | Fractal Soft
 
       nav.hidden.md:flex.items-center.gap-8.text-sm.font-medium.text-neutral-700
-        a.hover:text-neutral-900 href='#'
-          | Services
+        = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:text-neutral-900'
         a.hover:text-neutral-900 href='#'
           | Portfolio
         a.hover:text-neutral-900 href='#'
           | Innovation Hub
         a.hover:text-neutral-900 href='#'
           | About
-        a href='#' class='btn btn-primary'
-          | Contact Us
+        = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
+          = t('layouts.menu.contact_us', default: 'Contact Us')
 
       .flex.md:hidden.items-center.gap-2
         .dropdown.dropdown-end
@@ -24,8 +23,7 @@ header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-bas
             = lucide_icon 'menu', class: 'w-5 h-5'
           ul.menu.menu-sm.dropdown-content.mt-3.p-3.shadow-lg
             li
-              a href='#' class='hover:bg-base-200 rounded-lg'
-                | Services
+              = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:bg-base-200 rounded-lg'
             li
               a href='#' class='hover:bg-base-200 rounded-lg'
                 | Portfolio
@@ -35,5 +33,5 @@ header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-bas
             li
               a href='#' class='hover:bg-base-200 rounded-lg'
                 | About
-        a href='#' class='btn btn-primary'
-          | Contact Us
+        = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
+          = t('layouts.menu.contact_us', default: 'Contact Us')
