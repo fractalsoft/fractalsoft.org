@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang='<%= I18n.locale %>'>
 <head>
-  <!--
-  Fractal Soft — full stack builders, vibe coding cleanup, project rescue.
-  https://fractalsoft.org
-  -->
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <%= display_meta_tags(default_meta_tags) %>
@@ -17,6 +13,7 @@
   <!-- <base href='https://fractalsoft.org/' /> -->
   <%= favicon_link_tag '/favicon.ico', skip_pipeline: true %>
   <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css", crossorigin: "anonymous", referrerpolicy: "no-referrer" %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
   <%= yield(:custom_stylesheets) %>
   <%= render 'layouts/shared/analytics' %>
