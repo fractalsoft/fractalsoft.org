@@ -1,6 +1,7 @@
 en:
   routes:
     business_contact_forms: business-contact-form
+    services: services
     communities: community
     contact_forms: contact-form
     domains: industry

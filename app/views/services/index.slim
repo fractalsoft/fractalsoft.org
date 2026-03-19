@@ -1,0 +1,199 @@
+- content_for :body_class, 'services'
+
+/ Hero
+.hero
+  .hero-content.container.mx-auto.px-4.py-10.md:py-14
+    .flex.flex-col.w-full.max-w-5xl.services-hero-wrap
+      p.services-hero-eyebrow
+        = t('.hero.eyebrow', default: 'Expert Engineering Services')
+      h1.services-hero-title
+        span.services-hero-title-main
+          = t('.hero.title_sophisticated', default: 'Sophisticated')
+        span.services-hero-title-accent
+          = t('.hero.title_engineering', default: 'Engineering')
+      p.services-hero-subtext
+        = t('.hero.subtext', default: 'We build high-performance systems with surgical precision. From mission-critical Ruby on Rails backends to complex agentic AI systems, we master the architecture of the future.')
+
+/ Core Engineering Mastery
+section.services-section.container.mx-auto.px-4.py-16
+  .flex.items-end.gap-4.mb-8
+    h2.text-2xl.md:text-3xl.font-bold.text-neutral-900.shrink-0
+      = t('.core.title', default: 'Core Engineering Mastery')
+    .flex-1.min-w-4.h-px.bg-base-300.mb-1.5
+  .grid.grid-cols-1.md:grid-cols-2.gap-6
+    .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
+      .card-body.space-y-4
+        .services-card-icon
+          = lucide_icon 'book-open', class: 'w-6 h-6'
+        h3.text-xl.font-bold.text-neutral-900
+          = t('.core.rails.title', default: 'Ruby on Rails Development')
+        p.text-sm.text-neutral-600.leading-relaxed
+          = t('.core.rails.body')
+        .flex.flex-wrap.gap-2
+          span.services-core-pill
+            | PostgreSQL
+          span.services-core-pill
+            | Redis
+          span.services-core-pill
+            | Sidekiq
+
+    .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
+      .card-body.space-y-4
+        .services-card-icon
+          = lucide_icon 'network', class: 'w-6 h-6'
+        h3.text-xl.font-bold.text-neutral-900
+          = t('.core.architectures.title', default: 'Scalable Architectures')
+        p.text-sm.text-neutral-600.leading-relaxed
+          = t('.core.architectures.body')
+        .flex.flex-wrap.gap-2
+          span.services-core-pill
+            | Kubernetes
+          span.services-core-pill
+            | AWS/GCP
+          span.services-core-pill
+            | Serverless
+          span.services-core-pill
+            | Docker
+
+/ AI-Augmented Solutions
+section.services-section.container.mx-auto.px-4.py-16
+  h2.text-2xl.md:text-3xl.font-bold.text-neutral-900.mb-8
+    = t('.ai.title', default: 'AI-Augmented Solutions')
+  .grid.grid-cols-1.lg:grid-cols-3.gap-6.items-stretch
+    .lg:col-span-2
+      .card.bg-neutral-800.text-neutral-100.shadow-xl.rounded-xl.overflow-hidden.h-full
+        .card-body.p-8.relative.h-full.flex.flex-col.justify-end.items-start
+          .services-ai-graphic
+          .services-ai-content.relative.z-10.space-y-4
+            h3.text-xl.font-bold.text-white
+              = t('.ai.agentic.title', default: 'Agentic Systems')
+            p.text-neutral-300.text-sm.leading-relaxed
+              = t('.ai.agentic.body', default: 'Autonomous agents that reason, retrieve, and act—built for reliability and observability.')
+            ul.space-y-2
+              li.flex.items-center.gap-2.text-sm.text-neutral-200
+                span.text-error
+                  = lucide_icon 'check', class: 'w-4 h-4'
+                = t('.ai.agentic.bullet_1', default: 'Customer Support with RAG')
+              li.flex.items-center.gap-2.text-sm.text-neutral-200
+                span.text-error
+                  = lucide_icon 'check', class: 'w-4 h-4'
+                = t('.ai.agentic.bullet_2', default: 'QA Pipelines')
+              li.flex.items-center.gap-2.text-sm.text-neutral-200
+                span.text-error
+                  = lucide_icon 'check', class: 'w-4 h-4'
+                = t('.ai.agentic.bullet_3', default: 'Data Extraction')
+
+    .h-full.flex.flex-col.gap-6
+      .card.services-llm-card.shadow-lg.rounded-xl
+        .card-body.p-6
+          .flex.items-start.gap-4
+            .services-card-icon.bg-white/20.text-white
+              = lucide_icon 'bot', class: 'w-6 h-6'
+            .space-y-2
+              h3.text-lg.font-bold.text-white
+                = t('.ai.llm.title', default: 'LLM Integration')
+              p.text-neutral-200.text-sm.leading-relaxed
+                = t('.ai.llm.body', default: 'Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.')
+              .flex.flex-wrap.gap-2.text-xs.font-mono.uppercase.tracking-wide
+                span.services-llm-chip OPENAI
+                span.services-llm-chip ANTHROPIC
+                span.services-llm-chip LANGCHAIN
+                span.services-llm-chip LLAMAINDEX
+
+      .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
+        .card-body.p-6
+          .services-card-icon
+            = lucide_icon 'database', class: 'w-6 h-6'
+          h3.text-lg.font-bold.text-neutral-900.mt-3
+            = t('.ai.vector.title', default: 'Vector Search')
+          p.text-sm.text-neutral-600.leading-relaxed
+            = t('.ai.vector.body', default: 'Semantic search and RAG infrastructure with Pinecone, Milvus, and custom embeddings.')
+
+/ Strategic Technical Advisory
+section.services-section.container.mx-auto.px-4.py-16
+  h2.text-2xl.md:text-3xl.font-bold.text-neutral-900.mb-8
+    = t('.advisory.title', default: 'Strategic Technical Advisory')
+  .grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-4.gap-6
+    .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
+      .card-body.space-y-3
+        .services-card-icon
+          = lucide_icon 'search', class: 'w-5 h-5'
+        h3.text-lg.font-bold.text-neutral-900
+          = t('.advisory.audit.title', default: 'Tech Audit')
+        p.text-sm.text-neutral-600.leading-relaxed
+          = t('.advisory.audit.body', default: 'Deep-dive assessment of codebase, security, and scalability.')
+
+    .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
+      .card-body.space-y-3
+        .services-card-icon
+          = lucide_icon 'users', class: 'w-5 h-5'
+        h3.text-lg.font-bold.text-neutral-900
+          = t('.advisory.cto.title', default: 'CTO-as-a-Service')
+        p.text-sm.text-neutral-600.leading-relaxed
+          = t('.advisory.cto.body', default: 'Strategic technical leadership for startups and scale-ups.')
+
+    .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
+      .card-body.space-y-3
+        .services-card-icon
+          = lucide_icon 'lock', class: 'w-5 h-5'
+        h3.text-lg.font-bold.text-neutral-900
+          = t('.advisory.secure.title', default: 'Secure Scaling')
+        p.text-sm.text-neutral-600.leading-relaxed
+          = t('.advisory.secure.body', default: 'Zero-trust architectures and SOC2-ready compliance.')
+
+    .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
+      .card-body.space-y-3
+        .services-card-icon
+          = lucide_icon 'settings', class: 'w-5 h-5'
+        h3.text-lg.font-bold.text-neutral-900
+          = t('.advisory.vibe.title', default: 'Vibe Coding Remediation & Hardening')
+        p.text-sm.text-neutral-600.leading-relaxed
+          = t('.advisory.vibe.body', default: 'Incremental migration of monoliths to modular, maintainable systems.')
+
+/ Process
+section.services-section.container.mx-auto.px-4.pt-12.pb-8
+  h2.text-2xl.md:text-3xl.font-bold.text-neutral-900.mb-6
+    = t('.process.title', default: 'Our Surgical Engagement Process')
+  .h-px.bg-base-200.mb-10
+
+  .grid.grid-cols-1.md:grid-cols-3.gap-8
+    .services-process-card.text-left
+      .services-process-icon
+        = lucide_icon 'search', class: 'w-5 h-5'
+      h3.services-process-title
+        = t('.process.step1.title', default: 'Deep-Dive Audit')
+      p.services-process-desc
+        = t('.process.step1.body', default: 'We find the bottlenecks in your code and infrastructure.')
+
+    .services-process-card.text-left
+      .services-process-icon
+        = lucide_icon 'sparkles', class: 'w-5 h-5'
+      h3.services-process-title
+        = t('.process.step2.title', default: 'Surgical Execution')
+      p.services-process-desc
+        = t('.process.step2.body', default: 'We implement high-performance patterns and AI agents.')
+
+    .services-process-card.text-left
+      .services-process-icon
+        = lucide_icon 'upload', class: 'w-5 h-5'
+      h3.services-process-title
+        = t('.process.step3.title', default: 'Scalable Handover')
+      p.services-process-desc
+        = t('.process.step3.body', default: 'We provide documentation and zero-downtime deployment.')
+
+/ CTA
+section.services-cta.py-16
+  .container.mx-auto.px-4.text-center
+    h2.text-4xl.md:text-5xl.font-extrabold.text-white.mb-3
+      = t('.cta.headline', default: 'Ready to engineer your future?')
+    p.text-white/85.mb-8.max-w-3xl.mx-auto.text-base.md:text-lg
+      = t('.cta.subheadline', default: 'Let\'s discuss how our sophisticated engineering patterns can accelerate your product development.')
+    .flex.flex-col.sm:flex-row.items-center.justify-center.gap-4
+      = link_to root_path(anchor: 'contact'), class: 'btn bg-white text-[#c3261c] border-none hover:bg-white hover:text-[#c3261c]' do
+        = t('.cta.book_audit', default: 'Book a 15-min Technical Audit')
+      = link_to new_contact_form_path, class: 'btn bg-white text-[#c3261c] border-none hover:bg-white hover:text-[#c3261c]' do
+        = t('.cta.schedule', default: 'Schedule a Consultation')
+      = link_to root_path, class: 'btn bg-transparent border border-white text-white hover:bg-white hover:text-[#c3261c]' do
+        = t('.cta.view_work', default: 'View Our Work')
+    p.text-white/70.text-sm.mt-6
+      = t('.cta.footer_note', default: 'No sales pitch. You\'ll speak directly with an engineer.')
