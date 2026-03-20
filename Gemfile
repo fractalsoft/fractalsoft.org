@@ -78,7 +78,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug', '~> 3.9'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 7.1.1'
+  gem 'rspec-rails', '~> 8.0.4'
 end
 
 group :test do
