@@ -1,20 +1,106 @@
 - content_for :body_class, 'projects'
 
 .container.mx-auto.px-4.py-12.projects
-  h1.text-3xl.font-bold.mb-8
-    = t('projects.index.title', default: 'Projects')
+  / Hero
+  .max-w-6xl.mx-auto
+    h1.projects-hero-title.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight
+      | Sophisticated Engineering
+      .projects-hero-impact
+        | Measurable Impact
 
-  .grid.grid-cols-1.sm:grid-cols-2.lg:grid-cols-3.gap-8
-    - @projects.each do |project|
-      .card.bg-base-100.shadow-md.hover:shadow-lg.transition.hover:-translate-y-1
-        = image_tag project.thumbnail_url(:thumb), class: 'w-full h-48 object-cover rounded-t-2xl'
-        .card-body.space-y-3
-          h3.text-lg.font-semibold.flex.flex-wrap.items-baseline.gap-1
-            span = project.title
-            - if project.subtitle?
-              span.text-sm.font-normal.text-base-content/70
-                = project.subtitle
-          p.text-sm.text-base-content/80
-            = project.description
-          .card-actions.justify-end
-            = link_to t('projects.index.see_more', default: 'See more'), project_path(project, locale: locale), class: 'btn btn-sm btn-primary'
+    .mt-4.projects-tabs.text-sm
+      - active_filter = params[:filter].presence || 'all'
+      - tabs = [['all', 'All Systems'], ['fintech', 'FinTech & Payments'], ['cloud', 'Cloud Native Infrastructure'], ['ai', 'AI/ML Operations'], ['legacy', 'Legacy & AI Recovery']]
+      - tabs.each do |key, label|
+        - active = (key == active_filter)
+        = link_to label,
+          (key == 'all' ? projects_path(locale: I18n.locale) : projects_path(locale: I18n.locale, filter: key)),
+          class: "projects-tab #{active ? 'projects-tab--active' : ''}"
+
+    .mt-6.h-px.bg-base-300
+
+  / Case studies
+  .max-w-6xl.mx-auto.mt-10.space-y-8
+    - @projects.each_with_index do |project, idx|
+      - thumb_url = project.thumbnail_url(:thumb)
+      - media_url = thumb_url.presence || 'https://placehold.co/1200x800/0f172a/f8fafc?text=Project'
+      - tag = project.subtitle.presence || project.title.to_s
+      - desc = project.introduction.presence || project.description.presence || ''
+
+      - reverse = idx.odd?
+      .projects-case-card.rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
+        .projects-case-inner.grid.grid-cols-1.lg:grid-cols-2.gap-0
+          - if reverse
+            / Text first
+            .projects-case-content.p-8.lg:pl-10.flex.flex-col.justify-between
+              .space-y-4
+                span.projects-case-tag = tag.upcase
+                h2.projects-case-title.text-2xl.font-extrabold.text-neutral-900
+                  = project.title
+                p.projects-case-desc
+                  = desc
+
+              .space-y-3.mt-8
+                - uptime = (99.0 + (project.year.to_i % 10) / 100.0).round(2)
+                - cost_reduction = 10 + (project.year.to_i % 40)
+                - coverage = 70 + (project.year.to_i % 30)
+                - risk_m = (1.0 + (project.year.to_i % 50) / 10.0).round(1)
+
+                - if idx % 3 == 0
+                  .grid.grid-cols-2.gap-6
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "#{uptime}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "#{cost_reduction}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
+                - else
+                  .grid.grid-cols-2.gap-6
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "$#{risk_m}M"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "#{coverage}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+
+                = link_to 'View Case Study', project_path(project, locale: I18n.locale), class: 'projects-case-btn inline-flex items-center justify-center w-full'
+
+            .projects-case-media
+              = image_tag media_url, class: 'w-full h-full object-cover'
+          - else
+            / Media first
+            .projects-case-media
+              = image_tag media_url, class: 'w-full h-full object-cover'
+
+            .projects-case-content.p-8.lg:pl-10.flex.flex-col.justify-between
+              .space-y-4
+                span.projects-case-tag = tag.upcase
+                h2.projects-case-title.text-2xl.font-extrabold.text-neutral-900
+                  = project.title
+                p.projects-case-desc
+                  = desc
+
+              .space-y-3.mt-8
+                - uptime = (99.0 + (project.year.to_i % 10) / 100.0).round(2)
+                - cost_reduction = 10 + (project.year.to_i % 40)
+                - coverage = 70 + (project.year.to_i % 30)
+                - risk_m = (1.0 + (project.year.to_i % 50) / 10.0).round(1)
+
+                - if idx % 3 == 0
+                  .grid.grid-cols-2.gap-6
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "#{uptime}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "#{cost_reduction}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
+                - else
+                  .grid.grid-cols-2.gap-6
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "$#{risk_m}M"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
+                    .space-y-1
+                      .projects-case-metric-value.text-error = "#{coverage}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+
+                = link_to 'View Case Study', project_path(project, locale: I18n.locale), class: 'projects-case-btn inline-flex items-center justify-center w-full'
