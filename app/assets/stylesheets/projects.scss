@@ -5,6 +5,110 @@ body.projects {
   .projects {
     background-color: $light-background-color;
   }
+
+  .projects-hero-title {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+  }
+
+  .projects-hero-impact {
+    color: $red-text-color;
+  }
+
+  .projects-filter-chip {
+    padding: 0.35rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid rgba(201, 201, 201, 0.8);
+    border-radius: 9999px;
+    color: #11172f;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+
+  .projects-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .projects-tab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0;
+    color: #6b7280;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .projects-tab--active {
+    color: #c3261c;
+  }
+
+  .projects-tab--active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.5rem;
+    height: 2px;
+    background-color: #c3261c;
+    border-radius: 9999px;
+  }
+
+  .projects-case-card {
+    background-color: #ffffff;
+  }
+
+  .projects-case-media {
+    background-color: #0b1220;
+    min-height: 320px;
+  }
+
+  .projects-case-content {
+    background-color: #ffffff;
+  }
+
+  .projects-case-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.8rem;
+    background-color: #ffe4e6;
+    color: $red-text-color;
+    border-radius: 9999px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+
+  .projects-case-desc {
+    color: $grey-text-color;
+    line-height: 1.55;
+    font-size: 0.875rem;
+  }
+
+  .projects-case-btn {
+    background-color: #0b1220;
+    color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 0.65rem 1rem;
+    font-weight: 700;
+    border: none;
+  }
+
+  .projects-case-metric-value {
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .projects-case-metric-label {
+    letter-spacing: 0.12em;
+  }
 }
 
 body.project {

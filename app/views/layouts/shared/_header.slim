@@ -8,8 +8,7 @@ header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-bas
 
       nav.hidden.md:flex.items-center.gap-8.text-sm.font-medium.text-neutral-700
         = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:text-neutral-900'
-        a.hover:text-neutral-900 href='#'
-          | Portfolio
+        = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'hover:text-neutral-900'
         a.hover:text-neutral-900 href='#'
           | Innovation Hub
         a.hover:text-neutral-900 href='#'
@@ -25,8 +24,7 @@ header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-bas
             li
               = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:bg-base-200 rounded-lg'
             li
-              a href='#' class='hover:bg-base-200 rounded-lg'
-                | Portfolio
+              = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'hover:bg-base-200 rounded-lg'
             li
               a href='#' class='hover:bg-base-200 rounded-lg'
                 | Innovation Hub

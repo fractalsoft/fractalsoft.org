@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/service' => redirect('/')
 
   localized do
-    # resources :projects, only: [:index, :show]
+    resources :projects, only: [:index, :show]
     get 'services', to: 'services#index'
     resource :business_contact_forms, only: [:show, :new, :create]
     resources :communities, only: [:index, :show]
