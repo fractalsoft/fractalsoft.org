@@ -29,7 +29,6 @@ class ProjectsController < ApplicationController
     rx = FILTERS[filter_key]
     return scope if rx.nil?
 
-    # In-memory filtering (small dataset) because these are free-text fields.
     scope.select do |p|
       haystack = [p.title, p.subtitle, p.introduction, p.description].compact.join(' ')
       haystack.match?(rx)
