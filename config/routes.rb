@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   get '/service' => redirect('/')
 
   localized do
-    resources :projects, only: [:index, :show]
+    # Use explicit routes (no `.:format`) so friendly_id slugs containing dots
+    # like `amenitiz.com` don't get interpreted as a request format.
+    get 'projects', to: 'projects#index', as: :projects, format: false
+    get 'projects/:id', to: 'projects#show', as: :project, format: false, constraints: { id: /[^\/]+/ }
     get 'services', to: 'services#index'
     resource :business_contact_forms, only: [:show, :new, :create]
     resources :communities, only: [:index, :show]
