@@ -117,4 +117,56 @@ body.project {
     margin-top: -20px;
     @include cover-image('', no-repeat center top);
   }
+
+  .projects-show-hero {
+    background: $light-background-color;
+  }
+
+  .projects-show-card {
+    background-color: #ffffff;
+  }
+
+  .projects-show-media {
+    background-color: #0b1220;
+    min-height: 420px;
+  }
+
+  .projects-show-title {
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    font-size: 1.9rem;
+    line-height: 1.1;
+  }
+
+  .projects-show-intro {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.55;
+    font-size: 0.95rem;
+  }
+
+  .projects-show-actions .btn-outline,
+  .projects-show-actions .btn {
+    border-radius: 0.75rem;
+  }
+
+  .projects-show-description p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+
+  .projects-show-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .projects-show-gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }
