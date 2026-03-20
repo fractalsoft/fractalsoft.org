@@ -3,22 +3,30 @@
 .w-full.project
   .header-img.relative.flex.items-end.justify-center
     .logo.relative.mb-8
-      = image_tag @project.logo_image.image_url, class: 'mx-auto drop-shadow-lg'
+      - logo_url = @project.logo_image&.image_url
+      - if logo_url.present?
+        = image_tag logo_url, class: 'mx-auto drop-shadow-lg'
 
   .container.mx-auto.px-4.py-10
     .max-w-2xl.mx-auto.space-y-4.text-center
       p.text-lg.text-base-content/90
         = @project.description
-      = link_to @project.url, @project.url, class: 'link link-primary break-all'
+      - if @project.url.present?
+        = link_to @project.url, @project.url, class: 'link link-primary break-all'
 
     .images.mt-12.space-y-10
-      .flex.justify-center
-        = image_tag @project.pc_image.image_url, class: 'max-w-4xl w-full rounded-xl shadow-lg'
-      - @project.page_images.each do |image|
+      - pc_url = @project.pc_image&.image_url
+      - if pc_url.present?
         .flex.justify-center
-          = image_tag image.image_url, class: 'max-w-3xl w-full rounded-xl shadow-md'
+          = image_tag pc_url, class: 'max-w-4xl w-full rounded-xl shadow-lg'
+      - @project.page_images.each do |image|
+        - page_image_url = image.image_url
+        - next if page_image_url.blank?
+        .flex.justify-center
+          = image_tag page_image_url, class: 'max-w-3xl w-full rounded-xl shadow-md'
 
     .logo.mt-10.text-center.text-base-content/70.space-x-2
-      = image_tag @project.logo_image.image_url, class: 'inline-block h-10 align-middle mr-2'
+      - if logo_url.present?
+        = image_tag logo_url, class: 'inline-block h-10 align-middle mr-2'
       span.align-middle.font-medium
         = @project.year
