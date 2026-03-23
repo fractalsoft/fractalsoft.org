@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get 'projects', to: 'projects#index', as: :projects, format: false
     get 'projects/:id', to: 'projects#show', as: :project, format: false, constraints: { id: /[^\/]+/ }
     get 'services', to: 'services#index'
+    get 'innovation-hub', to: 'innovation_hubs#index', as: :innovation_hub
     resource :business_contact_forms, only: [:show, :new, :create]
     resources :communities, only: [:index, :show]
     resources :contact_forms, only: [:new, :create], path_names: { new: 'new_message' }
