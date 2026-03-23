@@ -1,5 +1,61 @@
 ---
 en:
+  about:
+    index:
+      hero:
+        kicker: OUR MISSION
+        title_top: Engineering Partner,
+        title_accent: Not a Vendor
+        subtitle: Director and Founder-level attention for every project. We do not hide behind layers of management.
+      engineering:
+        title: Sophisticated Engineering
+        copy: We build systems that survive real traffic, real deadlines, and real complexity. Senior engineers from day one.
+        stats:
+          yr: Average experience
+          projects: Production deliveries
+          senior: Senior engineering team
+        card_1_title: Outcome-Driven
+        card_1_body: We align architecture with measurable product goals and move fast without trading away reliability.
+        card_2_title: Craft & Discipline
+        card_2_body: Clean architecture, testability, and observability are built into every sprint.
+      builder:
+        title: The Builder Culture
+        copy: Product-minded engineers who own problems end-to-end, not task-by-task implementers.
+        card_1_title: Problem-Solving, Not Box-Ticking
+        card_1_body: We challenge assumptions and design for outcomes, not just ticket completion.
+        card_2_title: Direct Access
+        card_2_body: You work directly with senior engineers and decision-makers.
+        card_3_title: Shared Delivery Ownership
+        card_3_body: We treat timelines, quality, and business impact as one shared responsibility.
+      workflow:
+        kicker: The Fractal Approach
+        title: AI-Augmented Workflow
+        copy: "We leverage advanced AI to handle the grunt work - boilerplate, unit tests, and routine refactors. This ensures our senior engineers spend their expensive hours on what matters: architecture, security, and complex business logic."
+        item_1_title: Accelerated Delivery
+        item_1_copy: Automated scaffolding reduces initial setup time by 40%.
+        item_2_title: Proactive Quality
+        item_2_copy: AI-driven static analysis identifies vulnerabilities before commit.
+        item_3_title: Human-Centric Logic
+        item_3_copy: Senior minds stay focused entirely on your unique business problems.
+      talent:
+        title: Global Talent, Local Impact
+        copy: Distributed engineering teams with timezone-aware collaboration and clear communication loops.
+        cloud_caption: Poland  •  Berlin  •  Zurich  •  Austin  •  Remote
+      leadership:
+        title: Technical Leadership
+        copy: Engineers who can shape architecture, mentor teams, and ship under pressure.
+        person_1_name: Martin Voss
+        person_1_role: Principal Engineer
+        person_2_name: Elena Ross
+        person_2_role: AI Systems Lead
+        person_3_name: Adam Reed
+        person_3_role: Platform Architect
+        person_4_name: Sara Chen
+        person_4_role: Product Engineer
+      cta:
+        title: Ready to build the future?
+        copy: Book a short technical consultation and identify the highest-impact next step.
+        button: Book a consultation
   blog: Blog
   business_contact_forms:
     form:
@@ -141,6 +197,7 @@ en:
       title: No job offers
   layouts:
     menu:
+      about: About
       community: Community
       contact: Contact
       contact_us: Contact Us
