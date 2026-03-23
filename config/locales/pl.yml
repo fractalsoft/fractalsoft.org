@@ -1,5 +1,61 @@
 ---
 pl:
+  about:
+    index:
+      hero:
+        kicker: NASZA MISJA
+        title_top: Partner inżynieryjny,
+        title_accent: nie vendor
+        subtitle: Uwaga na poziomie Foundera i Dyrektora w każdym projekcie. Nie chowamy się za warstwami zarządzania.
+      engineering:
+        title: Zaawansowana inżynieria
+        copy: Budujemy systemy, które działają pod realnym ruchem, presją czasu i rosnącą złożonością.
+        stats:
+          yr: Średnie doświadczenie
+          projects: Wdrożenia produkcyjne
+          senior: Zespół seniorów
+        card_1_title: Skupienie na rezultacie
+        card_1_body: Łączymy architekturę z celami biznesowymi i dostarczamy szybko bez utraty jakości.
+        card_2_title: Rzemiosło i dyscyplina
+        card_2_body: Czysta architektura, testowalność i obserwowalność są częścią każdego sprintu.
+      builder:
+        title: Kultura builderów
+        copy: Inżynierowie produktowi, którzy biorą odpowiedzialność za problem od początku do końca.
+        card_1_title: Rozwiązywanie problemów
+        card_1_body: Kwestionujemy założenia i projektujemy pod efekt, nie tylko pod zamknięcie ticketa.
+        card_2_title: Bezpośredni kontakt
+        card_2_body: Pracujesz bezpośrednio z seniorami i osobami decyzyjnymi.
+        card_3_title: Wspólna odpowiedzialność
+        card_3_body: Traktujemy termin, jakość i wpływ biznesowy jako wspólny wynik.
+      workflow:
+        kicker: Podejście Fractal
+        title: Workflow wspierany AI
+        copy: "Wykorzystujemy zaawansowane AI do obsługi powtarzalnych zadań - boilerplate'u, testów jednostkowych i rutynowych refaktorów. Dzięki temu seniorzy skupiają się na tym, co kluczowe: architekturze, bezpieczeństwie i złożonej logice biznesowej."
+        item_1_title: Szybsze dostarczanie
+        item_1_copy: Automatyczne scaffoldy skracają etap startowy nawet o 40%.
+        item_2_title: Proaktywna jakość
+        item_2_copy: Analiza statyczna wspierana AI wykrywa podatności przed commitem.
+        item_3_title: Logika zorientowana na człowieka
+        item_3_copy: Seniorzy skupiają się wyłącznie na unikalnych problemach biznesowych.
+      talent:
+        title: Globalny talent, lokalny wpływ
+        copy: Zespoły rozproszone, które pracują synchronicznie i komunikują się precyzyjnie.
+        cloud_caption: Polska  •  Berlin  •  Zurych  •  Austin  •  Remote
+      leadership:
+        title: Techniczne przywództwo
+        copy: Inżynierowie, którzy projektują architekturę, wspierają zespoły i dowożą pod presją.
+        person_1_name: Martin Voss
+        person_1_role: Principal Engineer
+        person_2_name: Elena Ross
+        person_2_role: AI Systems Lead
+        person_3_name: Adam Reed
+        person_3_role: Platform Architect
+        person_4_name: Sara Chen
+        person_4_role: Product Engineer
+      cta:
+        title: Gotowi budować przyszłość?
+        copy: Umów krótką konsultację techniczną i znajdźmy następny krok o największym wpływie.
+        button: Umów konsultację
   blog: Blog
   business_contact_forms:
     form:
@@ -140,6 +196,7 @@ pl:
       title: Brak ofert pracy
   layouts:
     menu:
+      about: O nas
       community: Społeczność
       contact: Kontakt
       contact_us: Skontaktuj się
