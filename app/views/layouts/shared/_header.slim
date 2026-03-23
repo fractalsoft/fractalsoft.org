@@ -10,24 +10,19 @@ header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-bas
         = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:text-neutral-900'
         = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'hover:text-neutral-900'
         = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'hover:text-neutral-900'
-        a.hover:text-neutral-900 href='#'
-          | About
+        = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'hover:text-neutral-900'
         = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
           = t('layouts.menu.contact_us', default: 'Contact Us')
 
-      .flex.md:hidden.items-center.gap-2
-        .dropdown.dropdown-end
-          button.btn.btn-ghost.btn-sm[tabindex='0' aria-label='Toggle navigation']
+      .md:hidden.header-mobile.flex.items-center.gap-2
+        details.header-mobile-menu
+          summary.header-mobile-toggle[aria-label='Toggle navigation']
             = lucide_icon 'menu', class: 'w-5 h-5'
-          ul.menu.menu-sm.dropdown-content.mt-3.p-3.shadow-lg
-            li
-              = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:bg-base-200 rounded-lg'
-            li
-              = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'hover:bg-base-200 rounded-lg'
-            li
-              = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'hover:bg-base-200 rounded-lg'
-            li
-              a href='#' class='hover:bg-base-200 rounded-lg'
-                | About
-        = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
+          .header-mobile-panel
+            nav.header-mobile-nav
+              = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'header-mobile-link'
+              = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'header-mobile-link'
+              = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'header-mobile-link'
+              = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'header-mobile-link'
+        = link_to root_path(anchor: 'contact'), class: 'btn btn-primary btn-sm whitespace-nowrap' do
           = t('layouts.menu.contact_us', default: 'Contact Us')

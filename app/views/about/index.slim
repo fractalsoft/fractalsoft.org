@@ -1,0 +1,152 @@
+- content_for :body_class, 'about'
+
+.about
+  .about-main.py-8.px-4
+    .container.mx-auto
+      .about-hero.rounded-2xl.overflow-hidden
+        .about-hero-overlay.p-6.md:p-10
+          p.about-kicker
+            = t('about.index.hero.kicker')
+          h1.about-title
+            = t('about.index.hero.title_top')
+            br
+            span.about-title-accent
+              = t('about.index.hero.title_accent')
+          p.about-subtitle
+            = t('about.index.hero.subtitle')
+
+      .about-section.mt-12
+        .about-engineering-grid.mt-6
+          .about-engineering-left
+            h2.about-section-title.about-section-title--engineering
+              = t('about.index.engineering.title')
+            p.about-section-copy.about-section-copy--engineering
+              = t('about.index.engineering.copy')
+            .about-stats
+              .about-stat
+                p.about-stat-label
+                  = t('about.index.engineering.stats.yr')
+                p.about-stat-value
+                  | 10+ Yrs
+              .about-stat
+                p.about-stat-label
+                  = t('about.index.engineering.stats.projects')
+                p.about-stat-value
+                  | 100+
+              .about-stat
+                p.about-stat-label
+                  = t('about.index.engineering.stats.senior')
+                p.about-stat-value
+                  | 100%
+          .about-culture-mosaic
+            .about-culture-card.about-culture-card--dark.about-culture-card--top
+              = image_tag 'https://placehold.co/640x420/6b7280/f3f4f6?text=CULTURE', alt: 'Culture board', class: 'about-culture-image'
+            .about-culture-card.about-culture-card--code.about-culture-card--top
+              = image_tag 'https://placehold.co/640x420/111827/e5e7eb?text=Code', alt: 'Code board', class: 'about-culture-image'
+            .about-culture-card.about-culture-card--soft.about-culture-card--bottom
+              = image_tag 'https://placehold.co/640x420/d1d5db/f8fafc?text=Tech', alt: 'Tech board', class: 'about-culture-image'
+            .about-culture-card.about-culture-card--home.about-culture-card--bottom
+              = image_tag 'https://placehold.co/640x420/e5e7eb/374151?text=Workspace', alt: 'Workspace board', class: 'about-culture-image'
+
+      .about-section.mt-12
+        h2.about-section-title.about-section-title--builder
+          = t('about.index.builder.title')
+        p.about-section-copy.about-section-copy--builder
+          = t('about.index.builder.copy')
+        .about-builder-grid.mt-6
+          .about-builder-card
+            = image_tag 'https://placehold.co/820x420/111827/f3f4f6?text=Code+Standards', alt: 'Production code standards', class: 'about-builder-image about-builder-image--dark'
+            .about-builder-content
+              p.about-culture-heading
+                = t('about.index.builder.card_1_title')
+              p.about-culture-body
+                = t('about.index.builder.card_1_body')
+          .about-builder-card
+            = image_tag 'https://placehold.co/820x420/6b7280/f3f4f6?text=CULTURE', alt: 'Engineering culture board', class: 'about-builder-image about-builder-image--mid'
+            .about-builder-content
+              p.about-culture-heading
+                = t('about.index.builder.card_2_title')
+              p.about-culture-body
+                = t('about.index.builder.card_2_body')
+          .about-builder-card
+            = image_tag 'https://placehold.co/820x420/e5e7eb/374151?text=Senior+Workspace', alt: 'Senior engineering workspace', class: 'about-builder-image about-builder-image--light'
+            .about-builder-content
+              p.about-culture-heading
+                = t('about.index.builder.card_3_title')
+              p.about-culture-body
+                = t('about.index.builder.card_3_body')
+
+      .about-workflow.mt-12.rounded-2xl.p-6.md:p-8
+        .about-workflow-grid
+          .about-workflow-copy-block
+            p.about-workflow-kicker
+              = t('about.index.workflow.kicker')
+            h2.about-section-title.about-section-title--light
+              = t('about.index.workflow.title')
+            p.about-workflow-copy
+              = t('about.index.workflow.copy')
+          .about-workflow-panel
+            .about-workflow-item
+              span.about-workflow-item-icon
+                = lucide_icon 'zap', class: 'w-4 h-4'
+              .about-workflow-item-body
+                p.about-workflow-item-title
+                  = t('about.index.workflow.item_1_title')
+                p.about-workflow-item-copy
+                  = t('about.index.workflow.item_1_copy')
+            .about-workflow-item
+              span.about-workflow-item-icon
+                = lucide_icon 'shield-check', class: 'w-4 h-4'
+              .about-workflow-item-body
+                p.about-workflow-item-title
+                  = t('about.index.workflow.item_2_title')
+                p.about-workflow-item-copy
+                  = t('about.index.workflow.item_2_copy')
+            .about-workflow-item
+              span.about-workflow-item-icon
+                = lucide_icon 'brain-circuit', class: 'w-4 h-4'
+              .about-workflow-item-body
+                p.about-workflow-item-title
+                  = t('about.index.workflow.item_3_title')
+                p.about-workflow-item-copy
+                  = t('about.index.workflow.item_3_copy')
+
+      .about-section.mt-12
+        h2.about-section-title.text-center
+          = t('about.index.leadership.title')
+        p.about-section-copy.text-center
+          = t('about.index.leadership.copy')
+        .about-team-grid.mt-6
+          .about-team-card
+            .about-team-photo.about-team-photo--one
+            p.about-team-name
+              = t('about.index.leadership.person_1_name')
+            p.about-team-role
+              = t('about.index.leadership.person_1_role')
+          .about-team-card
+            .about-team-photo.about-team-photo--two
+            p.about-team-name
+              = t('about.index.leadership.person_2_name')
+            p.about-team-role
+              = t('about.index.leadership.person_2_role')
+          .about-team-card
+            .about-team-photo.about-team-photo--three
+            p.about-team-name
+              = t('about.index.leadership.person_3_name')
+            p.about-team-role
+              = t('about.index.leadership.person_3_role')
+          .about-team-card
+            .about-team-photo.about-team-photo--four
+            p.about-team-name
+              = t('about.index.leadership.person_4_name')
+            p.about-team-role
+              = t('about.index.leadership.person_4_role')
+
+      .about-cta.mt-12.rounded-2xl.p-8.text-center
+        h2.about-cta-title
+          = t('about.index.cta.title')
+        p.about-cta-copy
+          = t('about.index.cta.copy')
+        .mt-5
+          = link_to root_path(anchor: 'contact'), class: 'btn about-cta-btn px-8' do
+            = t('about.index.cta.button')
