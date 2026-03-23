@@ -2,8 +2,11 @@
 @use 'mixins' as *;
 
 body.projects {
+  background-color: #f8f6f5;
+  color: $grey-text-color;
+
   .projects {
-    background-color: $light-background-color;
+    background-color: transparent;
   }
 
   .projects-hero-title {
