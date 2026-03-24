@@ -27,17 +27,17 @@
                 p.about-stat-label
                   = t('about.index.engineering.stats.yr')
                 p.about-stat-value
-                  | 10+ Yrs
+                  = t('about.index.engineering.stats.yr_value')
               .about-stat
                 p.about-stat-label
                   = t('about.index.engineering.stats.projects')
                 p.about-stat-value
-                  | 100+
+                  = t('about.index.engineering.stats.projects_value')
               .about-stat
                 p.about-stat-label
                   = t('about.index.engineering.stats.senior')
                 p.about-stat-value
-                  | 100%
+                  = t('about.index.engineering.stats.senior_value')
           .about-culture-mosaic
             .about-culture-card.about-culture-card--dark.about-culture-card--top
               = image_tag 'https://placehold.co/640x420/6b7280/f3f4f6?text=CULTURE', alt: 'Culture board', class: 'about-culture-image'
@@ -131,5 +131,5 @@
       p.about-cta-copy.text-white/85.mt-4.max-w-3xl.mx-auto.text-base.md:text-lg
         = t('about.index.cta.copy')
       .mt-6
-        = link_to root_path(anchor: 'contact'), class: 'btn about-cta-btn px-8 bg-white text-[#c3261c] border-none hover:bg-white hover:text-[#c3261c]' do
+        = link_to root_path(anchor: 'contact'), class: 'btn about-cta-btn px-8 bg-white text-primary border-none hover:bg-white hover:text-primary' do
           = t('about.index.cta.button')

@@ -16,3 +16,15 @@
 @use 'projects' as *;
 @use 'innovation_hub' as *;
 @use 'services' as *;
+
+/* DaisyUI theme override (CDN setup): map primary to brand red */
+:root,
+[data-theme='light'] {
+  /* DaisyUI v5 color tokens */
+  --color-primary: #c3261c;
+  --color-primary-content: #ffffff;
+
+  /* DaisyUI legacy tokens for broader compatibility */
+  --p: 4 74% 44%;
+  --pc: 0 0% 100%;
+}

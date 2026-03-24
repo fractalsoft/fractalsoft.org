@@ -12,8 +12,11 @@ pl:
         copy: Budujemy systemy, które działają pod realnym ruchem, presją czasu i rosnącą złożonością.
         stats:
           yr: Średnie doświadczenie
+          yr_value: 10+ lat
           projects: Wdrożenia produkcyjne
+          projects_value: 100+
           senior: Zespół seniorów
+          senior_value: 100%
         card_1_title: Skupienie na rezultacie
         card_1_body: Łączymy architekturę z celami biznesowymi i dostarczamy szybko bez utraty jakości.
         card_2_title: Rzemiosło i dyscyplina
@@ -89,6 +92,7 @@ pl:
       contact:
         description: Odpowiadamy w ciągu 24 godzin — senior inżynier, nie handlowiec.
         header: Gotowy rozwinąć swój produkt?
+        map_placeholder: Miejsce na mapę
         form:
           name_placeholder: Jan Kowalski
           email_placeholder: jan@firma.pl
@@ -104,6 +108,7 @@ pl:
         label: Inżynieria wysokiej wydajności
         headline: Full stack od pomysłu do produkcji
         subheadline: Kompletny produkt od insightów po wdrożenie. Ty prowadzisz biznes—my załatwiamy technicznie.
+        uptime: Uptime systemu 99.9%
       pillars:
         section_title: Nasza filozofia inżynierii
         legacy_ai:
@@ -115,8 +120,38 @@ pl:
         direct_senior:
           title: Bezpośredni dostęp do seniorów
           body: "Bez warstw middle managementu i juniorów w cieniu. Pracujesz bezpośrednio z seniorami, którzy współodpowiadają za Wasze rezultaty biznesowe i architekturę techniczną."
+      results:
+        title: Sprawdzone rezultaty
+        subtitle: Transformacyjna inżynieria dla globalnych liderów.
+        view_all: Wszystkie case studies
+        cards:
+          fintech:
+            badge: Fintech Scaleup
+            tag: Ratowanie infrastruktury
+            title: 40% redukcji kosztów
+            subtitle: Obniżenie kosztów infrastruktury dla platformy SaaS Y
+            body: Modernizacja monolitu legacy do wysokowydajnych mikrousług.
+          health:
+            badge: Health Tech
+            tag: Integracja AI
+            title: Wdrożenie w 3 miesiące
+            subtitle: Uruchomienie MVP Z z 99.9% uptime
+            body: Szybki cykl rozwoju dla krytycznego narzędzia monitoringu pacjentów.
       title:
         in_touch: Bądźmy w kontakcie
+      insights:
+        metrics:
+          agents:
+            value: '12'
+            label: Aktywne agenty AI
+            desc: Narzędzia, które pomagają zespołom wdrażać 2x szybciej.
+        items:
+          gem:
+            title: 'Gem: FractalQuery'
+            body: Optymalizacja złożonych rekurencyjnych zapytań w Rails.
+          project:
+            title: 'Projekt: Autonomous QA'
+            body: Testy regresji dla aplikacji enterprise wspierane przez LLM.
   services:
     index:
       hero:
@@ -129,9 +164,18 @@ pl:
         rails:
           title: Rozwój Ruby on Rails
           body: "Backend pod okiem ekspertów z naciskiem na długoterminową utrzymywalność i szybką iterację. Wykorzystujemy pełnię ekosystemu Rails do budowy solidnych, bezpiecznych i wydajnych aplikacji webowych."
+          stack:
+            postgresql: PostgreSQL
+            redis: Redis
+            sidekiq: Sidekiq
         architectures:
           title: Skalowalne architektury
           body: "Systemy cloud-native dla milionów równoczesnych użytkowników. Specjalizujemy się w mikrousługach, architekturze opartej na zdarzeniach i strategiach wdrożeń bez przestojów, które rosną z Twoim biznesem."
+          stack:
+            kubernetes: Kubernetes
+            aws_gcp: AWS/GCP
+            serverless: Serverless
+            docker: Docker
       ai:
         title: Rozwiązania wspomagane AI
         agentic:
@@ -142,6 +186,11 @@ pl:
           bullet_3: Ekstrakcja danych
         llm:
           title: Integracja LLM
+          stack:
+            openai: OPENAI
+            anthropic: ANTHROPIC
+            langchain: LANGCHAIN
+            llamaindex: LLAMAINDEX
         vector:
           title: Wyszukiwanie wektorowe
           body: Wyszukiwanie semantyczne i infrastruktura RAG z Pinecone, Milvus i własnymi embeddingami.
@@ -180,6 +229,102 @@ pl:
         schedule: Umów konsultację
         view_work: Zobacz nasze realizacje
         footer_note: Bez pitchy sprzedażowego. Rozmawiasz bezpośrednio z inżynierem.
+  projects:
+    index:
+      hero:
+        title: Wyrafinowana inżynieria
+        impact: Mierzalny wpływ
+      tabs:
+        all: Wszystkie systemy
+        fintech: FinTech i płatności
+        cloud: Infrastruktura cloud-native
+        ai: Operacje AI/ML
+        legacy: Legacy i odzyskiwanie AI
+      metrics:
+        uptime: Uzyskany uptime
+        cost_reduction: Redukcja kosztów
+        risk_mitigated: Ograniczone ryzyko
+        code_coverage: Pokrycie kodu
+      buttons:
+        view_case_study: Zobacz case study
+  innovation_hubs:
+    index:
+      hero:
+        badge: DZIENNIK INŻYNIERII
+        title_line_1: Tu wysoka
+        title_line_2: wydajność
+        title_line_3: Ruby
+        title_line_4: spotyka frontier
+        title_line_5: AI.
+        subtext: Wyznaczamy granice wydajnego Ruby, reaktywnych frameworków JavaScript i praktycznego wdrażania architektur LLM.
+        buttons:
+          latest_research: Najnowsze badania
+          subscribe: Subskrybuj
+      sections:
+        research:
+          title: BADANIA I EKSPERYMENTY AI
+          subtitle: Wybrane eksperymenty z naszego laboratorium inżynieryjnego.
+          view_all: Zobacz wszystkie
+        insights:
+          title: TECHNICZNE INSIGHTY
+          view_all: Zobacz wszystkie
+      cards:
+        card_1:
+          read_time: 15 MIN CZYTANIA
+          tag: WHITE PAPER
+          title: Kwantyzacja LLM pod edge deployment w środowiskach Ruby
+          body: Jak uzyskaliśmy kwantyzację 4-bit przy utrzymaniu benchmarków perplexity na sprzęcie konsumenckim.
+          author: Dr Sarah Chen
+          date: 12 MAJA 2024
+        card_2:
+          read_time: 12 MIN CZYTANIA
+          tag: EKSPERYMENT
+          title: Autonomiczne systemy multi-agentowe w produkcji
+          body: Wnioski z wdrożenia roju agentów AI do automatycznego triage bugów i generowania poprawek.
+          author: Marcus Thorne
+          date: 28 KWIETNIA 2024
+      insights:
+        featured:
+          title: Optymalizacja Ruby 3.3 JIT dla obliczeń macierzowych
+          body: Nasz deep dive pokazuje, jak YYJIT radzi sobie z algebrą liniową i jak stabilizujemy tail latency pod obciążeniem.
+          read: Czytaj deep dive
+      sidebar:
+        opensource:
+          title: OPEN SOURCE
+          view_all: Zobacz wszystkie repozytoria
+          repo_1:
+            name: fractal-ruby-core
+            stars: 1.2k
+            desc: Wysokowydajna biblioteka matematyki fraktalnej dla Ruby z użyciem SIMD.
+          repo_2:
+            name: nexus-ui-engine
+            stars: '840'
+            desc: Atomic CSS engine dla reaktywnych frameworków JS skupiony na stabilności layoutu.
+          repo_3:
+            name: ai-bridge-rb
+            stars: 2.1k
+            desc: Uniwersalny adapter dla dostawców LLM z cache i retry logic.
+        architecture:
+          title: ARCHITEKTURA SYSTEMU
+          input_data: Dane wejściowe
+          parallel_jit: Równoległy JIT
+          optimizer: Optymalizator
+          worker_a: Worker A
+          worker_b: Worker B
+          caption: 'Rys. 1.4: Rozproszony przepływ przetwarzania dla rekurencyjnych zbiorów danych.'
+          download: Pobierz specyfikację architektury
+        newsletter:
+          title: Bądź na froncie
+          subtitle: Otrzymuj miesięczny digest badań i przełomów technicznych.
+          proof: Dołącz do 2 500+ CTO i Lead Engineerów.
+          placeholder: email@firma.com
+          submit: Dołącz do dziennika
+          footnote: Zero spamu, tylko inżynieria.
+      cta:
+        title_line_1: CHCESZ ZASTOSOWAĆ TE PRZEŁOMY W
+        title_line_2: SWOIM PROJEKCIE?
+        body: Nasz wyspecjalizowany zespół pomaga firmom przenosić AI i architektury high-performance do produkcji.
+        button: Umów audyt techniczny
   job_offers:
     index:
       title: Oferty pracy
