@@ -117,30 +117,14 @@
         p.about-section-copy.text-center
           = t('about.index.leadership.copy')
         .about-team-grid.mt-6
-          .about-team-card
-            .about-team-photo.about-team-photo--one
-            p.about-team-name
-              = t('about.index.leadership.person_1_name')
-            p.about-team-role
-              = t('about.index.leadership.person_1_role')
-          .about-team-card
-            .about-team-photo.about-team-photo--two
-            p.about-team-name
-              = t('about.index.leadership.person_2_name')
-            p.about-team-role
-              = t('about.index.leadership.person_2_role')
-          .about-team-card
-            .about-team-photo.about-team-photo--three
-            p.about-team-name
-              = t('about.index.leadership.person_3_name')
-            p.about-team-role
-              = t('about.index.leadership.person_3_role')
-          .about-team-card
-            .about-team-photo.about-team-photo--four
-            p.about-team-name
-              = t('about.index.leadership.person_4_name')
-            p.about-team-role
-              = t('about.index.leadership.person_4_role')
+          - if @team_members.present?
+            - @team_members.each do |member|
+              .about-team-card
+                = image_tag(member.image.presence || 'https://placehold.co/640x760/e5e7eb/374151?text=Team', alt: member.full_name.presence || member.first_name, class: 'about-team-photo')
+                p.about-team-name
+                  = member.full_name.presence || member.first_name
+                p.about-team-role
+                  = truncate(strip_tags(member.introduction.to_s), length: 82)
 
   section.about-cta.mt-12.py-14
     .container.mx-auto.px-4.text-center
