@@ -8,27 +8,27 @@
           .flex.flex-col.md:flex-row.items-start.md:items-center.justify-between.gap-6
             .max-w-2xl
               .innovation-hero-badge
-                | THE ENGINEERING JOURNAL
+                = t('.hero.badge')
               h1.innovation-hero-title.mt-4.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight
                 span.innovation-hero-title-white
-                  | Where High-
+                  = t('.hero.title_line_1')
                 br
                 span.innovation-hero-title-red
-                  | Performance 
+                  = t('.hero.title_line_2')
                 span.innovation-hero-title-white
-                  | Ruby
+                  = t('.hero.title_line_3')
                 br
                 span.innovation-hero-title-white
-                  | Meets Frontier 
+                  = t('.hero.title_line_4')
                 span.innovation-hero-title-red
-                  | AI.
+                  = t('.hero.title_line_5')
               p.innovation-hero-subtext.mt-3
-                | Defining the boundaries of high-performance Ruby, reactive JavaScript frameworks, and the practical implementation of LLM architectures.
+                = t('.hero.subtext')
               .mt-6.flex.flex-col.sm:flex-row.gap-3
-                = link_to '#', class: 'innovation-hero-btn-primary' do
-                  = 'Latest Research'
-                = link_to '#', class: 'innovation-hero-btn-secondary' do
-                  = 'Subscribe'
+                = link_to '#', class: 'innovation-hero-btn-primary btn btn-primary' do
+                  = t('.hero.buttons.latest_research')
+                = link_to '#', class: 'innovation-hero-btn-secondary btn btn-outline btn-primary' do
+                  = t('.hero.buttons.subscribe')
 
   .innovation-main.px-4.py-10
     .container.mx-auto
@@ -38,11 +38,11 @@
             .flex.items-center.justify-between.mb-4
               .space-y-1
                 h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
-                  | AI RESEARCH & EXPERIMENTS
+                  = t('.sections.research.title')
                 p.text-xs.text-neutral-500
-                  | Curated experiments from our engineering lab.
+                  = t('.sections.research.subtitle')
               = link_to '#', class: 'innovation-view-all inline-flex items-center gap-1' do
-                | View All
+                = t('.sections.research.view_all')
                 = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
 
             .grid.grid-cols-1.md:grid-cols-2.gap-4
@@ -51,154 +51,154 @@
                   = image_tag 'https://placehold.co/800x420/0b1220/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
                   .innovation-experiment-overlays
                     span.innovation-experiment-badge.innovation-experiment-badge--primary
-                      | 15 MIN READ
+                      = t('.cards.card_1.read_time')
                     span.innovation-experiment-badge.innovation-experiment-badge--secondary
-                      | WHITE PAPER
+                      = t('.cards.card_1.tag')
                 .p-4.space-y-2
                   h3.text-neutral-900.font-extrabold.text-sm.leading-snug
-                    | Quantizing LLMs for Edge Deployment in Ruby Environments
+                    = t('.cards.card_1.title')
                   p.text-xs.text-neutral-500
-                    | How we achieved a 4-bit quantization while maintaining perplexity benchmarks on consumer hardware.
+                    = t('.cards.card_1.body')
                   .innovation-author-row
                     span.innovation-author-avatar
                       = lucide_icon 'user', class: 'w-3.5 h-3.5'
                     span.innovation-author-name
-                      | Dr. Sarah Chen
+                      = t('.cards.card_1.author')
                     span.innovation-author-date
-                      | MAY 12, 2024
+                      = t('.cards.card_1.date')
 
               .rounded-xl.overflow-hidden.bg-white
                 .innovation-experiment-image.relative
                   = image_tag 'https://placehold.co/800x420/111827/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
                   .innovation-experiment-overlays
                     span.innovation-experiment-badge.innovation-experiment-badge--primary
-                      | 12 MIN READ
+                      = t('.cards.card_2.read_time')
                     span.innovation-experiment-badge.innovation-experiment-badge--secondary
-                      | EXPERIMENT
+                      = t('.cards.card_2.tag')
                 .p-4.space-y-2
                   h3.text-neutral-900.font-extrabold.text-sm.leading-snug
-                    | Autonomous Multi-Agent Systems in Production
+                    = t('.cards.card_2.title')
                   p.text-xs.text-neutral-500
-                    | Lessons learned from deploying a swarm of AI agents for automated bug triage and patch generation.
+                    = t('.cards.card_2.body')
                   .innovation-author-row
                     span.innovation-author-avatar.innovation-author-avatar--alt
                       = lucide_icon 'user', class: 'w-3.5 h-3.5'
                     span.innovation-author-name
-                      | Marcus Thorne
+                      = t('.cards.card_2.author')
                     span.innovation-author-date
-                      | APR 28, 2024
+                      = t('.cards.card_2.date')
 
             .mt-6.h-px.bg-base-200
             .overflow-hidden
               .py-6
                 .flex.items-center.justify-between.mb-4
                   h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
-                    | TECHNICAL INSIGHTS
+                    = t('.sections.insights.title')
                   = link_to '#', class: 'innovation-view-all inline-flex items-center gap-1' do
-                    | View All
+                    = t('.sections.insights.view_all')
                     = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
               = image_tag 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights', class: 'w-full h-60 object-cover'
               .p-6.space-y-2
                 p.text-sm.font-bold.text-neutral-900
-                  | Optimizing Ruby 3.3 JIT for Matrix Math
+                  = t('.insights.featured.title')
                 p.text-xs.text-neutral-500.leading-relaxed
-                  | Our deep dive into how YYJIT performs exceptionally well with linear algebra workloads and how we keep tail latencies stable under load.
-                = link_to '#', class: 'inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-widest text-red-600 hover:text-red-700' do
-                  | Read Deep Dive
+                  = t('.insights.featured.body')
+                = link_to '#', class: 'inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
+                  = t('.insights.featured.read')
                   = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
 
         .space-y-6
           .rounded-2xl.shadow-sm.p-6.bg-white
             .flex.items-center.justify-between.mb-4
               h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
-                | OPEN SOURCE
+                = t('.sidebar.opensource.title')
             .space-y-4
               .innovation-repo
                 .innovation-repo-head
                   a.innovation-repo-name href='#'
-                    | fractal-ruby-core
+                    = t('.sidebar.opensource.repo_1.name')
                   .innovation-repo-stars
                     = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                    | 1.2k
+                    = t('.sidebar.opensource.repo_1.stars')
                 p.innovation-repo-desc
-                  | High-performance fractal math library for Ruby using SIMD instructions.
+                  = t('.sidebar.opensource.repo_1.desc')
 
               .innovation-repo
                 .innovation-repo-head
                   a.innovation-repo-name href='#'
-                    | nexus-ui-engine
+                    = t('.sidebar.opensource.repo_2.name')
                   .innovation-repo-stars
                     = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                    | 840
+                    = t('.sidebar.opensource.repo_2.stars')
                 p.innovation-repo-desc
-                  | Atomic CSS engine for reactive JS frameworks focused on layout stability.
+                  = t('.sidebar.opensource.repo_2.desc')
 
               .innovation-repo
                 .innovation-repo-head
                   a.innovation-repo-name href='#'
-                    | ai-bridge-rb
+                    = t('.sidebar.opensource.repo_3.name')
                   .innovation-repo-stars
                     = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                    | 2.1k
+                    = t('.sidebar.opensource.repo_3.stars')
                 p.innovation-repo-desc
-                  | Universal adapter for LLM providers with robust caching and retry logic.
+                  = t('.sidebar.opensource.repo_3.desc')
 
-            = link_to '#', class: 'innovation-repos-btn inline-flex items-center justify-center w-full mt-3' do
-              | View All Repositories
+            = link_to '#', class: 'innovation-repos-btn btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-3' do
+              = t('.sidebar.opensource.view_all')
 
           .rounded-2xl.shadow-sm.p-6
             .flex.items-center.justify-between.mb-4
               h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
-                | SYSTEM ARCHITECTURE
+                = t('.sidebar.architecture.title')
             .rounded-xl.p-5
               .innovation-arch-flow
                 .innovation-arch-input
-                  | Input Data
+                  = t('.sidebar.architecture.input_data')
                 .innovation-arch-arrow
                   = lucide_icon 'arrow-down', class: 'w-5 h-5'
                 .innovation-arch-core
-                  | Parallel JIT
+                  = t('.sidebar.architecture.parallel_jit')
                   br
-                  | Optimizer
+                  = t('.sidebar.architecture.optimizer')
                 .innovation-arch-arrow
                   = lucide_icon 'arrow-down', class: 'w-5 h-5'
                 .innovation-arch-workers
                   .innovation-arch-worker
-                    | Worker A
+                    = t('.sidebar.architecture.worker_a')
                   .innovation-arch-worker
-                    | Worker B
+                    = t('.sidebar.architecture.worker_b')
               .mt-4.text-neutral-500.text-center class='text-[10px]'
-                | Fig 1.4: Distributed processing flow for recursive data sets.
-            = link_to '#', class: 'innovation-repos-btn inline-flex items-center justify-center w-full mt-4 gap-2' do
+                = t('.sidebar.architecture.caption')
+            = link_to '#', class: 'innovation-repos-btn btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-4 gap-2' do
               = lucide_icon 'download', class: 'w-4 h-4'
-              | Download Architecture Specs
+              = t('.sidebar.architecture.download')
 
           .rounded-2xl.overflow-hidden.text-white.shadow-sm.innovation-frontier-card
             .p-6.space-y-4
               h3.innovation-frontier-title
-                | Stay at the frontier
+                = t('.sidebar.newsletter.title')
               p.innovation-frontier-subtitle
-                | Get our monthly digest of research papers and technical breakthroughs.
+                = t('.sidebar.newsletter.subtitle')
               p.innovation-frontier-proof
-                | Join 2,500+ CTOs and Lead Engineers.
+                = t('.sidebar.newsletter.proof')
 
-              = email_field_tag :innovation_email, nil, class: 'innovation-frontier-input', placeholder: 'email@company.com'
+              = email_field_tag :innovation_email, nil, class: 'innovation-frontier-input input input-bordered w-full', placeholder: t('.sidebar.newsletter.placeholder')
 
-              = link_to '#', class: 'innovation-frontier-submit inline-flex items-center justify-center w-full' do
-                | Join the Journal
+              = link_to '#', class: 'innovation-frontier-submit btn btn-primary inline-flex items-center justify-center w-full' do
+                = t('.sidebar.newsletter.submit')
 
               p.innovation-frontier-footnote
-                | No spam, just engineering.
+                = t('.sidebar.newsletter.footnote')
 
 .innovation-cta.py-14
   .container.mx-auto.px-4.text-center
     h2.text-3xl.md:text-4xl.font-extrabold.text-white.tracking-tight
-      | WANT TO APPLY THESE BREAKTHROUGHS TO
+      = t('.cta.title_line_1')
       br
-      | YOUR PROJECT?
+      = t('.cta.title_line_2')
     p.text-white/80.mt-4.max-w-3xl.mx-auto.text-sm.md:text-base
-      | Our specialized engineering team helps companies transition AI and high-performance architectures into production environments.
+      = t('.cta.body')
     .mt-6
-      = link_to root_path(anchor: 'contact'), class: 'btn text-[#c3261c] border-none px-8' do
-        | Book a Technical Audit
+      = link_to root_path(anchor: 'contact'), class: 'btn btn-neutral bg-white text-primary border-none px-8 hover:bg-white hover:text-primary' do
+        = t('.cta.button')
 

@@ -31,11 +31,11 @@ section.services-section.container.mx-auto.px-4.py-16
           = t('.core.rails.body')
         .flex.flex-wrap.gap-2
           span.services-core-pill
-            | PostgreSQL
+            = t('.core.rails.stack.postgresql')
           span.services-core-pill
-            | Redis
+            = t('.core.rails.stack.redis')
           span.services-core-pill
-            | Sidekiq
+            = t('.core.rails.stack.sidekiq')
 
     .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
       .card-body.space-y-4
@@ -47,13 +47,13 @@ section.services-section.container.mx-auto.px-4.py-16
           = t('.core.architectures.body')
         .flex.flex-wrap.gap-2
           span.services-core-pill
-            | Kubernetes
+            = t('.core.architectures.stack.kubernetes')
           span.services-core-pill
-            | AWS/GCP
+            = t('.core.architectures.stack.aws_gcp')
           span.services-core-pill
-            | Serverless
+            = t('.core.architectures.stack.serverless')
           span.services-core-pill
-            | Docker
+            = t('.core.architectures.stack.docker')
 
 / AI-Augmented Solutions
 section.services-section.container.mx-auto.px-4.py-16
@@ -71,15 +71,15 @@ section.services-section.container.mx-auto.px-4.py-16
               = t('.ai.agentic.body', default: 'Autonomous agents that reason, retrieve, and act—built for reliability and observability.')
             ul.space-y-2
               li.flex.items-center.gap-2.text-sm.text-neutral-200
-                span.text-error
+                span.text-primary
                   = lucide_icon 'check', class: 'w-4 h-4'
                 = t('.ai.agentic.bullet_1', default: 'Customer Support with RAG')
               li.flex.items-center.gap-2.text-sm.text-neutral-200
-                span.text-error
+                span.text-primary
                   = lucide_icon 'check', class: 'w-4 h-4'
                 = t('.ai.agentic.bullet_2', default: 'QA Pipelines')
               li.flex.items-center.gap-2.text-sm.text-neutral-200
-                span.text-error
+                span.text-primary
                   = lucide_icon 'check', class: 'w-4 h-4'
                 = t('.ai.agentic.bullet_3', default: 'Data Extraction')
 
@@ -95,10 +95,10 @@ section.services-section.container.mx-auto.px-4.py-16
               p.text-neutral-200.text-sm.leading-relaxed
                 = t('.ai.llm.body', default: 'Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.')
               .flex.flex-wrap.gap-2.text-xs.font-mono.uppercase.tracking-wide
-                span.services-llm-chip OPENAI
-                span.services-llm-chip ANTHROPIC
-                span.services-llm-chip LANGCHAIN
-                span.services-llm-chip LLAMAINDEX
+                span.services-llm-chip = t('.ai.llm.stack.openai')
+                span.services-llm-chip = t('.ai.llm.stack.anthropic')
+                span.services-llm-chip = t('.ai.llm.stack.langchain')
+                span.services-llm-chip = t('.ai.llm.stack.llamaindex')
 
       .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
         .card-body.p-6
@@ -189,11 +189,11 @@ section.services-cta.py-16
     p.text-white/85.mb-8.max-w-3xl.mx-auto.text-base.md:text-lg
       = t('.cta.subheadline', default: 'Let\'s discuss how our sophisticated engineering patterns can accelerate your product development.')
     .flex.flex-col.sm:flex-row.items-center.justify-center.gap-4
-      = link_to root_path(anchor: 'contact'), class: 'btn bg-white text-[#c3261c] border-none hover:bg-white hover:text-[#c3261c]' do
+      = link_to root_path(anchor: 'contact'), class: 'btn btn-neutral bg-white text-primary border-none hover:bg-white hover:text-primary' do
         = t('.cta.book_audit', default: 'Book a 15-min Technical Audit')
-      = link_to new_contact_form_path, class: 'btn bg-white text-[#c3261c] border-none hover:bg-white hover:text-[#c3261c]' do
+      = link_to new_contact_form_path, class: 'btn btn-neutral bg-white text-primary border-none hover:bg-white hover:text-primary' do
         = t('.cta.schedule', default: 'Schedule a Consultation')
-      = link_to root_path, class: 'btn bg-transparent border border-white text-white hover:bg-white hover:text-[#c3261c]' do
+      = link_to root_path, class: 'btn bg-transparent border border-white text-white hover:bg-white hover:text-primary' do
         = t('.cta.view_work', default: 'View Our Work')
     p.text-white/70.text-sm.mt-6
       = t('.cta.footer_note', default: 'No sales pitch. You\'ll speak directly with an engineer.')

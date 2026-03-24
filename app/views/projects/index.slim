@@ -4,13 +4,13 @@
   / Hero
   .max-w-6xl.mx-auto
     h1.projects-hero-title.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight
-      | Sophisticated Engineering
+      = t('.hero.title')
       .projects-hero-impact
-        | Measurable Impact
+        = t('.hero.impact')
 
     .mt-4.projects-tabs.text-sm
       - active_filter = params[:filter].presence || 'all'
-      - tabs = [['all', 'All Systems'], ['fintech', 'FinTech & Payments'], ['cloud', 'Cloud Native Infrastructure'], ['ai', 'AI/ML Operations'], ['legacy', 'Legacy & AI Recovery']]
+      - tabs = [['all', t('.tabs.all')], ['fintech', t('.tabs.fintech')], ['cloud', t('.tabs.cloud')], ['ai', t('.tabs.ai')], ['legacy', t('.tabs.legacy')]]
       - tabs.each do |key, label|
         - active = (key == active_filter)
         = link_to label,
@@ -49,21 +49,21 @@
                 - if idx % 3 == 0
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-error = "#{uptime}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
+                      .projects-case-metric-value.text-primary = "#{uptime}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
                     .space-y-1
-                      .projects-case-metric-value.text-error = "#{cost_reduction}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
+                      .projects-case-metric-value.text-primary = "#{cost_reduction}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
                 - else
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-error = "$#{risk_m}M"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
+                      .projects-case-metric-value.text-primary = "$#{risk_m}M"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
                     .space-y-1
-                      .projects-case-metric-value.text-error = "#{coverage}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+                      .projects-case-metric-value.text-primary = "#{coverage}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
-                = link_to 'View Case Study', project_path(project, locale: I18n.locale), class: 'projects-case-btn inline-flex items-center justify-center w-full'
+                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'projects-case-btn btn btn-primary inline-flex items-center justify-center w-full'
 
             .projects-case-media
               = image_tag media_url, class: 'w-full h-full object-cover'
@@ -89,18 +89,18 @@
                 - if idx % 3 == 0
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-error = "#{uptime}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
+                      .projects-case-metric-value.text-primary = "#{uptime}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
                     .space-y-1
-                      .projects-case-metric-value.text-error = "#{cost_reduction}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
+                      .projects-case-metric-value.text-primary = "#{cost_reduction}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
                 - else
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-error = "$#{risk_m}M"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
+                      .projects-case-metric-value.text-primary = "$#{risk_m}M"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
                     .space-y-1
-                      .projects-case-metric-value.text-error = "#{coverage}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+                      .projects-case-metric-value.text-primary = "#{coverage}%"
+                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
-                = link_to 'View Case Study', project_path(project, locale: I18n.locale), class: 'projects-case-btn inline-flex items-center justify-center w-full'
+                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'projects-case-btn btn btn-primary inline-flex items-center justify-center w-full'

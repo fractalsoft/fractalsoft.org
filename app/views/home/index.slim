@@ -22,14 +22,14 @@
 
       / Right: illustrative card with full-height image and status overlays
       .flex-1.min-w-0.flex.items-stretch
-        .card.image-full.home-hero-image-card.shadow-xl.rounded-2xl.overflow-hidden.border.border-dashed.border-rose-200.flex-1.min-h-0
+        .card.image-full.home-hero-image-card.shadow-xl.rounded-2xl.overflow-hidden.border.border-dashed.border-primary/30.flex-1.min-h-0
           figure
             img.w-full.h-full.object-cover src='https://placehold.co/560x520/fef2f2/db2626?text=Fractal+Engine' alt='System uptime visual'
           .card-body.relative.p-6.md:p-8.justify-between
             .flex.justify-end
               .badge.badge-neutral.gap-2.bg-white.text-neutral-800.border-0.shadow-sm
                 span.w-2.h-2.rounded-full.bg-green-500
-                | System Uptime 99.9%
+                = t('.hero.uptime', default: 'System Uptime 99.9%')
 
 / Engineering philosophy / pillars
 = render 'home/pillars'
@@ -40,11 +40,11 @@
   .flex.items-end.justify-between.gap-6
     .space-y-2
       h2.text-3xl.md:text-4xl.font-extrabold.text-neutral-900.tracking-tight
-        | Proven Results
+          = t('.results.title')
       p.text-sm.md:text-base.text-neutral-600
-        | Transformative engineering for global leaders.
-    = link_to '#', class: 'text-sm font-semibold inline-flex items-center gap-1 text-red-600 hover:text-red-700' do
-      | All Case Studies
+          = t('.results.subtitle')
+    = link_to '#', class: 'text-sm font-semibold inline-flex items-center gap-1 text-primary hover:text-primary-focus' do
+      = t('.results.view_all')
       = lucide_icon 'arrow-up-right', class: 'w-4 h-4 shrink-0'
 
   .grid.grid-cols-1.md:grid-cols-2.gap-6
@@ -53,36 +53,36 @@
         img.w-full.h-full.object-cover src='https://placehold.co/1200x700/f3f4f6/111827?text=Case+Study+Image' alt='Case study preview'
       .card-body.p-8.md:p-10.justify-between
         .flex.flex-col.items-start.gap-2
-          .badge.badge-error.uppercase.tracking-wide.leading-none class='text-[10px]'
-            | Fintech Scaleup
+          .badge.badge-primary.uppercase.tracking-wide.leading-none class='text-[10px]'
+            = t('.results.cards.fintech.badge')
           .badge.badge-ghost.bg-white/15.text-white/85.leading-none class='text-[10px]'
-            | Infrastructure Rescue
+            = t('.results.cards.fintech.tag')
         .space-y-3
           .space-y-1
             h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
-              | 40% cost reduction
+              = t('.results.cards.fintech.title')
             p.text-sm.md:text-base.leading-relaxed.text-white/90 class='max-w-[46ch]'
-              | Reduced infrastructure costs for SaaS platform Y
+              = t('.results.cards.fintech.subtitle')
           p.text-xs.md:text-sm.leading-relaxed.text-white/65 class='max-w-[64ch]'
-            | Modernizing legacy monolith into high-performance micro-services.
+            = t('.results.cards.fintech.body')
 
     = link_to '#', class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
       figure class='min-h-[320px] md:min-h-[380px]'
         img.w-full.h-full.object-cover src='https://placehold.co/1200x700/0f766e/ecfeff?text=Case+Study+Image' alt='Case study preview'
       .card-body.p-8.md:p-10.justify-between
         .flex.flex-col.items-start.gap-2
-          .badge.badge-error.uppercase.tracking-wide.leading-none class='text-[10px]'
-            | Health Tech
+          .badge.badge-primary.uppercase.tracking-wide.leading-none class='text-[10px]'
+            = t('.results.cards.health.badge')
           .badge.badge-ghost.bg-white/15.text-white/85.leading-none class='text-[10px]'
-            | AI Integration
+            = t('.results.cards.health.tag')
         .space-y-3
           .space-y-1
             h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
-              | 3‑month launch
+              = t('.results.cards.health.title')
             p.text-sm.md:text-base.leading-relaxed.text-white/90 class='max-w-[46ch]'
-              | Launched MVP Z with 99.9% uptime
+              = t('.results.cards.health.subtitle')
           p.text-xs.md:text-sm.leading-relaxed.text-white/65 class='max-w-[64ch]'
-            | Rapid development cycle for a critical patient monitoring tool.
+            = t('.results.cards.health.body')
 
 / Insights / metrics
 .bg-base-100
@@ -97,44 +97,44 @@
 
         .grid.grid-cols-2.gap-6.max-w-xl
           .space-y-2
-            .text-3xl.font-extrabold.text-red-600
+            .text-3xl.font-extrabold.text-primary
               = t('.insights.metrics.projects.value', default: '50+')
             .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
-              | OSS Contributions
+              = t('.insights.metrics.projects.label', default: 'OSS Contributions')
             p.text-xs.text-neutral-500.leading-relaxed
               = t('.insights.metrics.projects.desc', default: "Tools we've built to help teams deploy 2x faster.")
           .space-y-2
-            .text-3xl.font-extrabold.text-red-600
-              | 12
+            .text-3xl.font-extrabold.text-primary
+              = t('.insights.metrics.agents.value', default: '12')
             .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
-              | Active AI Agents
+              = t('.insights.metrics.agents.label', default: 'Active AI Agents')
             p.text-xs.text-neutral-500.leading-relaxed
-              | Tools we've built to help teams deploy 2x faster.
+              = t('.insights.metrics.agents.desc', default: "Tools we've built to help teams deploy 2x faster.")
 
       .space-y-4
         .card.bg-base-100.shadow-sm.border.border-base-200
           .card-body.py-5
             .flex.items-start.gap-4
               .avatar.placeholder
-                .bg-red-50.text-red-600.rounded-2xl.w-11.h-11.flex.items-center.justify-center
+                .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
                   = lucide_icon 'braces', class: 'w-5 h-5'
               .space-y-0.5
                 .font-semibold.text-neutral-900
-                  | Gem: FractalQuery
+                  = t('.insights.items.gem.title', default: 'Gem: FractalQuery')
                 p.text-sm.text-neutral-500.leading-relaxed
-                  | Optimizing complex recursive lookups in Rails.
+                  = t('.insights.items.gem.body', default: 'Optimizing complex recursive lookups in Rails.')
 
         .card.bg-base-100.shadow-sm.border.border-base-200
           .card-body.py-5
             .flex.items-start.gap-4
               .avatar.placeholder
-                .bg-red-50.text-red-600.rounded-2xl.w-11.h-11.flex.items-center.justify-center
+                .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
                   = lucide_icon 'bot', class: 'w-5 h-5'
               .space-y-0.5
                 .font-semibold.text-neutral-900
-                  | Project: Autonomous QA
+                  = t('.insights.items.project.title', default: 'Project: Autonomous QA')
                 p.text-sm.text-neutral-500.leading-relaxed
-                  | LLM-driven regression testing for enterprise apps.
+                  = t('.insights.items.project.body', default: 'LLM-driven regression testing for enterprise apps.')
 
 / Final CTA with contact + map
 .container.mx-auto.px-4.py-16#contact
@@ -163,7 +163,7 @@
                   = office.country
                 a.link.link-hover.text-sm.text-neutral-300 href="mailto:#{t('home.index.contact.location.email')}"
                   = t('home.index.contact.location.email')
-                .pt-2.mt-2.border-t.border-neutral-600.flex.items-center.gap-2.text-xs.font-semibold.uppercase.tracking-wider.text-red-500
+                .pt-2.mt-2.border-t.border-neutral-600.flex.items-center.gap-2.text-xs.font-semibold.uppercase.tracking-wider.text-primary
                   = lucide_icon 'clock', class: 'w-4 h-4 shrink-0'
                   span
                     = t('.contact.location.current_time')
@@ -171,6 +171,6 @@
                     = Time.current.strftime('%H:%M %Z')
           - else
             .absolute.inset-0.bg-base-200.flex.items-center.justify-center.text-neutral-500
-              | Map placeholder
+              = t('.contact.map_placeholder', default: 'Map placeholder')
 
 = render 'xmas'
