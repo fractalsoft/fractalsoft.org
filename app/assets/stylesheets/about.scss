@@ -353,7 +353,10 @@
 }
 
 .about-team-photo {
+  width: 100%;
+  display: block;
   aspect-ratio: 3 / 3.4;
+  object-fit: cover;
   background: linear-gradient(150deg, rgba(203, 213, 225, 1), rgba(229, 231, 235, 1));
 }
 
