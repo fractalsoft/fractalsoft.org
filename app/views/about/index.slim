@@ -1,7 +1,7 @@
 - content_for :body_class, 'about'
 
 .about
-  .about-main.py-8.px-4
+  .about-main.pt-8.px-4
     .container.mx-auto
       .about-hero.rounded-2xl.overflow-hidden
         .about-hero-overlay.p-6.md:p-10
@@ -142,11 +142,12 @@
             p.about-team-role
               = t('about.index.leadership.person_4_role')
 
-      .about-cta.mt-12.rounded-2xl.p-8.text-center
-        h2.about-cta-title
-          = t('about.index.cta.title')
-        p.about-cta-copy
-          = t('about.index.cta.copy')
-        .mt-5
-          = link_to root_path(anchor: 'contact'), class: 'btn about-cta-btn px-8' do
-            = t('about.index.cta.button')
+  section.about-cta.mt-12.py-14
+    .container.mx-auto.px-4.text-center
+      h2.about-cta-title.text-4xl.md:text-5xl.font-extrabold.text-white.tracking-tight
+        = t('about.index.cta.title')
+      p.about-cta-copy.text-white/85.mt-4.max-w-3xl.mx-auto.text-base.md:text-lg
+        = t('about.index.cta.copy')
+      .mt-6
+        = link_to root_path(anchor: 'contact'), class: 'btn about-cta-btn px-8 bg-white text-[#c3261c] border-none hover:bg-white hover:text-[#c3261c]' do
+          = t('about.index.cta.button')

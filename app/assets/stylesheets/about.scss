@@ -389,8 +389,9 @@
 }
 
 .about-cta {
-  background: #c3261c;
+  background: linear-gradient(180deg, #cb2a20 0%, #c3261c 100%);
   color: #fff;
+  border: 1px solid rgba(195, 38, 28, 0.35);
 }
 
 .about-cta-title {
@@ -412,6 +413,12 @@
   border: none;
   color: #c3261c;
   font-weight: 800;
+  min-height: 2.7rem;
+  border-radius: 0.6rem;
+}
+
+body.about footer.footer {
+  margin-top: 0 !important;
 }
 
 @media (max-width: 1024px) {
