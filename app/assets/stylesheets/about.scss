@@ -141,16 +141,13 @@
 .about-builder-grid {
   display: grid;
   gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .about-culture-mosaic {
   display: grid;
   gap: 0.75rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.about-builder-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .about-builder-card {
@@ -327,19 +324,6 @@
   max-width: 30rem;
 }
 
-.about-talent-cloud {
-  min-height: 11rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid rgba(229, 231, 235, 1);
-  background: radial-gradient(circle at 50% 40%, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 1));
-  color: rgba(229, 231, 235, 0.88);
-  font-size: 0.88rem;
-  padding: 1rem;
-}
-
 .about-team-grid {
   display: grid;
   gap: 0.8rem;
@@ -360,35 +344,12 @@
   background: linear-gradient(150deg, rgba(203, 213, 225, 1), rgba(229, 231, 235, 1));
 }
 
-.about-team-photo--one {
-  background: linear-gradient(145deg, rgba(71, 85, 105, 1), rgba(203, 213, 225, 1));
-}
-
-.about-team-photo--two {
-  background: linear-gradient(145deg, rgba(100, 116, 139, 1), rgba(226, 232, 240, 1));
-}
-
-.about-team-photo--three {
-  background: linear-gradient(145deg, rgba(51, 65, 85, 1), rgba(203, 213, 225, 1));
-}
-
-.about-team-photo--four {
-  background: linear-gradient(145deg, rgba(71, 85, 105, 1), rgba(241, 245, 249, 1));
-}
-
 .about-team-name {
   margin: 0.6rem 0 0;
   font-size: 0.82rem;
   font-weight: 800;
   color: rgba(17, 24, 39, 1);
   padding: 1rem;
-}
-
-.about-team-role {
-  margin: 0.12rem 0 0.75rem;
-  font-size: 0.72rem;
-  color: rgba(107, 114, 128, 1);
-  padding: 0 0.55rem;
 }
 
 .about-cta {
@@ -412,9 +373,6 @@
 }
 
 .about-cta-btn {
-  background: #fff;
-  border: none;
-  color: #c3261c;
   font-weight: 800;
   min-height: 2.7rem;
   border-radius: 0.6rem;
