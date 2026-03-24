@@ -12,8 +12,11 @@ en:
         copy: We build systems that survive real traffic, real deadlines, and real complexity. Senior engineers from day one.
         stats:
           yr: Average experience
+          yr_value: 10+ Yrs
           projects: Production deliveries
+          projects_value: 100+
           senior: Senior engineering team
+          senior_value: 100%
         card_1_title: Outcome-Driven
         card_1_body: We align architecture with measurable product goals and move fast without trading away reliability.
         card_2_title: Craft & Discipline
@@ -89,6 +92,7 @@ en:
       contact:
         description: We respond within 24 hours with a senior engineer, not a salesperson.
         header: Ready to Scale Your Product?
+        map_placeholder: Map placeholder
         form:
           name_placeholder: John Doe
           email_placeholder: john@company.com
@@ -104,6 +108,7 @@ en:
         label: High-performance engineering
         headline: "AI-Augmented Engineering. Human-Grade Reliability."
         subheadline: "We are the full-stack builders who turn insights into production-ready software. From high-performance Ruby on Rails mastery to practical AI integration, we scale what others only prototype."
+        uptime: System Uptime 99.9%
       pillars:
         section_title: Our Engineering Philosophy
         legacy_ai:
@@ -115,8 +120,38 @@ en:
         direct_senior:
           title: Direct Senior Access
           body: "No middle-management layers or junior shadows. You work directly with senior builders who share ownership of your business outcomes and technical architecture."
+      results:
+        title: Proven Results
+        subtitle: Transformative engineering for global leaders.
+        view_all: All Case Studies
+        cards:
+          fintech:
+            badge: Fintech Scaleup
+            tag: Infrastructure Rescue
+            title: 40% cost reduction
+            subtitle: Reduced infrastructure costs for SaaS platform Y
+            body: Modernizing legacy monolith into high-performance micro-services.
+          health:
+            badge: Health Tech
+            tag: AI Integration
+            title: 3-month launch
+            subtitle: Launched MVP Z with 99.9% uptime
+            body: Rapid development cycle for a critical patient monitoring tool.
       title:
         in_touch: Let's be in touch
+      insights:
+        metrics:
+          agents:
+            value: '12'
+            label: Active AI Agents
+            desc: Tools we've built to help teams deploy 2x faster.
+        items:
+          gem:
+            title: 'Gem: FractalQuery'
+            body: Optimizing complex recursive lookups in Rails.
+          project:
+            title: 'Project: Autonomous QA'
+            body: LLM-driven regression testing for enterprise apps.
   services:
     index:
       hero:
@@ -129,9 +164,18 @@ en:
         rails:
           title: Ruby on Rails Development
           body: "Expert-led backend engineering with a focus on long-term maintainability and rapid iteration. We leverage the full power of the Rails ecosystem to deliver robust, secure, and performant web applications."
+          stack:
+            postgresql: PostgreSQL
+            redis: Redis
+            sidekiq: Sidekiq
         architectures:
           title: Scalable Architectures
           body: "Cloud-native systems designed for millions of concurrent users. We specialize in microservices, event-driven designs, and zero-downtime deployment strategies that grow with your business."
+          stack:
+            kubernetes: Kubernetes
+            aws_gcp: AWS/GCP
+            serverless: Serverless
+            docker: Docker
       ai:
         title: AI-Augmented Solutions
         agentic:
@@ -143,6 +187,11 @@ en:
         llm:
           title: LLM Integration
           body: Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.
+          stack:
+            openai: OPENAI
+            anthropic: ANTHROPIC
+            langchain: LANGCHAIN
+            llamaindex: LLAMAINDEX
         vector:
           title: Vector Search
           body: High-performance semantic search and recommendation engines powered by Pinecone and Milvus.
@@ -181,6 +230,102 @@ en:
         schedule: Schedule a Consultation
         view_work: View Our Work
         footer_note: No sales pitch. You'll speak directly with an engineer.
+  projects:
+    index:
+      hero:
+        title: Sophisticated Engineering
+        impact: Measurable Impact
+      tabs:
+        all: All Systems
+        fintech: FinTech & Payments
+        cloud: Cloud Native Infrastructure
+        ai: AI/ML Operations
+        legacy: Legacy & AI Recovery
+      metrics:
+        uptime: Uptime Achieved
+        cost_reduction: Cost Reduction
+        risk_mitigated: Risk Mitigated
+        code_coverage: Code Coverage
+      buttons:
+        view_case_study: View Case Study
+  innovation_hubs:
+    index:
+      hero:
+        badge: THE ENGINEERING JOURNAL
+        title_line_1: Where High-
+        title_line_2: Performance
+        title_line_3: Ruby
+        title_line_4: Meets Frontier
+        title_line_5: AI.
+        subtext: Defining the boundaries of high-performance Ruby, reactive JavaScript frameworks, and the practical implementation of LLM architectures.
+        buttons:
+          latest_research: Latest Research
+          subscribe: Subscribe
+      sections:
+        research:
+          title: AI RESEARCH & EXPERIMENTS
+          subtitle: Curated experiments from our engineering lab.
+          view_all: View All
+        insights:
+          title: TECHNICAL INSIGHTS
+          view_all: View All
+      cards:
+        card_1:
+          read_time: 15 MIN READ
+          tag: WHITE PAPER
+          title: Quantizing LLMs for Edge Deployment in Ruby Environments
+          body: How we achieved a 4-bit quantization while maintaining perplexity benchmarks on consumer hardware.
+          author: Dr. Sarah Chen
+          date: MAY 12, 2024
+        card_2:
+          read_time: 12 MIN READ
+          tag: EXPERIMENT
+          title: Autonomous Multi-Agent Systems in Production
+          body: Lessons learned from deploying a swarm of AI agents for automated bug triage and patch generation.
+          author: Marcus Thorne
+          date: APR 28, 2024
+      insights:
+        featured:
+          title: Optimizing Ruby 3.3 JIT for Matrix Math
+          body: Our deep dive into how YYJIT performs exceptionally well with linear algebra workloads and how we keep tail latencies stable under load.
+          read: Read Deep Dive
+      sidebar:
+        opensource:
+          title: OPEN SOURCE
+          view_all: View All Repositories
+          repo_1:
+            name: fractal-ruby-core
+            stars: 1.2k
+            desc: High-performance fractal math library for Ruby using SIMD instructions.
+          repo_2:
+            name: nexus-ui-engine
+            stars: '840'
+            desc: Atomic CSS engine for reactive JS frameworks focused on layout stability.
+          repo_3:
+            name: ai-bridge-rb
+            stars: 2.1k
+            desc: Universal adapter for LLM providers with robust caching and retry logic.
+        architecture:
+          title: SYSTEM ARCHITECTURE
+          input_data: Input Data
+          parallel_jit: Parallel JIT
+          optimizer: Optimizer
+          worker_a: Worker A
+          worker_b: Worker B
+          caption: 'Fig 1.4: Distributed processing flow for recursive data sets.'
+          download: Download Architecture Specs
+        newsletter:
+          title: Stay at the frontier
+          subtitle: Get our monthly digest of research papers and technical breakthroughs.
+          proof: Join 2,500+ CTOs and Lead Engineers.
+          placeholder: email@company.com
+          submit: Join the Journal
+          footnote: No spam, just engineering.
+      cta:
+        title_line_1: WANT TO APPLY THESE BREAKTHROUGHS TO
+        title_line_2: YOUR PROJECT?
+        body: Our specialized engineering team helps companies transition AI and high-performance architectures into production environments.
+        button: Book a Technical Audit
   job_offers:
     index:
       title: Job Offers
