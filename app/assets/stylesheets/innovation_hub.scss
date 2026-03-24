@@ -84,31 +84,17 @@ body.innovation-hub {
   .innovation-hero-btn-primary {
     position: relative;
     z-index: 1;
-    background-color: #c3261c;
-    color: #ffffff;
-    border: none;
     border-radius: 0.6rem;
     padding: 0.65rem 1.1rem;
     font-weight: 800;
-  }
-
-  .innovation-hero-btn-primary:hover {
-    background-color: #a81d16;
   }
 
   .innovation-hero-btn-secondary {
     position: relative;
     z-index: 1;
-    background: transparent;
-    border: 1px solid rgba(203, 213, 225, 0.35);
-    color: rgba(226, 232, 240, 0.95);
     border-radius: 0.6rem;
     padding: 0.65rem 1.1rem;
     font-weight: 800;
-  }
-
-  .innovation-hero-btn-secondary:hover {
-    background: rgba(148, 163, 184, 0.08);
   }
 
   .innovation-cta {
@@ -287,12 +273,9 @@ body.innovation-hub {
   }
 
   .innovation-repos-btn {
-    border: 1px solid rgba(195, 38, 28, 0.55);
-    color: #c3261c;
     border-radius: 0.75rem;
     padding: 0.6rem 1rem;
     font-weight: 800;
-    background: transparent;
   }
 
   .innovation-frontier-card {
@@ -345,19 +328,12 @@ body.innovation-hub {
   }
 
   .innovation-frontier-submit {
-    border: none;
     border-radius: 0.5rem;
-    background: #f8fafc;
-    color: #c3261c;
     min-height: 2.45rem;
     font-size: 1rem;
     font-weight: 900;
     letter-spacing: -0.01em;
     text-decoration: none;
-  }
-
-  .innovation-frontier-submit:hover {
-    background: #eef2f7;
   }
 
   .innovation-frontier-footnote {
