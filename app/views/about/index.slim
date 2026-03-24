@@ -123,8 +123,6 @@
                 = image_tag(member.image.presence || 'https://placehold.co/640x760/e5e7eb/374151?text=Team', alt: member.full_name.presence || member.first_name, class: 'about-team-photo')
                 p.about-team-name
                   = member.full_name.presence || member.first_name
-                p.about-team-role
-                  = truncate(strip_tags(member.introduction.to_s), length: 82)
 
   section.about-cta.mt-12.py-14
     .container.mx-auto.px-4.text-center
