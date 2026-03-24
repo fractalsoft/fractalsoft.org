@@ -19,7 +19,8 @@
 
 /* DaisyUI theme override (CDN setup): map primary to brand red */
 :root,
-[data-theme='light'] {
+[data-theme='light'],
+[data-theme='dark'] {
   /* DaisyUI v5 color tokens */
   --color-primary: #c3261c;
   --color-primary-content: #ffffff;
