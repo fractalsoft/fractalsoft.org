@@ -1,107 +1,106 @@
-.container.mx-auto.px-4.py-10.bg-base-100
+.container.mx-auto.px-4.py-10
   .max-w-6xl.mx-auto
     - industry_options = [['project_rescue_cleanup', t('.industry_options.project_rescue_cleanup')], ['scalable_architecture', t('.industry_options.scalable_architecture')], ['agentic_integration', t('.industry_options.agentic_integration')], ['legacy_modernization', t('.industry_options.legacy_modernization')]]
     - current_industry = @business_contact_form.industry.to_s
 
-    .card.shadow-xl.border.border-base-200
-      .card-body.p-0
-        .grid.grid-cols-1.lg:grid-cols-2
-          / Left intro column
-          .p-8
-            .badge.badge-primary.badge-outline.uppercase.tracking-widest.text-[11px]
-              = t('.inquiry_badge')
+    .grid.grid-cols-1.lg:grid-cols-2.gap-10.items-start
+      / Left intro column (no background)
+      .pt-2
+        .badge.badge-primary.badge-outline.uppercase.tracking-widest.text-[11px]
+          = t('.inquiry_badge')
 
-            h1.mt-4.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight
-              = t('.title')
+        h1.mt-4.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight
+          = t('.title')
 
-            p.mt-4.text-base-content/70.max-w-md
-              = t('.subheadline')
+        p.mt-4.text-base-content/70.max-w-md
+          = t('.subheadline')
 
-            .mt-6.space-y-3
-              .flex.items-start.gap-3.rounded-xl.border.border-primary/30.bg-base-100.p-4
-                = lucide_icon 'shield-check', class: 'w-5 h-5 text-primary mt-0.5'
-                .space-y-0.5
-                  p.font-extrabold.text-sm.text-primary
-                    = t('.security.title')
-                  p.text-xs.text-base-content/70
-                    = t('.security.body')
+        .mt-6.space-y-3
+          .flex.items-start.gap-3.rounded-xl.border.border-primary/30.p-4
+            = lucide_icon 'shield-check', class: 'w-5 h-5 text-primary mt-0.5'
+            .space-y-0.5
+              p.font-extrabold.text-sm.text-primary
+                = t('.security.title')
+              p.text-xs.text-base-content/70
+                = t('.security.body')
 
-              .flex.items-start.gap-3.rounded-xl.border.border-primary/30.bg-base-100.p-4
-                = lucide_icon 'lock', class: 'w-5 h-5 text-primary mt-0.5'
-                .space-y-0.5
-                  p.font-extrabold.text-sm.text-primary
-                    = t('.encryption.title')
-                  p.text-xs.text-base-content/70
-                    = t('.encryption.body')
+          .flex.items-start.gap-3.rounded-xl.border.border-primary/30.p-4
+            = lucide_icon 'lock', class: 'w-5 h-5 text-primary mt-0.5'
+            .space-y-0.5
+              p.font-extrabold.text-sm.text-primary
+                = t('.encryption.title')
+              p.text-xs.text-base-content/70
+                = t('.encryption.body')
 
-            .mt-8
-              p.text-xs.font-extrabold.uppercase.tracking-wider.text-primary
-                = t('.skip_form.kicker')
-              = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full justify-between mt-3' do
-                span = t('.skip_form.button')
-                = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
+        .mt-8
+          p.text-xs.font-extrabold.uppercase.tracking-wider.text-primary
+            = t('.skip_form.kicker')
+          = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full justify-between mt-3' do
+            span = t('.skip_form.button')
+            = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
 
-          / Right form column
-          .p-8.bg-base-100.border-t.lg:border-t-0.lg:border-l.border-base-200
-            = simple_form_for @business_contact_form, html: { class: 'space-y-4' } do |f|
-              .grid.grid-cols-1.md:grid-cols-2.gap-4
-                = f.input :first_name, placeholder: t('mail_form.attributes.business_contact_form.first_name'), input_html: { class: 'input input-bordered w-full' }, label: false
-                = f.input :last_name, placeholder: t('mail_form.attributes.business_contact_form.last_name'), input_html: { class: 'input input-bordered w-full' }, label: false
+      / Right form column (card)
+      .card.shadow-xl.border.border-base-200.bg-base-100
+        .card-body.p-8
+          = simple_form_for @business_contact_form, html: { class: 'space-y-4' } do |f|
+            .grid.grid-cols-1.md:grid-cols-2.gap-4
+              = f.input :first_name, placeholder: t('mail_form.attributes.business_contact_form.first_name'), input_html: { class: 'input input-bordered w-full' }, label: false
+              = f.input :last_name, placeholder: t('mail_form.attributes.business_contact_form.last_name'), input_html: { class: 'input input-bordered w-full' }, label: false
 
-              = f.input :company_name, placeholder: t('mail_form.attributes.business_contact_form.company_name'), input_html: { class: 'input input-bordered w-full' }, label: false
+            = f.input :company_name, placeholder: t('mail_form.attributes.business_contact_form.company_name'), input_html: { class: 'input input-bordered w-full' }, label: false
 
-              .grid.grid-cols-1.md:grid-cols-2.gap-4
-                = f.input :email, placeholder: t('mail_form.attributes.business_contact_form.email'), required: true, input_html: { class: 'input input-bordered w-full' }, label: false
-                .space-y-2
-                  = f.input :phone_number,
-                    type: 'tel',
-                    label: false,
-                    placeholder: t('mail_form.attributes.business_contact_form.phone_number'),
-                    input_html: { class: 'input input-bordered w-full js-phone-input contact-phone-input' }
-                  = f.input :phone_country_code, as: :hidden, input_html: { class: 'js-phone-country-code' }
-                  = f.input :phone_country_iso2, as: :hidden, input_html: { class: 'js-phone-country-iso2' }
-
-              fieldset.space-y-3
-                legend.label
-                  span.text-sm.font-extrabold
-                    = t('.industry_label')
-                .grid.grid-cols-1.sm:grid-cols-2.gap-3
-                  - industry_options.each do |value, label_text|
-                    label.flex.items-center.gap-3.rounded-xl.border.border-base-300.p-3.cursor-pointer.hover:border-primary
-                      input.radio.radio-primary type='radio' name='business_contact_form[industry]' value=value checked=(current_industry == value)
-                      span.text-sm.font-semibold = label_text
-
-              = f.input :message,
-                placeholder: t('mail_form.attributes.business_contact_form.message'),
-                as: :text,
-                input_html: { class: 'textarea textarea-bordered w-full h-44' },
-                label: false
-
+            .grid.grid-cols-1.md:grid-cols-2.gap-4
+              = f.input :email, placeholder: t('mail_form.attributes.business_contact_form.email'), required: true, input_html: { class: 'input input-bordered w-full' }, label: false
               .space-y-2
-                .flex.items-center.justify-between
-                  p.text-sm.font-extrabold
-                    = t('.attachments.title')
-                  p.text-xs.text-base-content/60
-                    = t('.maximum_attached_file_size')
+                = f.input :phone_number,
+                  type: 'tel',
+                  label: false,
+                  placeholder: t('mail_form.attributes.business_contact_form.phone_number'),
+                  input_html: { class: 'input input-bordered w-full js-phone-input contact-phone-input' }
+                = f.input :phone_country_code, as: :hidden, input_html: { class: 'js-phone-country-code' }
+                = f.input :phone_country_iso2, as: :hidden, input_html: { class: 'js-phone-country-iso2' }
 
-                .rounded-xl.border-2.border-dashed.border-base-300.p-6.text-center.space-y-2
-                  = lucide_icon 'upload', class: 'w-6 h-6 text-primary mx-auto'
-                  p.text-sm.font-extrabold.text-base-content/70
-                    = t('.attachments.prompt')
-                  p.text-xs.text-base-content/60
-                    = t('.attachments.subprompt')
+            fieldset.space-y-3
+              legend.label
+                span.text-sm.font-extrabold
+                  = t('.industry_label')
+              .grid.grid-cols-1.sm:grid-cols-2.gap-3
+                - industry_options.each do |value, label_text|
+                  label.flex.items-center.gap-3.rounded-xl.border.border-base-300.p-3.cursor-pointer.hover:border-primary
+                    input.radio.radio-primary type='radio' name='business_contact_form[industry]' value=value checked=(current_industry == value)
+                    span.text-sm.font-semibold = label_text
 
-                  = f.input :attached_file,
-                    as: :file,
-                    label: false,
-                    hint: false,
-                    input_html: { class: 'file-input file-input-bordered w-full border-dashed border-base-300' }
+            = f.input :message,
+              placeholder: t('mail_form.attributes.business_contact_form.message'),
+              as: :text,
+              input_html: { class: 'textarea textarea-bordered w-full h-44' },
+              label: false
 
-              .form-control
-                label.cursor-pointer.flex.items-center.gap-2
-                  = f.check_box :need_nda, { class: 'toggle toggle-primary' }, '1', '0'
-                  span.text-sm = t('.need_nda')
+            .space-y-2
+              .flex.items-center.justify-between
+                p.text-sm.font-extrabold
+                  = t('.attachments.title')
+                p.text-xs.text-base-content/60
+                  = t('.maximum_attached_file_size')
 
-              button.btn.btn-primary.w-full type='submit'
-                = t('.send')
-                = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
+              .rounded-xl.border-2.border-dashed.border-base-300.p-6.text-center.space-y-2
+                = lucide_icon 'upload', class: 'w-6 h-6 text-primary mx-auto'
+                p.text-sm.font-extrabold.text-base-content/70
+                  = t('.attachments.prompt')
+                p.text-xs.text-base-content/60
+                  = t('.attachments.subprompt')
+
+                = f.input :attached_file,
+                  as: :file,
+                  label: false,
+                  hint: false,
+                  input_html: { class: 'file-input file-input-bordered w-full border-dashed border-base-300' }
+
+            .form-control
+              label.cursor-pointer.flex.items-center.gap-2
+                = f.check_box :need_nda, { class: 'toggle toggle-primary' }, '1', '0'
+                span.text-sm = t('.need_nda')
+
+            button.btn.btn-primary.w-full type='submit'
+              = t('.send')
+              = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
