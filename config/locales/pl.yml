@@ -54,10 +54,31 @@ pl:
   blog: Blog
   business_contact_forms:
     form:
+      inquiry_badge: Formularz zapytania
+      industry_label: Obszar współpracy
       maximum_attached_file_size: 'Maksymalny rozmiar załącznika: 20 MB'
-      need_nda: Czy potrzebujesz najpierw otrzymać NDA?
-      send: Wyślij wiadomość
-      title: Masz jakiś projekt w planach?
+      need_nda: Poproś o nasz standardowy NDA przed udostępnieniem poufnych danych.
+      send: Wnioskuj o techniczną ocenę
+      title: Uzyskaj chirurgiczną ocenę swojego stacku
+      subheadline: Prześlij szczegóły, a senior inżynier—not a salesperson—przejrzy Twoją architekturę w ciągu 24 godzin.
+      security:
+        title: Bezpieczeństwo firmy
+        body: ISO 27001 Certified & SOC2 Type II
+      encryption:
+        title: Szyfrowanie end-to-end
+        body: Twoje dane są zabezpieczone AES-256
+      skip_form:
+        kicker: CHCESZ POMINĄĆ FORMULARZ?
+        button: Umów 15-minutowy audyt techniczny
+      industry_options:
+        project_rescue_cleanup: Project Rescue / Cleanup
+        scalable_architecture: Scalable Architecture
+        agentic_integration: AI/Agentic Integration
+        legacy_modernization: Legacy Modernization
+      attachments:
+        title: Załączniki (specyfikacje, RFP, projekty)
+        prompt: Kliknij, aby dodać plik lub przeciągnij i upuść
+        subprompt: PDF, DOC, PNG, JPG (max 10MB)
     show:
       back_to_home_page: Wróć do strony głównej
       headline: "Dziękujemy za Twoją wiadomość! 🌟"
