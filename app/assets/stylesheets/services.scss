@@ -1,7 +1,6 @@
 @use 'variables' as *;
 
 body.services {
-  background-color: $white-background-color;
   color: $grey-text-color;
 
   .services-llm-card {

@@ -1,4 +1,4 @@
-header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-base-200
+header.header.sticky.top-0.z-40.bg-base-200/95.backdrop-blur.border-b.border-base-200
   .container.mx-auto.px-4
     .flex.items-center.justify-between.gap-6.h-16
       = link_to root_path, class: 'flex items-center gap-2 shrink-0' do
@@ -18,7 +18,7 @@ header.header.sticky.top-0.z-40.bg-base-100/95.backdrop-blur.border-b.border-bas
         details.header-mobile-menu
           summary.header-mobile-toggle[aria-label='Toggle navigation']
             = lucide_icon 'menu', class: 'w-5 h-5'
-          .header-mobile-panel
+          .header-mobile-panel.bg-base-200
             nav.header-mobile-nav
               = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'header-mobile-link'
               = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'header-mobile-link'
