@@ -2,19 +2,9 @@
 @use 'mixins' as *;
 
 body.business-contact-forms {
-  .container.contact {
-    background-color: $light-background-color;
-    margin-top: -250px;
-    min-height: 500px;
-  }
-
   .footer {
     margin-top: 0;
   }
 }
 
-.background {
-  background-color: $red-background-color;
-  height: 350px;
-  margin-top: -20px;
-}
+/* Background is handled via DaisyUI base tokens/classes */
