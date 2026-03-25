@@ -54,10 +54,31 @@ en:
   blog: Blog
   business_contact_forms:
     form:
+      inquiry_badge: Inquiry Form
+      industry_label: Service Focus
       maximum_attached_file_size: 'Maximum size file: 20 MB'
-      need_nda: Do you need to get NDA first?
-      send: Send message
-      title: Got a project in mind?
+      need_nda: Request our standard NDA before sharing sensitive documentation.
+      send: Request Technical Assessment
+      title: Get a Surgical Assessment of Your Stack
+      subheadline: Submit your details and a senior engineer—not a salesperson—will review your architecture within 24 hours.
+      security:
+        title: Enterprise Security
+        body: ISO 27001 Certified & SOC2 Type II
+      encryption:
+        title: End-to-End Encryption
+        body: Your data is secured with AES-256
+      skip_form:
+        kicker: WANT TO SKIP THE FORM?
+        button: Book a 15-min Technical Audit
+      industry_options:
+        project_rescue_cleanup: Project Rescue / Cleanup
+        scalable_architecture: Scalable Architecture
+        agentic_integration: AI/Agentic Integration
+        legacy_modernization: Legacy Modernization
+      attachments:
+        title: Attachments (Specs, RFPs, Designs)
+        prompt: Click to upload or drag and drop
+        subprompt: PDF, DOC, PNG, JPG (max 10MB)
     show:
       back_to_home_page: Back to homepage
       headline: "Thank you for your message! 🌟"

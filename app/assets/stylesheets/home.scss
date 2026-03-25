@@ -2,7 +2,6 @@
 @use 'mixins' as *;
 
 body.home {
-  background-color: $white-background-color;
   color: $grey-text-color;
 
   .home-team-trim .team {

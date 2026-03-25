@@ -29,3 +29,20 @@
   --p: 4 74% 44%;
   --pc: 0 0% 100%;
 }
+
+/* Light surface tokens: unify page background via DaisyUI base colors */
+:root,
+[data-theme='light'] {
+  /* Cards */
+  --color-base-100: #fefefe;
+  /* Pages / surfaces */
+  --color-base-200: #f8f6f5;
+  --color-base-300: #f3f1f0;
+  --color-base-content: #2e3641;
+
+  /* DaisyUI legacy base tokens */
+  --b1: 0 0% 100%;
+  --b2: 0 0% 97%;
+  --b3: 0 0% 94%;
+  --bc: 222 15% 22%;
+}
