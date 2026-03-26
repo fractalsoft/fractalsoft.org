@@ -2,7 +2,6 @@
 @use 'mixins' as *;
 
 body.community {
-
   .logotype {
     &:hover {
       filter: brightness(120%);
