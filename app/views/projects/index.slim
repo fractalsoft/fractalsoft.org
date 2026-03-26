@@ -3,7 +3,7 @@
 .container.mx-auto.px-4.py-12
   / Hero
   .max-w-6xl.mx-auto
-    h1.font-extrabold.leading-tight.tracking-tight class='text-[clamp(2.25rem,5vw,3.25rem)]'
+    h1.font-extrabold.leading-tight.tracking-tight.text-4xl.md:text-5xl
       = t('.hero.title')
       .text-primary
         = t('.hero.impact')
@@ -34,7 +34,7 @@
             / Text first
             .p-8.lg:pl-10.flex.flex-col.justify-between
               .space-y-4
-                span.inline-flex.items-center.py-1.rounded-full.font-extrabold.tracking-wide.uppercase.bg-primary/15.text-primary class='text-[0.7rem]' = tag.upcase
+                span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
                 h2.text-2xl.font-extrabold.text-base-content
                   = project.title
                 p.text-sm.leading-relaxed.text-base-content/70
@@ -63,7 +63,7 @@
                       .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
                       .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
-                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2.5 px-4 font-bold inline-flex items-center justify-center w-full'
+                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full'
 
             .min-h-80.bg-slate-950
               = image_tag media_url, class: 'w-full h-full object-cover'
@@ -74,7 +74,7 @@
 
             .p-8.lg:pl-10.flex.flex-col.justify-between
               .space-y-4
-                span.inline-flex.items-center.py-1.rounded-full.font-extrabold.tracking-wide.uppercase.bg-primary/15.text-primary class='text-[0.7rem]' = tag.upcase
+                span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
                 h2.text-2xl.font-extrabold.text-base-content
                   = project.title
                 p.text-sm.leading-relaxed.text-base-content/70
@@ -103,4 +103,4 @@
                       .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
                       .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
-                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2.5 px-4 font-bold inline-flex items-center justify-center w-full'
+                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full'

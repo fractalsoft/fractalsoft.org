@@ -6,7 +6,7 @@
     .grid.grid-cols-1.lg:grid-cols-2.gap-10.items-start
       / Left intro column (no background)
       .pt-2
-        .badge.badge-primary.badge-outline.uppercase.tracking-widest.text-[11px]
+        .badge.badge-primary.badge-outline.meta-label
           = t('.inquiry_badge')
 
         h1.mt-4.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight
@@ -40,7 +40,7 @@
             = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
 
       / Right form column (card)
-      .card.shadow-xl.border.border-base-200.bg-base-100
+      .card.shadow-xl.card-shell
         .card-body.p-8
           = simple_form_for @business_contact_form, defaults: { wrapper: :vertical_file }, html: { class: 'space-y-4' } do |f|
             .grid.grid-cols-1.md:grid-cols-2.gap-4
