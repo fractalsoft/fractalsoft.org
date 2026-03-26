@@ -9,7 +9,7 @@
         .badge.badge-error.badge-outline.gap-2.font-semibold.uppercase.tracking-wide class='text-[11px]'
           = lucide_icon 'zap', class: 'w-3.5 h-3.5 shrink-0'
           = t('.hero.label', default: 'High-performance engineering')
-        h1.text-4xl.md:text-5xl.lg:text-6xl.font-extrabold.leading-tight.text-neutral-900
+        h1.text-4xl.md:text-5xl.lg:text-6xl.font-extrabold.leading-tight.text-base-content
           = t('.hero.headline')
         p.text-base.md:text-lg.text-neutral-600.max-w-xl
           = t('.hero.subheadline')
@@ -27,7 +27,7 @@
             img.w-full.h-full.object-cover src='https://placehold.co/560x520/fef2f2/db2626?text=Fractal+Engine' alt='System uptime visual'
           .card-body.relative.p-6.md:p-8.justify-between
             .flex.justify-end
-              .badge.badge-neutral.gap-2.bg-white.text-neutral-800.border-0.shadow-sm
+              .badge.badge-neutral.gap-2.bg-base-100.text-base-content.border-0.shadow-sm
                 span.w-2.h-2.rounded-full.bg-green-500
                 = t('.hero.uptime', default: 'System Uptime 99.9%')
 
@@ -39,7 +39,7 @@
 .container.mx-auto.px-4.py-16.space-y-8
   .flex.items-end.justify-between.gap-6
     .space-y-2
-      h2.text-3xl.md:text-4xl.font-extrabold.text-neutral-900.tracking-tight
+      h2.text-3xl.md:text-4xl.font-extrabold.text-base-content.tracking-tight
           = t('.results.title')
       p.text-sm.md:text-base.text-neutral-600
           = t('.results.subtitle')
@@ -90,7 +90,7 @@
     .grid.grid-cols-1.lg:grid-cols-2.gap-10.items-start
       .space-y-6
         .space-y-3.max-w-2xl
-          h2.text-2xl.md:text-3xl.font-bold.text-neutral-900
+          h2.text-2xl.md:text-3xl.font-bold.text-base-content
             = t('.insights.title', default: 'Innovation hub')
           p.text-base.text-neutral-600.leading-relaxed
             = t('.insights.body', default: "We don't just use technology; we shape it. Our lab focuses on advancing Open Source Ruby tools and experimenting with Agentic AI systems to solve complex business logic.")
@@ -119,7 +119,7 @@
                 .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
                   = lucide_icon 'braces', class: 'w-5 h-5'
               .space-y-0.5
-                .font-semibold.text-neutral-900
+                .font-semibold.text-base-content
                   = t('.insights.items.gem.title', default: 'Gem: FractalQuery')
                 p.text-sm.text-neutral-500.leading-relaxed
                   = t('.insights.items.gem.body', default: 'Optimizing complex recursive lookups in Rails.')
@@ -131,7 +131,7 @@
                 .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
                   = lucide_icon 'bot', class: 'w-5 h-5'
               .space-y-0.5
-                .font-semibold.text-neutral-900
+                .font-semibold.text-base-content
                   = t('.insights.items.project.title', default: 'Project: Autonomous QA')
                 p.text-sm.text-neutral-500.leading-relaxed
                   = t('.insights.items.project.body', default: 'LLM-driven regression testing for enterprise apps.')
@@ -142,7 +142,7 @@
     .card-body.p-0
       .grid.grid-cols-1.lg:grid-cols-2.gap-0
         .p-8.md:p-10.space-y-6
-          h2.text-2xl.md:text-3xl.font-bold.text-neutral-900
+          h2.text-2xl.md:text-3xl.font-bold.text-base-content
             = t('.contact.header')
           p.text-base.text-neutral-600.max-w-xl
             = t('.contact.description')
