@@ -1,8 +1,7 @@
 @use 'variables' as *;
 
 .header {
-  background-color: $header-background-color;
-  color: $header-text-color;
+  color: var(--color-base-content);
 }
 
 .header-mobile {
@@ -24,13 +23,13 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 0.5rem;
-  color: rgba(17, 24, 39, 1);
+  color: var(--color-base-content);
   background: transparent;
   cursor: pointer;
 }
 
 .header-mobile-toggle:hover {
-  background: rgba(243, 244, 246, 1);
+  background: var(--color-base-300);
 }
 
 .header-mobile-panel {
@@ -56,12 +55,12 @@
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: rgba(17, 24, 39, 1);
+  color: var(--color-base-content);
   text-decoration: none;
 }
 
 .header-mobile-link:hover {
-  background: rgba(243, 244, 246, 1);
+  background: var(--color-base-300);
 }
 
 .header-mobile-cta {

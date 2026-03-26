@@ -37,16 +37,16 @@
           .p-6
             .flex.items-center.justify-between.mb-4
               .space-y-1
-                h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
+                h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
                   = t('.sections.research.title')
-                p.text-xs.text-neutral-500
+                p.text-xs.text-base-content/60
                   = t('.sections.research.subtitle')
               = link_to '#', class: 'innovation-view-all inline-flex items-center gap-1' do
                 = t('.sections.research.view_all')
                 = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
 
             .grid.grid-cols-1.md:grid-cols-2.gap-4
-              .rounded-xl.overflow-hidden.bg-white
+              .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
                 .innovation-experiment-image.relative
                   = image_tag 'https://placehold.co/800x420/0b1220/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
                   .innovation-experiment-overlays
@@ -55,9 +55,9 @@
                     span.innovation-experiment-badge.innovation-experiment-badge--secondary
                       = t('.cards.card_1.tag')
                 .p-4.space-y-2
-                  h3.text-neutral-900.font-extrabold.text-sm.leading-snug
+                  h3.text-base-content.font-extrabold.text-sm.leading-snug
                     = t('.cards.card_1.title')
-                  p.text-xs.text-neutral-500
+                  p.text-xs.text-base-content/60
                     = t('.cards.card_1.body')
                   .innovation-author-row
                     span.innovation-author-avatar
@@ -67,7 +67,7 @@
                     span.innovation-author-date
                       = t('.cards.card_1.date')
 
-              .rounded-xl.overflow-hidden.bg-white
+              .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
                 .innovation-experiment-image.relative
                   = image_tag 'https://placehold.co/800x420/111827/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
                   .innovation-experiment-overlays
@@ -76,9 +76,9 @@
                     span.innovation-experiment-badge.innovation-experiment-badge--secondary
                       = t('.cards.card_2.tag')
                 .p-4.space-y-2
-                  h3.text-neutral-900.font-extrabold.text-sm.leading-snug
+                  h3.text-base-content.font-extrabold.text-sm.leading-snug
                     = t('.cards.card_2.title')
-                  p.text-xs.text-neutral-500
+                  p.text-xs.text-base-content/60
                     = t('.cards.card_2.body')
                   .innovation-author-row
                     span.innovation-author-avatar.innovation-author-avatar--alt
@@ -92,25 +92,25 @@
             .overflow-hidden
               .py-6
                 .flex.items-center.justify-between.mb-4
-                  h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
+                  h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
                     = t('.sections.insights.title')
                   = link_to '#', class: 'innovation-view-all inline-flex items-center gap-1' do
                     = t('.sections.insights.view_all')
                     = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
               = image_tag 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights', class: 'w-full h-60 object-cover'
               .p-6.space-y-2
-                p.text-sm.font-bold.text-neutral-900
+                p.text-sm.font-bold.text-base-content
                   = t('.insights.featured.title')
-                p.text-xs.text-neutral-500.leading-relaxed
+                p.text-xs.text-base-content/60.leading-relaxed
                   = t('.insights.featured.body')
                 = link_to '#', class: 'inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
                   = t('.insights.featured.read')
                   = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
 
         .space-y-6
-          .rounded-2xl.shadow-sm.p-6.bg-white
+          .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
             .flex.items-center.justify-between.mb-4
-              h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
+              h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
                 = t('.sidebar.opensource.title')
             .space-y-4
               .innovation-repo
@@ -146,9 +146,9 @@
             = link_to '#', class: 'innovation-repos-btn btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-3' do
               = t('.sidebar.opensource.view_all')
 
-          .rounded-2xl.shadow-sm.p-6
+          .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
             .flex.items-center.justify-between.mb-4
-              h2.text-base.font-extrabold.uppercase.tracking-wide.text-neutral-900
+              h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
                 = t('.sidebar.architecture.title')
             .rounded-xl.p-5
               .innovation-arch-flow
@@ -167,7 +167,7 @@
                     = t('.sidebar.architecture.worker_a')
                   .innovation-arch-worker
                     = t('.sidebar.architecture.worker_b')
-              .mt-4.text-neutral-500.text-center class='text-[10px]'
+              .mt-4.text-base-content/60.text-center class='text-[10px]'
                 = t('.sidebar.architecture.caption')
             = link_to '#', class: 'innovation-repos-btn btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-4 gap-2' do
               = lucide_icon 'download', class: 'w-4 h-4'

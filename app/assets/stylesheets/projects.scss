@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 body.projects {
-  color: $grey-text-color;
+  color: var(--color-base-content);
 
   .projects {
     background-color: transparent;
@@ -62,7 +62,7 @@ body.projects {
   }
 
   .projects-case-card {
-    background-color: #ffffff;
+    background-color: var(--color-base-100);
   }
 
   .projects-case-media {
@@ -71,15 +71,15 @@ body.projects {
   }
 
   .projects-case-content {
-    background-color: #ffffff;
+    background-color: var(--color-base-100);
   }
 
   .projects-case-tag {
     display: inline-flex;
     align-items: center;
     padding: 0.35rem 0.8rem;
-    background-color: #ffe4e6;
-    color: $red-text-color;
+    background-color: color-mix(in srgb, var(--color-primary) 14%, transparent);
+    color: var(--color-primary);
     border-radius: 9999px;
     font-weight: 800;
     letter-spacing: 0.03em;
@@ -88,7 +88,7 @@ body.projects {
   }
 
   .projects-case-desc {
-    color: $grey-text-color;
+    color: color-mix(in srgb, var(--color-base-content) 72%, transparent);
     line-height: 1.55;
     font-size: 0.875rem;
   }
