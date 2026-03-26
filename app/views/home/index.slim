@@ -6,7 +6,7 @@
     .flex.flex-col.md:flex-row.gap-8.lg:gap-12.items-stretch.w-full
       / Left: copy + CTAs
       .flex-1.min-w-0.space-y-6.self-center
-        .badge.badge-primary.badge-outline.gap-2.font-semibold.uppercase.tracking-wide class='text-[11px]'
+        .badge.badge-primary.badge-outline.gap-2.font-semibold.uppercase.tracking-wide.text-xs
           = lucide_icon 'zap', class: 'w-3.5 h-3.5 shrink-0'
           = t('.hero.label', default: 'High-performance engineering')
         h1.text-4xl.md:text-5xl.lg:text-6xl.font-extrabold.leading-tight.text-base-content
@@ -53,17 +53,17 @@
         img.w-full.h-full.object-cover src='https://placehold.co/1200x700/f3f4f6/111827?text=Case+Study+Image' alt='Case study preview'
       .card-body.p-8.md:p-10.justify-between
         .flex.flex-col.items-start.gap-2
-          .badge.badge-primary.uppercase.tracking-wide.leading-none class='text-[10px]'
+          .badge.badge-primary.uppercase.tracking-wide.leading-none.text-xs
             = t('.results.cards.fintech.badge')
-          .badge.badge-ghost.bg-white/15.text-white/85.leading-none class='text-[10px]'
+          .badge.badge-ghost.bg-white/15.text-white/85.leading-none.text-xs
             = t('.results.cards.fintech.tag')
         .space-y-3
           .space-y-1
             h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
               = t('.results.cards.fintech.title')
-            p.text-sm.md:text-base.leading-relaxed.text-white/90 class='max-w-[46ch]'
+            p.text-sm.md:text-base.leading-relaxed.text-white/90.max-w-prose
               = t('.results.cards.fintech.subtitle')
-          p.text-xs.md:text-sm.leading-relaxed.text-white/65 class='max-w-[64ch]'
+          p.text-xs.md:text-sm.leading-relaxed.text-white/65.max-w-2xl
             = t('.results.cards.fintech.body')
 
     = link_to '#', class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
@@ -71,17 +71,17 @@
         img.w-full.h-full.object-cover src='https://placehold.co/1200x700/0f766e/ecfeff?text=Case+Study+Image' alt='Case study preview'
       .card-body.p-8.md:p-10.justify-between
         .flex.flex-col.items-start.gap-2
-          .badge.badge-primary.uppercase.tracking-wide.leading-none class='text-[10px]'
+          .badge.badge-primary.uppercase.tracking-wide.leading-none.text-xs
             = t('.results.cards.health.badge')
-          .badge.badge-ghost.bg-white/15.text-white/85.leading-none class='text-[10px]'
+          .badge.badge-ghost.bg-white/15.text-white/85.leading-none.text-xs
             = t('.results.cards.health.tag')
         .space-y-3
           .space-y-1
             h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
               = t('.results.cards.health.title')
-            p.text-sm.md:text-base.leading-relaxed.text-white/90 class='max-w-[46ch]'
+            p.text-sm.md:text-base.leading-relaxed.text-white/90.max-w-prose
               = t('.results.cards.health.subtitle')
-          p.text-xs.md:text-sm.leading-relaxed.text-white/65 class='max-w-[64ch]'
+          p.text-xs.md:text-sm.leading-relaxed.text-white/65.max-w-2xl
             = t('.results.cards.health.body')
 
 / Insights / metrics
