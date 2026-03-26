@@ -81,7 +81,16 @@ en:
         subprompt: PDF, DOC, PNG, JPG (max 10MB)
     show:
       back_to_home_page: Back to homepage
-      headline: "Thank you for your message! 🌟"
+      headline: Surgical Assessment Initiated.
+      description: We've received your details. A senior engineer is currently reviewing your architecture. Expect a direct response within 24 hours.
+      explore_innovation_hub: Explore Innovation Hub
+      status:
+        label: Status
+        value: Assessment Active
+      trust:
+        encrypted: Encrypted
+        iso: ISO 27001
+        senior_review: Senior Review
   communities:
     index:
       title: Community

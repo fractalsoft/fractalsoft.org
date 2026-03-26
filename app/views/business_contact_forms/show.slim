@@ -1,13 +1,39 @@
-- content_for :body_class, 'business-contact-forms'
-.container-fluid.background
-.container.contact
-  .row
-    .col.my-5.pt-5.px-3
-      h1.text-center = t('.headline')
-  .row.justify-content-center
-    .col-8
-      == render 'thank_you'
-  .row
-    .col.mt-5.pb-5
-      .text-center
-        = link_to t('.back_to_home_page'), root_path, class: 'btn btn-primary'
+- content_for :body_class, 'business-contact-forms bg-base-200'
+
+.container.mx-auto.px-4.py-14
+  .max-w-4xl.mx-auto
+    .card.shadow-xl.border.border-base-200.bg-base-100.overflow-hidden
+      .grid.grid-cols-1.md:grid-cols-3
+        .md:col-span-1.bg-base-300.p-8.flex.flex-col.items-center.justify-center.text-center.gap-4
+          .w-20.h-20.rounded-full.bg-primary/10.flex.items-center.justify-center
+            = lucide_icon 'circle-check-big', class: 'w-10 h-10 text-primary'
+          .space-y-1
+            p.text-xs.font-extrabold.uppercase.tracking-widest.text-primary
+              = t('.status.label')
+            p.text-lg.font-semibold.text-base-content
+              = t('.status.value')
+
+        .md:col-span-2.p-8.space-y-6
+          .space-y-3
+            h1.text-4xl.font-extrabold.leading-tight.tracking-tight
+              = t('.headline')
+            p.text-base.text-base-content/75.max-w-xl
+              = t('.description')
+
+          .flex.flex-col.sm:flex-row.gap-3
+            = link_to t('.back_to_home_page'), root_path, class: 'btn btn-primary sm:min-w-52'
+            = link_to innovation_hub_path, class: 'btn btn-ghost sm:min-w-52 justify-between' do
+              span = t('.explore_innovation_hub')
+              = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
+
+          .pt-5.border-t.border-base-200
+            .flex.flex-wrap.items-center.gap-5.text-xs.font-semibold.uppercase.tracking-widest.text-base-content/55
+              span.inline-flex.items-center.gap-1.5
+                = lucide_icon 'shield', class: 'w-3.5 h-3.5 text-primary'
+                = t('.trust.encrypted')
+              span.inline-flex.items-center.gap-1.5
+                = lucide_icon 'shield-check', class: 'w-3.5 h-3.5 text-primary'
+                = t('.trust.iso')
+              span.inline-flex.items-center.gap-1.5
+                = lucide_icon 'scan-search', class: 'w-3.5 h-3.5 text-primary'
+                = t('.trust.senior_review')
