@@ -156,7 +156,7 @@ body.innovation-hub {
   }
 
   .innovation-repo + .innovation-repo {
-    border-top: 1px solid rgba(229, 231, 235, 1);
+    border-top: 1px solid var(--color-base-300);
     padding-top: 0.65rem;
   }
 
@@ -178,7 +178,7 @@ body.innovation-hub {
 
   .innovation-repo-desc {
     font-size: 0.95rem;
-    color: rgba(107, 114, 128, 1);
+    color: color-mix(in srgb, var(--color-base-content) 70%, transparent);
     line-height: 1.4;
     margin: 0.3rem 0 0;
   }
@@ -189,7 +189,7 @@ body.innovation-hub {
     gap: 0.25rem;
     white-space: nowrap;
     font-size: 0.85rem;
-    color: rgba(107, 114, 128, 1);
+    color: color-mix(in srgb, var(--color-base-content) 70%, transparent);
     font-weight: 700;
   }
 
@@ -226,7 +226,7 @@ body.innovation-hub {
 
   .innovation-arch-input {
     border: 2px dashed rgba(195, 38, 28, 0.9);
-    color: rgba(17, 24, 39, 0.8);
+    color: color-mix(in srgb, var(--color-base-content) 82%, transparent);
     border-radius: 0.55rem;
     padding: 0.75rem 1rem;
     min-width: 7rem;
@@ -261,15 +261,15 @@ body.innovation-hub {
   }
 
   .innovation-arch-worker {
-    border: 1px solid rgba(203, 213, 225, 1);
-    background: rgba(255, 255, 255, 1);
+    border: 1px solid var(--color-base-300);
+    background: var(--color-base-100);
     border-radius: 0.4rem;
     padding: 0.6rem 0.8rem;
     min-width: 4.6rem;
     text-align: center;
     font-size: 0.67rem;
     font-weight: 700;
-    color: rgba(71, 85, 105, 1);
+    color: color-mix(in srgb, var(--color-base-content) 75%, transparent);
   }
 
   .innovation-repos-btn {
@@ -410,7 +410,7 @@ body.innovation-hub {
     font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.02em;
-    color: rgba(107, 114, 128, 1);
+    color: color-mix(in srgb, var(--color-base-content) 72%, transparent);
     text-transform: none;
   }
 
@@ -418,7 +418,7 @@ body.innovation-hub {
     font-size: 0.62rem;
     font-weight: 900;
     letter-spacing: 0.08em;
-    color: rgba(107, 114, 128, 1);
+    color: color-mix(in srgb, var(--color-base-content) 72%, transparent);
     text-transform: uppercase;
   }
 }

@@ -3,14 +3,14 @@ header.header.sticky.top-0.z-40.bg-base-200/95.backdrop-blur.border-b.border-bas
     .flex.items-center.justify-between.gap-6.h-16
       = link_to root_path, class: 'flex items-center gap-2 shrink-0' do
         = image_tag '/icons/brand/fractalsoft.svg', alt: 'Fractal Soft', class: 'h-6 w-auto'
-        span.text-base.font-semibold.text-neutral-900
+        span.text-base.font-semibold.text-base-content
           | Fractal Soft
 
-      nav.hidden.md:flex.items-center.gap-8.text-sm.font-medium.text-neutral-700
-        = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:text-neutral-900'
-        = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'hover:text-neutral-900'
-        = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'hover:text-neutral-900'
-        = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'hover:text-neutral-900'
+      nav.hidden.md:flex.items-center.gap-8.text-sm.font-medium.text-base-content/80
+        = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'hover:text-base-content'
+        = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'hover:text-base-content'
+        = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'hover:text-base-content'
+        = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'hover:text-base-content'
         = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
           = t('layouts.menu.contact_us', default: 'Contact Us')
 

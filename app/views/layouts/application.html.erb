@@ -9,6 +9,18 @@
   <meta name='robots' content='noarchive' />
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <meta name='theme-color' content='#C3261C' />
+  <script>
+    (function() {
+      try {
+        var storedTheme = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var resolvedTheme = storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', resolvedTheme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <link href='<%= manifest_path %>' rel='manifest' />
   <!-- <base href='https://fractalsoft.org/' /> -->
   <%= favicon_link_tag '/favicon.ico', skip_pipeline: true %>

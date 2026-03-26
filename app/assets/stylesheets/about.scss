@@ -61,7 +61,7 @@
   line-height: 1.15;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: rgba(17, 24, 39, 1);
+  color: var(--color-base-content);
 }
 
 .about-section-title--engineering {
@@ -78,7 +78,7 @@
   max-width: 48rem;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: rgba(75, 85, 99, 1);
+  color: color-mix(in srgb, var(--color-base-content) 74%, transparent);
 }
 
 .about-section-copy--engineering {
@@ -110,8 +110,8 @@
 
 .about-stat {
   border-radius: 0.45rem;
-  background: #fff;
-  border: 1px solid rgba(229, 231, 235, 1);
+  background: var(--color-base-100);
+  border: 1px solid var(--color-base-300);
   padding: 0.7rem 0.7rem 0.75rem;
   height: auto;
 }
@@ -121,7 +121,7 @@
   font-size: 2rem;
   line-height: 0.95;
   font-weight: 900;
-  color: rgba(17, 24, 39, 1);
+  color: var(--color-base-content);
   letter-spacing: -0.02em;
 }
 
@@ -148,8 +148,8 @@
 
 .about-builder-card {
   border-radius: 0.75rem;
-  background: #fff;
-  border: 1px solid rgba(229, 231, 235, 1);
+  background: var(--color-base-100);
+  border: 1px solid var(--color-base-300);
   overflow: hidden;
 }
 
@@ -192,8 +192,8 @@
   border-radius: 0.65rem;
   overflow: hidden;
   min-height: 6.2rem;
-  border: 1px solid rgba(229, 231, 235, 1);
-  background: #fff;
+  border: 1px solid var(--color-base-300);
+  background: var(--color-base-100);
 }
 
 .about-culture-image {
@@ -233,14 +233,14 @@
   margin: 0;
   font-size: 0.85rem;
   font-weight: 900;
-  color: rgba(17, 24, 39, 1);
+  color: var(--color-base-content);
 }
 
 .about-culture-body {
   margin: 0.45rem 0 0;
   font-size: 0.8rem;
   line-height: 1.45;
-  color: rgba(107, 114, 128, 1);
+  color: color-mix(in srgb, var(--color-base-content) 72%, transparent);
 }
 
 .about-workflow {
@@ -329,7 +329,8 @@
 .about-team-card {
   border-radius: 0.7rem;
   overflow: hidden;
-  background: #fff;
+  background: var(--color-base-100);
+  border: 1px solid var(--color-base-300);
 }
 
 .about-team-photo {
@@ -344,7 +345,7 @@
   margin: 0.6rem 0 0;
   font-size: 0.82rem;
   font-weight: 800;
-  color: rgba(17, 24, 39, 1);
+  color: var(--color-base-content);
   padding: 1rem;
 }
 

@@ -35,7 +35,7 @@
             .projects-case-content.p-8.lg:pl-10.flex.flex-col.justify-between
               .space-y-4
                 span.projects-case-tag = tag.upcase
-                h2.projects-case-title.text-2xl.font-extrabold.text-neutral-900
+                h2.projects-case-title.text-2xl.font-extrabold.text-base-content
                   = project.title
                 p.projects-case-desc
                   = desc
@@ -50,18 +50,18 @@
                   .grid.grid-cols-2.gap-6
                     .space-y-1
                       .projects-case-metric-value.text-primary = "#{uptime}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
                     .space-y-1
                       .projects-case-metric-value.text-primary = "#{cost_reduction}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
                 - else
                   .grid.grid-cols-2.gap-6
                     .space-y-1
                       .projects-case-metric-value.text-primary = "$#{risk_m}M"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
                     .space-y-1
                       .projects-case-metric-value.text-primary = "#{coverage}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
                 = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'projects-case-btn btn btn-primary inline-flex items-center justify-center w-full'
 
@@ -75,7 +75,7 @@
             .projects-case-content.p-8.lg:pl-10.flex.flex-col.justify-between
               .space-y-4
                 span.projects-case-tag = tag.upcase
-                h2.projects-case-title.text-2xl.font-extrabold.text-neutral-900
+                h2.projects-case-title.text-2xl.font-extrabold.text-base-content
                   = project.title
                 p.projects-case-desc
                   = desc
@@ -90,17 +90,17 @@
                   .grid.grid-cols-2.gap-6
                     .space-y-1
                       .projects-case-metric-value.text-primary = "#{uptime}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
                     .space-y-1
                       .projects-case-metric-value.text-primary = "#{cost_reduction}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
                 - else
                   .grid.grid-cols-2.gap-6
                     .space-y-1
                       .projects-case-metric-value.text-primary = "$#{risk_m}M"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
                     .space-y-1
                       .projects-case-metric-value.text-primary = "#{coverage}%"
-                      .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
+                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
                 = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'projects-case-btn btn btn-primary inline-flex items-center justify-center w-full'
