@@ -1,21 +1,12 @@
 @use 'arts' as *;
-@use 'about' as *;
-@use 'business_contact_forms' as *;
 @use 'common' as *;
 @use 'community' as *;
-@use 'contact_forms' as *;
 @use 'domain' as *;
 @use 'fonts' as *;
-@use 'footer' as *;
-@use 'header' as *;
-@use 'home' as *;
 @use 'icons' as *;
 @use 'intl-tel-input.scss' as *;
 @use 'job_offers' as *;
 @use 'people' as *;
-@use 'projects' as *;
-@use 'innovation_hub' as *;
-@use 'services' as *;
 
 /* DaisyUI theme override (CDN setup): map primary to brand red */
 :root,

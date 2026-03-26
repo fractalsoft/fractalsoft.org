@@ -5,13 +5,13 @@ document.addEventListener("turbolinks:load", function() {
     button.addEventListener('click', function () {
       var targetId = '#' + button.getAttribute('data-target');
       mapButtons.forEach(function (btn) {
-        btn.classList.remove('active');
+        btn.classList.remove('btn-active');
       });
-      button.classList.add('active');
+      button.classList.add('btn-active');
       document.querySelectorAll('iframe.map').forEach(function (iframe) {
-        iframe.classList.add('map-display-none');
+        iframe.classList.add('hidden');
       });
-      document.querySelector(targetId).classList.remove('map-display-none');
+      document.querySelector(targetId).classList.remove('hidden');
     });
   });
 

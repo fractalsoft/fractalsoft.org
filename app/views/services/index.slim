@@ -3,68 +3,66 @@
 / Hero
 .hero
   .hero-content.container.mx-auto.px-4.py-10.md:py-14
-    .flex.flex-col.w-full.max-w-5xl.services-hero-wrap
-      p.services-hero-eyebrow
+    .flex.flex-col.w-full.max-w-5xl.gap-3
+      p.m-0.text-primary.text-xs.font-bold.uppercase class='tracking-[0.14em]'
         = t('.hero.eyebrow', default: 'Expert Engineering Services')
-      h1.services-hero-title
-        span.services-hero-title-main
+      h1.m-0.font-extrabold.text-base-content class='leading-[0.98] tracking-[-0.03em] text-[clamp(2.85rem,9vw,5.1rem)]'
+        span.block
           = t('.hero.title_sophisticated', default: 'Sophisticated')
-        span.services-hero-title-accent
+        span.block.text-primary
           = t('.hero.title_engineering', default: 'Engineering')
-      p.services-hero-subtext
+      p.mt-1.text-base-content/70.leading-relaxed class='text-[clamp(1.05rem,1.3vw,1.9rem)] max-w-[42rem]'
         = t('.hero.subtext', default: 'We build high-performance systems with surgical precision. From mission-critical Ruby on Rails backends to complex agentic AI systems, we master the architecture of the future.')
 
 / Core Engineering Mastery
-section.services-section.container.mx-auto.px-4.py-16
+section.container.mx-auto.px-4.py-16
   .flex.items-end.gap-4.mb-8
     h2.text-2xl.md:text-3xl.font-bold.text-base-content.shrink-0
       = t('.core.title', default: 'Core Engineering Mastery')
-    .flex-1.min-w-4.h-px.bg-base-300.mb-1.5
   .grid.grid-cols-1.md:grid-cols-2.gap-6
     .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
       .card-body.space-y-4
-        .services-card-icon
+        .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
           = lucide_icon 'book-open', class: 'w-6 h-6'
         h3.text-xl.font-bold.text-base-content
           = t('.core.rails.title', default: 'Ruby on Rails Development')
         p.text-sm.text-neutral-600.leading-relaxed
           = t('.core.rails.body')
         .flex.flex-wrap.gap-2
-          span.services-core-pill
+          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
             = t('.core.rails.stack.postgresql')
-          span.services-core-pill
+          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
             = t('.core.rails.stack.redis')
-          span.services-core-pill
+          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
             = t('.core.rails.stack.sidekiq')
 
     .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
       .card-body.space-y-4
-        .services-card-icon
+        .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
           = lucide_icon 'network', class: 'w-6 h-6'
         h3.text-xl.font-bold.text-base-content
           = t('.core.architectures.title', default: 'Scalable Architectures')
         p.text-sm.text-neutral-600.leading-relaxed
           = t('.core.architectures.body')
         .flex.flex-wrap.gap-2
-          span.services-core-pill
+          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
             = t('.core.architectures.stack.kubernetes')
-          span.services-core-pill
+          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
             = t('.core.architectures.stack.aws_gcp')
-          span.services-core-pill
+          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
             = t('.core.architectures.stack.serverless')
-          span.services-core-pill
+          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
             = t('.core.architectures.stack.docker')
 
 / AI-Augmented Solutions
-section.services-section.container.mx-auto.px-4.py-16
+section.container.mx-auto.px-4.py-16
   h2.text-2xl.md:text-3xl.font-bold.text-base-content.mb-8
     = t('.ai.title', default: 'AI-Augmented Solutions')
   .grid.grid-cols-1.lg:grid-cols-3.gap-6.items-stretch
     .lg:col-span-2
       .card.bg-neutral-800.text-neutral-100.shadow-xl.rounded-xl.overflow-hidden.h-full
         .card-body.p-8.relative.h-full.flex.flex-col.justify-end.items-start
-          .services-ai-graphic
-          .services-ai-content.relative.z-10.space-y-4
+          .relative.z-10.space-y-4.max-w-[28rem]
             h3.text-xl.font-bold.text-white
               = t('.ai.agentic.title', default: 'Agentic Systems')
             p.text-neutral-300.text-sm.leading-relaxed
@@ -84,10 +82,10 @@ section.services-section.container.mx-auto.px-4.py-16
                 = t('.ai.agentic.bullet_3', default: 'Data Extraction')
 
     .h-full.flex.flex-col.gap-6
-      .card.services-llm-card.shadow-lg.rounded-xl
+      .card.bg-primary.text-primary-content.shadow-lg.rounded-xl
         .card-body.p-6
           .flex.items-start.gap-4
-            .services-card-icon.bg-white/20.text-white
+            .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-white/20.text-white
               = lucide_icon 'bot', class: 'w-6 h-6'
             .space-y-2
               h3.text-lg.font-bold.text-white
@@ -95,14 +93,14 @@ section.services-section.container.mx-auto.px-4.py-16
               p.text-neutral-200.text-sm.leading-relaxed
                 = t('.ai.llm.body', default: 'Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.')
               .flex.flex-wrap.gap-2.text-xs.font-mono.uppercase.tracking-wide
-                span.services-llm-chip = t('.ai.llm.stack.openai')
-                span.services-llm-chip = t('.ai.llm.stack.anthropic')
-                span.services-llm-chip = t('.ai.llm.stack.langchain')
-                span.services-llm-chip = t('.ai.llm.stack.llamaindex')
+                span.inline-flex.items-center.px-2.5.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.openai')
+                span.inline-flex.items-center.px-2.5.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.anthropic')
+                span.inline-flex.items-center.px-2.5.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.langchain')
+                span.inline-flex.items-center.px-2.5.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.llamaindex')
 
       .card.bg-base-100.shadow-md.rounded-xl.border.border-base-200
         .card-body.p-6
-          .services-card-icon
+          .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
             = lucide_icon 'database', class: 'w-6 h-6'
           h3.text-lg.font-bold.text-base-content.mt-3
             = t('.ai.vector.title', default: 'Vector Search')
@@ -110,13 +108,13 @@ section.services-section.container.mx-auto.px-4.py-16
             = t('.ai.vector.body', default: 'Semantic search and RAG infrastructure with Pinecone, Milvus, and custom embeddings.')
 
 / Strategic Technical Advisory
-section.services-section.container.mx-auto.px-4.py-16
+section.container.mx-auto.px-4.py-16
   h2.text-2xl.md:text-3xl.font-bold.text-base-content.mb-8
     = t('.advisory.title', default: 'Strategic Technical Advisory')
   .grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-4.gap-6
     .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
       .card-body.space-y-3
-        .services-card-icon
+        .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
           = lucide_icon 'search', class: 'w-5 h-5'
         h3.text-lg.font-bold.text-base-content
           = t('.advisory.audit.title', default: 'Tech Audit')
@@ -125,7 +123,7 @@ section.services-section.container.mx-auto.px-4.py-16
 
     .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
       .card-body.space-y-3
-        .services-card-icon
+        .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
           = lucide_icon 'users', class: 'w-5 h-5'
         h3.text-lg.font-bold.text-base-content
           = t('.advisory.cto.title', default: 'CTO-as-a-Service')
@@ -134,7 +132,7 @@ section.services-section.container.mx-auto.px-4.py-16
 
     .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
       .card-body.space-y-3
-        .services-card-icon
+        .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
           = lucide_icon 'lock', class: 'w-5 h-5'
         h3.text-lg.font-bold.text-base-content
           = t('.advisory.secure.title', default: 'Secure Scaling')
@@ -143,7 +141,7 @@ section.services-section.container.mx-auto.px-4.py-16
 
     .card.bg-base-100.shadow-sm.rounded-xl.border.border-base-200
       .card-body.space-y-3
-        .services-card-icon
+        .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
           = lucide_icon 'settings', class: 'w-5 h-5'
         h3.text-lg.font-bold.text-base-content
           = t('.advisory.vibe.title', default: 'Vibe Coding Remediation & Hardening')
@@ -151,38 +149,38 @@ section.services-section.container.mx-auto.px-4.py-16
           = t('.advisory.vibe.body', default: 'Incremental migration of monoliths to modular, maintainable systems.')
 
 / Process
-section.services-section.container.mx-auto.px-4.pt-12.pb-8
+section.container.mx-auto.px-4.pt-12.pb-8
   h2.text-2xl.md:text-3xl.font-bold.text-base-content.mb-6
     = t('.process.title', default: 'Our Surgical Engagement Process')
   .h-px.bg-base-200.mb-10
 
   .grid.grid-cols-1.md:grid-cols-3.gap-8
-    .services-process-card.text-left
-      .services-process-icon
+    .flex.flex-col.gap-2.text-left
+      .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
         = lucide_icon 'search', class: 'w-5 h-5'
       h3.m-0.font-extrabold.text-base-content.leading-tight
         = t('.process.step1.title', default: 'Deep-Dive Audit')
-      p.services-process-desc
+      p.m-0.text-xs.leading-relaxed.text-base-content/60
         = t('.process.step1.body', default: 'We find the bottlenecks in your code and infrastructure.')
 
-    .services-process-card.text-left
-      .services-process-icon
+    .flex.flex-col.gap-2.text-left
+      .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
         = lucide_icon 'sparkles', class: 'w-5 h-5'
       h3.m-0.font-extrabold.text-base-content.leading-tight
         = t('.process.step2.title', default: 'Surgical Execution')
-      p.services-process-desc
+      p.m-0.text-xs.leading-relaxed.text-base-content/60
         = t('.process.step2.body', default: 'We implement high-performance patterns and AI agents.')
 
-    .services-process-card.text-left
-      .services-process-icon
+    .flex.flex-col.gap-2.text-left
+      .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
         = lucide_icon 'upload', class: 'w-5 h-5'
       h3.m-0.font-extrabold.text-base-content.leading-tight
         = t('.process.step3.title', default: 'Scalable Handover')
-      p.services-process-desc
+      p.m-0.text-xs.leading-relaxed.text-base-content/60
         = t('.process.step3.body', default: 'We provide documentation and zero-downtime deployment.')
 
 / CTA
-section.services-cta.py-16
+section.py-16.bg-primary.text-primary-content
   .container.mx-auto.px-4.text-center
     h2.text-4xl.md:text-5xl.font-extrabold.text-white.mb-3
       = t('.cta.headline', default: 'Ready to engineer your future?')
