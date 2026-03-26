@@ -49,16 +49,15 @@
 
             = f.input :company_name, placeholder: t('mail_form.attributes.business_contact_form.company_name'), input_html: { class: 'input input-bordered w-full' }, label: false
 
-            .grid.grid-cols-1.md:grid-cols-2.gap-4
-              = f.input :email, placeholder: t('mail_form.attributes.business_contact_form.email'), required: true, input_html: { class: 'input input-bordered w-full' }, label: false
-              .space-y-2
-                = f.input :phone_number,
-                  type: 'tel',
-                  label: false,
-                  placeholder: t('mail_form.attributes.business_contact_form.phone_number'),
-                  input_html: { class: 'input input-bordered w-full js-phone-input contact-phone-input' }
-                = f.input :phone_country_code, as: :hidden, input_html: { class: 'js-phone-country-code' }
-                = f.input :phone_country_iso2, as: :hidden, input_html: { class: 'js-phone-country-iso2' }
+            = f.input :email, placeholder: t('mail_form.attributes.business_contact_form.email'), required: true, input_html: { class: 'input input-bordered w-full' }, label: false
+
+            = f.input :phone_number,
+              type: 'tel',
+              label: false,
+              placeholder: t('mail_form.attributes.business_contact_form.phone_number'),
+              input_html: { class: 'input input-bordered w-full js-phone-input contact-phone-input' }
+            = f.input :phone_country_code, as: :hidden, input_html: { class: 'js-phone-country-code' }
+            = f.input :phone_country_iso2, as: :hidden, input_html: { class: 'js-phone-country-iso2' }
 
             fieldset.space-y-3
               legend.label
@@ -83,18 +82,15 @@
                 p.text-xs.text-base-content/60
                   = t('.maximum_attached_file_size')
 
-              .rounded-xl.border-2.border-dashed.border-base-300.p-6.text-center.space-y-2
+              - file_input_id = 'business_contact_form_attached_file'
+              = f.file_field :attached_file, id: file_input_id, class: 'sr-only js-business-attachment-input'
+              label.rounded-xl.border-2.border-dashed.border-base-300.p-6.text-center.space-y-2.cursor-pointer.hover:border-primary.block for=file_input_id
                 = lucide_icon 'upload', class: 'w-6 h-6 text-primary mx-auto'
                 p.text-sm.font-extrabold.text-base-content/70
                   = t('.attachments.prompt')
                 p.text-xs.text-base-content/60
                   = t('.attachments.subprompt')
-
-                = f.input :attached_file,
-                  as: :file,
-                  label: false,
-                  hint: false,
-                  input_html: { class: 'file-input file-input-bordered w-full border-dashed border-base-300' }
+                p.text-xs.font-semibold.text-base-content/70.hidden.js-business-attachment-filename
 
             .form-control
               label.cursor-pointer.flex.items-center.gap-2
