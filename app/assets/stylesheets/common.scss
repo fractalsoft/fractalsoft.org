@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 body.home {
-  color: #616060;
+  color: $grey-text-color;
 }
 
 h1,
@@ -27,8 +27,8 @@ p {
 }
 
 .btn.btn-primary {
-  background-color: #d9251c;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
   border: none;
   padding-inline: 1.25rem;
   padding-block: 0.5rem;
@@ -40,24 +40,54 @@ p {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background-color: #c11f16;
+    filter: brightness(0.92);
     box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.25);
   }
 }
 
-/* Pillar card icons (home page): rounded square, rose background + icon color */
-section#pillars.home-pillars .home-pillar-icon {
-  display: flex !important;
-  flex-shrink: 0 !important;
-  width: 3rem !important;
-  height: 3rem !important;
-  border-radius: 0.5rem !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background-color: #ffe4e6 !important;
-  color: #e11d48 !important;
+.surface-hero-accent {
+  background:
+    radial-gradient(circle at 20% 20%, rgb(255 42 37 / 25%) 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, rgb(45 212 191 / 18%) 0%, transparent 45%),
+    linear-gradient(90deg, rgb(2 6 23 / 95%) 0%, rgb(2 6 23 / 65%) 50%, rgb(2 6 23 / 95%) 100%);
 }
-section#pillars.home-pillars .home-pillar-icon svg {
-  width: 1.5rem !important;
-  height: 1.5rem !important;
+
+.surface-hero-dark {
+  background:
+    radial-gradient(circle at 82% 8%, rgb(195 38 28 / 26%), transparent 36%),
+    linear-gradient(140deg, rgb(6 14 28 / 92%) 0%, rgb(8 16 34 / 82%) 54%, rgb(13 21 41 / 90%) 100%);
+}
+
+.surface-panel-dark {
+  background: linear-gradient(138deg, rgb(8 18 46 / 100%) 0%, rgb(8 20 50 / 100%) 45%, rgb(13 24 56 / 100%) 100%);
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.icon-pill {
+  display: flex;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: color-mix(in oklab, var(--color-primary) 10%, white);
+  color: var(--color-primary);
+}
+
+.icon-pill svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.card-shell {
+  border: 1px solid var(--color-base-200);
+  border-radius: 0.75rem;
+  background-color: var(--color-base-100);
 }
