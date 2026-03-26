@@ -6,4 +6,5 @@ turbolinks.start();
 
 import "fractalsoft/browser_info";
 import "fractalsoft/contact_forms";
+import "fractalsoft/business_contact_forms";
 import "fractalsoft/phone";
