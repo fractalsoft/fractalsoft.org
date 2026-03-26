@@ -1,4 +1,4 @@
-section#pillars.home-pillars.py-16
+section#pillars.py-16
   .container.mx-auto.px-4.space-y-10
     h2.text-center.text-2xl.md:text-3xl.font-bold.text-base-content
       = t('home.index.pillars.section_title')
@@ -6,7 +6,7 @@ section#pillars.home-pillars.py-16
     .grid.grid-cols-1.md:grid-cols-3.gap-6
       .card.card-bordered.bg-base-100.shadow-md.rounded-xl.h-full
         .card-body.space-y-4.text-left.items-start
-          .home-pillar-icon
+          .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
             = lucide_icon 'terminal', class: 'w-6 h-6'
           h3.text-lg.font-bold.text-base-content
             = t('home.index.pillars.legacy_ai.title')
@@ -15,7 +15,7 @@ section#pillars.home-pillars.py-16
 
       .card.card-bordered.bg-base-100.shadow-md.rounded-xl.h-full
         .card-body.space-y-4.text-left.items-start
-          .home-pillar-icon
+          .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
             = lucide_icon 'brain', class: 'w-6 h-6'
           h3.text-lg.font-bold.text-base-content
             = t('home.index.pillars.vibe_cleanup.title')
@@ -24,7 +24,7 @@ section#pillars.home-pillars.py-16
 
       .card.card-bordered.bg-base-100.shadow-md.rounded-xl.h-full
         .card-body.space-y-4.text-left.items-start
-          .home-pillar-icon
+          .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-primary/10.text-primary
             = lucide_icon 'handshake', class: 'w-6 h-6'
           h3.text-lg.font-bold.text-base-content
             = t('home.index.pillars.direct_senior.title')
