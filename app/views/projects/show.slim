@@ -1,4 +1,4 @@
-- content_for :body_class, 'project'
+- content_for :body_class, 'project bg-base-200'
 - content_for :title, @project.title.to_s
 
 - tag = @project.subtitle.presence || @project.title.to_s
@@ -12,59 +12,59 @@
 - coverage = 70 + (@project.year.to_i % 30)
 - risk_m = (1.0 + (@project.year.to_i % 50) / 10.0).round(1)
 
-.w-full.project
-  .projects-show-hero.mx-auto.px-4.py-8
+.w-full
+  .mx-auto.px-4.py-8
     .max-w-6xl.mx-auto
       .flex.items-center.justify-between.gap-6.mb-8
-        = link_to projects_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 hover:text-neutral-900' do
+        = link_to projects_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-sm font-semibold text-base-content/70 hover:text-base-content' do
           = lucide_icon 'arrow-left', class: 'w-4 h-4'
           | Back to Portfolio
 
   .max-w-6xl.mx-auto.px-4.pb-12.space-y-10
-    .projects-show-card.rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
+    .rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
       .grid.grid-cols-1.lg:grid-cols-2
-        .projects-show-media
+        .min-h-[420px].bg-slate-950
           = image_tag hero_url, class: 'w-full h-full object-cover'
-        .projects-show-content.p-8.lg:p-10.lg:pl-12
-          span.projects-case-tag = tag.upcase
-          h1.projects-show-title.mt-4
+        .p-8.lg:p-10.lg:pl-12
+          span.inline-flex.items-center.px-3.py-1.rounded-full.font-extrabold.tracking-wide.text-[0.7rem].uppercase.bg-primary/15.text-primary = tag.upcase
+          h1.mt-4.m-0.font-black.tracking-tight.text-[1.9rem].leading-tight.text-base-content
             = @project.title
-          p.projects-show-intro.mt-3
+          p.mt-3.text-[0.95rem].leading-relaxed.text-base-content/70
             = intro
 
-          .projects-show-metrics.mt-7.grid.grid-cols-2.gap-6
+          .mt-7.grid.grid-cols-2.gap-6
             - if @project.year.to_i.even?
               .space-y-1
-                .projects-case-metric-value.text-error = "#{uptime}%"
-                .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
+                .font-black.text-base.leading-tight.text-primary = "#{uptime}%"
+                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
               .space-y-1
-                .projects-case-metric-value.text-error = "#{cost_reduction}%"
-                .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
+                .font-black.text-base.leading-tight.text-primary = "#{cost_reduction}%"
+                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
               .space-y-1.col-span-2
-                .projects-case-metric-value.text-error = "#{coverage}%"
-                .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+                .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
+                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
             - else
               .space-y-1
-                .projects-case-metric-value.text-error = "$#{risk_m}M"
-                .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
+                .font-black.text-base.leading-tight.text-primary = "$#{risk_m}M"
+                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
               .space-y-1
-                .projects-case-metric-value.text-error = "#{coverage}%"
-                .projects-case-metric-label.text-neutral-500.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+                .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
+                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
 
-          .projects-show-actions.mt-8.flex.flex-col.sm:flex-row.items-center.gap-4
+          .mt-8.flex.flex-col.sm:flex-row.items-center.gap-4
             = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full sm:w-auto' do
               | Schedule a Consultation
             - if @project.url.present?
-              = link_to @project.url, @project.url, class: 'btn btn-outline w-full sm:w-auto' do
+              = link_to @project.url, @project.url, class: 'btn btn-outline btn-primary w-full sm:w-auto' do
                 | Live Link
 
           - if desc.present?
-            .projects-show-description.mt-6
-              p = desc
+            .mt-6
+              p.m-0.text-[0.95rem].leading-relaxed.text-base-content/70 = desc
 
     - page_image_urls = @project.page_images.map { |img| img.image_url }.compact.reject { |u| u.blank? }
     - if page_image_urls.any?
-      .projects-show-gallery
+      .grid.grid-cols-1.md:grid-cols-2.gap-6
         - page_image_urls.each do |image_url|
           .rounded-2xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
             = image_tag image_url, class: 'w-full h-auto'

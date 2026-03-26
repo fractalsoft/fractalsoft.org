@@ -1,21 +1,21 @@
 - content_for :body_class, 'projects bg-base-200'
 
-.container.mx-auto.px-4.py-12.projects
+.container.mx-auto.px-4.py-12
   / Hero
   .max-w-6xl.mx-auto
-    h1.projects-hero-title.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight
+    h1.font-extrabold.leading-tight.tracking-tight class='text-[clamp(2.25rem,5vw,3.25rem)]'
       = t('.hero.title')
-      .projects-hero-impact
+      .text-primary
         = t('.hero.impact')
 
-    .mt-4.projects-tabs.text-sm
+    .mt-4.flex.flex-wrap.gap-4.items-center.justify-start.text-sm
       - active_filter = params[:filter].presence || 'all'
       - tabs = [['all', t('.tabs.all')], ['fintech', t('.tabs.fintech')], ['cloud', t('.tabs.cloud')], ['ai', t('.tabs.ai')], ['legacy', t('.tabs.legacy')]]
       - tabs.each do |key, label|
         - active = (key == active_filter)
         = link_to label,
           (key == 'all' ? projects_path(locale: I18n.locale) : projects_path(locale: I18n.locale, filter: key)),
-          class: "projects-tab #{active ? 'projects-tab--active' : ''}"
+          class: "relative inline-flex items-center py-1 text-xs font-bold tracking-wide no-underline #{active ? 'text-primary after:content-[\"\"] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-0.5 after:bg-primary after:rounded-full' : 'text-base-content/60 hover:text-base-content'}"
 
     .mt-6.h-px.bg-base-300
 
@@ -28,16 +28,16 @@
       - desc = project.introduction.presence || project.description.presence || ''
 
       - reverse = idx.odd?
-      .projects-case-card.rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
-        .projects-case-inner.grid.grid-cols-1.lg:grid-cols-2.gap-0
+      .rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
+        .grid.grid-cols-1.lg:grid-cols-2.gap-0
           - if reverse
             / Text first
-            .projects-case-content.p-8.lg:pl-10.flex.flex-col.justify-between
+            .p-8.lg:pl-10.flex.flex-col.justify-between
               .space-y-4
-                span.projects-case-tag = tag.upcase
-                h2.projects-case-title.text-2xl.font-extrabold.text-base-content
+                span.inline-flex.items-center.py-1.rounded-full.font-extrabold.tracking-wide.uppercase.bg-primary/15.text-primary class='text-[0.7rem]' = tag.upcase
+                h2.text-2xl.font-extrabold.text-base-content
                   = project.title
-                p.projects-case-desc
+                p.text-sm.leading-relaxed.text-base-content/70
                   = desc
 
               .space-y-3.mt-8
@@ -49,35 +49,35 @@
                 - if idx % 3 == 0
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "#{uptime}%"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
+                      .font-black.text-base.leading-tight.text-primary = "#{uptime}%"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "#{cost_reduction}%"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
+                      .font-black.text-base.leading-tight.text-primary = "#{cost_reduction}%"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
                 - else
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "$#{risk_m}M"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
+                      .font-black.text-base.leading-tight.text-primary = "$#{risk_m}M"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "#{coverage}%"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
+                      .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
-                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'projects-case-btn btn btn-primary inline-flex items-center justify-center w-full'
+                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2.5 px-4 font-bold inline-flex items-center justify-center w-full'
 
-            .projects-case-media
+            .min-h-80.bg-slate-950
               = image_tag media_url, class: 'w-full h-full object-cover'
           - else
             / Media first
-            .projects-case-media
+            .min-h-80.bg-slate-950
               = image_tag media_url, class: 'w-full h-full object-cover'
 
-            .projects-case-content.p-8.lg:pl-10.flex.flex-col.justify-between
+            .p-8.lg:pl-10.flex.flex-col.justify-between
               .space-y-4
-                span.projects-case-tag = tag.upcase
-                h2.projects-case-title.text-2xl.font-extrabold.text-base-content
+                span.inline-flex.items-center.py-1.rounded-full.font-extrabold.tracking-wide.uppercase.bg-primary/15.text-primary class='text-[0.7rem]' = tag.upcase
+                h2.text-2xl.font-extrabold.text-base-content
                   = project.title
-                p.projects-case-desc
+                p.text-sm.leading-relaxed.text-base-content/70
                   = desc
 
               .space-y-3.mt-8
@@ -89,18 +89,18 @@
                 - if idx % 3 == 0
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "#{uptime}%"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
+                      .font-black.text-base.leading-tight.text-primary = "#{uptime}%"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "#{cost_reduction}%"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
+                      .font-black.text-base.leading-tight.text-primary = "#{cost_reduction}%"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
                 - else
                   .grid.grid-cols-2.gap-6
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "$#{risk_m}M"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
+                      .font-black.text-base.leading-tight.text-primary = "$#{risk_m}M"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
                     .space-y-1
-                      .projects-case-metric-value.text-primary = "#{coverage}%"
-                      .projects-case-metric-label.text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
+                      .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
+                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
 
-                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'projects-case-btn btn btn-primary inline-flex items-center justify-center w-full'
+                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2.5 px-4 font-bold inline-flex items-center justify-center w-full'

@@ -1,15 +1,15 @@
-.section
-  h4 = t('.find_us')
-  ul.list-inline
-    li.list-inline-item
+.mb-6
+  h4.text-sm.font-bold.uppercase.tracking-widest.text-base-content.mb-4 = t('.find_us')
+  ul.flex.flex-wrap.gap-3
+    li
       = ExternalLink.new(link_type: :github, url: 'https://github.com/fractalsoft').link(title: 'Star us')
-    li.list-inline-item
+    li
       = ExternalLink.new(link_type: :twitter, url: 'https://twitter.com/fractal_soft').link(title: 'Follow us')
-    li.list-inline-item
+    li
       = ExternalLink.new(link_type: :linkedin, url: 'https://linkedin.com/in/fractalsoft').link(title: 'Business with us')
-    li.list-inline-item
+    li
       = ExternalLink.new(link_type: :youtube, url: 'https://youtube.com/fractalsoft').link(title: 'Subscribe us')
-    li.list-inline-item
+    li
       = ExternalLink.new(link_type: :facebook, url: 'https://facebook.com/fractalsoft').link(title: 'Like us')
-    li.list-inline-item
+    li
       = ExternalLink.new(link_type: :instagram, url: 'https://instagram.com/fractalsoft').link(title: 'Follow us')

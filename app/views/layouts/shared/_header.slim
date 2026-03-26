@@ -1,4 +1,4 @@
-header.header.sticky.top-0.z-40.bg-base-200.backdrop-blur
+header.header.sticky.top-0.z-40.bg-base-200.backdrop-blur.text-base-content
   .container.mx-auto.px-4
     .flex.items-center.justify-between.gap-6.h-16
       = link_to root_path, class: 'flex items-center gap-2 shrink-0' do
@@ -14,15 +14,15 @@ header.header.sticky.top-0.z-40.bg-base-200.backdrop-blur
         = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
           = t('layouts.menu.contact_us', default: 'Contact Us')
 
-      .md:hidden.header-mobile.flex.items-center.gap-2
-        details.header-mobile-menu
-          summary.header-mobile-toggle[aria-label='Toggle navigation']
+      .md:hidden.relative.flex.items-center.gap-2
+        details
+          summary.inline-flex.items-center.justify-center.w-9.h-9.rounded-lg.text-base-content.hover:bg-base-300.cursor-pointer.list-none class='[&::-webkit-details-marker]:hidden'
             = lucide_icon 'menu', class: 'w-5 h-5'
-          .header-mobile-panel.bg-base-200
-            nav.header-mobile-nav
-              = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'header-mobile-link'
-              = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'header-mobile-link'
-              = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'header-mobile-link'
-              = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'header-mobile-link'
+          .fixed.top-16.left-0.right-0.z-80.px-4.pt-3.pb-4.bg-base-200
+            nav.flex.flex-col.gap-1
+              = link_to t('layouts.menu.services', default: 'Services'), services_path, class: 'block rounded-lg px-3 py-3.5 text-base font-bold leading-tight tracking-tight text-base-content hover:bg-base-300 no-underline'
+              = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'block rounded-lg px-3 py-3.5 text-base font-bold leading-tight tracking-tight text-base-content hover:bg-base-300 no-underline'
+              = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'block rounded-lg px-3 py-3.5 text-base font-bold leading-tight tracking-tight text-base-content hover:bg-base-300 no-underline'
+              = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'block rounded-lg px-3 py-3.5 text-base font-bold leading-tight tracking-tight text-base-content hover:bg-base-300 no-underline'
         = link_to root_path(anchor: 'contact'), class: 'btn btn-primary btn-sm whitespace-nowrap' do
           = t('layouts.menu.contact_us', default: 'Contact Us')

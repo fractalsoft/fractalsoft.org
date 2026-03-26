@@ -1,8 +1,8 @@
-.section.address
-  h4 = t('.contact_with_us')
+.mb-10
+  h4.text-sm.font-bold.uppercase.tracking-widest.text-base-content.mb-6 = t('.contact_with_us')
   - OfficeAddress.sorted.each do |office_address|
-    address
-      strong = office_address.name
+    address.not-italic.text-sm.text-base-content/75.mb-5.leading-relaxed
+      strong.text-base-content = office_address.name
       br
       = office_address.street_with_number
       br

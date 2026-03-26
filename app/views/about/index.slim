@@ -1,135 +1,110 @@
 - content_for :body_class, 'about bg-base-200'
 
-.about.bg-base-200
-  .about-main.pt-8.px-4
-    .container.mx-auto
-      .about-hero.rounded-2xl.overflow-hidden
-        .about-hero-overlay.p-6.md:p-10
-          p.about-kicker
-            = t('about.index.hero.kicker')
-          h1.about-title
-            = t('about.index.hero.title_top')
-            br
-            span.about-title-accent
-              = t('about.index.hero.title_accent')
-          p.about-subtitle
-            = t('about.index.hero.subtitle')
+.px-4.pt-8
+  .container.mx-auto.space-y-12
+    .rounded-2xl.overflow-hidden.p-6.md:p-10 class='bg-[radial-gradient(circle_at_82%_8%,rgba(195,38,28,0.26),transparent_36%),linear-gradient(140deg,rgba(6,14,28,0.92)_0%,rgba(8,16,34,0.82)_54%,rgba(13,21,41,0.9)_100%)]'
+      p.inline-flex.items-center.w-fit.px-3.py-1.rounded-full.bg-primary/20.border.border-primary/40.text-red-300.text-[0.62rem].font-extrabold.tracking-[0.1em].uppercase
+        = t('about.index.hero.kicker')
+      h1.mt-3.leading-tight.font-black.tracking-tight.text-white class='text-[clamp(2rem,4.2vw,3.6rem)]'
+        = t('about.index.hero.title_top')
+        br
+        span.text-primary = t('about.index.hero.title_accent')
+      p.mt-4.max-w-2xl.text-base.text-white/85
+        = t('about.index.hero.subtitle')
 
-      .about-section.mt-12
-        .about-engineering-grid.mt-6
-          .about-engineering-left
-            h2.about-section-title.about-section-title--engineering
-              = t('about.index.engineering.title')
-            p.about-section-copy.about-section-copy--engineering
-              = t('about.index.engineering.copy')
-            .about-stats
-              .about-stat
-                p.about-stat-label
-                  = t('about.index.engineering.stats.yr')
-                p.about-stat-value
-                  = t('about.index.engineering.stats.yr_value')
-              .about-stat
-                p.about-stat-label
-                  = t('about.index.engineering.stats.projects')
-                p.about-stat-value
-                  = t('about.index.engineering.stats.projects_value')
-              .about-stat
-                p.about-stat-label
-                  = t('about.index.engineering.stats.senior')
-                p.about-stat-value
-                  = t('about.index.engineering.stats.senior_value')
-          .about-culture-mosaic
-            .about-culture-card.about-culture-card--dark.about-culture-card--top
-              = image_tag 'https://placehold.co/640x420/6b7280/f3f4f6?text=CULTURE', alt: 'Culture board', class: 'about-culture-image'
-            .about-culture-card.about-culture-card--code.about-culture-card--top
-              = image_tag 'https://placehold.co/640x420/111827/e5e7eb?text=Code', alt: 'Code board', class: 'about-culture-image'
-            .about-culture-card.about-culture-card--soft.about-culture-card--bottom
-              = image_tag 'https://placehold.co/640x420/d1d5db/f8fafc?text=Tech', alt: 'Tech board', class: 'about-culture-image'
-            .about-culture-card.about-culture-card--home.about-culture-card--bottom
-              = image_tag 'https://placehold.co/640x420/e5e7eb/374151?text=Workspace', alt: 'Workspace board', class: 'about-culture-image'
+    .grid.grid-cols-1.lg:grid-cols-2.gap-5.items-start
+      .space-y-5
+        h2.leading-tight.font-black.text-base-content class='text-[clamp(1.8rem,2.8vw,2.6rem)]'
+          = t('about.index.engineering.title')
+        p.text-base.leading-relaxed.text-base-content/75
+          = t('about.index.engineering.copy')
+        .grid.grid-cols-3.gap-3
+          .rounded-lg.bg-base-100.border.border-base-300.p-3
+            p.uppercase.font-black.tracking-wide.text-primary class='text-[0.54rem]' = t('about.index.engineering.stats.yr')
+            p.text-3xl.font-black.leading-none.text-base-content = t('about.index.engineering.stats.yr_value')
+          .rounded-lg.bg-base-100.border.border-base-300.p-3
+            p.uppercase.font-black.tracking-wide.text-primary class='text-[0.54rem]' = t('about.index.engineering.stats.projects')
+            p.text-3xl.font-black.leading-none.text-base-content = t('about.index.engineering.stats.projects_value')
+          .rounded-lg.bg-base-100.border.border-base-300.p-3
+            p.uppercase.font-black.tracking-wide.text-primary class='text-[0.54rem]' = t('about.index.engineering.stats.senior')
+            p.text-3xl.font-black.leading-none.text-base-content = t('about.index.engineering.stats.senior_value')
+      .grid.grid-cols-2.gap-3
+        .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
+          = image_tag 'https://placehold.co/640x420/6b7280/f3f4f6?text=CULTURE', alt: 'Culture board', class: 'w-full h-28 object-cover grayscale'
+        .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
+          = image_tag 'https://placehold.co/640x420/111827/e5e7eb?text=Code', alt: 'Code board', class: 'w-full h-28 object-cover grayscale'
+        .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
+          = image_tag 'https://placehold.co/640x420/d1d5db/f8fafc?text=Tech', alt: 'Tech board', class: 'w-full h-32 object-cover grayscale'
+        .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
+          = image_tag 'https://placehold.co/640x420/e5e7eb/374151?text=Workspace', alt: 'Workspace board', class: 'w-full h-32 object-cover grayscale'
 
-      .about-section.mt-12
-        h2.about-section-title.about-section-title--builder
-          = t('about.index.builder.title')
-        p.about-section-copy.about-section-copy--builder
-          = t('about.index.builder.copy')
-        .about-builder-grid.mt-6
-          .about-builder-card
-            = image_tag 'https://placehold.co/820x420/111827/f3f4f6?text=Code+Standards', alt: 'Production code standards', class: 'about-builder-image about-builder-image--dark'
-            .about-builder-content
-              p.about-culture-heading
-                = t('about.index.builder.card_1_title')
-              p.about-culture-body
-                = t('about.index.builder.card_1_body')
-          .about-builder-card
-            = image_tag 'https://placehold.co/820x420/6b7280/f3f4f6?text=CULTURE', alt: 'Engineering culture board', class: 'about-builder-image about-builder-image--mid'
-            .about-builder-content
-              p.about-culture-heading
-                = t('about.index.builder.card_2_title')
-              p.about-culture-body
-                = t('about.index.builder.card_2_body')
-          .about-builder-card
-            = image_tag 'https://placehold.co/820x420/e5e7eb/374151?text=Senior+Workspace', alt: 'Senior engineering workspace', class: 'about-builder-image about-builder-image--light'
-            .about-builder-content
-              p.about-culture-heading
-                = t('about.index.builder.card_3_title')
-              p.about-culture-body
-                = t('about.index.builder.card_3_body')
+    .space-y-4
+      h2.leading-tight.font-black.text-base-content class='text-[clamp(1.8rem,2.7vw,2.5rem)]'
+        = t('about.index.builder.title')
+      p.text-base.leading-relaxed.text-base-content/75.max-w-3xl
+        = t('about.index.builder.copy')
+      .grid.grid-cols-1.lg:grid-cols-3.gap-3
+        .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
+          = image_tag 'https://placehold.co/820x420/111827/f3f4f6?text=Code+Standards', alt: 'Production code standards', class: 'w-full h-28 object-cover grayscale brightness-75'
+          .p-4
+            p.text-sm.font-black.text-base-content = t('about.index.builder.card_1_title')
+            p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_1_body')
+        .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
+          = image_tag 'https://placehold.co/820x420/6b7280/f3f4f6?text=CULTURE', alt: 'Engineering culture board', class: 'w-full h-28 object-cover grayscale brightness-90'
+          .p-4
+            p.text-sm.font-black.text-base-content = t('about.index.builder.card_2_title')
+            p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_2_body')
+        .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
+          = image_tag 'https://placehold.co/820x420/e5e7eb/374151?text=Senior+Workspace', alt: 'Senior engineering workspace', class: 'w-full h-28 object-cover grayscale'
+          .p-4
+            p.text-sm.font-black.text-base-content = t('about.index.builder.card_3_title')
+            p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_3_body')
 
-      .about-workflow.mt-12.rounded-2xl.p-6.md:p-8
-        .about-workflow-grid
-          .about-workflow-copy-block
-            p.about-workflow-kicker
-              = t('about.index.workflow.kicker')
-            h2.about-section-title.about-section-title--light
-              = t('about.index.workflow.title')
-            p.about-workflow-copy
-              = t('about.index.workflow.copy')
-          .about-workflow-panel
-            .about-workflow-item
-              span.about-workflow-item-icon
-                = lucide_icon 'zap', class: 'w-4 h-4'
-              .about-workflow-item-body
-                p.about-workflow-item-title
-                  = t('about.index.workflow.item_1_title')
-                p.about-workflow-item-copy
-                  = t('about.index.workflow.item_1_copy')
-            .about-workflow-item
-              span.about-workflow-item-icon
-                = lucide_icon 'shield-check', class: 'w-4 h-4'
-              .about-workflow-item-body
-                p.about-workflow-item-title
-                  = t('about.index.workflow.item_2_title')
-                p.about-workflow-item-copy
-                  = t('about.index.workflow.item_2_copy')
-            .about-workflow-item
-              span.about-workflow-item-icon
-                = lucide_icon 'brain-circuit', class: 'w-4 h-4'
-              .about-workflow-item-body
-                p.about-workflow-item-title
-                  = t('about.index.workflow.item_3_title')
-                p.about-workflow-item-copy
-                  = t('about.index.workflow.item_3_copy')
+    .rounded-2xl.p-6.md:p-8.border class='bg-[linear-gradient(138deg,rgba(8,18,46,1)_0%,rgba(8,20,50,1)_45%,rgba(13,24,56,1)_100%)] border-slate-700/50'
+      .grid.grid-cols-1.gap-6 class='lg:grid-cols-[1.2fr_1fr]'
+        .space-y-3
+          p.inline-flex.items-center.px-2.5.py-1.rounded-full.bg-primary/20.border.border-primary/35.text-red-300.font-black.uppercase class='text-[0.58rem] tracking-[0.08em]'
+            = t('about.index.workflow.kicker')
+          h2.text-3xl.font-black.text-white
+            = t('about.index.workflow.title')
+          p.text-slate-300.leading-relaxed.max-w-2xl
+            = t('about.index.workflow.copy')
+        .rounded-xl.border.border-slate-400/20.bg-slate-800/50.p-4.space-y-4
+          .flex.items-start.gap-2
+            = lucide_icon 'zap', class: 'w-4 h-4 text-primary mt-0.5'
+            .space-y-1
+              p.text-sm.font-bold.text-slate-100 = t('about.index.workflow.item_1_title')
+              p.text-xs.text-slate-400.leading-relaxed = t('about.index.workflow.item_1_copy')
+          .flex.items-start.gap-2
+            = lucide_icon 'shield-check', class: 'w-4 h-4 text-primary mt-0.5'
+            .space-y-1
+              p.text-sm.font-bold.text-slate-100 = t('about.index.workflow.item_2_title')
+              p.text-xs.text-slate-400.leading-relaxed = t('about.index.workflow.item_2_copy')
+          .flex.items-start.gap-2
+            = lucide_icon 'brain-circuit', class: 'w-4 h-4 text-primary mt-0.5'
+            .space-y-1
+              p.text-sm.font-bold.text-slate-100 = t('about.index.workflow.item_3_title')
+              p.text-xs.text-slate-400.leading-relaxed = t('about.index.workflow.item_3_copy')
 
-      .about-section.mt-12
-        h2.about-section-title.text-center
-          = t('about.index.leadership.title')
-        p.about-section-copy.text-center
-          = t('about.index.leadership.copy')
-        .about-team-grid.mt-6
-          - if @team_members.present?
-            - @team_members.each do |member|
-              .about-team-card
-                = image_tag(member.image.presence || 'https://placehold.co/640x760/e5e7eb/374151?text=Team', alt: member.full_name.presence || member.first_name, class: 'about-team-photo')
-                p.about-team-name
-                  = member.full_name.presence || member.first_name
+    .space-y-3
+      h2.text-center.text-3xl.font-black.text-base-content
+        = t('about.index.leadership.title')
+      p.text-center.text-base.text-base-content/75.max-w-3xl.mx-auto
+        = t('about.index.leadership.copy')
+      .grid.grid-cols-2.lg:grid-cols-4.gap-3.pt-2
+        - if @team_members.present?
+          - @team_members.each do |member|
+            .rounded-xl.overflow-hidden.bg-base-100.border.border-base-300
+              = image_tag(member.image.presence || 'https://placehold.co/640x760/e5e7eb/374151?text=Team', alt: member.full_name.presence || member.first_name, class: 'w-full aspect-[3/3.4] object-cover')
+              p.p-4.text-sm.font-bold.text-base-content
+                = member.full_name.presence || member.first_name
 
-  section.about-cta.mt-12.py-14
-    .container.mx-auto.px-4.text-center
-      h2.about-cta-title.text-4xl.md:text-5xl.font-extrabold.text-white.tracking-tight
-        = t('about.index.cta.title')
-      p.about-cta-copy.text-white/85.mt-4.max-w-3xl.mx-auto.text-base.md:text-lg
-        = t('about.index.cta.copy')
-      .mt-6
-        = link_to root_path(anchor: 'contact'), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary about-cta-btn px-8' do
-          = t('about.index.cta.button')
+section.mt-12.py-14.bg-primary.text-primary-content
+  .container.mx-auto.px-4.text-center
+    h2.text-4xl.md:text-5xl.font-extrabold.tracking-tight
+      = t('about.index.cta.title')
+    p.text-primary-content/85.mt-4.max-w-3xl.mx-auto.text-base.md:text-lg
+      = t('about.index.cta.copy')
+    .mt-6
+      = link_to root_path(anchor: 'contact'), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary px-8 font-bold min-h-11 rounded-lg' do
+        = t('about.index.cta.button')
