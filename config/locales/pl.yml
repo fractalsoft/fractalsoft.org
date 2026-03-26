@@ -81,7 +81,16 @@ pl:
         subprompt: PDF, DOC, PNG, JPG (max 10MB)
     show:
       back_to_home_page: Wróć do strony głównej
-      headline: "Dziękujemy za Twoją wiadomość! 🌟"
+      headline: Ocena techniczna rozpoczęta.
+      description: Otrzymaliśmy Twoje dane. Senior inżynier analizuje teraz architekturę. Oczekuj bezpośredniej odpowiedzi w ciągu 24 godzin.
+      explore_innovation_hub: Przejdź do Innovation Hub
+      status:
+        label: Status
+        value: Ocena aktywna
+      trust:
+        encrypted: Szyfrowane
+        iso: ISO 27001
+        senior_review: Senior Review
   communities:
     index:
       title: Społeczność

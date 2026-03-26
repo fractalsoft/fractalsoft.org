@@ -189,9 +189,7 @@ section.services-cta.py-16
     p.text-white/85.mb-8.max-w-3xl.mx-auto.text-base.md:text-lg
       = t('.cta.subheadline', default: 'Let\'s discuss how our sophisticated engineering patterns can accelerate your product development.')
     .flex.flex-col.sm:flex-row.items-center.justify-center.gap-4
-      = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
-        = t('.cta.book_audit', default: 'Book a 15-min Technical Audit')
-      = link_to new_contact_form_path, class: 'btn btn-outline btn-primary' do
+      = link_to new_contact_form_path, class: 'btn btn-outline' do
         = t('.cta.schedule', default: 'Schedule a Consultation')
       = link_to root_path, class: 'btn btn-ghost text-white hover:bg-white/10' do
         = t('.cta.view_work', default: 'View Our Work')

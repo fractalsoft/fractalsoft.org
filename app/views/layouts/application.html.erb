@@ -20,10 +20,12 @@
   <%= csrf_meta_tags unless @page_caching %>
   <%= javascript_importmap_tags %>
 </head>
-<body class='<%= yield(:body_class) %>'>
+<body class='min-h-screen flex flex-col <%= yield(:body_class) %>'>
 <%= query_diet_widget if Rails.env.development? && ENV['OPTIMIZATION'] %>
 <%= render 'layouts/shared/header' %>
-<%= yield %>
+<main class='flex-1'>
+  <%= yield %>
+</main>
 <%= render 'layouts/shared/footer' %>
 </body>
 </html>

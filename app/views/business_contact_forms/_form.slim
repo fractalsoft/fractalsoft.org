@@ -42,38 +42,39 @@
       / Right form column (card)
       .card.shadow-xl.border.border-base-200.bg-base-100
         .card-body.p-8
-          = simple_form_for @business_contact_form, html: { class: 'space-y-4' } do |f|
+          = simple_form_for @business_contact_form, defaults: { wrapper: :vertical_file }, html: { class: 'space-y-4' } do |f|
             .grid.grid-cols-1.md:grid-cols-2.gap-4
-              .space-y-1
-                label.label for='business_contact_form_first_name'
-                  span.label-text.font-semibold
-                    = t('mail_form.attributes.business_contact_form.first_name')
-                    span.text-error.ml-1 *
-                = f.input_field :first_name, required: true, placeholder: t('mail_form.attributes.business_contact_form.first_name'), class: 'input input-bordered w-full'
-              .space-y-1
-                label.label for='business_contact_form_last_name'
-                  span.label-text.font-semibold = t('mail_form.attributes.business_contact_form.last_name')
-                = f.input_field :last_name, placeholder: t('mail_form.attributes.business_contact_form.last_name'), class: 'input input-bordered w-full'
+              = f.input :first_name,
+                required: true,
+                label: t('mail_form.attributes.business_contact_form.first_name'),
+                label_html: { class: 'label-text font-semibold block mb-1' },
+                placeholder: t('mail_form.attributes.business_contact_form.first_name'),
+                input_html: { class: 'input input-bordered w-full' }
+              = f.input :last_name,
+                label: t('mail_form.attributes.business_contact_form.last_name'),
+                label_html: { class: 'label-text font-semibold block mb-1' },
+                placeholder: t('mail_form.attributes.business_contact_form.last_name'),
+                input_html: { class: 'input input-bordered w-full' }
 
-            .space-y-1
-              label.label for='business_contact_form_company_name'
-                span.label-text.font-semibold = t('mail_form.attributes.business_contact_form.company_name')
-              = f.input_field :company_name, placeholder: t('mail_form.attributes.business_contact_form.company_name'), class: 'input input-bordered w-full'
+            = f.input :company_name,
+              label: t('mail_form.attributes.business_contact_form.company_name'),
+              label_html: { class: 'label-text font-semibold block mb-1' },
+              placeholder: t('mail_form.attributes.business_contact_form.company_name'),
+              input_html: { class: 'input input-bordered w-full' }
 
-            .space-y-1
-              label.label for='business_contact_form_email'
-                span.label-text.font-semibold
-                  = t('mail_form.attributes.business_contact_form.email')
-                  span.text-error.ml-1 *
-              = f.input_field :email, required: true, placeholder: t('mail_form.attributes.business_contact_form.email'), class: 'input input-bordered w-full'
+            = f.input :email,
+              required: true,
+              label: t('mail_form.attributes.business_contact_form.email'),
+              label_html: { class: 'label-text font-semibold block mb-1' },
+              placeholder: t('mail_form.attributes.business_contact_form.email'),
+              input_html: { class: 'input input-bordered w-full' }
 
-            .space-y-1
-              label.label for='business_contact_form_phone_number'
-                span.label-text.font-semibold = t('mail_form.attributes.business_contact_form.phone_number')
-              = f.input_field :phone_number,
-                type: 'tel',
-                placeholder: t('mail_form.attributes.business_contact_form.phone_number'),
-                class: 'input input-bordered w-full js-phone-input contact-phone-input'
+            = f.input :phone_number,
+              type: 'tel',
+              label: t('mail_form.attributes.business_contact_form.phone_number'),
+              label_html: { class: 'label-text font-semibold block mb-1' },
+              placeholder: t('mail_form.attributes.business_contact_form.phone_number'),
+              input_html: { class: 'input input-bordered w-full js-phone-input contact-phone-input' }
             = f.input :phone_country_code, as: :hidden, input_html: { class: 'js-phone-country-code' }
             = f.input :phone_country_iso2, as: :hidden, input_html: { class: 'js-phone-country-iso2' }
 
@@ -87,10 +88,12 @@
                     input.radio.radio-primary type='radio' name='business_contact_form[industry]' value=value checked=(current_industry == value)
                     span.text-sm.font-semibold = label_text
 
-            .space-y-1
-              label.label for='business_contact_form_message'
-                span.label-text.font-semibold = t('mail_form.attributes.business_contact_form.message')
-              = f.text_area :message, placeholder: t('mail_form.attributes.business_contact_form.message'), class: 'textarea textarea-bordered w-full h-44'
+            = f.input :message,
+              as: :text,
+              label: t('mail_form.attributes.business_contact_form.message'),
+              label_html: { class: 'label-text font-semibold block mb-1' },
+              placeholder: t('mail_form.attributes.business_contact_form.message'),
+              input_html: { class: 'textarea textarea-bordered w-full h-44' }
 
             .space-y-2
               .flex.items-center.justify-between
