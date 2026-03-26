@@ -46,3 +46,16 @@
   --b3: 0 0% 94%;
   --bc: 222 15% 22%;
 }
+
+/* Dark surface tokens: applied when data-theme='dark' */
+[data-theme='dark'] {
+  --color-base-100: #13161d;
+  --color-base-200: #0f1117;
+  --color-base-300: #0b0d12;
+  --color-base-content: #e5e7eb;
+
+  --b1: 222 18% 10%;
+  --b2: 222 20% 8%;
+  --b3: 222 22% 6%;
+  --bc: 220 20% 92%;
+}
