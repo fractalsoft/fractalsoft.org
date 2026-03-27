@@ -35,7 +35,7 @@
 <body class='min-h-screen flex flex-col <%= yield(:body_class) %>'>
 <%= query_diet_widget if Rails.env.development? && ENV['OPTIMIZATION'] %>
 <%= render 'layouts/shared/header' %>
-<main class='flex-1'>
+<main class='flex-1 bg-base-200'>
   <%= yield %>
 </main>
 <%= render 'layouts/shared/footer' %>

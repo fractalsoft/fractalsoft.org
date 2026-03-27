@@ -1,9 +1,5 @@
 @use 'variables' as *;
 
-body.home {
-  color: $grey-text-color;
-}
-
 h1,
 h2,
 h3,
@@ -20,10 +16,6 @@ h6 {
 li,
 p {
   font-family: $opensans-fonts;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 .btn.btn-primary {
@@ -79,11 +71,11 @@ p {
   justify-content: center;
   background-color: color-mix(in oklab, var(--color-primary) 10%, white);
   color: var(--color-primary);
-}
 
-.icon-pill svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .card-shell {
