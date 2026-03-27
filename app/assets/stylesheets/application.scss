@@ -1,52 +1,10 @@
 @use 'arts' as *;
 @use 'common' as *;
 @use 'community' as *;
+@use 'daisyui' as *;
 @use 'domain' as *;
 @use 'fonts' as *;
 @use 'icons' as *;
 @use 'intl-tel-input.scss' as *;
 @use 'job_offers' as *;
 @use 'people' as *;
-
-/* DaisyUI theme override (CDN setup): map primary to brand red */
-:root,
-[data-theme='light'],
-[data-theme='dark'] {
-  /* DaisyUI v5 color tokens */
-  --color-primary: #c3261c;
-  --color-primary-content: #ffffff;
-
-  /* DaisyUI legacy tokens for broader compatibility */
-  --p: 4 74% 44%;
-  --pc: 0 0% 100%;
-}
-
-/* Light surface tokens: unify page background via DaisyUI base colors */
-:root,
-[data-theme='light'] {
-  /* Cards */
-  --color-base-100: #fefefe;
-  /* Pages / surfaces */
-  --color-base-200: #f8f6f5;
-  --color-base-300: #fcf4f3;
-  --color-base-content: #2e3641;
-
-  /* DaisyUI legacy base tokens */
-  --b1: 0 0% 100%;
-  --b2: 0 0% 97%;
-  --b3: 0 0% 94%;
-  --bc: 222 15% 22%;
-}
-
-/* Dark surface tokens: applied when data-theme='dark' */
-[data-theme='dark'] {
-  --color-base-100: #13161d;
-  --color-base-200: #0f1117;
-  --color-base-300: #0b0d12;
-  --color-base-content: #e5e7eb;
-
-  --b1: 222 18% 10%;
-  --b2: 222 20% 8%;
-  --b3: 222 22% 6%;
-  --bc: 220 20% 92%;
-}
