@@ -3,7 +3,7 @@
     = message
 = simple_form_for contact_form, defaults: { wrapper: :vertical_file }, html: { id: 'contact_form', class: 'card bg-base-100 border border-base-200 shadow-md p-6 md:p-8 space-y-3' } do |f|
   = f.input :name, placeholder: t('.name'), required: true, input_html: { class: 'input input-bordered w-full' }, label_html: { class: 'label-text font-semibold mb-1 block' }
-  .d-none
+  .hidden
     = f.input :nickname, label: false, placeholder: t('.nickname.placeholder'), hint: t('.nickname.hint')
   = f.input :email, placeholder: t('.email'), required: true, input_html: { class: 'input input-bordered w-full' }, label_html: { class: 'label-text font-semibold mb-1 block' }
   = f.input :message, placeholder: t('.message'), required: true, as: :text, input_html: { class: 'textarea textarea-bordered w-full min-h-60' }, label_html: { class: 'label-text font-semibold mb-1 block' }

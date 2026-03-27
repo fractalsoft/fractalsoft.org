@@ -1,175 +1,171 @@
-- content_for :body_class, 'innovation-hub bg-base-200'
+- content_for :body_class
 
-.px-4.py-8
-  .container.mx-auto
-    .rounded-3xl.overflow-hidden.p-8.md:p-12.surface-hero-accent
-      .flex.flex-col.md:flex-row.items-start.md:items-center.justify-between.gap-6
-        .max-w-2xl
-          span.inline-flex.items-center.px-3.py-1.rounded-full.border.border-primary/80.text-primary.bg-primary/10.font-extrabold.uppercase.text-xs.tracking-wide
-            = t('.hero.badge')
-          h1.mt-4.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight.text-white
-            span = t('.hero.title_line_1')
-            br
-            span.text-primary = t('.hero.title_line_2')
-            span = t('.hero.title_line_3')
-            br
-            span = t('.hero.title_line_4')
-            span.text-primary = t('.hero.title_line_5')
-          p.mt-3.text-sm.leading-relaxed.text-gray-300
-            = t('.hero.subtext')
-          .mt-6.flex.flex-col.sm:flex-row.gap-3
-            = link_to '#', class: 'btn btn-primary' do
-              = t('.hero.buttons.latest_research')
-            = link_to '#', class: 'btn btn-outline btn-primary' do
-              = t('.hero.buttons.subscribe')
+.container.mx-auto.px-4.py-8
+  .rounded-3xl.overflow-hidden.p-8.md:p-12.surface-hero-accent
+    .flex.flex-col.md:flex-row.items-start.md:items-center.justify-between.gap-6
+      .max-w-2xl
+        span.inline-flex.items-center.px-3.py-1.rounded-full.border.border-primary/80.text-primary.bg-primary/10.font-extrabold.uppercase.text-xs.tracking-wide
+          = t('.hero.badge')
+        h1.mt-4.text-4xl.md:text-5xl.font-extrabold.leading-tight.tracking-tight.text-white
+          span = t('.hero.title_line_1')
+          br
+          span.text-primary = t('.hero.title_line_2')
+          span = t('.hero.title_line_3')
+          br
+          span = t('.hero.title_line_4')
+          span.text-primary = t('.hero.title_line_5')
+        p.mt-3.text-sm.leading-relaxed.text-gray-300
+          = t('.hero.subtext')
+        .mt-6.flex.flex-col.sm:flex-row.gap-3
+          = link_to '#', class: 'btn btn-primary' do
+            = t('.hero.buttons.latest_research')
+          = link_to '#', class: 'btn btn-outline btn-primary' do
+            = t('.hero.buttons.subscribe')
 
-.px-4.py-10
-  .container.mx-auto
-    .grid.grid-cols-1.lg:grid-cols-3.gap-6
-      .lg:col-span-2.space-y-6
-        .p-6
-          .flex.items-center.justify-between.mb-4
-            .space-y-1
-              h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-                = t('.sections.research.title')
+  .grid.grid-cols-1.lg:grid-cols-3.gap-6.py-8
+    .lg:col-span-2.space-y-6.p-6
+        .flex.items-center.justify-between.mb-4
+          .space-y-1
+            h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
+              = t('.sections.research.title')
+            p.text-xs.text-base-content/60
+              = t('.sections.research.subtitle')
+          = link_to '#', class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
+            = t('.sections.research.view_all')
+            = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
+
+        .grid.grid-cols-1.md:grid-cols-2.gap-4
+          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
+            .relative
+              = image_tag 'https://placehold.co/800x420/0b1220/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
+              .absolute.top-2.left-2.flex.gap-2
+                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
+                  = t('.cards.card_1.read_time')
+                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
+                  = t('.cards.card_1.tag')
+            .p-4.space-y-2
+              h3.text-base-content.font-extrabold.text-sm.leading-snug
+                = t('.cards.card_1.title')
               p.text-xs.text-base-content/60
-                = t('.sections.research.subtitle')
-            = link_to '#', class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
-              = t('.sections.research.view_all')
-              = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
+                = t('.cards.card_1.body')
+              .flex.items-center.gap-2.pt-1
+                span.w-6.h-6.rounded-full.bg-primary/10.text-primary.inline-flex.items-center.justify-center
+                  = lucide_icon 'user', class: 'w-3.5 h-3.5'
+                span.font-extrabold.text-base-content/70.text-xs = t('.cards.card_1.author')
+                span.font-black.uppercase.tracking-widest.text-base-content/70.text-xs = t('.cards.card_1.date')
 
-          .grid.grid-cols-1.md:grid-cols-2.gap-4
-            .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-              .relative
-                = image_tag 'https://placehold.co/800x420/0b1220/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
-                .absolute.top-2.left-2.flex.gap-2
-                  span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
-                    = t('.cards.card_1.read_time')
-                  span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
-                    = t('.cards.card_1.tag')
-              .p-4.space-y-2
-                h3.text-base-content.font-extrabold.text-sm.leading-snug
-                  = t('.cards.card_1.title')
-                p.text-xs.text-base-content/60
-                  = t('.cards.card_1.body')
-                .flex.items-center.gap-2.pt-1
-                  span.w-6.h-6.rounded-full.bg-primary/10.text-primary.inline-flex.items-center.justify-center
-                    = lucide_icon 'user', class: 'w-3.5 h-3.5'
-                  span.font-extrabold.text-base-content/70.text-xs = t('.cards.card_1.author')
-                  span.font-black.uppercase.tracking-widest.text-base-content/70.text-xs = t('.cards.card_1.date')
+          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
+            .relative
+              = image_tag 'https://placehold.co/800x420/111827/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
+              .absolute.top-2.left-2.flex.gap-2
+                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
+                  = t('.cards.card_2.read_time')
+                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
+                  = t('.cards.card_2.tag')
+            .p-4.space-y-2
+              h3.text-base-content.font-extrabold.text-sm.leading-snug
+                = t('.cards.card_2.title')
+              p.text-xs.text-base-content/60
+                = t('.cards.card_2.body')
+              .flex.items-center.gap-2.pt-1
+                span.w-6.h-6.rounded-full.bg-sky-500/10.text-sky-600.inline-flex.items-center.justify-center
+                  = lucide_icon 'user', class: 'w-3.5 h-3.5'
+                span.font-extrabold.text-base-content/70.text-xs = t('.cards.card_2.author')
+                span.font-black.uppercase.tracking-widest.text-base-content/70.text-xs = t('.cards.card_2.date')
 
-            .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-              .relative
-                = image_tag 'https://placehold.co/800x420/111827/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
-                .absolute.top-2.left-2.flex.gap-2
-                  span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
-                    = t('.cards.card_2.read_time')
-                  span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
-                    = t('.cards.card_2.tag')
-              .p-4.space-y-2
-                h3.text-base-content.font-extrabold.text-sm.leading-snug
-                  = t('.cards.card_2.title')
-                p.text-xs.text-base-content/60
-                  = t('.cards.card_2.body')
-                .flex.items-center.gap-2.pt-1
-                  span.w-6.h-6.rounded-full.bg-sky-500/10.text-sky-600.inline-flex.items-center.justify-center
-                    = lucide_icon 'user', class: 'w-3.5 h-3.5'
-                  span.font-extrabold.text-base-content/70.text-xs = t('.cards.card_2.author')
-                  span.font-black.uppercase.tracking-widest.text-base-content/70.text-xs = t('.cards.card_2.date')
+        .mt-6.h-px
+        .overflow-hidden
+          .py-6
+            .flex.items-center.justify-between.mb-4
+              h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
+                = t('.sections.insights.title')
+              = link_to '#', class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
+                = t('.sections.insights.view_all')
+                = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
+          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
+            = image_tag 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights', class: 'w-full h-60 object-cover'
+            .p-6.space-y-2
+              p.text-sm.font-bold.text-base-content
+                = t('.insights.featured.title')
+              p.text-xs.text-base-content/60.leading-relaxed
+                = t('.insights.featured.body')
+              = link_to '#', class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
+                = t('.insights.featured.read')
+                = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
 
-          .mt-6.h-px.bg-base-200
-          .overflow-hidden
-            .py-6
-              .flex.items-center.justify-between.mb-4
-                h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-                  = t('.sections.insights.title')
-                = link_to '#', class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
-                  = t('.sections.insights.view_all')
-                  = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
-            .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-              = image_tag 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights', class: 'w-full h-60 object-cover'
-              .p-6.space-y-2
-                p.text-sm.font-bold.text-base-content
-                  = t('.insights.featured.title')
-                p.text-xs.text-base-content/60.leading-relaxed
-                  = t('.insights.featured.body')
-                = link_to '#', class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
-                  = t('.insights.featured.read')
-                  = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+    .space-y-6
+      .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
+        .flex.items-center.justify-between.mb-4
+          h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
+            = t('.sidebar.opensource.title')
+        .space-y-4
+          .pb-2
+            .flex.items-start.justify-between.gap-3
+              a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_1.name')
+              .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
+                = lucide_icon 'star', class: 'w-3.5 h-3.5'
+                = t('.sidebar.opensource.repo_1.stars')
+            p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_1.desc')
+          .border-t.border-base-300.pt-3.pb-2
+            .flex.items-start.justify-between.gap-3
+              a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_2.name')
+              .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
+                = lucide_icon 'star', class: 'w-3.5 h-3.5'
+                = t('.sidebar.opensource.repo_2.stars')
+            p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_2.desc')
+          .border-t.border-base-300.pt-3
+            .flex.items-start.justify-between.gap-3
+              a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_3.name')
+              .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
+                = lucide_icon 'star', class: 'w-3.5 h-3.5'
+                = t('.sidebar.opensource.repo_3.stars')
+            p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_3.desc')
+        = link_to '#', class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-3 rounded-xl font-extrabold' do
+          = t('.sidebar.opensource.view_all')
 
-      .space-y-6
-        .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
-          .flex.items-center.justify-between.mb-4
-            h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-              = t('.sidebar.opensource.title')
-          .space-y-4
-            .pb-2
-              .flex.items-start.justify-between.gap-3
-                a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_1.name')
-                .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
-                  = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                  = t('.sidebar.opensource.repo_1.stars')
-              p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_1.desc')
-            .border-t.border-base-300.pt-3.pb-2
-              .flex.items-start.justify-between.gap-3
-                a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_2.name')
-                .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
-                  = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                  = t('.sidebar.opensource.repo_2.stars')
-              p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_2.desc')
-            .border-t.border-base-300.pt-3
-              .flex.items-start.justify-between.gap-3
-                a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_3.name')
-                .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
-                  = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                  = t('.sidebar.opensource.repo_3.stars')
-              p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_3.desc')
-          = link_to '#', class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-3 rounded-xl font-extrabold' do
-            = t('.sidebar.opensource.view_all')
+      .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
+        .flex.items-center.justify-between.mb-4
+          h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
+            = t('.sidebar.architecture.title')
+        .rounded-xl.p-5
+          .flex.flex-col.items-center.justify-center.gap-3.pt-2
+            .border-2.border-dashed.border-primary/90.text-base-content/80.rounded-lg.px-4.py-3.text-xs.font-bold.tracking-wide.text-center
+              = t('.sidebar.architecture.input_data')
+            .text-primary/60
+              = lucide_icon 'arrow-down', class: 'w-5 h-5'
+            .border.border-primary.bg-primary.text-white.rounded-lg.px-4.py-3.text-xs.font-black.leading-snug.text-center
+              = t('.sidebar.architecture.parallel_jit')
+              br
+              = t('.sidebar.architecture.optimizer')
+            .text-primary/60
+              = lucide_icon 'arrow-down', class: 'w-5 h-5'
+            .flex.gap-2
+              .border.border-base-300.bg-base-100.rounded-md.px-3.py-2.font-bold.text-base-content/75.text-xs
+                = t('.sidebar.architecture.worker_a')
+              .border.border-base-300.bg-base-100.rounded-md.px-3.py-2.font-bold.text-base-content/75.text-xs
+                = t('.sidebar.architecture.worker_b')
+          .mt-4.text-base-content/60.text-center.text-xs
+            = t('.sidebar.architecture.caption')
+        = link_to '#', class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-4 gap-2 rounded-xl font-extrabold' do
+          = lucide_icon 'download', class: 'w-4 h-4'
+          = t('.sidebar.architecture.download')
 
-        .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
-          .flex.items-center.justify-between.mb-4
-            h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-              = t('.sidebar.architecture.title')
-          .rounded-xl.p-5
-            .flex.flex-col.items-center.justify-center.gap-3.pt-2
-              .border-2.border-dashed.border-primary/90.text-base-content/80.rounded-lg.px-4.py-3.text-xs.font-bold.tracking-wide.text-center
-                = t('.sidebar.architecture.input_data')
-              .text-primary/60
-                = lucide_icon 'arrow-down', class: 'w-5 h-5'
-              .border.border-primary.bg-primary.text-white.rounded-lg.px-4.py-3.text-xs.font-black.leading-snug.text-center
-                = t('.sidebar.architecture.parallel_jit')
-                br
-                = t('.sidebar.architecture.optimizer')
-              .text-primary/60
-                = lucide_icon 'arrow-down', class: 'w-5 h-5'
-              .flex.gap-2
-                .border.border-base-300.bg-base-100.rounded-md.px-3.py-2.font-bold.text-base-content/75.text-xs
-                  = t('.sidebar.architecture.worker_a')
-                .border.border-base-300.bg-base-100.rounded-md.px-3.py-2.font-bold.text-base-content/75.text-xs
-                  = t('.sidebar.architecture.worker_b')
-            .mt-4.text-base-content/60.text-center.text-xs
-              = t('.sidebar.architecture.caption')
-          = link_to '#', class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-4 gap-2 rounded-xl font-extrabold' do
-            = lucide_icon 'download', class: 'w-4 h-4'
-            = t('.sidebar.architecture.download')
+      .rounded-2xl.overflow-hidden.text-white.shadow-sm.bg-primary
+        .p-6.space-y-4
+          h3.leading-tight.font-black.text-3xl
+            = t('.sidebar.newsletter.title')
+          p.leading-relaxed.text-white/90.max-w-sm.text-sm
+            = t('.sidebar.newsletter.subtitle')
+          p.text-sm.font-extrabold.text-white/95
+            = t('.sidebar.newsletter.proof')
 
-        .rounded-2xl.overflow-hidden.text-white.shadow-sm.bg-primary
-          .p-6.space-y-4
-            h3.leading-tight.font-black.text-3xl
-              = t('.sidebar.newsletter.title')
-            p.leading-relaxed.text-white/90.max-w-sm.text-sm
-              = t('.sidebar.newsletter.subtitle')
-            p.text-sm.font-extrabold.text-white/95
-              = t('.sidebar.newsletter.proof')
+          = email_field_tag :innovation_email, nil, class: 'input input-bordered w-full bg-white/20 border-white/20 text-white placeholder:text-white/70', placeholder: t('.sidebar.newsletter.placeholder')
 
-            = email_field_tag :innovation_email, nil, class: 'input input-bordered w-full bg-white/20 border-white/20 text-white placeholder:text-white/70', placeholder: t('.sidebar.newsletter.placeholder')
+          = link_to '#', class: 'btn btn-outline inline-flex items-center justify-center w-full rounded-lg min-h-10 text-base font-black' do
+            = t('.sidebar.newsletter.submit')
 
-            = link_to '#', class: 'btn btn-outline inline-flex items-center justify-center w-full rounded-lg min-h-10 text-base font-black' do
-              = t('.sidebar.newsletter.submit')
-
-            p.text-center.text-white/70.text-xs
-              = t('.sidebar.newsletter.footnote')
+          p.text-center.text-white/70.text-xs
+            = t('.sidebar.newsletter.footnote')
 
 section.py-14.bg-primary
   .container.mx-auto.px-4.text-center

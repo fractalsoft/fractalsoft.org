@@ -12,59 +12,133 @@
 - coverage = 70 + (@project.year.to_i % 30)
 - risk_m = (1.0 + (@project.year.to_i % 50) / 10.0).round(1)
 
-.w-full
-  .mx-auto.px-4.py-8
-    .max-w-6xl.mx-auto
-      .flex.items-center.justify-between.gap-6.mb-8
-        = link_to projects_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-sm font-semibold text-base-content/70 hover:text-base-content' do
-          = lucide_icon 'arrow-left', class: 'w-4 h-4'
-          | Back to Portfolio
+.container.mx-auto.px-4.py-10.md:py-12
+  .max-w-6xl.mx-auto.space-y-12
+    .flex.items-center.justify-between.gap-6
+      = link_to projects_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-sm font-semibold text-base-content/70 hover:text-base-content' do
+        = lucide_icon 'arrow-left', class: 'w-4 h-4'
+        | Back to Portfolio
 
-  .max-w-6xl.mx-auto.px-4.pb-12.space-y-10
-    .rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
+    .rounded-3xl.overflow-hidden.card-shell.shadow-sm
       .grid.grid-cols-1.lg:grid-cols-2
-        .min-h-[420px].bg-slate-950
+        .min-h-80.bg-slate-950
           = image_tag hero_url, class: 'w-full h-full object-cover'
-        .p-8.lg:p-10.lg:pl-12
-          span.inline-flex.items-center.px-3.py-1.rounded-full.font-extrabold.tracking-wide.text-[0.7rem].uppercase.bg-primary/15.text-primary = tag.upcase
-          h1.mt-4.m-0.font-black.tracking-tight.text-[1.9rem].leading-tight.text-base-content
-            = @project.title
-          p.mt-3.text-[0.95rem].leading-relaxed.text-base-content/70
-            = intro
+        .p-8.lg:p-10.lg:pl-12.space-y-6
+          .space-y-3
+            span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
+            h1.m-0.text-3xl.md:text-4xl.font-black.tracking-tight.leading-tight.text-base-content
+              = @project.title
+            p.text-sm.leading-relaxed.text-base-content/70
+              = intro
 
-          .mt-7.grid.grid-cols-2.gap-6
-            - if @project.year.to_i.even?
-              .space-y-1
-                .font-black.text-base.leading-tight.text-primary = "#{uptime}%"
-                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
-              .space-y-1
-                .font-black.text-base.leading-tight.text-primary = "#{cost_reduction}%"
-                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
-              .space-y-1.col-span-2
-                .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
-                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
-            - else
-              .space-y-1
-                .font-black.text-base.leading-tight.text-primary = "$#{risk_m}M"
-                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
-              .space-y-1
-                .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
-                .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+          .grid.grid-cols-2.gap-6
+            .space-y-1
+              .font-black.text-2xl.leading-tight.text-primary = "#{uptime}%"
+              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
+            .space-y-1
+              .font-black.text-2xl.leading-tight.text-primary = "#{cost_reduction}%"
+              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
+            .space-y-1
+              .font-black.text-2xl.leading-tight.text-primary = "#{coverage}%"
+              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
+            .space-y-1
+              .font-black.text-2xl.leading-tight.text-primary = "$#{risk_m}M"
+              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
 
-          .mt-8.flex.flex-col.sm:flex-row.items-center.gap-4
+          .flex.flex-col.sm:flex-row.items-center.gap-4
             = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full sm:w-auto' do
-              | Schedule a Consultation
+              | Build Similar Outcomes
             - if @project.url.present?
               = link_to @project.url, @project.url, class: 'btn btn-outline btn-primary w-full sm:w-auto' do
-                | Live Link
+                | View Live Project
 
-          - if desc.present?
-            .mt-6
-              p.m-0.text-[0.95rem].leading-relaxed.text-base-content/70 = desc
+    .grid.grid-cols-1.lg:grid-cols-3.gap-6
+      .lg:col-span-2.space-y-6
+        .card.card-shell.shadow-sm
+          .card-body.p-8.space-y-4
+            h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
+              | Business Value Delivered
+            p.text-sm.md:text-base.leading-relaxed.text-base-content/75
+              = desc.presence || intro
+            .grid.grid-cols-1.sm:grid-cols-2.gap-4.pt-2
+              .rounded-xl.bg-base-200.p-4.space-y-1
+                p.meta-label.text-primary
+                  | Performance
+                p.text-sm.text-base-content/75
+                  | Reduced response times, increased reliability, and improved release confidence.
+              .rounded-xl.bg-base-200.p-4.space-y-1
+                p.meta-label.text-primary
+                  | Delivery
+                p.text-sm.text-base-content/75
+                  | Faster iteration cycles with cleaner architecture and less operational risk.
+              .rounded-xl.bg-base-200.p-4.space-y-1
+                p.meta-label.text-primary
+                  | Resilience
+                p.text-sm.text-base-content/75
+                  | Hardened critical flows with stronger observability and safer deployment practices.
+              .rounded-xl.bg-base-200.p-4.space-y-1
+                p.meta-label.text-primary
+                  | Scale
+                p.text-sm.text-base-content/75
+                  | A foundation built for growth, evolving product scope, and future automation.
+
+        .card.card-shell.shadow-sm
+          .card-body.p-8.space-y-4
+            h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
+              | How We Delivered It
+            .space-y-4
+              .flex.items-start.gap-3
+                .icon-pill
+                  = lucide_icon 'search', class: 'w-5 h-5'
+                .space-y-1
+                  p.text-sm.font-bold.text-base-content
+                    | Audit and Architecture Alignment
+                  p.text-sm.text-base-content/70
+                    | We mapped bottlenecks, clarified trade-offs, and prioritized high-impact engineering moves.
+              .flex.items-start.gap-3
+                .icon-pill
+                  = lucide_icon 'wrench', class: 'w-5 h-5'
+                .space-y-1
+                  p.text-sm.font-bold.text-base-content
+                    | Focused Implementation
+                  p.text-sm.text-base-content/70
+                    | We delivered targeted improvements with production-grade quality and measurable outcomes.
+              .flex.items-start.gap-3
+                .icon-pill
+                  = lucide_icon 'rocket', class: 'w-5 h-5'
+                .space-y-1
+                  p.text-sm.font-bold.text-base-content
+                    | Handover and Scale Enablement
+                  p.text-sm.text-base-content/70
+                    | Your team received clearer code paths, stronger system confidence, and long-term maintainability.
+
+      .space-y-6
+        .card.card-shell.shadow-sm
+          .card-body.p-6.space-y-3
+            h3.text-xl.font-extrabold.text-base-content
+              | Engagement Snapshot
+            p.text-sm.text-base-content/70
+              = @project.year.present? ? "Project year: #{@project.year}" : 'Recent delivery engagement'
+            p.text-sm.text-base-content/70
+              = @project.url.present? ? 'Live project available for review' : 'Private implementation with measurable business impact'
+            = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full' do
+              | Discuss Your Project
+
+        .card.bg-primary.text-primary-content.shadow-sm.rounded-xl
+          .card-body.p-6.space-y-3
+            h3.text-xl.font-extrabold.text-white
+              | Want Results Like This?
+            p.text-sm.text-white/85
+              | We partner with teams that need senior execution, cleaner architecture, and faster delivery.
+            = link_to root_path(anchor: 'contact'), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary w-full' do
+              | Book Technical Consultation
 
     - page_image_urls = @project.page_images.map { |img| img.image_url }.compact.reject { |u| u.blank? }
     - if page_image_urls.any?
-      .grid.grid-cols-1.md:grid-cols-2.gap-6
-        - page_image_urls.each do |image_url|
-          .rounded-2xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
-            = image_tag image_url, class: 'w-full h-auto'
+      .space-y-4
+        h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
+          | Delivery Gallery
+        .grid.grid-cols-1.md:grid-cols-2.gap-6
+          - page_image_urls.each do |image_url|
+            .rounded-2xl.overflow-hidden.card-shell.shadow-sm
+              = image_tag image_url, class: 'w-full h-auto'
