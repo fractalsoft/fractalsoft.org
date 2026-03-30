@@ -54,19 +54,19 @@ pl:
   blog: Blog
   business_contact_forms:
     form:
-      inquiry_badge: Formularz zapytania
+      inquiry_badge: Zapytanie techniczne
       industry_label: Obszar współpracy
       maximum_attached_file_size: 'Maksymalny rozmiar załącznika: 20 MB'
       need_nda: Poproś o nasz standardowy NDA przed udostępnieniem poufnych danych.
-      send: Wnioskuj o techniczną ocenę
-      title: Uzyskaj chirurgiczną ocenę swojego stacku
-      subheadline: Prześlij szczegóły, a senior inżynier—not a salesperson—przejrzy Twoją architekturę w ciągu 24 godzin.
+      send: Poproś o ocenę techniczną
+      title: Uzyskaj ocenę techniczną od seniora
+      subheadline: Prześlij kontekst, a senior inżynier przeanalizuje go w ciągu 24 godzin.
       security:
-        title: Bezpieczeństwo firmy
-        body: ISO 27001 Certified & SOC2 Type II
+        title: Poufne zgłoszenie
+        body: Twoje zgłoszenie trafia do ograniczonego zespołu seniorów i jest obsługiwane z kontrolą dostępu.
       encryption:
-        title: Szyfrowanie end-to-end
-        body: Twoje dane są zabezpieczone AES-256
+        title: NDA na życzenie
+        body: Potrzebujesz dodatkowej ochrony? Poproś o nasze standardowe NDA przed wysłaniem poufnych materiałów.
       skip_form:
         kicker: CHCESZ POMINĄĆ FORMULARZ?
         button: Umów 15-minutowy audyt techniczny
@@ -286,17 +286,18 @@ pl:
         title_line_3: Ruby
         title_line_4: spotyka frontier
         title_line_5: AI.
-        subtext: Wyznaczamy granice wydajnego Ruby, reaktywnych frameworków JavaScript i praktycznego wdrażania architektur LLM.
+        subtext: Notatki z naszego laboratorium inżynierskiego. Pokazujemy, jak wzorce high-performance Ruby i praktyczne AI przekładają się na dowożenie produktu.
         buttons:
-          latest_research: Najnowsze badania
-          subscribe: Subskrybuj
+          latest_research: Przejdź do analiz technicznych
+          subscribe: Otrzymuj miesięczny briefing
       sections:
         research:
           title: BADANIA I EKSPERYMENTY AI
-          subtitle: Wybrane eksperymenty z naszego laboratorium inżynieryjnego.
+          subtitle: Eksperymenty, benchmarki i wzorce wdrożeniowe, które ograniczają ryzyko delivery.
           view_all: Zobacz wszystkie
         insights:
           title: TECHNICZNE INSIGHTY
+          subtitle: Decyzje architektoniczne i trade-offy opisane dla CTO i senior inżynierów.
           view_all: Zobacz wszystkie
       cards:
         card_1:
@@ -353,8 +354,8 @@ pl:
       cta:
         title_line_1: CHCESZ ZASTOSOWAĆ TE PRZEŁOMY W
         title_line_2: SWOIM PROJEKCIE?
-        body: Nasz wyspecjalizowany zespół pomaga firmom przenosić AI i architektury high-performance do produkcji.
-        button: Umów audyt techniczny
+        body: Wdrożymy te wzorce do Twojej roadmapy z konkretnym planem, ryzykami i wsparciem seniorów po stronie delivery.
+        button: Umów konsultację techniczną
   job_offers:
     index:
       title: Oferty pracy

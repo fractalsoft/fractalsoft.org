@@ -14,10 +14,10 @@
         p.text-base.md:text-lg.text-neutral-600.max-w-xl
           = t('.hero.subheadline')
         .flex.flex-wrap.items-center.gap-3
-          = link_to '#contact', title: t('.title.in_touch'), class: 'btn btn-primary inline-flex items-center gap-2' do
+          = link_to new_business_contact_forms_path(locale: I18n.locale), title: t('.title.in_touch'), class: 'btn btn-primary inline-flex items-center gap-2' do
             = t('.button.contact_us', default: 'Schedule Your Technical Consultation')
             = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
-          = link_to '#pillars', class: 'btn btn-ghost' do
+          = link_to projects_path(locale: I18n.locale), class: 'btn btn-ghost' do
             = t('.button.rescue_cta', default: 'View Our Work')
 
       / Right: illustrative card with full-height image and status overlays
