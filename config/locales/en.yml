@@ -54,19 +54,19 @@ en:
   blog: Blog
   business_contact_forms:
     form:
-      inquiry_badge: Inquiry Form
+      inquiry_badge: Technical Inquiry
       industry_label: Service Focus
       maximum_attached_file_size: 'Maximum size file: 20 MB'
       need_nda: Request our standard NDA before sharing sensitive documentation.
-      send: Request Technical Assessment
-      title: Get a Surgical Assessment of Your Stack
-      subheadline: Submit your details and a senior engineer—not a salesperson—will review your architecture within 24 hours.
+      send: Request Assessment
+      title: Get a Senior Technical Assessment
+      subheadline: Share your context and a senior engineer will review it within 24 hours.
       security:
-        title: Enterprise Security
-        body: ISO 27001 Certified & SOC2 Type II
+        title: Confidential Intake
+        body: Your submission is reviewed by a limited senior team and handled with strict internal access controls.
       encryption:
-        title: End-to-End Encryption
-        body: Your data is secured with AES-256
+        title: NDA Available
+        body: Need extra protection? Request our standard NDA before sharing sensitive documents.
       skip_form:
         kicker: WANT TO SKIP THE FORM?
         button: Book a 15-min Technical Audit
@@ -284,20 +284,21 @@ en:
         badge: THE ENGINEERING JOURNAL
         title_line_1: Where High-
         title_line_2: Performance
-        title_line_3: Ruby
+        title_line_3: " Ruby"
         title_line_4: Meets Frontier
-        title_line_5: AI.
-        subtext: Defining the boundaries of high-performance Ruby, reactive JavaScript frameworks, and the practical implementation of LLM architectures.
+        title_line_5: " AI."
+        subtext: Production notes from our engineering lab. We turn high-performance Ruby and practical AI patterns into delivery-ready systems for product teams.
         buttons:
-          latest_research: Latest Research
-          subscribe: Subscribe
+          latest_research: Explore Technical Notes
+          subscribe: Get Monthly Brief
       sections:
         research:
           title: AI RESEARCH & EXPERIMENTS
-          subtitle: Curated experiments from our engineering lab.
+          subtitle: Experiments, benchmarks, and implementation patterns we use to de-risk delivery.
           view_all: View All
         insights:
           title: TECHNICAL INSIGHTS
+          subtitle: Architecture decisions and trade-offs explained for CTOs and senior engineers.
           view_all: View All
       cards:
         card_1:
@@ -354,8 +355,8 @@ en:
       cta:
         title_line_1: WANT TO APPLY THESE BREAKTHROUGHS TO
         title_line_2: YOUR PROJECT?
-        body: Our specialized engineering team helps companies transition AI and high-performance architectures into production environments.
-        button: Book a Technical Audit
+        body: Bring these patterns into your roadmap with a scoped implementation plan, clear risks, and senior execution support.
+        button: Book a Technical Consultation
   job_offers:
     index:
       title: Job Offers
