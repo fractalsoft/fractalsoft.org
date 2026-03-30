@@ -1,0 +1,39 @@
+slug: wordmaker
+display: true
+featured: false
+industry: gaming
+engagement_type: product
+year: 2020
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Wordmaker
+    subtitle: word puzzle game
+    introduction: >
+      A word game experience designed for rapid iteration on gameplay mechanics
+      and release quality.
+    description: >
+      We delivered product and engineering work across gameplay features,
+      stabilization, and release pipeline reliability.
+    challenge_summary: >
+      Frequent gameplay changes required a development process that could ship safely and quickly.
+    solution_summary: >
+      We improved implementation and QA flow to keep releases stable during feature iteration.
+    outcome_summary: >
+      The team maintained delivery speed while reducing regressions in user-facing gameplay flows.
+  pl:
+    title: Wordmaker
+    subtitle: gra słowna
+    introduction: >
+      Gra słowna zaprojektowana pod szybkie iteracje mechanik i stabilne wydania.
+    description: >
+      Realizowaliśmy prace produktowe i inżynierskie obejmujące rozwój funkcji oraz stabilizację.
+    challenge_summary: >
+      Częste zmiany mechanik wymagały procesu pozwalającego szybko i bezpiecznie publikować aktualizacje.
+    solution_summary: >
+      Usprawniliśmy implementację i przepływ QA, aby utrzymać stabilność wydań.
+    outcome_summary: >
+      Zespół zachował tempo dostarczania przy mniejszej liczbie regresji.

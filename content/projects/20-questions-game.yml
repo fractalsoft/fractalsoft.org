@@ -1,0 +1,38 @@
+slug: 20-questions-game
+display: true
+featured: false
+industry: gaming
+engagement_type: product
+year: 2020
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: 20 Questions Game
+    subtitle: interactive word game
+    introduction: >
+      An interactive game product focused on engagement through quick gameplay loops.
+    description: >
+      We supported implementation and stability improvements to keep feature iteration
+      fast and user-facing quality consistent.
+    challenge_summary: >
+      Rapid gameplay iteration created pressure on quality and deployment confidence.
+    solution_summary: >
+      We tightened engineering workflows and implementation quality in core game modules.
+    outcome_summary: >
+      Product updates shipped more smoothly while preserving gameplay reliability.
+  pl:
+    title: Gra 20 pytań
+    subtitle: interaktywna gra słowna
+    introduction: >
+      Interaktywny produkt gamingowy oparty o szybkie pętle rozgrywki.
+    description: >
+      Wspieraliśmy implementację i stabilizację, aby utrzymać tempo rozwoju oraz jakość.
+    challenge_summary: >
+      Dynamiczne iteracje mechanik zwiększały ryzyko jakościowe przy wdrożeniach.
+    solution_summary: >
+      Usprawniliśmy workflow inżynierski i jakość implementacji kluczowych modułów.
+    outcome_summary: >
+      Aktualizacje produktu były publikowane sprawniej przy zachowaniu stabilnej rozgrywki.

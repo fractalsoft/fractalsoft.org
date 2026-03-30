@@ -1,11 +1,19 @@
 # frozen_string_literal: true
 
 class Project < ApplicationRecord
+
+  scope :featured_or_displayed, lambda {
+    scope = where(display: true).order(position: :asc, year: :desc)
+
+    featured = scope.where(featured: true)
+    featured.exists? ? featured : scope
+  }
+
   extend FriendlyId
 
   friendly_id :slug, use: :slugged
   mount_uploader :thumbnail, ThumbnailUploader
-  translates :description, :introduction, :subtitle
+  translates :description, :introduction, :subtitle, :challenge_summary, :solution_summary, :outcome_summary
 
   has_many :images, dependent: :nullify
   has_many :contributions, dependent: :nullify

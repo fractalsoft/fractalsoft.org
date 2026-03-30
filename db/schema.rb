@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_20_143000) do
+ActiveRecord::Schema[8.0].define(version: 2026_03_26_120000) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
-  enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
   create_table "communities", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -65,6 +65,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.text "impact_statement"
     t.index ["contribution_id"], name: "index_contribution_translations_on_contribution_id"
     t.index ["locale"], name: "index_contribution_translations_on_locale"
   end
@@ -75,6 +76,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143000) do
     t.uuid "project_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.string "category"
+    t.string "scope"
+    t.boolean "highlight", default: false, null: false
+    t.index ["highlight"], name: "index_contributions_on_highlight"
     t.index ["person_id"], name: "index_contributions_on_person_id"
     t.index ["project_id"], name: "index_contributions_on_project_id"
   end
@@ -204,6 +209,9 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143000) do
     t.text "description"
     t.text "introduction"
     t.string "subtitle"
+    t.text "challenge_summary"
+    t.text "solution_summary"
+    t.text "outcome_summary"
     t.index ["locale"], name: "index_project_translations_on_locale"
     t.index ["project_id"], name: "index_project_translations_on_project_id"
   end
@@ -219,6 +227,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143000) do
     t.string "url"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.string "outcome_confidence"
+    t.string "industry"
+    t.string "engagement_type"
+    t.boolean "featured", default: false, null: false
+    t.boolean "outcome_measurable"
+    t.index ["featured"], name: "index_projects_on_featured"
     t.index ["slug"], name: "index_projects_on_slug"
   end
 
@@ -262,5 +276,4 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143000) do
     t.index ["locale"], name: "index_technology_translations_on_locale"
     t.index ["technology_id"], name: "index_technology_translations_on_technology_id"
   end
-
 end

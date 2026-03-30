@@ -1,0 +1,38 @@
+slug: purpura.eu
+display: true
+featured: false
+industry: ecommerce
+engagement_type: product
+year: 2018
+url: https://purpura.eu
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Purpura
+    subtitle: design handcrafted tiles application
+    introduction: >
+      A digital product supporting handcrafted tile design and purchase flows.
+    description: >
+      We implemented backend and product improvements to support a better buyer journey
+      and maintainable operations.
+    challenge_summary: >
+      Product evolution required balancing custom UX and maintainable backend capabilities.
+    solution_summary: >
+      We improved architecture and feature delivery patterns across key customer workflows.
+    outcome_summary: >
+      The platform delivered a more reliable customer experience with stronger operational control.
+  pl:
+    title: Purpura
+    subtitle: aplikacja do projektowania płytek
+    introduction: >
+      Produkt cyfrowy wspierający projektowanie i zakup ręcznie tworzonych płytek.
+    description: >
+      Wdrożyliśmy usprawnienia backendowe i produktowe dla lepszej ścieżki klienta.
+    challenge_summary: >
+      Rozwój produktu wymagał połączenia niestandardowego UX z utrzymywalnym backendem.
+    solution_summary: >
+      Usprawniliśmy architekturę i sposób dostarczania funkcji w kluczowych procesach klienta.
+    outcome_summary: >
+      Platforma zapewniła stabilniejsze doświadczenie użytkownika i lepszą kontrolę operacyjną.

@@ -73,3 +73,54 @@ jobs:
           ruby-version: .ruby-version
       - name: Checking Zeitwerk
         run: bundle exec rails zeitwerk:check
+
+  content_validation:
+    name: Content validation
+
+    permissions:
+      contents: read
+      pull-requests: read
+
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_HOST: 127.0.0.1
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+      - name: Download system package lists
+        run: sudo apt-get update
+      - name: Install system dependencies
+        run: sudo apt-get install -y --no-install-recommends libvips42
+        shell: bash
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: .ruby-version
+      - name: Setup database
+        env:
+          RAILS_ENV: test
+        run: |
+          cp config/database.ci.yml config/database.yml
+          bundle exec rails db:create
+          bundle exec rails db:schema:load
+          bundle exec rails db:seed
+      - name: Validate content files
+        env:
+          RAILS_ENV: test
+        run: bundle exec rails content:validate

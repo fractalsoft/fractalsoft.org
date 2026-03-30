@@ -1,0 +1,40 @@
+slug: gobl
+display: true
+featured: true
+industry: fintech
+engagement_type: integration
+year: 2024
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: GOBL
+    subtitle: Global JSON Invoicing Standard
+    introduction: >
+      An open standard initiative for interoperable JSON invoicing across regulatory ecosystems.
+    description: >
+      We contributed to schema-level and converter-level implementation work
+      enabling practical adoption in production pipelines.
+    challenge_summary: >
+      Country-specific invoice standards created friction for cross-market implementation.
+    solution_summary: >
+      We built and validated converter pathways and supporting tooling
+      for standardized invoice interoperability.
+    outcome_summary: >
+      Teams gained a clearer implementation path to compliant invoicing across multiple standards.
+  pl:
+    title: GOBL
+    subtitle: Globalny Standard Fakturowania w JSON
+    introduction: >
+      Inicjatywa otwartego standardu interoperacyjnego fakturowania w JSON.
+    description: >
+      Wspieraliśmy implementację na poziomie schematów i konwerterów,
+      umożliwiając praktyczne wykorzystanie w produkcji.
+    challenge_summary: >
+      Lokalne standardy fakturowania utrudniały wdrożenia między rynkami.
+    solution_summary: >
+      Stworzyliśmy i zwalidowaliśmy ścieżki konwersji oraz narzędzia wspierające interoperacyjność.
+    outcome_summary: >
+      Zespoły otrzymały czytelniejszą ścieżkę wdrożeniową zgodnej wymiany faktur.
