@@ -1,0 +1,47 @@
+slug: agricircle.com
+display: true
+featured: false
+industry: agtech
+engagement_type: platform
+year: 2018
+url: https://agricircle.com
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: AgriCircle
+    subtitle: crop management application
+    introduction: >
+      A crop management platform helping farm operators plan, monitor, and optimize
+      agricultural workflows across multiple locations.
+    description: >
+      We worked on core platform delivery, API-oriented integrations, and maintainability
+      improvements for long-term product growth.
+    challenge_summary: >
+      Domain-heavy workflows and evolving requirements made consistent delivery
+      and data integrity difficult to sustain.
+    solution_summary: >
+      We improved backend architecture and delivery workflows to support safer, faster
+      iteration on business-critical features.
+    outcome_summary: >
+      The product team gained a more dependable platform foundation with lower
+      delivery friction and better scalability.
+  pl:
+    title: AgriCircle
+    subtitle: aplikacja do zarządzania uprawami
+    introduction: >
+      Platforma do zarządzania uprawami, wspierająca planowanie, monitoring i optymalizację
+      procesów rolniczych.
+    description: >
+      Rozwijaliśmy kluczowe elementy platformy, integracje API oraz utrzymywalność
+      niezbędną do dalszego wzrostu produktu.
+    challenge_summary: >
+      Złożone procesy domenowe i zmieniające się wymagania utrudniały
+      stabilne dostarczanie nowych funkcji.
+    solution_summary: >
+      Usprawniliśmy architekturę backendu i proces dostarczania, aby umożliwić
+      bezpieczniejsze i szybsze iteracje.
+    outcome_summary: >
+      Zespół produktowy zyskał bardziej przewidywalną bazę platformy, z mniejszym
+      tarciem przy wdrażaniu zmian.

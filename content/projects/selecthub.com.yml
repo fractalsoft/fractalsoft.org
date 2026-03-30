@@ -1,0 +1,38 @@
+slug: selecthub.com
+display: true
+featured: false
+industry: saas
+engagement_type: modernization
+year: 2018
+url: https://selecthub.com
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: SelectHub
+    subtitle: software selection platform
+    introduction: >
+      A platform helping organizations evaluate and select software solutions.
+    description: >
+      We delivered architecture and implementation support to keep business logic
+      maintainable while scaling feature delivery.
+    challenge_summary: >
+      Legacy patterns and growing product complexity made delivery slower and riskier.
+    solution_summary: >
+      We introduced targeted refactors, platform improvements, and release quality upgrades.
+    outcome_summary: >
+      The team gained a cleaner technical baseline and more reliable delivery cycles.
+  pl:
+    title: SelectHub
+    subtitle: platforma wyboru oprogramowania
+    introduction: >
+      Platforma wspierająca organizacje w ocenie i wyborze narzędzi software.
+    description: >
+      Dostarczaliśmy wsparcie architektoniczne i implementacyjne dla utrzymywalnego rozwoju produktu.
+    challenge_summary: >
+      Starsze wzorce i rosnąca złożoność produktu spowalniały rozwój.
+    solution_summary: >
+      Wdrożyliśmy ukierunkowane refaktoryzacje oraz usprawnienia jakości wydań.
+    outcome_summary: >
+      Zespół zyskał czystszą bazę techniczną i bardziej przewidywalne cykle wdrożeń.

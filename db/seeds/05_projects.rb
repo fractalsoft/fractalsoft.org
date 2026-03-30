@@ -1,19 +1,4 @@
 # frozen_string_literal: true
 
-require_relative 'projects/nopaperwork'
-require_relative 'projects/purpura'
-require_relative 'projects/fractalsoft'
-require_relative 'projects/blog_fractalsoft'
-require_relative 'projects/agricircle'
-require_relative 'projects/selecthub'
-require_relative 'projects/hitdea'
-require_relative 'projects/marketing_hitdea'
-require_relative 'projects/analysis_hitdea'
-require_relative 'projects/game_hitdea'
-require_relative 'projects/questions_hitdea'
-require_relative 'projects/nda_julia'
-require_relative 'projects/nda_koch'
-require_relative 'projects/nda_cantor'
-require_relative 'projects/julinek_ar'
-require_relative 'projects/gobl'
-require_relative 'projects/amenitiz'
+require Rails.root.join('lib/content_import/project_importer')
+ContentImport::ProjectImporter.import!(dry_run: false)

@@ -1,0 +1,38 @@
+slug: fractalsoft.org
+display: true
+featured: false
+industry: agency
+engagement_type: modernization
+year: 2024
+url: https://fractalsoft.org
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Website Fractal Soft
+    subtitle: software house
+    introduction: >
+      Corporate website and content platform for Fractal Soft services, projects, and team pages.
+    description: >
+      We modernized architecture and frontend stack while preserving content continuity
+      and improving maintainability.
+    challenge_summary: >
+      Legacy framework choices slowed implementation and made design updates expensive.
+    solution_summary: >
+      We upgraded Rails, refreshed frontend foundations, and improved CI quality checks.
+    outcome_summary: >
+      The website now supports faster iteration and cleaner long-term technical ownership.
+  pl:
+    title: Website Fractal Soft
+    subtitle: firma programistyczna
+    introduction: >
+      Strona firmowa i platforma treści prezentująca usługi, projekty i zespół Fractal Soft.
+    description: >
+      Zmodernizowaliśmy architekturę i warstwę frontendową, zachowując ciągłość treści.
+    challenge_summary: >
+      Starszy stack utrudniał wdrażanie zmian i podnosił koszt utrzymania.
+    solution_summary: >
+      Przeprowadziliśmy aktualizację Rails, odświeżenie frontendu i usprawnienia CI.
+    outcome_summary: >
+      Strona wspiera szybsze iteracje i bardziej przewidywalne utrzymanie.

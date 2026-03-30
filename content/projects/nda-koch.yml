@@ -1,0 +1,45 @@
+slug: nda-koch
+display: true
+featured: false
+industry: ecommerce
+engagement_type: integration
+year: 2021
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Project Koch (NDA)
+    subtitle: global e-commerce platform
+    introduction: >
+      A large-scale commerce platform with distributed services and customer-facing workflows.
+      Reliability and interoperability were essential to daily operations.
+    description: >
+      We worked across backend services and frontend integration points to keep
+      critical customer journeys stable while the platform evolved.
+    challenge_summary: >
+      Multi-service dependencies and authentication boundaries made shipping
+      user-facing improvements difficult.
+    solution_summary: >
+      We implemented service-level improvements and frontend/backend integration work
+      to reduce friction in core account flows.
+    outcome_summary: >
+      Customer-facing capabilities shipped more predictably with improved technical confidence.
+  pl:
+    title: Project Koch (NDA)
+    subtitle: globalna platforma e-commerce
+    introduction: >
+      Duża platforma handlowa z rozproszonymi usługami i procesami dla klientów końcowych.
+      Niezawodność i interoperacyjność były kluczowe w codziennej pracy.
+    description: >
+      Pracowaliśmy nad backendem i punktami integracji frontend/backend,
+      aby utrzymać stabilność krytycznych ścieżek klienta podczas rozwoju produktu.
+    challenge_summary: >
+      Zależności między usługami i granice uwierzytelniania utrudniały
+      szybkie wdrażanie zmian dla użytkowników.
+    solution_summary: >
+      Wdrożyliśmy usprawnienia usługowe oraz integracyjne, ograniczając tarcia
+      w kluczowych przepływach kont użytkowników.
+    outcome_summary: >
+      Funkcje dla klientów były wdrażane bardziej przewidywalnie, z większą pewnością techniczną.

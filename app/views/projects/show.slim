@@ -1,16 +1,16 @@
 - content_for :body_class, 'project bg-base-200'
 - content_for :title, @project.title.to_s
 
-- tag = @project.subtitle.presence || @project.title.to_s
+- project_title = @project.title
+- tag = @project.subtitle.presence || project_title.to_s
 - intro = @project.introduction.presence || @project.description.to_s
 - desc = @project.description.to_s
+- challenge_summary = @project.challenge_summary.presence || intro
+- solution_summary = @project.solution_summary.presence || desc
+- outcome_summary = @project.outcome_summary.presence || desc.presence || intro
 - hero_url = @project.pc_image&.image_url || @project.top_image&.image_url || @project.page_images.first&.image_url
-- hero_url = hero_url.presence || 'https://placehold.co/1200x900/0b1220/f8fafc?text=Project'
-
-- uptime = (99.0 + (@project.year.to_i % 10) / 100.0).round(2)
-- cost_reduction = 10 + (@project.year.to_i % 40)
-- coverage = 70 + (@project.year.to_i % 30)
-- risk_m = (1.0 + (@project.year.to_i % 50) / 10.0).round(1)
+- highlighted_contributions = @project.contributions.where(highlight: true).order(:position).limit(6)
+- public_contributions = @project.contributions.order(:position)
 
 .container.mx-auto.px-4.py-10.md:py-12
   .max-w-6xl.mx-auto.space-y-12
@@ -21,35 +21,44 @@
 
     .rounded-3xl.overflow-hidden.card-shell.shadow-sm
       .grid.grid-cols-1.lg:grid-cols-2
-        .min-h-80.bg-slate-950
-          = image_tag hero_url, class: 'w-full h-full object-cover'
+        - if hero_url.present?
+          .min-h-80.bg-slate-950
+            = image_tag hero_url, class: 'w-full h-full object-cover'
+        - else
+          .min-h-80.surface-hero-dark
         .p-8.lg:p-10.lg:pl-12.space-y-6
           .space-y-3
             span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
             h1.m-0.text-3xl.md:text-4xl.font-black.tracking-tight.leading-tight.text-base-content
-              = @project.title
+              = project_title
             p.text-sm.leading-relaxed.text-base-content/70
               = intro
 
-          .grid.grid-cols-2.gap-6
-            .space-y-1
-              .font-black.text-2xl.leading-tight.text-primary = "#{uptime}%"
-              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Uptime Achieved
-            .space-y-1
-              .font-black.text-2xl.leading-tight.text-primary = "#{cost_reduction}%"
-              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Cost Reduction
-            .space-y-1
-              .font-black.text-2xl.leading-tight.text-primary = "#{coverage}%"
-              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Code Coverage
-            .space-y-1
-              .font-black.text-2xl.leading-tight.text-primary = "$#{risk_m}M"
-              .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider Risk Mitigated
+          .grid.grid-cols-1.sm:grid-cols-2.gap-3
+            - if @project.year.present?
+              .rounded-lg.bg-base-200.p-3.space-y-1
+                p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
+                  | Project Year
+                p.text-sm.font-bold.text-base-content
+                  = @project.year
+            - if @project.industry.present?
+              .rounded-lg.bg-base-200.p-3.space-y-1
+                p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
+                  | Industry
+                p.text-sm.font-bold.text-base-content
+                  = @project.industry.to_s.humanize
+            - if @project.engagement_type.present?
+              .rounded-lg.bg-base-200.p-3.space-y-1
+                p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
+                  | Engagement Type
+                p.text-sm.font-bold.text-base-content
+                  = @project.engagement_type.to_s.humanize
 
           .flex.flex-col.sm:flex-row.items-center.gap-4
             = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full sm:w-auto' do
               | Build Similar Outcomes
             - if @project.url.present?
-              = link_to @project.url, @project.url, class: 'btn btn-outline btn-primary w-full sm:w-auto' do
+              = link_to @project.url, class: 'btn btn-outline btn-primary w-full sm:w-auto' do
                 | View Live Project
 
     .grid.grid-cols-1.lg:grid-cols-3.gap-6
@@ -57,60 +66,35 @@
         .card.card-shell.shadow-sm
           .card-body.p-8.space-y-4
             h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
-              | Business Value Delivered
+              | Challenge
             p.text-sm.md:text-base.leading-relaxed.text-base-content/75
-              = desc.presence || intro
-            .grid.grid-cols-1.sm:grid-cols-2.gap-4.pt-2
-              .rounded-xl.bg-base-200.p-4.space-y-1
-                p.meta-label.text-primary
-                  | Performance
-                p.text-sm.text-base-content/75
-                  | Reduced response times, increased reliability, and improved release confidence.
-              .rounded-xl.bg-base-200.p-4.space-y-1
-                p.meta-label.text-primary
-                  | Delivery
-                p.text-sm.text-base-content/75
-                  | Faster iteration cycles with cleaner architecture and less operational risk.
-              .rounded-xl.bg-base-200.p-4.space-y-1
-                p.meta-label.text-primary
-                  | Resilience
-                p.text-sm.text-base-content/75
-                  | Hardened critical flows with stronger observability and safer deployment practices.
-              .rounded-xl.bg-base-200.p-4.space-y-1
-                p.meta-label.text-primary
-                  | Scale
-                p.text-sm.text-base-content/75
-                  | A foundation built for growth, evolving product scope, and future automation.
-
+              = challenge_summary
         .card.card-shell.shadow-sm
           .card-body.p-8.space-y-4
             h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
-              | How We Delivered It
-            .space-y-4
-              .flex.items-start.gap-3
-                .icon-pill
-                  = lucide_icon 'search', class: 'w-5 h-5'
-                .space-y-1
-                  p.text-sm.font-bold.text-base-content
-                    | Audit and Architecture Alignment
-                  p.text-sm.text-base-content/70
-                    | We mapped bottlenecks, clarified trade-offs, and prioritized high-impact engineering moves.
-              .flex.items-start.gap-3
-                .icon-pill
-                  = lucide_icon 'wrench', class: 'w-5 h-5'
-                .space-y-1
-                  p.text-sm.font-bold.text-base-content
-                    | Focused Implementation
-                  p.text-sm.text-base-content/70
-                    | We delivered targeted improvements with production-grade quality and measurable outcomes.
-              .flex.items-start.gap-3
-                .icon-pill
-                  = lucide_icon 'rocket', class: 'w-5 h-5'
-                .space-y-1
-                  p.text-sm.font-bold.text-base-content
-                    | Handover and Scale Enablement
-                  p.text-sm.text-base-content/70
-                    | Your team received clearer code paths, stronger system confidence, and long-term maintainability.
+              | Solution
+            p.text-sm.md:text-base.leading-relaxed.text-base-content/75
+              = solution_summary
+        .card.card-shell.shadow-sm
+          .card-body.p-8.space-y-4
+            h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
+              | Business Value Delivered
+            p.text-sm.md:text-base.leading-relaxed.text-base-content/75
+              = outcome_summary
+
+        - if public_contributions.any?
+          .card.card-shell.shadow-sm
+            .card-body.p-8.space-y-4
+              h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
+                | Scope Of Work
+              .space-y-3
+                - public_contributions.limit(8).each do |contribution|
+                  .rounded-lg.bg-base-200.p-3.space-y-1
+                    p.text-sm.font-bold.text-base-content
+                      = contribution.name
+                    - if contribution.impact_statement.present?
+                      p.text-sm.text-base-content/70
+                        = contribution.impact_statement
 
       .space-y-6
         .card.card-shell.shadow-sm
@@ -120,7 +104,7 @@
             p.text-sm.text-base-content/70
               = @project.year.present? ? "Project year: #{@project.year}" : 'Recent delivery engagement'
             p.text-sm.text-base-content/70
-              = @project.url.present? ? 'Live project available for review' : 'Private implementation with measurable business impact'
+              = @project.url.present? ? 'Live project available for review.' : 'Private implementation with non-public delivery details.'
             = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full' do
               | Discuss Your Project
 
@@ -132,6 +116,20 @@
               | We partner with teams that need senior execution, cleaner architecture, and faster delivery.
             = link_to root_path(anchor: 'contact'), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary w-full' do
               | Book Technical Consultation
+
+        - if highlighted_contributions.any?
+          .card.card-shell.shadow-sm
+            .card-body.p-6.space-y-3
+              h3.text-xl.font-extrabold.text-base-content
+                | Highlighted Contributions
+              .space-y-3
+                - highlighted_contributions.each do |contribution|
+                  .rounded-lg.bg-base-200.p-3.space-y-1
+                    p.text-sm.font-bold.text-base-content
+                      = contribution.name
+                    - if contribution.impact_statement.present?
+                      p.text-sm.text-base-content/70
+                        = contribution.impact_statement
 
     - page_image_urls = @project.page_images.map { |img| img.image_url }.compact.reject { |u| u.blank? }
     - if page_image_urls.any?

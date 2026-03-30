@@ -1,0 +1,65 @@
+person_nickname: womanonrails
+projects:
+  - slug: nda-cantor
+    contributions:
+      - position: 1
+        category: automation
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Booking and communication flow automation
+            impact_statement: Reduced repetitive manual operations in hospitality workflows.
+          pl:
+            name: Automatyzacja procesów rezerwacji i komunikacji
+            impact_statement: Ograniczyła powtarzalne działania ręczne w procesach hotelowych.
+      - position: 2
+        category: integrations
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Twilio and external API integrations
+            impact_statement: Improved reliability of operational messaging and partner communication.
+          pl:
+            name: Integracje Twilio i zewnętrznych API
+            impact_statement: Poprawiły niezawodność komunikacji operacyjnej i partnerskiej.
+  - slug: nopaperwork.org
+    contributions:
+      - position: 1
+        category: backend
+        scope: architecture
+        highlight: true
+        translations:
+          en:
+            name: Backend architecture and API development
+            impact_statement: Enabled more maintainable business workflows and integration surfaces.
+          pl:
+            name: Architektura backendu i rozwój API
+            impact_statement: Umożliwiły bardziej utrzymywalne procesy biznesowe i integracje.
+  - slug: selecthub.com
+    contributions:
+      - position: 1
+        category: modernization
+        scope: migration
+        highlight: true
+        translations:
+          en:
+            name: Framework upgrades and performance optimization
+            impact_statement: Improved platform stability and reduced long-term maintenance risk.
+          pl:
+            name: Aktualizacje frameworka i optymalizacja wydajności
+            impact_statement: Zwiększyły stabilność platformy i zmniejszyły ryzyko utrzymaniowe.
+  - slug: blog.fractalsoft.org
+    contributions:
+      - position: 1
+        category: content
+        scope: implementation
+        highlight: false
+        translations:
+          en:
+            name: Copywriting
+            impact_statement: Supported consistent educational content delivery for technical readers.
+          pl:
+            name: Copywriting
+            impact_statement: Wsparł spójną publikację treści edukacyjnych dla odbiorców technicznych.

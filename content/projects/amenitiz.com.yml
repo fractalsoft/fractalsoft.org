@@ -1,0 +1,45 @@
+slug: amenitiz.com
+display: true
+featured: true
+industry: hospitality
+engagement_type: automation
+year: 2024
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Amenitiz
+    subtitle: hotel management application
+    introduction: >
+      A comprehensive property management platform for short-term rental owners and managers.
+      It streamlines reservations, channel distribution, and guest communications.
+    description: >
+      We partnered on backend and platform work focused on invoice and integration reliability.
+      The goal was to reduce manual handling and improve long-term maintainability.
+    challenge_summary: >
+      Invoicing and partner integrations required repeated manual intervention, creating delays
+      and avoidable operational risk.
+    solution_summary: >
+      We implemented workflow automation and integration hardening to make invoice handling
+      and backend communication more reliable.
+    outcome_summary: >
+      The platform moved toward exception-based operations with better confidence in daily workflows.
+  pl:
+    title: Amenitiz
+    subtitle: aplikacja do zarządzania hotelami
+    introduction: >
+      Wszechstronna platforma do zarządzania nieruchomościami dla właścicieli i zarządców
+      w segmencie wynajmu krótkoterminowego.
+    description: >
+      Wspieraliśmy backend i warstwę platformową, koncentrując się na niezawodności
+      fakturowania i integracji.
+    challenge_summary: >
+      Fakturowanie i integracje partnerskie wymagały częstych działań ręcznych,
+      co powodowało opóźnienia i ryzyko operacyjne.
+    solution_summary: >
+      Wdrożyliśmy automatyzację przepływów i utwardzenie integracji,
+      aby zwiększyć niezawodność procesów.
+    outcome_summary: >
+      Zespół przeszedł w kierunku pracy opartej na wyjątkach z większą przewidywalnością operacyjną.

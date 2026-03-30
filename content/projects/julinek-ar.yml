@@ -1,0 +1,37 @@
+slug: julinek-ar
+display: true
+featured: false
+industry: entertainment
+engagement_type: product
+year: 2021
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Julinek AR
+    subtitle: augmented reality circus game
+    introduction: >
+      A mobile AR game experience designed for public entertainment environments.
+    description: >
+      We delivered Unity implementation support, stabilization work, and release readiness.
+    challenge_summary: >
+      AR gameplay quality and mobile release constraints required tight implementation feedback loops.
+    solution_summary: >
+      We improved app reliability, resolved blockers, and supported release distribution workflows.
+    outcome_summary: >
+      The experience reached production-ready quality with smoother operational delivery.
+  pl:
+    title: Julinek AR
+    subtitle: cyrkowa gra w rzeczywistości rozszerzonej
+    introduction: >
+      Mobilna gra AR zaprojektowana dla środowisk rozrywkowych.
+    description: >
+      Dostarczyliśmy wsparcie implementacyjne w Unity, stabilizację oraz przygotowanie wydań.
+    challenge_summary: >
+      Jakość rozgrywki AR i ograniczenia publikacji mobilnej wymagały szybkich iteracji.
+    solution_summary: >
+      Poprawiliśmy stabilność aplikacji, usunęliśmy blokery i wsparliśmy proces wydawniczy.
+    outcome_summary: >
+      Produkt osiągnął gotowość produkcyjną z lepszą przewidywalnością dostarczania.
