@@ -1,0 +1,172 @@
+person_nickname: lisu
+projects:
+  - slug: amenitiz.com
+    contributions:
+      - position: 1
+        category: integrations
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Integration with Invopop
+            impact_statement: Enabled a stable e-invoice integration path for real-world billing operations.
+          pl:
+            name: Integracja z Invopop
+            impact_statement: Umożliwiła stabilną ścieżkę integracji e-fakturowania dla codziennej pracy operacyjnej.
+      - position: 2
+        category: invoicing
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Invoicing configuration for Mexico
+            impact_statement: Reduced manual billing complexity for region-specific compliance workflows.
+          pl:
+            name: Konfiguracja fakturowania dla Meksyku
+            impact_statement: Ograniczyła złożoność ręcznych działań w regionalnych procesach zgodności.
+      - position: 3
+        category: backend
+        scope: implementation
+        highlight: false
+        translations:
+          en:
+            name: Backend development in Ruby on Rails
+            impact_statement: Improved maintainability of core business logic powering invoicing workflows.
+          pl:
+            name: Rozwój aplikacji w Ruby on Rails
+            impact_statement: Zwiększył utrzymywalność kluczowej logiki biznesowej obsługującej fakturowanie.
+  - slug: nda-koch
+    contributions:
+      - position: 1
+        category: backend
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Development in Sinatra (Ruby)
+            impact_statement: Strengthened critical backend flows in customer-facing services.
+          pl:
+            name: Rozwój aplikacji w Sinatra (Ruby)
+            impact_statement: Wzmocnił krytyczne przepływy backendowe w usługach dla klientów.
+      - position: 2
+        category: authentication
+        scope: architecture
+        highlight: true
+        translations:
+          en:
+            name: Customer Accounts Authentication service
+            impact_statement: Improved account access reliability and reduced integration friction.
+          pl:
+            name: Usługa uwierzytelniania kont klientów
+            impact_statement: Poprawiła niezawodność dostępu do kont oraz zmniejszyła tarcia integracyjne.
+  - slug: nda-julia
+    contributions:
+      - position: 1
+        category: backend
+        scope: optimization
+        highlight: true
+        translations:
+          en:
+            name: Backend improvements in modular Rails services
+            impact_statement: Increased confidence in shipping changes across complex partner flows.
+          pl:
+            name: Usprawnienia backendu w modularnych usługach Rails
+            impact_statement: Zwiększyły pewność wdrażania zmian w złożonych przepływach partnerskich.
+  - slug: gobl
+    contributions:
+      - position: 1
+        category: integrations
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: JSON to KSeF structure converter (Go)
+            impact_statement: Enabled compliant invoicing exports for regulated domestic workflows.
+          pl:
+            name: Konwerter z JSON na strukturę KSeF (Go)
+            impact_statement: Umożliwił zgodne eksporty faktur dla krajowych wymagań regulacyjnych.
+      - position: 2
+        category: integrations
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: JSON to XRechnung structure converter (Go)
+            impact_statement: Expanded cross-market interoperability for enterprise invoicing scenarios.
+          pl:
+            name: Konwerter z JSON na strukturę XRechnung (Go)
+            impact_statement: Rozszerzył interoperacyjność między rynkami w scenariuszach enterprise.
+  - slug: hitdea.com
+    contributions:
+      - position: 1
+        category: backend
+        scope: implementation
+        highlight: false
+        translations:
+          en:
+            name: Development in Ruby on Rails
+            impact_statement: Improved reliability of logistics-critical backend workflows.
+          pl:
+            name: Development in Ruby on Rails
+            impact_statement: Zwiększył niezawodność krytycznych procesów logistycznych.
+      - position: 2
+        category: product
+        scope: optimization
+        highlight: true
+        translations:
+          en:
+            name: User conversion experiments
+            impact_statement: Helped validate higher-performing product pathways through iterative testing.
+          pl:
+            name: User conversion experiments
+            impact_statement: Pomógł zweryfikować skuteczniejsze ścieżki produktowe poprzez iteracje.
+  - slug: fractalsoft.org
+    contributions:
+      - position: 1
+        category: modernization
+        scope: migration
+        highlight: true
+        translations:
+          en:
+            name: Updating Rails to version 7.x
+            impact_statement: Reduced framework-level risk and improved long-term maintainability.
+          pl:
+            name: Aktualizacja Railsów do wersji 7.x
+            impact_statement: Zmniejszyła ryzyko technologiczne i poprawiła utrzymywalność.
+      - position: 2
+        category: frontend
+        scope: migration
+        highlight: false
+        translations:
+          en:
+            name: Updating Bootstrap 3 to Bootstrap 5
+            impact_statement: Improved frontend consistency and sped up UI iteration.
+          pl:
+            name: Aktualizacja Bootstrapa 3 na 5
+            impact_statement: Ujednoliciła frontend i przyspieszyła iteracje UI.
+  - slug: julinek-ar
+    contributions:
+      - position: 1
+        category: game-dev
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Development in Unity
+            impact_statement: Helped deliver production-ready AR gameplay features.
+          pl:
+            name: Rozwój gry w Unity
+            impact_statement: Wsparł dostarczenie produkcyjnych funkcji rozgrywki AR.
+  - slug: ads-system
+    contributions:
+      - position: 1
+        category: frontend
+        scope: implementation
+        highlight: false
+        translations:
+          en:
+            name: Frontend development in React
+            impact_statement: Improved operator-facing workflow usability in campaign operations.
+          pl:
+            name: Frontend development in React
+            impact_statement: Usprawnił ergonomię pracy operatorów kampanii.

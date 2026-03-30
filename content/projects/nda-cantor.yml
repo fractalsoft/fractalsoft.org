@@ -1,0 +1,37 @@
+slug: nda-cantor
+display: true
+featured: false
+industry: hospitality
+engagement_type: automation
+year: 2020
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Project Cantor (NDA)
+    subtitle: hotel management application
+    introduction: >
+      A hospitality operations platform handling bookings, guest workflows, and internal reporting.
+    description: >
+      We implemented backend process automation and integrations for operationally critical workflows.
+    challenge_summary: >
+      Manual operational steps around booking and communication flows increased support overhead.
+    solution_summary: >
+      We added automation and integration improvements to reduce repetitive manual processing.
+    outcome_summary: >
+      Operational teams gained more consistent, lower-friction day-to-day execution.
+  pl:
+    title: Project Cantor (NDA)
+    subtitle: aplikacja do zarządzania hotelami
+    introduction: >
+      Platforma hotelowa obsługująca rezerwacje, procesy gościnne i raportowanie.
+    description: >
+      Wdrożyliśmy automatyzację backendu oraz integracje dla krytycznych procesów operacyjnych.
+    challenge_summary: >
+      Manualne kroki w obsłudze rezerwacji i komunikacji podnosiły koszt operacyjny.
+    solution_summary: >
+      Dodaliśmy automatyzację i usprawnienia integracyjne ograniczające pracę ręczną.
+    outcome_summary: >
+      Zespoły operacyjne zyskały bardziej spójny i mniej obciążający proces codziennej pracy.

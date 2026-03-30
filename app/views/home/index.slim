@@ -43,46 +43,32 @@
           = t('.results.title')
       p.text-sm.md:text-base.text-neutral-600
           = t('.results.subtitle')
-    = link_to '#', class: 'text-sm font-semibold inline-flex items-center gap-1 text-primary hover:text-primary-focus' do
+    = link_to projects_path(locale: I18n.locale), class: 'text-sm font-semibold inline-flex items-center gap-1 text-primary hover:text-primary-focus' do
       = t('.results.view_all')
       = lucide_icon 'arrow-up-right', class: 'w-4 h-4 shrink-0'
 
   .grid.grid-cols-1.md:grid-cols-2.gap-6
-    = link_to '#', class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
-      figure class='min-h-[320px] md:min-h-[380px]'
-        img.w-full.h-full.object-cover src='https://placehold.co/1200x700/f3f4f6/111827?text=Case+Study+Image' alt='Case study preview'
-      .card-body.p-8.md:p-10.justify-between
-        .flex.flex-col.items-start.gap-2
-          .badge.badge-primary.uppercase.tracking-wide.leading-none.text-xs
-            = t('.results.cards.fintech.badge')
-          .badge.badge-ghost.bg-white/15.text-white/85.leading-none.text-xs
-            = t('.results.cards.fintech.tag')
-        .space-y-3
-          .space-y-1
-            h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
-              = t('.results.cards.fintech.title')
-            p.text-sm.md:text-base.leading-relaxed.text-white/90.max-w-prose
-              = t('.results.cards.fintech.subtitle')
-          p.text-xs.md:text-sm.leading-relaxed.text-white/65.max-w-2xl
-            = t('.results.cards.fintech.body')
-
-    = link_to '#', class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
-      figure class='min-h-[320px] md:min-h-[380px]'
-        img.w-full.h-full.object-cover src='https://placehold.co/1200x700/0f766e/ecfeff?text=Case+Study+Image' alt='Case study preview'
-      .card-body.p-8.md:p-10.justify-between
-        .flex.flex-col.items-start.gap-2
-          .badge.badge-primary.uppercase.tracking-wide.leading-none.text-xs
-            = t('.results.cards.health.badge')
-          .badge.badge-ghost.bg-white/15.text-white/85.leading-none.text-xs
-            = t('.results.cards.health.tag')
-        .space-y-3
-          .space-y-1
-            h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
-              = t('.results.cards.health.title')
-            p.text-sm.md:text-base.leading-relaxed.text-white/90.max-w-prose
-              = t('.results.cards.health.subtitle')
-          p.text-xs.md:text-sm.leading-relaxed.text-white/65.max-w-2xl
-            = t('.results.cards.health.body')
+    - @home.featured_projects.each do |project|
+      - project_title = project.title
+      - project_tag = project.subtitle.presence || project_title.to_s
+      - project_text = project.introduction.presence || project.description.presence || ''
+      - project_image = project.thumbnail_url(:thumb).presence || project.pc_image&.image_url || project.top_image&.image_url || project.page_images.first&.image_url
+      = link_to project_path(project, locale: I18n.locale), class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
+        - if project_image.present?
+          figure class='min-h-[320px] md:min-h-[380px]'
+            img.w-full.h-full.object-cover src=project_image alt=project_title
+        - else
+          .surface-hero-accent class='min-h-[320px] md:min-h-[380px]'
+        .card-body.p-8.md:p-10.justify-between
+          .flex.flex-col.items-start.gap-2
+            .badge.badge-primary.uppercase.tracking-wide.leading-none.text-xs
+              = project_tag
+          .space-y-3
+            .space-y-1
+              h3.text-2xl.md:text-3xl.font-black.leading-tight.tracking-tight.text-white
+                = project_title
+              p.text-sm.md:text-base.leading-relaxed.text-white/90.max-w-prose
+                = project_text
 
 / Insights / metrics
 .bg-base-100

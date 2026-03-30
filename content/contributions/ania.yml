@@ -1,0 +1,76 @@
+person_nickname: ania
+projects:
+  - slug: blog.fractalsoft.org
+    contributions:
+      - position: 1
+        category: content
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Copywriting and editorial maintenance
+            impact_statement: Improved content quality and publishing consistency for technical audiences.
+          pl:
+            name: Copywriting i utrzymanie redakcyjne
+            impact_statement: Podniósł jakość treści i spójność publikacji technicznych.
+  - slug: fractalsoft.org
+    contributions:
+      - position: 1
+        category: modernization
+        scope: migration
+        highlight: true
+        translations:
+          en:
+            name: Rails and dependency updates
+            impact_statement: Reduced maintenance risk and kept the platform secure and current.
+          pl:
+            name: Aktualizacja Rails i zależności
+            impact_statement: Ograniczyła ryzyko utrzymaniowe i poprawiła bezpieczeństwo.
+      - position: 2
+        category: quality
+        scope: optimization
+        highlight: true
+        translations:
+          en:
+            name: CI workflow development in GitHub Actions
+            impact_statement: Increased release confidence through automated quality checks.
+          pl:
+            name: Rozwój workflow CI w GitHub Actions
+            impact_statement: Zwiększył pewność wdrożeń dzięki automatyzacji kontroli jakości.
+  - slug: nopaperwork.org
+    contributions:
+      - position: 1
+        category: backend
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Backend development in Ruby on Rails
+            impact_statement: Improved reliability in day-to-day business operations.
+          pl:
+            name: Rozwój aplikacji w Ruby on Rails
+            impact_statement: Poprawił niezawodność codziennych procesów biznesowych.
+      - position: 2
+        category: data
+        scope: implementation
+        highlight: false
+        translations:
+          en:
+            name: Dynamic fields in JSONB
+            impact_statement: Enabled more flexible business configuration without heavy schema churn.
+          pl:
+            name: Dynamiczne pola w JSONB
+            impact_statement: Umożliwiły elastyczniejszą konfigurację bez częstych migracji schematu.
+  - slug: purpura.eu
+    contributions:
+      - position: 1
+        category: backend
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Backend development and dashboard enhancements
+            impact_statement: Improved internal operations and reduced admin-side friction.
+          pl:
+            name: Rozwój backendu i usprawnienia panelu administracyjnego
+            impact_statement: Usprawnił operacje wewnętrzne i zmniejszył tarcia po stronie admina.

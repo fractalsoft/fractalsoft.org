@@ -18,8 +18,9 @@
   .mt-10.space-y-8
     - @projects.each_with_index do |project, idx|
       - thumb_url = project.thumbnail_url(:thumb)
-      - media_url = thumb_url.presence || 'https://placehold.co/1200x800/0f172a/f8fafc?text=Project'
-      - tag = project.subtitle.presence || project.title.to_s
+      - media_url = thumb_url.presence
+      - project_title = project.title
+      - tag = project.subtitle.presence || project_title.to_s
       - desc = project.introduction.presence || project.description.presence || ''
 
       - reverse = idx.odd?
@@ -31,71 +32,61 @@
               .space-y-4
                 span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
                 h2.text-2xl.font-extrabold.text-base-content
-                  = project.title
+                  = project_title
                 p.text-sm.leading-relaxed.text-base-content/70
                   = desc
 
-              .space-y-3.mt-8
-                - uptime = (99.0 + (project.year.to_i % 10) / 100.0).round(2)
-                - cost_reduction = 10 + (project.year.to_i % 40)
-                - coverage = 70 + (project.year.to_i % 30)
-                - risk_m = (1.0 + (project.year.to_i % 50) / 10.0).round(1)
+              .space-y-4.mt-8
+                .flex.flex-wrap.gap-2
+                  - if project.year.present?
+                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+                      = "Year: #{project.year}"
+                  - if project.industry.present?
+                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+                      = project.industry.to_s.humanize
+                  - if project.engagement_type.present?
+                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+                      = project.engagement_type.to_s.humanize
 
-                - if idx % 3 == 0
-                  .grid.grid-cols-2.gap-6
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "#{uptime}%"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "#{cost_reduction}%"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
-                - else
-                  .grid.grid-cols-2.gap-6
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "$#{risk_m}M"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
+                .flex.flex-col.sm:flex-row.gap-3
+                  = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto'
+                  = link_to root_path(anchor: 'contact'), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
+                    | Build Similar Outcomes
 
-                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full'
-
-            .min-h-80.bg-slate-950
-              = image_tag media_url, class: 'w-full h-full object-cover'
+            - if media_url.present?
+              .min-h-80.bg-slate-950.hidden.lg:block
+                = image_tag media_url, class: 'w-full h-full object-cover'
+            - else
+              .min-h-80.surface-hero-accent.hidden.lg:block
           - else
             / Media first
-            .min-h-80.bg-slate-950
-              = image_tag media_url, class: 'w-full h-full object-cover'
+            - if media_url.present?
+              .min-h-80.bg-slate-950.hidden.lg:block
+                = image_tag media_url, class: 'w-full h-full object-cover'
+            - else
+              .min-h-80.surface-hero-accent.hidden.lg:block
 
             .p-8.lg:pl-10.flex.flex-col.justify-between
               .space-y-4
                 span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
                 h2.text-2xl.font-extrabold.text-base-content
-                  = project.title
+                  = project_title
                 p.text-sm.leading-relaxed.text-base-content/70
                   = desc
 
-              .space-y-3.mt-8
-                - uptime = (99.0 + (project.year.to_i % 10) / 100.0).round(2)
-                - cost_reduction = 10 + (project.year.to_i % 40)
-                - coverage = 70 + (project.year.to_i % 30)
-                - risk_m = (1.0 + (project.year.to_i % 50) / 10.0).round(1)
+              .space-y-4.mt-8
+                .flex.flex-wrap.gap-2
+                  - if project.year.present?
+                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+                      = "Year: #{project.year}"
+                  - if project.industry.present?
+                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+                      = project.industry.to_s.humanize
+                  - if project.engagement_type.present?
+                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+                      = project.engagement_type.to_s.humanize
 
-                - if idx % 3 == 0
-                  .grid.grid-cols-2.gap-6
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "#{uptime}%"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.uptime')
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "#{cost_reduction}%"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.cost_reduction')
-                - else
-                  .grid.grid-cols-2.gap-6
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "$#{risk_m}M"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.risk_mitigated')
-                    .space-y-1
-                      .font-black.text-base.leading-tight.text-primary = "#{coverage}%"
-                      .text-base-content/60.text-xs.font-semibold.uppercase.tracking-wider = t('.metrics.code_coverage')
-
-                = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full'
+                .flex.flex-col.sm:flex-row.gap-3
+                  = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto'
+                  = link_to root_path(anchor: 'contact'), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
+                    | Build Similar Outcomes

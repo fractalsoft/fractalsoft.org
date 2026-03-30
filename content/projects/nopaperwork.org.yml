@@ -1,0 +1,39 @@
+slug: nopaperwork.org
+display: true
+featured: false
+industry: business-ops
+engagement_type: modernization
+year: 2019
+url: https://nopaperwork.org
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Nopaperwork
+    subtitle: business management application
+    introduction: >
+      A business management platform supporting daily operations, data handling,
+      and internal workflows.
+    description: >
+      We delivered backend improvements, modernization updates, and reliability-focused
+      changes in core operational modules.
+    challenge_summary: >
+      Legacy workflows and schema constraints increased maintenance effort and slowed delivery.
+    solution_summary: >
+      We introduced targeted refactors, dynamic data handling improvements, and release hardening.
+    outcome_summary: >
+      The platform became easier to evolve while maintaining stable business-critical operations.
+  pl:
+    title: Nopaperwork
+    subtitle: aplikacja do zarządzania firmą
+    introduction: >
+      Aplikacja do zarządzania firmą wspierająca codzienne procesy operacyjne.
+    description: >
+      Dostarczyliśmy usprawnienia backendu i modernizację kluczowych modułów.
+    challenge_summary: >
+      Starsze procesy i ograniczenia schematu danych spowalniały rozwój produktu.
+    solution_summary: >
+      Wdrożyliśmy refaktoryzacje, usprawnienia obsługi danych i utwardzenie procesu wydawniczego.
+    outcome_summary: >
+      Platforma stała się łatwiejsza w rozwoju przy zachowaniu stabilności operacyjnej.

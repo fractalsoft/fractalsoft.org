@@ -1,0 +1,43 @@
+slug: linguistic-analysis
+display: true
+featured: false
+industry: martech
+engagement_type: ai
+year: 2017
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Linguistic Analysis
+    subtitle: language analytics service
+    introduction: >
+      A language analysis product used to evaluate and classify textual content
+      for downstream marketing and product workflows.
+    description: >
+      We delivered backend improvements and processing reliability work
+      to support production usage at scale.
+    challenge_summary: >
+      Text processing pipelines needed better reliability and clearer integration
+      boundaries to support product growth.
+    solution_summary: >
+      We strengthened service workflows and data handling patterns to improve
+      consistency of analysis results.
+    outcome_summary: >
+      The platform achieved more predictable processing behavior and easier
+      iteration on language-analysis features.
+  pl:
+    title: Linguistic Analysis
+    subtitle: usługa analizy językowej
+    introduction: >
+      Produkt analizy językowej służący do oceny i klasyfikacji treści tekstowych.
+    description: >
+      Wprowadziliśmy usprawnienia backendowe i zwiększyliśmy niezawodność przetwarzania
+      na potrzeby środowiska produkcyjnego.
+    challenge_summary: >
+      Potoki przetwarzania tekstu wymagały większej stabilności i czytelniejszych granic integracyjnych.
+    solution_summary: >
+      Usprawniliśmy przepływy usług i obsługę danych, aby poprawić spójność wyników analizy.
+    outcome_summary: >
+      Platforma osiągnęła bardziej przewidywalne działanie i szybsze iteracje funkcji analitycznych.

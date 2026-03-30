@@ -1,0 +1,38 @@
+slug: ads-system
+display: true
+featured: false
+industry: martech
+engagement_type: automation
+year: 2020
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Advertising app
+    subtitle: campaign management platform
+    introduction: >
+      A campaign operations platform supporting ad workflows and performance management.
+    description: >
+      We implemented backend and frontend improvements to reduce operational friction
+      in campaign delivery.
+    challenge_summary: >
+      Campaign workflows required faster iteration while preserving process reliability.
+    solution_summary: >
+      We improved automation and implementation quality across key operator paths.
+    outcome_summary: >
+      Teams shipped campaign-related changes faster with fewer operational bottlenecks.
+  pl:
+    title: Aplikacja reklamowa
+    subtitle: platforma zarządzania kampaniami
+    introduction: >
+      Platforma operacyjna do obsługi kampanii reklamowych i procesów wydajnościowych.
+    description: >
+      Wdrożyliśmy usprawnienia backendu i frontendu, aby ograniczyć tarcia operacyjne.
+    challenge_summary: >
+      Procesy kampanii wymagały szybszych iteracji przy zachowaniu niezawodności.
+    solution_summary: >
+      Usprawniliśmy automatyzację i jakość implementacji w kluczowych ścieżkach operatora.
+    outcome_summary: >
+      Zespoły wdrażały zmiany szybciej i z mniejszą liczbą blokad operacyjnych.

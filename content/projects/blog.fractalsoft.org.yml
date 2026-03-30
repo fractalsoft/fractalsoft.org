@@ -1,0 +1,39 @@
+slug: blog.fractalsoft.org
+display: true
+featured: false
+industry: media
+engagement_type: modernization
+year: 2023
+url: https://blog.fractalsoft.org
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Blog Fractal Soft
+    subtitle: technical blog
+    introduction: >
+      A technical publishing platform used to share engineering know-how
+      and practical implementation insights.
+    description: >
+      We modernized runtime dependencies, publishing workflows, and quality tooling
+      to keep editorial delivery reliable.
+    challenge_summary: >
+      Legacy dependencies and inconsistent content workflows increased maintenance cost.
+    solution_summary: >
+      We updated the stack and automated key quality checks for publishing.
+    outcome_summary: >
+      Editorial releases became more predictable with lower maintenance overhead.
+  pl:
+    title: Blog Fractal Soft
+    subtitle: blog techniczny
+    introduction: >
+      Platforma publikacji technicznych do dzielenia się wiedzą inżynierską.
+    description: >
+      Zmodernizowaliśmy zależności, workflow publikacji i automatyzację jakości.
+    challenge_summary: >
+      Przestarzałe zależności i niespójny proces publikacji zwiększały koszt utrzymania.
+    solution_summary: >
+      Zaktualizowaliśmy stack oraz zautomatyzowaliśmy kluczowe kontrole jakości.
+    outcome_summary: >
+      Publikacje stały się bardziej przewidywalne przy mniejszym nakładzie utrzymaniowym.

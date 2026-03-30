@@ -1,0 +1,46 @@
+slug: nda-julia
+display: true
+featured: true
+industry: edtech
+engagement_type: modernization
+year: 2020
+url:
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Project Julia (NDA)
+    subtitle: digital education platform
+    introduction: >
+      A global learning platform serving millions of learners and thousands of courses.
+      The system supports multiple partner types and course formats.
+    description: >
+      We delivered backend and integration improvements in a modular Rails ecosystem.
+      Work was focused on reliability, maintainability, and delivery safety.
+    challenge_summary: >
+      A complex partner ecosystem and evolving product requirements increased integration
+      and release complexity.
+    solution_summary: >
+      We implemented targeted backend and architecture improvements to stabilize
+      key product flows and speed up safe iteration.
+    outcome_summary: >
+      Teams gained a stronger technical base for scaling course operations with lower risk.
+  pl:
+    title: Project Julia (NDA)
+    subtitle: cyfrowa platforma edukacyjna
+    introduction: >
+      Globalna platforma edukacyjna obsługująca miliony użytkowników i tysiące kursów.
+      System wspiera różne typy partnerów i formatów nauki.
+    description: >
+      Dostarczaliśmy usprawnienia backendu i integracji w modularnym ekosystemie Rails.
+      Priorytetem była niezawodność, utrzymywalność i bezpieczne wdrożenia.
+    challenge_summary: >
+      Złożony ekosystem partnerów i zmieniające się wymagania produktu zwiększały
+      złożoność integracji oraz wydawania zmian.
+    solution_summary: >
+      Wdrożyliśmy ukierunkowane usprawnienia backendowe i architektoniczne,
+      które ustabilizowały kluczowe przepływy i przyspieszyły iteracje.
+    outcome_summary: >
+      Zespoły zyskały solidniejszą bazę techniczną do skalowania operacji kursowych
+      przy niższym ryzyku.

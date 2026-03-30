@@ -1,0 +1,38 @@
+slug: hitdea.com
+display: true
+featured: false
+industry: logistics
+engagement_type: modernization
+year: 2019
+url: https://hitdea.com
+dofollow: false
+position: 0
+outcome_measurable: false
+translations:
+  en:
+    title: Hitdea
+    subtitle: based on microservices
+    introduction: >
+      A logistics-focused platform with distributed services and custom operational modules.
+    description: >
+      We supported architecture and delivery improvements in a multi-service environment
+      to keep feature velocity and platform stability aligned.
+    challenge_summary: >
+      Service boundaries and cross-system dependencies increased delivery complexity.
+    solution_summary: >
+      We improved architecture, integration patterns, and release workflows.
+    outcome_summary: >
+      The product gained more predictable deployments and better support for ongoing expansion.
+  pl:
+    title: Hitdea
+    subtitle: aplikacja oparta o mikroserwisy
+    introduction: >
+      Platforma logistyczna oparta na architekturze usługowej i dedykowanych modułach operacyjnych.
+    description: >
+      Wspieraliśmy rozwój architektury i procesu dostarczania w środowisku wielousługowym.
+    challenge_summary: >
+      Granice usług i zależności między systemami zwiększały złożoność wdrożeń.
+    solution_summary: >
+      Usprawniliśmy architekturę, integracje i proces publikacji zmian.
+    outcome_summary: >
+      Platforma zyskała bardziej przewidywalne wdrożenia i lepszą gotowość na dalszy rozwój.

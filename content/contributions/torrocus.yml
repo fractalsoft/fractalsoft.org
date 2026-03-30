@@ -1,0 +1,89 @@
+person_nickname: torrocus
+projects:
+  - slug: nda-julia
+    contributions:
+      - position: 1
+        category: backend
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: Ruby on Rails delivery across partner-facing modules
+            impact_statement: Improved release throughput in a complex partner ecosystem.
+          pl:
+            name: Rozwój Ruby on Rails w modułach partnerskich
+            impact_statement: Zwiększył przepustowość dostarczania zmian w złożonym ekosystemie.
+      - position: 2
+        category: quality
+        scope: optimization
+        highlight: true
+        translations:
+          en:
+            name: Flaky tests reduction
+            impact_statement: Increased CI reliability and lowered release noise.
+          pl:
+            name: Redukcja flaky testów
+            impact_statement: Poprawiła stabilność CI i zmniejszyła ryzyko regresji.
+  - slug: nda-koch
+    contributions:
+      - position: 1
+        category: architecture
+        scope: architecture
+        highlight: true
+        translations:
+          en:
+            name: Architecture design and service hardening
+            impact_statement: Reduced delivery risk in customer-facing workflows.
+          pl:
+            name: Projekt architektury i utwardzenie usług
+            impact_statement: Ograniczyło ryzyko wdrożeń w procesach dla klientów.
+  - slug: hitdea.com
+    contributions:
+      - position: 1
+        category: architecture
+        scope: architecture
+        highlight: true
+        translations:
+          en:
+            name: SOA design and development
+            impact_statement: Established clearer service boundaries for scalable growth.
+          pl:
+            name: Projekt i rozwój SOA
+            impact_statement: Uporządkował granice usług pod dalsze skalowanie platformy.
+      - position: 2
+        category: operations
+        scope: optimization
+        highlight: false
+        translations:
+          en:
+            name: Deployment and workflow automation
+            impact_statement: Improved operational cadence and deployment repeatability.
+          pl:
+            name: Wdrożenia i automatyzacja workflow
+            impact_statement: Usprawniły rytm operacyjny i powtarzalność wdrożeń.
+  - slug: selecthub.com
+    contributions:
+      - position: 1
+        category: modernization
+        scope: migration
+        highlight: true
+        translations:
+          en:
+            name: Ruby/Rails upgrades and data migration support
+            impact_statement: Reduced technical debt and enabled safer feature rollout.
+          pl:
+            name: Aktualizacje Ruby/Rails i wsparcie migracji danych
+            impact_statement: Ograniczyły dług techniczny i poprawiły bezpieczeństwo wydań.
+  - slug: gobl
+    contributions:
+      - position: 1
+        category: integrations
+        scope: implementation
+        highlight: true
+        translations:
+          en:
+            name: XRechnung validation support in CI
+            impact_statement: Improved confidence in standards compliance for release pipelines.
+          pl:
+            name: Wsparcie walidacji XRechnung w CI
+            impact_statement: Zwiększyło pewność zgodności standardów w pipeline wydawniczym.
