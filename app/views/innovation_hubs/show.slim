@@ -1,46 +1,72 @@
 - content_for :body_class
 - content_for :title, @article.title.to_s
 
-.container.mx-auto.px-4.py-10.md:py-12
-  .max-w-5xl.mx-auto.space-y-8
-    .space-y-3
-      = link_to innovation_hub_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
-        = lucide_icon 'arrow-left', class: 'w-4 h-4'
-        = t('.back')
-      h1.text-3xl.md:text-4xl.font-black.leading-tight.text-base-content
-        = @article.title
-      .flex.flex-wrap.items-center.gap-3.text-xs.text-base-content/60
-        span.inline-flex.items-center.rounded-full.bg-primary/10.text-primary.px-2.py-1.font-bold.uppercase
-          = @article.kind.humanize
-        span = @article.author_name
-        span = l(@article.published_at.to_date)
-        span = @article.read_time
+.container.mx-auto.px-4.py-10.md:py-14
+  .max-w-6xl.mx-auto.space-y-8
+    .rounded-3xl.overflow-hidden.surface-hero-accent.border.border-base-200
+      .p-6.md:p-10.space-y-6
+        = link_to innovation_hub_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
+          = lucide_icon 'arrow-left', class: 'w-4 h-4'
+          = t('.back')
+
+        .space-y-4
+          span.inline-flex.items-center.rounded-full.bg-primary/15.text-primary.px-3.py-1.font-black.uppercase.text-xs.tracking-wider
+            = @article.kind.humanize
+          h1.text-3xl.md:text-5xl.font-black.leading-tight.text-white.max-w-4xl
+            = @article.title
+          .flex.flex-wrap.items-center.gap-3.text-xs.text-white/80
+            span.inline-flex.items-center.gap-1.5
+              = lucide_icon 'user', class: 'w-3.5 h-3.5'
+              = @article.author_name
+            span.inline-flex.items-center.gap-1.5
+              = lucide_icon 'calendar-days', class: 'w-3.5 h-3.5'
+              = l(@article.published_at.to_date)
+            span.inline-flex.items-center.gap-1.5
+              = lucide_icon 'clock-3', class: 'w-3.5 h-3.5'
+              = @article.read_time
+
+        - if @article.summary.present?
+          p.text-base.md:text-lg.leading-relaxed.text-white/90.max-w-4xl
+            = @article.summary
 
     - if @article.cover_image_url.present?
-      .rounded-2xl.overflow-hidden.border.border-base-200
-        = image_tag @article.cover_image_url, class: 'w-full h-72 object-cover'
+      .rounded-2xl.overflow-hidden.border.border-base-200.shadow-sm
+        = image_tag @article.cover_image_url, class: 'w-full h-72 md:h-[28rem] object-cover'
 
-    .rounded-2xl.bg-base-100.border.border-base-200.p-6.space-y-4
-      - if @article.summary.present?
-        p.text-base.font-semibold.text-base-content/80
-          = @article.summary
-      p.text-sm.leading-relaxed.text-base-content/80
-        = simple_format(@article.body)
+    .grid.grid-cols-1.lg:grid-cols-12.gap-6
+      .lg:col-span-8
+        article.rounded-2xl.bg-base-100.border.border-base-200.p-6.md:p-10.shadow-sm
+          .prose.prose-neutral.max-w-none.leading-8
+            = simple_format(@article.body, {}, wrapper_tag: 'div')
 
-    - if @article.external_url.present?
-      = link_to @article.external_url, class: 'btn btn-outline btn-primary', target: '_blank', rel: 'noopener' do
-        = t('.open_source')
+      .lg:col-span-4.space-y-4
+        .rounded-2xl.bg-base-100.border.border-base-200.p-5.space-y-3
+          h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
+            | Article Details
+          .text-sm.text-base-content/70.space-y-2
+            p
+              strong.text-base-content Category:
+              = " #{@article.kind.humanize}"
+            p
+              strong.text-base-content Published:
+              = " #{l(@article.published_at.to_date)}"
+            p
+              strong.text-base-content Read time:
+              = " #{@article.read_time}"
+          - if @article.external_url.present?
+            = link_to @article.external_url, class: 'btn btn-outline btn-primary w-full', target: '_blank', rel: 'noopener' do
+              = t('.open_source')
 
-    - if @related_articles.any?
-      .space-y-3
-        h2.text-xl.font-extrabold.text-base-content
-          = t('.related.title')
-        .grid.grid-cols-1.md:grid-cols-3.gap-3
-          - @related_articles.each do |related|
-            = link_to innovation_hub_article_path(related, locale: I18n.locale), class: 'rounded-xl.bg-base-100.border.border-base-200.p-4 space-y-2 no-underline hover:border-primary/60' do
-              p.text-xs.font-black.text-primary.uppercase
-                = related.kind.humanize
-              p.text-sm.font-bold.text-base-content
-                = related.title
-              p.text-xs.text-base-content/60
-                = related.read_time
+        - if @related_articles.any?
+          .rounded-2xl.bg-base-100.border.border-base-200.p-5.space-y-4
+            h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
+              = t('.related.title')
+            .space-y-3
+              - @related_articles.each do |related|
+                = link_to innovation_hub_article_path(related, locale: I18n.locale), class: 'block rounded-xl border border-base-200 p-3 no-underline hover:border-primary/60 bg-base-50' do
+                  p.text-[11px].font-black.uppercase.tracking-wider.text-primary
+                    = related.kind.humanize
+                  p.text-sm.font-bold.leading-snug.text-base-content
+                    = related.title
+                  p.text-xs.text-base-content/60.mt-1
+                    = related.read_time
