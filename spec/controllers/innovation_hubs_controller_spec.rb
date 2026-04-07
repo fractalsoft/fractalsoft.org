@@ -13,6 +13,27 @@ RSpec.describe InnovationHubsController do
         expect(assigns(:newsletter_form)).to be_a(ContactForm)
       end
     end
+
+    it 'supports research filtered mode' do
+      get :index, params: { locale: 'en', tab: 'research' }
+
+      aggregate_failures do
+        expect(response).to be_successful
+        expect(assigns(:active_tab)).to eq('research')
+        expect(assigns(:hub).active_tab).to eq('research')
+        expect(assigns(:hub)).to be_listing_mode
+      end
+    end
+
+    it 'ignores invalid tab values' do
+      get :index, params: { locale: 'en', tab: 'unknown' }
+
+      aggregate_failures do
+        expect(response).to be_successful
+        expect(assigns(:active_tab)).to be_nil
+        expect(assigns(:hub).active_tab).to be_nil
+      end
+    end
   end
 
   describe 'GET #show' do

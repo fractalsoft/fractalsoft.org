@@ -10,13 +10,115 @@ cover_image_url: https://placehold.co/1200x630/111827/f8fafc?text=LLM+Regression
 translations:
   en:
     title: Regression Guards for LLM-Assisted Delivery
-    summary: How we use deterministic checks around AI-generated code to keep release quality stable.
+    summary: A practical safety model for AI-assisted engineering that combines deterministic gates, review thresholds, and fast rollback signals.
     body: |
-      We document the guardrails that keep AI-accelerated development safe: structural tests, contract checks, and review thresholds.
-      The paper focuses on reducing risk while preserving delivery speed.
+      Why This Matters
+      LLM-assisted implementation can accelerate delivery, but it also raises variance in code quality. Teams do not fail because they use AI. They fail because they adopt AI speed without deterministic quality boundaries.
+
+      Guardrail Model
+      Our model has three layers:
+      1) Structural checks: lint, type checks, schema consistency, and static analyzers.
+      2) Behavioral checks: contract tests, high-risk integration tests, and canary assertions.
+      3) Human decision gates: mandatory senior review for high-impact surfaces.
+
+      Risk Classification
+      We classify generated changes by blast radius:
+      - Low risk: copy, view-level text, isolated helpers.
+      - Medium risk: endpoint behavior, query logic, background job flow.
+      - High risk: auth, billing, data migration, multi-tenant boundaries.
+
+      What Worked Best
+      - Pull-request templates that force intent statements reduced review ambiguity.
+      - Diff-size thresholds prevented oversized AI-generated patches from bypassing scrutiny.
+      - Contract-first tests exposed subtle regressions faster than broad e2e suites.
+      - Canary deployments with explicit rollback triggers lowered incident duration.
+
+      Common Failure Modes
+      The most expensive regressions came from "looks correct" changes in edge-case logic. Deterministic checks caught syntax and structure issues, but business rule drift was caught mainly by domain-aware review and contract tests.
+
+      Implementation Guidance
+      Introduce guardrails incrementally: start with mandatory structural checks and risk labels, then add review policy and canary rollback automation.
+
+      Outcome
+      AI-assisted delivery is reliable when speed is governed by explicit confidence gates. The target is not "more generated code." The target is predictable quality under faster iteration cycles.
+
+      Operational Checklist
+      - Add risk labels to every AI-assisted pull request.
+      - Enforce deterministic checks before human review begins.
+      - Require reviewer sign-off from a domain owner on high-risk changes.
+      - Define rollback criteria before deployment approval.
+
+      KPI Set
+      - Regression rate per release train.
+      - Time-to-detect for post-release defects.
+      - Percentage of AI-assisted changes by risk bucket.
+      - Rollback frequency for high-impact services.
+
+      Governance Model
+      Treat AI usage policy as an engineering standard, not a suggestion. This includes auditability of prompts/context, change ownership, and decision logs for risky merges.
+
+      Common Misconception
+      Teams often assume "more tests" solves AI risk. In practice, the strongest protection comes from combining deterministic checks, explicit risk classification, and clear release authority.
+
+      Adoption Roadmap
+      Phase 1: structural checks and risk labels.
+      Phase 2: contract-first testing on critical boundaries.
+      Phase 3: canary policies and automated rollback triggers.
+      Phase 4: quarterly guardrail review using production incident data.
   pl:
     title: Mechanizmy ochrony regresji przy pracy z LLM
-    summary: Jak używamy deterministycznych kontroli wokół kodu generowanego przez AI, aby utrzymać jakość wydań.
+    summary: "Praktyczny model bezpieczeństwa dla inżynierii wspieranej AI: deterministyczne bramki jakości, progi review i szybki rollback."
     body: |
-      Opisujemy guardraile, które stabilizują pracę przyspieszaną przez AI: testy strukturalne, kontrole kontraktów i progi review.
-      Celem jest ograniczenie ryzyka bez utraty tempa delivery.
+      Dlaczego To Ważne
+      Implementacja wspierana LLM przyspiesza delivery, ale zwiększa wariancję jakości kodu. Zespoły nie tracą stabilności przez samo AI, tylko przez brak deterministycznych granic jakości przy większej prędkości zmian.
+
+      Model Guardraili
+      Stosujemy trzy warstwy:
+      1) Kontrole strukturalne: lint, type checks, spójność schematu, analiza statyczna.
+      2) Kontrole behawioralne: testy kontraktowe, kluczowe integracje, asercje canary.
+      3) Bramki decyzyjne: obowiązkowy senior review dla obszarów o dużym wpływie.
+
+      Klasyfikacja Ryzyka
+      Zmiany generowane dzielimy wg blast radius:
+      - Niskie ryzyko: copy, teksty widoków, izolowane helpery.
+      - Średnie ryzyko: logika endpointów, zapytania, przepływy jobów.
+      - Wysokie ryzyko: auth, billing, migracje danych, granice multi-tenant.
+
+      Co Zadziałało Najlepiej
+      - Szablony PR wymuszające opis intencji zmniejszyły niejednoznaczność review.
+      - Progi rozmiaru diffu ograniczyły ryzyko zbyt dużych patchy AI.
+      - Testy kontraktowe wykrywały subtelne regresje szybciej niż szerokie e2e.
+      - Canary z jasnymi triggerami rollbacku skróciło czas incydentów.
+
+      Typowe Błędy
+      Najdroższe regresje wynikały ze zmian "wygląda poprawnie" w logice edge-case. Kontrole deterministyczne łapały błędy składni i struktury, ale dryft reguł biznesowych najczęściej wychwytywał dopiero review domenowe i testy kontraktowe.
+
+      Wskazówki Wdrożeniowe
+      Wdrażaj guardraile etapami: najpierw obowiązkowe kontrole strukturalne i etykiety ryzyka, potem politykę review i automatyzację rollbacku canary.
+
+      Efekt
+      Delivery wspierane AI jest niezawodne, gdy tempo jest kontrolowane przez jawne bramki pewności. Celem nie jest "więcej kodu z AI", tylko przewidywalna jakość przy szybszej iteracji.
+
+      Checklista Operacyjna
+      - Dodaj etykiety ryzyka do każdego PR wspieranego AI.
+      - Wymuś kontrole deterministyczne przed review człowieka.
+      - Dla zmian wysokiego ryzyka wymagaj akceptacji właściciela domeny.
+      - Zdefiniuj kryteria rollbacku przed zgodą na deployment.
+
+      Zestaw KPI
+      - Poziom regresji per release train.
+      - Time-to-detect dla błędów po wdrożeniu.
+      - Udział zmian AI w poszczególnych koszykach ryzyka.
+      - Częstotliwość rollbacków w usługach krytycznych.
+
+      Model Governance
+      Politykę użycia AI traktuj jako standard inżynierski, a nie rekomendację. Obejmuje to audytowalność kontekstu, właściciela zmiany i log decyzji dla ryzykownych merge.
+
+      Częsty Błąd Myślenia
+      Zespoły zakładają, że "więcej testów" rozwiązuje ryzyko AI. Najlepszą ochronę daje połączenie kontroli deterministycznych, jawnej klasyfikacji ryzyka i czytelnej odpowiedzialności release.
+
+      Roadmapa Wdrożenia
+      Faza 1: kontrole strukturalne i etykiety ryzyka.
+      Faza 2: testy kontraktowe na granicach krytycznych.
+      Faza 3: polityki canary i automatyczne triggery rollbacku.
+      Faza 4: kwartalny przegląd guardraili na podstawie danych z incydentów.
