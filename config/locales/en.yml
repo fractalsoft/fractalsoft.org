@@ -300,63 +300,38 @@ en:
           title: TECHNICAL INSIGHTS
           subtitle: Architecture decisions and trade-offs explained for CTOs and senior engineers.
           view_all: View All
-      cards:
-        card_1:
-          read_time: 15 MIN READ
-          tag: WHITE PAPER
-          title: Quantizing LLMs for Edge Deployment in Ruby Environments
-          body: How we achieved a 4-bit quantization while maintaining perplexity benchmarks on consumer hardware.
-          author: Dr. Sarah Chen
-          date: MAY 12, 2024
-        card_2:
-          read_time: 12 MIN READ
-          tag: EXPERIMENT
-          title: Autonomous Multi-Agent Systems in Production
-          body: Lessons learned from deploying a swarm of AI agents for automated bug triage and patch generation.
-          author: Marcus Thorne
-          date: APR 28, 2024
-      insights:
-        featured:
-          title: Optimizing Ruby 3.3 JIT for Matrix Math
-          body: Our deep dive into how YYJIT performs exceptionally well with linear algebra workloads and how we keep tail latencies stable under load.
-          read: Read Deep Dive
+      article:
+        read: Read
       sidebar:
         opensource:
-          title: OPEN SOURCE
+          title: Public Repositories
+          context: Most client systems are private. These public repositories show how we structure and maintain delivery-ready code.
           view_all: View All Repositories
-          repo_1:
-            name: fractal-ruby-core
-            stars: 1.2k
-            desc: High-performance fractal math library for Ruby using SIMD instructions.
-          repo_2:
-            name: nexus-ui-engine
-            stars: '840'
-            desc: Atomic CSS engine for reactive JS frameworks focused on layout stability.
-          repo_3:
-            name: ai-bridge-rb
-            stars: 2.1k
-            desc: Universal adapter for LLM providers with robust caching and retry logic.
-        architecture:
-          title: SYSTEM ARCHITECTURE
-          input_data: Input Data
-          parallel_jit: Parallel JIT
-          optimizer: Optimizer
-          worker_a: Worker A
-          worker_b: Worker B
-          caption: 'Fig 1.4: Distributed processing flow for recursive data sets.'
-          download: Download Architecture Specs
+        practical_assets:
+          title: Practical Assets
+          subtitle: Ready-to-use cheatsheets, diagrams, templates, and runbooks from delivery practice.
+          view_all: View All Assets
+          actions:
+            read: Read Asset
+            download: Download Asset
         newsletter:
           title: Stay at the frontier
           subtitle: Get our monthly digest of research papers and technical breakthroughs.
-          proof: Join 2,500+ CTOs and Lead Engineers.
+          proof: Practical engineering updates for CTOs and senior engineers.
           placeholder: email@company.com
           submit: Join the Journal
+          message: Please subscribe me to Innovation Hub updates.
           footnote: No spam, just engineering.
       cta:
         title_line_1: WANT TO APPLY THESE BREAKTHROUGHS TO
         title_line_2: YOUR PROJECT?
         body: Bring these patterns into your roadmap with a scoped implementation plan, clear risks, and senior execution support.
         button: Book a Technical Consultation
+    show:
+      back: Back to Innovation Hub
+      open_source: Open Original Source
+      related:
+        title: Related Notes
   job_offers:
     index:
       title: Job Offers

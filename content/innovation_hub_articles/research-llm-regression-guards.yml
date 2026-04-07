@@ -1,0 +1,22 @@
+slug: research-llm-regression-guards
+kind: research
+display: true
+featured: false
+position: 2
+author_name: Fractal Soft Engineering
+read_time: 11 min read
+published_at: "2026-03-18"
+cover_image_url: https://placehold.co/1200x630/111827/f8fafc?text=LLM+Regression+Guards
+translations:
+  en:
+    title: Regression Guards for LLM-Assisted Delivery
+    summary: How we use deterministic checks around AI-generated code to keep release quality stable.
+    body: |
+      We document the guardrails that keep AI-accelerated development safe: structural tests, contract checks, and review thresholds.
+      The paper focuses on reducing risk while preserving delivery speed.
+  pl:
+    title: Mechanizmy ochrony regresji przy pracy z LLM
+    summary: Jak używamy deterministycznych kontroli wokół kodu generowanego przez AI, aby utrzymać jakość wydań.
+    body: |
+      Opisujemy guardraile, które stabilizują pracę przyspieszaną przez AI: testy strukturalne, kontrole kontraktów i progi review.
+      Celem jest ograniczenie ryzyka bez utraty tempa delivery.

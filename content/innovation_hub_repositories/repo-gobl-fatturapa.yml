@@ -1,0 +1,13 @@
+slug: repo-gobl-fatturapa
+display: true
+position: 3
+url: https://github.com/fractalsoft/gobl.fatturapa
+translations:
+  en:
+    title: gobl.fatturapa
+    description: Standards-focused interoperability work for invoice conversion scenarios.
+    usage_context: Relevant for teams implementing regulated document exchange flows.
+  pl:
+    title: gobl.fatturapa
+    description: Praca nad interoperacyjnością standardów dla scenariuszy konwersji faktur.
+    usage_context: Przydatne dla zespołów wdrażających regulowane przepływy wymiany dokumentów.

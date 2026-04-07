@@ -1,0 +1,21 @@
+slug: insight-zero-downtime-schema-changes
+kind: insight
+display: true
+featured: false
+position: 4
+author_name: Fractal Soft Engineering
+read_time: 6 min read
+published_at: "2026-03-10"
+translations:
+  en:
+    title: Zero-Downtime Schema Changes in Rails
+    summary: A pragmatic checklist for rolling out schema updates safely in active production systems.
+    body: |
+      This note covers phased migrations, dual-write windows, and rollout ordering.
+      Use it when product deadlines are tight and downtime is unacceptable.
+  pl:
+    title: Zmiany schematu bez przestojów w Rails
+    summary: Praktyczna checklista bezpiecznego wdrażania zmian schematu w aktywnych systemach produkcyjnych.
+    body: |
+      Notatka obejmuje migracje fazowane, okna dual-write i kolejność rolloutu.
+      Przydaje się, gdy terminy produktowe są napięte, a downtime nie wchodzi w grę.
