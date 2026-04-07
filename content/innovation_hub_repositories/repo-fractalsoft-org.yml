@@ -1,0 +1,13 @@
+slug: repo-fractalsoft-org
+display: true
+position: 1
+url: https://github.com/fractalsoft/fractalsoft.org
+translations:
+  en:
+    title: fractalsoft.org
+    description: Active website delivery codebase with current implementation and content workflows.
+    usage_context: Useful as a reference for pragmatic Rails structure and maintainable product-site delivery.
+  pl:
+    title: fractalsoft.org
+    description: Aktywny kod strony firmowej z bieżącą implementacją i workflow treści.
+    usage_context: Dobry punkt odniesienia dla pragmatycznej struktury Rails i utrzymywalnego delivery.

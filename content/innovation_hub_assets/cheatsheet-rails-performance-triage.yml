@@ -1,0 +1,16 @@
+slug: cheatsheet-rails-performance-triage
+kind: cheatsheet
+display: true
+position: 1
+url: /innovation-assets/rails-performance-triage-checklist.png
+action_type: download
+preview_image_url: /innovation-assets/rails-performance-triage-checklist.png
+translations:
+  en:
+    title: Rails Performance Triage Checklist
+    description: A practical checklist for identifying hot spots before scaling work begins.
+    usage_context: Use when response times become inconsistent or release confidence drops.
+  pl:
+    title: Checklista triage wydajności Rails
+    description: Praktyczna checklista do wykrywania wąskich gardeł przed rozpoczęciem skalowania.
+    usage_context: Użyj, gdy czasy odpowiedzi stają się niestabilne lub spada pewność wydań.

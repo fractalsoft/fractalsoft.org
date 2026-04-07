@@ -1,0 +1,21 @@
+slug: experiment-background-jobs-backpressure
+kind: experiment
+display: true
+featured: false
+position: 5
+author_name: Fractal Soft Engineering
+read_time: 9 min read
+published_at: "2026-03-05"
+translations:
+  en:
+    title: Backpressure Patterns for Background Jobs
+    summary: Experimental comparison of queue throttling approaches for bursty workloads.
+    body: |
+      We ran controlled load tests for job retry and throttling strategies.
+      This experiment shows how to balance throughput and failure isolation during traffic spikes.
+  pl:
+    title: Wzorce backpressure dla jobów asynchronicznych
+    summary: Eksperymentalne porównanie podejść do throttlingu kolejek przy skokowym obciążeniu.
+    body: |
+      Przeprowadziliśmy kontrolowane testy strategii retry i throttlingu.
+      Eksperyment pokazuje, jak równoważyć przepustowość i izolację błędów podczas pików ruchu.

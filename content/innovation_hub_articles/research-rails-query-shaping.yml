@@ -1,0 +1,22 @@
+slug: research-rails-query-shaping
+kind: research
+display: true
+featured: true
+position: 1
+author_name: Fractal Soft Engineering
+read_time: 14 min read
+published_at: "2026-03-20"
+cover_image_url: https://placehold.co/1200x630/0b1220/f8fafc?text=Rails+Query+Shaping
+translations:
+  en:
+    title: Rails Query Shaping for Predictable Latency
+    summary: A practical benchmark of query-shaping strategies that reduce tail latency under real API load.
+    body: |
+      We tested several ActiveRecord query-shaping approaches under concurrent traffic and measured p95/p99 behavior.
+      This research note explains what changed latency the most, how we validated the results, and how to apply the same pattern in production Rails apps.
+  pl:
+    title: Kształtowanie zapytań Rails dla przewidywalnych opóźnień
+    summary: Praktyczny benchmark strategii zapytań, które obniżają tail latency przy rzeczywistym obciążeniu API.
+    body: |
+      Przetestowaliśmy różne podejścia do kształtowania zapytań ActiveRecord przy ruchu równoległym i zmierzyliśmy p95/p99.
+      Ta notatka pokazuje, co najbardziej wpłynęło na opóźnienia, jak zweryfikowaliśmy wyniki i jak wdrożyć ten wzorzec w produkcyjnym Rails.

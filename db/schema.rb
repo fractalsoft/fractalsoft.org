@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_03_26_120000) do
+ActiveRecord::Schema[8.0].define(version: 2026_03_30_164000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
@@ -103,6 +103,87 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_26_120000) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["project_id"], name: "index_images_on_project_id"
+  end
+
+  create_table "innovation_hub_article_translations", force: :cascade do |t|
+    t.uuid "innovation_hub_article_id", null: false
+    t.string "locale", null: false
+    t.text "summary"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["innovation_hub_article_id"], name: "index_ih_article_translations_on_article_id"
+    t.index ["locale"], name: "index_innovation_hub_article_translations_on_locale"
+  end
+
+  create_table "innovation_hub_articles", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "display", default: true, null: false
+    t.boolean "featured", default: false, null: false
+    t.string "kind", null: false
+    t.integer "position", default: 0, null: false
+    t.string "slug", null: false
+    t.string "title", null: false
+    t.string "author_name", null: false
+    t.string "read_time", null: false
+    t.datetime "published_at", null: false
+    t.string "cover_image_url"
+    t.string "external_url"
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.index ["display"], name: "index_innovation_hub_articles_on_display"
+    t.index ["featured"], name: "index_innovation_hub_articles_on_featured"
+    t.index ["kind"], name: "index_innovation_hub_articles_on_kind"
+    t.index ["slug"], name: "index_innovation_hub_articles_on_slug", unique: true
+  end
+
+  create_table "innovation_hub_asset_translations", force: :cascade do |t|
+    t.uuid "innovation_hub_asset_id", null: false
+    t.string "locale", null: false
+    t.text "description"
+    t.text "usage_context"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["innovation_hub_asset_id"], name: "index_ih_asset_translations_on_asset_id"
+    t.index ["locale"], name: "index_innovation_hub_asset_translations_on_locale"
+  end
+
+  create_table "innovation_hub_assets", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "display", default: true, null: false
+    t.string "kind", null: false
+    t.integer "position", default: 0, null: false
+    t.string "slug", null: false
+    t.string "title", null: false
+    t.string "url", null: false
+    t.string "action_type", default: "read", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.string "preview_image_url"
+    t.index ["display"], name: "index_innovation_hub_assets_on_display"
+    t.index ["kind"], name: "index_innovation_hub_assets_on_kind"
+    t.index ["slug"], name: "index_innovation_hub_assets_on_slug", unique: true
+  end
+
+  create_table "innovation_hub_repositories", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.boolean "display", default: true, null: false
+    t.integer "position", default: 0, null: false
+    t.string "slug", null: false
+    t.string "title", null: false
+    t.string "url", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.index ["display"], name: "index_innovation_hub_repositories_on_display"
+    t.index ["slug"], name: "index_innovation_hub_repositories_on_slug", unique: true
+  end
+
+  create_table "innovation_hub_repository_translations", force: :cascade do |t|
+    t.uuid "innovation_hub_repository_id", null: false
+    t.string "locale", null: false
+    t.text "description"
+    t.text "usage_context"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["innovation_hub_repository_id"], name: "index_ih_repository_translations_on_repository_id"
+    t.index ["locale"], name: "index_innovation_hub_repository_translations_on_locale"
   end
 
   create_table "job_offer_translations", force: :cascade do |t|

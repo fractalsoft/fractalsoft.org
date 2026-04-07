@@ -1,0 +1,13 @@
+slug: repo-blog-fractalsoft-org
+display: true
+position: 2
+url: https://github.com/fractalsoft/blog.fractalsoft.org
+translations:
+  en:
+    title: blog.fractalsoft.org
+    description: Technical publishing repository for engineering notes and long-form articles.
+    usage_context: Use as an example of content-to-publication workflow for technical teams.
+  pl:
+    title: blog.fractalsoft.org
+    description: Repozytorium publikacji technicznych i dłuższych artykułów inżynierskich.
+    usage_context: Przykład workflow od treści technicznej do publikacji.

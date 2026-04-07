@@ -1,0 +1,16 @@
+slug: diagram-ai-guardrail-flow
+kind: diagram
+display: true
+position: 2
+url: /innovation-assets/ai-guardrail-flow.md
+action_type: download
+preview_image_url: https://placehold.co/1200x630/0b1220/f8fafc?text=AI+Guardrail+Flow
+translations:
+  en:
+    title: AI Guardrail Delivery Flow
+    description: Architecture diagram for combining AI-assisted coding with deterministic release gates.
+    usage_context: Use when introducing AI tooling into an existing production delivery process.
+  pl:
+    title: Diagram przepływu guardraili AI
+    description: Diagram architektury łączącej pracę wspieraną AI z deterministycznymi bramkami release.
+    usage_context: Użyj przy wprowadzaniu narzędzi AI do istniejącego procesu produkcyjnego delivery.

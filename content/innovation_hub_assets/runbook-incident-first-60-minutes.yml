@@ -1,0 +1,16 @@
+slug: runbook-incident-first-60-minutes
+kind: runbook
+display: true
+position: 4
+url: /innovation-assets/incident-first-60-minutes.md
+action_type: download
+preview_image_url: https://placehold.co/1200x630/1f2937/f8fafc?text=Incident+Runbook
+translations:
+  en:
+    title: Incident Runbook - First 60 Minutes
+    description: A compact runbook for triage, communication, and stabilization in the first hour.
+    usage_context: Use during active incidents where speed and clarity matter more than process overhead.
+  pl:
+    title: Runbook incydentowy - pierwsze 60 minut
+    description: Krótki runbook do triage, komunikacji i stabilizacji w pierwszej godzinie.
+    usage_context: Użyj podczas aktywnych incydentów, gdy liczy się szybkość i klarowność działań.

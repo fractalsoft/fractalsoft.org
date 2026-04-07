@@ -1,0 +1,21 @@
+slug: case-note-legacy-audit-first-30-days
+kind: case_note
+display: true
+featured: false
+position: 6
+author_name: Fractal Soft Engineering
+read_time: 5 min read
+published_at: "2026-03-01"
+translations:
+  en:
+    title: Case Note - Legacy Audit in the First 30 Days
+    summary: A short field report on turning unclear legacy risk into a prioritized execution roadmap.
+    body: |
+      In this case note we outline the first-month sequence: map critical flows, identify blockers, and define measurable stabilization milestones.
+      The approach is designed for teams inheriting fragile systems.
+  pl:
+    title: Case note - Audyt legacy w pierwszych 30 dniach
+    summary: Krótki raport z zamiany niejasnego ryzyka legacy w priorytetyzowaną roadmapę wykonawczą.
+    body: |
+      W tej notatce opisujemy sekwencję pierwszego miesiąca: mapowanie krytycznych przepływów, identyfikację blokad i definiowanie mierzalnych kamieni milowych stabilizacji.
+      Podejście jest przygotowane dla zespołów przejmujących kruche systemy.

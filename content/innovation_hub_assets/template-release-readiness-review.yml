@@ -1,0 +1,16 @@
+slug: template-release-readiness-review
+kind: template
+display: true
+position: 3
+url: /innovation-assets/release-readiness-template.md
+action_type: download
+preview_image_url: https://placehold.co/1200x630/111827/f8fafc?text=Release+Readiness+Template
+translations:
+  en:
+    title: Release Readiness Review Template
+    description: A reusable review template for release go/no-go decisions.
+    usage_context: Use before production release when multiple teams share delivery ownership.
+  pl:
+    title: Szablon przeglądu gotowości do release
+    description: Wielokrotnego użytku szablon decyzji go/no-go przed wydaniem.
+    usage_context: Użyj przed wydaniem produkcyjnym, gdy kilka zespołów współdzieli odpowiedzialność za delivery.
