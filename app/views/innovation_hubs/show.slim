@@ -1,72 +1,47 @@
 - content_for :body_class
 - content_for :title, @article.title.to_s
 
-.container.mx-auto.px-4.py-10.md:py-14
-  .max-w-6xl.mx-auto.space-y-8
-    .rounded-3xl.overflow-hidden.surface-hero-accent.border.border-base-200
-      .p-6.md:p-10.space-y-6
-        = link_to innovation_hub_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
-          = lucide_icon 'arrow-left', class: 'w-4 h-4'
-          = t('.back')
+.container.mx-auto.px-4.py-8.md:py-12
+  .max-w-7xl.mx-auto.space-y-8
+    .rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
+      .relative
+        - hero_image = @article.cover_image_url.presence || 'https://placehold.co/1600x900/0b1220/f8fafc?text=Innovation+Hub'
+        = image_tag hero_image, class: 'w-full h-[300px] md:h-[430px] object-cover'
+        .absolute.inset-0.bg-gradient-to-t.from-neutral-950/90.via-neutral-900/45.to-neutral-900/10
+        .absolute.inset-x-0.bottom-0.p-6.md:p-10
+          .max-w-5xl.space-y-4
+            = link_to innovation_hub_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/25 px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-widest text-white no-underline hover:bg-black/40' do
+              = lucide_icon 'arrow-left', class: 'w-3.5 h-3.5'
+              = t('.back')
+            .flex.flex-wrap.items-center.gap-2.text-[11px]
+              span.inline-flex.items-center.rounded-full.bg-primary/90.text-white.px-3.py-1.font-black.uppercase.tracking-wider
+                = @article.kind.humanize
+              span.inline-flex.items-center.gap-1.5.rounded-full.bg-black/35.text-white/90.px-3.py-1.font-semibold
+                = lucide_icon 'calendar-days', class: 'w-3.5 h-3.5'
+                = l(@article.published_at.to_date)
+              span.inline-flex.items-center.gap-1.5.rounded-full.bg-black/35.text-white/90.px-3.py-1.font-semibold
+                = lucide_icon 'clock-3', class: 'w-3.5 h-3.5'
+                = @article.read_time
+            h1.text-3xl.md:text-5xl.font-black.leading-tight.text-white.max-w-4xl
+              = @article.title
+            - if @article.summary.present?
+              p.text-base.md:text-xl.leading-relaxed.text-white/90.max-w-4xl
+                = @article.summary
 
-        .space-y-4
-          span.inline-flex.items-center.rounded-full.bg-primary/15.text-primary.px-3.py-1.font-black.uppercase.text-xs.tracking-wider
-            = @article.kind.humanize
-          h1.text-3xl.md:text-5xl.font-black.leading-tight.text-white.max-w-4xl
-            = @article.title
-          .flex.flex-wrap.items-center.gap-3.text-xs.text-white/80
-            span.inline-flex.items-center.gap-1.5
-              = lucide_icon 'user', class: 'w-3.5 h-3.5'
+  .max-w-7xl.mx-auto.my-6
+    article
+      .article-markdown.max-w-none.text-base-content/90
+        = render_markdown(@article.body)
+      - if @article.external_url.present?
+        .mt-10.pt-6.border-t.border-base-200
+          = link_to @article.external_url, class: 'btn btn-primary' , target: '_blank', rel: 'noopener' do
+            = t('.open_source')
+      .mt-8.pt-6
+        .flex.flex-wrap.items-center.gap-3
+          .inline-flex.items-center.justify-center.w-10.h-10.rounded-full.bg-primary/10.text-primary
+            = lucide_icon 'user', class: 'w-5 h-5'
+          .space-y-0.5
+            p.text-xs.uppercase.tracking-widest.font-bold.text-base-content/60
+              | Author
+            p.text-sm.font-semibold.text-base-content
               = @article.author_name
-            span.inline-flex.items-center.gap-1.5
-              = lucide_icon 'calendar-days', class: 'w-3.5 h-3.5'
-              = l(@article.published_at.to_date)
-            span.inline-flex.items-center.gap-1.5
-              = lucide_icon 'clock-3', class: 'w-3.5 h-3.5'
-              = @article.read_time
-
-        - if @article.summary.present?
-          p.text-base.md:text-lg.leading-relaxed.text-white/90.max-w-4xl
-            = @article.summary
-
-    - if @article.cover_image_url.present?
-      .rounded-2xl.overflow-hidden.border.border-base-200.shadow-sm
-        = image_tag @article.cover_image_url, class: 'w-full h-72 md:h-[28rem] object-cover'
-
-    .grid.grid-cols-1.lg:grid-cols-12.gap-6
-      .lg:col-span-8
-        article.rounded-2xl.bg-base-100.border.border-base-200.p-6.md:p-10.shadow-sm
-          .prose.prose-neutral.max-w-none.leading-8
-            = simple_format(@article.body, {}, wrapper_tag: 'div')
-
-      .lg:col-span-4.space-y-4
-        .rounded-2xl.bg-base-100.border.border-base-200.p-5.space-y-3
-          h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-            | Article Details
-          .text-sm.text-base-content/70.space-y-2
-            p
-              strong.text-base-content Category:
-              = " #{@article.kind.humanize}"
-            p
-              strong.text-base-content Published:
-              = " #{l(@article.published_at.to_date)}"
-            p
-              strong.text-base-content Read time:
-              = " #{@article.read_time}"
-          - if @article.external_url.present?
-            = link_to @article.external_url, class: 'btn btn-outline btn-primary w-full', target: '_blank', rel: 'noopener' do
-              = t('.open_source')
-
-        - if @related_articles.any?
-          .rounded-2xl.bg-base-100.border.border-base-200.p-5.space-y-4
-            h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-              = t('.related.title')
-            .space-y-3
-              - @related_articles.each do |related|
-                = link_to innovation_hub_article_path(related, locale: I18n.locale), class: 'block rounded-xl border border-base-200 p-3 no-underline hover:border-primary/60 bg-base-50' do
-                  p.text-[11px].font-black.uppercase.tracking-wider.text-primary
-                    = related.kind.humanize
-                  p.text-sm.font-bold.leading-snug.text-base-content
-                    = related.title
-                  p.text-xs.text-base-content/60.mt-1
-                    = related.read_time

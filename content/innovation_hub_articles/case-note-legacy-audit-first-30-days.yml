@@ -11,111 +11,249 @@ translations:
     title: "Case Note: Legacy Audit in the First 30 Days"
     summary: A field-tested 30-day sequence for converting unclear legacy risk into an executable stabilization roadmap.
     body: |
-      Starting Point
+      ## Starting Point
       The team inherited a legacy Rails system with inconsistent test coverage, unknown runtime bottlenecks, and release anxiety. Business pressure required feature delivery while technical risk remained mostly undocumented.
 
-      Objective
+      ## Objective
       Build a first-month audit that produces decisions, not just documentation: what to stabilize now, what to defer, and what to redesign.
 
-      30-Day Sequence
-      Week 1 - System Mapping
+      ## 30-Day Sequence
+      ### Week 1 - System Mapping
       - Identify critical user journeys and revenue-sensitive flows.
       - Map integration dependencies and operational ownership.
       - Capture top production error classes and latency outliers.
 
-      Week 2 - Risk Classification
+      ### Week 2 - Risk Classification
       - Classify risks by impact and reversibility.
       - Separate "must-fix before feature work" from "safe to monitor."
       - Define measurable acceptance criteria for stabilization tasks.
 
-      Week 3 - Execution Probes
+      ### Week 3 - Execution Probes
       - Run small remediation probes (query reshaping, retry policies, guard tests).
       - Measure operational effect before scaling the intervention.
       - Convert successful probes into repeatable patterns.
 
-      Week 4 - Delivery Roadmap
+      ### Week 4 - Delivery Roadmap
       - Publish a prioritized 90-day roadmap with owners and checkpoints.
       - Align product sequencing with technical risk constraints.
       - Set review cadence for roadmap adaptation.
 
-      Outcomes
+      ## Outcomes
       The team moved from reactive firefighting to controlled delivery planning. Most importantly, leadership gained visibility into what was risky, what was stable, and what required investment.
 
-      What To Reuse
+      ## What To Reuse
       Keep the audit lightweight, metric-driven, and explicitly tied to product decisions. The value comes from decision quality, not report volume.
 
-      Sample Deliverables By Day 30
+      ## Sample Deliverables By Day 30
       - Risk register ranked by business impact and reversibility.
       - Stabilization backlog with owners, estimates, and expected KPI effect.
       - Dependency map with high-risk integration points.
       - Release safety checklist for ongoing feature delivery.
 
-      KPIs To Track After Audit
+      ## KPIs To Track After Audit
       - Incident frequency and severity trend.
       - Change failure rate.
       - Lead time for medium-risk releases.
       - Percentage of roadmap milestones delivered on schedule.
 
-      Common Pitfalls
+      ## Common Pitfalls
       - Over-documenting without committing to owners and dates.
       - Mixing urgent remediation with strategic refactor in one backlog.
       - Focusing on code style while production risk remains unresolved.
 
-      Practical Advice
+      ## Practical Advice
       Keep executive communication short and decision-oriented. Leadership needs clear options, confidence levels, and consequences of delay.
+
+      ## Expanded Case Timeline
+      ### Days 1-3: Entry and risk framing
+      We interviewed engineering, product, and support stakeholders to capture pain in operational terms, not only technical vocabulary. This quickly exposed mismatch between perceived and actual critical flows.
+
+      ### Days 4-7: Runtime evidence collection
+      We analyzed logs, incident history, and deployment events to identify unstable boundaries. The key insight was that most outages originated from integration seams, not core domain logic.
+
+      ### Days 8-12: Architecture and ownership mapping
+      We mapped service/module ownership and identified orphaned areas where no team had clear accountability. These zones correlated strongly with unresolved defects and release delays.
+
+      ### Days 13-18: Quick stabilization interventions
+      We selected low-risk, high-impact fixes:
+      - query-path cleanup on top latency endpoints,
+      - deterministic retries for flaky integrations,
+      - basic alert quality improvements.
+      These did not "modernize everything," but immediately improved release confidence.
+
+      ### Days 19-24: Risk-to-roadmap translation
+      Instead of generic technical debt labels, each risk was translated into delivery impact: blocked features, expected downtime exposure, or scaling constraints. This changed roadmap conversations from abstract debt to business trade-offs.
+
+      ### Days 25-30: Decision package for leadership
+      We prepared three scenarios:
+      1) minimal stabilization path,
+      2) balanced path (stability + feature continuity),
+      3) aggressive modernization.
+      Each scenario included expected outcomes, resource needs, and confidence range.
+
+      ## What made this audit effective
+      - Evidence-first narrative instead of opinion-first recommendations.
+      - Clear ownership on every action.
+      - Measurable success criteria with checkpoint dates.
+      - Tight link between technical risk and product delivery impact.
+
+      ## Reusable template for other teams
+      1) Collect incident and release evidence.
+      2) Classify risks by business impact and reversibility.
+      3) Run small probes before committing broad refactors.
+      4) Convert findings into scenario-based roadmap options.
+      5) Track outcomes with explicit KPIs for 90 days.
+
+      ## Closing note
+      A first-month legacy audit should reduce ambiguity, not produce a long report. If decision quality does not improve by day 30, the audit is incomplete regardless of documentation depth.
+
+      ## Adoption Kit for New Teams
+      Recommended artifacts to prepare before week 1:
+      - stakeholder map with ownership boundaries,
+      - incident timeline template,
+      - risk scoring rubric,
+      - stabilization backlog template with decision fields.
+      Starting with templates accelerates alignment and avoids "format debates" during urgent analysis.
+
+      ## Decision Rhythm That Worked
+      We used a twice-weekly risk review:
+      - one meeting to validate evidence,
+      - one meeting to approve actions.
+      This separation reduced emotional decision-making and improved execution discipline.
+
+      ## How to Prioritize Stabilization Tasks
+      Apply a simple score:
+      priority = business impact x failure likelihood x reversibility factor.
+      Tasks with high impact, high likelihood, and low reversibility should be executed first, even if implementation is uncomfortable.
+
+      ## Stakeholder Communication Pattern
+      Keep updates concise:
+      - what changed since last report,
+      - what risk moved up/down,
+      - what decision is needed now.
+      This format maintains executive trust and avoids status-noise fatigue.
   pl:
     title: "Case Note: Audyt legacy w pierwszych 30 dniach"
     summary: Sprawdzona sekwencja 30-dniowa, która zamienia niejasne ryzyko legacy w wykonalną roadmapę stabilizacji.
     body: |
-      Punkt Wyjścia
+      ## Punkt Wyjścia
       Zespół przejął system Rails legacy z nierównym pokryciem testami, niejasnymi wąskimi gardłami runtime i niską pewnością release. Biznes oczekiwał dalszego rozwoju funkcji mimo nieudokumentowanego ryzyka technicznego.
 
-      Cel
+      ## Cel
       Zbudować audyt pierwszego miesiąca, który prowadzi do decyzji, a nie tylko dokumentacji: co stabilizować natychmiast, co odłożyć i co przeprojektować.
 
-      Sekwencja 30 Dni
-      Tydzień 1 - Mapowanie Systemu
+      ## Sekwencja 30 Dni
+      ### Tydzień 1 - Mapowanie Systemu
       - Identyfikacja krytycznych user journey i przepływów wpływających na przychód.
       - Mapowanie zależności integracyjnych i odpowiedzialności operacyjnej.
       - Zebranie głównych klas błędów produkcyjnych i outlierów latencji.
 
-      Tydzień 2 - Klasyfikacja Ryzyka
+      ### Tydzień 2 - Klasyfikacja Ryzyka
       - Klasyfikacja ryzyk wg wpływu i odwracalności.
       - Rozdzielenie "must-fix przed rozwojem funkcji" od "można monitorować."
       - Ustalenie mierzalnych kryteriów akceptacji dla zadań stabilizacyjnych.
 
-      Tydzień 3 - Proby Wykonawcze
+      ### Tydzień 3 - Proby Wykonawcze
       - Uruchomienie małych interwencji (query shaping, polityki retry, testy guard).
       - Pomiar efektu operacyjnego przed skalowaniem rozwiązania.
       - Zamiana udanych prób na powtarzalne wzorce.
 
-      Tydzień 4 - Roadmapa Delivery
+      ### Tydzień 4 - Roadmapa Delivery
       - Publikacja priorytetyzowanej roadmapy 90-dniowej z właścicielami i checkpointami.
       - Dopasowanie sekwencji produktu do ograniczeń ryzyka technicznego.
       - Ustalenie rytmu przeglądów i adaptacji roadmapy.
 
-      Efekty
+      ## Efekty
       Zespół przeszedł od reaktywnego gaszenia pożarów do kontrolowanego planowania delivery. Kluczowa korzyść: lepsza widoczność, co jest ryzykowne, co stabilne i gdzie potrzebna jest inwestycja.
 
-      Co Warto Powtórzyć
+      ## Co Warto Powtórzyć
       Audyt powinien być lekki, oparty o metryki i jawnie powiązany z decyzjami produktowymi. Wartość tworzy jakość decyzji, nie objętość raportu.
 
-      Przykładowe Artefakty Na Dzień 30
+      ## Przykładowe Artefakty Na Dzień 30
       - Rejestr ryzyk posortowany wg wpływu biznesowego i odwracalności.
       - Backlog stabilizacji z właścicielami, estymacją i oczekiwanym efektem KPI.
       - Mapa zależności z punktami integracji o najwyższym ryzyku.
       - Checklista bezpieczeństwa release dla dalszego rozwoju funkcji.
 
-      KPI Po Audycie
+      ## KPI Po Audycie
       - Trend częstotliwości i wagi incydentów.
       - Change failure rate.
       - Lead time dla release o średnim ryzyku.
       - Procent kamieni milowych roadmapy dowiezionych w terminie.
 
-      Częste Pułapki
+      ## Częste Pułapki
       - Nadmiar dokumentacji bez przypisania właścicieli i terminów.
       - Mieszanie pilnej stabilizacji ze strategicznym refaktorem w jednym backlogu.
       - Koncentracja na stylu kodu przy nierozwiązanym ryzyku produkcyjnym.
 
-      Praktyczna Wskazówka
+      ## Praktyczna Wskazówka
       Komunikację z zarządem utrzymuj krótką i decyzyjną. Potrzebne są jasne opcje, poziom pewności i konsekwencje opóźnienia.
+
+      ## Rozszerzona Oś Przypadku
+      ### Dni 1-3: wejście i framing ryzyka
+      Zrobiliśmy wywiady z engineeringiem, produktem i supportem, aby opisać problemy językiem operacyjnym, nie wyłącznie technicznym. To szybko pokazało różnicę między ryzykiem postrzeganym a realnym.
+
+      ### Dni 4-7: zbieranie dowodów runtime
+      Przeanalizowaliśmy logi, historię incydentów i zdarzenia deploymentowe. Kluczowy wniosek: większość awarii pochodziła z granic integracyjnych, a nie z rdzenia logiki domenowej.
+
+      ### Dni 8-12: mapa architektury i odpowiedzialności
+      Zmapowaliśmy ownerów modułów/usług i znaleźliśmy obszary osierocone bez jasnej odpowiedzialności. Te strefy silnie korelowały z zaległymi defektami i opóźnieniami release.
+
+      ### Dni 13-18: szybkie interwencje stabilizacyjne
+      Wybraliśmy działania niskiego ryzyka i wysokiego wpływu:
+      - cleanup ścieżek zapytań na endpointach z najwyższą latencją,
+      - deterministyczne retry dla niestabilnych integracji,
+      - poprawa jakości alertów bazowych.
+      To nie modernizowało całego systemu, ale od razu podniosło pewność release.
+
+      ### Dni 19-24: tłumaczenie ryzyka na roadmapę
+      Zamiast etykiet "dług techniczny" każde ryzyko opisaliśmy wpływem delivery: blokowane funkcje, ekspozycja na downtime, ograniczenia skalowania. Dzięki temu rozmowa o roadmapie stała się konkretna.
+
+      ### Dni 25-30: pakiet decyzyjny dla leadershipu
+      Przygotowaliśmy trzy scenariusze:
+      1) minimalna stabilizacja,
+      2) wariant zbalansowany (stabilność + ciągłość rozwoju),
+      3) agresywna modernizacja.
+      Każdy scenariusz zawierał wynik oczekiwany, zasoby i przedział pewności.
+
+      ## Co zadecydowało o skuteczności
+      - narracja oparta na dowodach, nie na opiniach,
+      - jawna odpowiedzialność za każde działanie,
+      - mierzalne kryteria sukcesu i checkpointy,
+      - bezpośrednie powiązanie ryzyka technicznego z wpływem produktowym.
+
+      ## Szablon do ponownego użycia
+      1) Zbierz dowody z incydentów i release.
+      2) Klasyfikuj ryzyka wg wpływu biznesowego i odwracalności.
+      3) Uruchamiaj małe próby przed szerokim refaktorem.
+      4) Zamień wyniki na warianty roadmapy scenariuszowej.
+      5) Monitoruj efekty KPI przez 90 dni.
+
+      ## Nota końcowa
+      Audyt pierwszego miesiąca ma redukować niejednoznaczność, a nie zwiększać objętość dokumentacji. Jeśli jakość decyzji nie rośnie do dnia 30, audyt pozostaje niepełny.
+
+      ## Zestaw Startowy Dla Nowych Zespołów
+      Artefakty, które warto przygotować przed tygodniem 1:
+      - mapa interesariuszy i granic odpowiedzialności,
+      - szablon timeline incydentów,
+      - rubryka scoringu ryzyka,
+      - szablon backlogu stabilizacji z polami decyzyjnymi.
+      Gotowe formaty przyspieszają pracę i eliminują spory o strukturę raportu.
+
+      ## Rytm Decyzyjny, Który Zadziałał
+      Stosowaliśmy dwa przeglądy ryzyka tygodniowo:
+      - jeden do walidacji dowodów,
+      - jeden do zatwierdzenia działań.
+      Taki podział zmniejsza decyzje emocjonalne i poprawia dyscyplinę wykonania.
+
+      ## Jak Priorytetyzować Stabilizację
+      Użyj prostego wzoru:
+      priorytet = wpływ biznesowy x prawdopodobieństwo awarii x współczynnik odwracalności.
+      Zadania o wysokim wpływie, wysokim prawdopodobieństwie i niskiej odwracalności powinny iść pierwsze.
+
+      ## Wzorzec Komunikacji ze Stakeholderami
+      Aktualizacje powinny być krótkie:
+      - co zmieniło się od poprzedniego raportu,
+      - które ryzyko wzrosło/spadło,
+      - jaka decyzja jest potrzebna teraz.
+      Ten format utrzymuje zaufanie i ogranicza zmęczenie komunikacyjne.
