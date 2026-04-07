@@ -9,13 +9,103 @@ published_at: "2026-03-12"
 translations:
   en:
     title: Incident Playbook for Product-Focused Engineering Teams
-    summary: A lightweight incident response flow that improves MTTR without heavyweight process overhead.
+    summary: A practical incident response playbook designed for product teams that need fast recovery, clear ownership, and low process overhead.
     body: |
-      This insight summarizes the minimum runbook we recommend for teams that need reliability fast.
-      It covers triage roles, communication timing, and post-incident learning loops.
+      Incident Reality
+      Most teams do not need enterprise-scale ceremony. They need a repeatable response pattern that protects users and restores service quickly.
+
+      First 15 Minutes
+      - Declare incident severity and assign a single incident commander.
+      - Stabilize customer impact first: rollback, disable risky features, or apply traffic controls.
+      - Open one source-of-truth channel for technical and stakeholder updates.
+
+      15-45 Minutes
+      - Split responsibilities: one person drives mitigation, one investigates root path, one handles communication.
+      - Capture timeline events in real time (what changed, when, and by whom).
+      - Prefer reversible actions over broad speculative fixes.
+
+      45-60 Minutes
+      - Confirm service recovery with explicit success criteria.
+      - Publish a short status update with impact, current state, and next checkpoint.
+      - Define immediate follow-up tasks before closing incident mode.
+
+      Post-Incident Loop
+      Within 24 hours, run a blameless review focused on system improvements:
+      1) Trigger conditions and missing detection.
+      2) Decision points that slowed mitigation.
+      3) Concrete safeguards to prevent recurrence.
+
+      Tooling Minimum
+      You need alert routing, runbook links, rollback mechanism, and a simple timeline log. Advanced tooling helps, but discipline and role clarity drive MTTR improvements first.
+
+      Takeaway
+      Reliability scales when response patterns are lightweight, practiced, and explicit. The best playbook is the one your team can execute under pressure.
+
+      Decision Matrix During Incidents
+      - Rollback when impact is broad and revert path is proven.
+      - Hotfix when blast radius is narrow and root cause is isolated.
+      - Feature kill-switch when user protection is immediate priority.
+      - Traffic shaping when dependency degradation is external.
+
+      Metrics That Matter
+      - Time to mitigation.
+      - Time to user-impact communication.
+      - MTTR by incident class.
+      - Repeat incident rate over 30/90 days.
+
+      Practice Cadence
+      Run lightweight incident drills every month. Teams that rehearse communication and role handoffs reduce confusion dramatically during real events.
+
+      Leadership Principle
+      Clarity beats complexity. A short, shared playbook with clear ownership outperforms detailed but unused documentation.
   pl:
     title: Playbook incydentowy dla zespołów produktowych
-    summary: Lekki przepływ reagowania na incydenty, który skraca MTTR bez ciężkiego procesu.
+    summary: "Praktyczny playbook reagowania na incydenty dla zespołów produktowych: szybkie odzyskiwanie, jasne role i mały narzut procesu."
     body: |
-      Ten insight opisuje minimalny runbook dla zespołów, które chcą szybko podnieść niezawodność.
-      Obejmuje role w triage, timing komunikacji i pętlę wniosków po incydencie.
+      Rzeczywistość Incydentów
+      Większość zespołów nie potrzebuje korporacyjnej ceremonii. Potrzebuje powtarzalnego schematu reakcji, który chroni użytkowników i szybko przywraca usługę.
+
+      Pierwsze 15 Minut
+      - Określ severity incydentu i przypisz jednego incident commandera.
+      - Najpierw ogranicz wpływ na użytkowników: rollback, wyłączenie ryzykownej funkcji albo kontrola ruchu.
+      - Uruchom jeden kanał source-of-truth dla zespołu i interesariuszy.
+
+      15-45 Minut
+      - Podziel odpowiedzialności: jedna osoba prowadzi mitigację, jedna bada root path, jedna obsługuje komunikację.
+      - Zapisuj timeline na bieżąco (co, kiedy i przez kogo zostało zmienione).
+      - Preferuj działania odwracalne zamiast szerokich, spekulacyjnych poprawek.
+
+      45-60 Minut
+      - Potwierdź przywrócenie usługi na podstawie jawnych kryteriów sukcesu.
+      - Opublikuj krótki update statusu: wpływ, stan obecny, kolejny punkt kontrolny.
+      - Przed zamknięciem trybu incydentowego przypisz natychmiastowe follow-upy.
+
+      Pętla Po Incydencie
+      W ciągu 24 godzin zrób blameless review skupione na poprawie systemu:
+      1) Warunki triggera i braki w detekcji.
+      2) Punkty decyzyjne, które spowolniły mitigację.
+      3) Konkretne zabezpieczenia przeciw powtórce.
+
+      Minimum Narzędziowe
+      Wystarczy routing alertów, linki do runbooków, mechanizm rollbacku i prosty log timeline. Zaawansowane narzędzia pomagają, ale największy wpływ daje dyscyplina i jasność ról.
+
+      Wniosek
+      Niezawodność skaluje się, gdy schemat reakcji jest lekki, ćwiczony i jednoznaczny. Najlepszy playbook to ten, który zespół realnie wykona pod presją.
+
+      Macierz Decyzyjna W Incydencie
+      - Rollback: gdy wpływ jest szeroki i ścieżka cofnięcia pewna.
+      - Hotfix: gdy blast radius jest wąski i root cause odizolowany.
+      - Kill-switch: gdy priorytetem jest natychmiastowa ochrona użytkownika.
+      - Shaping ruchu: gdy degradacja pochodzi z zależności zewnętrznej.
+
+      Najważniejsze Metryki
+      - Czas do mitigacji.
+      - Czas do komunikatu o wpływie na użytkownika.
+      - MTTR wg klasy incydentu.
+      - Częstotliwość incydentów powtarzalnych w oknie 30/90 dni.
+
+      Rytm Ćwiczeń
+      Uruchamiaj lekkie ćwiczenia incydentowe co miesiąc. Zespoły, które ćwiczą role i komunikację, znacząco ograniczają chaos w realnych zdarzeniach.
+
+      Zasada Przywództwa
+      Klarowność wygrywa ze złożonością. Krótki wspólny playbook z jasną odpowiedzialnością działa lepiej niż rozbudowana, nieużywana dokumentacja.

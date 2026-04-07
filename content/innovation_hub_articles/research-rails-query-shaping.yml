@@ -10,13 +10,109 @@ cover_image_url: https://placehold.co/1200x630/0b1220/f8fafc?text=Rails+Query+Sh
 translations:
   en:
     title: Rails Query Shaping for Predictable Latency
-    summary: A practical benchmark of query-shaping strategies that reduce tail latency under real API load.
+    summary: A benchmark-driven guide to reducing p95/p99 API latency in Rails by shaping query plans, preload paths, and payload boundaries.
     body: |
-      We tested several ActiveRecord query-shaping approaches under concurrent traffic and measured p95/p99 behavior.
-      This research note explains what changed latency the most, how we validated the results, and how to apply the same pattern in production Rails apps.
+      Context
+      Product teams usually optimize average response time first, then get surprised by p95 and p99 spikes during launch windows. We ran a focused benchmark to understand which Rails query decisions actually stabilize tail latency under concurrent load.
+
+      Setup
+      We tested a read-heavy JSON API endpoint under realistic traffic profiles (mixed cache hit ratio, bursty access, and uneven tenant sizes). Every run used the same dataset and infrastructure budget to keep results comparable.
+
+      What We Changed
+      1) Reduced N+1 exposure with explicit `includes` and narrower association trees.
+      2) Replaced broad selects with column-scoped queries for list endpoints.
+      3) Split "index payload" and "detail payload" into separate query paths.
+      4) Added selective precomputation for high-cardinality counters.
+
+      Findings
+      - Average latency improved moderately, but the biggest gains were in p95/p99.
+      - Payload discipline mattered more than raw SQL micro-optimizations.
+      - Over-eager preload patterns increased memory pressure and made p99 worse.
+      - Query plans stayed stable when endpoint responsibilities were explicit.
+
+      Trade-Offs
+      Query shaping increases code path clarity, but introduces additional query objects/scopes that teams must keep documented. The win is worth it when API latency consistency is a business requirement.
+
+      Implementation Notes
+      Start with endpoint-level latency budgets. Then map each endpoint to a query contract: selected fields, associations, max row count, and fallback behavior for expensive joins.
+
+      Takeaways
+      Teams that treat query shape as part of API design, not a late optimization, achieve more predictable delivery outcomes. Tail latency is mostly an architecture habit, not a single trick.
+
+      Implementation Checklist
+      - Define endpoint budgets for p50, p95, and p99 before optimization starts.
+      - Record one canonical query path per endpoint to avoid accidental complexity.
+      - Gate pull requests when list endpoints add joins without clear limits.
+      - Add regression checks for payload size and row count drift.
+
+      What To Measure Weekly
+      - p95 and p99 latency per endpoint family.
+      - Total DB time per request and per page type.
+      - Top query fingerprints by cumulative load.
+      - Cache miss penalties on key customer flows.
+
+      Anti-Patterns We Saw
+      - Treating `includes` as a universal fix for all slow endpoints.
+      - Reusing detail serializers for list pages.
+      - Optimizing one query while ignoring request-level payload inflation.
+      - Shipping query changes without canary comparison windows.
+
+      Rollout Strategy
+      Start with one high-traffic endpoint, lock baseline metrics, and run a two-release comparison. Once p95/p99 behavior is stable, replicate query contracts to adjacent endpoints.
+
+      Final Note
+      Query shaping should live in your engineering playbook, not in tribal memory. Teams that document these decisions move faster with less operational risk.
   pl:
     title: Kształtowanie zapytań Rails dla przewidywalnych opóźnień
-    summary: Praktyczny benchmark strategii zapytań, które obniżają tail latency przy rzeczywistym obciążeniu API.
+    summary: Przewodnik oparty o benchmarki pokazujący, jak obniżyć p95/p99 API w Rails przez świadome kształtowanie zapytań i payloadu.
     body: |
-      Przetestowaliśmy różne podejścia do kształtowania zapytań ActiveRecord przy ruchu równoległym i zmierzyliśmy p95/p99.
-      Ta notatka pokazuje, co najbardziej wpłynęło na opóźnienia, jak zweryfikowaliśmy wyniki i jak wdrożyć ten wzorzec w produkcyjnym Rails.
+      Kontekst
+      Zespoły produktowe często optymalizują średni czas odpowiedzi, a dopiero później zderzają się ze skokami p95/p99 w okresach większego ruchu. Wykonaliśmy benchmark, aby sprawdzić, które decyzje w Rails realnie stabilizują tail latency.
+
+      Setup
+      Testowaliśmy endpoint JSON API o charakterze read-heavy przy realistycznym profilu ruchu (mieszany cache hit ratio, ruch burstowy i nierówne rozmiary tenantów). Każdy przebieg używał tego samego datasetu i budżetu infrastruktury.
+
+      Co Zmieniliśmy
+      1) Ograniczenie N+1 przez jawne `includes` i węższe drzewa asocjacji.
+      2) Zastąpienie szerokich selectów zapytaniami z precyzyjnym zakresem kolumn.
+      3) Rozdzielenie ścieżek zapytań dla payloadu listy i payloadu szczegółu.
+      4) Selektywne precomputing liczników o wysokiej kardynalności.
+
+      Wyniki
+      - Średnia latencja poprawiła się umiarkowanie, ale największy efekt był na p95/p99.
+      - Dyscyplina payloadu była ważniejsza niż mikro-optymalizacje SQL.
+      - Zbyt agresywne preloady podnosiły presję pamięci i pogarszały p99.
+      - Plany zapytań były stabilne, gdy odpowiedzialność endpointów była jednoznaczna.
+
+      Trade-Offy
+      Query shaping poprawia przewidywalność, ale dodaje dodatkowe obiekty query/scope, które trzeba utrzymywać i dokumentować. Korzyść jest wysoka tam, gdzie stabilna latencja jest wymaganiem biznesowym.
+
+      Notatki Wdrożeniowe
+      Zacznij od budżetów latencji per endpoint. Następnie zdefiniuj kontrakt zapytania: zakres pól, asocjacje, limit rekordów i fallback dla kosztownych joinów.
+
+      Wnioski
+      Zespoły, które traktują kształt zapytań jako część projektu API, a nie późny etap optymalizacji, osiągają bardziej przewidywalne wyniki delivery.
+
+      Checklista Wdrożeniowa
+      - Ustal budżety p50, p95 i p99 dla endpointów przed optymalizacją.
+      - Zdefiniuj jedną kanoniczną ścieżkę zapytania per endpoint.
+      - Wprowadź bramkę PR dla nowych joinów w endpointach listowych.
+      - Dodaj testy regresyjne dla rozmiaru payloadu i dryftu liczby rekordów.
+
+      Co Mierzyć Co Tydzień
+      - p95 i p99 per rodzina endpointów.
+      - Łączny czas DB na request i typ strony.
+      - Najcięższe fingerprinty zapytań wg łącznego obciążenia.
+      - Koszt cache miss na kluczowych przepływach użytkownika.
+
+      Antywzorce
+      - Traktowanie `includes` jako uniwersalnego lekarstwa.
+      - Używanie serializerów detail na stronach listowych.
+      - Optymalizacja pojedynczego zapytania przy rosnącym payloadzie requestu.
+      - Wdrażanie zmian zapytań bez okna porównania canary.
+
+      Strategia Rolloutu
+      Zacznij od jednego endpointu o dużym ruchu, zablokuj baseline metryk i porównaj dwa kolejne release. Gdy p95/p99 się ustabilizuje, przenieś kontrakty zapytań na sąsiednie endpointy.
+
+      Nota Końcowa
+      Query shaping powinno być elementem playbooka inżynierskiego, a nie wiedzą ukrytą w zespole. Daje to szybsze delivery i mniejsze ryzyko operacyjne.

@@ -9,13 +9,105 @@ published_at: "2026-03-10"
 translations:
   en:
     title: Zero-Downtime Schema Changes in Rails
-    summary: A pragmatic checklist for rolling out schema updates safely in active production systems.
+    summary: A delivery-tested rollout pattern for schema evolution in active Rails systems without downtime or surprise regressions.
     body: |
-      This note covers phased migrations, dual-write windows, and rollout ordering.
-      Use it when product deadlines are tight and downtime is unacceptable.
+      Problem
+      Schema changes fail in production when teams treat migration as a single step. In reality, safe evolution is a sequence: prepare, transition, verify, and only then remove legacy paths.
+
+      Safe Rollout Sequence
+      1) Expand: add nullable columns/tables and backward-compatible indexes.
+      2) Dual write: write both old and new representations behind a feature flag.
+      3) Backfill: run idempotent batches with observability on lag/failures.
+      4) Read switch: move reads to the new shape with canary monitoring.
+      5) Contract: remove old fields only after stability window is complete.
+
+      Operational Requirements
+      - Every migration must be reversible or safely pausable.
+      - Background backfills need bounded batch size and retry policy.
+      - Metrics must show read/write split and data divergence.
+      - Release notes must capture dependency order across services.
+
+      Trade-Offs
+      Zero-downtime migration takes longer than direct replacement, but it replaces one big risky event with several small controlled decisions.
+
+      Failure Signals
+      Stop rollout when divergence between old/new read paths exceeds threshold, queue latency spikes, or error rates cluster around switched endpoints.
+
+      Team Practice
+      Use a "migration owner" role per release. Accountability for rollout telemetry dramatically improves response speed when things drift.
+
+      Bottom Line
+      Zero-downtime is mostly release discipline. Rails supports it well when teams model schema change as product delivery, not just database maintenance.
+
+      Practical Checklist Before Every Migration
+      - Define backward-compatibility window.
+      - Confirm write/read ownership during dual-write period.
+      - Prepare dashboard for divergence and queue lag.
+      - Add explicit stop conditions and responsible owner.
+
+      Deployment Timeline Example
+      Release A: expand schema and ship dark code paths.
+      Release B: enable dual-write and start monitored backfill.
+      Release C: switch reads with canary verification.
+      Release D: remove legacy paths after stability window.
+
+      Failure Modes To Avoid
+      - Running unbounded backfills during peak traffic.
+      - Switching reads without real-time divergence metrics.
+      - Deleting old columns before rollback window closes.
+      - Forgetting cross-service dependency order.
+
+      Team Communication Pattern
+      Publish migration briefings to product and support teams. Zero-downtime is technical work, but incident risk affects customer communication and release planning across the organization.
   pl:
     title: Zmiany schematu bez przestojów w Rails
-    summary: Praktyczna checklista bezpiecznego wdrażania zmian schematu w aktywnych systemach produkcyjnych.
+    summary: Sprawdzony wzorzec rolloutu zmian schematu w aktywnych systemach Rails bez downtime i bez regresji niespodzianek.
     body: |
-      Notatka obejmuje migracje fazowane, okna dual-write i kolejność rolloutu.
-      Przydaje się, gdy terminy produktowe są napięte, a downtime nie wchodzi w grę.
+      Problem
+      Zmiany schematu psują produkcję, gdy są traktowane jako jeden krok. Bezpieczna ewolucja to sekwencja: przygotowanie, przejście, weryfikacja i dopiero usunięcie starej ścieżki.
+
+      Bezpieczna Sekwencja Rolloutu
+      1) Expand: dodanie nullable kolumn/tabel i kompatybilnych indeksów.
+      2) Dual write: zapis do starego i nowego modelu danych za feature flagą.
+      3) Backfill: idempotentne batche z obserwowalnością opóźnień i błędów.
+      4) Read switch: przełączenie odczytu na nowy model z monitoringiem canary.
+      5) Contract: usunięcie starych pól po zakończonym oknie stabilizacji.
+
+      Wymagania Operacyjne
+      - Każda migracja powinna być odwracalna albo bezpiecznie pauzowalna.
+      - Backfill w tle potrzebuje ograniczonego batch size i polityki retry.
+      - Metryki muszą pokazywać split read/write i rozjazd danych.
+      - Notatki release powinny opisywać kolejność zależności między usługami.
+
+      Trade-Offy
+      Migracja bez downtime trwa dłużej niż bezpośrednia zamiana, ale zamienia jedno duże ryzyko na serię mniejszych, kontrolowanych decyzji.
+
+      Sygnały Awarii
+      Wstrzymaj rollout, gdy rozjazd między starym i nowym odczytem przekracza próg, rośnie latencja kolejek albo błędy skupiają się wokół przełączonych endpointów.
+
+      Praktyka Zespołowa
+      Wprowadź rolę "migration owner" dla każdego release. Jasna odpowiedzialność za telemetrię rolloutu skraca czas reakcji na odchylenia.
+
+      Podsumowanie
+      Zero-downtime to głównie dyscyplina release. Rails dobrze to wspiera, gdy zmiana schematu jest traktowana jak proces delivery produktu, a nie jednorazowe utrzymanie bazy.
+
+      Praktyczna Checklista Przed Migracją
+      - Zdefiniuj okno kompatybilności wstecznej.
+      - Potwierdź odpowiedzialność za zapis/odczyt w okresie dual-write.
+      - Przygotuj dashboard rozjazdu danych i opóźnień kolejek.
+      - Ustal jawne warunki zatrzymania rolloutu i właściciela decyzji.
+
+      Przykładowa Oś Wdrożenia
+      Release A: rozszerzenie schematu i dark path w kodzie.
+      Release B: uruchomienie dual-write i monitorowanego backfill.
+      Release C: przełączenie odczytu z walidacją canary.
+      Release D: usunięcie starej ścieżki po oknie stabilizacji.
+
+      Błędy, Których Unikać
+      - Backfill bez limitów w godzinach szczytu.
+      - Przełączanie odczytu bez metryk rozjazdu w czasie rzeczywistym.
+      - Usuwanie starych kolumn przed zamknięciem okna rollbacku.
+      - Pomijanie kolejności zależności między usługami.
+
+      Wzorzec Komunikacji Zespołu
+      Publikuj krótkie briefingi migracyjne do zespołów produktu i supportu. Zero-downtime to praca techniczna, ale ryzyko incydentu wpływa na całą organizację.
