@@ -299,63 +299,38 @@ pl:
           title: TECHNICZNE INSIGHTY
           subtitle: Decyzje architektoniczne i trade-offy opisane dla CTO i senior inżynierów.
           view_all: Zobacz wszystkie
-      cards:
-        card_1:
-          read_time: 15 MIN CZYTANIA
-          tag: WHITE PAPER
-          title: Kwantyzacja LLM pod edge deployment w środowiskach Ruby
-          body: Jak uzyskaliśmy kwantyzację 4-bit przy utrzymaniu benchmarków perplexity na sprzęcie konsumenckim.
-          author: Dr Sarah Chen
-          date: 12 MAJA 2024
-        card_2:
-          read_time: 12 MIN CZYTANIA
-          tag: EKSPERYMENT
-          title: Autonomiczne systemy multi-agentowe w produkcji
-          body: Wnioski z wdrożenia roju agentów AI do automatycznego triage bugów i generowania poprawek.
-          author: Marcus Thorne
-          date: 28 KWIETNIA 2024
-      insights:
-        featured:
-          title: Optymalizacja Ruby 3.3 JIT dla obliczeń macierzowych
-          body: Nasz deep dive pokazuje, jak YYJIT radzi sobie z algebrą liniową i jak stabilizujemy tail latency pod obciążeniem.
-          read: Czytaj deep dive
+      article:
+        read: Czytaj
       sidebar:
         opensource:
-          title: OPEN SOURCE
+          title: Publiczne repozytoria
+          context: Większość systemów klienckich jest prywatna. Te publiczne repozytoria pokazują nasz styl organizacji i utrzymania kodu.
           view_all: Zobacz wszystkie repozytoria
-          repo_1:
-            name: fractal-ruby-core
-            stars: 1.2k
-            desc: Wysokowydajna biblioteka matematyki fraktalnej dla Ruby z użyciem SIMD.
-          repo_2:
-            name: nexus-ui-engine
-            stars: '840'
-            desc: Atomic CSS engine dla reaktywnych frameworków JS skupiony na stabilności layoutu.
-          repo_3:
-            name: ai-bridge-rb
-            stars: 2.1k
-            desc: Uniwersalny adapter dla dostawców LLM z cache i retry logic.
-        architecture:
-          title: ARCHITEKTURA SYSTEMU
-          input_data: Dane wejściowe
-          parallel_jit: Równoległy JIT
-          optimizer: Optymalizator
-          worker_a: Worker A
-          worker_b: Worker B
-          caption: 'Rys. 1.4: Rozproszony przepływ przetwarzania dla rekurencyjnych zbiorów danych.'
-          download: Pobierz specyfikację architektury
+        practical_assets:
+          title: Praktyczne zasoby
+          subtitle: Gotowe do użycia cheatsheety, diagramy, szablony i runbooki z codziennej praktyki delivery.
+          view_all: Zobacz wszystkie zasoby
+          actions:
+            read: Czytaj materiał
+            download: Pobierz materiał
         newsletter:
           title: Bądź na froncie
           subtitle: Otrzymuj miesięczny digest badań i przełomów technicznych.
-          proof: Dołącz do 2 500+ CTO i Lead Engineerów.
+          proof: Praktyczne aktualizacje inżynierskie dla CTO i senior inżynierów.
           placeholder: email@firma.com
           submit: Dołącz do dziennika
+          message: Proszę o zapisanie mnie do aktualizacji Innovation Hub.
           footnote: Zero spamu, tylko inżynieria.
       cta:
         title_line_1: CHCESZ ZASTOSOWAĆ TE PRZEŁOMY W
         title_line_2: SWOIM PROJEKCIE?
         body: Wdrożymy te wzorce do Twojej roadmapy z konkretnym planem, ryzykami i wsparciem seniorów po stronie delivery.
         button: Umów konsultację techniczną
+    show:
+      back: Wróć do Innovation Hub
+      open_source: Otwórz źródło
+      related:
+        title: Powiązane materiały
   job_offers:
     index:
       title: Oferty pracy

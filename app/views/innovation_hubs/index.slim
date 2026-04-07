@@ -17,140 +17,119 @@
         p.mt-3.text-sm.leading-relaxed.text-gray-300
           = t('.hero.subtext')
         .mt-6.flex.flex-col.sm:flex-row.gap-3
-          = link_to '#', class: 'btn btn-primary' do
+          = link_to innovation_hub_path(locale: I18n.locale, anchor: 'research'), class: 'btn btn-primary' do
             = t('.hero.buttons.latest_research')
-          = link_to '#', class: 'btn btn-outline btn-primary' do
+          = link_to innovation_hub_path(locale: I18n.locale, anchor: 'innovation-newsletter'), class: 'btn btn-outline btn-primary' do
             = t('.hero.buttons.subscribe')
 
   .grid.grid-cols-1.lg:grid-cols-3.gap-6.py-8
     .lg:col-span-2.space-y-6.p-6
+        #research
         .flex.items-center.justify-between.mb-4
           .space-y-1
             h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
               = t('.sections.research.title')
             p.text-xs.text-base-content/60
               = t('.sections.research.subtitle')
-          = link_to '#', class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
+          = link_to innovation_hub_path(locale: I18n.locale, anchor: 'research'), class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
             = t('.sections.research.view_all')
             = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
 
         .grid.grid-cols-1.md:grid-cols-2.gap-4
-          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-            .relative
-              = image_tag 'https://placehold.co/800x420/0b1220/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
-              .absolute.top-2.left-2.flex.gap-2
-                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
-                  = t('.cards.card_1.read_time')
-                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
-                  = t('.cards.card_1.tag')
-            .p-4.space-y-2
-              h3.text-base-content.font-extrabold.text-sm.leading-snug
-                = t('.cards.card_1.title')
-              p.text-xs.text-base-content/60
-                = t('.cards.card_1.body')
-              .flex.items-center.gap-2.pt-1
-                span.w-6.h-6.rounded-full.bg-primary/10.text-primary.inline-flex.items-center.justify-center
-                  = lucide_icon 'user', class: 'w-3.5 h-3.5'
-                span.font-extrabold.text-base-content/70.text-xs = t('.cards.card_1.author')
-                span.font-black.uppercase.tracking-widest.text-base-content/70.text-xs = t('.cards.card_1.date')
-
-          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-            .relative
-              = image_tag 'https://placehold.co/800x420/111827/f8fafc?text=Experiment+Card', class: 'w-full h-40 object-cover'
-              .absolute.top-2.left-2.flex.gap-2
-                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
-                  = t('.cards.card_2.read_time')
-                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
-                  = t('.cards.card_2.tag')
-            .p-4.space-y-2
-              h3.text-base-content.font-extrabold.text-sm.leading-snug
-                = t('.cards.card_2.title')
-              p.text-xs.text-base-content/60
-                = t('.cards.card_2.body')
-              .flex.items-center.gap-2.pt-1
-                span.w-6.h-6.rounded-full.bg-sky-500/10.text-sky-600.inline-flex.items-center.justify-center
-                  = lucide_icon 'user', class: 'w-3.5 h-3.5'
-                span.font-extrabold.text-base-content/70.text-xs = t('.cards.card_2.author')
-                span.font-black.uppercase.tracking-widest.text-base-content/70.text-xs = t('.cards.card_2.date')
+          - @hub.research_articles.limit(2).each do |article|
+            .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
+              .relative
+                - image_url = article.cover_image_url.presence || 'https://placehold.co/800x420/0b1220/f8fafc?text=Innovation+Hub'
+                = image_tag image_url, class: 'w-full h-40 object-cover'
+                .absolute.top-2.left-2.flex.gap-2
+                  span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
+                    = article.read_time
+                  span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
+                    = article.kind.humanize
+              .p-4.space-y-2
+                h3.text-base-content.font-extrabold.text-sm.leading-snug
+                  = article.title
+                p.text-xs.text-base-content/60
+                  = article.summary
+                .flex.items-center.gap-2.pt-1
+                  span.w-6.h-6.rounded-full.bg-primary/10.text-primary.inline-flex.items-center.justify-center
+                    = lucide_icon 'user', class: 'w-3.5 h-3.5'
+                  span.font-extrabold.text-base-content/70.text-xs = article.author_name
+                  span.font-black.uppercase.tracking-widest.text-base-content/70.text-xs = l(article.published_at.to_date)
+                = link_to innovation_hub_article_path(article, locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
+                  = t('.article.read')
+                  = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
 
         .mt-6.h-px
         .overflow-hidden
           .py-6
+            #insights
             .flex.items-center.justify-between.mb-4
-              h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-                = t('.sections.insights.title')
-              = link_to '#', class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
+              .space-y-1
+                h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
+                  = t('.sections.insights.title')
+                p.text-xs.text-base-content/60
+                  = t('.sections.insights.subtitle')
+              = link_to innovation_hub_path(locale: I18n.locale, anchor: 'insights'), class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
                 = t('.sections.insights.view_all')
                 = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
-          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-            = image_tag 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights', class: 'w-full h-60 object-cover'
-            .p-6.space-y-2
-              p.text-sm.font-bold.text-base-content
-                = t('.insights.featured.title')
-              p.text-xs.text-base-content/60.leading-relaxed
-                = t('.insights.featured.body')
-              = link_to '#', class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
-                = t('.insights.featured.read')
-                = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+          - if @hub.featured_article.present?
+            .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
+              - featured_image = @hub.featured_article.cover_image_url.presence || 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights'
+              = image_tag featured_image, class: 'w-full h-60 object-cover'
+              .p-6.space-y-2
+                p.text-sm.font-bold.text-base-content
+                  = @hub.featured_article.title
+                p.text-xs.text-base-content/60.leading-relaxed
+                  = @hub.featured_article.summary
+                = link_to innovation_hub_article_path(@hub.featured_article, locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
+                  = t('.article.read')
+                  = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
 
     .space-y-6
       .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
         .flex.items-center.justify-between.mb-4
           h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
             = t('.sidebar.opensource.title')
+        p.text-xs.text-base-content/60.leading-relaxed
+          = t('.sidebar.opensource.context')
         .space-y-4
-          .pb-2
-            .flex.items-start.justify-between.gap-3
-              a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_1.name')
-              .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
-                = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                = t('.sidebar.opensource.repo_1.stars')
-            p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_1.desc')
-          .border-t.border-base-300.pt-3.pb-2
-            .flex.items-start.justify-between.gap-3
-              a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_2.name')
-              .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
-                = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                = t('.sidebar.opensource.repo_2.stars')
-            p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_2.desc')
-          .border-t.border-base-300.pt-3
-            .flex.items-start.justify-between.gap-3
-              a.text-xs.font-black.text-primary.no-underline href='#' = t('.sidebar.opensource.repo_3.name')
-              .inline-flex.items-center.gap-1.text-sm.font-bold.text-base-content/70
-                = lucide_icon 'star', class: 'w-3.5 h-3.5'
-                = t('.sidebar.opensource.repo_3.stars')
-            p.mt-1.leading-snug.text-base-content/70.text-sm = t('.sidebar.opensource.repo_3.desc')
-        = link_to '#', class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-3 rounded-xl font-extrabold' do
+          - @hub.repository_assets.each_with_index do |repo, idx|
+            - border_class = idx.zero? ? 'pb-2' : 'border-t border-base-300 pt-3 pb-2'
+            div class=border_class
+              .flex.items-start.justify-between.gap-3
+                = link_to repo.title, repo.url, class: 'text-xs font-black text-primary no-underline', target: '_blank', rel: 'noopener'
+              p.mt-1.leading-snug.text-base-content/70.text-sm = repo.description
+        = link_to 'https://github.com/fractalsoft', class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-3 rounded-xl font-extrabold', target: '_blank', rel: 'noopener' do
           = t('.sidebar.opensource.view_all')
 
-      .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
+      #practical-assets.rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
         .flex.items-center.justify-between.mb-4
           h2.text-base.font-extrabold.uppercase.tracking-wide.text-base-content
-            = t('.sidebar.architecture.title')
-        .rounded-xl.p-5
-          .flex.flex-col.items-center.justify-center.gap-3.pt-2
-            .border-2.border-dashed.border-primary/90.text-base-content/80.rounded-lg.px-4.py-3.text-xs.font-bold.tracking-wide.text-center
-              = t('.sidebar.architecture.input_data')
-            .text-primary/60
-              = lucide_icon 'arrow-down', class: 'w-5 h-5'
-            .border.border-primary.bg-primary.text-white.rounded-lg.px-4.py-3.text-xs.font-black.leading-snug.text-center
-              = t('.sidebar.architecture.parallel_jit')
-              br
-              = t('.sidebar.architecture.optimizer')
-            .text-primary/60
-              = lucide_icon 'arrow-down', class: 'w-5 h-5'
-            .flex.gap-2
-              .border.border-base-300.bg-base-100.rounded-md.px-3.py-2.font-bold.text-base-content/75.text-xs
-                = t('.sidebar.architecture.worker_a')
-              .border.border-base-300.bg-base-100.rounded-md.px-3.py-2.font-bold.text-base-content/75.text-xs
-                = t('.sidebar.architecture.worker_b')
-          .mt-4.text-base-content/60.text-center.text-xs
-            = t('.sidebar.architecture.caption')
-        = link_to '#', class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-4 gap-2 rounded-xl font-extrabold' do
-          = lucide_icon 'download', class: 'w-4 h-4'
-          = t('.sidebar.architecture.download')
+            = t('.sidebar.practical_assets.title')
+        p.text-xs.text-base-content/60.leading-relaxed.mb-4
+          = t('.sidebar.practical_assets.subtitle')
+        .space-y-3
+          - @hub.practical_assets.limit(1).each do |asset|
+            .rounded-xl.bg-base-200.p-3.space-y-2
+              - if asset.preview_image_url.present?
+                .rounded-md.overflow-hidden.border.border-base-300
+                  = image_tag asset.preview_image_url, class: 'w-full h-auto', alt: asset.title
+              .flex.items-center.justify-between.gap-3
+                p.text-xs.font-black.text-base-content = asset.title
+                span.inline-flex.items-center.rounded-full.bg-primary/10.text-primary.px-2.py-1.font-bold.uppercase class='text-[10px]'
+                  = asset.kind.humanize
+              p.text-xs.text-base-content/70 = asset.description
+              - if asset.usage_context.present?
+                p class='text-[11px] text-base-content/60'
+                  = asset.usage_context
+              = link_to asset.url, class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus', target: (asset.url.start_with?('http') ? '_blank' : nil), rel: (asset.url.start_with?('http') ? 'noopener' : nil), download: (asset.action_type == 'download' ? asset.download_filename : nil) do
+                = t(".sidebar.practical_assets.actions.#{asset.action_type}", default: t('.article.read'))
+                = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+        = link_to innovation_hub_path(locale: I18n.locale, anchor: 'practical-assets'), class: 'btn btn-outline btn-primary inline-flex items-center justify-center w-full mt-3 rounded-xl font-extrabold' do
+          = t('.sidebar.practical_assets.view_all')
 
-      .rounded-2xl.overflow-hidden.text-white.shadow-sm.bg-primary
+      #innovation-newsletter.rounded-2xl.overflow-hidden.text-white.shadow-sm.bg-primary
         .p-6.space-y-4
           h3.leading-tight.font-black.text-3xl
             = t('.sidebar.newsletter.title')
@@ -159,10 +138,12 @@
           p.text-sm.font-extrabold.text-white/95
             = t('.sidebar.newsletter.proof')
 
-          = email_field_tag :innovation_email, nil, class: 'input input-bordered w-full bg-white/20 border-white/20 text-white placeholder:text-white/70', placeholder: t('.sidebar.newsletter.placeholder')
-
-          = link_to '#', class: 'btn btn-outline inline-flex items-center justify-center w-full rounded-lg min-h-10 text-base font-black' do
-            = t('.sidebar.newsletter.submit')
+          = form_with scope: :contact_form, url: contact_forms_path(locale: I18n.locale), local: true, class: 'space-y-3' do |f|
+            = f.hidden_field :name, value: 'Innovation Hub Newsletter'
+            = f.hidden_field :message, value: t('.sidebar.newsletter.message')
+            = f.hidden_field :nickname, value: ''
+            = f.email_field :email, class: 'input input-bordered w-full bg-white/20 border-white/20 text-white placeholder:text-white/70', placeholder: t('.sidebar.newsletter.placeholder'), required: true
+            = f.submit t('.sidebar.newsletter.submit'), class: 'btn btn-outline inline-flex items-center justify-center w-full rounded-lg min-h-10 text-base font-black'
 
           p.text-center.text-white/70.text-xs
             = t('.sidebar.newsletter.footnote')
@@ -176,6 +157,6 @@ section.py-14.bg-primary
     p.text-white/80.mt-4.max-w-3xl.mx-auto.text-sm.md:text-base
       = t('.cta.body')
     .mt-6
-      = link_to root_path(anchor: 'contact'), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary px-8' do
+      = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary px-8' do
         = t('.cta.button')
 

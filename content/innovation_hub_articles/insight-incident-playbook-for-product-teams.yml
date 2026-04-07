@@ -1,0 +1,21 @@
+slug: insight-incident-playbook-for-product-teams
+kind: insight
+display: true
+featured: false
+position: 3
+author_name: Fractal Soft Engineering
+read_time: 7 min read
+published_at: "2026-03-12"
+translations:
+  en:
+    title: Incident Playbook for Product-Focused Engineering Teams
+    summary: A lightweight incident response flow that improves MTTR without heavyweight process overhead.
+    body: |
+      This insight summarizes the minimum runbook we recommend for teams that need reliability fast.
+      It covers triage roles, communication timing, and post-incident learning loops.
+  pl:
+    title: Playbook incydentowy dla zespołów produktowych
+    summary: Lekki przepływ reagowania na incydenty, który skraca MTTR bez ciężkiego procesu.
+    body: |
+      Ten insight opisuje minimalny runbook dla zespołów, które chcą szybko podnieść niezawodność.
+      Obejmuje role w triage, timing komunikacji i pętlę wniosków po incydencie.
