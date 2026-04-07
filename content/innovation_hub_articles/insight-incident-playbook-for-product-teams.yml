@@ -11,101 +11,247 @@ translations:
     title: Incident Playbook for Product-Focused Engineering Teams
     summary: A practical incident response playbook designed for product teams that need fast recovery, clear ownership, and low process overhead.
     body: |
-      Incident Reality
+      ## Incident Reality
       Most teams do not need enterprise-scale ceremony. They need a repeatable response pattern that protects users and restores service quickly.
 
-      First 15 Minutes
+      ## First 15 Minutes
       - Declare incident severity and assign a single incident commander.
       - Stabilize customer impact first: rollback, disable risky features, or apply traffic controls.
       - Open one source-of-truth channel for technical and stakeholder updates.
 
-      15-45 Minutes
+      ## 15-45 Minutes
       - Split responsibilities: one person drives mitigation, one investigates root path, one handles communication.
       - Capture timeline events in real time (what changed, when, and by whom).
       - Prefer reversible actions over broad speculative fixes.
 
-      45-60 Minutes
+      ## 45-60 Minutes
       - Confirm service recovery with explicit success criteria.
       - Publish a short status update with impact, current state, and next checkpoint.
       - Define immediate follow-up tasks before closing incident mode.
 
-      Post-Incident Loop
+      ## Post-Incident Loop
       Within 24 hours, run a blameless review focused on system improvements:
       1) Trigger conditions and missing detection.
       2) Decision points that slowed mitigation.
       3) Concrete safeguards to prevent recurrence.
 
-      Tooling Minimum
+      ## Tooling Minimum
       You need alert routing, runbook links, rollback mechanism, and a simple timeline log. Advanced tooling helps, but discipline and role clarity drive MTTR improvements first.
 
-      Takeaway
+      ## Takeaway
       Reliability scales when response patterns are lightweight, practiced, and explicit. The best playbook is the one your team can execute under pressure.
 
-      Decision Matrix During Incidents
+      ## Decision Matrix During Incidents
       - Rollback when impact is broad and revert path is proven.
       - Hotfix when blast radius is narrow and root cause is isolated.
       - Feature kill-switch when user protection is immediate priority.
       - Traffic shaping when dependency degradation is external.
 
-      Metrics That Matter
+      ## Metrics That Matter
       - Time to mitigation.
       - Time to user-impact communication.
       - MTTR by incident class.
       - Repeat incident rate over 30/90 days.
 
-      Practice Cadence
+      ## Practice Cadence
       Run lightweight incident drills every month. Teams that rehearse communication and role handoffs reduce confusion dramatically during real events.
 
-      Leadership Principle
+      ## Leadership Principle
       Clarity beats complexity. A short, shared playbook with clear ownership outperforms detailed but unused documentation.
+
+      ## Full Operational Sequence
+      ### Before incidents happen
+      - Define severity levels with concrete user-impact examples.
+      - Pre-assign primary and backup incident commanders.
+      - Store rollback and kill-switch actions in one runbook index.
+      - Ensure every service has owner-on-call metadata.
+
+      ### During live incident
+      #### Minute 0-5
+      Confirm scope, customer impact, and severity. Freeze non-essential deployments.
+
+      #### Minute 5-20
+      Execute first mitigation path. Share first external/internal update with known unknowns.
+
+      #### Minute 20-45
+      Track mitigation effect with explicit metrics. If no improvement window is visible, pivot strategy quickly instead of iterating the same fix.
+
+      #### Minute 45-90
+      Stabilize service, reduce temporary risk, and assign immediate action items for follow-up.
+
+      ## Communication template
+      Every update should include:
+      - impact scope,
+      - current mitigation status,
+      - next checkpoint time,
+      - customer-facing guidance if needed.
+      This reduces confusion and rumor-driven escalation.
+
+      ## Postmortem framework
+      A useful review is short and decision-oriented:
+      1) what failed in system design,
+      2) what delayed detection/mitigation,
+      3) what controls will be added,
+      4) who owns each action and by when.
+      Keep the output tied to execution backlog, not static documentation.
+
+      ## Metrics for maturity
+      - median time to mitigation by incident type,
+      - percentage of incidents with first update under 15 minutes,
+      - recurrence rate of known root causes,
+      - action-item completion rate within SLA.
+
+      ## Executive reporting guidance
+      Leadership needs signal, not noise. Provide impact window, confidence level, and prevention commitments. Avoid over-detailed technical logs in executive channels.
+
+      ## Drill Program Blueprint
+      ### Monthly drill rhythm
+      - Week 1: tabletop scenario (communication + command chain).
+      - Week 2: technical drill (rollback/kill-switch validation).
+      - Week 3: detection drill (alert quality and triage speed).
+      - Week 4: improvement review and backlog updates.
+      This cadence keeps response capability fresh without heavy process overhead.
+
+      ## Priority Scenarios To Rehearse
+      - Third-party API degradation.
+      - Database saturation under peak traffic.
+      - Bad deployment with partial customer impact.
+      - Queue backlog causing delayed core workflows.
+      Drill variety matters more than drill complexity.
+
+      ## First-Update Template
+      Use one short format:
+      "We are investigating [issue], impact currently affects [scope], mitigation [in progress/completed], next update at [time]."
+      The template reduces wording delays and keeps stakeholder communication consistent.
+
+      ## Role Handoff Protocol
+      If incident commander changes during long incidents:
+      - transfer timeline summary,
+      - transfer active hypotheses,
+      - transfer rollback state,
+      - announce handoff publicly in source-of-truth channel.
+      This avoids duplicated work and decision drift.
   pl:
     title: Playbook incydentowy dla zespołów produktowych
     summary: "Praktyczny playbook reagowania na incydenty dla zespołów produktowych: szybkie odzyskiwanie, jasne role i mały narzut procesu."
     body: |
-      Rzeczywistość Incydentów
+      ## Rzeczywistość Incydentów
       Większość zespołów nie potrzebuje korporacyjnej ceremonii. Potrzebuje powtarzalnego schematu reakcji, który chroni użytkowników i szybko przywraca usługę.
 
-      Pierwsze 15 Minut
+      ## Pierwsze 15 Minut
       - Określ severity incydentu i przypisz jednego incident commandera.
       - Najpierw ogranicz wpływ na użytkowników: rollback, wyłączenie ryzykownej funkcji albo kontrola ruchu.
       - Uruchom jeden kanał source-of-truth dla zespołu i interesariuszy.
 
-      15-45 Minut
+      ## 15-45 Minut
       - Podziel odpowiedzialności: jedna osoba prowadzi mitigację, jedna bada root path, jedna obsługuje komunikację.
       - Zapisuj timeline na bieżąco (co, kiedy i przez kogo zostało zmienione).
       - Preferuj działania odwracalne zamiast szerokich, spekulacyjnych poprawek.
 
-      45-60 Minut
+      ## 45-60 Minut
       - Potwierdź przywrócenie usługi na podstawie jawnych kryteriów sukcesu.
       - Opublikuj krótki update statusu: wpływ, stan obecny, kolejny punkt kontrolny.
       - Przed zamknięciem trybu incydentowego przypisz natychmiastowe follow-upy.
 
-      Pętla Po Incydencie
+      ## Pętla Po Incydencie
       W ciągu 24 godzin zrób blameless review skupione na poprawie systemu:
       1) Warunki triggera i braki w detekcji.
       2) Punkty decyzyjne, które spowolniły mitigację.
       3) Konkretne zabezpieczenia przeciw powtórce.
 
-      Minimum Narzędziowe
+      ## Minimum Narzędziowe
       Wystarczy routing alertów, linki do runbooków, mechanizm rollbacku i prosty log timeline. Zaawansowane narzędzia pomagają, ale największy wpływ daje dyscyplina i jasność ról.
 
-      Wniosek
+      ## Wniosek
       Niezawodność skaluje się, gdy schemat reakcji jest lekki, ćwiczony i jednoznaczny. Najlepszy playbook to ten, który zespół realnie wykona pod presją.
 
-      Macierz Decyzyjna W Incydencie
+      ## Macierz Decyzyjna W Incydencie
       - Rollback: gdy wpływ jest szeroki i ścieżka cofnięcia pewna.
       - Hotfix: gdy blast radius jest wąski i root cause odizolowany.
       - Kill-switch: gdy priorytetem jest natychmiastowa ochrona użytkownika.
       - Shaping ruchu: gdy degradacja pochodzi z zależności zewnętrznej.
 
-      Najważniejsze Metryki
+      ## Najważniejsze Metryki
       - Czas do mitigacji.
       - Czas do komunikatu o wpływie na użytkownika.
       - MTTR wg klasy incydentu.
       - Częstotliwość incydentów powtarzalnych w oknie 30/90 dni.
 
-      Rytm Ćwiczeń
+      ## Rytm Ćwiczeń
       Uruchamiaj lekkie ćwiczenia incydentowe co miesiąc. Zespoły, które ćwiczą role i komunikację, znacząco ograniczają chaos w realnych zdarzeniach.
 
-      Zasada Przywództwa
+      ## Zasada Przywództwa
       Klarowność wygrywa ze złożonością. Krótki wspólny playbook z jasną odpowiedzialnością działa lepiej niż rozbudowana, nieużywana dokumentacja.
+
+      ## Pełna Sekwencja Operacyjna
+      ### Zanim wystąpi incydent
+      - Zdefiniuj poziomy severity na przykładach wpływu na użytkownika.
+      - Przypisz primary i backup incident commandera.
+      - Trzymaj rollback i kill-switch w jednym indeksie runbooków.
+      - Upewnij się, że każda usługa ma jawnego ownera on-call.
+
+      ### W trakcie incydentu
+      #### Minuta 0-5
+      Potwierdź zakres, wpływ i severity. Wstrzymaj niekrytyczne deploymenty.
+
+      #### Minuta 5-20
+      Uruchom pierwszą ścieżkę mitigacji. Opublikuj pierwszy update z listą "co wiemy / czego nie wiemy".
+
+      #### Minuta 20-45
+      Mierz efekt mitigacji na jawnych metrykach. Jeśli nie widać poprawy, szybko zmień strategię zamiast powtarzać ten sam ruch.
+
+      #### Minuta 45-90
+      Ustabilizuj usługę, ogranicz ryzyko tymczasowe i przypisz natychmiastowe działania follow-up.
+
+      ## Szablon komunikacji
+      Każdy update powinien zawierać:
+      - zakres wpływu,
+      - status mitigacji,
+      - czas kolejnego checkpointu,
+      - wskazówki customer-facing (jeśli wymagane).
+      Taki format ogranicza chaos informacyjny.
+
+      ## Framework postmortem
+      Dobre review jest krótkie i decyzyjne:
+      1) co zawiodło w projekcie systemu,
+      2) co opóźniło detekcję i mitigację,
+      3) jakie kontrolki zostaną dodane,
+      4) kto i do kiedy dowiezie działania.
+      Wyniki powinny trafiać do backlogu wykonawczego.
+
+      ## Metryki dojrzałości
+      - median time to mitigation per typ incydentu,
+      - odsetek incydentów z pierwszym update < 15 minut,
+      - częstość powrotu znanych root cause,
+      - terminowość zamknięcia action itemów.
+
+      ## Wskazówki dla raportowania do leadershipu
+      Zarząd potrzebuje sygnału, nie szumu. Raportuj okno wpływu, poziom pewności i działania prewencyjne. Szczegółowe logi techniczne trzymaj poza kanałami executive.
+
+      ## Blueprint Programu Ćwiczeń
+      ### Miesięczny rytm ćwiczeń
+      - Tydzień 1: tabletop (komunikacja + chain of command).
+      - Tydzień 2: drill techniczny (rollback/kill-switch).
+      - Tydzień 3: drill detekcji (jakość alertów i szybkość triage).
+      - Tydzień 4: przegląd usprawnień i aktualizacja backlogu.
+      Taki rytm utrzymuje gotowość bez nadmiernej ceremonii.
+
+      ## Priorytetowe Scenariusze
+      - Degradacja zewnętrznego API.
+      - Saturacja bazy przy ruchu szczytowym.
+      - Błędny deployment z częściowym wpływem na klientów.
+      - Backlog kolejek opóźniający krytyczne przepływy.
+      Różnorodność scenariuszy jest ważniejsza niż złożoność.
+
+      ## Szablon Pierwszego Komunikatu
+      Używaj krótkiego formatu:
+      "Badamy [problem], wpływ dotyczy [zakres], mitigacja [w toku/zakończona], kolejny update o [czas]."
+      Szablon skraca czas publikacji i porządkuje komunikację.
+
+      ## Protokół Handover Ról
+      Gdy incident commander zmienia się podczas długiego incydentu:
+      - przekaż skrót timeline,
+      - przekaż aktywne hipotezy,
+      - przekaż stan rollbacku,
+      - ogłoś handover na kanale source-of-truth.
+      Zapobiega to duplikacji działań i dryftowi decyzji.
