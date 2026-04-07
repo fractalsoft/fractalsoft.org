@@ -10,109 +10,218 @@ cover_image_url: https://placehold.co/1200x630/0b1220/f8fafc?text=Rails+Query+Sh
 translations:
   en:
     title: Rails Query Shaping for Predictable Latency
-    summary: A benchmark-driven guide to reducing p95/p99 API latency in Rails by shaping query plans, preload paths, and payload boundaries.
+    summary: A full technical tutorial on designing, measuring, and shipping query-shaping improvements in Rails so p95/p99 latency stays predictable under growth.
     body: |
-      Context
-      Product teams usually optimize average response time first, then get surprised by p95 and p99 spikes during launch windows. We ran a focused benchmark to understand which Rails query decisions actually stabilize tail latency under concurrent load.
+      ## Introduction
+      Teams often believe performance work starts when traffic doubles. In practice, performance reliability starts much earlier: when endpoint contracts are still easy to shape. This tutorial walks through a complete Rails query-shaping process you can apply in production without risky rewrites. The target is not "faster once." The target is "predictable every release," especially in p95 and p99 where customer pain is concentrated.
 
-      Setup
-      We tested a read-heavy JSON API endpoint under realistic traffic profiles (mixed cache hit ratio, bursty access, and uneven tenant sizes). Every run used the same dataset and infrastructure budget to keep results comparable.
+      ## Problem Statement
+      Most Rails APIs degrade in a familiar pattern:
+      - p50 looks acceptable.
+      - p95 drifts during launch campaigns.
+      - p99 spikes under mixed tenant workloads.
+      - incident notes repeatedly mention database time and payload size.
+      This usually happens because query behavior is emergent instead of designed. Associations are loaded by convenience, serializers grow over time, and list/detail endpoints silently share expensive code paths.
 
-      What We Changed
-      1) Reduced N+1 exposure with explicit `includes` and narrower association trees.
-      2) Replaced broad selects with column-scoped queries for list endpoints.
-      3) Split "index payload" and "detail payload" into separate query paths.
-      4) Added selective precomputation for high-cardinality counters.
+      ## Step 1: Define Performance Contracts Before Optimizing
+      Start by setting explicit budgets per endpoint class:
+      - list endpoints: strict row and payload limits.
+      - detail endpoints: broader payload but bounded association depth.
+      - search/filter endpoints: timeout and fallback behavior.
+      Write the contract in code comments or architecture notes and keep it close to the query object. If your team cannot explain "what this endpoint is allowed to load," optimization becomes guesswork.
 
-      Findings
-      - Average latency improved moderately, but the biggest gains were in p95/p99.
-      - Payload discipline mattered more than raw SQL micro-optimizations.
-      - Over-eager preload patterns increased memory pressure and made p99 worse.
-      - Query plans stayed stable when endpoint responsibilities were explicit.
+      ## Step 2: Build a Reproducible Baseline
+      Use production-like data shape, not just row counts. Two datasets with equal size can behave very differently if one has skewed tenant distribution or high-cardinality associations.
+      For each test run, collect:
+      - request latency by percentile (p50, p95, p99),
+      - database time per request,
+      - query count,
+      - payload size,
+      - memory growth during burst traffic.
+      Lock these metrics for a baseline window before changing code.
 
-      Trade-Offs
-      Query shaping increases code path clarity, but introduces additional query objects/scopes that teams must keep documented. The win is worth it when API latency consistency is a business requirement.
+      ## Step 3: Separate Endpoint Responsibilities
+      A common anti-pattern is using one "convenient" scope for multiple endpoint types. Split query paths by intent:
+      - index query: minimal fields, strict preload list.
+      - show query: richer associations, still bounded.
+      - export/admin query: isolated path, never reused in customer-facing API.
+      This separation improves both performance and code ownership. Engineers can evolve one path without accidental blast radius.
 
-      Implementation Notes
-      Start with endpoint-level latency budgets. Then map each endpoint to a query contract: selected fields, associations, max row count, and fallback behavior for expensive joins.
+      ## Step 4: Shape Selects and Associations Intentionally
+      Query shaping in Rails is mostly about controlled scope:
+      - use `select` to avoid loading columns not required for response contracts,
+      - prefer explicit `includes` trees instead of broad convenience preloads,
+      - avoid nested eager-loading that inflates memory with low-value fields.
+      If a field is expensive and low-frequency, load it lazily in a separate path rather than bloating the default response.
 
-      Takeaways
-      Teams that treat query shape as part of API design, not a late optimization, achieve more predictable delivery outcomes. Tail latency is mostly an architecture habit, not a single trick.
+      ## Step 5: Keep Serializers Honest
+      Many teams optimize SQL then lose gains in serializer expansion. Add serializer guardrails:
+      - max nested depth by endpoint category,
+      - explicit allow-list for included relationships,
+      - tests that fail when payload size drifts above threshold.
+      Without payload governance, query tuning results decay quickly.
 
-      Implementation Checklist
-      - Define endpoint budgets for p50, p95, and p99 before optimization starts.
-      - Record one canonical query path per endpoint to avoid accidental complexity.
-      - Gate pull requests when list endpoints add joins without clear limits.
-      - Add regression checks for payload size and row count drift.
+      ## Step 6: Instrument Query Fingerprints
+      Percentiles alone do not tell you which query path regressed. Track query fingerprints and cumulative cost:
+      - top 10 query fingerprints by total time,
+      - fingerprints with steep growth week-over-week,
+      - fingerprint count per endpoint action.
+      This makes performance review concrete. Engineers discuss "this fingerprint grew 38%" instead of "the API feels slower."
 
-      What To Measure Weekly
-      - p95 and p99 latency per endpoint family.
-      - Total DB time per request and per page type.
-      - Top query fingerprints by cumulative load.
-      - Cache miss penalties on key customer flows.
+      ## Step 7: Roll Out With Safety Gates
+      Do not ship query shaping as one large merge. Use staged rollout:
+      1) release behind feature flag for a subset of traffic,
+      2) compare percentile + DB metrics against baseline,
+      3) expand traffic in steps,
+      4) keep rollback criteria explicit.
+      ### Example rollback triggers
+      - p99 increases by more than 15% for 10 minutes,
+      - DB CPU saturation exceeds safe threshold,
+      - queue lag rises due to contention side effects.
 
-      Anti-Patterns We Saw
-      - Treating `includes` as a universal fix for all slow endpoints.
-      - Reusing detail serializers for list pages.
-      - Optimizing one query while ignoring request-level payload inflation.
-      - Shipping query changes without canary comparison windows.
+      ## Step 8: Address Trade-Offs Explicitly
+      Query shaping introduces structure and discipline, but it also adds artifacts:
+      - more query objects/scopes to maintain,
+      - stricter review expectations for endpoint changes,
+      - need for documentation to prevent accidental drift.
+      These are healthy costs. They are far cheaper than recurring release-risk incidents and unpredictable scaling spikes.
 
-      Rollout Strategy
-      Start with one high-traffic endpoint, lock baseline metrics, and run a two-release comparison. Once p95/p99 behavior is stable, replicate query contracts to adjacent endpoints.
+      ## Real-World Failure Modes
+      Across teams, we repeatedly see:
+      - "fixing" N+1 by globally adding `includes` everywhere,
+      - reusing detail serializers in list endpoints,
+      - adding one more relation per sprint until payload doubles,
+      - measuring only p50 and calling performance "good enough."
+      Each of these choices hides risk until product growth exposes it at the worst moment.
 
-      Final Note
-      Query shaping should live in your engineering playbook, not in tribal memory. Teams that document these decisions move faster with less operational risk.
+      ## Operational Checklist
+      - Define endpoint contracts with row and payload budgets.
+      - Add contract tests for payload shape and size.
+      - Track p95/p99 as first-class release criteria.
+      - Monitor query fingerprints by cumulative cost.
+      - Enforce canary rollout for high-traffic query changes.
+      - Document rollback thresholds before deployment.
+
+      ## KPI Framework For Ongoing Teams
+      ### Weekly
+      - p95/p99 per endpoint category,
+      - query count and DB time per request,
+      - top fingerprint growth deltas.
+      ### Monthly
+      - change-failure rate linked to query changes,
+      - number of endpoints violating performance contracts,
+      - incident count where latency was a primary factor.
+      These KPIs keep performance work aligned to delivery reliability, not one-off tuning.
+
+      ## Conclusion
+      Rails performance reliability is less about heroic SQL tricks and more about consistent architecture decisions. When query shape becomes part of API design, teams ship faster with fewer surprises. The real win is organizational: product, engineering, and operations share a stable expectation of system behavior under load.
+
+      ## Next Steps
+      Pick one high-traffic endpoint this week and run the full tutorial cycle:
+      baseline, contract definition, query-path split, controlled rollout, and post-release review. Once the pattern works once, codify it as team standard and replicate it across critical APIs.
   pl:
     title: Kształtowanie zapytań Rails dla przewidywalnych opóźnień
-    summary: Przewodnik oparty o benchmarki pokazujący, jak obniżyć p95/p99 API w Rails przez świadome kształtowanie zapytań i payloadu.
+    summary: Pełny tutorial techniczny pokazujący, jak projektować i wdrażać query shaping w Rails, aby utrzymać stabilne p95/p99 pod rosnącym obciążeniem.
     body: |
-      Kontekst
-      Zespoły produktowe często optymalizują średni czas odpowiedzi, a dopiero później zderzają się ze skokami p95/p99 w okresach większego ruchu. Wykonaliśmy benchmark, aby sprawdzić, które decyzje w Rails realnie stabilizują tail latency.
+      ## Wprowadzenie
+      Wiele zespołów zakłada, że wydajność trzeba poprawiać dopiero przy dużym wzroście ruchu. W praktyce stabilność wydajności buduje się wcześniej: wtedy, gdy kontrakty endpointów są jeszcze proste i możliwe do świadomego zaprojektowania. Ten tutorial pokazuje kompletny proces query shapingu w Rails, który można wdrożyć produkcyjnie bez ryzykownych re-write.
 
-      Setup
-      Testowaliśmy endpoint JSON API o charakterze read-heavy przy realistycznym profilu ruchu (mieszany cache hit ratio, ruch burstowy i nierówne rozmiary tenantów). Każdy przebieg używał tego samego datasetu i budżetu infrastruktury.
+      ## Definicja Problemu
+      Typowy wzorzec degradacji API wygląda tak:
+      - p50 jest akceptowalne,
+      - p95 zaczyna dryfować przy kampaniach i większym ruchu,
+      - p99 skacze przy nierównym obciążeniu tenantów,
+      - raporty incydentowe regularnie wskazują DB time i rozmiar payloadu.
+      Najczęściej przyczyną jest to, że zachowanie zapytań "wyłania się samo", zamiast być częścią projektu API.
 
-      Co Zmieniliśmy
-      1) Ograniczenie N+1 przez jawne `includes` i węższe drzewa asocjacji.
-      2) Zastąpienie szerokich selectów zapytaniami z precyzyjnym zakresem kolumn.
-      3) Rozdzielenie ścieżek zapytań dla payloadu listy i payloadu szczegółu.
-      4) Selektywne precomputing liczników o wysokiej kardynalności.
+      ## Krok 1: Ustal Kontrakty Wydajności
+      Zanim zaczniesz optymalizować, określ budżety per kategoria endpointu:
+      - endpointy listowe: twarde limity rekordów i payloadu,
+      - endpointy szczegółu: bogatszy payload, ale ograniczona głębokość asocjacji,
+      - endpointy wyszukiwawcze: timeout i fallback behavior.
+      Kontrakt zapisz blisko kodu (query object / dokumentacja architektury). Jeśli zespół nie umie opisać "co endpoint może ładować", optymalizacja będzie przypadkowa.
 
-      Wyniki
-      - Średnia latencja poprawiła się umiarkowanie, ale największy efekt był na p95/p99.
-      - Dyscyplina payloadu była ważniejsza niż mikro-optymalizacje SQL.
-      - Zbyt agresywne preloady podnosiły presję pamięci i pogarszały p99.
-      - Plany zapytań były stabilne, gdy odpowiedzialność endpointów była jednoznaczna.
+      ## Krok 2: Zbuduj Powtarzalny Baseline
+      Testuj nie tylko liczbę rekordów, ale też kształt danych: rozkład tenantów, kardynalność asocjacji, profile żądań. Dwa datasety tej samej wielkości potrafią dać zupełnie inne wyniki.
+      Mierz w każdym przebiegu:
+      - p50, p95, p99,
+      - DB time per request,
+      - liczbę zapytań,
+      - rozmiar payloadu,
+      - zużycie pamięci przy ruchu burstowym.
 
-      Trade-Offy
-      Query shaping poprawia przewidywalność, ale dodaje dodatkowe obiekty query/scope, które trzeba utrzymywać i dokumentować. Korzyść jest wysoka tam, gdzie stabilna latencja jest wymaganiem biznesowym.
+      ## Krok 3: Rozdziel Odpowiedzialności Endpointów
+      Częsty antywzorzec to jeden "wygodny" scope dla wielu endpointów. Rozdziel ścieżki:
+      - index query: minimalne pola i kontrolowany preload,
+      - show query: szerszy zestaw asocjacji, ale nadal z limitem,
+      - export/admin query: osobna ścieżka, bez reuse w API customer-facing.
+      To ogranicza blast radius zmian i poprawia odpowiedzialność w zespole.
 
-      Notatki Wdrożeniowe
-      Zacznij od budżetów latencji per endpoint. Następnie zdefiniuj kontrakt zapytania: zakres pól, asocjacje, limit rekordów i fallback dla kosztownych joinów.
+      ## Krok 4: Kształtuj Selecty i Asocjacje
+      Query shaping to głównie kontrola zakresu:
+      - `select` tylko dla pól potrzebnych kontraktowi odpowiedzi,
+      - jawne `includes` zamiast szerokich preloadów convenience,
+      - unikanie zagnieżdżonych eager-loadów, które pompują pamięć.
+      Gdy pole jest drogie i rzadko potrzebne, lepiej ładować je osobną ścieżką niż zwiększać domyślny payload.
 
-      Wnioski
-      Zespoły, które traktują kształt zapytań jako część projektu API, a nie późny etap optymalizacji, osiągają bardziej przewidywalne wyniki delivery.
+      ## Krok 5: Pilnuj Warstwy Serializerów
+      Zespoły często optymalizują SQL, a tracą zysk przez rozszerzający się serializer. Wprowadź guardraile:
+      - limit głębokości zagnieżdżeń per endpoint,
+      - allow-list relacji,
+      - testy failujące przy wzroście payloadu ponad próg.
+      Bez tych reguł wyniki tuningowe szybko się rozmywają.
 
-      Checklista Wdrożeniowa
-      - Ustal budżety p50, p95 i p99 dla endpointów przed optymalizacją.
-      - Zdefiniuj jedną kanoniczną ścieżkę zapytania per endpoint.
-      - Wprowadź bramkę PR dla nowych joinów w endpointach listowych.
-      - Dodaj testy regresyjne dla rozmiaru payloadu i dryftu liczby rekordów.
+      ## Krok 6: Monitoruj Fingerprinty Zapytań
+      Same percentyle nie mówią, które ścieżki się pogorszyły. Śledź:
+      - top 10 fingerprintów wg łącznego czasu,
+      - najszybciej rosnące fingerprinty tydzień do tygodnia,
+      - liczbę fingerprintów per akcja endpointu.
+      Wtedy dyskusja jest konkretna: "ten fingerprint urósł o 38%", a nie "API wydaje się wolniejsze".
 
-      Co Mierzyć Co Tydzień
-      - p95 i p99 per rodzina endpointów.
-      - Łączny czas DB na request i typ strony.
-      - Najcięższe fingerprinty zapytań wg łącznego obciążenia.
-      - Koszt cache miss na kluczowych przepływach użytkownika.
+      ## Krok 7: Wdrażaj Etapami z Bramkami Bezpieczeństwa
+      Nie wrzucaj query shapingu jako jednego dużego merge. Lepszy rollout:
+      1) feature flag dla części ruchu,
+      2) porównanie metryk do baseline,
+      3) stopniowe zwiększanie ruchu,
+      4) jawne kryteria rollback.
+      ### Przykładowe triggery rollbacku
+      - p99 rośnie >15% przez 10 minut,
+      - DB CPU przekracza bezpieczny próg,
+      - lag kolejek rośnie przez uboczne kontencje.
 
-      Antywzorce
-      - Traktowanie `includes` jako uniwersalnego lekarstwa.
-      - Używanie serializerów detail na stronach listowych.
-      - Optymalizacja pojedynczego zapytania przy rosnącym payloadzie requestu.
-      - Wdrażanie zmian zapytań bez okna porównania canary.
+      ## Krok 8: Zarządzaj Trade-Offami
+      Query shaping porządkuje architekturę, ale dodaje też koszty utrzymania:
+      - więcej query objectów/scope,
+      - wyższe wymagania review dla endpointów,
+      - potrzebę dokumentacji przeciw dryftowi.
+      To zdrowe koszty i zwykle dużo mniejsze niż cykliczne incydenty wydajnościowe.
 
-      Strategia Rolloutu
-      Zacznij od jednego endpointu o dużym ruchu, zablokuj baseline metryk i porównaj dwa kolejne release. Gdy p95/p99 się ustabilizuje, przenieś kontrakty zapytań na sąsiednie endpointy.
+      ## Najczęstsze Błędy
+      - "Naprawa" N+1 przez globalne `includes` wszędzie.
+      - Używanie serializerów detail w endpointach listowych.
+      - Dodawanie kolejnych relacji co sprint bez kontroli payloadu.
+      - Ocenianie wydajności tylko przez p50.
 
-      Nota Końcowa
-      Query shaping powinno być elementem playbooka inżynierskiego, a nie wiedzą ukrytą w zespole. Daje to szybsze delivery i mniejsze ryzyko operacyjne.
+      ## Checklista Operacyjna
+      - Zdefiniuj kontrakty endpointów (rekordy + payload).
+      - Dodaj testy kontraktowe payloadu.
+      - Traktuj p95/p99 jako kryterium release.
+      - Monitoruj fingerprinty wg kosztu skumulowanego.
+      - Wymuś canary rollout przy zmianach wysokiego ryzyka.
+      - Ustal progi rollbacku przed deploymentem.
+
+      ## KPI Dla Zespołu
+      ### Co tydzień
+      - p95/p99 per kategoria endpointu,
+      - query count i DB time per request,
+      - wzrost top fingerprintów.
+      ### Co miesiąc
+      - change-failure rate powiązany ze zmianami zapytań,
+      - liczba endpointów łamiących kontrakt wydajności,
+      - liczba incydentów, gdzie latencja była przyczyną główną.
+
+      ## Podsumowanie
+      Stabilna wydajność Rails to rzadziej "magiczne SQL", a częściej konsekwentne decyzje architektoniczne. Gdy kształt zapytań staje się częścią projektu API, zespół dowozi szybciej i bez niespodzianek.
+
+      ## Następny Krok
+      Wybierz jeden endpoint o dużym ruchu i przejdź cały cykl: baseline, kontrakt, rozdzielenie ścieżek, rollout etapowy i review po wdrożeniu. Po pierwszym sukcesie zamień proces w standard zespołu.

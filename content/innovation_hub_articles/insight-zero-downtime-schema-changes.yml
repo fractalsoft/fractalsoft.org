@@ -11,103 +11,255 @@ translations:
     title: Zero-Downtime Schema Changes in Rails
     summary: A delivery-tested rollout pattern for schema evolution in active Rails systems without downtime or surprise regressions.
     body: |
-      Problem
+      ## Problem
       Schema changes fail in production when teams treat migration as a single step. In reality, safe evolution is a sequence: prepare, transition, verify, and only then remove legacy paths.
 
-      Safe Rollout Sequence
+      ## Safe Rollout Sequence
       1) Expand: add nullable columns/tables and backward-compatible indexes.
       2) Dual write: write both old and new representations behind a feature flag.
       3) Backfill: run idempotent batches with observability on lag/failures.
       4) Read switch: move reads to the new shape with canary monitoring.
       5) Contract: remove old fields only after stability window is complete.
 
-      Operational Requirements
+      ## Operational Requirements
       - Every migration must be reversible or safely pausable.
       - Background backfills need bounded batch size and retry policy.
       - Metrics must show read/write split and data divergence.
       - Release notes must capture dependency order across services.
 
-      Trade-Offs
+      ## Trade-Offs
       Zero-downtime migration takes longer than direct replacement, but it replaces one big risky event with several small controlled decisions.
 
-      Failure Signals
+      ## Failure Signals
       Stop rollout when divergence between old/new read paths exceeds threshold, queue latency spikes, or error rates cluster around switched endpoints.
 
-      Team Practice
+      ## Team Practice
       Use a "migration owner" role per release. Accountability for rollout telemetry dramatically improves response speed when things drift.
 
-      Bottom Line
+      ## Bottom Line
       Zero-downtime is mostly release discipline. Rails supports it well when teams model schema change as product delivery, not just database maintenance.
 
-      Practical Checklist Before Every Migration
+      ## Practical Checklist Before Every Migration
       - Define backward-compatibility window.
       - Confirm write/read ownership during dual-write period.
       - Prepare dashboard for divergence and queue lag.
       - Add explicit stop conditions and responsible owner.
 
-      Deployment Timeline Example
+      ## Deployment Timeline Example
       Release A: expand schema and ship dark code paths.
       Release B: enable dual-write and start monitored backfill.
       Release C: switch reads with canary verification.
       Release D: remove legacy paths after stability window.
 
-      Failure Modes To Avoid
+      ## Failure Modes To Avoid
       - Running unbounded backfills during peak traffic.
       - Switching reads without real-time divergence metrics.
       - Deleting old columns before rollback window closes.
       - Forgetting cross-service dependency order.
 
-      Team Communication Pattern
+      ## Team Communication Pattern
       Publish migration briefings to product and support teams. Zero-downtime is technical work, but incident risk affects customer communication and release planning across the organization.
+
+      ## Full Migration Playbook
+      ### Planning phase
+      Start by mapping all code paths touching the target schema. Include write paths, read paths, background jobs, exports, and third-party integrations. Most rollout failures happen when teams map only web requests and forget asynchronous consumers.
+
+      ### Readiness checklist
+      - Feature flags prepared for dual write and read switch.
+      - Backfill job idempotency verified.
+      - Monitoring dashboard published before deployment.
+      - Rollback owner and escalation chain confirmed.
+      - Product/support informed of expected timeline.
+
+      ### Backfill strategy in practice
+      Use bounded batches with sleep intervals to reduce lock pressure. Persist progress markers to allow safe resume after failure. Log per-batch metrics (rows processed, retries, average runtime) and expose them in operations dashboards.
+
+      ### Data consistency validation
+      During dual-write windows, validate parity between old and new representations. Compare record counts, sampling diffs, and critical aggregates. For business-critical systems, run periodic automated parity checks as part of deployment workflow.
+
+      ### Cutover execution
+      Switch read paths gradually:
+      1) internal traffic only,
+      2) low-risk tenant segment,
+      3) full rollout with active monitoring.
+      Keep old writes active for a short confidence window after read switch, then disable them only when parity and stability remain clean.
+
+      ### Incident response plan
+      Define fast rollback actions before cutover:
+      - toggle read path flag back to legacy,
+      - pause backfill workers,
+      - freeze schema cleanup migrations.
+      This lowers stress when metrics degrade unexpectedly.
+
+      ### Metrics to track by phase
+      - Expand: migration runtime and lock wait.
+      - Dual write: write latency and divergence rate.
+      - Backfill: throughput, retry ratio, lag.
+      - Read switch: error rate, p95/p99, parity mismatch count.
+      - Contract: post-cleanup incident frequency.
+
+      ## Final guidance
+      Zero-downtime schema evolution is a cross-functional delivery discipline. Treat it as an orchestrated rollout with checkpoints, not a database task hidden in release notes.
+
+      ## Checklist by Team Role
+      ### Engineering lead
+      - confirms migration strategy and rollback envelope,
+      - signs off on production readiness before cutover.
+
+      ### Backend engineer
+      - implements dual-write/read-switch safely,
+      - instruments parity checks and logs.
+
+      ### SRE/operations
+      - validates alert thresholds and runbooks,
+      - monitors lock behavior and saturation during rollout.
+
+      ### Product manager
+      - aligns release windows with risk checkpoints,
+      - communicates expected user-visible risk envelope.
+
+      ### Support lead
+      - prepares communication templates for customer-facing incidents.
+
+      ## Realistic Timeline for Medium Systems
+      Day 1-2: schema expand and deploy dormant read paths.
+      Day 3-5: enable dual-write for internal segment.
+      Day 6-10: run measured backfill with lag dashboards.
+      Day 11-14: canary read switch for low-risk tenants.
+      Day 15+: full rollout and cleanup planning.
+      This pacing reduces pressure and improves decision quality.
+
+      ## Decision Gates That Prevent Incidents
+      Gate A: dual-write divergence below threshold for 48 hours.
+      Gate B: backfill error ratio below threshold for N batches.
+      Gate C: read-switch canary has stable p95/p99 and error-rate.
+      Gate D: rollback drill completed successfully before cleanup.
+      If any gate fails, pause and remediate; do not "push through."
   pl:
     title: Zmiany schematu bez przestojów w Rails
     summary: Sprawdzony wzorzec rolloutu zmian schematu w aktywnych systemach Rails bez downtime i bez regresji niespodzianek.
     body: |
-      Problem
+      ## Problem
       Zmiany schematu psują produkcję, gdy są traktowane jako jeden krok. Bezpieczna ewolucja to sekwencja: przygotowanie, przejście, weryfikacja i dopiero usunięcie starej ścieżki.
 
-      Bezpieczna Sekwencja Rolloutu
+      ## Bezpieczna Sekwencja Rolloutu
       1) Expand: dodanie nullable kolumn/tabel i kompatybilnych indeksów.
       2) Dual write: zapis do starego i nowego modelu danych za feature flagą.
       3) Backfill: idempotentne batche z obserwowalnością opóźnień i błędów.
       4) Read switch: przełączenie odczytu na nowy model z monitoringiem canary.
       5) Contract: usunięcie starych pól po zakończonym oknie stabilizacji.
 
-      Wymagania Operacyjne
+      ## Wymagania Operacyjne
       - Każda migracja powinna być odwracalna albo bezpiecznie pauzowalna.
       - Backfill w tle potrzebuje ograniczonego batch size i polityki retry.
       - Metryki muszą pokazywać split read/write i rozjazd danych.
       - Notatki release powinny opisywać kolejność zależności między usługami.
 
-      Trade-Offy
+      ## Trade-Offy
       Migracja bez downtime trwa dłużej niż bezpośrednia zamiana, ale zamienia jedno duże ryzyko na serię mniejszych, kontrolowanych decyzji.
 
-      Sygnały Awarii
+      ## Sygnały Awarii
       Wstrzymaj rollout, gdy rozjazd między starym i nowym odczytem przekracza próg, rośnie latencja kolejek albo błędy skupiają się wokół przełączonych endpointów.
 
-      Praktyka Zespołowa
+      ## Praktyka Zespołowa
       Wprowadź rolę "migration owner" dla każdego release. Jasna odpowiedzialność za telemetrię rolloutu skraca czas reakcji na odchylenia.
 
-      Podsumowanie
+      ## Podsumowanie
       Zero-downtime to głównie dyscyplina release. Rails dobrze to wspiera, gdy zmiana schematu jest traktowana jak proces delivery produktu, a nie jednorazowe utrzymanie bazy.
 
-      Praktyczna Checklista Przed Migracją
+      ## Praktyczna Checklista Przed Migracją
       - Zdefiniuj okno kompatybilności wstecznej.
       - Potwierdź odpowiedzialność za zapis/odczyt w okresie dual-write.
       - Przygotuj dashboard rozjazdu danych i opóźnień kolejek.
       - Ustal jawne warunki zatrzymania rolloutu i właściciela decyzji.
 
-      Przykładowa Oś Wdrożenia
+      ## Przykładowa Oś Wdrożenia
       Release A: rozszerzenie schematu i dark path w kodzie.
       Release B: uruchomienie dual-write i monitorowanego backfill.
       Release C: przełączenie odczytu z walidacją canary.
       Release D: usunięcie starej ścieżki po oknie stabilizacji.
 
-      Błędy, Których Unikać
+      ## Błędy, Których Unikać
       - Backfill bez limitów w godzinach szczytu.
       - Przełączanie odczytu bez metryk rozjazdu w czasie rzeczywistym.
       - Usuwanie starych kolumn przed zamknięciem okna rollbacku.
       - Pomijanie kolejności zależności między usługami.
 
-      Wzorzec Komunikacji Zespołu
+      ## Wzorzec Komunikacji Zespołu
       Publikuj krótkie briefingi migracyjne do zespołów produktu i supportu. Zero-downtime to praca techniczna, ale ryzyko incydentu wpływa na całą organizację.
+
+      ## Pełny Playbook Migracji
+      ### Faza planowania
+      Zacznij od mapy wszystkich ścieżek kodu dotykających schematu: zapis, odczyt, joby asynchroniczne, eksporty i integracje zewnętrzne. Najwięcej awarii wynika z pomijania konsumentów poza warstwą web.
+
+      ### Checklista gotowości
+      - Feature flagi gotowe dla dual-write i read switch.
+      - Idempotencja joba backfill potwierdzona.
+      - Dashboard monitoringu opublikowany przed deploymentem.
+      - Właściciel rollbacku i ścieżka eskalacji ustalone.
+      - Product/support poinformowane o harmonogramie.
+
+      ### Strategia backfill w praktyce
+      Stosuj ograniczone batch size i krótkie przerwy, aby zmniejszyć presję locków. Zapisuj markery postępu, aby bezpiecznie wznawiać proces po błędzie. Loguj metryki per batch i pokazuj je na dashboardzie operacyjnym.
+
+      ### Walidacja spójności danych
+      W oknie dual-write sprawdzaj zgodność starej i nowej reprezentacji: liczności, próbki diffów i agregaty krytyczne. W systemach wysokiego ryzyka uruchamiaj automatyczne parity checki jako część deployment workflow.
+
+      ### Wykonanie cutover
+      Przełączaj odczyt stopniowo:
+      1) tylko ruch wewnętrzny,
+      2) segment tenantów niskiego ryzyka,
+      3) pełny rollout z aktywnym monitoringiem.
+      Zachowaj stary zapis na krótki okres pewności po przełączeniu odczytu, a wyłącz go dopiero po stabilnych metrykach.
+
+      ### Plan reakcji incydentowej
+      Zdefiniuj szybkie akcje rollbacku przed cutover:
+      - cofnięcie flagi odczytu do ścieżki legacy,
+      - pauza workerów backfill,
+      - zamrożenie migracji cleanup.
+      To ogranicza chaos przy nieoczekiwanym pogorszeniu metryk.
+
+      ### Metryki per faza
+      - Expand: czas migracji i lock wait.
+      - Dual write: latencja zapisu i rozjazd danych.
+      - Backfill: throughput, retry ratio, lag.
+      - Read switch: error rate, p95/p99, liczba mismatch.
+      - Contract: częstotliwość incydentów po cleanup.
+
+      ## Rekomendacja końcowa
+      Ewolucja schematu bez downtime to dyscyplina delivery wielu zespołów. Traktuj ją jako orkiestrację z checkpointami, a nie pojedyncze zadanie bazodanowe.
+
+      ## Checklista per Rola
+      ### Engineering lead
+      - zatwierdza strategię migracji i granice rollbacku,
+      - podpisuje gotowość produkcyjną przed cutover.
+
+      ### Backend engineer
+      - wdraża bezpieczny dual-write/read-switch,
+      - dodaje parity check i logowanie.
+
+      ### SRE/operations
+      - waliduje progi alertów i runbooki,
+      - monitoruje locki i saturację podczas rolloutu.
+
+      ### Product manager
+      - ustawia okna release względem checkpointów ryzyka,
+      - komunikuje przewidywany envelope ryzyka.
+
+      ### Support lead
+      - przygotowuje szablony komunikatów customer-facing.
+
+      ## Realistyczny Harmonogram Dla Systemu Średniej Skali
+      Dzień 1-2: expand schematu i deployment uśpionych ścieżek odczytu.
+      Dzień 3-5: dual-write dla segmentu wewnętrznego.
+      Dzień 6-10: monitorowany backfill z dashboardem lag.
+      Dzień 11-14: canary read-switch dla tenantów niskiego ryzyka.
+      Dzień 15+: pełny rollout i plan cleanup.
+      Takie tempo ogranicza presję i poprawia jakość decyzji.
+
+      ## Bramki Decyzyjne Chroniące Przed Incydentem
+      Bramka A: rozjazd dual-write poniżej progu przez 48h.
+      Bramka B: error ratio backfill poniżej progu przez N batchy.
+      Bramka C: canary read-switch ze stabilnym p95/p99 i error-rate.
+      Bramka D: skuteczny drill rollbacku przed cleanup.
+      Jeśli któraś bramka zawiedzie, zatrzymaj rollout i napraw przyczynę.

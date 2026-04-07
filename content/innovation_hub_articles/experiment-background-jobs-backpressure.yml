@@ -11,119 +11,257 @@ translations:
     title: Backpressure Patterns for Background Jobs
     summary: Experimental results comparing backpressure strategies for Sidekiq-style workloads under burst traffic and partial downstream failures.
     body: |
-      Experiment Goal
+      ## Experiment Goal
       We wanted to answer one practical question: which backpressure strategy protects system stability best when job queues spike and downstream dependencies degrade?
 
-      Test Design
+      ## Test Design
       We simulated burst traffic against worker pools with mixed job cost profiles. The experiment compared:
       - naive retries,
       - fixed-rate throttling,
       - queue-level concurrency caps,
       - adaptive backoff driven by error and latency signals.
 
-      Evaluation Metrics
+      ## Evaluation Metrics
       - Queue latency and drain time.
       - Error amplification across retries.
       - Spillover impact on synchronous API endpoints.
       - Recovery speed after downstream service normalization.
 
-      Key Results
+      ## Key Results
       - Naive retries created retry storms and prolonged degradation.
       - Fixed-rate throttling improved stability but left throughput underutilized after recovery.
       - Concurrency caps reduced blast radius for expensive job classes.
       - Adaptive backoff offered the best balance between protection and recovery speed.
 
-      Practical Pattern
+      ## Practical Pattern
       Use class-based queue isolation plus adaptive backoff thresholds. This keeps critical jobs flowing while containing noisy workloads.
 
-      Operational Advice
+      ## Operational Advice
       Pair backpressure logic with visibility: queue depth, retry age, and downstream latency should be first-class dashboards. Without this, teams overcorrect and lose throughput.
 
-      Conclusion
+      ## Conclusion
       Backpressure is a reliability control, not only a scaling tactic. Teams that model failure behavior explicitly recover faster and avoid cross-system incidents.
 
-      Implementation Blueprint
+      ## Implementation Blueprint
       - Segment queues by business criticality.
       - Apply per-queue concurrency caps.
       - Tie retry policy to error class (transient vs deterministic).
       - Add adaptive pause logic when downstream latency crosses thresholds.
 
-      Production Dashboard Starter Pack
+      ## Production Dashboard Starter Pack
       - Queue depth by class.
       - Oldest job age.
       - Retry volume by worker type.
       - Dependency latency and timeout rates.
 
-      Rollout Phases
+      ## Rollout Phases
       Phase 1: observability and passive thresholds.
       Phase 2: enforced caps on non-critical queues.
       Phase 3: adaptive backoff with automatic release.
       Phase 4: periodic tuning based on incident and load-test data.
 
-      Anti-Patterns
+      ## Anti-Patterns
       - One global retry policy for all job classes.
       - Unlimited concurrency for "fast" jobs without dependency protection.
       - Backpressure triggers without team-visible telemetry.
 
-      Final Recommendation
+      ## Final Recommendation
       Treat backpressure policy as part of system architecture reviews. Queue behavior should be designed with failure in mind before peak traffic forces emergency changes.
+
+      ## Experimental Setup Details
+      ### Workload profile
+      We modeled three job classes:
+      - critical short jobs (user-visible follow-ups),
+      - medium batch jobs (data sync),
+      - heavy jobs (reporting/aggregation).
+      Traffic was injected in bursts to mimic campaign and retry-wave behavior.
+
+      ### Fault model
+      We simulated partial downstream degradation with elevated latency and intermittent timeouts. This is more realistic than full outage tests and better reflects production instability windows.
+
+      ### Hypotheses tested
+      1) Naive retries maximize throughput only in healthy dependency conditions.
+      2) Fixed throttling reduces incident risk but leaves recovery efficiency on table.
+      3) Adaptive backoff improves resilience when signal quality is good.
+
+      ### Detailed observations
+      - Retry storms were nonlinear: once queue age crossed a threshold, median recovery time doubled.
+      - Queue caps were most effective when tuned per job class, not globally.
+      - Adaptive policies failed when downstream telemetry lagged or was noisy.
+      - Teams with explicit queue ownership resolved degradation faster.
+
+      ## Implementation guide
+      1) Tag every job class with criticality and max acceptable lag.
+      2) Configure separate retry policies per class.
+      3) Add dynamic pause/resume gates based on dependency health.
+      4) Protect user-critical queues with reserved concurrency.
+      5) Test failover behavior quarterly with synthetic bursts.
+
+      ## Rollback and safety controls
+      Keep a manual override to disable adaptive logic if signals become unstable. Autonomous controls are useful, but human override protects against telemetry corruption and configuration drift.
+
+      ## Practical thresholds to start with
+      - Pause non-critical queues when dependency timeout rate exceeds threshold for N minutes.
+      - Reduce concurrency stepwise when queue age slope rises beyond baseline.
+      - Resume gradually after stability window, not immediately on first healthy sample.
+
+      ## Long-term governance
+      Backpressure tuning should be reviewed after every major incident and every major product launch. Queue policy drift is silent and accumulates quickly without regular review.
+
+      ## Practical Experiment Reproduction Guide
+      ### Environment preparation
+      Build a representative staging environment with production-like queue topology, realistic worker concurrency, and synthetic dependencies that can inject latency and timeout behavior. Simplified local tests often hide the true failure profile.
+
+      ### Traffic model
+      Use repeatable traffic phases:
+      - baseline steady flow,
+      - burst window at 3x baseline,
+      - sustained stress at 1.5x baseline,
+      - controlled recovery.
+      Keep this sequence identical for every strategy under test.
+
+      ### Measurement pack
+      Capture:
+      - queue depth per class over time,
+      - age distribution of jobs,
+      - retries by error category,
+      - dependency latency/timeout curves,
+      - user-visible delay for downstream business flows.
+      This links queue policy quality directly to business outcomes.
+
+      ### Interpretation lens
+      Evaluate each strategy by:
+      1) stability under burst conditions,
+      2) containment of retry amplification,
+      3) speed of safe recovery,
+      4) operational predictability for on-call teams.
+      Peak throughput alone is not a production-safety metric.
   pl:
     title: Wzorce backpressure dla jobów asynchronicznych
     summary: Wyniki eksperymentu porównującego strategie backpressure dla workloadów Sidekiq przy ruchu burstowym i częściowych awariach zależności.
     body: |
-      Cel Eksperymentu
+      ## Cel Eksperymentu
       Chcieliśmy odpowiedzieć na jedno praktyczne pytanie: która strategia backpressure najlepiej chroni stabilność systemu, gdy kolejki jobów rosną skokowo, a zależności zewnętrzne zwalniają?
 
-      Projekt Testu
+      ## Projekt Testu
       Symulowaliśmy burst traffic dla worker pooli z mieszanymi profilami kosztu jobów. Porównaliśmy:
       - naiwne retry,
       - fixed-rate throttling,
       - limity współbieżności na poziomie kolejek,
       - adaptive backoff sterowany błędami i latencją.
 
-      Metryki Oceny
+      ## Metryki Oceny
       - Latencja kolejki i czas opróżniania.
       - Wzmocnienie błędów przez retry.
       - Wpływ uboczny na synchroniczne endpointy API.
       - Szybkość odzyskania po normalizacji usług zależnych.
 
-      Kluczowe Wyniki
+      ## Kluczowe Wyniki
       - Naiwne retry powodowało retry storm i wydłużało degradację.
       - Fixed-rate throttling poprawiał stabilność, ale niedowykorzystywał przepustowość po odbudowie.
       - Limity współbieżności zmniejszały blast radius drogich klas jobów.
       - Adaptive backoff dawał najlepszy kompromis między ochroną a szybkością odzyskania.
 
-      Praktyczny Wzorzec
+      ## Praktyczny Wzorzec
       Najlepiej działa izolacja kolejek wg klas jobów plus progi adaptive backoff. Pozwala to utrzymać przepływ krytycznych zadań i jednocześnie izolować hałaśliwe workloady.
 
-      Wskazówki Operacyjne
+      ## Wskazówki Operacyjne
       Backpressure musi iść w parze z obserwowalnością: depth kolejek, wiek retry i latencja zależności powinny być widoczne na dashboardach. Bez tego zespoły łatwo przesterowują throttling.
 
-      Podsumowanie
+      ## Podsumowanie
       Backpressure to mechanizm niezawodności, nie tylko skalowania. Zespoły, które jawnie modelują zachowanie przy awarii, szybciej wracają do stabilności i ograniczają incydenty kaskadowe.
 
-      Blueprint Wdrożeniowy
+      ## Blueprint Wdrożeniowy
       - Segmentuj kolejki wg krytyczności biznesowej.
       - Ustal limity współbieżności per kolejka.
       - Powiąż retry policy z klasą błędu (przejściowy vs deterministyczny).
       - Dodaj adaptacyjne pauzowanie, gdy latencja zależności przekracza próg.
 
-      Dashboard Produkcyjny Minimum
+      ## Dashboard Produkcyjny Minimum
       - Depth kolejki per klasa.
       - Wiek najstarszego joba.
       - Wolumen retry per typ workera.
       - Latencja i timeouty usług zależnych.
 
-      Fazy Rolloutu
+      ## Fazy Rolloutu
       Faza 1: obserwowalność i progi pasywne.
       Faza 2: limity wymuszone dla kolejek niekrytycznych.
       Faza 3: adaptive backoff z automatycznym zwalnianiem.
       Faza 4: cykliczne strojenie na podstawie incydentów i testów obciążeniowych.
 
-      Antywzorce
+      ## Antywzorce
       - Jedna globalna polityka retry dla wszystkich klas jobów.
       - Nieograniczona współbieżność "szybkich" jobów bez ochrony zależności.
       - Triggery backpressure bez widocznej telemetrii dla zespołu.
 
-      Rekomendacja Końcowa
+      ## Rekomendacja Końcowa
       Traktuj politykę backpressure jako część przeglądu architektury systemu. Zachowanie kolejek powinno być projektowane pod awarie zanim szczyt ruchu wymusi działania awaryjne.
+
+      ## Szczegóły Setupu Eksperymentu
+      ### Profil workloadu
+      Modelowaliśmy trzy klasy jobów:
+      - krótkie joby krytyczne (widoczne dla użytkownika),
+      - joby batch średniego kosztu (synchronizacja danych),
+      - joby ciężkie (raportowanie/agregacje).
+      Ruch był podawany burstowo, aby odwzorować kampanie i fale retry.
+
+      ### Model awarii
+      Symulowaliśmy częściową degradację zależności: wyższą latencję i okresowe timeouty. To bardziej realistyczne niż testy pełnego outage.
+
+      ### Testowane hipotezy
+      1) Naiwne retry maksymalizuje throughput tylko przy zdrowych zależnościach.
+      2) Stały throttling zmniejsza ryzyko incydentu, ale spowalnia odzyskiwanie.
+      3) Adaptive backoff daje lepszą odporność przy wiarygodnych sygnałach.
+
+      ### Szczegółowe obserwacje
+      - Retry storm był nieliniowy: po przekroczeniu progu wieku kolejki czas odzyskania podwajał się.
+      - Limity działały najlepiej, gdy były strojone per klasa joba.
+      - Polityki adaptacyjne zawodziły przy opóźnionej lub zaszumionej telemetrii.
+      - Zespoły z jawnym ownerem kolejki szybciej przywracały stabilność.
+
+      ## Przewodnik wdrożenia
+      1) Otaguj klasy jobów wg krytyczności i maksymalnego akceptowalnego lag.
+      2) Ustal oddzielne retry policy per klasa.
+      3) Dodaj dynamiczne pauzy/wznowienia wg zdrowia zależności.
+      4) Zabezpiecz kolejki krytyczne rezerwowaną współbieżnością.
+      5) Testuj failover kwartalnie na sztucznych burstach.
+
+      ## Rollback i kontrolki bezpieczeństwa
+      Zachowaj manualny override wyłączający logikę adaptacyjną przy niestabilnych sygnałach. Automatyzacja pomaga, ale ręczna kontrola chroni przed uszkodzoną telemetrią i dryftem konfiguracji.
+
+      ## Progi startowe
+      - Pauzuj kolejki niekrytyczne, gdy timeout rate zależności utrzymuje się ponad próg przez N minut.
+      - Ograniczaj współbieżność krokowo, gdy nachylenie wieku kolejki rośnie ponad baseline.
+      - Wznawiaj stopniowo po oknie stabilności, nie po pojedynczej próbce.
+
+      ## Governance długoterminowy
+      Strojenie backpressure powinno być przeglądane po każdym większym incydencie i dużym launchu produktu. Dryft polityki kolejek narasta cicho i szybko bez regularnych przeglądów.
+
+      ## Praktyczny Przewodnik Odtwarzania Eksperymentu
+      ### Przygotowanie środowiska
+      Zbuduj reprezentatywny staging z topologią kolejek zbliżoną do produkcji, realistyczną współbieżnością workerów i syntetycznymi zależnościami, które potrafią wstrzykiwać latencję i timeouty. Uproszczone testy lokalne często ukrywają realny profil awarii.
+
+      ### Model ruchu
+      Użyj powtarzalnych faz:
+      - baseline stabilny,
+      - okno burst 3x baseline,
+      - stres utrzymany 1.5x baseline,
+      - kontrolowane odzyskanie.
+      Sekwencja musi być identyczna dla każdej testowanej strategii.
+
+      ### Pakiet pomiarowy
+      Zbieraj:
+      - depth kolejki per klasa w czasie,
+      - rozkład wieku jobów,
+      - retry wg kategorii błędu,
+      - krzywe latencji/timeoutów zależności,
+      - opóźnienie widoczne dla użytkownika na kluczowych przepływach.
+      Dzięki temu jakość polityki kolejek łączy się z wynikiem biznesowym.
+
+      ### Perspektywa interpretacji
+      Oceń strategię w czterech osiach:
+      1) stabilność przy burstach,
+      2) ograniczanie amplifikacji retry,
+      3) szybkość bezpiecznego odzyskania,
+      4) przewidywalność operacyjna dla on-call.
+      Sam peak throughput nie jest metryką bezpieczeństwa produkcji.

@@ -12,113 +12,311 @@ translations:
     title: Regression Guards for LLM-Assisted Delivery
     summary: A practical safety model for AI-assisted engineering that combines deterministic gates, review thresholds, and fast rollback signals.
     body: |
-      Why This Matters
+      ## Why This Matters
       LLM-assisted implementation can accelerate delivery, but it also raises variance in code quality. Teams do not fail because they use AI. They fail because they adopt AI speed without deterministic quality boundaries.
 
-      Guardrail Model
+      ## Guardrail Model
       Our model has three layers:
       1) Structural checks: lint, type checks, schema consistency, and static analyzers.
       2) Behavioral checks: contract tests, high-risk integration tests, and canary assertions.
       3) Human decision gates: mandatory senior review for high-impact surfaces.
 
-      Risk Classification
+      ## Risk Classification
       We classify generated changes by blast radius:
       - Low risk: copy, view-level text, isolated helpers.
       - Medium risk: endpoint behavior, query logic, background job flow.
       - High risk: auth, billing, data migration, multi-tenant boundaries.
 
-      What Worked Best
+      ## What Worked Best
       - Pull-request templates that force intent statements reduced review ambiguity.
       - Diff-size thresholds prevented oversized AI-generated patches from bypassing scrutiny.
       - Contract-first tests exposed subtle regressions faster than broad e2e suites.
       - Canary deployments with explicit rollback triggers lowered incident duration.
 
-      Common Failure Modes
+      ## Common Failure Modes
       The most expensive regressions came from "looks correct" changes in edge-case logic. Deterministic checks caught syntax and structure issues, but business rule drift was caught mainly by domain-aware review and contract tests.
 
-      Implementation Guidance
+      ## Implementation Guidance
       Introduce guardrails incrementally: start with mandatory structural checks and risk labels, then add review policy and canary rollback automation.
 
-      Outcome
+      ## Outcome
       AI-assisted delivery is reliable when speed is governed by explicit confidence gates. The target is not "more generated code." The target is predictable quality under faster iteration cycles.
 
-      Operational Checklist
+      ## Operational Checklist
       - Add risk labels to every AI-assisted pull request.
       - Enforce deterministic checks before human review begins.
       - Require reviewer sign-off from a domain owner on high-risk changes.
       - Define rollback criteria before deployment approval.
 
-      KPI Set
+      ## KPI Set
       - Regression rate per release train.
       - Time-to-detect for post-release defects.
       - Percentage of AI-assisted changes by risk bucket.
       - Rollback frequency for high-impact services.
 
-      Governance Model
+      ## Governance Model
       Treat AI usage policy as an engineering standard, not a suggestion. This includes auditability of prompts/context, change ownership, and decision logs for risky merges.
 
-      Common Misconception
+      ## Common Misconception
       Teams often assume "more tests" solves AI risk. In practice, the strongest protection comes from combining deterministic checks, explicit risk classification, and clear release authority.
 
-      Adoption Roadmap
+      ## Adoption Roadmap
       Phase 1: structural checks and risk labels.
       Phase 2: contract-first testing on critical boundaries.
       Phase 3: canary policies and automated rollback triggers.
       Phase 4: quarterly guardrail review using production incident data.
+
+      ## End-to-End Implementation Walkthrough
+      ### Week 1 - Baseline and taxonomy
+      Create a shared risk taxonomy for AI-assisted changes. The taxonomy should be concrete enough that two reviewers classify the same PR similarly. Capture examples of low/medium/high risk from your own codebase, not generic templates.
+
+      ### Week 2 - CI gate alignment
+      Map each risk level to required checks. Low-risk changes may require lint and unit tests only. Medium risk should require contract tests plus smoke integration checks. High risk should require full contract suites, canary deploy eligibility, and domain-owner approval.
+
+      ### Week 3 - Release policy enforcement
+      Update deployment workflow so high-risk changes cannot bypass canary stage. Add machine-readable metadata to pull requests and deploy artifacts. This gives you traceability when incidents occur.
+
+      ### Week 4 - Audit loop
+      Run a short review of accepted/rejected AI-assisted changes. Examine false positives (too strict) and false negatives (risky changes that passed). Tune thresholds based on real behavior, not subjective sentiment.
+
+      ## Suggested Toolchain Pattern
+      - Pre-merge: static checks, type checks, schema guards.
+      - Merge gate: contract tests + risk-policy validation.
+      - Pre-deploy: canary eligibility and rollback criteria.
+      - Post-deploy: telemetry checks and incident tagging.
+      This layered pattern keeps each tool focused and avoids one huge brittle pipeline.
+
+      ## Review Rubric For Senior Engineers
+      1) Intent clarity: does the PR explain business intent and risk scope?
+      2) Boundary safety: are interfaces and contracts explicitly tested?
+      3) Observability: can regressions be detected quickly in production?
+      4) Rollback confidence: can we revert without data inconsistency?
+      5) Ownership: who is on point if this fails in production?
+
+      ## Common Pitfalls During Adoption
+      - Teams introduce strict gates without explaining why, causing process resentment.
+      - Risk labels become "checkboxes" when not tied to deployment behavior.
+      - Manual review expands but production telemetry remains weak.
+      - Canary is enabled, but rollback triggers are undefined.
+
+      ## Quality Threshold Recommendations
+      Start with conservative defaults:
+      - Require contract tests for every medium/high risk AI-assisted PR.
+      - Set explicit p95/p99 and error-rate rollback thresholds.
+      - Limit PR size for high-risk areas to reduce hidden coupling.
+      - Track post-release regressions by risk class each sprint.
+
+      ## Final Guidance
+      Successful teams treat AI guardrails as delivery architecture, not compliance overhead. The objective is to preserve speed while making release confidence measurable, reviewable, and repeatable.
+
+      ## Example Policy Pack
+      Teams moving from ad-hoc AI usage to production readiness benefit from a written policy pack with three documents:
+      1) Risk classification matrix with concrete examples.
+      2) Merge and deploy gate policy linked to CI checks.
+      3) Incident-handling addendum for AI-assisted changes.
+      Keep these short and versioned with the codebase so policy evolves with architecture.
+
+      ## Change Management Workflow
+      ### Proposal
+      Every substantial AI-assisted change starts with a short proposal: scope, expected value, risk class, and rollback plan.
+
+      ### Validation
+      Validation depth is selected by risk class, not by team preference. This prevents argument loops in review and keeps quality decisions consistent.
+
+      ### Approval
+      Approval includes both code correctness and release readiness. "It passes tests" is insufficient for high-risk categories.
+
+      ### Deployment
+      Canary rollout is mandatory for high-impact paths. Deployment dashboards are reviewed by the same owners who approved the risk class.
+
+      ### Post-release
+      The first 24 hours are monitored with stricter anomaly thresholds. If alert noise rises, teams run a fast guardrail retrospective.
+
+      ## Security and Compliance Notes
+      AI-assisted workflows can introduce hidden compliance exposure when prompt/context includes sensitive data. Define explicit guardrails for:
+      - what context may be shared with tooling,
+      - how generated code artifacts are reviewed and stored,
+      - how approvals are audited for regulated domains.
+      Even non-regulated teams benefit from this discipline because it improves traceability during incident analysis.
+
+      ## Capability Model for Team Maturity
+      ### Level 1: Unstructured
+      AI is used individually with no common risk vocabulary.
+
+      ### Level 2: Guarded
+      Team introduces minimum deterministic checks and basic review policy.
+
+      ### Level 3: Controlled
+      Risk classes drive CI, canary, and release decisions.
+
+      ### Level 4: Optimized
+      Guardrails are continuously tuned from production and incident data.
+
+      ### Level 5: Institutionalized
+      Guardrails are embedded into onboarding, architecture review, and engineering KPIs.
+
+      Teams should assess maturity quarterly and set one realistic capability upgrade per quarter instead of chasing full automation immediately.
+
+      ## Scenario Example: Billing Endpoint Change
+      Suppose AI suggests a refactor for invoice generation:
+      - classify as high risk due to financial correctness impact,
+      - require contract tests for tax rules and rounding behavior,
+      - canary to low-risk tenant set first,
+      - predefine rollback if mismatch rate crosses threshold.
+      This scenario framing keeps teams focused on business risk, not only technical elegance.
   pl:
     title: Mechanizmy ochrony regresji przy pracy z LLM
     summary: "Praktyczny model bezpieczeństwa dla inżynierii wspieranej AI: deterministyczne bramki jakości, progi review i szybki rollback."
     body: |
-      Dlaczego To Ważne
+      ## Dlaczego To Ważne
       Implementacja wspierana LLM przyspiesza delivery, ale zwiększa wariancję jakości kodu. Zespoły nie tracą stabilności przez samo AI, tylko przez brak deterministycznych granic jakości przy większej prędkości zmian.
 
-      Model Guardraili
+      ## Model Guardraili
       Stosujemy trzy warstwy:
       1) Kontrole strukturalne: lint, type checks, spójność schematu, analiza statyczna.
       2) Kontrole behawioralne: testy kontraktowe, kluczowe integracje, asercje canary.
       3) Bramki decyzyjne: obowiązkowy senior review dla obszarów o dużym wpływie.
 
-      Klasyfikacja Ryzyka
+      ## Klasyfikacja Ryzyka
       Zmiany generowane dzielimy wg blast radius:
       - Niskie ryzyko: copy, teksty widoków, izolowane helpery.
       - Średnie ryzyko: logika endpointów, zapytania, przepływy jobów.
       - Wysokie ryzyko: auth, billing, migracje danych, granice multi-tenant.
 
-      Co Zadziałało Najlepiej
+      ## Co Zadziałało Najlepiej
       - Szablony PR wymuszające opis intencji zmniejszyły niejednoznaczność review.
       - Progi rozmiaru diffu ograniczyły ryzyko zbyt dużych patchy AI.
       - Testy kontraktowe wykrywały subtelne regresje szybciej niż szerokie e2e.
       - Canary z jasnymi triggerami rollbacku skróciło czas incydentów.
 
-      Typowe Błędy
+      ## Typowe Błędy
       Najdroższe regresje wynikały ze zmian "wygląda poprawnie" w logice edge-case. Kontrole deterministyczne łapały błędy składni i struktury, ale dryft reguł biznesowych najczęściej wychwytywał dopiero review domenowe i testy kontraktowe.
 
-      Wskazówki Wdrożeniowe
+      ## Wskazówki Wdrożeniowe
       Wdrażaj guardraile etapami: najpierw obowiązkowe kontrole strukturalne i etykiety ryzyka, potem politykę review i automatyzację rollbacku canary.
 
-      Efekt
+      ## Efekt
       Delivery wspierane AI jest niezawodne, gdy tempo jest kontrolowane przez jawne bramki pewności. Celem nie jest "więcej kodu z AI", tylko przewidywalna jakość przy szybszej iteracji.
 
-      Checklista Operacyjna
+      ## Checklista Operacyjna
       - Dodaj etykiety ryzyka do każdego PR wspieranego AI.
       - Wymuś kontrole deterministyczne przed review człowieka.
       - Dla zmian wysokiego ryzyka wymagaj akceptacji właściciela domeny.
       - Zdefiniuj kryteria rollbacku przed zgodą na deployment.
 
-      Zestaw KPI
+      ## Zestaw KPI
       - Poziom regresji per release train.
       - Time-to-detect dla błędów po wdrożeniu.
       - Udział zmian AI w poszczególnych koszykach ryzyka.
       - Częstotliwość rollbacków w usługach krytycznych.
 
-      Model Governance
+      ## Model Governance
       Politykę użycia AI traktuj jako standard inżynierski, a nie rekomendację. Obejmuje to audytowalność kontekstu, właściciela zmiany i log decyzji dla ryzykownych merge.
 
-      Częsty Błąd Myślenia
+      ## Częsty Błąd Myślenia
       Zespoły zakładają, że "więcej testów" rozwiązuje ryzyko AI. Najlepszą ochronę daje połączenie kontroli deterministycznych, jawnej klasyfikacji ryzyka i czytelnej odpowiedzialności release.
 
-      Roadmapa Wdrożenia
+      ## Roadmapa Wdrożenia
       Faza 1: kontrole strukturalne i etykiety ryzyka.
       Faza 2: testy kontraktowe na granicach krytycznych.
       Faza 3: polityki canary i automatyczne triggery rollbacku.
       Faza 4: kwartalny przegląd guardraili na podstawie danych z incydentów.
+
+      ## Pełny Przebieg Wdrożenia
+      ### Tydzień 1 - baseline i taksonomia
+      Zbuduj wspólną taksonomię ryzyka dla zmian wspieranych AI. Powinna być na tyle precyzyjna, aby dwóch reviewerów klasyfikowało ten sam PR podobnie. Dodaj przykłady z własnego codebase, nie tylko ogólne definicje.
+
+      ### Tydzień 2 - dopasowanie bramek CI
+      Powiąż poziomy ryzyka z wymaganymi kontrolami. Niskie ryzyko może kończyć się na lint i testach jednostkowych. Średnie ryzyko powinno wymagać testów kontraktowych i smoke integracji. Wysokie ryzyko: pełne kontrakty, canary i akceptacja właściciela domeny.
+
+      ### Tydzień 3 - egzekucja polityki release
+      Zaktualizuj workflow deploymentu tak, aby zmiany wysokiego ryzyka nie omijały etapu canary. Dodaj metadane do PR i artefaktów wdrożeniowych dla pełnej ścieżki audytu.
+
+      ### Tydzień 4 - pętla audytowa
+      Zrób krótki przegląd zmian AI zaakceptowanych i odrzuconych. Sprawdź false positive (za surowe reguły) i false negative (ryzykowne zmiany, które przeszły). Strojenie powinno opierać się na danych, nie na opinii.
+
+      ## Wzorzec Toolchainu
+      - Pre-merge: statyczne kontrole, type checks, guardy schematu.
+      - Merge gate: testy kontraktowe i walidacja polityki ryzyka.
+      - Pre-deploy: kwalifikacja canary i kryteria rollbacku.
+      - Post-deploy: kontrola telemetrii i tagowanie incydentów.
+      Taki układ utrzymuje prostotę i ogranicza kruchość pojedynczego pipeline.
+
+      ## Rubryka Review Dla Seniorów
+      1) Jasność intencji: czy PR opisuje cel biznesowy i zakres ryzyka?
+      2) Bezpieczeństwo granic: czy interfejsy i kontrakty są testowane?
+      3) Obserwowalność: czy regresję wykryjemy szybko po wdrożeniu?
+      4) Pewność rollbacku: czy cofnięcie nie rozjedzie danych?
+      5) Własność: kto odpowiada, jeśli zmiana padnie na produkcji?
+
+      ## Najczęstsze Problemy We Wdrożeniu
+      - Surowe bramki bez uzasadnienia biznesowego budują opór zespołu.
+      - Etykiety ryzyka stają się formalnością bez wpływu na release.
+      - Rozbudowany review bez poprawy telemetrii produkcyjnej.
+      - Canary działa, ale brak zdefiniowanych triggerów rollbacku.
+
+      ## Rekomendowane Progi Jakości
+      Zacznij od konserwatywnych ustawień:
+      - Testy kontraktowe dla każdego PR o średnim/wysokim ryzyku.
+      - Jawne progi p95/p99 i error-rate dla rollbacku.
+      - Ograniczenie rozmiaru PR w obszarach wysokiego ryzyka.
+      - Monitoring regresji po release per klasa ryzyka.
+
+      ## Rekomendacja Końcowa
+      Najlepsze zespoły traktują guardraile AI jako architekturę delivery, a nie formalność. Celem jest utrzymanie szybkości przy mierzalnej i powtarzalnej pewności release.
+
+      ## Przykładowy Pakiet Polityk
+      Zespoły przechodzące z użycia ad-hoc do poziomu produkcyjnego zyskują najwięcej na trzech dokumentach:
+      1) Macierz klasyfikacji ryzyka z przykładami.
+      2) Polityka merge/deploy spięta z kontrolami CI.
+      3) Dodatek incydentowy dla zmian wspieranych AI.
+      Dokumenty powinny być krótkie i wersjonowane razem z repozytorium.
+
+      ## Workflow Zarządzania Zmianą
+      ### Propozycja
+      Każda większa zmiana wspierana AI zaczyna się od krótkiej propozycji: zakres, wartość biznesowa, klasa ryzyka i plan rollbacku.
+
+      ### Walidacja
+      Głębokość walidacji dobiera się wg klasy ryzyka, nie preferencji autora.
+
+      ### Akceptacja
+      Akceptacja obejmuje poprawność kodu i gotowość release. Samo "testy przechodzą" nie wystarcza dla zmian wysokiego ryzyka.
+
+      ### Deployment
+      Canary jest obowiązkowe dla ścieżek wysokiego wpływu. Dashboard deploymentu przeglądają osoby, które zatwierdziły klasę ryzyka.
+
+      ### Po wdrożeniu
+      W pierwszych 24 godzinach stosuj ostrzejsze progi anomalii. Przy wzroście szumu alertów uruchamiaj szybki przegląd guardraili.
+
+      ## Uwagi Bezpieczeństwa i Compliance
+      Workflow AI może generować ryzyko compliance, gdy kontekst zawiera dane wrażliwe. Warto zdefiniować:
+      - jaki kontekst wolno przekazywać narzędziom,
+      - jak review i archiwizować artefakty kodu,
+      - jak audytować akceptacje w domenach regulowanych.
+      Nawet bez formalnych wymogów poprawia to ścieżkę audytu po incydencie.
+
+      ## Model Dojrzałości Zespołu
+      ### Poziom 1: Niestrukturalny
+      Użycie AI jest indywidualne, bez wspólnego języka ryzyka.
+
+      ### Poziom 2: Chroniony
+      Zespół wprowadza minimum kontroli deterministycznych i bazową politykę review.
+
+      ### Poziom 3: Kontrolowany
+      Klasy ryzyka sterują CI, canary i decyzją release.
+
+      ### Poziom 4: Optymalizowany
+      Guardraile są regularnie strojone na danych produkcyjnych.
+
+      ### Poziom 5: Ugruntowany
+      Guardraile są osadzone w onboardingu, przeglądach architektury i KPI engineeringu.
+
+      Przegląd dojrzałości warto robić kwartalnie i wybierać jeden realistyczny krok rozwoju zamiast wdrażać pełną automatyzację naraz.
+
+      ## Przykładowy Scenariusz: Endpoint Billingu
+      Załóżmy, że AI proponuje refaktor generowania faktur:
+      - klasyfikacja jako high risk (wpływ finansowy),
+      - wymagane testy kontraktowe dla podatków i zaokrągleń,
+      - canary najpierw dla tenantów niskiego ryzyka,
+      - jawny trigger rollbacku przy wzroście mismatch rate.
+      Taki scenariusz utrzymuje fokus na ryzyku biznesowym, a nie tylko elegancji technicznej.

@@ -145,18 +145,20 @@
                 = link_to innovation_hub_path(locale: I18n.locale, tab: 'insights'), class: 'inline-flex items-center gap-1 text-primary font-extrabold text-sm' do
                   = t('.sections.insights.view_all')
                   = lucide_icon 'arrow-right', class: 'w-3.5 h-3.5'
-            - if @hub.featured_article.present?
-              .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-                - featured_image = @hub.featured_article.cover_image_url.presence || 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights'
-                = image_tag featured_image, class: 'w-full h-60 object-cover'
-                .p-6.space-y-2
-                  p.text-sm.font-bold.text-base-content
-                    = @hub.featured_article.title
-                  p.text-xs.text-base-content/60.leading-relaxed
-                    = @hub.featured_article.summary
-                  = link_to innovation_hub_article_path(@hub.featured_article, locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
-                    = t('.article.read')
-                    = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+          - if @hub.insight_articles.any?
+            .space-y-4
+              - @hub.insight_articles.limit(3).each do |article|
+                .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
+                  - featured_image = article.cover_image_url.presence || 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights'
+                  = image_tag featured_image, class: 'w-full h-44 object-cover'
+                  .p-5.space-y-2
+                    p.text-sm.font-bold.text-base-content
+                      = article.title
+                    p.text-xs.text-base-content/60.leading-relaxed
+                      = article.summary
+                    = link_to innovation_hub_article_path(article, locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:text-primary-focus' do
+                      = t('.article.read')
+                      = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
 
       .space-y-6
         .rounded-2xl.shadow-sm.p-6.bg-base-100.border.border-base-200
