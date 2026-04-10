@@ -2,9 +2,9 @@ slug: template-release-readiness-review
 kind: template
 display: true
 position: 3
-url: /innovation-assets/release-readiness-template.md
+url: /innovation-assets/release-readiness-template.png
 action_type: download
-preview_image_url: https://placehold.co/1200x630/111827/f8fafc?text=Release+Readiness+Template
+preview_image_url: /innovation-assets/release-readiness-template.png
 translations:
   en:
     title: Release Readiness Review Template

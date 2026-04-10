@@ -6,14 +6,14 @@ position: 1
 author_name: Fractal Soft Engineering
 read_time: 14 min read
 published_at: "2026-03-20"
-cover_image_url: https://placehold.co/1200x630/0b1220/f8fafc?text=Rails+Query+Shaping
+cover_image_url: /innovation-articles/rails-query-shaping-for-predictable-latency.png
 translations:
   en:
     title: Rails Query Shaping for Predictable Latency
     summary: A full technical tutorial on designing, measuring, and shipping query-shaping improvements in Rails so p95/p99 latency stays predictable under growth.
     body: |
       ## Introduction
-      Teams often believe performance work starts when traffic doubles. In practice, performance reliability starts much earlier: when endpoint contracts are still easy to shape. This tutorial walks through a complete Rails query-shaping process you can apply in production without risky rewrites. The target is not "faster once." The target is "predictable every release," especially in p95 and p99 where customer pain is concentrated.
+      Teams often believe performance work starts when traffic doubles. In practice, performance reliability starts much earlier: when endpoint contracts are still easy to shape. This tutorial walks through a complete Rails query-shaping process you can apply in production without risky rewrites. The target is not "faster once." The target is "predictable every release", especially in p95 and p99 where customer pain is concentrated.
 
       ## Problem Statement
       Most Rails APIs degrade in a familiar pattern:
