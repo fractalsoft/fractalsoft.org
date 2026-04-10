@@ -1,0 +1,70 @@
+- tab_titles = { 'research' => t('innovation_hubs.index.sections.research.title'), 'insights' => t('innovation_hubs.index.sections.insights.title'), 'assets' => t('innovation_hubs.index.sidebar.practical_assets.title') }
+- tab_subtitles = { 'research' => t('innovation_hubs.index.sections.research.subtitle'), 'insights' => t('innovation_hubs.index.sections.insights.subtitle'), 'assets' => t('innovation_hubs.index.sidebar.practical_assets.subtitle') }
+- active_title = tab_titles[@hub.active_tab]
+- active_subtitle = tab_subtitles[@hub.active_tab]
+
+.rounded-3xl.overflow-hidden.p-8.md:p-10.surface-hero-accent
+  .flex.flex-col.md:flex-row.md:items-center.md:justify-between.gap-4
+    .space-y-2
+      = link_to innovation_hub_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary' do
+        = lucide_icon 'arrow-left', class: 'w-3.5 h-3.5'
+        | Back to Hub Home
+      h1.text-3xl.md:text-4xl.font-black.text-white = active_title
+      p.text-sm.text-gray-300.max-w-3xl = active_subtitle
+    .flex.flex-wrap.gap-2
+      = link_to innovation_hub_path(locale: I18n.locale, tab: 'research'), class: "btn #{ @hub.active_tab == 'research' ? 'btn-primary' : 'btn-outline btn-primary' }" do
+        = t('innovation_hubs.index.sections.research.title')
+      = link_to innovation_hub_path(locale: I18n.locale, tab: 'insights'), class: "btn #{ @hub.active_tab == 'insights' ? 'btn-primary' : 'btn-outline btn-primary' }" do
+        = t('innovation_hubs.index.sections.insights.title')
+      = link_to innovation_hub_path(locale: I18n.locale, tab: 'assets'), class: "btn #{ @hub.active_tab == 'assets' ? 'btn-primary' : 'btn-outline btn-primary' }" do
+        = t('innovation_hubs.index.sidebar.practical_assets.title')
+
+.py-8
+  - if @hub.active_tab == 'assets'
+    - if @hub.filtered_assets.any?
+      .grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-4
+        - @hub.filtered_assets.each do |asset|
+          .rounded-xl.bg-base-100.border.border-base-200.p-4.space-y-3
+            - if asset.preview_image_url.present?
+              .rounded-md.overflow-hidden.border.border-base-300
+                = image_tag asset.preview_image_url, class: 'w-full h-40 object-cover', alt: asset.title
+            .flex.items-center.justify-between.gap-3
+              p.text-sm.font-black.text-base-content = asset.title
+              span.inline-flex.items-center.rounded-full.bg-primary/10.text-primary.px-2.py-1.font-bold.uppercase class='text-[10px]'
+                = asset.kind.humanize
+            p.text-xs.text-base-content/70.leading-relaxed = asset.description
+            - if asset.usage_context.present?
+              p.text-xs.text-base-content/60.leading-relaxed = asset.usage_context
+            = link_to asset.url, class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary', target: (asset.url.start_with?('http') ? '_blank' : nil), rel: (asset.url.start_with?('http') ? 'noopener' : nil), download: (asset.action_type == 'download' ? asset.download_filename : nil) do
+              = t("innovation_hubs.index.sidebar.practical_assets.actions.#{asset.action_type}", default: t('innovation_hubs.index.article.read'))
+              = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+    - else
+      .rounded-xl.bg-base-100.border.border-base-200.p-8.text-center.text-base-content/60
+        | No assets published in this section yet.
+  - else
+    - if @hub.filtered_articles.any?
+      .grid.grid-cols-1.md:grid-cols-2.gap-4
+        - @hub.filtered_articles.each do |article|
+          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
+            .relative
+              - image_url = article.cover_image_url.presence || 'https://placehold.co/800x420/0b1220/f8fafc?text=Innovation+Hub'
+              = image_tag image_url, class: 'w-full h-44 object-cover'
+              .absolute.top-2.left-2.flex.gap-2
+                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
+                  = article.read_time
+                span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/90.text-xs
+                  = article.kind.humanize
+            .p-5.space-y-3
+              h3.text-base-content.font-extrabold.text-base.leading-snug
+                = article.title
+              p.text-sm.text-base-content/70.leading-relaxed
+                = article.summary
+              .flex.items-center.gap-2.text-xs.text-base-content/70
+                span = article.author_name
+                span = l(article.published_at.to_date)
+              = link_to innovation_hub_article_path(article, locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary' do
+                = t('innovation_hubs.index.article.read')
+                = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+    - else
+      .rounded-xl.bg-base-100.border.border-base-200.p-8.text-center.text-base-content/60
+        | No articles published in this section yet.
