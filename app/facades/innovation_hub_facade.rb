@@ -9,7 +9,7 @@ class InnovationHubFacade
     @active_tab = FILTERS.include?(tab.to_s) ? tab.to_s : nil
     @articles = InnovationHubArticle.visible.recent.includes(:translations)
     @research_articles = @articles.research.limit(6)
-    @insight_articles = @articles.insight.limit(6)
+    @insight_articles = @articles.where(kind: %w[insight case_note]).limit(6)
     @featured_article = @articles.featured.first || @insight_articles.first || @research_articles.first
     @practical_assets = InnovationHubAsset.visible.ordered.includes(:translations).limit(4)
     @repository_assets = InnovationHubRepository.visible.ordered.includes(:translations).limit(3)

@@ -6,6 +6,7 @@ position: 4
 author_name: Fractal Soft Engineering
 read_time: 6 min read
 published_at: "2026-03-10"
+cover_image_url: /innovation-articles/insight-zero-downtime-schema-changes.png
 translations:
   en:
     title: Zero-Downtime Schema Changes in Rails

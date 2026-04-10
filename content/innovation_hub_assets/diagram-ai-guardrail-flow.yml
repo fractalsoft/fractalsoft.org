@@ -2,9 +2,9 @@ slug: diagram-ai-guardrail-flow
 kind: diagram
 display: true
 position: 2
-url: /innovation-assets/ai-guardrail-flow.md
+url: /innovation-assets/ai-guardrail-flow.png
 action_type: download
-preview_image_url: https://placehold.co/1200x630/0b1220/f8fafc?text=AI+Guardrail+Flow
+preview_image_url: /innovation-assets/ai-guardrail-flow.png
 translations:
   en:
     title: AI Guardrail Delivery Flow

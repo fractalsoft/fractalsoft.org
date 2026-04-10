@@ -2,9 +2,9 @@ slug: runbook-incident-first-60-minutes
 kind: runbook
 display: true
 position: 4
-url: /innovation-assets/incident-first-60-minutes.md
+url: /innovation-assets/incident-first-60-minutes.png
 action_type: download
-preview_image_url: https://placehold.co/1200x630/1f2937/f8fafc?text=Incident+Runbook
+preview_image_url: /innovation-assets/incident-first-60-minutes.png
 translations:
   en:
     title: Incident Runbook - First 60 Minutes
