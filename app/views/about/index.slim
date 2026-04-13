@@ -30,13 +30,13 @@
           p.text-3xl.font-black.leading-none.text-base-content = t('about.index.engineering.stats.senior_value')
     .grid.grid-cols-2.gap-3
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'https://placehold.co/640x420/6b7280/f3f4f6?text=CULTURE', alt: 'Culture board', class: 'w-full h-28 object-cover grayscale'
+        = image_tag 'about/about-culture.png', alt: 'Engineering team culture', class: 'w-full h-28 object-cover'
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'https://placehold.co/640x420/111827/e5e7eb?text=Code', alt: 'Code board', class: 'w-full h-28 object-cover grayscale'
+        = image_tag 'about/about-code.png', alt: 'Development workspace', class: 'w-full h-28 object-cover'
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'https://placehold.co/640x420/d1d5db/f8fafc?text=Tech', alt: 'Tech board', class: 'w-full h-32 object-cover grayscale'
+        = image_tag 'about/about-tech.png', alt: 'Systems and technology', class: 'w-full h-32 object-cover'
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'https://placehold.co/640x420/e5e7eb/374151?text=Workspace', alt: 'Workspace board', class: 'w-full h-32 object-cover grayscale'
+        = image_tag 'about/about-workspace.png', alt: 'Studio workspace', class: 'w-full h-32 object-cover'
 
   .space-y-4
     h2.leading-tight.font-black.text-base-content.text-3xl.md:text-4xl
@@ -45,17 +45,17 @@
       = t('about.index.builder.copy')
     .grid.grid-cols-1.lg:grid-cols-3.gap-3
       .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
-        = image_tag 'https://placehold.co/820x420/111827/f3f4f6?text=Code+Standards', alt: 'Production code standards', class: 'w-full h-28 object-cover grayscale brightness-75'
+        = image_tag 'about/about-problem-solving.png', alt: t('about.index.builder.card_1_title'), class: 'w-full h-28 object-cover'
         .p-4
           p.text-sm.font-black.text-base-content = t('about.index.builder.card_1_title')
           p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_1_body')
       .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
-        = image_tag 'https://placehold.co/820x420/6b7280/f3f4f6?text=CULTURE', alt: 'Engineering culture board', class: 'w-full h-28 object-cover grayscale brightness-90'
+        = image_tag 'about/about-direct-access.png', alt: t('about.index.builder.card_2_title'), class: 'w-full h-28 object-cover'
         .p-4
           p.text-sm.font-black.text-base-content = t('about.index.builder.card_2_title')
           p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_2_body')
       .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
-        = image_tag 'https://placehold.co/820x420/e5e7eb/374151?text=Senior+Workspace', alt: 'Senior engineering workspace', class: 'w-full h-28 object-cover grayscale'
+        = image_tag 'about/about-shared-ownership.png', alt: t('about.index.builder.card_3_title'), class: 'w-full h-28 object-cover'
         .p-4
           p.text-sm.font-black.text-base-content = t('about.index.builder.card_3_title')
           p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_3_body')

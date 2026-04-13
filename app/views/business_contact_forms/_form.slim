@@ -35,7 +35,7 @@
         .mt-8
           p.text-xs.font-extrabold.uppercase.tracking-wider.text-primary
             = t('.skip_form.kicker')
-          = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full justify-between mt-3' do
+          = link_to 'https://calendly.com/glisowski-fractalsoft/60-minute-meeting', class: 'btn btn-primary w-full justify-between mt-3', target: '_blank', rel: 'noopener noreferrer' do
             span = t('.skip_form.button')
             = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
 

@@ -14,7 +14,7 @@ pl:
           yr: Średnie doświadczenie
           yr_value: 10+ lat
           projects: Wdrożenia produkcyjne
-          projects_value: 100+
+          projects_value: 40+
           senior: Zespół seniorów
           senior_value: 100%
         card_1_title: Skupienie na rezultacie
@@ -138,6 +138,7 @@ pl:
         label: Inżynieria wysokiej wydajności
         headline: Full stack od pomysłu do produkcji
         subheadline: Kompletny produkt od insightów po wdrożenie. Ty prowadzisz biznes—my załatwiamy technicznie.
+        image_alt: Inżynieria FractalSoft i niezawodne systemy produkcyjne
         uptime: Uptime systemu 99.9%
       pillars:
         section_title: Nasza filozofia inżynierii
