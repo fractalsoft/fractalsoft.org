@@ -24,7 +24,7 @@
       .flex-1.min-w-0.flex.items-stretch
         .card.image-full.shadow-xl.rounded-2xl.overflow-hidden.border.border-dashed.border-primary/30.flex-1.min-h-0
           figure
-            img.w-full.h-full.object-cover.filter-none src='https://placehold.co/560x520/fef2f2/db2626?text=Fractal+Engine' alt='System uptime visual'
+            = image_tag 'hero.png', class: 'w-full h-full object-cover filter-none', alt: t('.hero.image_alt')
           .card-body.relative.p-6.md:p-8.justify-between
             .flex.justify-end
               .badge.badge-neutral.gap-2.bg-base-100.text-base-content.border-0.shadow-sm

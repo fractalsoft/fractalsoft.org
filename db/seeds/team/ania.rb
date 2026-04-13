@@ -8,7 +8,7 @@ ania.assign_attributes(
   image: 'team/ania.jpg',
   last_name: 'Bargieł',
   position: 'adept of programming',
-  published: true,
+  published: false,
   skills: %(
     Backend Development, Deployment, Teamwork, GDPR knowledge,
     User Technical Support, Willingness to learn, Logical thinking

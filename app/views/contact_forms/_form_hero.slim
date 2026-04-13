@@ -11,6 +11,6 @@
   = f.input :message, label: t('home.index.contact.form.message_label'), placeholder: t('home.index.contact.form.message_placeholder'), required: true, as: :text, input_html: { class: 'textarea textarea-bordered w-full bg-base-200 min-h-32', rows: 5 }
   .flex.flex-col.gap-3
     = f.submit t('home.index.contact.form.send_inquiry'), class: 'btn btn-primary w-full'
-    = link_to '#', class: 'btn btn-ghost bg-base-200 hover:bg-base-300 w-full justify-center gap-2' do
+    = link_to 'https://calendly.com/glisowski-fractalsoft/60-minute-meeting', class: 'btn btn-ghost bg-base-200 hover:bg-base-300 w-full justify-center gap-2', target: '_blank', rel: 'noopener noreferrer' do
       = lucide_icon 'link', class: 'w-4 h-4 shrink-0'
       = t('home.index.contact.form.book_audit')

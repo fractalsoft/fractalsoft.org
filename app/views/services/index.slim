@@ -186,9 +186,9 @@ section.py-16.bg-primary.text-primary-content
     p.text-white/85.mb-8.max-w-3xl.mx-auto.text-base.md:text-lg
       = t('.cta.subheadline', default: 'Let\'s discuss how our sophisticated engineering patterns can accelerate your product development.')
     .flex.flex-col.sm:flex-row.items-center.justify-center.gap-4
-      = link_to new_contact_form_path, class: 'btn btn-outline' do
+      = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline' do
         = t('.cta.schedule', default: 'Schedule a Consultation')
-      = link_to root_path, class: 'btn btn-ghost text-white hover:bg-white/10' do
+      = link_to projects_path(locale: I18n.locale), class: 'btn btn-ghost text-white hover:bg-white/10' do
         = t('.cta.view_work', default: 'View Our Work')
     p.text-white/70.text-sm.mt-6
       = t('.cta.footer_note', default: 'No sales pitch. You\'ll speak directly with an engineer.')

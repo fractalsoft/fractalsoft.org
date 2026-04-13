@@ -14,7 +14,7 @@ en:
           yr: Average experience
           yr_value: 10+ Yrs
           projects: Production deliveries
-          projects_value: 100+
+          projects_value: 40+
           senior: Senior engineering team
           senior_value: 100%
         card_1_title: Outcome-Driven
@@ -138,6 +138,7 @@ en:
         label: High-performance engineering
         headline: "AI-Augmented Engineering. Human-Grade Reliability."
         subheadline: "We are the full-stack builders who turn insights into production-ready software. From high-performance Ruby on Rails mastery to practical AI integration, we scale what others only prototype."
+        image_alt: FractalSoft engineering and reliable production systems
         uptime: System Uptime 99.9%
       pillars:
         section_title: Our Engineering Philosophy
