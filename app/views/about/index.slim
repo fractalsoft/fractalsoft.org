@@ -91,10 +91,10 @@
       = t('about.index.leadership.title')
     p.text-center.text-base.text-base-content/75.max-w-3xl.mx-auto
       = t('about.index.leadership.copy')
-    .grid.grid-cols-2.lg:grid-cols-4.gap-3.pt-2
+    .grid.gap-3.pt-2.sm:grid-cols-2.lg:grid-cols-3.max-w-5xl.mx-auto.justify-items-center
       - if @team_members.present?
         - @team_members.each do |member|
-          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-300
+          .rounded-xl.overflow-hidden.bg-base-100.border.border-base-300.w-full.max-w-sm
             = image_tag(member.image.presence || 'https://placehold.co/640x760/e5e7eb/374151?text=Team', alt: member.full_name.presence || member.first_name, class: 'w-full aspect-[3/3.4] object-cover')
             p.p-4.text-sm.font-bold.text-base-content
               = member.full_name.presence || member.first_name
