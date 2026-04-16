@@ -171,18 +171,9 @@ pl:
       title:
         in_touch: Bądźmy w kontakcie
       insights:
-        metrics:
-          agents:
-            value: '12'
-            label: Aktywne agenty AI
-            desc: Narzędzia, które pomagają zespołom wdrażać 2x szybciej.
-        items:
-          gem:
-            title: 'Gem: FractalQuery'
-            body: Optymalizacja złożonych rekurencyjnych zapytań w Rails.
-          project:
-            title: 'Projekt: Autonomous QA'
-            body: Testy regresji dla aplikacji enterprise wspierane przez LLM.
+        title: Innovation Hub
+        body: "Zobacz, co nasze laboratorium inżynierskie testuje dziś produkcyjnie: notatki techniczne, decyzje architektoniczne i praktyczne materiały do natychmiastowego wdrożenia w Twoim zespole."
+        latest_title: Najnowsze z Innovation Hub
   services:
     index:
       hero:

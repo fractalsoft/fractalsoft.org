@@ -34,7 +34,7 @@
 / Engineering philosophy / pillars
 = render 'home/pillars'
 
-/ Results / case studies (placeholder section wired to projects later)
+/ Results / case studies
 
 .container.mx-auto.px-4.py-16.space-y-8
   .flex.items-end.justify-between.gap-6
@@ -77,50 +77,80 @@
       .space-y-6
         .space-y-3.max-w-2xl
           h2.text-2xl.md:text-3xl.font-bold.text-base-content
-            = t('.insights.title', default: 'Innovation hub')
+            = t('.insights.title', default: 'Innovation Hub')
           p.text-base.text-neutral-600.leading-relaxed
-            = t('.insights.body', default: "We don't just use technology; we shape it. Our lab focuses on advancing Open Source Ruby tools and experimenting with Agentic AI systems to solve complex business logic.")
+            = t('.insights.body', default: 'Follow what our engineering lab is currently testing in production: technical notes, architecture trade-offs, and practical assets your team can apply right away.')
 
-        .grid.grid-cols-2.gap-6.max-w-xl
-          .space-y-2
-            .text-3xl.font-extrabold.text-primary
-              = t('.insights.metrics.projects.value', default: '50+')
-            .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
-              = t('.insights.metrics.projects.label', default: 'OSS Contributions')
-            p.text-xs.text-neutral-500.leading-relaxed
-              = t('.insights.metrics.projects.desc', default: "Tools we've built to help teams deploy 2x faster.")
-          .space-y-2
-            .text-3xl.font-extrabold.text-primary
-              = t('.insights.metrics.agents.value', default: '12')
-            .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
-              = t('.insights.metrics.agents.label', default: 'Active AI Agents')
-            p.text-xs.text-neutral-500.leading-relaxed
-              = t('.insights.metrics.agents.desc', default: "Tools we've built to help teams deploy 2x faster.")
+        .flex.flex-wrap.gap-3
+          = link_to innovation_hub_path(locale: I18n.locale, tab: 'research'), class: 'btn btn-primary inline-flex items-center gap-2' do
+            = t('innovation_hubs.index.hero.buttons.latest_research')
+            = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
 
       .space-y-4
-        .card.bg-base-100.shadow-sm.border.border-base-200
-          .card-body.py-5
-            .flex.items-start.gap-4
-              .avatar.placeholder
-                .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
-                  = lucide_icon 'braces', class: 'w-5 h-5'
-              .space-y-0.5
-                .font-semibold.text-base-content
-                  = t('.insights.items.gem.title', default: 'Gem: FractalQuery')
-                p.text-sm.text-neutral-500.leading-relaxed
-                  = t('.insights.items.gem.body', default: 'Optimizing complex recursive lookups in Rails.')
+        - highlights = @home.innovation_hub_highlights
+        - if highlights.values.any?
+          .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+            = t('.insights.latest_title', default: 'Latest from Innovation Hub')
 
-        .card.bg-base-100.shadow-sm.border.border-base-200
-          .card-body.py-5
-            .flex.items-start.gap-4
-              .avatar.placeholder
-                .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
-                  = lucide_icon 'bot', class: 'w-5 h-5'
-              .space-y-0.5
-                .font-semibold.text-base-content
-                  = t('.insights.items.project.title', default: 'Project: Autonomous QA')
-                p.text-sm.text-neutral-500.leading-relaxed
-                  = t('.insights.items.project.body', default: 'LLM-driven regression testing for enterprise apps.')
+          - if (article = highlights[:research])
+            - snippet = article.summary.presence || truncate(strip_tags(article.body.to_s), length: 120)
+            = link_to innovation_hub_article_path(article, locale: I18n.locale), class: 'card bg-base-100 shadow-sm border border-base-200 hover:border-primary/40 transition-colors' do
+              .card-body.py-5
+                .flex.items-start.gap-4
+                  .avatar.placeholder
+                    .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
+                      = lucide_icon 'braces', class: 'w-5 h-5'
+                  .space-y-1.min-w-0
+                    .flex.flex-wrap.items-center.gap-2
+                      .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+                        = t('innovation_hubs.index.sections.research.title')
+                      span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/60 class='text-[10px]'
+                        = article.read_time
+                      .inline-flex.items-center.gap-2.text-xs.font-extrabold.uppercase.tracking-widest.text-primary.ml-auto
+                        = t('innovation_hubs.index.article.read')
+                        = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+                    .font-semibold.text-base-content.truncate
+                      = article.title
+
+          - if (article = highlights[:insight])
+            - snippet = article.summary.presence || truncate(strip_tags(article.body.to_s), length: 120)
+            = link_to innovation_hub_article_path(article, locale: I18n.locale), class: 'card bg-base-100 shadow-sm border border-base-200 hover:border-primary/40 transition-colors' do
+              .card-body.py-5
+                .flex.items-start.gap-4
+                  .avatar.placeholder
+                    .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
+                      = lucide_icon 'bot', class: 'w-5 h-5'
+                  .space-y-1.min-w-0
+                    .flex.flex-wrap.items-center.gap-2
+                      .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+                        = t('innovation_hubs.index.sections.insights.title')
+                      span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/60 class='text-[10px]'
+                        = article.read_time
+                      .inline-flex.items-center.gap-2.text-xs.font-extrabold.uppercase.tracking-widest.text-primary.ml-auto
+                        = t('innovation_hubs.index.article.read')
+                        = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+                    .font-semibold.text-base-content.truncate
+                      = article.title
+
+          - if (asset = highlights[:asset])
+            - action_label = t("innovation_hubs.index.sidebar.practical_assets.actions.#{asset.action_type}", default: t('innovation_hubs.index.article.read'))
+            = link_to asset.url, class: 'card bg-base-100 shadow-sm border border-base-200 hover:border-primary/40 transition-colors', target: (asset.url.start_with?('http') ? '_blank' : nil), rel: (asset.url.start_with?('http') ? 'noopener' : nil), download: (asset.action_type == 'download' ? asset.download_filename : nil) do
+              .card-body.py-5
+                .flex.items-start.gap-4
+                  .avatar.placeholder
+                    .bg-primary/10.text-primary.rounded-2xl.w-11.h-11.flex.items-center.justify-center
+                      = lucide_icon 'files', class: 'w-5 h-5'
+                  .space-y-1.min-w-0
+                    .flex.flex-wrap.items-center.gap-2
+                      .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+                        = t('innovation_hubs.index.sidebar.practical_assets.title')
+                      span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/60 class='text-[10px]'
+                        = asset.kind.humanize
+                      .inline-flex.items-center.gap-2.text-xs.font-extrabold.uppercase.tracking-widest.text-primary.ml-auto
+                        = action_label
+                        = lucide_icon 'arrow-up-right', class: 'w-4 h-4'
+                    .font-semibold.text-base-content.truncate
+                      = asset.title
 
 / Final CTA with contact + map
 .container.mx-auto.px-4.py-16#contact

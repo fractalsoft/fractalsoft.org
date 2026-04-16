@@ -171,18 +171,9 @@ en:
       title:
         in_touch: Let's be in touch
       insights:
-        metrics:
-          agents:
-            value: '12'
-            label: Active AI Agents
-            desc: Tools we've built to help teams deploy 2x faster.
-        items:
-          gem:
-            title: 'Gem: FractalQuery'
-            body: Optimizing complex recursive lookups in Rails.
-          project:
-            title: 'Project: Autonomous QA'
-            body: LLM-driven regression testing for enterprise apps.
+        title: Innovation Hub
+        body: "Follow what our engineering lab is currently testing in production: technical notes, architecture trade-offs, and practical assets your team can apply right away."
+        latest_title: Latest from Innovation Hub
   services:
     index:
       hero:
