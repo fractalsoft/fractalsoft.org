@@ -15,47 +15,49 @@ RSpec.describe ProjectsController do
       get :index, params: { locale: 'en' }
 
       aggregate_failures('verify collection') do
-        expect(assigns(:projects)).to be_a(ActiveRecord::Relation)
-        expect(assigns(:projects)).to include(modernization_project, automation_project, product_project, integration_project, ai_project)
-        expect(assigns(:projects)).not_to include(hidden_project)
+        projects = assigns(:projects_page).projects
+        expect(projects).to be_a(ActiveRecord::Relation)
+        expect(projects).to include(modernization_project, automation_project, product_project, integration_project, ai_project)
+        expect(projects).not_to include(hidden_project)
       end
     end
 
     it 'filters modernization projects by engagement_type' do
       get :index, params: { locale: 'en', filter: 'modernization' }
 
-      expect(assigns(:projects)).to contain_exactly(modernization_project)
+      expect(assigns(:projects_page).projects).to contain_exactly(modernization_project)
     end
 
     it 'filters automation projects by engagement_type' do
       get :index, params: { locale: 'en', filter: 'automation' }
 
-      expect(assigns(:projects)).to contain_exactly(automation_project)
+      expect(assigns(:projects_page).projects).to contain_exactly(automation_project)
     end
 
     it 'filters product projects by engagement_type' do
       get :index, params: { locale: 'en', filter: 'product' }
 
-      expect(assigns(:projects)).to contain_exactly(product_project)
+      expect(assigns(:projects_page).projects).to contain_exactly(product_project)
     end
 
     it 'filters integration projects by engagement_type' do
       get :index, params: { locale: 'en', filter: 'integration' }
 
-      expect(assigns(:projects)).to contain_exactly(integration_project)
+      expect(assigns(:projects_page).projects).to contain_exactly(integration_project)
     end
 
     it 'filters ai projects by engagement_type' do
       get :index, params: { locale: 'en', filter: 'ai' }
 
-      expect(assigns(:projects)).to contain_exactly(ai_project)
+      expect(assigns(:projects_page).projects).to contain_exactly(ai_project)
     end
 
     it 'falls back to all displayed projects for an unknown filter key' do
       get :index, params: { locale: 'en', filter: 'unknown' }
 
-      expect(assigns(:projects)).to include(modernization_project, automation_project, product_project, integration_project, ai_project)
-      expect(assigns(:projects)).not_to include(hidden_project)
+      projects = assigns(:projects_page).projects
+      expect(projects).to include(modernization_project, automation_project, product_project, integration_project, ai_project)
+      expect(projects).not_to include(hidden_project)
     end
 
     it 'keeps filtering locale-independent because it does not inspect translated text' do
@@ -63,7 +65,7 @@ RSpec.describe ProjectsController do
 
       get :index, params: { locale: 'pl', filter: 'automation' }
 
-      expect(assigns(:projects)).to contain_exactly(automation_project)
+      expect(assigns(:projects_page).projects).to contain_exactly(automation_project)
     end
   end
 end
