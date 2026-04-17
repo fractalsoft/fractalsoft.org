@@ -10,6 +10,14 @@ class HomeFacade
     @innovation_hub_highlights = build_innovation_hub_highlights
   end
 
+  def innovation_hub_articles_count
+    InnovationHubArticle.visible.count
+  end
+
+  def innovation_hub_assets_count
+    InnovationHubAsset.visible.count
+  end
+
   private
 
   def build_innovation_hub_highlights
