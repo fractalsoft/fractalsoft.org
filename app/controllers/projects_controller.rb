@@ -14,21 +14,19 @@ class ProjectsController < ApplicationController
 
   FILTERS = {
     'all' => nil,
-    'fintech' => /fintech|payment|wallet|invoice|transaction/i,
-    'cloud' => /cloud|kubernetes|microservices|infrastructure|devops/i,
-    'ai' => /ai|ml|machine learning|llm|agent/i,
-    'legacy' => /legacy|recovery|refactor|refactoring/i
+    'modernization' => { engagement_type: 'modernization' },
+    'automation' => { engagement_type: 'automation' },
+    'product' => { engagement_type: 'product' },
+    'integration' => { engagement_type: 'integration' },
+    'ai' => { engagement_type: 'ai' },
   }.freeze
 
   def apply_filter(scope, filter_key)
-    return scope if filter_key.blank?
+    key = filter_key.presence || 'all'
+    filter = FILTERS[key]
 
-    rx = FILTERS[filter_key]
-    return scope if rx.nil?
+    return scope if filter.blank?
 
-    scope.select do |p|
-      haystack = [p.title, p.subtitle, p.introduction, p.description].compact.join(' ')
-      haystack.match?(rx)
-    end
+    scope.where(filter)
   end
 end

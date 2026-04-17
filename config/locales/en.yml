@@ -79,6 +79,11 @@ en:
         title: Attachments (Specs, RFPs, Designs)
         prompt: Click to upload or drag and drop
         subprompt: PDF, DOC, PNG, JPG (max 10MB)
+      validation_summary:
+        title: Please complete required fields
+      validation:
+        required_message_template: "%{field} is required."
+        invalid_email_message: Please provide a valid email address.
     show:
       back_to_home_page: Back to homepage
       headline: Surgical Assessment Initiated.
@@ -262,10 +267,11 @@ en:
         impact: Measurable Impact
       tabs:
         all: All Systems
-        fintech: FinTech & Payments
-        cloud: Cloud Native Infrastructure
+        modernization: Modernization
+        automation: Automation
+        product: Product
+        integration: Integration
         ai: AI/ML Operations
-        legacy: Legacy & AI Recovery
       metrics:
         uptime: Uptime Achieved
         cost_reduction: Cost Reduction

@@ -11,7 +11,7 @@ header.header.sticky.top-0.z-40.bg-base-200.backdrop-blur.text-base-content
         = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'hover:text-base-content'
         = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'hover:text-base-content'
         = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'hover:text-base-content'
-        = link_to root_path(anchor: 'contact'), class: 'btn btn-primary' do
+        = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-primary' do
           = t('layouts.menu.contact_us', default: 'Contact Us')
 
       .md:hidden.relative.flex.items-center.gap-2
@@ -24,5 +24,5 @@ header.header.sticky.top-0.z-40.bg-base-200.backdrop-blur.text-base-content
               = link_to t('layouts.menu.projects', default: 'Portfolio'), projects_path, class: 'block rounded-lg px-3 py-3.5 text-base font-bold leading-tight tracking-tight text-base-content hover:bg-base-300 no-underline'
               = link_to t('layouts.menu.innovation_hub', default: 'Innovation Hub'), innovation_hub_path, class: 'block rounded-lg px-3 py-3.5 text-base font-bold leading-tight tracking-tight text-base-content hover:bg-base-300 no-underline'
               = link_to t('layouts.menu.about', default: 'About'), about_path, class: 'block rounded-lg px-3 py-3.5 text-base font-bold leading-tight tracking-tight text-base-content hover:bg-base-300 no-underline'
-        = link_to root_path(anchor: 'contact'), class: 'btn btn-primary btn-sm whitespace-nowrap' do
+        = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-primary btn-sm whitespace-nowrap' do
           = t('layouts.menu.contact_us', default: 'Contact Us')
