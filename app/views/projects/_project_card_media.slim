@@ -1,0 +1,5 @@
+- if media_url.present?
+  .min-h-80.bg-slate-950.hidden.lg:block
+    = image_tag media_url, class: 'w-full h-full object-cover'
+- else
+  .min-h-80.surface-hero-accent.hidden.lg:block

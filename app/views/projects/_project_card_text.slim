@@ -1,0 +1,28 @@
+- project = card.project
+- project_title = card.title
+- tag = card.tag
+- desc = card.description
+.p-8.lg:pl-10.flex.flex-col.justify-between
+  .space-y-4
+    span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
+    h2.text-2xl.font-extrabold.text-base-content
+      = project_title
+    p.text-sm.leading-relaxed.text-base-content/70
+      = desc
+
+  .space-y-4.mt-8
+    .flex.flex-wrap.gap-2
+      - if project.year.present?
+        span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+          = "Year: #{project.year}"
+      - if project.industry.present?
+        span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+          = project.industry.to_s.humanize
+      - if project.engagement_type.present?
+        span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
+          = project.engagement_type.to_s.humanize
+
+    .flex.flex-col.sm:flex-row.gap-3
+      = link_to t('projects.index.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto'
+      = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
+        | Build Similar Outcomes
