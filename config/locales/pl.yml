@@ -261,10 +261,11 @@ pl:
         impact: Mierzalny wpływ
       tabs:
         all: Wszystkie systemy
-        fintech: FinTech i płatności
-        cloud: Infrastruktura cloud-native
+        modernization: Modernizacja
+        automation: Automatyzacja
+        product: Produkt
+        integration: Integracja
         ai: Operacje AI/ML
-        legacy: Legacy i odzyskiwanie AI
       metrics:
         uptime: Uzyskany uptime
         cost_reduction: Redukcja kosztów

@@ -7,86 +7,9 @@
       = t('.hero.impact')
 
   .mt-4.flex.flex-wrap.gap-4.items-center.justify-start.text-sm
-    - active_filter = params[:filter].presence || 'all'
-    - tabs = [['all', t('.tabs.all')], ['modernization', t('.tabs.modernization')], ['automation', t('.tabs.automation')], ['product', t('.tabs.product')], ['integration', t('.tabs.integration')], ['ai', t('.tabs.ai')]]
-    - tabs.each do |key, label|
-      - active = (key == active_filter)
-      = link_to label,
-        (key == 'all' ? projects_path(locale: I18n.locale) : projects_path(locale: I18n.locale, filter: key)),
-        class: "relative inline-flex items-center py-1 text-xs font-bold tracking-wide no-underline #{active ? 'text-primary after:content-[\"\"] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-0.5 after:bg-primary after:rounded-full' : 'text-base-content/60 hover:text-base-content'}"
+    - @projects_page.filter_tabs.each do |tab|
+      = link_to tab.label, tab.path,
+        class: "relative inline-flex items-center py-1 text-xs font-bold tracking-wide no-underline #{tab.active ? 'text-primary after:content-[\"\"] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-0.5 after:bg-primary after:rounded-full' : 'text-base-content/60 hover:text-base-content'}"
 
   .mt-10.space-y-8
-    - @projects.each_with_index do |project, idx|
-      - thumb_url = project.thumbnail_url(:thumb)
-      - media_url = thumb_url.presence
-      - project_title = project.title
-      - tag = project.subtitle.presence || project_title.to_s
-      - desc = project.introduction.presence || project.description.presence || ''
-
-      - reverse = idx.odd?
-      .rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
-        .grid.grid-cols-1.lg:grid-cols-2.gap-0
-          - if reverse
-            / Text first
-            .p-8.lg:pl-10.flex.flex-col.justify-between
-              .space-y-4
-                span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
-                h2.text-2xl.font-extrabold.text-base-content
-                  = project_title
-                p.text-sm.leading-relaxed.text-base-content/70
-                  = desc
-
-              .space-y-4.mt-8
-                .flex.flex-wrap.gap-2
-                  - if project.year.present?
-                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
-                      = "Year: #{project.year}"
-                  - if project.industry.present?
-                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
-                      = project.industry.to_s.humanize
-                  - if project.engagement_type.present?
-                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
-                      = project.engagement_type.to_s.humanize
-
-                .flex.flex-col.sm:flex-row.gap-3
-                  = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto'
-                  = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
-                    | Build Similar Outcomes
-
-            - if media_url.present?
-              .min-h-80.bg-slate-950.hidden.lg:block
-                = image_tag media_url, class: 'w-full h-full object-cover'
-            - else
-              .min-h-80.surface-hero-accent.hidden.lg:block
-          - else
-            / Media first
-            - if media_url.present?
-              .min-h-80.bg-slate-950.hidden.lg:block
-                = image_tag media_url, class: 'w-full h-full object-cover'
-            - else
-              .min-h-80.surface-hero-accent.hidden.lg:block
-
-            .p-8.lg:pl-10.flex.flex-col.justify-between
-              .space-y-4
-                span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
-                h2.text-2xl.font-extrabold.text-base-content
-                  = project_title
-                p.text-sm.leading-relaxed.text-base-content/70
-                  = desc
-
-              .space-y-4.mt-8
-                .flex.flex-wrap.gap-2
-                  - if project.year.present?
-                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
-                      = "Year: #{project.year}"
-                  - if project.industry.present?
-                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
-                      = project.industry.to_s.humanize
-                  - if project.engagement_type.present?
-                    span.inline-flex.items-center.rounded-full.bg-base-200.text-base-content/75.px-3.py-1.text-xs.font-semibold
-                      = project.engagement_type.to_s.humanize
-
-                .flex.flex-col.sm:flex-row.gap-3
-                  = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto'
-                  = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
-                    | Build Similar Outcomes
+    = render partial: 'project_card', collection: @projects_page.project_cards, as: :card
