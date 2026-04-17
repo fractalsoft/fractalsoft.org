@@ -81,8 +81,20 @@
           p.text-base.text-neutral-600.leading-relaxed
             = t('.insights.body', default: 'Follow what our engineering lab is currently testing in production: technical notes, architecture trade-offs, and practical assets your team can apply right away.')
 
+        .mt-5.grid.grid-cols-1.sm:grid-cols-2.gap-3.max-w
+          .rounded-xl.border.border-base-300.bg-base-100/80.px-4.py-3
+            .font-extrabold.uppercase.tracking-wider.text-neutral-500 class='text-[11px]'
+              = t('.insights.metrics.articles_label', default: 'Articles')
+            .text-2xl.font-black.text-base-content
+              = @home.innovation_hub_articles_count
+          .rounded-xl.border.border-base-300.bg-base-100/80.px-4.py-3
+            .font-extrabold.uppercase.tracking-wider.text-neutral-500 class='text-[11px]'
+              = t('.insights.metrics.assets_label', default: 'Assets')
+            .text-2xl.font-black.text-base-content
+              = @home.innovation_hub_assets_count
+
         .flex.flex-wrap.gap-3
-          = link_to innovation_hub_path(locale: I18n.locale, tab: 'research'), class: 'btn btn-primary inline-flex items-center gap-2' do
+          = link_to innovation_hub_path(locale: I18n.locale), class: 'btn btn-primary inline-flex items-center gap-2' do
             = t('innovation_hubs.index.hero.buttons.latest_research')
             = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
 

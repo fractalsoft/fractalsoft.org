@@ -174,6 +174,9 @@ pl:
         title: Innovation Hub
         body: "Zobacz, co nasze laboratorium inżynierskie testuje dziś produkcyjnie: notatki techniczne, decyzje architektoniczne i praktyczne materiały do natychmiastowego wdrożenia w Twoim zespole."
         latest_title: Najnowsze z Innovation Hub
+        metrics:
+          articles_label: Artykuły
+          assets_label: Zasoby
   services:
     index:
       hero:

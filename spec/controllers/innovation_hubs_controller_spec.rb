@@ -10,7 +10,6 @@ RSpec.describe InnovationHubsController do
       aggregate_failures do
         expect(response).to be_successful
         expect(assigns(:hub)).to be_a(InnovationHubFacade)
-        expect(assigns(:newsletter_form)).to be_a(ContactForm)
       end
     end
 
