@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 class ProjectsController < ApplicationController
-  before_action :set_page_caching
-  caches_action :index, :show
-
   def index
     @projects = Project.where(display: true).order(position: :asc, year: :desc)
     @projects = apply_filter(@projects, params[:filter])
