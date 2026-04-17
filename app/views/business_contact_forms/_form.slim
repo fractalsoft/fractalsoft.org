@@ -42,14 +42,21 @@
       / Right form column (card)
       .card.shadow-xl.card-shell
         .card-body.p-8
-          = simple_form_for @business_contact_form, defaults: { wrapper: :vertical_file }, html: { class: 'space-y-4' } do |f|
+          = simple_form_for @business_contact_form, defaults: { wrapper: :vertical_file }, html: { class: 'space-y-4 js-business-contact-form', novalidate: true, data: { required_message_template: t('.validation.required_message_template'), invalid_email_message: t('.validation.invalid_email_message') } } do |f|
+            .alert.alert-error.hidden.js-business-form-error-summary aria-live='polite' role='alert'
+              .flex.items-start.gap-2
+                = lucide_icon 'alert-triangle', class: 'w-5 h-5 shrink-0 mt-0.5'
+                div
+                  p.font-extrabold = t('.validation_summary.title')
+                  ul.list-disc.list-inside.text-sm.js-business-form-error-list
             .grid.grid-cols-1.md:grid-cols-2.gap-4
               = f.input :first_name,
                 required: true,
                 label: t('mail_form.attributes.business_contact_form.first_name'),
                 label_html: { class: 'label-text font-semibold block mb-1' },
                 placeholder: t('mail_form.attributes.business_contact_form.first_name'),
-                input_html: { class: 'input input-bordered w-full' }
+                input_html: { class: 'input input-bordered w-full js-required-field', data: { field_label: t('mail_form.attributes.business_contact_form.first_name') } }
+              p.text-error.text-xs.font-semibold.hidden.js-field-error data-for='business_contact_form_first_name'
               = f.input :last_name,
                 label: t('mail_form.attributes.business_contact_form.last_name'),
                 label_html: { class: 'label-text font-semibold block mb-1' },
@@ -67,7 +74,8 @@
               label: t('mail_form.attributes.business_contact_form.email'),
               label_html: { class: 'label-text font-semibold block mb-1' },
               placeholder: t('mail_form.attributes.business_contact_form.email'),
-              input_html: { class: 'input input-bordered w-full' }
+              input_html: { class: 'input input-bordered w-full js-required-field', data: { field_label: t('mail_form.attributes.business_contact_form.email') } }
+            p.text-error.text-xs.font-semibold.hidden.js-field-error data-for='business_contact_form_email'
 
             = f.input :phone_number,
               type: 'tel',
@@ -117,6 +125,6 @@
                 = f.check_box :need_nda, { class: 'toggle toggle-primary' }, '1', '0'
                 span.text-sm = t('.need_nda')
 
-            button.btn.btn-primary.w-full type='submit'
+            button.btn.btn-primary.w-full.js-business-submit type='submit' disabled=true
               = t('.send')
               = lucide_icon 'arrow-right', class: 'w-4 h-4 shrink-0'
