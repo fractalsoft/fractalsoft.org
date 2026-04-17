@@ -5,8 +5,13 @@ class InnovationHubFacade
 
   attr_reader :articles, :research_articles, :insight_articles, :featured_article, :practical_assets, :repository_assets
 
+  def self.normalize_tab(tab)
+    value = tab.to_s
+    FILTERS.include?(value) ? value : nil
+  end
+
   def initialize(tab: nil)
-    @active_tab = FILTERS.include?(tab.to_s) ? tab.to_s : nil
+    @active_tab = self.class.normalize_tab(tab)
     @articles = InnovationHubArticle.visible.recent.includes(:translations)
     @research_articles = @articles.research.limit(6)
     @insight_articles = @articles.where(kind: %w[insight case_note]).limit(6)
