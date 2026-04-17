@@ -8,7 +8,7 @@
 
   .mt-4.flex.flex-wrap.gap-4.items-center.justify-start.text-sm
     - active_filter = params[:filter].presence || 'all'
-    - tabs = [['all', t('.tabs.all')], ['fintech', t('.tabs.fintech')], ['cloud', t('.tabs.cloud')], ['ai', t('.tabs.ai')], ['legacy', t('.tabs.legacy')]]
+    - tabs = [['all', t('.tabs.all')], ['modernization', t('.tabs.modernization')], ['automation', t('.tabs.automation')], ['product', t('.tabs.product')], ['integration', t('.tabs.integration')], ['ai', t('.tabs.ai')]]
     - tabs.each do |key, label|
       - active = (key == active_filter)
       = link_to label,
@@ -50,7 +50,7 @@
 
                 .flex.flex-col.sm:flex-row.gap-3
                   = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto'
-                  = link_to root_path(anchor: 'contact'), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
+                  = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
                     | Build Similar Outcomes
 
             - if media_url.present?
@@ -88,5 +88,5 @@
 
                 .flex.flex-col.sm:flex-row.gap-3
                   = link_to t('.buttons.view_case_study'), project_path(project, locale: I18n.locale), class: 'btn btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto'
-                  = link_to root_path(anchor: 'contact'), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
+                  = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline btn-primary rounded-xl py-2 px-4 font-bold inline-flex items-center justify-center w-full sm:w-auto' do
                     | Build Similar Outcomes

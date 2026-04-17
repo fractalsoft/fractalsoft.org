@@ -55,7 +55,7 @@
                   = @project.engagement_type.to_s.humanize
 
           .flex.flex-col.sm:flex-row.items-center.gap-4
-            = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full sm:w-auto' do
+            = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-primary w-full sm:w-auto' do
               | Build Similar Outcomes
             - if @project.url.present?
               = link_to @project.url, class: 'btn btn-outline btn-primary w-full sm:w-auto' do
@@ -105,7 +105,7 @@
               = @project.year.present? ? "Project year: #{@project.year}" : 'Recent delivery engagement'
             p.text-sm.text-base-content/70
               = @project.url.present? ? 'Live project available for review.' : 'Private implementation with non-public delivery details.'
-            = link_to root_path(anchor: 'contact'), class: 'btn btn-primary w-full' do
+            = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-primary w-full' do
               | Discuss Your Project
 
         .card.bg-primary.text-primary-content.shadow-sm.rounded-xl
@@ -114,7 +114,7 @@
               | Want Results Like This?
             p.text-sm.text-white/85
               | We partner with teams that need senior execution, cleaner architecture, and faster delivery.
-            = link_to root_path(anchor: 'contact'), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary w-full' do
+            = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary w-full' do
               | Book Technical Consultation
 
         - if highlighted_contributions.any?

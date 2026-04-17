@@ -106,5 +106,5 @@ section.mt-12.py-14.bg-primary.text-primary-content
     p.text-primary-content/85.mt-4.max-w-3xl.mx-auto.text-base.md:text-lg
       = t('about.index.cta.copy')
     .mt-6
-      = link_to root_path(anchor: 'contact'), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary px-8 font-bold min-h-11 rounded-lg' do
+      = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary px-8 font-bold min-h-11 rounded-lg' do
         = t('about.index.cta.button')
