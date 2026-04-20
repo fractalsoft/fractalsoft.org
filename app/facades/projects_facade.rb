@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/MethodLength
+
 class ProjectsFacade
   FilterTab = Data.define(:label, :path, :active)
   ProjectCard = Data.define(:project, :media_url, :title, :tag, :description, :reverse_layout)
@@ -10,7 +12,7 @@ class ProjectsFacade
     'automation' => { engagement_type: 'automation' },
     'product' => { engagement_type: 'product' },
     'integration' => { engagement_type: 'integration' },
-    'ai' => { engagement_type: 'ai' },
+    'ai' => { engagement_type: 'ai' }
   }.freeze
 
   def initialize(filter_key:, locale:)
@@ -73,3 +75,4 @@ class ProjectsFacade
     Rails.application.routes.url_helpers
   end
 end
+# rubocop:enable Metrics/MethodLength

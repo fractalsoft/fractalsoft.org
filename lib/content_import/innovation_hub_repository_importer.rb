@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+
 require 'yaml'
 
 module ContentImport
@@ -30,13 +32,13 @@ module ContentImport
 
     private
 
-    def each_file
+    def each_file(&)
       paths = if @file_paths.present?
                 Array(@file_paths).map { |path| Pathname(path) }
               else
-                Dir[REPO_DIR.join('*.yml')].sort.map { |path| Pathname(path) }
+                Dir[REPO_DIR.join('*.yml')].map { |path| Pathname(path) }
               end
-      paths.each { |path| yield path }
+      paths.each(&)
       paths
     end
 
@@ -71,7 +73,11 @@ module ContentImport
         end
       end
 
-      raise ArgumentError, "Invalid innovation hub repository '#{repo.slug}': #{repo.errors.full_messages.join(', ')}" unless repo.valid?
+      unless repo.valid?
+        raise ArgumentError,
+              "Invalid innovation hub repository '#{repo.slug}': #{repo.errors.full_messages.join(', ')}"
+      end
+
       repo.save! unless @dry_run
       imported_slugs << repo.slug
     end
@@ -90,3 +96,4 @@ module ContentImport
     end
   end
 end
+# rubocop:enable Metrics/AbcSize, Metrics/MethodLength

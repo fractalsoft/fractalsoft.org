@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Project < ApplicationRecord
-
   scope :featured_or_displayed, lambda {
     scope = where(display: true).order(position: :asc, year: :desc)
 

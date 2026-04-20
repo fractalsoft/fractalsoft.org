@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+
 require 'yaml'
 
 module ContentImport
@@ -32,7 +34,7 @@ module ContentImport
       paths = if file_paths.present?
                 Array(file_paths).map { |path| Pathname(path) }
               else
-                Dir[PROJECT_DIR.join('*.yml')].sort.map { |path| Pathname(path) }
+                Dir[PROJECT_DIR.join('*.yml')].map { |path| Pathname(path) }
               end
 
       importer = new(dry_run: true, file_paths: paths)
@@ -44,13 +46,13 @@ module ContentImport
 
     protected
 
-    def each_file
+    def each_file(&)
       paths = if @file_paths.present?
                 Array(@file_paths).map { |path| Pathname(path) }
               else
-                Dir[PROJECT_DIR.join('*.yml')].sort.map { |path| Pathname(path) }
+                Dir[PROJECT_DIR.join('*.yml')].map { |path| Pathname(path) }
               end
-      paths.each { |path| yield path }
+      paths.each(&)
       paths
     end
 
@@ -65,9 +67,9 @@ module ContentImport
       raise ArgumentError, "Missing keys #{missing.join(', ')} in #{path}" if missing.any?
 
       translations = payload.fetch('translations')
-      unless translations.is_a?(Hash)
-        raise ArgumentError, "translations must be a locale hash in #{path}"
-      end
+      return if translations.is_a?(Hash)
+
+      raise ArgumentError, "translations must be a locale hash in #{path}"
     end
 
     def import_project!(payload)
@@ -82,7 +84,7 @@ module ContentImport
         industry: payload['industry'],
         engagement_type: payload['engagement_type'],
         featured: payload.fetch('featured') { false },
-        outcome_measurable: payload['outcome_measurable'],
+        outcome_measurable: payload['outcome_measurable']
       )
 
       with_original_locale do
@@ -100,9 +102,7 @@ module ContentImport
         end
       end
 
-      unless @dry_run
-        project.save!
-      end
+      project.save! unless @dry_run
       imported_slugs << project.slug
     end
 
@@ -120,3 +120,4 @@ module ContentImport
     end
   end
 end
+# rubocop:enable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity

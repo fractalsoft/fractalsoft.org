@@ -13,8 +13,6 @@ gem 'rails', '~> 8.0.0'
 gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'
 gem 'active_link_to'
-gem 'tailwindcss-rails', '~> 4.4'
-gem 'lucide-rails', '~> 0.7'
 gem 'carrierwave', '~> 3.1'
 gem 'commonmarker', '~>2.6.3'
 gem 'draper'
@@ -24,6 +22,7 @@ gem 'http_accept_language'
 gem 'importmap-rails', '~> 2.2'
 gem 'jbuilder', '~> 2.14'
 gem 'lograge'
+gem 'lucide-rails', '~> 0.7'
 gem 'mail_form'
 gem 'meta-tags' # Search Engine Optimization (SEO) for Rails
 gem 'mini_racer'
@@ -35,6 +34,7 @@ gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
 gem 'simple_form', '~> 5.4'
 gem 'slim-rails', '~> 3.7' # Template language instead Erb
+gem 'tailwindcss-rails', '~> 4.4'
 gem 'tzinfo-data'
 
 # rubocop:disable Metrics/BlockLength

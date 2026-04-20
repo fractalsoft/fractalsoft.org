@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength
+
 require 'yaml'
 
 module ContentImport
@@ -30,13 +32,13 @@ module ContentImport
 
     private
 
-    def each_file
+    def each_file(&)
       paths = if @file_paths.present?
                 Array(@file_paths).map { |path| Pathname(path) }
               else
-                Dir[ARTICLE_DIR.join('*.yml')].sort.map { |path| Pathname(path) }
+                Dir[ARTICLE_DIR.join('*.yml')].map { |path| Pathname(path) }
               end
-      paths.each { |path| yield path }
+      paths.each(&)
       paths
     end
 
@@ -50,6 +52,7 @@ module ContentImport
       missing = REQUIRED_KEYS.select { |key| payload[key].blank? }
       raise ArgumentError, "Missing keys #{missing.join(', ')} in #{path}" if missing.any?
       raise ArgumentError, "translations must be a locale hash in #{path}" unless payload['translations'].is_a?(Hash)
+
       validate_translation_titles!(payload.fetch('translations'), path)
     end
 
@@ -79,7 +82,11 @@ module ContentImport
         end
       end
 
-      raise ArgumentError, "Invalid innovation hub article '#{article.slug}': #{article.errors.full_messages.join(', ')}" unless article.valid?
+      unless article.valid?
+        raise ArgumentError,
+              "Invalid innovation hub article '#{article.slug}': #{article.errors.full_messages.join(', ')}"
+      end
+
       article.save! unless @dry_run
       imported_slugs << article.slug
     end
@@ -107,3 +114,4 @@ module ContentImport
     end
   end
 end
+# rubocop:enable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength
