@@ -19,7 +19,7 @@ section.container.mx-auto.px-4.py-16
     h2.text-2xl.md:text-3xl.font-bold.text-base-content.shrink-0
       = t('.core.title', default: 'Core Engineering Mastery')
   .grid.grid-cols-1.md:grid-cols-2.gap-6
-    .card.shadow-md.card-shell
+    .card.bg-base-100.card-bordered.shadow-md.card-shell
       .card-body.space-y-4
         .icon-pill
           = lucide_icon 'book-open', class: 'w-6 h-6'
@@ -28,14 +28,14 @@ section.container.mx-auto.px-4.py-16
         p.text-sm.text-neutral-600.leading-relaxed
           = t('.core.rails.body')
         .flex.flex-wrap.gap-2
-          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
+          span.badge.badge-primary.badge-outline.badge-sm
             = t('.core.rails.stack.postgresql')
-          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
+          span.badge.badge-primary.badge-outline.badge-sm
             = t('.core.rails.stack.redis')
-          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
+          span.badge.badge-primary.badge-outline.badge-sm
             = t('.core.rails.stack.sidekiq')
 
-    .card.shadow-md.card-shell
+    .card.bg-base-100.card-bordered.shadow-md.card-shell
       .card-body.space-y-4
         .icon-pill
           = lucide_icon 'network', class: 'w-6 h-6'
@@ -44,13 +44,13 @@ section.container.mx-auto.px-4.py-16
         p.text-sm.text-neutral-600.leading-relaxed
           = t('.core.architectures.body')
         .flex.flex-wrap.gap-2
-          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
+          span.badge.badge-primary.badge-outline.badge-sm
             = t('.core.architectures.stack.kubernetes')
-          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
+          span.badge.badge-primary.badge-outline.badge-sm
             = t('.core.architectures.stack.aws_gcp')
-          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
+          span.badge.badge-primary.badge-outline.badge-sm
             = t('.core.architectures.stack.serverless')
-          span.inline-block.px-3.py-1.text-xs.font-medium.leading-tight.text-primary.bg-primary/10.rounded-full
+          span.badge.badge-primary.badge-outline.badge-sm
             = t('.core.architectures.stack.docker')
 
 / AI-Augmented Solutions
@@ -81,7 +81,7 @@ section.container.mx-auto.px-4.py-16
                 = t('.ai.agentic.bullet_3', default: 'Data Extraction')
 
     .h-full.flex.flex-col.gap-6
-      .card.bg-primary.text-primary-content.shadow-lg.rounded-xl
+      .card.bg-primary.text-primary-content.card-bordered.shadow-lg.rounded-xl
         .card-body.p-6
           .flex.items-start.gap-4
             .flex.shrink-0.w-12.h-12.rounded-lg.items-center.justify-center.bg-white/20.text-white
@@ -91,13 +91,13 @@ section.container.mx-auto.px-4.py-16
                 = t('.ai.llm.title', default: 'LLM Integration')
               p.text-neutral-200.text-sm.leading-relaxed
                 = t('.ai.llm.body', default: 'Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.')
-              .flex.flex-wrap.gap-2.text-xs.font-mono.uppercase.tracking-wide
-                span.inline-flex.items-center.px-3.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.openai')
-                span.inline-flex.items-center.px-3.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.anthropic')
-                span.inline-flex.items-center.px-3.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.langchain')
-                span.inline-flex.items-center.px-3.py-1.rounded-full.bg-white/15.border.border-white/25.text-white/90.leading-tight = t('.ai.llm.stack.llamaindex')
+              .flex.flex-wrap.gap-2
+                span.badge.badge-outline.badge-sm.text-white.border-white/40 = t('.ai.llm.stack.openai')
+                span.badge.badge-outline.badge-sm.text-white.border-white/40 = t('.ai.llm.stack.anthropic')
+                span.badge.badge-outline.badge-sm.text-white.border-white/40 = t('.ai.llm.stack.langchain')
+                span.badge.badge-outline.badge-sm.text-white.border-white/40 = t('.ai.llm.stack.llamaindex')
 
-      .card.shadow-md.card-shell
+      .card.bg-base-100.card-bordered.shadow-md.card-shell
         .card-body.p-6
           .icon-pill
             = lucide_icon 'database', class: 'w-6 h-6'
@@ -111,7 +111,7 @@ section.container.mx-auto.px-4.py-16
   h2.text-2xl.md:text-3xl.font-bold.text-base-content.mb-8
     = t('.advisory.title', default: 'Strategic Technical Advisory')
   .grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-4.gap-6
-    .card.shadow-sm.card-shell
+    .card.bg-base-100.card-bordered.shadow-sm.card-shell
       .card-body.space-y-3
         .icon-pill
           = lucide_icon 'search', class: 'w-5 h-5'
@@ -120,7 +120,7 @@ section.container.mx-auto.px-4.py-16
         p.text-sm.text-neutral-600.leading-relaxed
           = t('.advisory.audit.body', default: 'Deep-dive assessment of codebase, security, and scalability.')
 
-    .card.shadow-sm.card-shell
+    .card.bg-base-100.card-bordered.shadow-sm.card-shell
       .card-body.space-y-3
         .icon-pill
           = lucide_icon 'users', class: 'w-5 h-5'
@@ -129,7 +129,7 @@ section.container.mx-auto.px-4.py-16
         p.text-sm.text-neutral-600.leading-relaxed
           = t('.advisory.cto.body', default: 'Strategic technical leadership for startups and scale-ups.')
 
-    .card.shadow-sm.card-shell
+    .card.bg-base-100.card-bordered.shadow-sm.card-shell
       .card-body.space-y-3
         .icon-pill
           = lucide_icon 'lock', class: 'w-5 h-5'
@@ -138,7 +138,7 @@ section.container.mx-auto.px-4.py-16
         p.text-sm.text-neutral-600.leading-relaxed
           = t('.advisory.secure.body', default: 'Zero-trust architectures and SOC2-ready compliance.')
 
-    .card.shadow-sm.card-shell
+    .card.bg-base-100.card-bordered.shadow-sm.card-shell
       .card-body.space-y-3
         .icon-pill
           = lucide_icon 'settings', class: 'w-5 h-5'
@@ -151,32 +151,33 @@ section.container.mx-auto.px-4.py-16
 section.container.mx-auto.px-4.pt-12.pb-8
   h2.text-2xl.md:text-3xl.font-bold.text-base-content.mb-6
     = t('.process.title', default: 'Our Surgical Engagement Process')
-  .h-px.mb-10
+  ul.steps.steps-vertical.md:steps-horizontal.w-full
+    li.step.step-primary
+      .mt-4.text-left.space-y-2
+        .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
+          = lucide_icon 'search', class: 'w-5 h-5'
+        h3.m-0.font-extrabold.text-base-content.leading-tight
+          = t('.process.step1.title', default: 'Deep-Dive Audit')
+        p.m-0.text-xs.leading-relaxed.text-base-content/60
+          = t('.process.step1.body', default: 'We find the bottlenecks in your code and infrastructure.')
 
-  .grid.grid-cols-1.md:grid-cols-3.gap-8
-    .flex.flex-col.gap-2.text-left
-      .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
-        = lucide_icon 'search', class: 'w-5 h-5'
-      h3.m-0.font-extrabold.text-base-content.leading-tight
-        = t('.process.step1.title', default: 'Deep-Dive Audit')
-      p.m-0.text-xs.leading-relaxed.text-base-content/60
-        = t('.process.step1.body', default: 'We find the bottlenecks in your code and infrastructure.')
+    li.step.step-primary
+      .mt-4.text-left.space-y-2
+        .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
+          = lucide_icon 'sparkles', class: 'w-5 h-5'
+        h3.m-0.font-extrabold.text-base-content.leading-tight
+          = t('.process.step2.title', default: 'Surgical Execution')
+        p.m-0.text-xs.leading-relaxed.text-base-content/60
+          = t('.process.step2.body', default: 'We implement high-performance patterns and AI agents.')
 
-    .flex.flex-col.gap-2.text-left
-      .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
-        = lucide_icon 'sparkles', class: 'w-5 h-5'
-      h3.m-0.font-extrabold.text-base-content.leading-tight
-        = t('.process.step2.title', default: 'Surgical Execution')
-      p.m-0.text-xs.leading-relaxed.text-base-content/60
-        = t('.process.step2.body', default: 'We implement high-performance patterns and AI agents.')
-
-    .flex.flex-col.gap-2.text-left
-      .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
-        = lucide_icon 'upload', class: 'w-5 h-5'
-      h3.m-0.font-extrabold.text-base-content.leading-tight
-        = t('.process.step3.title', default: 'Scalable Handover')
-      p.m-0.text-xs.leading-relaxed.text-base-content/60
-        = t('.process.step3.body', default: 'We provide documentation and zero-downtime deployment.')
+    li.step.step-primary
+      .mt-4.text-left.space-y-2
+        .w-11.h-11.rounded-full.flex.items-center.justify-center.bg-primary/10.text-primary.shrink-0
+          = lucide_icon 'upload', class: 'w-5 h-5'
+        h3.m-0.font-extrabold.text-base-content.leading-tight
+          = t('.process.step3.title', default: 'Scalable Handover')
+        p.m-0.text-xs.leading-relaxed.text-base-content/60
+          = t('.process.step3.body', default: 'We provide documentation and zero-downtime deployment.')
 
 / CTA
 section.py-16.bg-primary.text-primary-content
@@ -186,9 +187,9 @@ section.py-16.bg-primary.text-primary-content
     p.text-white/85.mb-8.max-w-3xl.mx-auto.text-base.md:text-lg
       = t('.cta.subheadline', default: 'Let\'s discuss how our sophisticated engineering patterns can accelerate your product development.')
     .flex.flex-col.sm:flex-row.items-center.justify-center.gap-4
-      = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline' do
+      = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-neutral' do
         = t('.cta.schedule', default: 'Schedule a Consultation')
-      = link_to projects_path(locale: I18n.locale), class: 'btn btn-ghost text-white hover:bg-white/10' do
+      = link_to projects_path(locale: I18n.locale), class: 'btn btn-outline text-white border-white hover:bg-white/10' do
         = t('.cta.view_work', default: 'View Our Work')
     p.text-white/70.text-sm.mt-6
       = t('.cta.footer_note', default: 'No sales pitch. You\'ll speak directly with an engineer.')

@@ -271,8 +271,33 @@ pl:
         cost_reduction: Redukcja kosztów
         risk_mitigated: Ograniczone ryzyko
         code_coverage: Pokrycie kodu
+      labels:
+        year: "Rok: %{year}"
       buttons:
         view_case_study: Zobacz case study
+        build_similar_outcomes: Zbuduj podobne efekty
+    show:
+      labels:
+        project_year: Rok projektu
+        industry: Branża
+        engagement_type: Typ współpracy
+      buttons:
+        back_to_portfolio: Powrót do portfolio
+        build_similar_outcomes: Zbuduj podobne efekty
+        view_live_project: Zobacz działający projekt
+        discuss_your_project: Porozmawiaj o swoim projekcie
+      sections:
+        challenge: Wyzwanie
+        solution: Rozwiązanie
+        business_value_delivered: Dostarczona wartość biznesowa
+        scope_of_work: Zakres prac
+        engagement_snapshot: Migawka współpracy
+        highlighted_contributions: Wyróżnione wkłady
+        delivery_gallery: Galeria realizacji
+      cta:
+        want_results_like_this: Chcesz podobnych rezultatów?
+        description: Współpracujemy z zespołami, które potrzebują senioralnej realizacji, czystszej architektury i szybszego delivery.
+        book_technical_consultation: Umów konsultację techniczną
   innovation_hubs:
     index:
       hero:

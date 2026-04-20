@@ -277,8 +277,33 @@ en:
         cost_reduction: Cost Reduction
         risk_mitigated: Risk Mitigated
         code_coverage: Code Coverage
+      labels:
+        year: "Year: %{year}"
       buttons:
         view_case_study: View Case Study
+        build_similar_outcomes: Build Similar Outcomes
+    show:
+      labels:
+        project_year: Project Year
+        industry: Industry
+        engagement_type: Engagement Type
+      buttons:
+        back_to_portfolio: Back to Portfolio
+        build_similar_outcomes: Build Similar Outcomes
+        view_live_project: View Live Project
+        discuss_your_project: Discuss Your Project
+      sections:
+        challenge: Challenge
+        solution: Solution
+        business_value_delivered: Business Value Delivered
+        scope_of_work: Scope Of Work
+        engagement_snapshot: Engagement Snapshot
+        highlighted_contributions: Highlighted Contributions
+        delivery_gallery: Delivery Gallery
+      cta:
+        want_results_like_this: Want Results Like This?
+        description: We partner with teams that need senior execution, cleaner architecture, and faster delivery.
+        book_technical_consultation: Book Technical Consultation
   innovation_hubs:
     index:
       hero:
