@@ -2,88 +2,93 @@
 pl:
   about:
     index:
-      hero:
-        kicker: NASZA MISJA
-        title_top: Partner inżynieryjny,
-        title_accent: nie vendor
-        subtitle: Uwaga na poziomie Foundera i Dyrektora w każdym projekcie. Nie chowamy się za warstwami zarządzania.
+      builder:
+        card_1_body: Kwestionujemy założenia i projektujemy pod efekt, nie tylko pod zamknięcie ticketa.
+        card_1_title: Rozwiązywanie problemów
+        card_2_body: Pracujesz bezpośrednio z seniorami i osobami decyzyjnymi.
+        card_2_title: Bezpośredni kontakt
+        card_3_body: Traktujemy termin, jakość i wpływ biznesowy jako wspólny wynik.
+        card_3_title: Wspólna odpowiedzialność
+        copy: Inżynierowie produktowi, którzy biorą odpowiedzialność za problem od początku do końca.
+        title: Kultura builderów
+      cta:
+        button: Umów konsultację
+        copy: Umów krótką konsultację techniczną i znajdźmy następny krok o największym wpływie.
+        title: Gotowi budować przyszłość?
       engineering:
-        title: Zaawansowana inżynieria
+        card_1_body: Łączymy architekturę z celami biznesowymi i dostarczamy szybko bez utraty jakości.
+        card_1_title: Skupienie na rezultacie
+        card_2_body: Czysta architektura, testowalność i obserwowalność są częścią każdego sprintu.
+        card_2_title: Rzemiosło i dyscyplina
         copy: Budujemy systemy, które działają pod realnym ruchem, presją czasu i rosnącą złożonością.
         stats:
-          yr: Średnie doświadczenie
-          yr_value: 10+ lat
           projects: Wdrożenia produkcyjne
           projects_value: 40+
           senior: Zespół seniorów
           senior_value: 100%
-        card_1_title: Skupienie na rezultacie
-        card_1_body: Łączymy architekturę z celami biznesowymi i dostarczamy szybko bez utraty jakości.
-        card_2_title: Rzemiosło i dyscyplina
-        card_2_body: Czysta architektura, testowalność i obserwowalność są częścią każdego sprintu.
-      builder:
-        title: Kultura builderów
-        copy: Inżynierowie produktowi, którzy biorą odpowiedzialność za problem od początku do końca.
-        card_1_title: Rozwiązywanie problemów
-        card_1_body: Kwestionujemy założenia i projektujemy pod efekt, nie tylko pod zamknięcie ticketa.
-        card_2_title: Bezpośredni kontakt
-        card_2_body: Pracujesz bezpośrednio z seniorami i osobami decyzyjnymi.
-        card_3_title: Wspólna odpowiedzialność
-        card_3_body: Traktujemy termin, jakość i wpływ biznesowy jako wspólny wynik.
+          yr: Średnie doświadczenie
+          yr_value: 10+ lat
+        title: Zaawansowana inżynieria
+      hero:
+        kicker: NASZA MISJA
+        subtitle: Uwaga na poziomie Foundera i Dyrektora w każdym projekcie. Nie chowamy się za warstwami zarządzania.
+        title_accent: nie vendor
+        title_top: Partner inżynieryjny,
+      leadership:
+        copy: Inżynierowie, którzy projektują architekturę, wspierają zespoły i dowożą pod presją.
+        title: Techniczne przywództwo
+      talent:
+        cloud_caption: Polska  •  Berlin  •  Zurych  •  Austin  •  Remote
+        copy: Zespoły rozproszone, które pracują synchronicznie i komunikują się precyzyjnie.
+        title: Globalny talent, lokalny wpływ
       workflow:
+        copy: 'Wykorzystujemy zaawansowane AI do obsługi powtarzalnych zadań - boilerplate''u, testów jednostkowych i rutynowych refaktorów. Dzięki temu seniorzy skupiają się na tym, co kluczowe: architekturze, bezpieczeństwie i złożonej logice biznesowej.'
+        item_1_copy: Automatyczne scaffoldy skracają etap startowy nawet o 40%.
+        item_1_title: Szybsze dostarczanie
+        item_2_copy: Analiza statyczna wspierana AI wykrywa podatności przed commitem.
+        item_2_title: Proaktywna jakość
+        item_3_copy: Seniorzy skupiają się wyłącznie na unikalnych problemach biznesowych.
+        item_3_title: Logika zorientowana na człowieka
         kicker: Podejście Fractal
         title: Workflow wspierany AI
-        copy: "Wykorzystujemy zaawansowane AI do obsługi powtarzalnych zadań - boilerplate'u, testów jednostkowych i rutynowych refaktorów. Dzięki temu seniorzy skupiają się na tym, co kluczowe: architekturze, bezpieczeństwie i złożonej logice biznesowej."
-        item_1_title: Szybsze dostarczanie
-        item_1_copy: Automatyczne scaffoldy skracają etap startowy nawet o 40%.
-        item_2_title: Proaktywna jakość
-        item_2_copy: Analiza statyczna wspierana AI wykrywa podatności przed commitem.
-        item_3_title: Logika zorientowana na człowieka
-        item_3_copy: Seniorzy skupiają się wyłącznie na unikalnych problemach biznesowych.
-      talent:
-        title: Globalny talent, lokalny wpływ
-        copy: Zespoły rozproszone, które pracują synchronicznie i komunikują się precyzyjnie.
-        cloud_caption: Polska  •  Berlin  •  Zurych  •  Austin  •  Remote
-      leadership:
-        title: Techniczne przywództwo
-        copy: Inżynierowie, którzy projektują architekturę, wspierają zespoły i dowożą pod presją.
-      cta:
-        title: Gotowi budować przyszłość?
-        copy: Umów krótką konsultację techniczną i znajdźmy następny krok o największym wpływie.
-        button: Umów konsultację
   blog: Blog
   business_contact_forms:
     form:
-      inquiry_badge: Zapytanie techniczne
-      industry_label: Obszar współpracy
-      maximum_attached_file_size: 'Maksymalny rozmiar załącznika: 20 MB'
-      need_nda: Poproś o nasz standardowy NDA przed udostępnieniem poufnych danych.
-      send: Poproś o ocenę techniczną
-      title: Uzyskaj ocenę techniczną od seniora
-      subheadline: Prześlij kontekst, a senior inżynier przeanalizuje go w ciągu 24 godzin.
-      security:
-        title: Poufne zgłoszenie
-        body: Twoje zgłoszenie trafia do ograniczonego zespołu seniorów i jest obsługiwane z kontrolą dostępu.
-      encryption:
-        title: NDA na życzenie
-        body: Potrzebujesz dodatkowej ochrony? Poproś o nasze standardowe NDA przed wysłaniem poufnych materiałów.
-      skip_form:
-        kicker: CHCESZ POMINĄĆ FORMULARZ?
-        button: Umów 15-minutowy audyt techniczny
-      industry_options:
-        project_rescue_cleanup: Project Rescue / Cleanup
-        scalable_architecture: Scalable Architecture
-        agentic_integration: AI/Agentic Integration
-        legacy_modernization: Legacy Modernization
       attachments:
-        title: Załączniki (specyfikacje, RFP, projekty)
         prompt: Kliknij, aby dodać plik lub przeciągnij i upuść
         subprompt: PDF, DOC, PNG, JPG (max 10MB)
+        title: Załączniki (specyfikacje, RFP, projekty)
+      encryption:
+        body: Potrzebujesz dodatkowej ochrony? Poproś o nasze standardowe NDA przed wysłaniem poufnych materiałów.
+        title: NDA na życzenie
+      industry_label: Obszar współpracy
+      industry_options:
+        agentic_integration: AI/Agentic Integration
+        legacy_modernization: Legacy Modernization
+        project_rescue_cleanup: Project Rescue / Cleanup
+        scalable_architecture: Scalable Architecture
+      inquiry_badge: Zapytanie techniczne
+      maximum_attached_file_size: 'Maksymalny rozmiar załącznika: 20 MB'
+      need_nda: Poproś o nasz standardowy NDA przed udostępnieniem poufnych danych.
+      security:
+        body: Twoje zgłoszenie trafia do ograniczonego zespołu seniorów i jest obsługiwane z kontrolą dostępu.
+        title: Poufne zgłoszenie
+      send: Poproś o ocenę techniczną
+      skip_form:
+        button: Umów 15-minutowy audyt techniczny
+        kicker: CHCESZ POMINĄĆ FORMULARZ?
+      subheadline: Prześlij kontekst, a senior inżynier przeanalizuje go w ciągu 24 godzin.
+      title: Uzyskaj ocenę techniczną od seniora
+      validation:
+        invalid_email_message: Podaj poprawny adres e-mail.
+        required_message_template: "%{field} jest wymagane."
+      validation_summary:
+        title: Uzupełnij wymagane pola
     show:
       back_to_home_page: Wróć do strony głównej
-      headline: Ocena techniczna rozpoczęta.
       description: Otrzymaliśmy Twoje dane. Senior inżynier analizuje teraz architekturę. Oczekuj bezpośredniej odpowiedzi w ciągu 24 godzin.
       explore_innovation_hub: Przejdź do Innovation Hub
+      headline: Ocena techniczna rozpoczęta.
       status:
         label: Status
         value: Ocena aktywna
@@ -121,232 +126,111 @@ pl:
         rescue_cta: Ratujemy projekty
       contact:
         description: Odpowiadamy w ciągu 24 godzin — senior inżynier, nie handlowiec.
-        header: Gotowy rozwinąć swój produkt?
-        map_placeholder: Miejsce na mapę
         form:
-          name_placeholder: Jan Kowalski
+          book_audit: Umów 15-minutowy audyt techniczny
           email_placeholder: jan@firma.pl
           message_label: W czym możemy pomóc?
           message_placeholder: Opisz swoje wyzwanie...
+          name_placeholder: Jan Kowalski
           send_inquiry: Wyślij zapytanie
-          book_audit: Umów 15-minutowy audyt techniczny
+        header: Gotowy rozwinąć swój produkt?
         location:
-          title: Nasza siedziba
-          email: contact@fractalsoft.com
           current_time: AKTUALNY CZAS
+          email: contact@fractalsoft.com
+          title: Nasza siedziba
+        map_placeholder: Miejsce na mapę
       hero:
-        label: Inżynieria wysokiej wydajności
         headline: Full stack od pomysłu do produkcji
-        subheadline: Kompletny produkt od insightów po wdrożenie. Ty prowadzisz biznes—my załatwiamy technicznie.
         image_alt: Inżynieria FractalSoft i niezawodne systemy produkcyjne
+        label: Inżynieria wysokiej wydajności
+        subheadline: Kompletny produkt od insightów po wdrożenie. Ty prowadzisz biznes—my załatwiamy technicznie.
         uptime: Uptime systemu 99.9%
-      pillars:
-        section_title: Nasza filozofia inżynierii
-        legacy_ai:
-          title: Legacy & odzyskiwanie AI
-          body: "Specjalizujemy się w zamianie zatrzymanych projektów i zepsutych prototypów AI w skalowalną infrastrukturę gotową do produkcji. Jeśli poprzedni zespół utknął—my znajdziemy wyjście."
-        vibe_cleanup:
-          title: Porządki po vibe codingu
-          body: "Zamieniamy eksperymentalne „vibe-driven” skrypty w bezpieczne, utrzymywalne codebase’y. Wdrażamy wzorce high-performance engineering bezpośrednio w Wasze nowe funkcje produktu."
-        direct_senior:
-          title: Bezpośredni dostęp do seniorów
-          body: "Bez warstw middle managementu i juniorów w cieniu. Pracujesz bezpośrednio z seniorami, którzy współodpowiadają za Wasze rezultaty biznesowe i architekturę techniczną."
-      results:
-        title: Sprawdzone rezultaty
-        subtitle: Transformacyjna inżynieria dla globalnych liderów.
-        view_all: Wszystkie case studies
-        cards:
-          fintech:
-            badge: Fintech Scaleup
-            tag: Ratowanie infrastruktury
-            title: 40% redukcji kosztów
-            subtitle: Obniżenie kosztów infrastruktury dla platformy SaaS Y
-            body: Modernizacja monolitu legacy do wysokowydajnych mikrousług.
-          health:
-            badge: Health Tech
-            tag: Integracja AI
-            title: Wdrożenie w 3 miesiące
-            subtitle: Uruchomienie MVP Z z 99.9% uptime
-            body: Szybki cykl rozwoju dla krytycznego narzędzia monitoringu pacjentów.
-      title:
-        in_touch: Bądźmy w kontakcie
       insights:
-        title: Innovation Hub
-        body: "Zobacz, co nasze laboratorium inżynierskie testuje dziś produkcyjnie: notatki techniczne, decyzje architektoniczne i praktyczne materiały do natychmiastowego wdrożenia w Twoim zespole."
+        body: 'Zobacz, co nasze laboratorium inżynierskie testuje dziś produkcyjnie: notatki techniczne, decyzje architektoniczne i praktyczne materiały do natychmiastowego wdrożenia w Twoim zespole.'
         latest_title: Najnowsze z Innovation Hub
         metrics:
           articles_label: Artykuły
           assets_label: Zasoby
-  services:
-    index:
-      hero:
-        eyebrow: Eksperckie usługi inżynierskie
-        title_sophisticated: Wyrafinowana
-        title_engineering: inżynieria
-        subtext: Skupiamy się na systemach wysokiej wydajności, backendach Ruby on Rails oraz agentowych systemach AI, które skalują się od prototypu do produkcji.
-      core:
-        title: Kluczowe kompetencje inżynieryjne
-        rails:
-          title: Rozwój Ruby on Rails
-          body: "Backend pod okiem ekspertów z naciskiem na długoterminową utrzymywalność i szybką iterację. Wykorzystujemy pełnię ekosystemu Rails do budowy solidnych, bezpiecznych i wydajnych aplikacji webowych."
-          stack:
-            postgresql: PostgreSQL
-            redis: Redis
-            sidekiq: Sidekiq
-        architectures:
-          title: Skalowalne architektury
-          body: "Systemy cloud-native dla milionów równoczesnych użytkowników. Specjalizujemy się w mikrousługach, architekturze opartej na zdarzeniach i strategiach wdrożeń bez przestojów, które rosną z Twoim biznesem."
-          stack:
-            kubernetes: Kubernetes
-            aws_gcp: AWS/GCP
-            serverless: Serverless
-            docker: Docker
-      ai:
-        title: Rozwiązania wspomagane AI
-        agentic:
-          title: Systemy agentowe
-          body: Autonomiczne agenty, które rozumują, wyszukują i działają—zbudowane pod niezawodność i obserwowalność.
-          bullet_1: Obsługa klienta z RAG
-          bullet_2: Pipeline’y QA
-          bullet_3: Ekstrakcja danych
-        llm:
-          title: Integracja LLM
-          stack:
-            openai: OPENAI
-            anthropic: ANTHROPIC
-            langchain: LANGCHAIN
-            llamaindex: LLAMAINDEX
-        vector:
-          title: Wyszukiwanie wektorowe
-          body: Wyszukiwanie semantyczne i infrastruktura RAG z Pinecone, Milvus i własnymi embeddingami.
-      advisory:
-        title: Doradztwo techniczne strategiczne
-        audit:
-          title: Audyt techniczny
-          body: Dogłębna ocena codebase’u, bezpieczeństwa i skalowalności.
-        cto:
-          title: CTO-as-a-Service
-          body: Strategiczne przywództwo techniczne dla startupów i scale-upów.
-        secure:
-          title: Bezpieczne skalowanie
-          body: Architektury zero-trust i zgodność SOC2.
-        vibe:
-          title: Remediacja i utwardzanie vibe codingu
-          body: Stopniowa migracja monolitów do modularnych, utrzymywalnych systemów.
-      trust:
-        label: Zaufali nam
-        quote: FractalSoft nie tylko napisał kod—przeprojektował całą logikę AI pod 3x mniejsze opóźnienia.
-      process:
-        title: Nasz precyzyjny proces współpracy
-        step1:
-          title: Dogłębny audyt
-          body: Oceniamy Twój codebase, architekturę i cele.
-        step2:
-          title: Precyzyjna realizacja
-          body: Skupiona dostawa z jasnymi kamieniami milowymi.
-        step3:
-          title: Skalowalne przekazanie
-          body: Dokumentacja i transfer wiedzy.
-      cta:
-        headline: Gotowy zbudować swoją przyszłość?
-        subheadline: Porozmawiajmy o wzorcach inżynieryjnych i skalujmy Twój produkt.
-        book_audit: Umów 15-min audyt techniczny
-        schedule: Umów konsultację
-        view_work: Zobacz nasze realizacje
-        footer_note: Bez pitchy sprzedażowego. Rozmawiasz bezpośrednio z inżynierem.
-  projects:
-    index:
-      hero:
-        title: Wyrafinowana inżynieria
-        impact: Mierzalny wpływ
-      tabs:
-        all: Wszystkie systemy
-        modernization: Modernizacja
-        automation: Automatyzacja
-        product: Produkt
-        integration: Integracja
-        ai: Operacje AI/ML
-      metrics:
-        uptime: Uzyskany uptime
-        cost_reduction: Redukcja kosztów
-        risk_mitigated: Ograniczone ryzyko
-        code_coverage: Pokrycie kodu
-      labels:
-        year: "Rok: %{year}"
-      buttons:
-        view_case_study: Zobacz case study
-        build_similar_outcomes: Zbuduj podobne efekty
-    show:
-      labels:
-        project_year: Rok projektu
-        industry: Branża
-        engagement_type: Typ współpracy
-      buttons:
-        back_to_portfolio: Powrót do portfolio
-        build_similar_outcomes: Zbuduj podobne efekty
-        view_live_project: Zobacz działający projekt
-        discuss_your_project: Porozmawiaj o swoim projekcie
-      sections:
-        challenge: Wyzwanie
-        solution: Rozwiązanie
-        business_value_delivered: Dostarczona wartość biznesowa
-        scope_of_work: Zakres prac
-        engagement_snapshot: Migawka współpracy
-        highlighted_contributions: Wyróżnione wkłady
-        delivery_gallery: Galeria realizacji
-      cta:
-        want_results_like_this: Chcesz podobnych rezultatów?
-        description: Współpracujemy z zespołami, które potrzebują senioralnej realizacji, czystszej architektury i szybszego delivery.
-        book_technical_consultation: Umów konsultację techniczną
+        title: Innovation Hub
+      pillars:
+        direct_senior:
+          body: Bez warstw middle managementu i juniorów w cieniu. Pracujesz bezpośrednio z seniorami, którzy współodpowiadają za Wasze rezultaty biznesowe i architekturę techniczną.
+          title: Bezpośredni dostęp do seniorów
+        legacy_ai:
+          body: Specjalizujemy się w zamianie zatrzymanych projektów i zepsutych prototypów AI w skalowalną infrastrukturę gotową do produkcji. Jeśli poprzedni zespół utknął—my znajdziemy wyjście.
+          title: Legacy & odzyskiwanie AI
+        section_title: Nasza filozofia inżynierii
+        vibe_cleanup:
+          body: Zamieniamy eksperymentalne „vibe-driven” skrypty w bezpieczne, utrzymywalne codebase’y. Wdrażamy wzorce high-performance engineering bezpośrednio w Wasze nowe funkcje produktu.
+          title: Porządki po vibe codingu
+      results:
+        cards:
+          fintech:
+            badge: Fintech Scaleup
+            body: Modernizacja monolitu legacy do wysokowydajnych mikrousług.
+            subtitle: Obniżenie kosztów infrastruktury dla platformy SaaS Y
+            tag: Ratowanie infrastruktury
+            title: 40% redukcji kosztów
+          health:
+            badge: Health Tech
+            body: Szybki cykl rozwoju dla krytycznego narzędzia monitoringu pacjentów.
+            subtitle: Uruchomienie MVP Z z 99.9% uptime
+            tag: Integracja AI
+            title: Wdrożenie w 3 miesiące
+        subtitle: Transformacyjna inżynieria dla globalnych liderów.
+        title: Sprawdzone rezultaty
+        view_all: Wszystkie case studies
+      title:
+        in_touch: Bądźmy w kontakcie
   innovation_hubs:
     index:
+      article:
+        read: Czytaj
+      cta:
+        body: Wdrożymy te wzorce do Twojej roadmapy z konkretnym planem, ryzykami i wsparciem seniorów po stronie delivery.
+        button: Umów konsultację techniczną
+        title_line_1: CHCESZ ZASTOSOWAĆ TE PRZEŁOMY W
+        title_line_2: SWOIM PROJEKCIE?
       hero:
         badge: DZIENNIK INŻYNIERII
+        buttons:
+          latest_research: Przejdź do analiz technicznych
+          subscribe: Otrzymuj miesięczny briefing
+        subtext: Notatki z naszego laboratorium inżynierskiego. Pokazujemy, jak wzorce high-performance Ruby i praktyczne AI przekładają się na dowożenie produktu.
         title_line_1: Tu wysoka
         title_line_2: wydajność
         title_line_3: Ruby
         title_line_4: spotyka frontier
         title_line_5: AI.
-        subtext: Notatki z naszego laboratorium inżynierskiego. Pokazujemy, jak wzorce high-performance Ruby i praktyczne AI przekładają się na dowożenie produktu.
-        buttons:
-          latest_research: Przejdź do analiz technicznych
-          subscribe: Otrzymuj miesięczny briefing
       sections:
-        research:
-          title: BADANIA I EKSPERYMENTY AI
-          subtitle: Eksperymenty, benchmarki i wzorce wdrożeniowe, które ograniczają ryzyko delivery.
-          view_all: Zobacz wszystkie
         insights:
-          title: TECHNICZNE INSIGHTY
           subtitle: Decyzje architektoniczne i trade-offy opisane dla CTO i senior inżynierów.
+          title: TECHNICZNE INSIGHTY
           view_all: Zobacz wszystkie
-      article:
-        read: Czytaj
+        research:
+          subtitle: Eksperymenty, benchmarki i wzorce wdrożeniowe, które ograniczają ryzyko delivery.
+          title: BADANIA I EKSPERYMENTY AI
+          view_all: Zobacz wszystkie
       sidebar:
+        newsletter:
+          footnote: Zero spamu, tylko inżynieria.
+          message: Proszę o zapisanie mnie do aktualizacji Innovation Hub.
+          placeholder: email@firma.com
+          proof: Praktyczne aktualizacje inżynierskie dla CTO i senior inżynierów.
+          submit: Dołącz do dziennika
+          subtitle: Otrzymuj miesięczny digest badań i przełomów technicznych.
+          title: Bądź na froncie
         opensource:
-          title: Publiczne repozytoria
           context: Większość systemów klienckich jest prywatna. Te publiczne repozytoria pokazują nasz styl organizacji i utrzymania kodu.
+          title: Publiczne repozytoria
           view_all: Zobacz wszystkie repozytoria
         practical_assets:
-          title: Praktyczne zasoby
-          subtitle: Gotowe do użycia cheatsheety, diagramy, szablony i runbooki z codziennej praktyki delivery.
-          view_all: Zobacz wszystkie zasoby
           actions:
-            read: Czytaj materiał
             download: Pobierz materiał
-        newsletter:
-          title: Bądź na froncie
-          subtitle: Otrzymuj miesięczny digest badań i przełomów technicznych.
-          proof: Praktyczne aktualizacje inżynierskie dla CTO i senior inżynierów.
-          placeholder: email@firma.com
-          submit: Dołącz do dziennika
-          message: Proszę o zapisanie mnie do aktualizacji Innovation Hub.
-          footnote: Zero spamu, tylko inżynieria.
-      cta:
-        title_line_1: CHCESZ ZASTOSOWAĆ TE PRZEŁOMY W
-        title_line_2: SWOIM PROJEKCIE?
-        body: Wdrożymy te wzorce do Twojej roadmapy z konkretnym planem, ryzykami i wsparciem seniorów po stronie delivery.
-        button: Umów konsultację techniczną
+            read: Czytaj materiał
+          subtitle: Gotowe do użycia cheatsheety, diagramy, szablony i runbooki z codziennej praktyki delivery.
+          title: Praktyczne zasoby
+          view_all: Zobacz wszystkie zasoby
     show:
       back: Wróć do Innovation Hub
       open_source: Otwórz źródło
@@ -364,11 +248,11 @@ pl:
       community: Społeczność
       contact: Kontakt
       contact_us: Skontaktuj się
-      services: Usługi
+      innovation_hub: Centrum Innowacji
       job_offers: Praca
       language: Język
       projects: Portfolio
-      innovation_hub: Centrum Innowacji
+      services: Usługi
       team: Zespół
       toggle_navigation: Nawigacja
   mail_form:
@@ -407,6 +291,7 @@ pl:
     project:
       major_contributions: Znaczący wkład
     show:
+      projects: Projekty
       see_more_technology: Zobacz więcej technologii, które znam
     skills:
       skills: Umiejętności
@@ -430,6 +315,128 @@ pl:
       testing: Testowanie
       tool: Narzędzia
       web: Technologie webowe
+  projects:
+    index:
+      buttons:
+        build_similar_outcomes: Zbuduj podobne efekty
+        view_case_study: Zobacz case study
+      hero:
+        impact: Mierzalny wpływ
+        title: Wyrafinowana inżynieria
+      labels:
+        year: 'Rok: %{year}'
+      metrics:
+        code_coverage: Pokrycie kodu
+        cost_reduction: Redukcja kosztów
+        risk_mitigated: Ograniczone ryzyko
+        uptime: Uzyskany uptime
+      tabs:
+        ai: Operacje AI/ML
+        all: Wszystkie systemy
+        automation: Automatyzacja
+        integration: Integracja
+        modernization: Modernizacja
+        product: Produkt
+    show:
+      buttons:
+        back_to_portfolio: Powrót do portfolio
+        build_similar_outcomes: Zbuduj podobne efekty
+        discuss_your_project: Porozmawiaj o swoim projekcie
+        view_live_project: Zobacz działający projekt
+      cta:
+        book_technical_consultation: Umów konsultację techniczną
+        description: Współpracujemy z zespołami, które potrzebują senioralnej realizacji, czystszej architektury i szybszego delivery.
+        want_results_like_this: Chcesz podobnych rezultatów?
+      labels:
+        engagement_type: Typ współpracy
+        industry: Branża
+        project_year: Rok projektu
+      sections:
+        business_value_delivered: Dostarczona wartość biznesowa
+        challenge: Wyzwanie
+        delivery_gallery: Galeria realizacji
+        engagement_snapshot: Migawka współpracy
+        highlighted_contributions: Wyróżnione wkłady
+        scope_of_work: Zakres prac
+        solution: Rozwiązanie
+  services:
+    index:
+      advisory:
+        audit:
+          body: Dogłębna ocena codebase’u, bezpieczeństwa i skalowalności.
+          title: Audyt techniczny
+        cto:
+          body: Strategiczne przywództwo techniczne dla startupów i scale-upów.
+          title: CTO-as-a-Service
+        secure:
+          body: Architektury zero-trust i zgodność SOC2.
+          title: Bezpieczne skalowanie
+        title: Doradztwo techniczne strategiczne
+        vibe:
+          body: Stopniowa migracja monolitów do modularnych, utrzymywalnych systemów.
+          title: Remediacja i utwardzanie vibe codingu
+      ai:
+        agentic:
+          body: Autonomiczne agenty, które rozumują, wyszukują i działają—zbudowane pod niezawodność i obserwowalność.
+          bullet_1: Obsługa klienta z RAG
+          bullet_2: Pipeline’y QA
+          bullet_3: Ekstrakcja danych
+          title: Systemy agentowe
+        llm:
+          body: Bezproblemowa integracja GPT-4, Claude i Llama 3 z Twoim istniejącym produktem oraz architekturami RAG.
+          stack:
+            anthropic: ANTHROPIC
+            langchain: LANGCHAIN
+            llamaindex: LLAMAINDEX
+            openai: OPENAI
+          title: Integracja LLM
+        title: Rozwiązania wspomagane AI
+        vector:
+          body: Wyszukiwanie semantyczne i infrastruktura RAG z Pinecone, Milvus i własnymi embeddingami.
+          title: Wyszukiwanie wektorowe
+      core:
+        architectures:
+          body: Systemy cloud-native dla milionów równoczesnych użytkowników. Specjalizujemy się w mikrousługach, architekturze opartej na zdarzeniach i strategiach wdrożeń bez przestojów, które rosną z Twoim biznesem.
+          stack:
+            aws_gcp: AWS/GCP
+            docker: Docker
+            kubernetes: Kubernetes
+            serverless: Serverless
+          title: Skalowalne architektury
+        rails:
+          body: Backend pod okiem ekspertów z naciskiem na długoterminową utrzymywalność i szybką iterację. Wykorzystujemy pełnię ekosystemu Rails do budowy solidnych, bezpiecznych i wydajnych aplikacji webowych.
+          stack:
+            postgresql: PostgreSQL
+            redis: Redis
+            sidekiq: Sidekiq
+          title: Rozwój Ruby on Rails
+        title: Kluczowe kompetencje inżynieryjne
+      cta:
+        book_audit: Umów 15-min audyt techniczny
+        footer_note: Bez pitchy sprzedażowego. Rozmawiasz bezpośrednio z inżynierem.
+        headline: Gotowy zbudować swoją przyszłość?
+        schedule: Umów konsultację
+        subheadline: Porozmawiajmy o wzorcach inżynieryjnych i skalujmy Twój produkt.
+        view_work: Zobacz nasze realizacje
+      hero:
+        eyebrow: Eksperckie usługi inżynierskie
+        subtext: Skupiamy się na systemach wysokiej wydajności, backendach Ruby on Rails oraz agentowych systemach AI, które skalują się od prototypu do produkcji.
+        title_engineering: inżynieria
+        title_sophisticated: Wyrafinowana
+      process:
+        step1:
+          body: Oceniamy Twój codebase, architekturę i cele.
+          title: Dogłębny audyt
+        step2:
+          body: Skupiona dostawa z jasnymi kamieniami milowymi.
+          title: Precyzyjna realizacja
+        step3:
+          body: Dokumentacja i transfer wiedzy.
+          title: Skalowalne przekazanie
+        title: Nasz precyzyjny proces współpracy
+      trust:
+        label: Zaufali nam
+        quote: FractalSoft nie tylko napisał kod—przeprojektował całą logikę AI pod 3x mniejsze opóźnienia.
   social:
     title:
       blog: Czytaj mnie

@@ -2,93 +2,93 @@
 en:
   about:
     index:
-      hero:
-        kicker: OUR MISSION
-        title_top: Engineering Partner,
-        title_accent: Not a Vendor
-        subtitle: Director and Founder-level attention for every project. We do not hide behind layers of management.
+      builder:
+        card_1_body: We challenge assumptions and design for outcomes, not just ticket completion.
+        card_1_title: Problem-Solving, Not Box-Ticking
+        card_2_body: You work directly with senior engineers and decision-makers.
+        card_2_title: Direct Access
+        card_3_body: We treat timelines, quality, and business impact as one shared responsibility.
+        card_3_title: Shared Delivery Ownership
+        copy: Product-minded engineers who own problems end-to-end, not task-by-task implementers.
+        title: The Builder Culture
+      cta:
+        button: Book a consultation
+        copy: Book a short technical consultation and identify the highest-impact next step.
+        title: Ready to build the future?
       engineering:
-        title: Sophisticated Engineering
+        card_1_body: We align architecture with measurable product goals and move fast without trading away reliability.
+        card_1_title: Outcome-Driven
+        card_2_body: Clean architecture, testability, and observability are built into every sprint.
+        card_2_title: Craft & Discipline
         copy: We build systems that survive real traffic, real deadlines, and real complexity. Senior engineers from day one.
         stats:
-          yr: Average experience
-          yr_value: 10+ Yrs
           projects: Production deliveries
           projects_value: 40+
           senior: Senior engineering team
           senior_value: 100%
-        card_1_title: Outcome-Driven
-        card_1_body: We align architecture with measurable product goals and move fast without trading away reliability.
-        card_2_title: Craft & Discipline
-        card_2_body: Clean architecture, testability, and observability are built into every sprint.
-      builder:
-        title: The Builder Culture
-        copy: Product-minded engineers who own problems end-to-end, not task-by-task implementers.
-        card_1_title: Problem-Solving, Not Box-Ticking
-        card_1_body: We challenge assumptions and design for outcomes, not just ticket completion.
-        card_2_title: Direct Access
-        card_2_body: You work directly with senior engineers and decision-makers.
-        card_3_title: Shared Delivery Ownership
-        card_3_body: We treat timelines, quality, and business impact as one shared responsibility.
+          yr: Average experience
+          yr_value: 10+ Yrs
+        title: Sophisticated Engineering
+      hero:
+        kicker: OUR MISSION
+        subtitle: Director and Founder-level attention for every project. We do not hide behind layers of management.
+        title_accent: Not a Vendor
+        title_top: Engineering Partner,
+      leadership:
+        copy: Engineers who can shape architecture, mentor teams, and ship under pressure.
+        title: Technical Leadership
+      talent:
+        cloud_caption: Poland  •  Berlin  •  Zurich  •  Austin  •  Remote
+        copy: Distributed engineering teams with timezone-aware collaboration and clear communication loops.
+        title: Global Talent, Local Impact
       workflow:
+        copy: 'We leverage advanced AI to handle the grunt work - boilerplate, unit tests, and routine refactors. This ensures our senior engineers spend their expensive hours on what matters: architecture, security, and complex business logic.'
+        item_1_copy: Automated scaffolding reduces initial setup time by 40%.
+        item_1_title: Accelerated Delivery
+        item_2_copy: AI-driven static analysis identifies vulnerabilities before commit.
+        item_2_title: Proactive Quality
+        item_3_copy: Senior minds stay focused entirely on your unique business problems.
+        item_3_title: Human-Centric Logic
         kicker: The Fractal Approach
         title: AI-Augmented Workflow
-        copy: "We leverage advanced AI to handle the grunt work - boilerplate, unit tests, and routine refactors. This ensures our senior engineers spend their expensive hours on what matters: architecture, security, and complex business logic."
-        item_1_title: Accelerated Delivery
-        item_1_copy: Automated scaffolding reduces initial setup time by 40%.
-        item_2_title: Proactive Quality
-        item_2_copy: AI-driven static analysis identifies vulnerabilities before commit.
-        item_3_title: Human-Centric Logic
-        item_3_copy: Senior minds stay focused entirely on your unique business problems.
-      talent:
-        title: Global Talent, Local Impact
-        copy: Distributed engineering teams with timezone-aware collaboration and clear communication loops.
-        cloud_caption: Poland  •  Berlin  •  Zurich  •  Austin  •  Remote
-      leadership:
-        title: Technical Leadership
-        copy: Engineers who can shape architecture, mentor teams, and ship under pressure.
-      cta:
-        title: Ready to build the future?
-        copy: Book a short technical consultation and identify the highest-impact next step.
-        button: Book a consultation
   blog: Blog
   business_contact_forms:
     form:
-      inquiry_badge: Technical Inquiry
-      industry_label: Service Focus
-      maximum_attached_file_size: 'Maximum size file: 20 MB'
-      need_nda: Request our standard NDA before sharing sensitive documentation.
-      send: Request Assessment
-      title: Get a Senior Technical Assessment
-      subheadline: Share your context and a senior engineer will review it within 24 hours.
-      security:
-        title: Confidential Intake
-        body: Your submission is reviewed by a limited senior team and handled with strict internal access controls.
-      encryption:
-        title: NDA Available
-        body: Need extra protection? Request our standard NDA before sharing sensitive documents.
-      skip_form:
-        kicker: WANT TO SKIP THE FORM?
-        button: Book a 15-min Technical Audit
-      industry_options:
-        project_rescue_cleanup: Project Rescue / Cleanup
-        scalable_architecture: Scalable Architecture
-        agentic_integration: AI/Agentic Integration
-        legacy_modernization: Legacy Modernization
       attachments:
-        title: Attachments (Specs, RFPs, Designs)
         prompt: Click to upload or drag and drop
         subprompt: PDF, DOC, PNG, JPG (max 10MB)
+        title: Attachments (Specs, RFPs, Designs)
+      encryption:
+        body: Need extra protection? Request our standard NDA before sharing sensitive documents.
+        title: NDA Available
+      industry_label: Service Focus
+      industry_options:
+        agentic_integration: AI/Agentic Integration
+        legacy_modernization: Legacy Modernization
+        project_rescue_cleanup: Project Rescue / Cleanup
+        scalable_architecture: Scalable Architecture
+      inquiry_badge: Technical Inquiry
+      maximum_attached_file_size: 'Maximum size file: 20 MB'
+      need_nda: Request our standard NDA before sharing sensitive documentation.
+      security:
+        body: Your submission is reviewed by a limited senior team and handled with strict internal access controls.
+        title: Confidential Intake
+      send: Request Assessment
+      skip_form:
+        button: Book a 15-min Technical Audit
+        kicker: WANT TO SKIP THE FORM?
+      subheadline: Share your context and a senior engineer will review it within 24 hours.
+      title: Get a Senior Technical Assessment
+      validation:
+        invalid_email_message: Please provide a valid email address.
+        required_message_template: "%{field} is required."
       validation_summary:
         title: Please complete required fields
-      validation:
-        required_message_template: "%{field} is required."
-        invalid_email_message: Please provide a valid email address.
     show:
       back_to_home_page: Back to homepage
-      headline: Surgical Assessment Initiated.
       description: We've received your details. A senior engineer is currently reviewing your architecture. Expect a direct response within 24 hours.
       explore_innovation_hub: Explore Innovation Hub
+      headline: Surgical Assessment Initiated.
       status:
         label: Status
         value: Assessment Active
@@ -126,233 +126,111 @@ en:
         rescue_cta: View Our Work
       contact:
         description: We respond within 24 hours with a senior engineer, not a salesperson.
-        header: Ready to Scale Your Product?
-        map_placeholder: Map placeholder
         form:
-          name_placeholder: John Doe
+          book_audit: Book a 15-min Technical Audit
           email_placeholder: john@company.com
           message_label: What can we help you with?
           message_placeholder: Describe your challenge...
+          name_placeholder: John Doe
           send_inquiry: Send Inquiry
-          book_audit: Book a 15-min Technical Audit
+        header: Ready to Scale Your Product?
         location:
-          title: Our Engineering HQ
-          email: contact@fractalsoft.com
           current_time: CURRENT TIME
+          email: contact@fractalsoft.com
+          title: Our Engineering HQ
+        map_placeholder: Map placeholder
       hero:
-        label: High-performance engineering
-        headline: "AI-Augmented Engineering. Human-Grade Reliability."
-        subheadline: "We are the full-stack builders who turn insights into production-ready software. From high-performance Ruby on Rails mastery to practical AI integration, we scale what others only prototype."
+        headline: AI-Augmented Engineering. Human-Grade Reliability.
         image_alt: FractalSoft engineering and reliable production systems
+        label: High-performance engineering
+        subheadline: We are the full-stack builders who turn insights into production-ready software. From high-performance Ruby on Rails mastery to practical AI integration, we scale what others only prototype.
         uptime: System Uptime 99.9%
-      pillars:
-        section_title: Our Engineering Philosophy
-        legacy_ai:
-          title: Legacy & AI Recovery
-          body: "We specialize in turning stalled projects and broken AI prototypes into scalable, production-grade infrastructure. If your previous team hit a wall, we find the way through."
-        vibe_cleanup:
-          title: Vibe Coding Cleanup
-          body: "Turning experimental 'vibe-driven' scripts into secure, maintainable codebases. We embed high-performance engineering patterns directly into your next-gen product features."
-        direct_senior:
-          title: Direct Senior Access
-          body: "No middle-management layers or junior shadows. You work directly with senior builders who share ownership of your business outcomes and technical architecture."
-      results:
-        title: Proven Results
-        subtitle: Transformative engineering for global leaders.
-        view_all: All Case Studies
-        cards:
-          fintech:
-            badge: Fintech Scaleup
-            tag: Infrastructure Rescue
-            title: 40% cost reduction
-            subtitle: Reduced infrastructure costs for SaaS platform Y
-            body: Modernizing legacy monolith into high-performance micro-services.
-          health:
-            badge: Health Tech
-            tag: AI Integration
-            title: 3-month launch
-            subtitle: Launched MVP Z with 99.9% uptime
-            body: Rapid development cycle for a critical patient monitoring tool.
-      title:
-        in_touch: Let's be in touch
       insights:
-        title: Innovation Hub
-        body: "Follow what our engineering lab is currently testing in production: technical notes, architecture trade-offs, and practical assets your team can apply right away."
+        body: 'Follow what our engineering lab is currently testing in production: technical notes, architecture trade-offs, and practical assets your team can apply right away.'
         latest_title: Latest from Innovation Hub
         metrics:
           articles_label: Articles
           assets_label: Assets
-  services:
-    index:
-      hero:
-        eyebrow: Expert Engineering Services
-        title_sophisticated: Sophisticated
-        title_engineering: Engineering
-        subtext: We focus on high-performance systems, Ruby on Rails backends, and agentic AI systems that scale from prototype to production.
-      core:
-        title: Core Engineering Mastery
-        rails:
-          title: Ruby on Rails Development
-          body: "Expert-led backend engineering with a focus on long-term maintainability and rapid iteration. We leverage the full power of the Rails ecosystem to deliver robust, secure, and performant web applications."
-          stack:
-            postgresql: PostgreSQL
-            redis: Redis
-            sidekiq: Sidekiq
-        architectures:
-          title: Scalable Architectures
-          body: "Cloud-native systems designed for millions of concurrent users. We specialize in microservices, event-driven designs, and zero-downtime deployment strategies that grow with your business."
-          stack:
-            kubernetes: Kubernetes
-            aws_gcp: AWS/GCP
-            serverless: Serverless
-            docker: Docker
-      ai:
-        title: AI-Augmented Solutions
-        agentic:
-          title: Agentic Systems
-          body: Design autonomous agents capable of complex reasoning and task execution. We build the 'brains' of your next-gen workflow—a foundation for agent workflows.
-          bullet_1: Autonomous Customer Support Agents with RAG
-          bullet_2: Automated QA & Regression Testing Pipelines
-          bullet_3: Agentic Workflows for Data Extraction
-        llm:
-          title: LLM Integration
-          body: Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.
-          stack:
-            openai: OPENAI
-            anthropic: ANTHROPIC
-            langchain: LANGCHAIN
-            llamaindex: LLAMAINDEX
-        vector:
-          title: Vector Search
-          body: High-performance semantic search and recommendation engines powered by Pinecone and Milvus.
-      advisory:
-        title: Strategic Technical Advisory
-        audit:
-          title: Tech Audit
-          body: Deep-dive assessment of your codebase, security, and scalability technologies. Our audits provide a roadmap for technical excellence.
-        cto:
-          title: CTO-as-a-Service
-          body: Strategic technology leadership for startups looking to scale their engineering culture. Get executive-level guidance without the full-time overhead.
-        secure:
-          title: Secure Scaling
-          body: Implementing zero-trust architectures and SOC2 compliance-ready infrastructure. Secure your integrity is integrated into every layer of our deployments.
-        vibe:
-          title: Vibe Coding Remediation & Hardening
-          body: Incremental, risk-mitigated migration of monoliths to modern modular systems. We transform fragile code into resilient, scalable platforms.
-      trust:
-        label: Trusted by
-        quote: "FractalSoft didn't just write code, they refactored our entire AI logic for 3x lower latency."
-      process:
-        title: Our Surgical Engagement Process
-        step1:
-          title: Deep-Dive Audit
-          body: We find the bottlenecks in your code and infrastructure.
-        step2:
-          title: Surgical Execution
-          body: We implement high-performance patterns and AI agents.
-        step3:
-          title: Scalable Handover
-          body: We provide documentation and zero-downtime deployment.
-      cta:
-        headline: Ready to engineer your future?
-        subheadline: Let's discuss how our sophisticated engineering patterns can accelerate your product development.
-        book_audit: Book a 15-min Technical Audit
-        schedule: Schedule a Consultation
-        view_work: View Our Work
-        footer_note: No sales pitch. You'll speak directly with an engineer.
-  projects:
-    index:
-      hero:
-        title: Sophisticated Engineering
-        impact: Measurable Impact
-      tabs:
-        all: All Systems
-        modernization: Modernization
-        automation: Automation
-        product: Product
-        integration: Integration
-        ai: AI/ML Operations
-      metrics:
-        uptime: Uptime Achieved
-        cost_reduction: Cost Reduction
-        risk_mitigated: Risk Mitigated
-        code_coverage: Code Coverage
-      labels:
-        year: "Year: %{year}"
-      buttons:
-        view_case_study: View Case Study
-        build_similar_outcomes: Build Similar Outcomes
-    show:
-      labels:
-        project_year: Project Year
-        industry: Industry
-        engagement_type: Engagement Type
-      buttons:
-        back_to_portfolio: Back to Portfolio
-        build_similar_outcomes: Build Similar Outcomes
-        view_live_project: View Live Project
-        discuss_your_project: Discuss Your Project
-      sections:
-        challenge: Challenge
-        solution: Solution
-        business_value_delivered: Business Value Delivered
-        scope_of_work: Scope Of Work
-        engagement_snapshot: Engagement Snapshot
-        highlighted_contributions: Highlighted Contributions
-        delivery_gallery: Delivery Gallery
-      cta:
-        want_results_like_this: Want Results Like This?
-        description: We partner with teams that need senior execution, cleaner architecture, and faster delivery.
-        book_technical_consultation: Book Technical Consultation
+        title: Innovation Hub
+      pillars:
+        direct_senior:
+          body: No middle-management layers or junior shadows. You work directly with senior builders who share ownership of your business outcomes and technical architecture.
+          title: Direct Senior Access
+        legacy_ai:
+          body: We specialize in turning stalled projects and broken AI prototypes into scalable, production-grade infrastructure. If your previous team hit a wall, we find the way through.
+          title: Legacy & AI Recovery
+        section_title: Our Engineering Philosophy
+        vibe_cleanup:
+          body: Turning experimental 'vibe-driven' scripts into secure, maintainable codebases. We embed high-performance engineering patterns directly into your next-gen product features.
+          title: Vibe Coding Cleanup
+      results:
+        cards:
+          fintech:
+            badge: Fintech Scaleup
+            body: Modernizing legacy monolith into high-performance micro-services.
+            subtitle: Reduced infrastructure costs for SaaS platform Y
+            tag: Infrastructure Rescue
+            title: 40% cost reduction
+          health:
+            badge: Health Tech
+            body: Rapid development cycle for a critical patient monitoring tool.
+            subtitle: Launched MVP Z with 99.9% uptime
+            tag: AI Integration
+            title: 3-month launch
+        subtitle: Transformative engineering for global leaders.
+        title: Proven Results
+        view_all: All Case Studies
+      title:
+        in_touch: Let's be in touch
   innovation_hubs:
     index:
+      article:
+        read: Read
+      cta:
+        body: Bring these patterns into your roadmap with a scoped implementation plan, clear risks, and senior execution support.
+        button: Book a Technical Consultation
+        title_line_1: WANT TO APPLY THESE BREAKTHROUGHS TO
+        title_line_2: YOUR PROJECT?
       hero:
         badge: THE ENGINEERING JOURNAL
+        buttons:
+          latest_research: Explore Technical Notes
+          subscribe: Get Monthly Brief
+        subtext: Production notes from our engineering lab. We turn high-performance Ruby and practical AI patterns into delivery-ready systems for product teams.
         title_line_1: Where High-
         title_line_2: Performance
         title_line_3: " Ruby"
         title_line_4: Meets Frontier
         title_line_5: " AI."
-        subtext: Production notes from our engineering lab. We turn high-performance Ruby and practical AI patterns into delivery-ready systems for product teams.
-        buttons:
-          latest_research: Explore Technical Notes
-          subscribe: Get Monthly Brief
       sections:
-        research:
-          title: AI RESEARCH & EXPERIMENTS
-          subtitle: Experiments, benchmarks, and implementation patterns we use to de-risk delivery.
-          view_all: View All
         insights:
-          title: TECHNICAL INSIGHTS
           subtitle: Architecture decisions and trade-offs explained for CTOs and senior engineers.
+          title: TECHNICAL INSIGHTS
           view_all: View All
-      article:
-        read: Read
+        research:
+          subtitle: Experiments, benchmarks, and implementation patterns we use to de-risk delivery.
+          title: AI RESEARCH & EXPERIMENTS
+          view_all: View All
       sidebar:
+        newsletter:
+          footnote: No spam, just engineering.
+          message: Please subscribe me to Innovation Hub updates.
+          placeholder: email@company.com
+          proof: Practical engineering updates for CTOs and senior engineers.
+          submit: Join the Journal
+          subtitle: Get our monthly digest of research papers and technical breakthroughs.
+          title: Stay at the frontier
         opensource:
-          title: Public Repositories
           context: Most client systems are private. These public repositories show how we structure and maintain delivery-ready code.
+          title: Public Repositories
           view_all: View All Repositories
         practical_assets:
-          title: Practical Assets
-          subtitle: Ready-to-use cheatsheets, diagrams, templates, and runbooks from delivery practice.
-          view_all: View All Assets
           actions:
-            read: Read Asset
             download: Download Asset
-        newsletter:
-          title: Stay at the frontier
-          subtitle: Get our monthly digest of research papers and technical breakthroughs.
-          proof: Practical engineering updates for CTOs and senior engineers.
-          placeholder: email@company.com
-          submit: Join the Journal
-          message: Please subscribe me to Innovation Hub updates.
-          footnote: No spam, just engineering.
-      cta:
-        title_line_1: WANT TO APPLY THESE BREAKTHROUGHS TO
-        title_line_2: YOUR PROJECT?
-        body: Bring these patterns into your roadmap with a scoped implementation plan, clear risks, and senior execution support.
-        button: Book a Technical Consultation
+            read: Read Asset
+          subtitle: Ready-to-use cheatsheets, diagrams, templates, and runbooks from delivery practice.
+          title: Practical Assets
+          view_all: View All Assets
     show:
       back: Back to Innovation Hub
       open_source: Open Original Source
@@ -370,11 +248,11 @@ en:
       community: Community
       contact: Contact
       contact_us: Contact Us
-      services: Services
+      innovation_hub: Innovation Hub
       job_offers: Jobs
       language: Language
       projects: Portfolio
-      innovation_hub: Innovation Hub
+      services: Services
       team: Team
       toggle_navigation: Toggle navigation
   mail_form:
@@ -413,6 +291,7 @@ en:
     project:
       major_contributions: Major contributions
     show:
+      projects: Projects
       see_more_technology: See more technology which I know
     skills:
       skills: Skills
@@ -436,6 +315,128 @@ en:
       testing: Testing
       tool: Tools
       web: Web technologies
+  projects:
+    index:
+      buttons:
+        build_similar_outcomes: Build Similar Outcomes
+        view_case_study: View Case Study
+      hero:
+        impact: Measurable Impact
+        title: Sophisticated Engineering
+      labels:
+        year: 'Year: %{year}'
+      metrics:
+        code_coverage: Code Coverage
+        cost_reduction: Cost Reduction
+        risk_mitigated: Risk Mitigated
+        uptime: Uptime Achieved
+      tabs:
+        ai: AI/ML Operations
+        all: All Systems
+        automation: Automation
+        integration: Integration
+        modernization: Modernization
+        product: Product
+    show:
+      buttons:
+        back_to_portfolio: Back to Portfolio
+        build_similar_outcomes: Build Similar Outcomes
+        discuss_your_project: Discuss Your Project
+        view_live_project: View Live Project
+      cta:
+        book_technical_consultation: Book Technical Consultation
+        description: We partner with teams that need senior execution, cleaner architecture, and faster delivery.
+        want_results_like_this: Want Results Like This?
+      labels:
+        engagement_type: Engagement Type
+        industry: Industry
+        project_year: Project Year
+      sections:
+        business_value_delivered: Business Value Delivered
+        challenge: Challenge
+        delivery_gallery: Delivery Gallery
+        engagement_snapshot: Engagement Snapshot
+        highlighted_contributions: Highlighted Contributions
+        scope_of_work: Scope Of Work
+        solution: Solution
+  services:
+    index:
+      advisory:
+        audit:
+          body: Deep-dive assessment of your codebase, security, and scalability technologies. Our audits provide a roadmap for technical excellence.
+          title: Tech Audit
+        cto:
+          body: Strategic technology leadership for startups looking to scale their engineering culture. Get executive-level guidance without the full-time overhead.
+          title: CTO-as-a-Service
+        secure:
+          body: Implementing zero-trust architectures and SOC2 compliance-ready infrastructure. Secure your integrity is integrated into every layer of our deployments.
+          title: Secure Scaling
+        title: Strategic Technical Advisory
+        vibe:
+          body: Incremental, risk-mitigated migration of monoliths to modern modular systems. We transform fragile code into resilient, scalable platforms.
+          title: Vibe Coding Remediation & Hardening
+      ai:
+        agentic:
+          body: Design autonomous agents capable of complex reasoning and task execution. We build the 'brains' of your next-gen workflow—a foundation for agent workflows.
+          bullet_1: Autonomous Customer Support Agents with RAG
+          bullet_2: Automated QA & Regression Testing Pipelines
+          bullet_3: Agentic Workflows for Data Extraction
+          title: Agentic Systems
+        llm:
+          body: Seamless integration of GPT-4, Claude, and Llama 3 into your existing product-ready architecture and RAG architectures.
+          stack:
+            anthropic: ANTHROPIC
+            langchain: LANGCHAIN
+            llamaindex: LLAMAINDEX
+            openai: OPENAI
+          title: LLM Integration
+        title: AI-Augmented Solutions
+        vector:
+          body: High-performance semantic search and recommendation engines powered by Pinecone and Milvus.
+          title: Vector Search
+      core:
+        architectures:
+          body: Cloud-native systems designed for millions of concurrent users. We specialize in microservices, event-driven designs, and zero-downtime deployment strategies that grow with your business.
+          stack:
+            aws_gcp: AWS/GCP
+            docker: Docker
+            kubernetes: Kubernetes
+            serverless: Serverless
+          title: Scalable Architectures
+        rails:
+          body: Expert-led backend engineering with a focus on long-term maintainability and rapid iteration. We leverage the full power of the Rails ecosystem to deliver robust, secure, and performant web applications.
+          stack:
+            postgresql: PostgreSQL
+            redis: Redis
+            sidekiq: Sidekiq
+          title: Ruby on Rails Development
+        title: Core Engineering Mastery
+      cta:
+        book_audit: Book a 15-min Technical Audit
+        footer_note: No sales pitch. You'll speak directly with an engineer.
+        headline: Ready to engineer your future?
+        schedule: Schedule a Consultation
+        subheadline: Let's discuss how our sophisticated engineering patterns can accelerate your product development.
+        view_work: View Our Work
+      hero:
+        eyebrow: Expert Engineering Services
+        subtext: We focus on high-performance systems, Ruby on Rails backends, and agentic AI systems that scale from prototype to production.
+        title_engineering: Engineering
+        title_sophisticated: Sophisticated
+      process:
+        step1:
+          body: We find the bottlenecks in your code and infrastructure.
+          title: Deep-Dive Audit
+        step2:
+          body: We implement high-performance patterns and AI agents.
+          title: Surgical Execution
+        step3:
+          body: We provide documentation and zero-downtime deployment.
+          title: Scalable Handover
+        title: Our Surgical Engagement Process
+      trust:
+        label: Trusted by
+        quote: FractalSoft didn't just write code, they refactored our entire AI logic for 3x lower latency.
   social:
     title:
       blog: Read me

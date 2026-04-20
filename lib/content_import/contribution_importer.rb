@@ -82,7 +82,7 @@ module ContentImport
       contribution.assign_attributes(
         category: entry['category'],
         scope: entry['scope'],
-        highlight: entry.fetch('highlight', false),
+        highlight: entry.fetch('highlight') { false },
       )
 
       with_original_locale do

@@ -1,6 +1,7 @@
 # Content Import (Projects + Contributions)
 
-This folder contains the structured source-of-truth content for NDA-safe, value-first case studies.
+This folder contains the structured source-of-truth content for NDA-safe,
+value-first case studies.
 
 ## Structure
 
