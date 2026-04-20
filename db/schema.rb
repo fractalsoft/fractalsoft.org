@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_03_30_164000) do
+ActiveRecord::Schema[8.0].define(version: 2026_04_20_120000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
@@ -112,6 +112,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_30_164000) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["innovation_hub_article_id"], name: "index_ih_article_translations_on_article_id"
     t.index ["locale"], name: "index_innovation_hub_article_translations_on_locale"
   end
@@ -143,6 +144,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_30_164000) do
     t.text "usage_context"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["innovation_hub_asset_id"], name: "index_ih_asset_translations_on_asset_id"
     t.index ["locale"], name: "index_innovation_hub_asset_translations_on_locale"
   end

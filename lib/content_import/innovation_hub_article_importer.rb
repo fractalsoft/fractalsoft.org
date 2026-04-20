@@ -50,6 +50,7 @@ module ContentImport
       missing = REQUIRED_KEYS.select { |key| payload[key].blank? }
       raise ArgumentError, "Missing keys #{missing.join(', ')} in #{path}" if missing.any?
       raise ArgumentError, "translations must be a locale hash in #{path}" unless payload['translations'].is_a?(Hash)
+      validate_translation_titles!(payload.fetch('translations'), path)
     end
 
     def import_article!(payload)
@@ -72,6 +73,7 @@ module ContentImport
           next unless translation.is_a?(Hash)
 
           I18n.locale = locale.to_sym
+          article.title = translation['title']
           article.summary = translation['summary']
           article.body = translation['body']
         end
@@ -86,6 +88,15 @@ module ContentImport
       translations = payload.fetch('translations')
       preferred = translations[I18n.default_locale.to_s] || translations.values.first || {}
       preferred['title'] || payload.fetch('slug')
+    end
+
+    def validate_translation_titles!(translations, path)
+      invalid_locales = translations.filter_map do |locale, translation|
+        locale unless translation.is_a?(Hash) && translation['title'].to_s.present?
+      end
+      return if invalid_locales.empty?
+
+      raise ArgumentError, "Missing translation title for locales #{invalid_locales.join(', ')} in #{path}"
     end
 
     def with_original_locale
