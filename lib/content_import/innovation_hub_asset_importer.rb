@@ -54,6 +54,7 @@ module ContentImport
       unless KIND_VALUES.include?(payload['kind'])
         raise ArgumentError, "kind must be one of #{KIND_VALUES.join(', ')} in #{path}"
       end
+      validate_translation_titles!(payload.fetch('translations'), path)
     end
 
     def import_asset!(payload)
@@ -73,6 +74,7 @@ module ContentImport
           next unless translation.is_a?(Hash)
 
           I18n.locale = locale.to_sym
+          asset.title = translation['title']
           asset.description = translation['description']
           asset.usage_context = translation['usage_context']
         end
@@ -87,6 +89,15 @@ module ContentImport
       translations = payload.fetch('translations')
       preferred = translations[I18n.default_locale.to_s] || translations.values.first || {}
       preferred['title'] || payload.fetch('slug')
+    end
+
+    def validate_translation_titles!(translations, path)
+      invalid_locales = translations.filter_map do |locale, translation|
+        locale unless translation.is_a?(Hash) && translation['title'].to_s.present?
+      end
+      return if invalid_locales.empty?
+
+      raise ArgumentError, "Missing translation title for locales #{invalid_locales.join(', ')} in #{path}"
     end
 
     def with_original_locale

@@ -3,7 +3,7 @@
 class InnovationHubArticle < ApplicationRecord
   extend FriendlyId
 
-  translates :summary, :body
+  translates :title, :summary, :body
   friendly_id :slug, use: :slugged
 
   enum :kind, {

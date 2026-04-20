@@ -3,7 +3,7 @@
 class InnovationHubAsset < ApplicationRecord
   ACTION_TYPES = %w[read download].freeze
 
-  translates :description, :usage_context
+  translates :title, :description, :usage_context
 
   enum :kind, {
     cheatsheet: 'cheatsheet',
