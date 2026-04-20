@@ -3,7 +3,7 @@
 class InnovationHubFacade
   FILTERS = %w[research insights assets].freeze
 
-  attr_reader :articles, :research_articles, :insight_articles, :featured_article, :practical_assets, :repository_assets
+  attr_reader :active_tab, :articles, :research_articles, :insight_articles, :featured_article, :practical_assets, :repository_assets
 
   def self.normalize_tab(tab)
     value = tab.to_s
@@ -18,10 +18,6 @@ class InnovationHubFacade
     @featured_article = @articles.featured.first || @insight_articles.first || @research_articles.first
     @practical_assets = InnovationHubAsset.visible.ordered.includes(:translations).limit(4)
     @repository_assets = InnovationHubRepository.visible.ordered.includes(:translations).limit(3)
-  end
-
-  def active_tab
-    @active_tab
   end
 
   def listing_mode?

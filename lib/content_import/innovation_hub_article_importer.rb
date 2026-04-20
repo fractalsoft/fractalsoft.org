@@ -57,10 +57,10 @@ module ContentImport
       article = InnovationHubArticle.find_or_initialize_by(slug: payload.fetch('slug'))
       article.assign_attributes(
         title: translated_title(payload),
-        display: payload.fetch('display', true),
-        featured: payload.fetch('featured', false),
+        display: payload.fetch('display') { true },
+        featured: payload.fetch('featured') { false },
         kind: payload.fetch('kind'),
-        position: payload.fetch('position', 0),
+        position: payload.fetch('position') { 0 },
         author_name: payload.fetch('author_name'),
         read_time: payload.fetch('read_time'),
         published_at: Time.zone.parse(payload.fetch('published_at').to_s),

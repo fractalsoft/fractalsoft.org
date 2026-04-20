@@ -74,14 +74,14 @@ module ContentImport
       project = Project.find_or_initialize_by(slug: payload.fetch('slug'))
       project.assign_attributes(
         title: translated_title(payload),
-        display: payload.fetch('display', true),
-        dofollow: payload.fetch('dofollow', false),
-        position: payload.fetch('position', 0),
+        display: payload.fetch('display') { true },
+        dofollow: payload.fetch('dofollow') { false },
+        position: payload.fetch('position') { 0 },
         year: payload['year'],
         url: payload['url'],
         industry: payload['industry'],
         engagement_type: payload['engagement_type'],
-        featured: payload.fetch('featured', false),
+        featured: payload.fetch('featured') { false },
         outcome_measurable: payload['outcome_measurable'],
       )
 

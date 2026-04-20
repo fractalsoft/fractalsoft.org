@@ -4,6 +4,7 @@ class InnovationHubAsset < ApplicationRecord
   ACTION_TYPES = %w[read download].freeze
 
   translates :title, :description, :usage_context
+  before_validation :sync_base_title
 
   enum :kind, {
     cheatsheet: 'cheatsheet',
@@ -23,5 +24,18 @@ class InnovationHubAsset < ApplicationRecord
     "#{title.to_s.parameterize}#{extension}"
   rescue URI::InvalidURIError
     "#{title.to_s.parameterize}.bin"
+  end
+
+  private
+
+  def sync_base_title
+    return if self[:title].present?
+
+    self[:title] = localized_title_candidate
+  end
+
+  def localized_title_candidate
+    title.to_s.presence ||
+      globalize.translations.filter_map { |translation| translation.title.to_s.presence }.first
   end
 end

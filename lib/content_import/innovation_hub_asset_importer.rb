@@ -61,9 +61,9 @@ module ContentImport
       asset = InnovationHubAsset.find_or_initialize_by(slug: payload.fetch('slug'))
       asset.assign_attributes(
         title: translated_title(payload),
-        display: payload.fetch('display', true),
+        display: payload.fetch('display') { true },
         kind: payload.fetch('kind'),
-        position: payload.fetch('position', 0),
+        position: payload.fetch('position') { 0 },
         url: payload.fetch('url'),
         action_type: payload.fetch('action_type'),
         preview_image_url: payload['preview_image_url']

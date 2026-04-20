@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_04_20_120000) do
+ActiveRecord::Schema[8.0].define(version: 2026_04_20_130500) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
@@ -123,7 +123,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_04_20_120000) do
     t.string "kind", null: false
     t.integer "position", default: 0, null: false
     t.string "slug", null: false
-    t.string "title", null: false
+    t.string "title"
     t.string "author_name", null: false
     t.string "read_time", null: false
     t.datetime "published_at", null: false
@@ -154,7 +154,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_04_20_120000) do
     t.string "kind", null: false
     t.integer "position", default: 0, null: false
     t.string "slug", null: false
-    t.string "title", null: false
+    t.string "title"
     t.string "url", null: false
     t.string "action_type", default: "read", null: false
     t.datetime "created_at", precision: nil, null: false

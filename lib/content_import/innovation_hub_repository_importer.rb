@@ -56,8 +56,8 @@ module ContentImport
       repo = InnovationHubRepository.find_or_initialize_by(slug: payload.fetch('slug'))
       repo.assign_attributes(
         title: translated_title(payload),
-        display: payload.fetch('display', true),
-        position: payload.fetch('position', 0),
+        display: payload.fetch('display') { true },
+        position: payload.fetch('position') { 0 },
         url: payload.fetch('url')
       )
 
