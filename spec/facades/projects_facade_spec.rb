@@ -37,7 +37,9 @@ RSpec.describe ProjectsFacade do
   end
 
   describe '#project_cards' do
-    let!(:first_project) { create(:project, title: 'First', subtitle: 'Custom Tag', description: 'Fallback', display: true, position: 1) }
+    let!(:first_project) do
+      create(:project, title: 'First', subtitle: 'Custom Tag', description: 'Fallback', display: true, position: 1)
+    end
     let!(:second_project) { create(:project, title: 'Second', introduction: 'Intro', display: true, position: 2) }
 
     it 'builds project cards with view-ready attributes' do

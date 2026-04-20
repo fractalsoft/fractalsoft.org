@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+
 require 'yaml'
 require_relative 'project_importer'
 
@@ -23,18 +25,18 @@ module ContentImport
         validate_payload!(payload, path)
         import_payload!(payload, path)
       end
-      true
+      @project_slugs
     end
 
     protected
 
-    def each_file
+    def each_file(&)
       paths = if @file_paths.present?
                 Array(@file_paths).map { |path| Pathname(path) }
               else
-                Dir[CONTRIBUTION_DIR.join('*.yml')].sort.map { |path| Pathname(path) }
+                Dir[CONTRIBUTION_DIR.join('*.yml')].map { |path| Pathname(path) }
               end
-      paths.each { |path| yield path }
+      paths.each(&)
       paths
     end
 
@@ -82,7 +84,7 @@ module ContentImport
       contribution.assign_attributes(
         category: entry['category'],
         scope: entry['scope'],
-        highlight: entry.fetch('highlight') { false },
+        highlight: entry.fetch('highlight') { false }
       )
 
       with_original_locale do
@@ -107,3 +109,4 @@ module ContentImport
     end
   end
 end
+# rubocop:enable Metrics/AbcSize, Metrics/MethodLength

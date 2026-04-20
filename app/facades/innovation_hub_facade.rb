@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+
 class InnovationHubFacade
   FILTERS = %w[research insights assets].freeze
 
-  attr_reader :active_tab, :articles, :research_articles, :insight_articles, :featured_article, :practical_assets, :repository_assets
+  attr_reader :active_tab, :articles, :research_articles, :insight_articles, :featured_article, :practical_assets,
+              :repository_assets
 
   def self.normalize_tab(tab)
     value = tab.to_s
@@ -41,3 +44,4 @@ class InnovationHubFacade
     InnovationHubAsset.visible.ordered.includes(:translations)
   end
 end
+# rubocop:enable Metrics/AbcSize, Metrics/MethodLength

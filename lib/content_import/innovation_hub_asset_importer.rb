@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+
 require 'yaml'
 
 module ContentImport
@@ -31,13 +33,13 @@ module ContentImport
 
     private
 
-    def each_file
+    def each_file(&)
       paths = if @file_paths.present?
                 Array(@file_paths).map { |path| Pathname(path) }
               else
-                Dir[ASSET_DIR.join('*.yml')].sort.map { |path| Pathname(path) }
+                Dir[ASSET_DIR.join('*.yml')].map { |path| Pathname(path) }
               end
-      paths.each { |path| yield path }
+      paths.each(&)
       paths
     end
 
@@ -54,6 +56,7 @@ module ContentImport
       unless KIND_VALUES.include?(payload['kind'])
         raise ArgumentError, "kind must be one of #{KIND_VALUES.join(', ')} in #{path}"
       end
+
       validate_translation_titles!(payload.fetch('translations'), path)
     end
 
@@ -80,7 +83,11 @@ module ContentImport
         end
       end
 
-      raise ArgumentError, "Invalid innovation hub asset '#{asset.slug}': #{asset.errors.full_messages.join(', ')}" unless asset.valid?
+      unless asset.valid?
+        raise ArgumentError,
+              "Invalid innovation hub asset '#{asset.slug}': #{asset.errors.full_messages.join(', ')}"
+      end
+
       asset.save! unless @dry_run
       imported_slugs << asset.slug
     end
@@ -108,3 +115,4 @@ module ContentImport
     end
   end
 end
+# rubocop:enable Metrics/AbcSize, Metrics/MethodLength

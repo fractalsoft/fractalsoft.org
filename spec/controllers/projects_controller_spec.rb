@@ -1,11 +1,17 @@
 # frozen_string_literal: true
 
+# rubocop:disable RSpec/MultipleMemoizedHelpers
+
 require 'rails_helper'
 
 RSpec.describe ProjectsController do
   describe 'GET #index' do
-    let!(:modernization_project) { create(:project, title: 'Legacy modernization', display: true, engagement_type: 'modernization') }
-    let!(:automation_project) { create(:project, title: 'Back-office automation', display: true, engagement_type: 'automation') }
+    let!(:modernization_project) do
+      create(:project, title: 'Legacy modernization', display: true, engagement_type: 'modernization')
+    end
+    let!(:automation_project) do
+      create(:project, title: 'Back-office automation', display: true, engagement_type: 'automation')
+    end
     let!(:product_project) { create(:project, title: 'Product development', display: true, engagement_type: 'product') }
     let!(:integration_project) { create(:project, title: 'System integration', display: true, engagement_type: 'integration') }
     let!(:ai_project) { create(:project, title: 'AI pipeline', display: true, engagement_type: 'ai') }
@@ -56,8 +62,13 @@ RSpec.describe ProjectsController do
       get :index, params: { locale: 'en', filter: 'unknown' }
 
       projects = assigns(:projects_page).projects
-      expect(projects).to include(modernization_project, automation_project, product_project, integration_project, ai_project)
-      expect(projects).not_to include(hidden_project)
+      expect(projects).to contain_exactly(
+        modernization_project,
+        automation_project,
+        product_project,
+        integration_project,
+        ai_project
+      )
     end
 
     it 'keeps filtering locale-independent because it does not inspect translated text' do
@@ -69,3 +80,4 @@ RSpec.describe ProjectsController do
     end
   end
 end
+# rubocop:enable RSpec/MultipleMemoizedHelpers

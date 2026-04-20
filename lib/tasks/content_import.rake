@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize, Metrics/BlockLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+
 require 'yaml'
 require_relative '../content_import/project_importer'
 require_relative '../content_import/contribution_importer'
@@ -57,12 +59,20 @@ namespace :content do
 
     validate_innovation_hub_launch_gate!
 
-    puts "Content validation passed (#{slugs.size} project files, #{article_slugs.size} innovation articles, #{asset_slugs.size} innovation assets, #{repository_slugs.size} repositories)."
+    puts(
+      "Content validation passed (#{slugs.size} project files, " \
+      "#{article_slugs.size} innovation articles, " \
+      "#{asset_slugs.size} innovation assets, " \
+      "#{repository_slugs.size} repositories)."
+    )
   end
 end
 
 def validate_innovation_hub_launch_gate!
-  article_payloads = Dir[Rails.root.join('content/innovation_hub_articles/*.yml')].map do |path|
+  practical_asset_kinds = %w[cheatsheet diagram template runbook].freeze
+  diagram_or_template_kinds = %w[diagram template].freeze
+
+  article_payloads = Rails.root.glob('content/innovation_hub_articles/*.yml').map do |path|
     YAML.safe_load(Pathname(path).read, permitted_classes: [], aliases: false) || {}
   end
   visible_articles = article_payloads.select { |payload| payload.fetch('display', true) }
@@ -70,13 +80,13 @@ def validate_innovation_hub_launch_gate!
   insight_count = visible_articles.count { |payload| payload['kind'] == 'insight' }
   featured_count = visible_articles.count { |payload| payload['featured'] == true }
 
-  asset_payloads = Dir[Rails.root.join('content/innovation_hub_assets/*.yml')].map do |path|
+  asset_payloads = Rails.root.glob('content/innovation_hub_assets/*.yml').map do |path|
     YAML.safe_load(Pathname(path).read, permitted_classes: [], aliases: false) || {}
   end
   visible_assets = asset_payloads.select { |payload| payload.fetch('display', true) }
-  practical_assets = visible_assets.select { |payload| %w[cheatsheet diagram template runbook].include?(payload['kind']) }
+  practical_assets = visible_assets.select { |payload| practical_asset_kinds.include?(payload['kind']) }
 
-  repository_payloads = Dir[Rails.root.join('content/innovation_hub_repositories/*.yml')].map do |path|
+  repository_payloads = Rails.root.glob('content/innovation_hub_repositories/*.yml').map do |path|
     YAML.safe_load(Pathname(path).read, permitted_classes: [], aliases: false) || {}
   end
   repository_assets = repository_payloads.select { |payload| payload.fetch('display', true) }
@@ -86,11 +96,16 @@ def validate_innovation_hub_launch_gate!
   errors << 'Need at least 2 visible insight innovation hub articles.' if insight_count < 2
   errors << 'Need at least 1 visible featured innovation hub article.' if featured_count < 1
   errors << 'Need at least 2 visible practical assets (cheatsheet/diagram/template/runbook).' if practical_assets.count < 2
-  errors << 'Need at least 1 visible cheatsheet asset.' if practical_assets.count { |payload| payload['kind'] == 'cheatsheet' } < 1
-  errors << 'Need at least 1 visible diagram or template asset.' if practical_assets.count { |payload| %w[diagram template].include?(payload['kind']) } < 1
+  errors << 'Need at least 1 visible cheatsheet asset.' if practical_assets.count do |payload|
+    payload['kind'] == 'cheatsheet'
+  end < 1
+  errors << 'Need at least 1 visible diagram or template asset.' if practical_assets.count do |payload|
+    diagram_or_template_kinds.include?(payload['kind'])
+  end < 1
   errors << 'Need at least 3 visible repository assets with real links.' if repository_assets.count < 3
 
-  if errors.any?
-    raise ArgumentError, "Innovation Hub launch gate failed:\n- #{errors.join("\n- ")}"
-  end
+  return unless errors.any?
+
+  raise ArgumentError, "Innovation Hub launch gate failed:\n- #{errors.join("\n- ")}"
 end
+# rubocop:enable Metrics/AbcSize, Metrics/BlockLength, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
