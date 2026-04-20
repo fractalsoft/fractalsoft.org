@@ -13,8 +13,8 @@ class ProjectsFacade
     'ai' => { engagement_type: 'ai' },
   }.freeze
 
-  def initialize(scope:, filter_key:, locale:)
-    @scope = scope
+  def initialize(filter_key:, locale:)
+    @scope = Project.where(display: true).order(position: :asc, year: :desc)
     @active_filter_key = normalize_filter(filter_key)
     @locale = locale
   end
@@ -48,6 +48,10 @@ class ProjectsFacade
         reverse_layout: idx.odd?
       )
     end
+  end
+
+  def cards_cache_key
+    ['projects/index/cards', @locale, @active_filter_key, projects.cache_key_with_version]
   end
 
   private
