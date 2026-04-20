@@ -1,10 +1,8 @@
-- reverse_layout = card.reverse_layout
-- media_url = card.media_url
-.rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
+.card.bg-base-100.card-bordered.shadow-sm.rounded-3xl.overflow-hidden
   .grid.grid-cols-1.lg:grid-cols-2.gap-0
-    - if reverse_layout
-      = render 'projects/project_card_text', card: card
-      = render 'projects/project_card_media', media_url: media_url
+    - if card.reverse_layout
+      = render 'projects/project_card_text', card: card, project: card.project
+      = render 'projects/project_card_media', media_url: card.media_url
     - else
-      = render 'projects/project_card_media', media_url: media_url
-      = render 'projects/project_card_text', card: card
+      = render 'projects/project_card_media', media_url: card.media_url
+      = render 'projects/project_card_text', card: card, project: card.project

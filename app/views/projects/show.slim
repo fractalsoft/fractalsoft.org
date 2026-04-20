@@ -17,18 +17,18 @@
     .flex.items-center.justify-between.gap-6
       = link_to projects_path(locale: I18n.locale), class: 'inline-flex items-center gap-2 text-sm font-semibold text-base-content/70 hover:text-base-content' do
         = lucide_icon 'arrow-left', class: 'w-4 h-4'
-        | Back to Portfolio
+        = t('.buttons.back_to_portfolio')
 
-    .rounded-3xl.overflow-hidden.card-shell.shadow-sm
+    .card.bg-base-100.card-bordered.shadow-sm.rounded-3xl.overflow-hidden
       .grid.grid-cols-1.lg:grid-cols-2
         - if hero_url.present?
           .min-h-80.bg-slate-950
             = image_tag hero_url, class: 'w-full h-full object-cover'
         - else
           .min-h-80.surface-hero-dark
-        .p-8.lg:p-10.lg:pl-12.space-y-6
+        .card-body.p-8.lg:p-10.lg:pl-12.space-y-6
           .space-y-3
-            span.inline-flex.items-center.py-1.rounded-full.bg-primary/15.text-primary.meta-label = tag.upcase
+            span.badge.badge-primary.badge-outline = tag.upcase
             h1.m-0.text-3xl.md:text-4xl.font-black.tracking-tight.leading-tight.text-base-content
               = project_title
             p.text-sm.leading-relaxed.text-base-content/70
@@ -36,107 +36,113 @@
 
           .grid.grid-cols-1.sm:grid-cols-2.gap-3
             - if @project.year.present?
-              .rounded-lg.bg-base-200.p-3.space-y-1
-                p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
-                  | Project Year
-                p.text-sm.font-bold.text-base-content
-                  = @project.year
+              .card.bg-base-200.card-bordered
+                .card-body.p-3.space-y-1
+                  p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
+                    = t('.labels.project_year')
+                  p.text-sm.font-bold.text-base-content
+                    = @project.year
             - if @project.industry.present?
-              .rounded-lg.bg-base-200.p-3.space-y-1
-                p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
-                  | Industry
-                p.text-sm.font-bold.text-base-content
-                  = @project.industry.to_s.humanize
+              .card.bg-base-200.card-bordered
+                .card-body.p-3.space-y-1
+                  p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
+                    = t('.labels.industry')
+                  p.text-sm.font-bold.text-base-content
+                    = @project.industry.to_s.humanize
             - if @project.engagement_type.present?
-              .rounded-lg.bg-base-200.p-3.space-y-1
-                p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
-                  | Engagement Type
-                p.text-sm.font-bold.text-base-content
-                  = @project.engagement_type.to_s.humanize
+              .card.bg-base-200.card-bordered
+                .card-body.p-3.space-y-1
+                  p.text-xs.font-semibold.uppercase.tracking-wider.text-base-content/60
+                    = t('.labels.engagement_type')
+                  p.text-sm.font-bold.text-base-content
+                    = @project.engagement_type.to_s.humanize
 
           .flex.flex-col.sm:flex-row.items-center.gap-4
             = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-primary w-full sm:w-auto' do
-              | Build Similar Outcomes
+              = t('.buttons.build_similar_outcomes')
             - if @project.url.present?
               = link_to @project.url, class: 'btn btn-outline btn-primary w-full sm:w-auto' do
-                | View Live Project
+                = t('.buttons.view_live_project')
 
     .grid.grid-cols-1.lg:grid-cols-3.gap-6
       .lg:col-span-2.space-y-6
-        .card.card-shell.shadow-sm
+        .card.bg-base-100.card-bordered.card-shell.shadow-sm
           .card-body.p-8.space-y-4
             h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
-              | Challenge
+              = t('.sections.challenge')
             p.text-sm.md:text-base.leading-relaxed.text-base-content/75
               = challenge_summary
-        .card.card-shell.shadow-sm
+        .card.bg-base-100.card-bordered.card-shell.shadow-sm
           .card-body.p-8.space-y-4
             h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
-              | Solution
+              = t('.sections.solution')
             p.text-sm.md:text-base.leading-relaxed.text-base-content/75
               = solution_summary
-        .card.card-shell.shadow-sm
+        .card.bg-base-100.card-bordered.card-shell.shadow-sm
           .card-body.p-8.space-y-4
             h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
-              | Business Value Delivered
+              = t('.sections.business_value_delivered')
             p.text-sm.md:text-base.leading-relaxed.text-base-content/75
               = outcome_summary
 
         - if public_contributions.any?
-          .card.card-shell.shadow-sm
+          .card.bg-base-100.card-bordered.card-shell.shadow-sm
             .card-body.p-8.space-y-4
               h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
-                | Scope Of Work
+                = t('.sections.scope_of_work')
               .space-y-3
                 - public_contributions.limit(8).each do |contribution|
-                  .rounded-lg.bg-base-200.p-3.space-y-1
-                    p.text-sm.font-bold.text-base-content
-                      = contribution.name
-                    - if contribution.impact_statement.present?
-                      p.text-sm.text-base-content/70
-                        = contribution.impact_statement
+                  .card.bg-base-200.card-bordered
+                    .card-body.p-3.space-y-1
+                      p.text-sm.font-bold.text-base-content
+                        = contribution.name
+                      - if contribution.impact_statement.present?
+                        p.text-sm.text-base-content/70
+                          = contribution.impact_statement
 
       .space-y-6
-        .card.card-shell.shadow-sm
+        .card.bg-base-100.card-bordered.card-shell.shadow-sm
           .card-body.p-6.space-y-3
             h3.text-xl.font-extrabold.text-base-content
-              | Engagement Snapshot
+              = t('.sections.engagement_snapshot')
             p.text-sm.text-base-content/70
               = @project.year.present? ? "Project year: #{@project.year}" : 'Recent delivery engagement'
             p.text-sm.text-base-content/70
               = @project.url.present? ? 'Live project available for review.' : 'Private implementation with non-public delivery details.'
             = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-primary w-full' do
-              | Discuss Your Project
+              = t('.buttons.discuss_your_project')
 
-        .card.bg-primary.text-primary-content.shadow-sm.rounded-xl
+        .card.bg-primary.text-primary-content.card-bordered.shadow-sm.rounded-xl
           .card-body.p-6.space-y-3
             h3.text-xl.font-extrabold.text-white
-              | Want Results Like This?
+              = t('.cta.want_results_like_this')
             p.text-sm.text-white/85
-              | We partner with teams that need senior execution, cleaner architecture, and faster delivery.
+              = t('.cta.description')
             = link_to new_business_contact_forms_path(locale: I18n.locale), class: 'btn btn-outline border-white text-white hover:bg-white hover:text-primary w-full' do
-              | Book Technical Consultation
+              = t('.cta.book_technical_consultation')
 
         - if highlighted_contributions.any?
-          .card.card-shell.shadow-sm
+          .card.bg-base-100.card-bordered.card-shell.shadow-sm
             .card-body.p-6.space-y-3
               h3.text-xl.font-extrabold.text-base-content
-                | Highlighted Contributions
+                = t('.sections.highlighted_contributions')
               .space-y-3
                 - highlighted_contributions.each do |contribution|
-                  .rounded-lg.bg-base-200.p-3.space-y-1
-                    p.text-sm.font-bold.text-base-content
-                      = contribution.name
-                    - if contribution.impact_statement.present?
-                      p.text-sm.text-base-content/70
-                        = contribution.impact_statement
+                  .card.bg-base-200.card-bordered
+                    .card-body.p-3.space-y-1
+                      p.text-sm.font-bold.text-base-content
+                        = contribution.name
+                      - if contribution.impact_statement.present?
+                        p.text-sm.text-base-content/70
+                          = contribution.impact_statement
 
     - page_image_urls = @project.page_images.map { |img| img.image_url }.compact.reject { |u| u.blank? }
     - if page_image_urls.any?
       .space-y-4
         h2.text-2xl.md:text-3xl.font-extrabold.text-base-content
-          | Delivery Gallery
+          = t('.sections.delivery_gallery')
         .grid.grid-cols-1.md:grid-cols-2.gap-6
           - page_image_urls.each do |image_url|
-            .rounded-2xl.overflow-hidden.card-shell.shadow-sm
-              = image_tag image_url, class: 'w-full h-auto'
+            .card.bg-base-100.card-bordered.overflow-hidden.card-shell.shadow-sm
+              figure
+                = image_tag image_url, class: 'w-full h-auto'
