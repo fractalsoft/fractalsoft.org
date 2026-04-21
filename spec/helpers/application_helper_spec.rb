@@ -11,8 +11,8 @@ RSpec.describe ApplicationHelper do
     end
 
     context 'when flash type is alert' do
-      it 'returns danger' do
-        expect(flash_class('alert')).to eq('danger')
+      it 'returns error' do
+        expect(flash_class('alert')).to eq('error')
       end
     end
   end

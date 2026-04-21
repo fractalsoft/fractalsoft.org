@@ -42,7 +42,7 @@
       / Right form column (card)
       .card.shadow-xl.card-shell
         .card-body.p-8
-          = simple_form_for @business_contact_form, defaults: { wrapper: :vertical_file }, html: { class: 'space-y-4 js-business-contact-form', novalidate: true, data: { required_message_template: t('.validation.required_message_template'), invalid_email_message: t('.validation.invalid_email_message') } } do |f|
+          = simple_form_for @business_contact_form, html: { class: 'space-y-4 js-business-contact-form', novalidate: true, data: { required_message_template: t('.validation.required_message_template'), invalid_email_message: t('.validation.invalid_email_message') } } do |f|
             .alert.alert-error.hidden.js-business-form-error-summary aria-live='polite' role='alert'
               .flex.items-start.gap-2
                 = lucide_icon 'alert-triangle', class: 'w-5 h-5 shrink-0 mt-0.5'

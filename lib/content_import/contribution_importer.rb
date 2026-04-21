@@ -17,6 +17,7 @@ module ContentImport
       @dry_run = dry_run
       @file_paths = file_paths
       @project_slugs = ContentImport::ProjectImporter.known_slugs
+      @imported_count = 0
     end
 
     def import!
@@ -25,7 +26,7 @@ module ContentImport
         validate_payload!(payload, path)
         import_payload!(payload, path)
       end
-      @project_slugs
+      @imported_count
     end
 
     protected
@@ -99,6 +100,7 @@ module ContentImport
       end
 
       contribution.save! unless @dry_run
+      @imported_count += 1
     end
 
     def with_original_locale
