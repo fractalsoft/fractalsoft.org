@@ -1,4 +1,4 @@
-class AddValueStorytellingFieldsToProjectsAndContributions < ActiveRecord::Migration[7.1]
+class AddValueStorytellingFieldsToProjectsAndContributions < ActiveRecord::Migration[8.0]
   def change
     change_table :projects, bulk: true do |t|
       t.string :industry
