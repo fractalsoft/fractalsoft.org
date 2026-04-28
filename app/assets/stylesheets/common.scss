@@ -83,3 +83,13 @@ p {
   border-radius: 0.75rem;
   background-color: var(--color-base-100);
 }
+
+.contact-map {
+  filter: none;
+  transition: filter 180ms ease;
+}
+
+html[data-theme='dark'] .contact-map,
+[data-theme='dark'] .contact-map {
+  filter: invert(90%) hue-rotate(180deg) saturate(70%) brightness(88%) contrast(112%);
+}

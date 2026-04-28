@@ -8,9 +8,6 @@
 
   .space-y-4.mt-8
     .flex.flex-wrap.gap-2
-      - if project.year.present?
-        span.badge.badge-ghost.badge-sm
-          = t('projects.index.labels.year', year: project.year)
       - if project.industry.present?
         span.badge.badge-ghost.badge-sm
           = project.industry.to_s.humanize

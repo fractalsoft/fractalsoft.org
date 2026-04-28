@@ -17,9 +17,6 @@
               span.inline-flex.items-center.rounded-full.bg-primary/90.text-white.px-3.py-1.font-black.uppercase.tracking-wider
                 = @article.kind.humanize
               span.inline-flex.items-center.gap-1.5.rounded-full.bg-black/35.text-white/90.px-3.py-1.font-semibold
-                = lucide_icon 'calendar-days', class: 'w-3.5 h-3.5'
-                = l(@article.published_at.to_date)
-              span.inline-flex.items-center.gap-1.5.rounded-full.bg-black/35.text-white/90.px-3.py-1.font-semibold
                 = lucide_icon 'clock-3', class: 'w-3.5 h-3.5'
                 = @article.read_time
             h1.text-3xl.md:text-5xl.font-black.leading-tight.text-white.max-w-4xl

@@ -323,8 +323,6 @@ pl:
       hero:
         impact: Mierzalny wpływ
         title: Wyrafinowana inżynieria
-      labels:
-        year: 'Rok: %{year}'
       metrics:
         code_coverage: Pokrycie kodu
         cost_reduction: Redukcja kosztów
@@ -350,7 +348,6 @@ pl:
       labels:
         engagement_type: Typ współpracy
         industry: Branża
-        project_year: Rok projektu
       sections:
         business_value_delivered: Dostarczona wartość biznesowa
         challenge: Wyzwanie
