@@ -61,7 +61,6 @@
                 = article.summary
               .flex.items-center.gap-2.text-xs.text-base-content/70
                 span = article.author_name
-                span = l(article.published_at.to_date)
               = link_to innovation_hub_article_path(article, locale: I18n.locale), class: 'inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary' do
                 = t('innovation_hubs.index.article.read')
                 = lucide_icon 'arrow-up-right', class: 'w-4 h-4'

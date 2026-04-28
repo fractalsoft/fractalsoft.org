@@ -323,8 +323,6 @@ en:
       hero:
         impact: Measurable Impact
         title: Sophisticated Engineering
-      labels:
-        year: 'Year: %{year}'
       metrics:
         code_coverage: Code Coverage
         cost_reduction: Cost Reduction
@@ -350,7 +348,6 @@ en:
       labels:
         engagement_type: Engagement Type
         industry: Industry
-        project_year: Project Year
       sections:
         business_value_delivered: Business Value Delivered
         challenge: Challenge
