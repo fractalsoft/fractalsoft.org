@@ -1,0 +1,25 @@
+ARG RUBY_VERSION=3.3.4
+FROM ruby:${RUBY_VERSION}-bookworm
+
+WORKDIR /rails
+
+ENV RAILS_ENV=development \
+    BUNDLE_PATH=/usr/local/bundle
+
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y \
+      build-essential \
+      git \
+      curl \
+      libpq-dev \
+      libvips \
+      pkg-config \
+      python-is-python3 \
+      libyaml-dev \
+      postgresql-client && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY Gemfile Gemfile.lock ./
+RUN gem install bundler -v 2.5.11 && bundle install
+
+EXPOSE 3000
