@@ -5,4 +5,13 @@ if ! gem list foreman -i --silent; then
   gem install foreman
 fi
 
-exec foreman start -f Procfile.dev "$@"
+cleanup() {
+  rm -f tmp/pids/server.pid tmp/pids/puma.pid tmp/pids/puma.state
+}
+
+cleanup
+trap cleanup EXIT INT TERM
+
+FOREMAN_BIN="$(ruby -e 'print Gem.bindir')/foreman"
+FOREMAN_ENV_FILE="${FOREMAN_ENV_FILE:-.env}"
+"$FOREMAN_BIN" start -e "$FOREMAN_ENV_FILE" -f Procfile.dev "$@"

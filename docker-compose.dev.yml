@@ -1,0 +1,46 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file: .env.development
+    environment:
+      RAILS_ENV: development
+      HOST: 0.0.0.0
+      PORT: 3000
+      FOREMAN_ENV_FILE: /dev/null
+      POSTGRES_HOST: db
+    volumes:
+      - .:/rails
+      - bundle_cache:/usr/local/bundle
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    tty: true
+    stdin_open: true
+    command: >
+      bash -lc "bundle install &&
+      until getent hosts db >/dev/null; do echo 'Waiting for db DNS...'; sleep 1; done &&
+      until pg_isready -h db -U postgres >/dev/null 2>&1; do echo 'Waiting for Postgres...'; sleep 1; done &&
+      bin/rails db:prepare &&
+      rm -f tmp/pids/server.pid &&
+      bin/dev"
+
+  db:
+    env_file: .env.development
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data_dev:
+  bundle_cache:
