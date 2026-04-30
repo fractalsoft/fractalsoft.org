@@ -3,7 +3,7 @@ kind: case_note
 display: true
 featured: false
 position: 6
-author_name: Fractal Soft Engineering
+author_id: lisu
 read_time: 5 min read
 published_at: "2026-03-01"
 cover_image_url: /innovation-articles/case-note-legacy-audit-first-30-days.png

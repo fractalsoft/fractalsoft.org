@@ -7,7 +7,7 @@ require 'yaml'
 module ContentImport
   class InnovationHubArticleImporter
     ARTICLE_DIR = Rails.root.join('content/innovation_hub_articles').freeze
-    REQUIRED_KEYS = %w[slug kind author_name read_time published_at translations].freeze
+    REQUIRED_KEYS = %w[slug kind author_id read_time published_at translations].freeze
 
     def self.import!(dry_run: false, file_paths: nil)
       new(dry_run: dry_run, file_paths: file_paths).import!
@@ -52,11 +52,13 @@ module ContentImport
       missing = REQUIRED_KEYS.select { |key| payload[key].blank? }
       raise ArgumentError, "Missing keys #{missing.join(', ')} in #{path}" if missing.any?
       raise ArgumentError, "translations must be a locale hash in #{path}" unless payload['translations'].is_a?(Hash)
+      raise ArgumentError, "Unknown author_id '#{payload['author_id']}' in #{path}" if resolve_author(payload['author_id']).nil?
 
       validate_translation_titles!(payload.fetch('translations'), path)
     end
 
     def import_article!(payload)
+      author = resolve_author(payload.fetch('author_id'))
       article = InnovationHubArticle.find_or_initialize_by(slug: payload.fetch('slug'))
       article.assign_attributes(
         title: translated_title(payload),
@@ -64,7 +66,8 @@ module ContentImport
         featured: payload.fetch('featured') { false },
         kind: payload.fetch('kind'),
         position: payload.fetch('position') { 0 },
-        author_name: payload.fetch('author_name'),
+        author_id: author.id,
+        author_name: payload['author_name'].presence || author.full_name,
         read_time: payload.fetch('read_time'),
         published_at: Time.zone.parse(payload.fetch('published_at').to_s),
         cover_image_url: payload['cover_image_url'],
@@ -89,6 +92,11 @@ module ContentImport
 
       article.save! unless @dry_run
       imported_slugs << article.slug
+    end
+
+    def resolve_author(author_id)
+      id = author_id.to_s
+      Person.find_by(id: id) || Person.find_by(nickname: id)
     end
 
     def translated_title(payload)

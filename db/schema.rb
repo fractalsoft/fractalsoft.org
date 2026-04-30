@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_04_20_130500) do
+ActiveRecord::Schema[8.0].define(version: 2026_04_30_101000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
@@ -131,6 +131,8 @@ ActiveRecord::Schema[8.0].define(version: 2026_04_20_130500) do
     t.string "external_url"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.uuid "author_id"
+    t.index ["author_id"], name: "index_innovation_hub_articles_on_author_id"
     t.index ["display"], name: "index_innovation_hub_articles_on_display"
     t.index ["featured"], name: "index_innovation_hub_articles_on_featured"
     t.index ["kind"], name: "index_innovation_hub_articles_on_kind"
@@ -359,4 +361,6 @@ ActiveRecord::Schema[8.0].define(version: 2026_04_20_130500) do
     t.index ["locale"], name: "index_technology_translations_on_locale"
     t.index ["technology_id"], name: "index_technology_translations_on_technology_id"
   end
+
+  add_foreign_key "innovation_hub_articles", "people", column: "author_id"
 end

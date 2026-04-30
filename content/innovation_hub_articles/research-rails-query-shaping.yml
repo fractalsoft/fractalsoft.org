@@ -3,7 +3,7 @@ kind: research
 display: true
 featured: true
 position: 1
-author_name: Fractal Soft Engineering
+author_id: lisu
 read_time: 14 min read
 published_at: "2026-03-20"
 cover_image_url: /innovation-articles/rails-query-shaping-for-predictable-latency.png

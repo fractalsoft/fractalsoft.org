@@ -3,7 +3,7 @@ kind: experiment
 display: true
 featured: false
 position: 5
-author_name: Fractal Soft Engineering
+author_id: lisu
 read_time: 9 min read
 published_at: "2026-03-05"
 cover_image_url: /innovation-articles/experiment-background-jobs-backpressure.png

@@ -35,13 +35,18 @@ RSpec.describe InnovationHubsController do
 
   describe 'GET #show' do
     it 'renders a visible article' do
+      author = Person.create!(
+        nickname: 'fractal',
+        first_name: 'Fractal',
+        last_name: 'Team'
+      )
       article = InnovationHubArticle.create!(
         title: 'Sample',
         slug: 'sample-article',
         kind: 'research',
         display: true,
         featured: false,
-        author_name: 'Fractal',
+        author_id: author.id,
         read_time: '5 min',
         published_at: Time.zone.now
       )
