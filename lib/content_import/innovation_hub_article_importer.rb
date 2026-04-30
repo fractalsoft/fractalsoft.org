@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength
+# rubocop:disable Metrics/AbcSize, Metrics/ClassLength, Metrics/MethodLength
 
 require 'yaml'
 
@@ -60,6 +60,13 @@ module ContentImport
     def import_article!(payload)
       author = resolve_author(payload.fetch('author_id'))
       article = InnovationHubArticle.find_or_initialize_by(slug: payload.fetch('slug'))
+      apply_base_attributes(article, payload, author)
+      apply_translations(article, payload.fetch('translations'))
+      validate_article!(article)
+      persist_article!(article)
+    end
+
+    def apply_base_attributes(article, payload, author)
       article.assign_attributes(
         title: translated_title(payload),
         display: payload.fetch('display') { true },
@@ -73,23 +80,33 @@ module ContentImport
         cover_image_url: payload['cover_image_url'],
         external_url: payload['external_url']
       )
+    end
 
+    def apply_translations(article, translations)
       with_original_locale do
-        payload.fetch('translations').each do |locale, translation|
+        translations.each do |locale, translation|
           next unless translation.is_a?(Hash)
 
           I18n.locale = locale.to_sym
-          article.title = translation['title']
-          article.summary = translation['summary']
-          article.body = translation['body']
+          assign_translation(article, translation)
         end
       end
+    end
 
-      unless article.valid?
-        raise ArgumentError,
-              "Invalid innovation hub article '#{article.slug}': #{article.errors.full_messages.join(', ')}"
-      end
+    def assign_translation(article, translation)
+      article.title = translation['title']
+      article.summary = translation['summary']
+      article.body = translation['body']
+    end
 
+    def validate_article!(article)
+      return if article.valid?
+
+      raise ArgumentError,
+            "Invalid innovation hub article '#{article.slug}': #{article.errors.full_messages.join(', ')}"
+    end
+
+    def persist_article!(article)
       article.save! unless @dry_run
       imported_slugs << article.slug
     end
@@ -122,4 +139,4 @@ module ContentImport
     end
   end
 end
-# rubocop:enable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength
+# rubocop:enable Metrics/AbcSize, Metrics/ClassLength, Metrics/MethodLength

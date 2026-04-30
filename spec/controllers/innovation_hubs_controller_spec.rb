@@ -47,6 +47,7 @@ RSpec.describe InnovationHubsController do
         display: true,
         featured: false,
         author_id: author.id,
+        author_name: author.full_name,
         read_time: '5 min',
         published_at: Time.zone.now
       )

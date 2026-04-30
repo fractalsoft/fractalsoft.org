@@ -42,23 +42,28 @@ module ApplicationHelper
 
     Language.available.map do |locale, name|
       locale_value = locale.to_sym
-      target_url = url_for(locale: locale_value, only_path: true, params: request.query_parameters)
-
-      {
-        name:,
-        locale: locale_value,
-        active: locale_value == current_locale,
-        target_url:,
-        hreflang: locale_value == I18n.default_locale ? 'x-default' : locale_value
-      }
-    rescue ActionController::UrlGenerationError
-      {
-        name:,
-        locale: locale_value,
-        active: locale_value == current_locale,
-        target_url: root_path(locale: locale_value),
-        hreflang: locale_value == I18n.default_locale ? 'x-default' : locale_value
-      }
+      language_option(name, locale_value, current_locale)
     end
+  end
+
+  private
+
+  def language_option(name, locale_value, current_locale)
+    option = base_language_option(name, locale_value)
+    option.merge(active: locale_value == current_locale)
+  end
+
+  def base_language_option(name, locale_value)
+    { name: name, locale: locale_value, target_url: language_target_url(locale_value), hreflang: hreflang_for(locale_value) }
+  end
+
+  def language_target_url(locale_value)
+    url_for(locale: locale_value, only_path: true, params: request.query_parameters)
+  rescue ActionController::UrlGenerationError
+    root_path(locale: locale_value)
+  end
+
+  def hreflang_for(locale_value)
+    locale_value == I18n.default_locale ? 'x-default' : locale_value
   end
 end
