@@ -1,6 +1,12 @@
 footer.footer.bg-neutral-900.text-neutral-100.border-t.border-neutral-700.py-8
   .container.mx-auto.px-4
-    = link_to root_path, class: 'inline-flex items-center gap-2 text-neutral-100 hover:text-white' do
-      = image_tag '/icons/brand/fractalsoft.svg', alt: 'Fractal Soft', id: 'fractalsoft-logo-footer', size: '30'
-      span.font-semibold.text-lg.text-neutral-100
-        | Fractal Soft
+    .flex.flex-col.md:flex-row.md:items-center.md:justify-between.gap-4.w-full
+      = link_to root_path, class: 'inline-flex items-center gap-2 text-neutral-100 hover:text-white' do
+        = image_tag '/icons/brand/fractalsoft.svg', alt: 'Fractal Soft', id: 'fractalsoft-logo-footer', size: '30'
+        span.font-semibold.text-lg.text-neutral-100
+          | Fractal Soft
+      .flex.items-center.gap-2.ml-auto.self-end
+        button.js-theme-toggle.btn.btn-sm.shadow-none.bg-neutral-800.border-neutral-600.text-neutral-100.hover:bg-neutral-700.hover:border-neutral-500 type='button' aria-label='Toggle theme'
+          = lucide_icon 'moon', class: 'w-4 h-4 js-theme-icon-dark'
+          = lucide_icon 'sun', class: 'w-4 h-4 js-theme-icon-light hidden'
+        = render 'layouts/shared/languages'
