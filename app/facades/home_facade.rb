@@ -21,7 +21,7 @@ class HomeFacade
   private
 
   def build_innovation_hub_highlights
-    base = InnovationHubArticle.visible.recent.includes(:translations)
+    base = InnovationHubArticle.visible.recent.includes(:translations, :author)
 
     research = base.where(kind: %w[research experiment]).first
     insight = base.where(kind: %w[insight case_note]).first

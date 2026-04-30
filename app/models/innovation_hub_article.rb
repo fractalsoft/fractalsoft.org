@@ -7,6 +7,8 @@ class InnovationHubArticle < ApplicationRecord
   friendly_id :slug, use: :slugged
   before_validation :sync_base_title
 
+  belongs_to :author, class_name: 'Person', foreign_key: :author_id, optional: true
+
   enum :kind, {
     research: 'research',
     insight: 'insight',
@@ -18,7 +20,12 @@ class InnovationHubArticle < ApplicationRecord
   scope :recent, -> { order(published_at: :desc, position: :asc) }
   scope :featured, -> { where(featured: true) }
 
-  validates :title, :slug, :kind, :author_name, :read_time, :published_at, presence: true
+  validates :title, :slug, :kind, :read_time, :published_at, presence: true
+  validates :author_name, presence: true, unless: :author
+
+  def author_display_name
+    author&.full_name.to_s.presence || author_name
+  end
 
   private
 

@@ -41,7 +41,7 @@ class InnovationHubFacade
   private
 
   def load_articles
-    @articles = InnovationHubArticle.visible.recent.includes(:translations)
+    @articles = InnovationHubArticle.visible.recent.includes(:translations, :author)
     @research_articles = @articles.research.limit(6)
     @insight_articles = @articles.where(kind: ARTICLE_FILTER_KINDS.fetch('insights')).limit(6)
     @featured_article = @articles.featured.first || @insight_articles.first || @research_articles.first
