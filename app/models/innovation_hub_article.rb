@@ -7,7 +7,7 @@ class InnovationHubArticle < ApplicationRecord
   friendly_id :slug, use: :slugged
   before_validation :sync_base_title
 
-  belongs_to :author, class_name: 'Person', foreign_key: :author_id, optional: true
+  belongs_to :author, class_name: 'Person', inverse_of: :innovation_hub_articles, optional: true
 
   enum :kind, {
     research: 'research',

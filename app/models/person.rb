@@ -22,6 +22,7 @@ class Person < ApplicationRecord
   scope :sorted, -> { order(position: :asc) }
 
   has_many :contributions, dependent: :destroy
+  has_many :innovation_hub_articles, foreign_key: :author_id, inverse_of: :author, dependent: :nullify
   has_many :projects, -> { distinct }, through: :contributions
   has_many :technological_skills, -> { sorted }, inverse_of: :person, dependent: :destroy
   has_many :technologies, through: :technological_skills
