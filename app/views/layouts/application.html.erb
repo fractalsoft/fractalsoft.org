@@ -39,5 +39,47 @@
   <%= yield %>
 </main>
 <%= render 'layouts/shared/footer' %>
+<script>
+  (function() {
+    function resolvedTheme() {
+      var storedTheme = localStorage.getItem('theme');
+      if (storedTheme === 'dark' || storedTheme === 'light') return storedTheme;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      document.querySelectorAll('.js-theme-toggle').forEach(function(toggle) {
+        var darkIcon = toggle.querySelector('.js-theme-icon-dark');
+        var lightIcon = toggle.querySelector('.js-theme-icon-light');
+        if (!darkIcon || !lightIcon) return;
+        if (theme === 'dark') {
+          darkIcon.classList.add('hidden');
+          lightIcon.classList.remove('hidden');
+        } else {
+          darkIcon.classList.remove('hidden');
+          lightIcon.classList.add('hidden');
+        }
+      });
+    }
+
+    function setupThemeToggle() {
+      var theme = resolvedTheme();
+      applyTheme(theme);
+      document.querySelectorAll('.js-theme-toggle').forEach(function(toggle) {
+        if (toggle.dataset.themeBound === 'true') return;
+        toggle.dataset.themeBound = 'true';
+        toggle.addEventListener('click', function() {
+          var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          applyTheme(nextTheme);
+        });
+      });
+    }
+
+    document.addEventListener('turbo:load', setupThemeToggle);
+    document.addEventListener('DOMContentLoaded', setupThemeToggle);
+  })();
+</script>
 </body>
 </html>

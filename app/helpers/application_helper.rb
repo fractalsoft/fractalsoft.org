@@ -32,4 +32,33 @@ module ApplicationHelper
   def flash_class(flash_type)
     FLASH_CLASS_MAP.fetch(flash_type.to_sym) { 'info' }
   end
+
+  def current_language_label
+    Language.available[I18n.locale.to_sym] || I18n.locale.to_s.upcase
+  end
+
+  def language_switch_options
+    current_locale = I18n.locale.to_sym
+
+    Language.available.map do |locale, name|
+      locale_value = locale.to_sym
+      target_url = url_for(locale: locale_value, only_path: true, params: request.query_parameters)
+
+      {
+        name:,
+        locale: locale_value,
+        active: locale_value == current_locale,
+        target_url:,
+        hreflang: locale_value == I18n.default_locale ? 'x-default' : locale_value
+      }
+    rescue ActionController::UrlGenerationError
+      {
+        name:,
+        locale: locale_value,
+        active: locale_value == current_locale,
+        target_url: root_path(locale: locale_value),
+        hreflang: locale_value == I18n.default_locale ? 'x-default' : locale_value
+      }
+    end
+  end
 end

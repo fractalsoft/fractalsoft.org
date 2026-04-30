@@ -1,8 +1,8 @@
-ul.menu.menu-sm
-  - Language.available.each_pair do |locale, name|
-    - I18n.with_locale(locale) do
-      - url = yield(:current_page_url).presence || url_for(locale: locale.to_s)
-      - url = '#' if url == request.env['PATH_INFO']
-      - hreflang = (locale == I18n.default_locale) ? 'x-default' : locale
+.dropdown.dropdown-end.dropdown-top
+  button.btn.btn-sm.shadow-none.bg-neutral-800.border-neutral-600.text-neutral-100.hover:bg-neutral-700.hover:border-neutral-500 tabindex='0'
+    span = current_language_label
+    = lucide_icon 'chevron-down', class: 'w-4 h-4'
+  ul class='dropdown-content z-[60] menu p-2 shadow rounded-box mt-2 w-44 bg-neutral-800 border border-neutral-600 text-neutral-100' tabindex='0'
+    - language_switch_options.each do |option|
       li
-        = link_to name, url, hreflang: hreflang, rel: 'alternate', class: 'btn btn-ghost justify-start'
+        = link_to option[:name], option[:target_url], hreflang: option[:hreflang], rel: 'alternate', class: [option[:active] ? 'active font-bold' : nil, 'hover:bg-neutral-700 text-neutral-100'].compact.join(' ')
