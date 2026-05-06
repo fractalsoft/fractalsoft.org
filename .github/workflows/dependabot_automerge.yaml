@@ -107,6 +107,7 @@ jobs:
             if echo "$LABELS" | grep -q "automerge-ready"; then
               if [[ "$MERGEABLE" == "MERGEABLE" ]]; then
                 echo "Merging PR #$NUMBER"
+                gh pr review $NUMBER --approve --body "CI auto-approval for Dependabot PR after qualification and checks." || echo "Approval step skipped for #$NUMBER"
                 gh pr merge $NUMBER --auto --rebase || echo "Merge failed for #$NUMBER"
               else
                 echo "PR #$NUMBER not mergeable yet"
