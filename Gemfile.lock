@@ -234,7 +234,7 @@ GEM
       dry-inflector (~> 1.0)
       dry-logic (~> 1.4)
       zeitwerk (~> 2.6)
-    erb (6.0.2)
+    erb (6.0.4)
     erubi (1.13.1)
     erubis (2.7.0)
     factory_bot (6.5.6)
@@ -309,7 +309,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.8.2)
-    irb (1.17.0)
+    irb (1.18.0)
       pp (>= 0.6.0)
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
@@ -611,7 +611,7 @@ GEM
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
-    slim-rails (3.7.0)
+    slim-rails (4.0.0)
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 6.0, != 5.0.0)
@@ -735,7 +735,7 @@ DEPENDENCIES
   rubycritic
   shoulda-matchers
   simple_form (~> 5.4)
-  slim-rails (~> 3.7)
+  slim-rails (~> 4.0)
   spring
   stackprof
   tailwindcss-rails (~> 4.4)
