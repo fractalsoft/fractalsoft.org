@@ -5,8 +5,10 @@ Rails.application.configure do
   config.eager_load = true
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
-  # Skip during Docker asset precompile (`SECRET_KEY_BASE_DUMMY=1`).
-  config.require_master_key = ENV['SECRET_KEY_BASE_DUMMY'].blank?
+  # This app has no credentials.yml.enc; runtime settings come from Fly env vars.
+  # Require a master key only when one is actually present.
+  config.require_master_key = ENV['RAILS_MASTER_KEY'].present? ||
+    File.exist?(Rails.root.join('config/master.key'))
   config.active_storage.service = :local
   config.force_ssl = true
 
