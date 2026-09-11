@@ -1,9 +1,9 @@
 # syntax = docker/dockerfile:experimental
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
-# https://github.com/evilmartians/fullstaq-ruby-docker
 ARG RUBY_VERSION=3.3.4
-FROM ruby:${RUBY_VERSION}-bullseye AS base
+# Debian 11 (bullseye) LTS ended 2026-08-31; its apt security metadata is expired.
+FROM ruby:${RUBY_VERSION}-bookworm AS base
 
 ARG BUNDLER_VERSION=2.5.11
 
