@@ -36,8 +36,8 @@ RUN gem install bundler -v "${BUNDLER_VERSION}" && \
 # Copy application code
 COPY . .
 
-# Precompile assets without requiring secret key
-RUN SECRET_KEY_BASE=DUMMY bundle exec rails assets:precompile
+# Precompile assets without requiring RAILS_MASTER_KEY
+RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
 
 # Final image
 FROM base
