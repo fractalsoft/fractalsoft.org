@@ -2,21 +2,89 @@ name: Deploy to production
 
 on:
   workflow_dispatch:
+    inputs:
+      command:
+        description: Action to run against the Fly.io production app
+        type: choice
+        required: true
+        default: status
+        options:
+          - status
+          - deploy
+      reason:
+        description: Optional note shown in the run summary
+        required: false
+        type: string
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
-  deployment:
-    name: Deployment
+  fly:
+    name: ${{ github.event.inputs.command == 'deploy' && 'Deploy' || 'Status' }}
     runs-on: ubuntu-latest
-    environment: production
+    timeout-minutes: 25
+    environment:
+      name: production
+      url: https://fractalsoft.org
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
-      - name: Fly actions
-        uses: superfly/flyctl-actions/setup-flyctl@master
-        with:
-          version: 0.1.134
-      - name: Fly deploy
-        run: flyctl deploy --remote-only
+
+      - name: Verify Fly API token
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          if [ -z "$FLY_API_TOKEN" ]; then
+            echo "::error::Missing FLY_API_TOKEN. Add it as a GitHub Actions secret on the production environment (or as a repository secret)."
+            exit 1
+          fi
+
+      - name: Write run summary
+        env:
+          FLY_COMMAND: ${{ github.event.inputs.command }}
+          GIT_REF: ${{ github.ref }}
+          GIT_SHA: ${{ github.sha }}
+          GIT_ACTOR: ${{ github.actor }}
+          DEPLOY_REASON: ${{ github.event.inputs.reason }}
+        run: |
+          {
+            echo "## Fly.io ${FLY_COMMAND}"
+            echo ""
+            echo "- App: \`fractalsoft-staging\`"
+            echo "- Ref: \`${GIT_REF}\`"
+            echo "- SHA: \`${GIT_SHA}\`"
+            echo "- Actor: \`${GIT_ACTOR}\`"
+            echo "- Reason: ${DEPLOY_REASON:-n/a}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Setup flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@master
+        with:
+          version: 0.4.102
+
+      - name: Fly status
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          flyctl status
+          echo "::group::Recent releases"
+          flyctl releases --limit 10
+          echo "::endgroup::"
+          echo "::group::Certificates"
+          flyctl certs list
+          echo "::endgroup::"
+          echo "::group::Secret names"
+          flyctl secrets list
+          echo "::endgroup::"
+
+      - name: Fly deploy
+        if: github.event.inputs.command == 'deploy'
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: flyctl deploy --remote-only --wait-timeout 10m

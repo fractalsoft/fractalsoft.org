@@ -1,0 +1,6 @@
+# Keep Unix line endings so bind-mounted scripts run in Linux containers
+# even when Git's core.autocrlf is true on Windows.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
