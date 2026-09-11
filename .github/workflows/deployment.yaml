@@ -74,7 +74,7 @@ jobs:
         run: |
           flyctl status
           echo "::group::Recent releases"
-          flyctl releases --limit 10
+          flyctl releases --image
           echo "::endgroup::"
           echo "::group::Certificates"
           flyctl certs list
