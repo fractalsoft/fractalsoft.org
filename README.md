@@ -66,8 +66,8 @@ Deploys are manual GitHub Actions only. Nothing deploys on push.
    `fly tokens create deploy -x 999999h --app fractalsoft-staging`
 2. In the GitHub repo, open **Settings → Environments → production**
    (created automatically on the first workflow run if missing).
-3. Add a secret named `FLY_API_TOKEN` with the token value, including
-   the leading `FlyV1 `.
+3. Add a secret named `FLY_API_TOKEN` with the full token value.
+   Copy it exactly, including the `FlyV1` prefix and the space after it.
 
 ### Run a deploy
 
