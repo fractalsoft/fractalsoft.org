@@ -9,9 +9,9 @@ RSpec.describe 'Application loads the seeds' do
     visit people_path(locale: :en)
 
     aggregate_failures('verify first names of all team members') do
-      expect(page).to have_content 'Agnieszka'
-      expect(page).to have_content 'Alex'
-      expect(page).to have_content 'Grzegorz'
+      expect(page).to have_text 'Agnieszka'
+      expect(page).to have_text 'Alex'
+      expect(page).to have_text 'Grzegorz'
     end
   end
 end
