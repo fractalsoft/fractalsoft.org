@@ -56,9 +56,27 @@ docker compose -f docker-compose.dev.yml down
 
 ## Deployment
 
-Deployments are handled with Fly.io via GitHub Actions.
-Use the `Deploy to production` workflow (`workflow_dispatch`) to run a
-manual deploy, which executes `flyctl deploy --remote-only`.
+Production lives on Fly.io as the app `fractalsoft-staging`
+(historical name) and is served at [https://fractalsoft.org](https://fractalsoft.org).
+Deploys are manual GitHub Actions only. Nothing deploys on push.
+
+### One-time setup
+
+1. Create an app-scoped Fly deploy token:
+   `fly tokens create deploy -x 999999h --app fractalsoft-staging`
+2. In the GitHub repo, open **Settings → Environments → production**
+   (created automatically on the first workflow run if missing).
+3. Add a secret named `FLY_API_TOKEN` with the token value, including
+   the leading `FlyV1 `.
+
+### Run a deploy
+
+1. Open **Actions → Deploy to production → Run workflow**.
+2. Choose the branch (usually `main`).
+3. Set **Action** to `status` to inspect the live app without changing
+   it, or `deploy` to build and release.
+4. `deploy` runs `flyctl deploy --remote-only`, then Fly executes
+   `scripts/deploy/after_release` (cache clear, migrate, seed).
 
 ## Useful Commands
 
