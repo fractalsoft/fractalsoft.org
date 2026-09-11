@@ -11,6 +11,6 @@ class CommunitiesController < ApplicationController
 
   # GET /communities/slug
   def show
-    @community = Community.friendly.find(params[:id])
+    @community = Community.friendly.find(params.expect(:id))
   end
 end

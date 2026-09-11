@@ -6,6 +6,6 @@ class InnovationHubsController < ApplicationController
   end
 
   def show
-    @article = InnovationHubArticle.visible.friendly.find(params[:id])
+    @article = InnovationHubArticle.visible.friendly.find(params.expect(:id))
   end
 end

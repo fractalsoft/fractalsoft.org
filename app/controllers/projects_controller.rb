@@ -6,6 +6,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.friendly.find(params[:id])
+    @project = Project.friendly.find(params.expect(:id))
   end
 end

@@ -11,6 +11,6 @@ class JobOffersController < ApplicationController
 
   # GET /jobs/slug
   def show
-    @job_offer = JobOffer.find(params[:id])
+    @job_offer = JobOffer.find(params.expect(:id))
   end
 end
