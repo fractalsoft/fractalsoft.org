@@ -5,7 +5,8 @@ Rails.application.configure do
   config.eager_load = true
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
-  config.require_master_key = true
+  # Skip during Docker asset precompile (`SECRET_KEY_BASE_DUMMY=1`).
+  config.require_master_key = ENV['SECRET_KEY_BASE_DUMMY'].blank?
   config.active_storage.service = :local
   config.force_ssl = true
 
