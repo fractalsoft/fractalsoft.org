@@ -14,7 +14,13 @@ document.addEventListener("turbolinks:load", function() {
       document.querySelectorAll('iframe.map').forEach(function (iframe) {
         iframe.classList.add('hidden');
       });
-      document.querySelector(targetId).classList.remove('hidden');
+      var map = document.querySelector(targetId);
+      if (!map) return;
+      map.classList.remove('hidden');
+      if (map.dataset.loaded !== 'true' && map.getAttribute('data-src')) {
+        map.src = map.getAttribute('data-src');
+        map.dataset.loaded = 'true';
+      }
     });
   });
 
