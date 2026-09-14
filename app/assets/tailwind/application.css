@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+/* daisyUI 5.5.19 (app/assets/tailwind/daisyui.mjs) — bundled so pages do not block on the CDN. */
+@source not "./daisyui{,*}.mjs";
+
+@plugin "./daisyui.mjs" {
+  themes: light --default, dark --prefersdark;
+}
