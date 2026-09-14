@@ -2,9 +2,9 @@ slug: template-release-readiness-review
 kind: template
 display: true
 position: 3
-url: /innovation-assets/release-readiness-template.png
+url: /innovation-assets/release-readiness-template.webp
 action_type: download
-preview_image_url: /innovation-assets/release-readiness-template.png
+preview_image_url: /innovation-assets/release-readiness-template.webp
 translations:
   en:
     title: Release Readiness Review Template

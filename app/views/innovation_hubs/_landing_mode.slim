@@ -36,8 +36,7 @@
         - @hub.research_articles.limit(2).each do |article|
           .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
             .relative
-              - image_url = article.cover_image_url.presence || 'https://placehold.co/800x420/0b1220/f8fafc?text=Innovation+Hub'
-              = image_tag image_url, class: 'w-full h-40 object-cover'
+              = innovation_hub_cover_tag article.cover_image_url, alt: article.title, class: 'w-full h-40 object-cover'
               .absolute.top-2.left-2.flex.gap-2
                 span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary.text-white.text-xs
                   = article.read_time
@@ -72,8 +71,7 @@
         .space-y-4
           - @hub.insight_articles.limit(3).each do |article|
             .rounded-xl.overflow-hidden.bg-base-100.border.border-base-200
-              - featured_image = article.cover_image_url.presence || 'https://placehold.co/1200x520/0b1220/f8fafc?text=Code+Insights'
-              = image_tag featured_image, class: 'w-full h-44 object-cover'
+              = innovation_hub_cover_tag article.cover_image_url, alt: article.title, class: 'w-full h-44 object-cover'
               .p-5.space-y-2
                 p.text-sm.font-bold.text-base-content
                   = article.title
@@ -111,7 +109,7 @@
           .rounded-xl.bg-base-200.p-3.space-y-2
             - if asset.preview_image_url.present?
               .rounded-md.overflow-hidden.border.border-base-300
-                = image_tag asset.preview_image_url, class: 'w-full h-auto', alt: asset.title
+                = image_tag asset.preview_image_url, class: 'w-full h-auto', alt: asset.title, loading: 'lazy', decoding: 'async'
             .flex.items-center.justify-between.gap-3
               p.text-xs.font-black.text-base-content = asset.title
               span.inline-flex.items-center.rounded-full.bg-primary/10.text-primary.px-2.py-1.font-bold.uppercase class='text-[10px]'
