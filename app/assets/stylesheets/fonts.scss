@@ -1,55 +1,107 @@
-@font-face {
-  font-family: 'Asap';
-  font-style: normal;
-  font-weight: normal;
-  src: url('Asap-Regular.ttf');
+@mixin webfont($family, $file, $weight, $style) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src: url($file);
+  }
 }
 
-@font-face {
-  font-family: 'Asap';
-  font-style: normal;
-  font-weight: 700;
-  src: url('Asap-Bold.ttf');
+@mixin fallback-font($family, $locals, $weight, $style, $size-adjust, $ascent, $descent) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src: $locals;
+    size-adjust: $size-adjust;
+    ascent-override: $ascent;
+    descent-override: $descent;
+    line-gap-override: 0%;
+  }
 }
 
-@font-face {
-  font-family: 'Asap';
-  font-style: italic;
-  font-weight: normal;
-  src: url('Asap-Italic.ttf');
-}
+@include webfont('Asap', 'Asap-Regular.ttf', 400, normal);
+@include webfont('Asap', 'Asap-Bold.ttf', 700, normal);
+@include webfont('Asap', 'Asap-Italic.ttf', 400, italic);
+@include webfont('Asap', 'Asap-BoldItalic.ttf', 700, italic);
 
-@font-face {
-  font-family: 'Asap';
-  font-style: italic;
-  font-weight: 700;
-  src: url('Asap-BoldItalic.ttf');
-}
+@include webfont('OpenSans', 'OpenSans-Regular.ttf', 400, normal);
+@include webfont('OpenSans', 'OpenSans-Bold.ttf', 700, normal);
+@include webfont('OpenSans', 'OpenSans-Italic.ttf', 400, italic);
+@include webfont('OpenSans', 'OpenSans-BoldItalic.ttf', 700, italic);
 
-@font-face {
-  font-family: 'OpenSans';
-  font-style: normal;
-  font-weight: normal;
-  src: url('OpenSans-Regular.ttf');
-}
+// Metric-adjusted local fallbacks reduce CLS when font-display: swap replaces Helvetica/Arial.
+@include fallback-font(
+  'Asap Fallback',
+  (local('Helvetica'), local('Arial')),
+  400,
+  normal,
+  100.86%,
+  92.61%,
+  21.02%
+);
+@include fallback-font(
+  'Asap Fallback',
+  (local('Helvetica Bold'), local('Arial Bold'), local('Arial-BoldMT')),
+  700,
+  normal,
+  100.86%,
+  92.61%,
+  21.02%
+);
+@include fallback-font(
+  'Asap Fallback',
+  (local('Helvetica Italic'), local('Arial Italic'), local('Arial-ItalicMT')),
+  400,
+  italic,
+  100.86%,
+  92.61%,
+  21.02%
+);
+@include fallback-font(
+  'Asap Fallback',
+  (local('Helvetica Bold Italic'), local('Arial Bold Italic'), local('Arial-BoldItalicMT')),
+  700,
+  italic,
+  100.86%,
+  92.61%,
+  21.02%
+);
 
-@font-face {
-  font-family: 'OpenSans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('OpenSans-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  font-style: italic;
-  font-weight: normal;
-  src: url('OpenSans-Italic.ttf');
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  font-style: italic;
-  font-weight: 700;
-  src: url('OpenSans-BoldItalic.ttf');
-}
+@include fallback-font(
+  'OpenSans Fallback',
+  (local('Helvetica'), local('Arial')),
+  400,
+  normal,
+  103.2%,
+  103.57%,
+  28.39%
+);
+@include fallback-font(
+  'OpenSans Fallback',
+  (local('Helvetica Bold'), local('Arial Bold'), local('Arial-BoldMT')),
+  700,
+  normal,
+  103.2%,
+  103.57%,
+  28.39%
+);
+@include fallback-font(
+  'OpenSans Fallback',
+  (local('Helvetica Italic'), local('Arial Italic'), local('Arial-ItalicMT')),
+  400,
+  italic,
+  103.2%,
+  103.57%,
+  28.39%
+);
+@include fallback-font(
+  'OpenSans Fallback',
+  (local('Helvetica Bold Italic'), local('Arial Bold Italic'), local('Arial-BoldItalicMT')),
+  700,
+  italic,
+  103.2%,
+  103.57%,
+  28.39%
+);
