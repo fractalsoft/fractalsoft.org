@@ -18,5 +18,5 @@ $hover-header-text-color: $red-text-color;
 
 $light-grey-border-color: #ddd;
 
-$asap-fonts: 'Asap', Helvetica, sans-serif;
-$opensans-fonts: 'OpenSans', Helvetica, sans-serif;
+$asap-fonts: 'Asap', 'Asap Fallback', Helvetica, sans-serif;
+$opensans-fonts: 'OpenSans', 'OpenSans Fallback', Helvetica, sans-serif;
