@@ -2,7 +2,6 @@
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
 ARG RUBY_VERSION=3.3.4
-# Debian 11 (bullseye) LTS ended 2026-08-31; its apt security metadata is expired.
 FROM ruby:${RUBY_VERSION}-bookworm AS base
 
 ARG BUNDLER_VERSION=2.5.11
@@ -40,7 +39,6 @@ COPY . .
 # RAILS_MASTER_KEY) is not available during image build.
 # SECRET_KEY_BASE_DUMMY supplies a throwaway secret_key_base.
 # The dummy RAILS_MASTER_KEY only satisfies Rails boot when
-# config.require_master_key is true; there is no credentials.yml.enc to decrypt.
 RUN SECRET_KEY_BASE_DUMMY=1 \
     RAILS_MASTER_KEY=00000000000000000000000000000000 \
     bundle exec rails assets:precompile
