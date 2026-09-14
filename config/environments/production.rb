@@ -5,10 +5,17 @@ Rails.application.configure do
   config.eager_load = true
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
-  # This app has no credentials.yml.enc; runtime settings come from Fly env vars.
-  # Require a master key only when one is actually present.
-  config.require_master_key = ENV['RAILS_MASTER_KEY'].present? ||
-    File.exist?(Rails.root.join('config/master.key'))
+  # Fly does not inject runtime secrets during `docker build`.
+  # `rails assets:precompile` still boots this environment, and Rails 8
+  # Active Record encryption reads credentials at eager load. A dummy
+  # SECRET_KEY_BASE does not skip that. This app has no credentials.yml.enc;
+  # runtime settings come from Fly env vars.
+  precompiling_assets = defined?(Rake.application) &&
+    Rake.application.top_level_tasks.any? { |task| task.start_with?("assets:") }
+
+  config.require_master_key = !precompiling_assets && (
+    ENV["RAILS_MASTER_KEY"].present? || File.exist?(Rails.root.join("config/master.key"))
+  )
   config.active_storage.service = :local
   config.force_ssl = true
 

@@ -36,8 +36,14 @@ RUN gem install bundler -v "${BUNDLER_VERSION}" && \
 # Copy application code
 COPY . .
 
-# Precompile assets without requiring RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
+# Precompile assets without production secrets. Fly runtime env (including
+# RAILS_MASTER_KEY) is not available during image build.
+# SECRET_KEY_BASE_DUMMY supplies a throwaway secret_key_base.
+# The dummy RAILS_MASTER_KEY only satisfies Rails boot when
+# config.require_master_key is true; there is no credentials.yml.enc to decrypt.
+RUN SECRET_KEY_BASE_DUMMY=1 \
+    RAILS_MASTER_KEY=00000000000000000000000000000000 \
+    bundle exec rails assets:precompile
 
 # Final image
 FROM base
