@@ -4,7 +4,7 @@ display: true
 position: 1
 url: /innovation-assets/rails-performance-triage-checklist.md
 action_type: download
-preview_image_url: /innovation-assets/rails-performance-triage-checklist.png
+preview_image_url: /innovation-assets/rails-performance-triage-checklist.webp
 translations:
   en:
     title: Rails Performance Triage Checklist

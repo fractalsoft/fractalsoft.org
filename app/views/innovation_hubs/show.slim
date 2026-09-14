@@ -1,12 +1,14 @@
 - content_for :body_class
 - content_for :title, @article.title.to_s
+- hero_image = @article.cover_image_url.presence
+- content_for :head do
+  = innovation_hub_cover_preload_tag(hero_image)
 
 .container.mx-auto.px-4.py-8.md:py-12
   .max-w-7xl.mx-auto.space-y-8
     .rounded-3xl.overflow-hidden.border.border-base-200.bg-base-100.shadow-sm
       .relative
-        - hero_image = @article.cover_image_url.presence || 'https://placehold.co/1600x900/0b1220/f8fafc?text=Innovation+Hub'
-        = image_tag hero_image, class: 'w-full h-[300px] md:h-[430px] object-cover'
+        = innovation_hub_cover_tag hero_image, alt: @article.title, variant: :hero, class: 'w-full h-[300px] md:h-[430px] object-cover'
         .absolute.inset-0.bg-gradient-to-t.from-neutral-950/90.via-neutral-900/45.to-neutral-900/10
         .absolute.inset-x-0.bottom-0.p-6.md:p-10
           .max-w-5xl.space-y-4
