@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Asap";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Asap-Regular.woff2") format("woff2"), url("Asap-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Asap";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("Asap-Bold.woff2") format("woff2"), url("Asap-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Asap";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Asap-Italic.woff2") format("woff2"), url("Asap-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Asap";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("Asap-BoldItalic.woff2") format("woff2"), url("Asap-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("OpenSans-Regular.woff2") format("woff2"), url("OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("OpenSans-Bold.woff2") format("woff2"), url("OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("OpenSans-Italic.woff2") format("woff2"), url("OpenSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("OpenSans-BoldItalic.woff2") format("woff2"), url("OpenSans-BoldItalic.ttf") format("truetype");
+}

@@ -139,12 +139,16 @@ function resetBusinessContactFormUiState() {
   }
 }
 
-document.addEventListener("turbolinks:load", () => {
+export function initBusinessContactForms() {
   initBusinessContactFormAttachments();
   initBusinessContactFormValidation();
-});
+}
 
 document.addEventListener("turbolinks:before-cache", () => {
   resetBusinessContactFormUiState();
+  const form = document.querySelector(".js-business-contact-form");
+  if (form) delete form.dataset.validationInit;
+  const input = document.querySelector(".js-business-attachment-input");
+  if (input) delete input.dataset.attachmentInit;
 });
 

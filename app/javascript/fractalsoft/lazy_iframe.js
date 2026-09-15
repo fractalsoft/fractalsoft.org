@@ -45,3 +45,11 @@ function initLazyIframes() {
 }
 
 document.addEventListener('turbolinks:load', initLazyIframes);
+document.addEventListener('turbolinks:before-cache', function () {
+  document.querySelectorAll('iframe.js-lazy-iframe').forEach(function (iframe) {
+    delete iframe.dataset.lazyObserved;
+  });
+  document.querySelectorAll('.btn-map').forEach(function (button) {
+    delete button.dataset.lazyMapInit;
+  });
+});
