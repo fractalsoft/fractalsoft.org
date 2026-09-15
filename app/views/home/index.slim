@@ -1,4 +1,6 @@
 - content_for :body_class
+- content_for :head do
+  = tag.link rel: 'preload', href: image_path('hero-lcp.webp'), as: 'image', type: 'image/webp', fetchpriority: 'high', imagesrcset: "#{image_path('hero-480.webp')} 480w, #{image_path('hero-lcp.webp')} 680w", imagesizes: '(min-width: 768px) 50vw, 100vw'
 
 / Top hero — daisyUI hero + card
 .hero
@@ -11,7 +13,7 @@
           = t('.hero.label', default: 'High-performance engineering')
         h1.text-4xl.md:text-5xl.lg:text-6xl.font-extrabold.leading-tight.text-base-content
           = t('.hero.headline')
-        p.text-base.md:text-lg.text-neutral-600.max-w-xl
+        p.text-base.md:text-lg.text-base-content/70.max-w-xl
           = t('.hero.subheadline')
         .flex.flex-wrap.items-center.gap-3
           = link_to new_business_contact_forms_path(locale: I18n.locale), title: t('.title.in_touch'), class: 'btn btn-primary inline-flex items-center gap-2' do
@@ -24,7 +26,7 @@
       .flex-1.min-w-0.flex.items-stretch
         .card.image-full.shadow-xl.rounded-2xl.overflow-hidden.border.border-dashed.border-primary/30.flex-1.min-h-0
           figure
-            = image_tag 'hero.png', class: 'w-full h-full object-cover filter-none', alt: t('.hero.image_alt')
+            = image_tag 'hero-lcp.webp', class: 'w-full h-full object-cover filter-none', alt: t('.hero.image_alt'), width: 680, height: 546, fetchpriority: 'high', decoding: 'async', srcset: "#{image_path('hero-480.webp')} 480w, #{image_path('hero-lcp.webp')} 680w", sizes: '(min-width: 768px) 50vw, 100vw'
           .card-body.relative.p-6.md:p-8.justify-between
             .flex.justify-end
               .badge.badge-neutral.gap-2.bg-base-100.text-base-content.border-0.shadow-sm
@@ -41,7 +43,7 @@
     .space-y-2
       h2.text-3xl.md:text-4xl.font-extrabold.text-base-content.tracking-tight
           = t('.results.title')
-      p.text-sm.md:text-base.text-neutral-600
+      p.text-sm.md:text-base.text-base-content/70
           = t('.results.subtitle')
     = link_to projects_path(locale: I18n.locale), class: 'text-sm font-semibold inline-flex items-center gap-1 text-primary hover:text-primary-focus' do
       = t('.results.view_all')
@@ -52,11 +54,18 @@
       - project_title = project.title
       - project_tag = project.subtitle.presence || project_title.to_s
       - project_text = project.introduction.presence || project.description.presence || ''
-      - project_image = project.thumbnail_url(:thumb).presence || project.pc_image&.image_url || project.top_image&.image_url || project.page_images.first&.image_url
+      - thumb_url = project.thumbnail_url(:thumb).presence
+      - project_image = thumb_url || project.pc_image&.image_url || project.top_image&.image_url || project.page_images.first&.image_url
       = link_to project_path(project, locale: I18n.locale), class: 'card image-full shadow-xl rounded-3xl overflow-hidden' do
         - if project_image.present?
           figure class='min-h-[320px] md:min-h-[380px]'
-            img.w-full.h-full.object-cover src=project_image alt=project_title
+            = image_tag project_image,
+              alt: project_title,
+              class: 'w-full h-full object-cover',
+              loading: 'lazy',
+              decoding: 'async',
+              width: (thumb_url ? 300 : nil),
+              height: (thumb_url ? 150 : nil)
         - else
           .surface-hero-accent class='min-h-[320px] md:min-h-[380px]'
         .card-body.p-8.md:p-10.justify-between
@@ -78,17 +87,17 @@
         .space-y-3.max-w-2xl
           h2.text-2xl.md:text-3xl.font-bold.text-base-content
             = t('.insights.title', default: 'Innovation Hub')
-          p.text-base.text-neutral-600.leading-relaxed
+          p.text-base.text-base-content/70.leading-relaxed
             = t('.insights.body', default: 'Follow what our engineering lab is currently testing in production: technical notes, architecture trade-offs, and practical assets your team can apply right away.')
 
         .mt-5.grid.grid-cols-1.sm:grid-cols-2.gap-3.max-w
           .rounded-xl.border.border-base-300.bg-base-100/80.px-4.py-3
-            .font-extrabold.uppercase.tracking-wider.text-neutral-500 class='text-[11px]'
+            .font-extrabold.uppercase.tracking-wider.text-base-content/60 class='text-[11px]'
               = t('.insights.metrics.articles_label', default: 'Articles')
             .text-2xl.font-black.text-base-content
               = @home.innovation_hub_articles_count
           .rounded-xl.border.border-base-300.bg-base-100/80.px-4.py-3
-            .font-extrabold.uppercase.tracking-wider.text-neutral-500 class='text-[11px]'
+            .font-extrabold.uppercase.tracking-wider.text-base-content/60 class='text-[11px]'
               = t('.insights.metrics.assets_label', default: 'Assets')
             .text-2xl.font-black.text-base-content
               = @home.innovation_hub_assets_count
@@ -101,7 +110,7 @@
       .space-y-4
         - highlights = @home.innovation_hub_highlights
         - if highlights.values.any?
-          .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+          .text-xs.font-extrabold.uppercase.tracking-wider.text-base-content/60
             = t('.insights.latest_title', default: 'Latest from Innovation Hub')
 
           - if (article = highlights[:research])
@@ -114,7 +123,7 @@
                       = lucide_icon 'braces', class: 'w-5 h-5'
                   .space-y-1.min-w-0.flex-1
                     .flex.flex-wrap.items-center.gap-2
-                      .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+                      .text-xs.font-extrabold.uppercase.tracking-wider.text-base-content/60
                         = t('innovation_hubs.index.sections.research.title')
                       span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/60 class='text-[10px]'
                         = article.read_time
@@ -134,7 +143,7 @@
                       = lucide_icon 'bot', class: 'w-5 h-5'
                   .space-y-1.min-w-0.flex-1
                     .flex.flex-wrap.items-center.gap-2
-                      .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+                      .text-xs.font-extrabold.uppercase.tracking-wider.text-base-content/60
                         = t('innovation_hubs.index.sections.insights.title')
                       span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/60 class='text-[10px]'
                         = article.read_time
@@ -154,7 +163,7 @@
                       = lucide_icon 'files', class: 'w-5 h-5'
                   .space-y-1.min-w-0.flex-1
                     .flex.flex-wrap.items-center.gap-2
-                      .text-xs.font-extrabold.uppercase.tracking-wider.text-neutral-500
+                      .text-xs.font-extrabold.uppercase.tracking-wider.text-base-content/60
                         = t('innovation_hubs.index.sidebar.practical_assets.title')
                       span.inline-flex.items-center.justify-center.px-2.py-1.rounded-md.font-black.uppercase.tracking-wider.bg-primary/10.text-primary.border.border-primary/60 class='text-[10px]'
                         = asset.kind.humanize
@@ -172,13 +181,13 @@
         .p-8.md:p-10.space-y-6
           h2.text-2xl.md:text-3xl.font-bold.text-base-content
             = t('.contact.header')
-          p.text-base.text-neutral-600.max-w-xl
+          p.text-base.text-base-content/70.max-w-xl
             = t('.contact.description')
           = render 'contact_forms/form_hero', contact_form: @home.contact
         .relative.min-h-80.lg:min-h-96
           - office = OfficeAddress.sorted.second
           - if office
-            iframe.absolute.inset-0.w-full.h-full.object-cover.contact-map src=office.map_link title='Map'
+            iframe.js-lazy-iframe.absolute.inset-0.w-full.h-full.object-cover.contact-map data-src=office.map_link title='Map'
             .absolute.bottom-4.right-4.left-4.left-auto.w-80.card.bg-neutral-800.text-neutral-100.shadow-xl
               .card-body.p-5.space-y-2
                 h3.font-bold.text-white
@@ -198,7 +207,7 @@
                     | : 
                     = Time.current.strftime('%H:%M %Z')
           - else
-            .absolute.inset-0.bg-base-100.flex.items-center.justify-center.text-neutral-500
+            .absolute.inset-0.bg-base-100.flex.items-center.justify-center.text-base-content/60
               = t('.contact.map_placeholder', default: 'Map placeholder')
 
 = render 'xmas'

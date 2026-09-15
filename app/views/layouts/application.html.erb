@@ -9,6 +9,7 @@
   <meta name='robots' content='noarchive' />
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <meta name='theme-color' content='#C3261C' />
+  <%= yield :head %>
   <script>
     (function() {
       try {
@@ -24,11 +25,10 @@
   <link href='<%= manifest_path %>' rel='manifest' />
   <!-- <base href='https://fractalsoft.org/' /> -->
   <%= favicon_link_tag '/favicon.ico', skip_pipeline: true %>
-  <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-  <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css", crossorigin: "anonymous", referrerpolicy: "no-referrer" %>
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
+    <%= stylesheet_link_tag "webfonts", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
   <%= yield(:custom_stylesheets) %>
-  <%= render 'layouts/shared/analytics' %>
   <%= csrf_meta_tags unless @page_caching %>
   <%= javascript_importmap_tags %>
 </head>
@@ -39,6 +39,7 @@
   <%= yield %>
 </main>
 <%= render 'layouts/shared/footer' %>
+<%= render 'layouts/shared/analytics' %>
 <script>
   (function() {
     function resolvedTheme() {

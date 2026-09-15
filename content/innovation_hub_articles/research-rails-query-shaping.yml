@@ -6,7 +6,7 @@ position: 1
 author_id: lisu
 read_time: 14 min read
 published_at: "2026-03-20"
-cover_image_url: /innovation-articles/rails-query-shaping-for-predictable-latency.png
+cover_image_url: /innovation-articles/rails-query-shaping-for-predictable-latency.webp
 translations:
   en:
     title: Rails Query Shaping for Predictable Latency

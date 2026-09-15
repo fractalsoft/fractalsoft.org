@@ -2,9 +2,9 @@ slug: runbook-incident-first-60-minutes
 kind: runbook
 display: true
 position: 4
-url: /innovation-assets/incident-first-60-minutes.png
+url: /innovation-assets/incident-first-60-minutes.webp
 action_type: download
-preview_image_url: /innovation-assets/incident-first-60-minutes.png
+preview_image_url: /innovation-assets/incident-first-60-minutes.webp
 translations:
   en:
     title: Incident Runbook - First 60 Minutes

@@ -29,13 +29,13 @@
           p.text-3xl.font-black.leading-none.text-base-content = t('about.index.engineering.stats.senior_value')
     .grid.grid-cols-2.gap-3
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'about/about-culture.png', alt: 'Engineering team culture', class: 'w-full h-28 object-cover'
+        = about_photo_tag 'about-culture', alt: 'Engineering team culture', height_class: 'h-28', width: 800, height: 436
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'about/about-code.png', alt: 'Development workspace', class: 'w-full h-28 object-cover'
+        = about_photo_tag 'about-code', alt: 'Development workspace', height_class: 'h-28', width: 800, height: 436
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'about/about-tech.png', alt: 'Systems and technology', class: 'w-full h-32 object-cover'
+        = about_photo_tag 'about-tech', alt: 'Systems and technology', height_class: 'h-32', width: 800, height: 436
       .rounded-xl.overflow-hidden.border.border-base-300.bg-base-100
-        = image_tag 'about/about-workspace.png', alt: 'Studio workspace', class: 'w-full h-32 object-cover'
+        = about_photo_tag 'about-workspace', alt: 'Studio workspace', height_class: 'h-32', width: 800, height: 436
 
   .space-y-4
     h2.leading-tight.font-black.text-base-content.text-3xl.md:text-4xl
@@ -44,17 +44,17 @@
       = t('about.index.builder.copy')
     .grid.grid-cols-1.lg:grid-cols-3.gap-3
       .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
-        = image_tag 'about/about-problem-solving.png', alt: t('about.index.builder.card_1_title'), class: 'w-full h-28 object-cover'
+        = about_photo_tag 'about-problem-solving', alt: t('about.index.builder.card_1_title'), height_class: 'h-28', width: 800, height: 533
         .p-4
           p.text-sm.font-black.text-base-content = t('about.index.builder.card_1_title')
           p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_1_body')
       .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
-        = image_tag 'about/about-direct-access.png', alt: t('about.index.builder.card_2_title'), class: 'w-full h-28 object-cover'
+        = about_photo_tag 'about-direct-access', alt: t('about.index.builder.card_2_title'), height_class: 'h-28', width: 800, height: 533
         .p-4
           p.text-sm.font-black.text-base-content = t('about.index.builder.card_2_title')
           p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_2_body')
       .rounded-xl.bg-base-100.border.border-base-300.overflow-hidden
-        = image_tag 'about/about-shared-ownership.png', alt: t('about.index.builder.card_3_title'), class: 'w-full h-28 object-cover'
+        = about_photo_tag 'about-shared-ownership', alt: t('about.index.builder.card_3_title'), height_class: 'h-28', width: 800, height: 533
         .p-4
           p.text-sm.font-black.text-base-content = t('about.index.builder.card_3_title')
           p.mt-2.text-xs.leading-relaxed.text-base-content/70 = t('about.index.builder.card_3_body')
