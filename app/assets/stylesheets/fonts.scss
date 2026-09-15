@@ -1,13 +1,3 @@
-@mixin webfont($family, $file, $weight, $style) {
-  @font-face {
-    font-family: $family;
-    font-style: $style;
-    font-weight: $weight;
-    font-display: swap;
-    src: url($file);
-  }
-}
-
 @mixin fallback-font($family, $locals, $weight, $style, $size-adjust, $ascent, $descent) {
   @font-face {
     font-family: $family;
@@ -20,16 +10,6 @@
     line-gap-override: 0%;
   }
 }
-
-@include webfont('Asap', 'Asap-Regular.ttf', 400, normal);
-@include webfont('Asap', 'Asap-Bold.ttf', 700, normal);
-@include webfont('Asap', 'Asap-Italic.ttf', 400, italic);
-@include webfont('Asap', 'Asap-BoldItalic.ttf', 700, italic);
-
-@include webfont('OpenSans', 'OpenSans-Regular.ttf', 400, normal);
-@include webfont('OpenSans', 'OpenSans-Bold.ttf', 700, normal);
-@include webfont('OpenSans', 'OpenSans-Italic.ttf', 400, italic);
-@include webfont('OpenSans', 'OpenSans-BoldItalic.ttf', 700, italic);
 
 // Metric-adjusted local fallbacks reduce CLS when font-display: swap replaces Helvetica/Arial.
 @include fallback-font(

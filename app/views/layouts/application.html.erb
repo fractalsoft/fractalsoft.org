@@ -25,8 +25,9 @@
   <link href='<%= manifest_path %>' rel='manifest' />
   <!-- <base href='https://fractalsoft.org/' /> -->
   <%= favicon_link_tag '/favicon.ico', skip_pipeline: true %>
-  <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
+    <%= stylesheet_link_tag "webfonts", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
   <%= yield(:custom_stylesheets) %>
   <%= csrf_meta_tags unless @page_caching %>
   <%= javascript_importmap_tags %>

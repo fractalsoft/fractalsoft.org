@@ -9,7 +9,7 @@ RSpec.describe HomeController do
       get :index, params: { locale: 'en' }
 
       aggregate_failures do
-        expect(response.body).to match(%r{/assets/hero-[^"]+\.webp})
+        expect(response.body).to match(%r{/assets/hero-lcp-[^"]+\.webp})
         expect(response.body).to include('fetchpriority="high"')
         expect(response.body).to include('rel="preload"')
       end
