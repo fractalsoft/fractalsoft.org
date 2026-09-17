@@ -5,8 +5,10 @@ footer.footer.bg-neutral-900.text-neutral-100.border-t.border-neutral-700.py-8
         = image_tag '/icons/brand/fractalsoft.svg', alt: '', id: 'fractalsoft-logo-footer', size: '30'
         span.font-semibold.text-lg.text-neutral-100
           | Fractal Soft
-      .flex.items-center.gap-2.ml-auto.self-end
-        button.js-theme-toggle.btn.btn-sm.shadow-none.bg-neutral-800.border-neutral-600.text-neutral-100.hover:bg-neutral-700.hover:border-neutral-500 type='button' aria-label='Toggle theme'
-          = lucide_icon 'moon', class: 'w-4 h-4 js-theme-icon-dark'
-          = lucide_icon 'sun', class: 'w-4 h-4 js-theme-icon-light hidden'
-        = render 'layouts/shared/languages'
+      .flex.flex-col.sm:flex-row.items-end.sm:items-center.gap-3.ml-auto.self-end
+        = link_to t('layouts.footer.privacy_policy'), privacy_policy_path(locale: I18n.locale), class: 'text-sm text-neutral-300 hover:text-white underline-offset-4 hover:underline'
+        .flex.items-center.gap-2
+          button.js-theme-toggle.btn.btn-sm.shadow-none.bg-neutral-800.border-neutral-600.text-neutral-100.hover:bg-neutral-700.hover:border-neutral-500 type='button' aria-label='Toggle theme'
+            = lucide_icon 'moon', class: 'w-4 h-4 js-theme-icon-dark'
+            = lucide_icon 'sun', class: 'w-4 h-4 js-theme-icon-light hidden'
+          = render 'layouts/shared/languages'

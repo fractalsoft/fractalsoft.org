@@ -245,9 +245,12 @@ en:
   layouts:
     cookie_banner:
       accept: Accept all
-      description: We use essential cookies to keep the site working and optional analytics cookies (Google Analytics) to understand traffic. You can accept analytics or continue with essential cookies only.
+      description_html: We use essential cookies to keep the site working and optional analytics cookies (Google Analytics) to understand traffic. You can accept analytics or continue with essential cookies only. Details in our %{link}.
+      privacy_policy: Privacy Policy
       reject: Essential only
       title: Cookies
+    footer:
+      privacy_policy: Privacy Policy
     menu:
       about: About
       community: Community
@@ -321,6 +324,13 @@ en:
       testing: Testing
       tool: Tools
       web: Web technologies
+  privacy_policies:
+    show:
+      meta:
+        description: How Fractal Soft processes personal data, cookies, and analytics on fractalsoft.org.
+        title: Privacy Policy
+      title: Privacy Policy
+      updated_at: 'Last updated: 17 September 2026'
   projects:
     index:
       buttons:

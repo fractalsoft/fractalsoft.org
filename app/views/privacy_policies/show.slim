@@ -1,0 +1,14 @@
+- content_for :body_class
+- title t('.meta.title')
+- description t('.meta.description')
+
+.container.mx-auto.px-4.py-10.md:py-14
+  .max-w-3xl.mx-auto.space-y-6
+    header.space-y-2
+      h1.m-0.font-extrabold.text-base-content.leading-tight.tracking-tight.text-4xl.md:text-5xl
+        = t('.title')
+      p.text-sm.text-base-content/60
+        = t('.updated_at')
+
+    .article-markdown.max-w-none.text-base-content/90
+      == @body
