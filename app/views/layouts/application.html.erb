@@ -10,6 +10,8 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <meta name='theme-color' content='#C3261C' />
   <%= yield :head %>
+  <%= render 'layouts/shared/google_consent' %>
+  <%= render 'layouts/shared/analytics' %>
   <script>
     (function() {
       try {
@@ -40,7 +42,6 @@
 </main>
 <%= render 'layouts/shared/footer' %>
 <%= render 'layouts/shared/cookie_banner' %>
-<%= render 'layouts/shared/analytics' %>
 
 <script>
   (function() {

@@ -1,0 +1,35 @@
+<%# Google Consent Mode v2 defaults — must run before any Google tags. %>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
+
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+
+  (function () {
+    try {
+      var consent = localStorage.getItem('cookie_consent');
+      if (consent !== 'accepted' && consent !== 'rejected') return;
+
+      var state = consent === 'accepted' ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: state,
+        ad_user_data: state,
+        ad_personalization: state,
+        analytics_storage: state
+      });
+    } catch (error) {
+      // Private mode / blocked storage — keep denied defaults.
+    }
+  })();
+</script>
