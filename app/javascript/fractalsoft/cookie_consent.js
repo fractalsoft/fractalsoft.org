@@ -124,23 +124,30 @@ function googleConsentState(accepted) {
   };
 }
 
+// Import maps run as ES modules, so bare `gtag` is not a global lexical binding.
+function gtagFn() {
+  return typeof window.gtag === "function" ? window.gtag : null;
+}
+
 function applyGoogleConsent(accepted) {
-  if (typeof gtag !== "function") return;
+  var gtag = gtagFn();
+  if (!gtag) return;
 
   gtag("consent", "update", googleConsentState(accepted));
 }
 
 function trackAnalyticsPageView() {
-  if (typeof gtag !== "function") return;
+  var gtag = gtagFn();
+  if (!gtag) return;
+  if (!window.__gtagLoaded) return;
   if (readConsent() !== ACCEPTED) return;
   if (window["ga-disable-" + GA_ID]) return;
 
-  // Re-run config after grant so GA can write cookies and send a hit.
-  // Turbolinks navigations also need an explicit page_view.
-  gtag("config", GA_ID, {
+  gtag("event", "page_view", {
     page_path: window.location.pathname + window.location.search,
     page_location: window.location.href,
-    page_title: document.title
+    page_title: document.title,
+    send_to: GA_ID
   });
 }
 
@@ -196,8 +203,8 @@ function dispatchConsent(value) {
 function acceptCookies() {
   writeConsent(ACCEPTED);
   enableGoogleAnalytics();
+  // Consent update itself should write analytics cookies in Advanced mode.
   applyGoogleConsent(true);
-  trackAnalyticsPageView();
   hideBanner();
   dispatchConsent(ACCEPTED);
 }
@@ -246,15 +253,18 @@ function initCookieConsent() {
   bindSettingsTriggers();
 
   var consent = readConsent();
-  if (consent === ACCEPTED || consent === REJECTED) {
-    if (consent === REJECTED) {
-      disableGoogleAnalytics();
-      clearAnalyticsCookies();
-    } else {
-      enableGoogleAnalytics();
-    }
+  if (consent === ACCEPTED) {
+    enableGoogleAnalytics();
+    applyGoogleConsent(true);
+    hideBanner();
+    dispatchConsent(consent);
+    return;
+  }
 
-    applyGoogleConsent(consent === ACCEPTED);
+  if (consent === REJECTED) {
+    disableGoogleAnalytics();
+    applyGoogleConsent(false);
+    clearAnalyticsCookies();
     hideBanner();
     dispatchConsent(consent);
     return;
@@ -267,7 +277,6 @@ document.addEventListener("turbolinks:load", function () {
   initCookieConsent();
 
   // Skip the first load: head gtag('config') already sent a hit when allowed.
-  // Later Turbolinks navigations need an explicit page_view.
   if (window.__cookieConsentPageViewReady) {
     trackAnalyticsPageView();
   } else {

@@ -85,16 +85,16 @@ SameSite=Lax.
 If you accept analytics cookies, we load Google Analytics (measurement ID
 `G-NKMWEXWYK9`). Google may set cookies such as `_ga` and `_ga_*`.
 
-We use **Google Consent Mode v2**. Until you accept analytics:
+We use **Google Consent Mode v2** (advanced). Until you accept analytics:
 
 - consent signals default to denied (`analytics_storage`, `ad_storage`,
   `ad_user_data`, `ad_personalization`);
 - Google tags may send cookieless pings for modeling, without storing analytics
   cookies.
 
-After you accept, we update Consent Mode to granted for those signals. If you
-choose essential cookies only, signals remain denied and analytics cookies are
-cleared when possible.
+After you accept, we update Consent Mode to granted for those signals so
+analytics cookies can be written. If you choose essential cookies only, signals
+remain denied and analytics cookies are cleared when possible.
 
 ### Local storage
 

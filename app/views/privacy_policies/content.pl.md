@@ -85,16 +85,17 @@ Po zaakceptowaniu cookies analitycznych ładujemy Google Analytics
 (identyfikator `G-NKMWEXWYK9`). Google może ustawiać cookies takie jak `_ga`
 oraz `_ga_*`.
 
-Stosujemy **Google Consent Mode v2**. Do momentu akceptacji analityki:
+Stosujemy **Google Consent Mode v2** (advanced). Do momentu akceptacji
+analityki:
 
 - sygnały zgody mają wartość denied (`analytics_storage`, `ad_storage`,
   `ad_user_data`, `ad_personalization`);
 - tagi Google mogą wysyłać cookieless pings na potrzeby modelowania, bez zapisu
   cookies analitycznych.
 
-Po akceptacji aktualizujemy Consent Mode do granted dla tych sygnałów. Przy
-wyborze „tylko niezbędne” sygnały pozostają denied, a cookies GA są — w miarę
-możliwości — usuwane.
+Po akceptacji aktualizujemy Consent Mode do granted, żeby cookies analityczne
+mogły zostać zapisane. Przy wyborze „tylko niezbędne” sygnały pozostają denied,
+a cookies GA są — w miarę możliwości — usuwane.
 
 ### Local storage
 

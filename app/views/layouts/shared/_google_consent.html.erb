@@ -2,6 +2,7 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
 
   gtag('consent', 'default', {
     ad_storage: 'denied',
@@ -28,7 +29,7 @@
         analytics_storage: state
       });
     } catch (error) {
-      // Private mode / blocked storage — keep denied defaults.
+      /* Ignore private mode / blocked storage and keep denied defaults. */
     }
   })();
 </script>
