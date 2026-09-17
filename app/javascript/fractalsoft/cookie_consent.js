@@ -1,6 +1,7 @@
 const STORAGE_KEY = "cookie_consent";
 const ACCEPTED = "accepted";
 const REJECTED = "rejected";
+const GA_ID = "G-NKMWEXWYK9";
 
 function readConsent() {
   try {
@@ -18,12 +19,97 @@ function writeConsent(value) {
   }
 }
 
-function clearAnalyticsCookies() {
-  document.cookie.split(";").forEach(function (entry) {
-    var name = entry.split("=")[0].trim();
-    if (name !== "_ga" && name !== "_gid" && name.indexOf("_ga_") !== 0) return;
+function isAnalyticsCookie(name) {
+  return (
+    name === "_ga" ||
+    name === "_gid" ||
+    name === "_gat" ||
+    name.indexOf("_ga_") === 0 ||
+    name.indexOf("_gcl_") === 0 ||
+    name.indexOf("_gac_") === 0
+  );
+}
 
-    document.cookie = name + "=; Max-Age=0; path=/; SameSite=Lax";
+function isLocalHostname(hostname) {
+  return (
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname === "[::1]" ||
+    /^\d{1,3}(?:\.\d{1,3}){3}$/.test(hostname)
+  );
+}
+
+function analyticsCookieDomains() {
+  var hostname = window.location.hostname;
+
+  // Browsers treat localhost/IP cookies as host-only. Passing Domain=localhost
+  // is ignored or rejected, so only expire without a Domain attribute.
+  if (isLocalHostname(hostname)) {
+    return [""];
+  }
+
+  var domains = ["", hostname];
+  var parts = hostname.split(".");
+  while (parts.length >= 2) {
+    var domain = parts.join(".");
+    domains.push(domain);
+    domains.push("." + domain);
+    parts.shift();
+  }
+
+  return domains.filter(function (domain, index, list) {
+    return list.indexOf(domain) === index;
+  });
+}
+
+function expireCookie(name, domain) {
+  var paths = ["/", window.location.pathname || "/"];
+  var secure = window.location.protocol === "https:";
+
+  paths
+    .filter(function (path, index, list) {
+      return list.indexOf(path) === index;
+    })
+    .forEach(function (path) {
+      var base =
+        name +
+        "=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; Path=" +
+        path;
+
+      [base, base + "; SameSite=Lax"].forEach(function (value) {
+        if (secure) value += "; Secure";
+        if (domain) value += "; Domain=" + domain;
+        document.cookie = value;
+      });
+    });
+}
+
+function disableGoogleAnalytics() {
+  window["ga-disable-" + GA_ID] = true;
+}
+
+function enableGoogleAnalytics() {
+  window["ga-disable-" + GA_ID] = false;
+}
+
+function clearAnalyticsCookies() {
+  var names = document.cookie
+    .split(";")
+    .map(function (entry) {
+      return entry.split("=")[0].trim();
+    })
+    .filter(Boolean)
+    .filter(isAnalyticsCookie);
+
+  ["_ga", "_gid", "_gat", "_ga_NKMWEXWYK9"].forEach(function (name) {
+    if (names.indexOf(name) === -1) names.push(name);
+  });
+
+  var domains = analyticsCookieDomains();
+  names.forEach(function (name) {
+    domains.forEach(function (domain) {
+      expireCookie(name, domain);
+    });
   });
 }
 
@@ -48,10 +134,37 @@ function banner() {
   return document.getElementById("js-cookie-banner");
 }
 
+function updateBannerStatus() {
+  var status = document.getElementById("js-cookie-banner-status");
+  if (!status) return;
+
+  var consent = readConsent();
+  var label = null;
+
+  if (consent === ACCEPTED) {
+    label = status.dataset.statusAccepted;
+  } else if (consent === REJECTED) {
+    label = status.dataset.statusRejected;
+  }
+
+  if (label) {
+    status.textContent = label;
+    status.classList.remove("hidden");
+  } else {
+    status.textContent = "";
+    status.classList.add("hidden");
+  }
+}
+
 function showBanner() {
   var element = banner();
   if (!element) return;
+
+  updateBannerStatus();
   element.classList.remove("hidden");
+
+  var focusTarget = element.querySelector(".js-cookie-reject, .js-cookie-accept");
+  if (focusTarget) focusTarget.focus();
 }
 
 function hideBanner() {
@@ -68,6 +181,7 @@ function dispatchConsent(value) {
 
 function acceptCookies() {
   writeConsent(ACCEPTED);
+  enableGoogleAnalytics();
   applyGoogleConsent(true);
   hideBanner();
   dispatchConsent(ACCEPTED);
@@ -75,6 +189,7 @@ function acceptCookies() {
 
 function rejectCookies() {
   writeConsent(REJECTED);
+  disableGoogleAnalytics();
   applyGoogleConsent(false);
   clearAnalyticsCookies();
   hideBanner();
@@ -98,11 +213,32 @@ function bindBanner() {
   }
 }
 
+function bindSettingsTriggers() {
+  if (document.documentElement.dataset.cookieSettingsBound === "true") return;
+  document.documentElement.dataset.cookieSettingsBound = "true";
+
+  document.addEventListener("click", function (event) {
+    var trigger = event.target.closest(".js-cookie-settings");
+    if (!trigger) return;
+
+    event.preventDefault();
+    showBanner();
+  });
+}
+
 function initCookieConsent() {
   bindBanner();
+  bindSettingsTriggers();
 
   var consent = readConsent();
   if (consent === ACCEPTED || consent === REJECTED) {
+    if (consent === REJECTED) {
+      disableGoogleAnalytics();
+      clearAnalyticsCookies();
+    } else {
+      enableGoogleAnalytics();
+    }
+
     applyGoogleConsent(consent === ACCEPTED);
     hideBanner();
     dispatchConsent(consent);

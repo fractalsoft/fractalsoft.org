@@ -248,8 +248,12 @@ pl:
       description_html: Używamy niezbędnych cookies, żeby strona działała poprawnie, oraz opcjonalnych cookies analitycznych (Google Analytics), żeby mierzyć ruch. Możesz zaakceptować analitykę albo zostać przy cookies niezbędnych. Szczegóły w naszej %{link}.
       privacy_policy: Polityce prywatności
       reject: Tylko niezbędne
+      status:
+        accepted: 'Obecny wybór: cookies analityczne zaakceptowane.'
+        rejected: 'Obecny wybór: tylko cookies niezbędne.'
       title: Cookies
     footer:
+      cookie_settings: Ustawienia cookies
       privacy_policy: Polityka prywatności
     menu:
       about: O nas
