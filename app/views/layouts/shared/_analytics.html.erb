@@ -5,8 +5,8 @@
     if (window.__gtagLoaded) return;
     window.__gtagLoaded = true;
 
-    gtag('js', new Date());
-    gtag('config', GA_ID);
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
 
     var script = document.createElement('script');
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
