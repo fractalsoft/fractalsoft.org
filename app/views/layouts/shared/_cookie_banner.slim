@@ -1,0 +1,13 @@
+#js-cookie-banner.fixed.inset-x-0.bottom-0.hidden.p-4.md:p-6 class='z-[70]' aria-live='polite' role='dialog' aria-labelledby='cookie-banner-title' aria-describedby='cookie-banner-description'
+  .mx-auto.max-w-4xl.rounded-2xl.border.border-base-300.bg-base-100.p-4.shadow-xl.md:p-5
+    .flex.flex-col.gap-4.md:flex-row.md:items-center.md:justify-between
+      .min-w-0.space-y-1
+        p#cookie-banner-title.font-semibold.text-base-content
+          = t('layouts.cookie_banner.title')
+        p#cookie-banner-description.text-sm.text-base-content/70
+          = t('layouts.cookie_banner.description')
+      .flex.shrink-0.flex-col.gap-2.sm:flex-row
+        button.js-cookie-reject.btn.btn-outline.btn-sm type='button'
+          = t('layouts.cookie_banner.reject')
+        button.js-cookie-accept.btn.btn-primary.btn-sm type='button'
+          = t('layouts.cookie_banner.accept')

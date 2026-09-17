@@ -243,6 +243,11 @@ en:
       body: We currently have no open positions for jobs. However, nothing prevents you from asking directly. Please do not hesitate to contact us.
       title: No job offers
   layouts:
+    cookie_banner:
+      accept: Accept all
+      description: We use essential cookies to keep the site working and optional analytics cookies (Google Analytics) to understand traffic. You can accept analytics or continue with essential cookies only.
+      reject: Essential only
+      title: Cookies
     menu:
       about: About
       community: Community
@@ -255,6 +260,7 @@ en:
       services: Services
       team: Team
       toggle_navigation: Toggle navigation
+
   mail_form:
     attributes:
       business_contact_form:
