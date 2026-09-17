@@ -1,46 +1,16 @@
+<%# Advanced Consent Mode: load GA after defaults; storage follows consent state. %>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
   (function () {
     var GA_ID = 'G-NKMWEXWYK9';
-    var STORAGE_KEY = 'cookie_consent';
-    var ACCEPTED = 'accepted';
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
 
-    function hasAcceptedConsent() {
-      try {
-        return localStorage.getItem(STORAGE_KEY) === ACCEPTED;
-      } catch (error) {
-        return false;
-      }
-    }
+    gtag('js', new Date());
+    gtag('config', GA_ID);
 
-    function loadGtag() {
-      if (window.__gtagLoaded) return;
-      window.__gtagLoaded = true;
-
-      gtag('js', new Date());
-      gtag('config', GA_ID);
-
-      var script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-      script.async = true;
-      document.head.appendChild(script);
-    }
-
-    function maybeLoadGtag(consent) {
-      if (consent === ACCEPTED) loadGtag();
-    }
-
-    if (!window.__cookieConsentAnalyticsBound) {
-      window.__cookieConsentAnalyticsBound = true;
-      document.addEventListener('cookie-consent:change', function (event) {
-        maybeLoadGtag(event.detail && event.detail.value);
-      });
-    }
-
-    if (hasAcceptedConsent()) {
-      loadGtag();
-    }
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    script.async = true;
+    document.head.appendChild(script);
   })();
 </script>

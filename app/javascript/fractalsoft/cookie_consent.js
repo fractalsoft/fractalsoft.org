@@ -27,6 +27,23 @@ function clearAnalyticsCookies() {
   });
 }
 
+function googleConsentState(accepted) {
+  var state = accepted ? "granted" : "denied";
+
+  return {
+    ad_storage: state,
+    ad_user_data: state,
+    ad_personalization: state,
+    analytics_storage: state
+  };
+}
+
+function applyGoogleConsent(accepted) {
+  if (typeof gtag !== "function") return;
+
+  gtag("consent", "update", googleConsentState(accepted));
+}
+
 function banner() {
   return document.getElementById("js-cookie-banner");
 }
@@ -51,12 +68,14 @@ function dispatchConsent(value) {
 
 function acceptCookies() {
   writeConsent(ACCEPTED);
+  applyGoogleConsent(true);
   hideBanner();
   dispatchConsent(ACCEPTED);
 }
 
 function rejectCookies() {
   writeConsent(REJECTED);
+  applyGoogleConsent(false);
   clearAnalyticsCookies();
   hideBanner();
   dispatchConsent(REJECTED);
@@ -84,6 +103,7 @@ function initCookieConsent() {
 
   var consent = readConsent();
   if (consent === ACCEPTED || consent === REJECTED) {
+    applyGoogleConsent(consent === ACCEPTED);
     hideBanner();
     dispatchConsent(consent);
     return;
