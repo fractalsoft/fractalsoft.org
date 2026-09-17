@@ -267,7 +267,6 @@ pl:
       services: Usługi
       team: Zespół
       toggle_navigation: Nawigacja
-
   mail_form:
     attributes:
       business_contact_form:

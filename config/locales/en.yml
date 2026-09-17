@@ -267,7 +267,6 @@ en:
       services: Services
       team: Team
       toggle_navigation: Toggle navigation
-
   mail_form:
     attributes:
       business_contact_form:
