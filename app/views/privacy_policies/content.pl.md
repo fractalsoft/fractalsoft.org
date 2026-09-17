@@ -37,7 +37,7 @@ Nie zbieramy celowo szczególnych kategorii danych osobowych za pośrednictwem S
 | Pomiar ruchu w Serwisie przez Google Analytics | art. 6 ust. 1 lit. a RODO (zgoda), wyłącznie po zaakceptowaniu cookies analitycznych |
 | Przechowywanie preferencji cookies | art. 6 ust. 1 lit. c / art. 6 ust. 1 lit. f (wykazanie i respektowanie Twojego wyboru) |
 
-Zgodę możesz wycofać w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania sprzed wycofania.
+Zgodę możesz wycofać lub zmienić w dowolnym momencie przez **Ustawienia cookies** w stopce Serwisu, bez wpływu na zgodność z prawem przetwarzania sprzed wycofania.
 
 ## 5. Odbiorcy i transfery
 
@@ -77,7 +77,7 @@ W przeglądarce (nie jako HTTP cookies) możemy przechowywać:
 - Zapytania kontaktowe i biznesowe przechowujemy tak długo, jak jest to potrzebne do ich obsługi oraz związanych prawnie uzasadnionych interesów (np. wykazanie korespondencji), a następnie usuwamy lub anonimizujemy.
 - Cookie sesyjne wygasa wraz z sesją przeglądarki (lub wcześniej, zgodnie z konfiguracją serwera).
 - Dane analityczne są przechowywane zgodnie z konfiguracją Google Analytics i ustawieniami produktu Google.
-- Preferencja zgody na cookies pozostaje do czasu wyczyszczenia danych strony lub zmiany wyboru.
+- Preferencja zgody na cookies pozostaje do czasu wyczyszczenia danych strony lub zmiany wyboru w **Ustawieniach cookies**.
 
 ## 8. Twoje prawa
 

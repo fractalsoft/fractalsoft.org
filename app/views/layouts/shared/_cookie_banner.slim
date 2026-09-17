@@ -6,6 +6,7 @@
           = t('layouts.cookie_banner.title')
         p#cookie-banner-description.text-sm.text-base-content/70
           == t('layouts.cookie_banner.description_html', link: link_to(t('layouts.cookie_banner.privacy_policy'), privacy_policy_path(locale: I18n.locale), class: 'link link-primary'))
+        p#js-cookie-banner-status.hidden.text-xs.font-medium.text-base-content/55 data-status-accepted=t('layouts.cookie_banner.status.accepted') data-status-rejected=t('layouts.cookie_banner.status.rejected')
       .flex.shrink-0.flex-col.gap-2.sm:flex-row
         button.js-cookie-reject.btn.btn-outline.btn-sm type='button'
           = t('layouts.cookie_banner.reject')

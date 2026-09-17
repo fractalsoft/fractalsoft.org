@@ -38,7 +38,7 @@ We do not intentionally collect special categories of personal data through the 
 | Measuring Website traffic with Google Analytics | Art. 6(1)(a) GDPR (consent), collected only after you accept analytics cookies |
 | Storing your cookie preference | Art. 6(1)(c) / Art. 6(1)(f) (to demonstrate and respect your choice) |
 
-You may withdraw consent at any time without affecting the lawfulness of processing before withdrawal.
+You may withdraw or change consent at any time via **Cookie settings** in the Website footer, without affecting the lawfulness of processing before withdrawal.
 
 ## 5. Recipients and transfers
 
@@ -78,7 +78,7 @@ We may store in your browser (not as HTTP cookies):
 - Contact and business inquiries are retained as long as needed to handle the request and for related legitimate interests (for example evidence of communication), then deleted or anonymised.
 - Session cookies expire when the browser session ends (or earlier according to server configuration).
 - Analytics data is retained according to our Google Analytics configuration and Google’s product settings.
-- Cookie consent preference remains until you clear site data or change your choice.
+- Cookie consent preference remains until you clear site data or change your choice in **Cookie settings**.
 
 ## 8. Your rights
 

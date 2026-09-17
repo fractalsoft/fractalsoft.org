@@ -248,8 +248,12 @@ en:
       description_html: We use essential cookies to keep the site working and optional analytics cookies (Google Analytics) to understand traffic. You can accept analytics or continue with essential cookies only. Details in our %{link}.
       privacy_policy: Privacy Policy
       reject: Essential only
+      status:
+        accepted: 'Current choice: analytics cookies accepted.'
+        rejected: 'Current choice: essential cookies only.'
       title: Cookies
     footer:
+      cookie_settings: Cookie settings
       privacy_policy: Privacy Policy
     menu:
       about: About
