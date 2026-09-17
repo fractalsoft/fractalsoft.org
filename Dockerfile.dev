@@ -11,6 +11,7 @@ RUN apt-get update -qq && \
       build-essential \
       git \
       curl \
+      libclang-dev \
       libpq-dev \
       libvips \
       pkg-config \
@@ -20,6 +21,9 @@ RUN apt-get update -qq && \
     rm -rf /var/lib/apt/lists/*
 
 COPY Gemfile Gemfile.lock ./
+# Serial installs keep peak RAM down (commonmarker native build is heavy).
+ENV BUNDLE_JOBS=1 \
+    MAKEFLAGS="-j1"
 RUN gem install bundler -v 2.5.11 && bundle install
 
 EXPOSE 3000

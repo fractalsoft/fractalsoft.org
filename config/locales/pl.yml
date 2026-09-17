@@ -243,6 +243,11 @@ pl:
       body: Aktualnie nie mamy ofert pracy. Jednak nic nie stoi na przeszkodzie, aby zapytać się bezpośrednio. Zapraszamy do kontaktu.
       title: Brak ofert pracy
   layouts:
+    cookie_banner:
+      accept: Akceptuj wszystkie
+      description: Używamy niezbędnych cookies, żeby strona działała poprawnie, oraz opcjonalnych cookies analitycznych (Google Analytics), żeby mierzyć ruch. Możesz zaakceptować analitykę albo zostać przy cookies niezbędnych.
+      reject: Tylko niezbędne
+      title: Cookies
     menu:
       about: O nas
       community: Społeczność
@@ -255,6 +260,7 @@ pl:
       services: Usługi
       team: Zespół
       toggle_navigation: Nawigacja
+
   mail_form:
     attributes:
       business_contact_form:

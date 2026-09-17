@@ -5,7 +5,9 @@ import turbolinks from "turbolinks";
 turbolinks.start();
 
 import "fractalsoft/browser_info";
+import "fractalsoft/cookie_consent";
 import "fractalsoft/lazy_iframe";
+
 
 function loadConditionalScripts() {
   if (document.querySelector("#contact_form, .btn-map")) {
