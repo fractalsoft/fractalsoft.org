@@ -5,7 +5,7 @@
         p#cookie-banner-title.font-semibold.text-base-content
           = t('layouts.cookie_banner.title')
         p#cookie-banner-description.text-sm.text-base-content/70
-          = t('layouts.cookie_banner.description')
+          == t('layouts.cookie_banner.description_html', link: link_to(t('layouts.cookie_banner.privacy_policy'), privacy_policy_path(locale: I18n.locale), class: 'link link-primary'))
       .flex.shrink-0.flex-col.gap-2.sm:flex-row
         button.js-cookie-reject.btn.btn-outline.btn-sm type='button'
           = t('layouts.cookie_banner.reject')

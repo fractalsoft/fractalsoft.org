@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get 'projects/:id', to: 'projects#show', as: :project, format: false, constraints: { id: /[^\/]+/ }
     get 'services', to: 'services#index'
     get 'about', to: 'about#index', as: :about
+    get 'privacy-policy', to: 'privacy_policies#show', as: :privacy_policy
     get 'innovation-hub', to: 'innovation_hubs#index', as: :innovation_hub
     get 'innovation-hub/:id', to: 'innovation_hubs#show', as: :innovation_hub_article, format: false, constraints: { id: /[^\/]+/ }
     resource :business_contact_forms, only: [:show, :new, :create]

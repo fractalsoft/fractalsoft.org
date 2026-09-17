@@ -245,9 +245,12 @@ pl:
   layouts:
     cookie_banner:
       accept: Akceptuj wszystkie
-      description: Używamy niezbędnych cookies, żeby strona działała poprawnie, oraz opcjonalnych cookies analitycznych (Google Analytics), żeby mierzyć ruch. Możesz zaakceptować analitykę albo zostać przy cookies niezbędnych.
+      description_html: Używamy niezbędnych cookies, żeby strona działała poprawnie, oraz opcjonalnych cookies analitycznych (Google Analytics), żeby mierzyć ruch. Możesz zaakceptować analitykę albo zostać przy cookies niezbędnych. Szczegóły w naszej %{link}.
+      privacy_policy: Polityce prywatności
       reject: Tylko niezbędne
       title: Cookies
+    footer:
+      privacy_policy: Polityka prywatności
     menu:
       about: O nas
       community: Społeczność
@@ -321,6 +324,13 @@ pl:
       testing: Testowanie
       tool: Narzędzia
       web: Technologie webowe
+  privacy_policies:
+    show:
+      meta:
+        description: Jak Fractal Soft przetwarza dane osobowe, cookies i analitykę na fractalsoft.org.
+        title: Polityka prywatności
+      title: Polityka prywatności
+      updated_at: 'Ostatnia aktualizacja: 17 września 2026'
   projects:
     index:
       buttons:
