@@ -130,6 +130,20 @@ function applyGoogleConsent(accepted) {
   gtag("consent", "update", googleConsentState(accepted));
 }
 
+function trackAnalyticsPageView() {
+  if (typeof gtag !== "function") return;
+  if (readConsent() !== ACCEPTED) return;
+  if (window["ga-disable-" + GA_ID]) return;
+
+  // Re-run config after grant so GA can write cookies and send a hit.
+  // Turbolinks navigations also need an explicit page_view.
+  gtag("config", GA_ID, {
+    page_path: window.location.pathname + window.location.search,
+    page_location: window.location.href,
+    page_title: document.title
+  });
+}
+
 function banner() {
   return document.getElementById("js-cookie-banner");
 }
@@ -183,6 +197,7 @@ function acceptCookies() {
   writeConsent(ACCEPTED);
   enableGoogleAnalytics();
   applyGoogleConsent(true);
+  trackAnalyticsPageView();
   hideBanner();
   dispatchConsent(ACCEPTED);
 }
@@ -248,7 +263,17 @@ function initCookieConsent() {
   showBanner();
 }
 
-document.addEventListener("turbolinks:load", initCookieConsent);
+document.addEventListener("turbolinks:load", function () {
+  initCookieConsent();
+
+  // Skip the first load: head gtag('config') already sent a hit when allowed.
+  // Later Turbolinks navigations need an explicit page_view.
+  if (window.__cookieConsentPageViewReady) {
+    trackAnalyticsPageView();
+  } else {
+    window.__cookieConsentPageViewReady = true;
+  }
+});
 document.addEventListener("DOMContentLoaded", initCookieConsent);
 
 export { ACCEPTED, REJECTED, STORAGE_KEY, readConsent };
