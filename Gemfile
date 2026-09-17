@@ -33,7 +33,7 @@ gem 'puma' # Ruby web server built for concurrency
 gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
 gem 'simple_form', '~> 5.4'
-gem 'slim-rails', '~> 3.7' # Template language instead Erb
+gem 'slim-rails', '~> 4.0' # Template language instead Erb
 gem 'tailwindcss-rails', '~> 4.4'
 gem 'tzinfo-data'
 
