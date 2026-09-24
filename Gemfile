@@ -21,6 +21,7 @@ gem 'globalize'
 gem 'http_accept_language'
 gem 'importmap-rails', '~> 2.2'
 gem 'jbuilder', '~> 2.14'
+gem 'json', '~> 2.19.9'
 gem 'lograge'
 gem 'lucide-rails', '~> 0.7'
 gem 'mail_form'
@@ -29,7 +30,7 @@ gem 'mini_racer'
 gem 'nokogiri'
 gem 'oj' # Fast JSON parser and object serializer
 gem 'pg' # Ruby interface to PostgreSQL RDBMS
-gem 'puma' # Ruby web server built for concurrency
+gem 'puma', '~> 8.0' # Ruby web server built for concurrency
 gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
 gem 'simple_form', '~> 5.4'
