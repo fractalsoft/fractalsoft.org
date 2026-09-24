@@ -9,7 +9,7 @@ ania = Person.find_by(nickname: 'ania')
 fly = Technology.find_by(slug: 'fly-io')
 github_actions = Technology.find_by(slug: 'github-actions')
 
-# rubocop:disable Rails/SkipsModelValidations
+# rubocop:disable-next Rails/SkipsModelValidations
 TechnologicalSkill.upsert_all(
   [
     { person_id: ania.id, rating: 25, technology_id: fly.id },
@@ -18,7 +18,6 @@ TechnologicalSkill.upsert_all(
   unique_by: [:person_id, :technology_id],
   update_only: [:rating]
 )
-# rubocop:enable Rails/SkipsModelValidations
 
 fractalsoft = Project.find_by(slug: 'fractalsoft.org')
 nopaperwork = Project.find_by(slug: 'nopaperwork.org')

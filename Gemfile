@@ -33,12 +33,13 @@ gem 'pg' # Ruby interface to PostgreSQL RDBMS
 gem 'puma', '~> 8.0' # Ruby web server built for concurrency
 gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
+gem 'ruby-vips', '~> 2.0' # required by CarrierWave::Vips / image_processing 2.x
 gem 'simple_form', '~> 5.4'
 gem 'slim-rails', '~> 3.7' # Template language instead Erb
 gem 'tailwindcss-rails', '~> 4.4'
 gem 'tzinfo-data'
 
-# rubocop:disable Metrics/BlockLength
+# rubocop:disable-next Metrics/BlockLength
 group :development do
   gem 'active_record_doctor'
   gem 'better_errors'
@@ -68,7 +69,6 @@ group :development do
   gem 'stackprof'
   gem 'web-console', '>= 4.2' # <%= console %> anywhere in the code
 end
-# rubocop:enable Metrics/BlockLength
 
 group :development, :test do
   gem 'bootsnap', '>= 1.16.0', require: false

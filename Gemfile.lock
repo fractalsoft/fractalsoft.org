@@ -571,6 +571,9 @@ GEM
       rubocop-rspec (~> 3.5)
     ruby-progressbar (1.13.0)
     ruby-statistics (4.1.0)
+    ruby-vips (2.3.0)
+      ffi (~> 1.12)
+      logger
     ruby2_keywords (0.0.5)
     ruby_parser (3.22.0)
       racc (~> 1.5)
@@ -735,6 +738,7 @@ DEPENDENCIES
   rubocop-rake
   rubocop-rspec
   rubocop-rspec_rails
+  ruby-vips (~> 2.0)
   rubycritic
   shoulda-matchers
   simple_form (~> 5.4)
