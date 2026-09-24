@@ -13,8 +13,6 @@ updates:
       - ruby
     allow:
       - dependency-type: "all"
-    ignore:
-      - dependency-name: "rails"
 
   - package-ecosystem: "github-actions"
     directory: "/"
