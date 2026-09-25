@@ -87,7 +87,7 @@ GEM
       uri (>= 0.13.1)
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
-    airbrussh (1.6.1)
+    airbrussh (1.6.2)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.3)
     axiom-types (0.1.1)
@@ -115,7 +115,7 @@ GEM
       uniform_notifier (~> 1.11)
     byebug (13.0.0)
       reline (>= 0.6.0)
-    capistrano (3.20.0)
+    capistrano (3.20.1)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -383,7 +383,7 @@ GEM
       net-ssh (>= 5.0.0, < 8.0.0)
     net-smtp (0.5.1)
       net-protocol
-    net-ssh (7.3.2)
+    net-ssh (7.3.3)
     nio4r (2.7.5)
     nokogiri (1.19.4)
       mini_portile2 (~> 2.8.2)
@@ -620,7 +620,7 @@ GEM
       railties (>= 3.1)
       slim (>= 3.0, < 6.0, != 5.0.0)
     spring (4.4.2)
-    sshkit (1.25.0)
+    sshkit (1.25.1)
       base64
       logger
       net-scp (>= 1.1.2)
