@@ -35,7 +35,7 @@ gem 'rails-i18n'
 gem 'route_translator' # Manage translations of routes
 gem 'ruby-vips', '~> 2.0' # required by CarrierWave::Vips / image_processing 2.x
 gem 'simple_form', '~> 5.4'
-gem 'slim-rails', '~> 3.7' # Template language instead Erb
+gem 'slim-rails', '~> 4.0' # Template language instead Erb
 gem 'tailwindcss-rails', '~> 4.4'
 gem 'tzinfo-data'
 
