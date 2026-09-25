@@ -638,7 +638,8 @@ GEM
     temple (0.10.4)
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
-    test-prof (1.6.1)
+    test-prof (1.6.3)
+      logger
     thor (1.5.0)
     thread_safe (0.3.6)
     tilt (2.7.0)
