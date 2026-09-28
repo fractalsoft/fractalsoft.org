@@ -2,7 +2,11 @@ name: CodeQL
 
 on:
   pull_request:
-    paths: ["**/*.rb", "Gemfile", "Gemfile.lock"]
+    paths:
+      - "**/*.rb"
+      - Gemfile
+      - Gemfile.lock
+      - ".github/workflows/**"
     types: [opened, synchronize, reopened, ready_for_review]
   push:
     branches: [main]
@@ -26,7 +30,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["ruby"]
+        include:
+          - language: ruby
+            build-mode: none
+          - language: actions
+            build-mode: none
 
     steps:
       - name: Checkout repository
@@ -36,10 +44,10 @@ jobs:
         uses: github/codeql-action/init@v4
         with:
           languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
           queries: security-extended
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v4
 
       - name: Run CodeQL analysis
         uses: github/codeql-action/analyze@v4
+        with:
+          category: "/language:${{ matrix.language }}"
