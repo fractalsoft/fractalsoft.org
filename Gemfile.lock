@@ -320,7 +320,7 @@ GEM
     jbuilder (2.15.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
-    json (2.19.9)
+    json (3.0.2)
     language_server-protocol (3.17.0.6)
     launchy (3.1.1)
       addressable (~> 2.8)
@@ -711,7 +711,7 @@ DEPENDENCIES
   i18n-tasks
   importmap-rails (~> 2.2)
   jbuilder (~> 2.15)
-  json (~> 2.19.9)
+  json (~> 3.0.2)
   listen
   lograge
   lucide-rails (~> 0.7)
