@@ -601,7 +601,7 @@ GEM
     sass-embedded (1.99.0-x86_64-linux-gnu)
       google-protobuf (~> 4.31)
     securerandom (0.4.1)
-    sexp_processor (4.17.5)
+    sexp_processor (4.17.6)
     shoulda-matchers (6.4.0)
       activesupport (>= 5.2.0)
     simple_form (5.4.1)
